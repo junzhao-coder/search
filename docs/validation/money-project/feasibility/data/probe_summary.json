@@ -1,0 +1,90 @@
+{
+  "started_utc": "2026-10-22T06:47:54Z",
+  "platforms": {
+    "xianyu": {
+      "attempts": [
+        {
+          "platform": "xianyu",
+          "label": "home",
+          "url": "https://www.goofish.com/",
+          "utc": "2026-10-22T06:47:55Z",
+          "final_url": null,
+          "title": null,
+          "body_len": null,
+          "body_head": null,
+          "login_hint": null,
+          "captcha_hint": null,
+          "counts": null,
+          "has_initial_state": null,
+          "has_next_data": null,
+          "screenshot": "D:\\桌面\\two\\docs\\validation\\money-project\\feasibility\\shots\\xianyu_home_20261022_144755.png",
+          "html": "D:\\桌面\\two\\docs\\validation\\money-project\\feasibility\\pages\\xianyu_home_20261022_144755.html",
+          "exit": 0
+        },
+        {
+          "platform": "xianyu",
+          "label": "search",
+          "url": "https://www.goofish.com/search?q=%E5%91%A8%E4%BC%9A%E7%BA%AA%E8%A6%81",
+          "utc": "2026-10-22T06:48:10Z",
+          "final_url": null,
+          "title": null,
+          "body_len": null,
+          "body_head": null,
+          "login_hint": null,
+          "captcha_hint": null,
+          "counts": null,
+          "has_initial_state": null,
+          "has_next_data": null,
+          "screenshot": "D:\\桌面\\two\\docs\\validation\\money-project\\feasibility\\shots\\xianyu_search_20261022_144810.png",
+          "html": "D:\\桌面\\two\\docs\\validation\\money-project\\feasibility\\pages\\xianyu_search_20261022_144810.html",
+          "exit": 0
+        }
+      ],
+      "item_count": 0,
+      "blocked": null
+    },
+    "xiaohongshu": {
+      "attempts": [
+        {
+          "platform": "xiaohongshu",
+          "label": "search",
+          "url": "https://www.xiaohongshu.com/search_result?keyword=%E5%91%A8%E4%BC%9A%E7%BA%AA%E8%A6%81&source=web_search_result_notes",
+          "utc": "2026-10-22T06:48:18Z",
+          "final_url": null,
+          "title": null,
+          "body_len": null,
+          "body_head": null,
+          "login_hint": null,
+          "captcha_hint": null,
+          "counts": null,
+          "has_initial_state": null,
+          "has_next_data": null,
+          "screenshot": "D:\\桌面\\two\\docs\\validation\\money-project\\feasibility\\shots\\xiaohongshu_search_20261022_144818.png",
+          "html": "D:\\桌面\\two\\docs\\validation\\money-project\\feasibility\\pages\\xiaohongshu_search_20261022_144818.html",
+          "exit": 0
+        },
+        {
+          "platform": "xiaohongshu",
+          "label": "explore",
+          "url": "https://www.xiaohongshu.com/explore",
+          "utc": "2026-10-22T06:48:33Z",
+          "final_url": null,
+          "title": null,
+          "body_len": null,
+          "body_head": null,
+          "login_hint": null,
+          "captcha_hint": null,
+          "counts": null,
+          "has_initial_state": null,
+          "has_next_data": null,
+          "screenshot": "D:\\桌面\\two\\docs\\validation\\money-project\\feasibility\\shots\\xiaohongshu_explore_20261022_144833.png",
+          "html": "D:\\桌面\\two\\docs\\validation\\money-project\\feasibility\\pages\\xiaohongshu_explore_20261022_144833.html",
+          "exit": 0
+        }
+      ],
+      "item_count": 0,
+      "blocked": null
+    }
+  },
+  "finished_utc": "2026-10-22T06:48:40Z"
+}

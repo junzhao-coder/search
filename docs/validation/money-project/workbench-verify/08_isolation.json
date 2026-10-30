@@ -1,0 +1,11 @@
+{
+    "utc":  "2026-10-22T13:04:30.6247926Z",
+    "db_before":  "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+    "db_after":  "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+    "db_same":  true,
+    "wal":  false,
+    "shm":  false,
+    "port_5017_after":  false,
+    "port_5015_pid":  118500,
+    "stopped_pid":  124944
+}

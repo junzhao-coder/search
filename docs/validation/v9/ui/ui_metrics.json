@@ -1,0 +1,29 @@
+{
+  "shots": [
+    {
+      "name": "leads_1440x900.jpg",
+      "requested": [
+        1440,
+        900
+      ],
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 1570,
+      "overflowX": false
+    },
+    {
+      "name": "leads_390x844.jpg",
+      "requested": [
+        390,
+        844
+      ],
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 2026,
+      "overflowX": false
+    }
+  ],
+  "note": "CDP device metrics emulation; JPEG bytes saved with .jpg extension"
+}

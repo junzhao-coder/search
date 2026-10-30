@@ -1,0 +1,15 @@
+test_create_self_made_and_id_format (tests.test_selfmade.SelfMadeTests.test_create_self_made_and_id_format) ... ok
+test_demo_platform_enables_export (tests.test_selfmade.SelfMadeTests.test_demo_platform_enables_export) ... ok
+test_forged_ready_403 (tests.test_selfmade.SelfMadeTests.test_forged_ready_403) ... ok
+test_get_zero_write (tests.test_selfmade.SelfMadeTests.test_get_zero_write) ... ok
+test_idempotent (tests.test_selfmade.SelfMadeTests.test_idempotent) ... ok
+test_new_form_page (tests.test_selfmade.SelfMadeTests.test_new_form_page) ... ok
+test_required_missing_rejected (tests.test_selfmade.SelfMadeTests.test_required_missing_rejected) ... ok
+test_revision_conflict_and_rollback (tests.test_selfmade.SelfMadeTests.test_revision_conflict_and_rollback) ... ok
+test_self_prefix_enforced (tests.test_selfmade.SelfMadeTests.test_self_prefix_enforced) ... ok
+test_seven_evidence_via_ui (tests.test_selfmade.SelfMadeTests.test_seven_evidence_via_ui) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.579s
+
+OK

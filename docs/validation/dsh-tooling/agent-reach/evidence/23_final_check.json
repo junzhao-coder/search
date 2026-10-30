@@ -1,0 +1,15 @@
+{
+ "report_lines": 197,
+ "report_sha256": "7a7b0185f79274f924167d310a330ef79b39268023d1eb3bb8d5a4e9a8e781bc",
+ "file_count": 71,
+ "utf8_bad": [],
+ "bom_files": [],
+ "crlf_files": [],
+ "missing_links": [],
+ "skill_root_files": 13,
+ "skill_ok": true,
+ "workspace_baseline_all_match": true,
+ "business_db_sha256": "E073F828CF0F30D6206361BBA3A729826BE096BE3308F5A5DC204406DAE4EB85",
+ "business_wal": false,
+ "business_shm": false
+}

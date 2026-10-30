@@ -1,0 +1,80 @@
+{% extends "dash/base.html" %}
+{% block title %}采集 · 机会情报 Dashboard{% endblock %}
+{% block content %}
+<h1 class="page-title">采集任务与状态</h1>
+<p class="hint">只读展示已落盘采集产物；本页不启动采集、不访问平台、不写库。</p>
+
+<section class="panel" aria-labelledby="h-status">
+  <h2 id="h-status">文件状态</h2>
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr><th>数据集</th><th>路径</th><th>状态</th><th class="num">行数</th><th>坏行</th><th>更新时间（UTC）</th></tr></thead>
+      <tbody>
+      {% for key, entry in datasets.items() %}
+        <tr>
+          <td><code>{{ key }}</code></td>
+          <td><code>{{ entry.path }}</code></td>
+          <td>{% if not entry.exists %}<span class="badge badge-err">文件缺失</span>{% elif entry.error %}<span class="badge badge-err">{{ entry.error }}</span>{% else %}<span class="badge badge-ok">已读取</span>{% endif %}</td>
+          <td class="num">{{ entry.count }}</td>
+          <td>{% if entry.bad_lines %}<span class="badge badge-warn">{{ entry.bad_lines }}</span>{% else %}0{% endif %}</td>
+          <td>{{ entry.mtime }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="h-xy">
+  <h2 id="h-xy">闲鱼采集（前 12 条）</h2>
+  {% if xianyu %}
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr><th>标题</th><th>标价</th><th>raw 摘要</th><th>链接</th></tr></thead>
+      <tbody>
+      {% for row in xianyu %}
+        <tr><td>{{ row.title }}</td><td>{{ row.price }}</td><td class="muted">{{ row.raw_text[:120] if row.raw_text else '' }}</td>
+        <td>{% if row.href %}<a href="{{ row.href }}" rel="noreferrer">商品</a>{% endif %}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}<p class="state state-empty">暂无数据：闲鱼 JSONL 缺失或为空。</p>{% endif %}
+</section>
+
+<section class="panel" aria-labelledby="h-xhs">
+  <h2 id="h-xhs">小红书采集（前 12 条）</h2>
+  {% if xiaohongshu %}
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr><th>标题</th><th>价格</th><th>raw 摘要</th><th>链接</th></tr></thead>
+      <tbody>
+      {% for row in xiaohongshu %}
+        <tr><td>{{ row.title }}</td><td>{{ row.price if row.price is not none else 'null' }}</td>
+        <td class="muted">{{ row.raw_text[:100] if row.raw_text else '' }}</td>
+        <td>{% if row.href %}<a href="{{ row.href }}" rel="noreferrer">笔记</a>{% endif %}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}<p class="state state-empty">暂无数据：小红书 JSONL 缺失或为空。</p>{% endif %}
+</section>
+
+<section class="panel" aria-labelledby="h-topic">
+  <h2 id="h-topic">主题采集榜单（topic-crawler）</h2>
+  {% if top20 %}
+  <ul class="list">
+    {% for line in top20 %}<li>{{ line }}</li>{% endfor %}
+  </ul>
+  {% else %}<p class="state state-empty">暂无数据：top20.md 缺失或为空。</p>{% endif %}
+  {% if topic_summary %}
+  <h3>filtered summary.csv</h3>
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr>{% for key in topic_summary[0].keys() %}<th>{{ key }}</th>{% endfor %}</tr></thead>
+      <tbody>{% for row in topic_summary %}<tr>{% for value in row.values() %}<td>{{ value }}</td>{% endfor %}</tr>{% endfor %}</tbody>
+    </table>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

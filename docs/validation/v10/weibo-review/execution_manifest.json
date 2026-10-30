@@ -1,0 +1,29 @@
+{
+ "generated_utc": "2026-10-27T14:48:45Z",
+ "network": "none",
+ "browser": "none",
+ "suites": [
+  {
+   "name": "tests.test_access_weibo",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_access_weibo",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two",
+   "start_utc": "2026-10-27T14:48:44Z",
+   "end_utc": "2026-10-27T14:48:45Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 29 tests in 0.929s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-review\\logs\\test_access_weibo.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-review\\logs\\test_access_weibo.stderr.txt"
+  }
+ ]
+}

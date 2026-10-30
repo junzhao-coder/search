@@ -1,0 +1,452 @@
+{
+ "recorded_utc": "2026-10-21T13:22Z",
+ "created": [
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\DSH-INSTALL-NOTES.md",
+   "bytes": 6000,
+   "sha256": "9373ebfc423597a986ba227c301fa08815c3b944e426a8cd57721c2add9c945c"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\LICENSE",
+   "bytes": 1067,
+   "sha256": "e94c131ac1c2f78cfd8f7e69da354c0ff58e4e54071697703d56856c036de402"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\career.md",
+   "bytes": 9249,
+   "sha256": "ade444ac499e55f02c84bd663253a28cebc1eefc7f56c7248dc6792841fbe53e"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\dev.md",
+   "bytes": 1383,
+   "sha256": "f6f91107557eacf1d28a023d597eb5a61353a8a6ede286c3c0a4888d274df9fe"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\finance.md",
+   "bytes": 1474,
+   "sha256": "c0cf89af1119d81890f6797ff9e8154a00ee08c17141e7d18c1b09658a916551"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\install.md",
+   "bytes": 22167,
+   "sha256": "269dfa9308f0adf06d9efe22591fd60a48af785b2c4921302ff2d6726ee579f5"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\README.md",
+   "bytes": 22830,
+   "sha256": "7b723bcd4e5992c37ad1c25c3a2badd89c723a105b787fde9d1aa19a215f7ff7"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\search.md",
+   "bytes": 1066,
+   "sha256": "23bfc54a3b85847ac7c1e12d6dbb0913d6fa3bb89a706d79e2b36396a8a8ef5d"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\social.md",
+   "bytes": 10521,
+   "sha256": "e2e6451eb931effd4f63ea407fbb109bea1e98de34bd703c52753ad0cc7025b3"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\video.md",
+   "bytes": 5515,
+   "sha256": "167ce732382c664eea63b884685dc085caa27cd69820138f7eeb91b0162efac8"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\web.md",
+   "bytes": 1087,
+   "sha256": "b238fc897975a693d7bb262600ca2ea69cd13a4892e870d346dbe375c880b303"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\SKILL.md",
+   "bytes": 6316,
+   "sha256": "1bb7eae7322220f89299d683f9ce7caac8d2800ad5ee898d353010e5dfcd3fa9"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\SOURCE.md",
+   "bytes": 1679,
+   "sha256": "6b134cdc7d16ffbf317cc45e08ae1da4c16970508e5c604fcdf7ebec3ecd2ce0"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\tooling-backups\\agent-reach\\20261021T132029Z\\before.json",
+   "bytes": 420,
+   "sha256": "782be18418fbfaae86c44678296343b7f184cbfbb14922e577a8d96e47838b8c"
+  },
+  {
+   "path": "C:\\Users\\19183\\.dsh\\tooling-backups\\agent-reach\\20261021T132029Z\\README.txt",
+   "bytes": 302,
+   "sha256": "c17587f10bd2980df2d0fcb80f7fff7b6fe2907f46de584bff9df5d6bad18e5a"
+  },
+  {
+   "path": "C:\\Users\\19183\\.agent-reach-venv\\Scripts\\agent-reach.exe",
+   "bytes": 108401,
+   "note": "isolated venv (Python 3.12.10); full site-packages tree omitted from inventory"
+  },
+  {
+   "path": "C:\\Users\\19183\\.agent-reach-venv\\pyvenv.cfg",
+   "bytes": 318,
+   "sha256": "d64716519b15b9daeac5a32f9e2175cc2d98d89972ef364317556adeba67d24f"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\00_install_meta.txt",
+   "bytes": 571,
+   "sha256": "35bd333418e6dee55a86728dd2afd58ba37ec8b3d744a2e7a902caf7f7b01845"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\01_python312_version.log",
+   "bytes": 189,
+   "sha256": "d097e05363de6dcfa9787731dbc7025cba81258f8e8b354c2d1f23e334fdf8fd"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\02_create_venv.log",
+   "bytes": 212,
+   "sha256": "630be9f303bdca7f03927ca2596a03c90882d5fec7cc8a4f5103832bced763af"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\03_venv_python_version.log",
+   "bytes": 175,
+   "sha256": "9dcee2b611fedef9c410fea677beeb1112585b7ef80892388673d0e386edac96"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\04_pip_install_agent_reach.log",
+   "bytes": 6620,
+   "sha256": "2a4684083cf90eae27780e506da70506d1a25ac30602eba09b03d720566d54c0"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\05_agent_reach_version.log",
+   "bytes": 191,
+   "sha256": "e1078c80ae9cf2462e773aa33cacb85cd21b363395eee19f247f93c91f88b376"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\05b_version.err.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\05b_version.out.txt",
+   "bytes": 19,
+   "sha256": "b468050679d69430f5e725a1ae7ebaf38fbc2bb6237ae35026774742d9aa3ca8"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\06_agent_reach_help.log",
+   "bytes": 1471,
+   "sha256": "23b87acc50a3cba0b170c750e505f7a66c7ae75293270a80be5d26988916502f"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\06b_help.err.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\06b_help.out.txt",
+   "bytes": 1302,
+   "sha256": "10781bb0c6228ddb6b6fbc9617af23a2871d2c70bf187957810c3ceacff8fa5e"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\07_install_auto_dryrun.log",
+   "bytes": 614,
+   "sha256": "2012db1e4175ddbce68687d54a52ee117598fc0015e47f63f13c6bd56bc14465"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\07b_dryrun.err.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\07b_dryrun.out.txt",
+   "bytes": 423,
+   "sha256": "e4dec3782f0fd89798a1c0277b343a1d84a0ca6060a30e30a4043a3e6f11e76b"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\09_doctor.err.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\09_doctor.json",
+   "bytes": 6058,
+   "sha256": "01a60ca0564b4527033e904ce496b838508d0e39f38e31381a209335ddf4aef2"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\10_public_search_github.err.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\10_public_search_github.json",
+   "bytes": 17363,
+   "sha256": "35db515e87ac9d1e023fbcbcf1675ea258870b2cc604d09c752c356419efda81"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\11_public_read_jina.err.txt",
+   "bytes": 90,
+   "sha256": "83156a856c31f0df06dbaeb4749ad86b007138751827c842496ba7a0fbae3ed1"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\11_public_read_jina.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\12_bilibili_search.err.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\12_bilibili_search.json",
+   "bytes": 26634,
+   "sha256": "54164a348674e98cdc97b09b7ae5e0362e83f203fa52941adb349a941094e8ea"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\13_v2ex_hot.err.txt",
+   "bytes": 93,
+   "sha256": "124326b9b17594d08ab056a7f5ed01771db7964022e8611ccf90b704c17b4640"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\13_v2ex_hot.json",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\14_public_read_raw_readme.err.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\14_public_read_raw_readme.md",
+   "bytes": 22830,
+   "sha256": "7b723bcd4e5992c37ad1c25c3a2badd89c723a105b787fde9d1aa19a215f7ff7"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\15_skill_listing.json",
+   "bytes": 2538,
+   "sha256": "6a49cc42a8c91bd9ccadac8b9d4721f4926437a2bf23bf4fc3a37b4d914b6373"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\16_summary.json",
+   "bytes": 3148,
+   "sha256": "cd95b3797d6718307745851d0749a7b4e38b59484b4efad6813c9d5156545464"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\17_catalog_and_tool.txt",
+   "bytes": 626,
+   "sha256": "e1e52da92ca8ee88e711a74ef456b149ebf6a221258bc1b934a094c58560e910"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\18_restricted_path.txt",
+   "bytes": 119,
+   "sha256": "1c82e91a1606d997355f2b1c4e5d47e6b43dde6eacc459dd172c18ce1b4a4b4c"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\19_baseline_after.json",
+   "bytes": 1568,
+   "sha256": "1099faea99d3c1a582280a29c66262caca244fbc787923e0b1210d26bb7ccf9d"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\20_changed_files.json",
+   "bytes": 18736,
+   "sha256": "bd229e798416edd95cd6fac873996ddfc8aed5d889e5c02268e247f061368cd6"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\21_utf8_check.txt",
+   "bytes": 25,
+   "sha256": "8277b789cd89316e12a486d7f75422f3869e621d5513425c3f9e274609f50239"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\22_restricted_path_bili.err.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\22_restricted_path_bili.json",
+   "bytes": 34723,
+   "sha256": "ac858744e52381a1cf37053847aa513fcbaaf58c2e3edabef03031d77c24c220"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\23_final_check.json",
+   "bytes": 427,
+   "sha256": "9719cd955587ebdc26353694d0bb8cb1c91f77a9ab3953faf365b767d3212d9a"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\24_pip_freeze.txt",
+   "bytes": 577,
+   "sha256": "63e7c4f611465e261abe02917ea20a7d25b7b9c5df26b0e53823464b101554e8"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\25_cwd_bili.err.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\25_cwd_bili.json",
+   "bytes": 3400,
+   "sha256": "e7badcc8c88ee24673ace7d93d15543ef41a0f6db1f93d17a2b1fe8ef6d8ee01"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\25_cwd_independence.txt",
+   "bytes": 165,
+   "sha256": "bf0368cfd93004f4122f714940e1b37087a5bd14107e634a24f4af3ae2ff93e3"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\26_reference_check.json",
+   "bytes": 973,
+   "sha256": "370e63060de8cce888481d5282bbfcbd03a0493c832c3b3f9fe6459fe49e2911"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\build_evidence.py",
+   "bytes": 4903,
+   "sha256": "842eef48a9e0f45bf2fb011f010d270817999b487bdfd7e3627cb8ec38e66908"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\build_inventory.py",
+   "bytes": 2779,
+   "sha256": "112eeafe0430db6417e7ca26c6500e6a06cdc03d22a335ffda2d71acc59c60b3"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\evidence\\final_check.py",
+   "bytes": 2365,
+   "sha256": "55d638965d586f7df883647035a80f4f4f574c026931990ca043c6c175df1cce"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\INSTALLATION.md",
+   "bytes": 17024,
+   "sha256": "7a7b0185f79274f924167d310a330ef79b39268023d1eb3bb8d5a4e9a8e781bc"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\commit.json",
+   "bytes": 238,
+   "sha256": "20c6d3b096fe2df915d3c11f0a22f973068096c3433383bbde97f1871093943f"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\install.md",
+   "bytes": 22167,
+   "sha256": "269dfa9308f0adf06d9efe22591fd60a48af785b2c4921302ff2d6726ee579f5"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\LICENSE",
+   "bytes": 1067,
+   "sha256": "e94c131ac1c2f78cfd8f7e69da354c0ff58e4e54071697703d56856c036de402"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\README.md",
+   "bytes": 22830,
+   "sha256": "7b723bcd4e5992c37ad1c25c3a2badd89c723a105b787fde9d1aa19a215f7ff7"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\upstream-skill\\pyproject.toml",
+   "bytes": 2160,
+   "sha256": "b74f8bcb8442e5386028f1aebb091861d6b230058fbed0d7000860ccc847534d"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\upstream-skill\\references\\career.md",
+   "bytes": 9249,
+   "sha256": "ade444ac499e55f02c84bd663253a28cebc1eefc7f56c7248dc6792841fbe53e"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\upstream-skill\\references\\dev.md",
+   "bytes": 1383,
+   "sha256": "f6f91107557eacf1d28a023d597eb5a61353a8a6ede286c3c0a4888d274df9fe"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\upstream-skill\\references\\finance.md",
+   "bytes": 1474,
+   "sha256": "c0cf89af1119d81890f6797ff9e8154a00ee08c17141e7d18c1b09658a916551"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\upstream-skill\\references\\search.md",
+   "bytes": 1066,
+   "sha256": "23bfc54a3b85847ac7c1e12d6dbb0913d6fa3bb89a706d79e2b36396a8a8ef5d"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\upstream-skill\\references\\social.md",
+   "bytes": 10521,
+   "sha256": "e2e6451eb931effd4f63ea407fbb109bea1e98de34bd703c52753ad0cc7025b3"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\upstream-skill\\references\\video.md",
+   "bytes": 5515,
+   "sha256": "167ce732382c664eea63b884685dc085caa27cd69820138f7eeb91b0162efac8"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\upstream-skill\\references\\web.md",
+   "bytes": 1087,
+   "sha256": "b238fc897975a693d7bb262600ca2ea69cd13a4892e870d346dbe375c880b303"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\upstream-skill\\SKILL.md",
+   "bytes": 8636,
+   "sha256": "0df9cd22ade17b77cc3698a14f1224c4aad9df5d533a1878dbe5df11b62f8377"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\references\\upstream-skill\\SKILL_en.md",
+   "bytes": 8294,
+   "sha256": "b0c2f6ed398921f6b61b9998a46af506c5732bed76bc8451e97d691ba91ab118"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\DSH-INSTALL-NOTES.md",
+   "bytes": 6000,
+   "sha256": "9373ebfc423597a986ba227c301fa08815c3b944e426a8cd57721c2add9c945c"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\references\\career.md",
+   "bytes": 9249,
+   "sha256": "ade444ac499e55f02c84bd663253a28cebc1eefc7f56c7248dc6792841fbe53e"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\references\\dev.md",
+   "bytes": 1383,
+   "sha256": "f6f91107557eacf1d28a023d597eb5a61353a8a6ede286c3c0a4888d274df9fe"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\references\\finance.md",
+   "bytes": 1474,
+   "sha256": "c0cf89af1119d81890f6797ff9e8154a00ee08c17141e7d18c1b09658a916551"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\references\\install.md",
+   "bytes": 22167,
+   "sha256": "269dfa9308f0adf06d9efe22591fd60a48af785b2c4921302ff2d6726ee579f5"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\references\\README.md",
+   "bytes": 22830,
+   "sha256": "7b723bcd4e5992c37ad1c25c3a2badd89c723a105b787fde9d1aa19a215f7ff7"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\references\\search.md",
+   "bytes": 1066,
+   "sha256": "23bfc54a3b85847ac7c1e12d6dbb0913d6fa3bb89a706d79e2b36396a8a8ef5d"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\references\\social.md",
+   "bytes": 10521,
+   "sha256": "e2e6451eb931effd4f63ea407fbb109bea1e98de34bd703c52753ad0cc7025b3"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\references\\video.md",
+   "bytes": 5515,
+   "sha256": "167ce732382c664eea63b884685dc085caa27cd69820138f7eeb91b0162efac8"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\references\\web.md",
+   "bytes": 1087,
+   "sha256": "b238fc897975a693d7bb262600ca2ea69cd13a4892e870d346dbe375c880b303"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\SKILL.md",
+   "bytes": 6316,
+   "sha256": "1bb7eae7322220f89299d683f9ce7caac8d2800ad5ee898d353010e5dfcd3fa9"
+  },
+  {
+   "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\SOURCE.md",
+   "bytes": 1912,
+   "sha256": "44347a4291900e8293f5c8cacc628fe45e1ff94772231c1981f6c3a828045d36"
+  }
+ ],
+ "modified": [],
+ "not_created": [
+  "C:\\Users\\19183\\.agent-reach",
+  "C:\\Users\\19183\\.dsh\\mcp* (MCP registry untouched)",
+  "system PATH / proxy / global pip and npm settings"
+ ],
+ "workspace_code_unchanged": true
+}

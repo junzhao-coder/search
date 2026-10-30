@@ -1,0 +1,56 @@
+{
+ "files": {
+  "instance/app.db": {
+   "b14": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+   "b26": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+   "same": true
+  },
+  "docs/design/CONTRACT.md": {
+   "b14": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+   "b26": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+   "same": true
+  },
+  "app/sources/wiring.py": {
+   "b14": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+   "b26": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+   "same": true
+  },
+  "app/sources/bilibili_view.py": {
+   "b14": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+   "b26": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+   "same": true
+  },
+  "app/core/importer.py": {
+   "b14": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+   "b26": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+   "same": true
+  },
+  "docs/validation/money-project/scoring/scores.csv": {
+   "b14": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+   "b26": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+   "same": true
+  },
+  "docs/validation/money-project/sourcing/sources.csv": {
+   "b14": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+   "b26": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+   "same": true
+  },
+  "docs/validation/money-project/sourcing/price_signals.csv": {
+   "b14": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691",
+   "b26": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691",
+   "same": true
+  },
+  "app/storage/migrations/0001_init.sql": {
+   "b14": "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb",
+   "b26": "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb",
+   "same": true
+  },
+  "app/storage/migrations/0002_draft_feedback.sql": {
+   "b14": "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed",
+   "b26": "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed",
+   "same": true
+  }
+ },
+ "wal": false,
+ "shm": false
+}

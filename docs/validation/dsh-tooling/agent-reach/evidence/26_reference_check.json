@@ -1,0 +1,37 @@
+{
+ "installed": {
+  "path": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\SKILL.md",
+  "sha256": "1bb7eae7322220f89299d683f9ce7caac8d2800ad5ee898d353010e5dfcd3fa9",
+  "links": [
+   "references/search.md",
+   "references/social.md",
+   "references/career.md",
+   "references/dev.md",
+   "references/web.md",
+   "references/video.md",
+   "references/finance.md"
+  ],
+  "missing": [],
+  "notes_at_root": true,
+  "bad_notes_path": false
+ },
+ "bundle": {
+  "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\agent-reach\\skill-bundle\\SKILL.md",
+  "sha256": "1bb7eae7322220f89299d683f9ce7caac8d2800ad5ee898d353010e5dfcd3fa9",
+  "links": [
+   "references/search.md",
+   "references/social.md",
+   "references/career.md",
+   "references/dev.md",
+   "references/web.md",
+   "references/video.md",
+   "references/finance.md"
+  ],
+  "missing": [],
+  "notes_at_root": true,
+  "bad_notes_path": false
+ },
+ "installed_files": 13,
+ "bundle_files": 12,
+ "skill_md_sha_equal": true
+}

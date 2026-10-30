@@ -1,0 +1,79 @@
+{
+ "app/dash": {
+  "kind": "dir",
+  "files": 3,
+  "tree_sha256": "33f13ccebd6cf0cfcb8d4a2e74ae9366c1e1e1606bd6384d53e25e469492bbad",
+  "bytes": 9335
+ },
+ "templates/dash": {
+  "kind": "dir",
+  "files": 6,
+  "tree_sha256": "b9876a5703b2a2183aadb7dc75ed42eff176682e5a15739e918396540395b3f8",
+  "bytes": 21878
+ },
+ "tests/dash": {
+  "kind": "dir",
+  "files": 2,
+  "tree_sha256": "3b43f151f21ad4fd51153a31d287a39f2653bea4e3b4240ebcb3d9cadfe3b8a0",
+  "bytes": 4333
+ },
+ "docs/validation/money-project/scoring/model.md": {
+  "kind": "file",
+  "bytes": 6131,
+  "sha256": "41c2809b91f01c7608a05714227f7611214039b0a9dbee8263ef166b9dee5f94"
+ },
+ "docs/validation/money-project/scoring/scores.csv": {
+  "kind": "file",
+  "bytes": 33023,
+  "sha256": "ef8310fbcfef1c71c40b28ad27e9d607b548047105da277b26fd95d506fd7eeb"
+ },
+ "docs/validation/money-project/scoring/items.jsonl": {
+  "kind": "file",
+  "bytes": 60396,
+  "sha256": "ccb5d3071d0fb8fd9b883c80b7b714c999497b674c01b944030454cebdd10706"
+ },
+ "docs/validation/money-project/scoring/raw": {
+  "kind": "dir",
+  "files": 3,
+  "tree_sha256": "d96944236230293bf1415669757bcf9e3ee0f3fa79beb41d47599adfe2d35ace",
+  "bytes": 123556
+ },
+ "docs/validation/money-project/sourcing/sources.csv": {
+  "kind": "file",
+  "bytes": 5488,
+  "sha256": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4"
+ },
+ "docs/validation/money-project/sourcing/price_signals.csv": {
+  "kind": "file",
+  "bytes": 17897,
+  "sha256": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691"
+ },
+ "docs/validation/money-project/sourcing/opportunity_sourcing_top10.csv": {
+  "kind": "file",
+  "bytes": 9172,
+  "sha256": "0c365fb813ad969bf86dc392182464fe20a4146ed8d7329c53d8782a26556b1f"
+ },
+ "docs/validation/money-project/sourcing/raw": {
+  "kind": "dir",
+  "files": 13,
+  "tree_sha256": "ab6deba3d702d3e74f56fa86114fbb659f9901cefc47c0edeea53df3392df51b",
+  "bytes": 264676
+ },
+ "docs/validation/money-project/e2e/run_manifest.json": {
+  "kind": "file",
+  "bytes": 2960,
+  "sha256": "054666392fcd4441ad9cc6b0b17d3845af247efed7806e9a00931b7e93fc3451"
+ },
+ "docs/validation/money-project/e2e/shots_after": {
+  "kind": "dir",
+  "files": 5,
+  "tree_sha256": "1966e9bdf11795c572705cd8fa74646bb0e0d62aaa67d1890c89840ed3ae65cb",
+  "bytes": 881115
+ },
+ "docs/validation/money-project/e2e/logs": {
+  "kind": "dir",
+  "files": 6,
+  "tree_sha256": "615b4b5e3d723d6c6476cca53dad9303945ee5be4358696037c0e3120650d062",
+  "bytes": 113024
+ }
+}

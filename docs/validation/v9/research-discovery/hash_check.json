@@ -1,0 +1,102 @@
+{
+ "files": {
+  "instance/app.db": {
+   "sha256": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+   "bytes": 241664
+  },
+  "docs/design/CONTRACT.md": {
+   "sha256": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+   "bytes": 74839
+  },
+  "app/sources/wiring.py": {
+   "sha256": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+   "bytes": 8402
+  },
+  "app/sources/bilibili_view.py": {
+   "sha256": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+   "bytes": 12866
+  },
+  "app/core/importer.py": {
+   "sha256": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+   "bytes": 49011
+  },
+  "docs/validation/money-project/scoring/scores.csv": {
+   "sha256": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+   "bytes": 37342
+  },
+  "docs/validation/money-project/sourcing/sources.csv": {
+   "sha256": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+   "bytes": 5488
+  },
+  "docs/validation/money-project/sourcing/price_signals.csv": {
+   "sha256": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691",
+   "bytes": 17897
+  },
+  "app/storage/migrations/0001_init.sql": {
+   "sha256": "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb",
+   "bytes": 14102
+  },
+  "app/storage/migrations/0002_draft_feedback.sql": {
+   "sha256": "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed",
+   "bytes": 2688
+  }
+ },
+ "wal": false,
+ "shm": false,
+ "workflow_db": {
+  "sha256": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c",
+  "bytes": 49152
+ },
+ "compare": {
+  "instance/app.db": {
+   "b14": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+   "v9": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+   "same": true
+  },
+  "docs/design/CONTRACT.md": {
+   "b14": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+   "v9": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+   "same": true
+  },
+  "app/sources/wiring.py": {
+   "b14": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+   "v9": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+   "same": true
+  },
+  "app/sources/bilibili_view.py": {
+   "b14": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+   "v9": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+   "same": true
+  },
+  "app/core/importer.py": {
+   "b14": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+   "v9": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+   "same": true
+  },
+  "docs/validation/money-project/scoring/scores.csv": {
+   "b14": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+   "v9": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+   "same": true
+  },
+  "docs/validation/money-project/sourcing/sources.csv": {
+   "b14": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+   "v9": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+   "same": true
+  },
+  "docs/validation/money-project/sourcing/price_signals.csv": {
+   "b14": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691",
+   "v9": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691",
+   "same": true
+  },
+  "app/storage/migrations/0001_init.sql": {
+   "b14": "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb",
+   "v9": "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb",
+   "same": true
+  },
+  "app/storage/migrations/0002_draft_feedback.sql": {
+   "b14": "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed",
+   "v9": "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed",
+   "same": true
+  }
+ }
+}

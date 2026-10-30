@@ -1,0 +1,109 @@
+{
+ "utc": "2026-10-24T12:45:00Z",
+ "pages": {
+  "pick": {
+   "status": 200,
+   "url": "http://127.0.0.1:5015/pick",
+   "bytes": 12688,
+   "nav": "<nav aria-label=\"主导航\"><ul><li><a href=\"/pick\" aria-current=\"page\"><span class=\"nav-label\">选品</span></a></li><li><span class=\"nav-label nav-disabled\" aria-disabled=\"true\" title=\"请先选品\">选源</span></li><li><span class=\"nav-label nav-disabled\" aria-disabled=\"true\" title=\"请先选品\">起草介绍</span></li></ul></nav>",
+   "nav_labels": {
+    "选品": true,
+    "选源": true,
+    "起草介绍": true
+   },
+   "old_nav_absent": true
+  },
+  "source": {
+   "status": 200,
+   "url": "http://127.0.0.1:5015/source?wo=wo:20261023-88ef9a66",
+   "bytes": 5027,
+   "nav": "<nav aria-label=\"主导航\"><ul><li><a href=\"/pick?wo=wo:20261023-88ef9a66\"><span class=\"nav-label\">选品</span></a></li><li><a href=\"/source?wo=wo:20261023-88ef9a66\" aria-current=\"page\"><span class=\"nav-label\">选源</span></a></li><li><a href=\"/copy?wo=wo:20261023-88ef9a66\"><span class=\"nav-label\">起草介绍</span></a></li></ul></nav>",
+   "nav_labels": {
+    "选品": true,
+    "选源": true,
+    "起草介绍": true
+   },
+   "old_nav_absent": true
+  },
+  "copy": {
+   "status": 200,
+   "url": "http://127.0.0.1:5015/copy?wo=wo:20261023-88ef9a66",
+   "bytes": 6642,
+   "nav": "<nav aria-label=\"主导航\"><ul><li><a href=\"/pick?wo=wo:20261023-88ef9a66\"><span class=\"nav-label\">选品</span></a></li><li><a href=\"/source?wo=wo:20261023-88ef9a66\"><span class=\"nav-label\">选源</span></a></li><li><a href=\"/copy?wo=wo:20261023-88ef9a66\" aria-current=\"page\"><span class=\"nav-label\">起草介绍</span></a></li></ul></nav>",
+   "nav_labels": {
+    "选品": true,
+    "选源": true,
+    "起草介绍": true
+   },
+   "old_nav_absent": true
+  }
+ },
+ "root": {
+  "status": 302,
+  "location": "/pick",
+  "url": "http://127.0.0.1:5015/"
+ },
+ "pick": {
+  "continue": true,
+  "source_wo": true,
+  "copy_wo": true,
+  "wo_literal": true
+ },
+ "copy": {
+  "platform_evidence": true,
+  "publish_section": true,
+  "publish_guide": true,
+  "status_link_sold": false,
+  "no_auto": true
+ },
+ "claims": [
+  {
+   "file": "docs\\validation\\product-workflow\\b24\\PUBLISH-CARD.md",
+   "line": 33,
+   "text": "**你应该看到什么**：标题框里字数未超限、无 emoji 堆砌、没有“包过/稳赚/官方”这类词。"
+  },
+  {
+   "file": "docs\\validation\\product-workflow\\b24\\PUBLISH-CARD.md",
+   "line": 69,
+   "text": "> 记住：**平台是否批准由平台决定**。七项全绿只代表“我们这边材料齐、证据在”，不代表一定过审。"
+  },
+  {
+   "file": "docs\\validation\\product-workflow\\b25\\README.md",
+   "line": 3,
+   "text": "> 只读本地文件、纯标准库（不需要装任何包）。脚本给的是**机械建议**，**不等于平台结论，也不代表收益**。"
+  },
+  {
+   "file": "docs\\validation\\product-workflow\\b25\\README.md",
+   "line": 80,
+   "text": "- 只算数、不给结论背书：**建议 ≠ 平台结论，≠ 收益保证，≠ 审核结果**。"
+  },
+  {
+   "file": "docs\\validation\\product-workflow\\b25\\REPORT.md",
+   "line": 73,
+   "text": "> `修描述` 覆盖两类来源（退款高 / 转化低），依据文本不同但标签同属\"修描述\"，保证**一次只给一条**建议。"
+  },
+  {
+   "file": "docs\\validation\\product-workflow\\b25\\REPORT.md",
+   "line": 101,
+   "text": "并写明：**阈值可改**（参数或顶部常量）、**建议不等于平台结论、不代表收益/审核结果**。"
+  }
+ ],
+ "csv": {
+  "columns": [
+   "日期",
+   "单号",
+   "渠道",
+   "曝光",
+   "询单",
+   "成交",
+   "退款",
+   "实际售价",
+   "到手",
+   "人工耗时分钟",
+   "交付方式",
+   "备注"
+  ],
+  "rows": 2,
+  "all_synthetic": true
+ }
+}

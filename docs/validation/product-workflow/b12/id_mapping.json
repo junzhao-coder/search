@@ -1,0 +1,21 @@
+{
+ "generated_utc": "2026-10-23T14:00:36Z",
+ "old": "wo:c3-prod-20261023",
+ "backup": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b12\\backup\\workflow-20261023T140036Z.sqlite3",
+ "backup_sha256": "0914b137950e945bc6e6fd7d215b240f60ddcf3d04a346e6deb02d79868c3d1c",
+ "found": true,
+ "new": "wo:20261023-88ef9a66",
+ "list_contains_new": true,
+ "list_contains_old": false,
+ "detail_status": 200,
+ "detail_has_6_1": true,
+ "rows": {
+  "workorder": 1,
+  "workorder_event": 2,
+  "workorder_export": 0
+ },
+ "ids": [
+  "wo:20261023-88ef9a66"
+ ],
+ "db_sha256_after": "d9349c03faf29df35f8a846b1000779f54e689fc5633189270c33d68bf7f6cf2"
+}

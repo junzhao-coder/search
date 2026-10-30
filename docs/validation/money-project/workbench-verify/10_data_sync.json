@@ -1,0 +1,8 @@
+{
+  "scores_csv_sha256": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+  "profiles_source_sha256": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+  "match": true,
+  "profiles_generated_utc": "2026-10-22T12:55:44Z",
+  "rules_version": "analysis.py@rev2-intent-first",
+  "rows": 60
+}

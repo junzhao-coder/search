@@ -1,0 +1,2125 @@
+{
+ "generated_utc": "2026-10-22T14:44:46Z",
+ "source": "docs/validation/money-project/scoring/scores.csv",
+ "source_sha256": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+ "price_stats": {
+  "count": 20,
+  "effective_min": 1.0,
+  "effective_max": 1.88
+ },
+ "rules_version": "analysis.py@rev2-intent-first",
+ "type_counts": {
+  "学习或生活规划模板": 11,
+  "未分类": 35,
+  "求职简历资料": 1,
+  "教学内容": 9,
+  "提示词或数字包": 3,
+  "设计素材": 1
+ },
+ "target_user_counts": {
+  "学生": 11,
+  "人群未明确": 35,
+  "求职者": 1,
+  "教师": 9,
+  "内容创作者": 3,
+  "设计师": 1
+ },
+ "risk_variant_count": 11,
+ "rows": [
+  {
+   "item_id": "x:1824402140070285653",
+   "platform": "x",
+   "rank": "1",
+   "product_type": "学习或生活规划模板",
+   "target_user": "学生",
+   "deliverable": "学习/生活规划模板（可复制的页面或文档）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "可售",
+   "demand_tier": "高",
+   "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 83% 分位（平台内百分位，原始需求值 1592）",
+    "可售性 85（较强售卖）：含明确售价（¥/$/selling for 等）",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "class",
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/aeshoui/status/1824402140070285653"
+  },
+  {
+   "item_id": "x:1467843989533442054",
+   "platform": "x",
+   "rank": "2",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "无价格信号（可售性 50（未达可售））的高需求线索（需求分位 100%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 100% 分位（平台内百分位，原始需求值 5968）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/booorenjiiy/status/1467843989533442054"
+  },
+  {
+   "item_id": "x:1674662364057317382",
+   "platform": "x",
+   "rank": "3",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "无价格信号（可售性 50（未达可售））的高需求线索（需求分位 97%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 97% 分位（平台内百分位，原始需求值 5896）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/mareidaily/status/1674662364057317382"
+  },
+  {
+   "item_id": "x:1747215882965979516",
+   "platform": "x",
+   "rank": "4",
+   "product_type": "求职简历资料",
+   "target_user": "求职者",
+   "deliverable": "简历/求职排版与投递资料（可编辑文件）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "求职简历资料，面向求职者，交付形态为简历/求职排版与投递资料（可编辑文件）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 90% 分位（平台内百分位，原始需求值 3577）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "apply",
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "lamaran",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/worksfess/status/1747215882965979516"
+  },
+  {
+   "item_id": "bili:BV19A411f7cH",
+   "platform": "bilibili",
+   "rank": "5",
+   "product_type": "教学内容",
+   "target_user": "教师",
+   "deliverable": "图文或视频教程（内容型交付）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "教学内容，面向教师，交付形态为图文或视频教程（内容型交付）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 100% 分位（平台内百分位，原始需求值 16937）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 62%，区间 45%–80%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)",
+    "导入"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV19A411f7cH"
+  },
+  {
+   "item_id": "x:1674994814016954371",
+   "platform": "x",
+   "rank": "6",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "无价格信号（可售性 50（未达可售））的高需求线索（需求分位 86%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 86% 分位（平台内百分位，原始需求值 2210）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/opteemisty/status/1674994814016954371"
+  },
+  {
+   "item_id": "bili:BV1vr421K7EJ",
+   "platform": "bilibili",
+   "rank": "7",
+   "product_type": "教学内容",
+   "target_user": "教师",
+   "deliverable": "图文或视频教程（内容型交付）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "教学内容，面向教师，交付形态为图文或视频教程（内容型交付）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 95% 分位（平台内百分位，原始需求值 14291）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 62%，区间 45%–80%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)",
+    "教程",
+    "设置"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1vr421K7EJ"
+  },
+  {
+   "item_id": "x:1641088397874802688",
+   "platform": "x",
+   "rank": "8",
+   "product_type": "学习或生活规划模板",
+   "target_user": "学生",
+   "deliverable": "学习/生活规划模板（可复制的页面或文档）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 79% 分位（平台内百分位，原始需求值 1387）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "planner",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/IAmPascio/status/1641088397874802688"
+  },
+  {
+   "item_id": "bili:BV11i4y147FS",
+   "platform": "bilibili",
+   "rank": "9",
+   "product_type": "学习或生活规划模板",
+   "target_user": "学生",
+   "deliverable": "学习/生活规划模板（可复制的页面或文档）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 89% 分位（平台内百分位，原始需求值 13311）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 62%，区间 45%–80%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "notes",
+    "sellability_norm",
+    "sellability_reason",
+    "study",
+    "title:notion(carrier)",
+    "学习",
+    "笔记"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV11i4y147FS"
+  },
+  {
+   "item_id": "x:1878867196971016675",
+   "platform": "x",
+   "rank": "10",
+   "product_type": "提示词或数字包",
+   "target_user": "内容创作者",
+   "deliverable": "提示词/数字包（文本库、模板包或下载文件）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "可售",
+   "demand_tier": "中",
+   "positioning": "提示词或数字包，面向内容创作者，交付形态为提示词/数字包（文本库、模板包或下载文件）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 48% 分位（平台内百分位，原始需求值 697）",
+    "可售性 95（较强售卖）：含明确售价与购买入口",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "gumroad",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sell",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/JamesEbringer/status/1878867196971016675"
+  },
+  {
+   "item_id": "gh:enescingoz/awesome-n8n-templates",
+   "platform": "github",
+   "rank": "11",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "无价格信号（可售性 50（未达可售））的高需求线索（需求分位 100%），品类待确认，需人工打开原始链接判断交付形态",
+   "why": [
+    "需求位于本平台样本第 100% 分位（平台内百分位，原始需求值 26045）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 65%，区间 45%–85%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 40%（45%–85%），估计范围过宽",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason"
+   ],
+   "raw_title_ref": "raw/github_search.json",
+   "source_url": "https://github.com/enescingoz/awesome-n8n-templates"
+  },
+  {
+   "item_id": "x:1671556814406836224",
+   "platform": "x",
+   "rank": "12",
+   "product_type": "设计素材",
+   "target_user": "设计师",
+   "deliverable": "设计素材包（PSD / Figma 等源文件）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "设计素材，面向设计师，交付形态为设计素材包（PSD / Figma 等源文件）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 69% 分位（平台内百分位，原始需求值 1248）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 35%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "design",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/NotionHQ/status/1671556814406836224"
+  },
+  {
+   "item_id": "gh:InlitX/Obsidian-Dashboard-Gallery",
+   "platform": "github",
+   "rank": "13",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "无价格信号（可售性 50（未达可售））的高需求线索（需求分位 89%），品类待确认，需人工打开原始链接判断交付形态",
+   "why": [
+    "需求位于本平台样本第 89% 分位（平台内百分位，原始需求值 814）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 65%，区间 45%–85%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 40%（45%–85%），估计范围过宽",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason"
+   ],
+   "raw_title_ref": "raw/github_search.json",
+   "source_url": "https://github.com/InlitX/Obsidian-Dashboard-Gallery"
+  },
+  {
+   "item_id": "x:2072504480298582351",
+   "platform": "x",
+   "rank": "14",
+   "product_type": "学习或生活规划模板",
+   "target_user": "学生",
+   "deliverable": "学习/生活规划模板（可复制的页面或文档）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 66% 分位（平台内百分位，原始需求值 1044）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)",
+    "tracker"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/Doy0u10veme/status/2072504480298582351"
+  },
+  {
+   "item_id": "x:1580068264650022912",
+   "platform": "x",
+   "rank": "15",
+   "product_type": "学习或生活规划模板",
+   "target_user": "学生",
+   "deliverable": "学习/生活规划模板（可复制的页面或文档）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "免费引流",
+   "demand_tier": "高",
+   "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 93% 分位（平台内百分位，原始需求值 4369）",
+    "可售性 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "可售性仅 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "student",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/heyeaslo/status/1580068264650022912"
+  },
+  {
+   "item_id": "bili:BV1LY411V77i",
+   "platform": "bilibili",
+   "rank": "16",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "无价格信号（可售性 50（未达可售））的高需求线索（需求分位 79%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 79% 分位（平台内百分位，原始需求值 8128）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 62%，区间 45%–80%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1LY411V77i"
+  },
+  {
+   "item_id": "x:2075424566042849509",
+   "platform": "x",
+   "rank": "17",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "无价格信号（可售性 50（未达可售））的中需求线索（需求分位 62%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 62% 分位（平台内百分位，原始需求值 952）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/qinanyiyu/status/2075424566042849509"
+  },
+  {
+   "item_id": "bili:BV1HtpezrEWC",
+   "platform": "bilibili",
+   "rank": "18",
+   "product_type": "教学内容",
+   "target_user": "教师",
+   "deliverable": "图文或视频教程（内容型交付）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "教学内容，面向教师，交付形态为图文或视频教程（内容型交付）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 74% 分位（平台内百分位，原始需求值 4892）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 62%，区间 45%–80%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)",
+    "教程"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1HtpezrEWC"
+  },
+  {
+   "item_id": "x:2111873792008237254",
+   "platform": "x",
+   "rank": "19",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "无价格信号（可售性 50（未达可售））的中需求线索（需求分位 59%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 59% 分位（平台内百分位，原始需求值 930）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 35%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/wustep/status/2111873792008237254"
+  },
+  {
+   "item_id": "x:1793934695430062328",
+   "platform": "x",
+   "rank": "20",
+   "product_type": "学习或生活规划模板",
+   "target_user": "学生",
+   "deliverable": "学习/生活规划模板（可复制的页面或文档）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 55% 分位（平台内百分位，原始需求值 803）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "course",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "student",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/soltwagner/status/1793934695430062328"
+  },
+  {
+   "item_id": "gh:vercel-labs/marketing-team-eve-template",
+   "platform": "github",
+   "rank": "21",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "无价格信号（可售性 50（未达可售））的高需求线索（需求分位 78%），品类待确认，需人工打开原始链接判断交付形态",
+   "why": [
+    "需求位于本平台样本第 78% 分位（平台内百分位，原始需求值 455）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 65%，区间 45%–85%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 40%（45%–85%），估计范围过宽",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason"
+   ],
+   "raw_title_ref": "raw/github_search.json",
+   "source_url": "https://github.com/vercel-labs/marketing-team-eve-template"
+  },
+  {
+   "item_id": "x:1677985545585328129",
+   "platform": "x",
+   "rank": "22",
+   "product_type": "学习或生活规划模板",
+   "target_user": "学生",
+   "deliverable": "学习/生活规划模板（可复制的页面或文档）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "免费引流",
+   "demand_tier": "高",
+   "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 76% 分位（平台内百分位，原始需求值 1269）",
+    "可售性 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "可售性仅 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)",
+    "tracker"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/bibabercerita/status/1677985545585328129"
+  },
+  {
+   "item_id": "bili:BV1vL4y1x7Qi",
+   "platform": "bilibili",
+   "rank": "23",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "无价格信号（可售性 50（未达可售））的中需求线索（需求分位 68%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 68% 分位（平台内百分位，原始需求值 4850）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 62%，区间 45%–80%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1vL4y1x7Qi"
+  },
+  {
+   "item_id": "x:1880608606153998536",
+   "platform": "x",
+   "rank": "24",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "无价格信号（可售性 50（未达可售））的中需求线索（需求分位 52%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 52% 分位（平台内百分位，原始需求值 772）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/heyeaslo/status/1880608606153998536"
+  },
+  {
+   "item_id": "x:1407234631427002375",
+   "platform": "x",
+   "rank": "25",
+   "product_type": "学习或生活规划模板",
+   "target_user": "学生",
+   "deliverable": "学习/生活规划模板（可复制的页面或文档）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 45% 分位（平台内百分位，原始需求值 690）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "student",
+    "study",
+    "title:notion(carrier)",
+    "tracker"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/hilaamls/status/1407234631427002375"
+  },
+  {
+   "item_id": "x:1628266176856965121",
+   "platform": "x",
+   "rank": "26",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "高",
+   "positioning": "无价格信号（可售性 50（未达可售））的高需求线索（需求分位 72%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 72% 分位（平台内百分位，原始需求值 1250）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 68%，区间 50%–85%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（50%–85%），估计范围过宽",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/heyeaslo/status/1628266176856965121"
+  },
+  {
+   "item_id": "bili:BV14x4y1k75t",
+   "platform": "bilibili",
+   "rank": "27",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "无价格信号（可售性 50（未达可售））的中需求线索（需求分位 53%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 53% 分位（平台内百分位，原始需求值 3266）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 62%，区间 45%–80%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV14x4y1k75t"
+  },
+  {
+   "item_id": "x:1857108850773537161",
+   "platform": "x",
+   "rank": "28",
+   "product_type": "教学内容",
+   "target_user": "教师",
+   "deliverable": "图文或视频教程（内容型交付）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "教学内容，面向教师，交付形态为图文或视频教程（内容型交付）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 41% 分位（平台内百分位，原始需求值 423）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 35%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "setup",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/NotionHQ/status/1857108850773537161"
+  },
+  {
+   "item_id": "x:2110652419877359978",
+   "platform": "x",
+   "rank": "29",
+   "product_type": "学习或生活规划模板",
+   "target_user": "学生",
+   "deliverable": "学习/生活规划模板（可复制的页面或文档）",
+   "carrier": "",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）",
+   "why": [
+    "需求位于本平台样本第 38% 分位（平台内百分位，原始需求值 72）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "habit",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/JocelynTowweeh/status/2110652419877359978"
+  },
+  {
+   "item_id": "gh:amjarmed/Awesome-AnyType-Resources",
+   "platform": "github",
+   "rank": "30",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "无价格信号（可售性 50（未达可售））的中需求线索（需求分位 56%），品类待确认，需人工打开原始链接判断交付形态",
+   "why": [
+    "需求位于本平台样本第 56% 分位（平台内百分位，原始需求值 284）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 65%，区间 45%–85%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 40%（45%–85%），估计范围过宽",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason"
+   ],
+   "raw_title_ref": "raw/github_search.json",
+   "source_url": "https://github.com/amjarmed/Awesome-AnyType-Resources"
+  },
+  {
+   "item_id": "bili:BV1FXDyBWEyF",
+   "platform": "bilibili",
+   "rank": "31",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "无价格信号（可售性 50（未达可售））的中需求线索（需求分位 63%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 63% 分位（平台内百分位，原始需求值 4756）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 52%，区间 35%–70%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（35%–70%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 52% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1FXDyBWEyF"
+  },
+  {
+   "item_id": "x:2112084330390675474",
+   "platform": "x",
+   "rank": "32",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 34%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 34% 分位（平台内百分位，原始需求值 31）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 35%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/wustep/status/2112084330390675474"
+  },
+  {
+   "item_id": "x:2113159521321222261",
+   "platform": "x",
+   "rank": "33",
+   "product_type": "学习或生活规划模板",
+   "target_user": "学生",
+   "deliverable": "学习/生活规划模板（可复制的页面或文档）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 31% 分位（平台内百分位，原始需求值 6）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "budget",
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)",
+    "tracker"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/MONABLIZUIUX/status/2113159521321222261"
+  },
+  {
+   "item_id": "bili:BV18v411W7EL",
+   "platform": "bilibili",
+   "rank": "34",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "无价格信号（可售性 50（未达可售））的中需求线索（需求分位 47%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 47% 分位（平台内百分位，原始需求值 2822）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 62%，区间 45%–80%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV18v411W7EL"
+  },
+  {
+   "item_id": "gh:lakshaybhushan/nextjs-notion-waitlist-template",
+   "platform": "github",
+   "rank": "35",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "无价格信号（可售性 50（未达可售））的中需求线索（需求分位 67%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 67% 分位（平台内百分位，原始需求值 291）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 65%，区间 45%–85%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 40%（45%–85%），估计范围过宽",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/github_search.json",
+   "source_url": "https://github.com/lakshaybhushan/nextjs-notion-waitlist-template"
+  },
+  {
+   "item_id": "bili:BV1Gm4y1S7Ey",
+   "platform": "bilibili",
+   "rank": "36",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "无价格信号（可售性 50（未达可售））的中需求线索（需求分位 58%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 58% 分位（平台内百分位，原始需求值 3390）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 52%，区间 35%–70%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（35%–70%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 52% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1Gm4y1S7Ey"
+  },
+  {
+   "item_id": "x:2111381711162638646",
+   "platform": "x",
+   "rank": "37",
+   "product_type": "提示词或数字包",
+   "target_user": "内容创作者",
+   "deliverable": "提示词/数字包（文本库、模板包或下载文件）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "可售",
+   "demand_tier": "低",
+   "positioning": "提示词或数字包，面向内容创作者，交付形态为提示词/数字包（文本库、模板包或下载文件）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 7% 分位（平台内百分位，原始需求值 1）",
+    "可售性 80（较强售卖）：含商品化词（合集/素材包/模板包/教程包）",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "bundle",
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/marjanarbab/status/2111381711162638646"
+  },
+  {
+   "item_id": "x:2112022643314487666",
+   "platform": "x",
+   "rank": "38",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 24%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 24% 分位（平台内百分位，原始需求值 4）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/prossarx/status/2112022643314487666"
+  },
+  {
+   "item_id": "bili:BV1PP411C7pK",
+   "platform": "bilibili",
+   "rank": "39",
+   "product_type": "教学内容",
+   "target_user": "教师",
+   "deliverable": "图文或视频教程（内容型交付）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "教学内容，面向教师，交付形态为图文或视频教程（内容型交付）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 37% 分位（平台内百分位，原始需求值 2188）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 62%，区间 45%–80%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)",
+    "教程",
+    "讲解"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1PP411C7pK"
+  },
+  {
+   "item_id": "bili:BV1qWVRzaEVY",
+   "platform": "bilibili",
+   "rank": "40",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "免费引流",
+   "demand_tier": "高",
+   "positioning": "免费引流（可售性 10）的高需求线索（需求分位 84%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 84% 分位（平台内百分位，原始需求值 11039）",
+    "可售性 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+    "毛利估算 52%，区间 35%–70%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "可售性仅 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+    "毛利低置信：区间宽度 35%（35%–70%），估计范围过宽"
+   ],
+   "evidence_fields": [
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1qWVRzaEVY"
+  },
+  {
+   "item_id": "x:2111095065732886624",
+   "platform": "x",
+   "rank": "41",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 28%），品类待确认，需人工打开原始链接判断交付形态",
+   "why": [
+    "需求位于本平台样本第 28% 分位（平台内百分位，原始需求值 5）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/Notiondashboard/status/2111095065732886624"
+  },
+  {
+   "item_id": "x:2111287632991060187",
+   "platform": "x",
+   "rank": "42",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 21%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 21% 分位（平台内百分位，原始需求值 2）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/LiamBrookso/status/2111287632991060187"
+  },
+  {
+   "item_id": "x:2112961620725105107",
+   "platform": "x",
+   "rank": "43",
+   "product_type": "提示词或数字包",
+   "target_user": "内容创作者",
+   "deliverable": "提示词/数字包（文本库、模板包或下载文件）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "可售",
+   "demand_tier": "低",
+   "positioning": "提示词或数字包，面向内容创作者，交付形态为提示词/数字包（文本库、模板包或下载文件）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 0% 分位（平台内百分位，原始需求值 0）",
+    "可售性 80（较强售卖）：含购买入口（链接/下单/扫码/买）",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "gumroad",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/newfeng20/status/2112961620725105107"
+  },
+  {
+   "item_id": "bili:BV1qh411i7sj",
+   "platform": "bilibili",
+   "rank": "44",
+   "product_type": "教学内容",
+   "target_user": "教师",
+   "deliverable": "图文或视频教程（内容型交付）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "教学内容，面向教师，交付形态为图文或视频教程（内容型交付）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 26% 分位（平台内百分位，原始需求值 1301）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 62%，区间 45%–80%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)",
+    "教程"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1qh411i7sj"
+  },
+  {
+   "item_id": "gh:wildcatco/notion-blog",
+   "platform": "github",
+   "rank": "45",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "无价格信号（可售性 50（未达可售））的中需求线索（需求分位 44%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 44% 分位（平台内百分位，原始需求值 210）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 65%，区间 45%–85%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 40%（45%–85%），估计范围过宽",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/github_search.json",
+   "source_url": "https://github.com/wildcatco/notion-blog"
+  },
+  {
+   "item_id": "bili:BV1iP411w7xT",
+   "platform": "bilibili",
+   "rank": "46",
+   "product_type": "教学内容",
+   "target_user": "教师",
+   "deliverable": "图文或视频教程（内容型交付）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "中",
+   "positioning": "教学内容，面向教师，交付形态为图文或视频教程（内容型交付）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 42% 分位（平台内百分位，原始需求值 2194）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 52%，区间 35%–70%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（35%–70%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 52% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)",
+    "设置",
+    "课程"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1iP411w7xT"
+  },
+  {
+   "item_id": "x:2110780239853003256",
+   "platform": "x",
+   "rank": "47",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 7%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 7% 分位（平台内百分位，原始需求值 1）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/ryunei/status/2110780239853003256"
+  },
+  {
+   "item_id": "x:2110981653271122067",
+   "platform": "x",
+   "rank": "48",
+   "product_type": "学习或生活规划模板",
+   "target_user": "学生",
+   "deliverable": "学习/生活规划模板（可复制的页面或文档）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 7% 分位（平台内百分位，原始需求值 1）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)",
+    "tracker"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/Notiondashboard/status/2110981653271122067"
+  },
+  {
+   "item_id": "x:2111095067825869230",
+   "platform": "x",
+   "rank": "49",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 7%），品类待确认，需人工打开原始链接判断交付形态",
+   "why": [
+    "需求位于本平台样本第 7% 分位（平台内百分位，原始需求值 1）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/Notiondashboard/status/2111095067825869230"
+  },
+  {
+   "item_id": "x:2110673556187345270",
+   "platform": "x",
+   "rank": "50",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 0%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 0% 分位（平台内百分位，原始需求值 0）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/x_search.jsonl",
+   "source_url": "https://x.com/Loreen2074591/status/2110673556187345270"
+  },
+  {
+   "item_id": "bili:BV1GG411b7iE",
+   "platform": "bilibili",
+   "rank": "51",
+   "product_type": "教学内容",
+   "target_user": "教师",
+   "deliverable": "图文或视频教程（内容型交付）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "教学内容，面向教师，交付形态为图文或视频教程（内容型交付）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 32% 分位（平台内百分位，原始需求值 1793）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 52%，区间 35%–70%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（35%–70%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 52% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)",
+    "导入"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1GG411b7iE"
+  },
+  {
+   "item_id": "bili:BV1GU4y1z7Xp",
+   "platform": "bilibili",
+   "rank": "52",
+   "product_type": "教学内容",
+   "target_user": "教师",
+   "deliverable": "图文或视频教程（内容型交付）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "教学内容，面向教师，交付形态为图文或视频教程（内容型交付）；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 11% 分位（平台内百分位，原始需求值 561）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 62%，区间 45%–80%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)",
+    "教程"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1GU4y1z7Xp"
+  },
+  {
+   "item_id": "gh:makenotion/notion-sdk-typescript-starter",
+   "platform": "github",
+   "rank": "53",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 33%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 33% 分位（平台内百分位，原始需求值 207）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 65%，区间 45%–85%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 40%（45%–85%），估计范围过宽",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/github_search.json",
+   "source_url": "https://github.com/makenotion/notion-sdk-typescript-starter"
+  },
+  {
+   "item_id": "gh:timovv/notion-website-template",
+   "platform": "github",
+   "rank": "54",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 22%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 22% 分位（平台内百分位，原始需求值 144）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 65%，区间 45%–85%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 40%（45%–85%），估计范围过宽",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/github_search.json",
+   "source_url": "https://github.com/timovv/notion-website-template"
+  },
+  {
+   "item_id": "bili:BV1KW4y177Eb",
+   "platform": "bilibili",
+   "rank": "55",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 16%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 16% 分位（平台内百分位，原始需求值 648）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 52%，区间 35%–70%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（35%–70%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 52% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1KW4y177Eb"
+  },
+  {
+   "item_id": "gh:heyman333/agent-notion-template-docs",
+   "platform": "github",
+   "rank": "56",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 0%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 0% 分位（平台内百分位，原始需求值 106）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 65%，区间 45%–85%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 40%（45%–85%），估计范围过宽",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/github_search.json",
+   "source_url": "https://github.com/heyman333/agent-notion-template-docs"
+  },
+  {
+   "item_id": "bili:BV1AC411j7JN",
+   "platform": "bilibili",
+   "rank": "57",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "免费引流",
+   "demand_tier": "低",
+   "positioning": "免费引流（可售性 10）的低需求线索（需求分位 21%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 21% 分位（平台内百分位，原始需求值 1189）",
+    "可售性 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+    "毛利估算 62%，区间 45%–80%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "可售性仅 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽"
+   ],
+   "evidence_fields": [
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1AC411j7JN"
+  },
+  {
+   "item_id": "gh:2skydev/Notion-Next.js-blog-starter-kit",
+   "platform": "github",
+   "rank": "58",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 11%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 11% 分位（平台内百分位，原始需求值 115）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 65%，区间 45%–85%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 40%（45%–85%），估计范围过宽",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "evidence_fields": [
+    "competition_norm",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/github_search.json",
+   "source_url": "https://github.com/2skydev/Notion-Next.js-blog-starter-kit"
+  },
+  {
+   "item_id": "bili:BV1eQgd63Ejy",
+   "platform": "bilibili",
+   "rank": "59",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 5%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 5% 分位（平台内百分位，原始需求值 336）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 52%，区间 35%–70%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（35%–70%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 52% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1eQgd63Ejy"
+  },
+  {
+   "item_id": "bili:BV1oPtc6iEGH",
+   "platform": "bilibili",
+   "rank": "60",
+   "product_type": "未分类",
+   "target_user": "人群未明确",
+   "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+   "carrier": "载体为 Notion 模板（可复制到自己的工作区）",
+   "commercial_form": "无价格信号",
+   "demand_tier": "低",
+   "positioning": "无价格信号（可售性 50（未达可售））的低需求线索（需求分位 0%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+   "why": [
+    "需求位于本平台样本第 0% 分位（平台内百分位，原始需求值 235）",
+    "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+    "毛利估算 52%，区间 35%–70%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+   ],
+   "risks": [
+    "毛利低置信：区间宽度 35%（35%–70%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 52% 为假设区间而非实测"
+   ],
+   "evidence_fields": [
+    "cost_input",
+    "demand_norm",
+    "demand_raw",
+    "margin_high",
+    "margin_low",
+    "margin_mid",
+    "sellability_norm",
+    "sellability_reason",
+    "title:notion(carrier)"
+   ],
+   "raw_title_ref": "raw/bilibili_search.json",
+   "source_url": "https://www.bilibili.com/video/BV1oPtc6iEGH"
+  }
+ ]
+}

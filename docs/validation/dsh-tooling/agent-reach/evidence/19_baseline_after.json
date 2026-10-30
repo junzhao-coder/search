@@ -1,0 +1,54 @@
+{
+ "requirements.txt": {
+  "sha256": "0AF19A0F1C100E99483B79E7F11B500CCF6A5A1477D8AC4B560C077B2BEA7731",
+  "matches_baseline": true,
+  "bytes": 179
+ },
+ "docs/design/CONTRACT.md": {
+  "sha256": "826C24CC6C99551178875BED617E085231BD23998B6A049F396116E1E70FB4F9",
+  "matches_baseline": true,
+  "bytes": 74839
+ },
+ "app/storage/migrations/0001_init.sql": {
+  "sha256": "9B0493731305C2E3DE3C89A1A16DCC8A53CA5882D014F63333B34E7C872E62BB",
+  "matches_baseline": true,
+  "bytes": 14102
+ },
+ "app/storage/migrations/0002_draft_feedback.sql": {
+  "sha256": "34D70A1D501BA1AAF2FB93DE1351EA80C470DCAC9E6BC040617B19C5446C3AED",
+  "matches_baseline": true,
+  "bytes": 2688
+ },
+ "app/sources/wiring.py": {
+  "sha256": "BAFCF3974CBFB3ED4DA99936E5D65D10D6F02C663B6325008255B4EAECC0DA05",
+  "matches_baseline": true,
+  "bytes": 8402
+ },
+ "app/sources/bilibili_view.py": {
+  "sha256": "B0DC0CED1BC3BE3ECA85116559D5ACAE52F7753DCA1DCBBAC259E573CC73F98E",
+  "matches_baseline": true,
+  "bytes": 12866
+ },
+ "app/core/importer.py": {
+  "sha256": "A11EAF4D39541AC11459EB1CEBB8586F4922838B96714D7F7F3D2E253CFF51A1",
+  "matches_baseline": true,
+  "bytes": 49011
+ },
+ "app/sources/real_link.py": {
+  "sha256": "46CBD635B5E70CC2D1B6441BEFDE31E25B8203CAF28D39B772203C43B8F5802C",
+  "matches_baseline": true,
+  "bytes": 23228
+ },
+ "instance/app.db": {
+  "sha256": "E073F828CF0F30D6206361BBA3A729826BE096BE3308F5A5DC204406DAE4EB85",
+  "matches_baseline": true,
+  "bytes": 241664
+ },
+ "instance/app.db-wal": {
+  "exists": false
+ },
+ "instance/app.db-shm": {
+  "exists": false
+ },
+ "all_match": true
+}

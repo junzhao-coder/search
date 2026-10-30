@@ -1,0 +1,2 @@
+pool,rank,candidate_id,tier,score,daily_pick,next_action,reasons,gaps
+top,1,c_97ac0a4d9c1f485d,T1,100,True,可直接进入人工复核/试单准备,"[""四门槛均 verified"", ""net=150 分/单（complete）"", ""观察时间新鲜度 7d（相对 as_of）"", ""有效 G2 货源稳定"", ""人工 10 分钟""]",[]

@@ -1,0 +1,110 @@
+{
+ "captured_utc": "2026-10-22T02:53:48Z",
+ "tool_root": "C:\\Users\\19183\\.dsh\\tools\\x-collect",
+ "top_level": [
+  {
+   "name": "data",
+   "is_dir": true,
+   "file_count": 0,
+   "bytes": 0
+  },
+  {
+   "name": "logs",
+   "is_dir": true,
+   "file_count": 15,
+   "bytes": 18691
+  },
+  {
+   "name": "profile",
+   "is_dir": true,
+   "file_count": 3144,
+   "bytes": 476486462
+  },
+  {
+   "name": "scripts",
+   "is_dir": true,
+   "file_count": 2,
+   "bytes": 15661
+  },
+  {
+   "name": "venv",
+   "is_dir": true,
+   "file_count": 1227,
+   "bytes": 18971868
+  }
+ ],
+ "scripts": [
+  {
+   "name": "baseline.py",
+   "bytes": 4176,
+   "sha256": "757dd07ba0fab78de4a100f945c592fce8d427f8b222d2ec6e2e26a66d4148f1"
+  },
+  {
+   "name": "x_collect.py",
+   "bytes": 11485,
+   "sha256": "4ea8540ae9e911cd93c8849d1c999b1cb6b403914d1105c1cc79fb52ec83821d"
+  }
+ ],
+ "logs": [
+  {
+   "name": "01_venv.log",
+   "bytes": 0
+  },
+  {
+   "name": "02_python_version.log",
+   "bytes": 19
+  },
+  {
+   "name": "03_pip_nodriver.log",
+   "bytes": 988
+  },
+  {
+   "name": "10_chrome_processes.json",
+   "bytes": 9360
+  },
+  {
+   "name": "doctor-2026-10-21T152803Z.log",
+   "bytes": 356
+  },
+  {
+   "name": "doctor-2026-10-21T152841Z.log",
+   "bytes": 364
+  },
+  {
+   "name": "doctor-2026-10-21T153028Z.log",
+   "bytes": 500
+  },
+  {
+   "name": "doctor-2026-10-21T153055Z.log",
+   "bytes": 963
+  },
+  {
+   "name": "doctor-2026-10-22T022442Z.log",
+   "bytes": 963
+  },
+  {
+   "name": "doctor-2026-10-22T023434Z.log",
+   "bytes": 562
+  },
+  {
+   "name": "doctor-2026-10-22T023528Z.log",
+   "bytes": 965
+  },
+  {
+   "name": "doctor-2026-10-22T024459Z.log",
+   "bytes": 330
+  },
+  {
+   "name": "doctor-2026-10-22T024937Z.log",
+   "bytes": 573
+  },
+  {
+   "name": "login-2026-10-22T022513Z.log",
+   "bytes": 1323
+  },
+  {
+   "name": "login-2026-10-22T023552Z.log",
+   "bytes": 1425
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "base": "http://127.0.0.1:5017",
+ "workorder_id": "wo:20261023-708e8b55",
+ "shots": {
+  "desktop_worksheet_list.jpg": {
+   "file": "desktop_worksheet_list.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b1\\shots\\desktop_worksheet_list.jpg",
+   "width": 1440,
+   "height": 900,
+   "bytes": 65120,
+   "sha256": "88c5ef19295e3a9dd74d846183432da197b863b19cefed49d969721a6b757b22",
+   "viewport": "1440x900"
+  },
+  "desktop_worksheet_detail.jpg": {
+   "file": "desktop_worksheet_detail.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b1\\shots\\desktop_worksheet_detail.jpg",
+   "width": 1440,
+   "height": 900,
+   "bytes": 80492,
+   "sha256": "73df8ade5a03835fbb98d7f99b7ee735b85525ab7b09f49831cbe5b8fe51ff56",
+   "viewport": "1440x900"
+  },
+  "desktop_worksheet_edit.jpg": {
+   "file": "desktop_worksheet_edit.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b1\\shots\\desktop_worksheet_edit.jpg",
+   "width": 1440,
+   "height": 900,
+   "bytes": 74249,
+   "sha256": "765eedd7487e7ec86455745eb75fd4492e25f7d2303acc44dceae0cce79369be",
+   "viewport": "1440x900"
+  },
+  "mobile_worksheet_list.jpg": {
+   "file": "mobile_worksheet_list.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b1\\shots\\mobile_worksheet_list.jpg",
+   "width": 390,
+   "height": 844,
+   "bytes": 42175,
+   "sha256": "47f19c0d993f3a93e9e066ab9e2918a451d90aa2bfe95d977433f56f92ab369c",
+   "viewport": "390x844"
+  }
+ },
+ "metrics": {
+  "desktop_worksheet_list": {
+   "url": "http://127.0.0.1:5017/worksheet",
+   "innerW": 1440,
+   "innerH": 900,
+   "scrollW": 1440,
+   "overflowX": false
+  },
+  "desktop_worksheet_detail": {
+   "url": "http://127.0.0.1:5017/worksheet/wo:20261023-708e8b55",
+   "innerW": 1440,
+   "innerH": 900,
+   "scrollW": 1440,
+   "overflowX": false
+  },
+  "desktop_worksheet_edit": {
+   "url": "http://127.0.0.1:5017/worksheet/wo:20261023-708e8b55/edit",
+   "innerW": 1440,
+   "innerH": 900,
+   "scrollW": 1440,
+   "overflowX": false
+  },
+  "mobile_worksheet_list": {
+   "url": "http://127.0.0.1:5017/worksheet",
+   "innerW": 390,
+   "innerH": 844,
+   "scrollW": 390,
+   "overflowX": false
+  }
+ },
+ "verification": {
+  "checked": 4,
+  "mismatches": [],
+  "ok": true
+ }
+}

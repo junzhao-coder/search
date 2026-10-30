@@ -1,0 +1,29 @@
+{
+ "b23_checklist_headings": 5,
+ "b23_three_choices": [
+  true,
+  true,
+  true
+ ],
+ "b23_stop_conditions": 3,
+ "b24_publish_steps": 8,
+ "b24_feedback_fields": 12,
+ "b24_feedback_field_names": [
+  "日期",
+  "单号",
+  "渠道",
+  "曝光/浏览",
+  "询单数",
+  "成交数",
+  "退款数",
+  "实际售价（元）",
+  "到手金额（元）",
+  "人工耗时（分钟）",
+  "交付方式",
+  "备注"
+ ],
+ "feedback_columns": 12,
+ "feedback_synthetic": true,
+ "feedback_path": "docs\\validation\\product-workflow\\b25\\feedback-log.csv",
+ "b24_feedback_suggested_path": true
+}

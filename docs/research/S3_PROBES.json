@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "task_id": "task-455130132cb8d8f9b8d982d4bbfb46fc",
+    "stage": "S3 首批前置",
+    "plan_version": 2,
+    "executor_session": "session-01ba487c-f808-55a7-a1f7-5f436ee12811",
+    "planner_session": "session-630d7dac-4fba-4074-b204-b614ddae1b35",
+    "observed_at": "2026-10-14T13:05:10+08:00",
+    "time_source_url": "https://timeapi.io/api/Time/current/zone?timeZone=Asia/Shanghai",
+    "request_budget": {
+      "limit": 8,
+      "used": 7,
+      "remaining": 1,
+      "composition": "6 次端点探测（闲鱼 2、小红书 2、B站 2）+ 1 次时间源",
+      "policy": "失败即停该路径；同一端点不重试超过 1 次；不长时间等待可用性"
+    },
+    "tool": "web_fetch（GET，公开只读）",
+    "not_taken": [
+      "未登录任何账号",
+      "未使用签名/wbi 参数",
+      "未使用 Cookie 或代理",
+      "未绕过验证码",
+      "未抓取用户私信",
+      "未付费",
+      "未批量下载",
+      "未运行货源程序",
+      "未调用 Shell",
+      "未写业务代码、测试或契约"
+    ],
+    "disclaimer": "会话工具可达不等于应用可调用；本文件只记录本次真实返回，不含编造日志或状态码；旧观察（FEASIBILITY.md/SAMPLES.json）保持不变",
+    "companion_doc": "docs/research/S3_READINESS.md"
+  },
+  "probes": [
+    {
+      "id": "P1",
+      "channel": "xianyu",
+      "purpose": "discovery",
+      "url": "https://www.goofish.com/search?q=%E6%A8%A1%E6%9D%BF",
+      "method": "web_fetch GET",
+      "executed": true,
+      "observer": "executor",
+      "http_status": 200,
+      "app_code": null,
+      "raw_excerpt": "闲鱼 - 闲不住？上闲鱼！；正文仅站点标题与 Logo 图片节点（gw.alicdn.com 图片），无商品条目",
+      "fields_observed": [],
+      "result_class": "js_shell_no_data",
+      "access_terms": "沿用 S1 已读《闲鱼社区卖家服务协议》第 3.3.2(六)（禁止未经授权秘密获取站内数据/个人资料的爬虫类程序）与第 3.6.4 条（限制站内其他用户展示资料的商业性使用）；本批未重复请求条款页",
+      "gap": "无任何结构化字段；未尝试绕过脚本层渲染"
+    },
+    {
+      "id": "P2",
+      "channel": "xianyu",
+      "purpose": "completion_known_object",
+      "url": "https://www.goofish.com/item?id=1018647119075&categoryId=0",
+      "method": "web_fetch GET",
+      "executed": true,
+      "observer": "executor",
+      "http_status": 200,
+      "app_code": null,
+      "raw_excerpt": "闲鱼 - 闲不住？上闲鱼！；与搜索页相同的标题与 Logo 节点，无商品详情字段",
+      "fields_observed": [],
+      "result_class": "js_shell_no_data",
+      "access_terms": "同上（闲鱼卖家协议 3.3.2(六)、3.6.4）",
+      "gap": "已知对象补全在该渠道同样不可用；商品 ID 是否仍有效未核（对结论无影响，页面本身不返回数据）"
+    },
+    {
+      "id": "P3",
+      "channel": "xiaohongshu",
+      "purpose": "discovery",
+      "url": "https://www.xiaohongshu.com/explore",
+      "method": "web_fetch GET",
+      "executed": true,
+      "observer": "executor",
+      "http_status": 200,
+      "app_code": null,
+      "final_url": "https://www.xiaohongshu.com/login?redirectPath=http%3A%2F%2Fwww.xiaohongshu.com%2Fexplore%3FexSource%3Dnull",
+      "raw_excerpt": "小红书 - 你的生活兴趣社区；最终 URL 为登录页（redirectPath 指向 explore）",
+      "fields_observed": [],
+      "result_class": "login_redirect",
+      "access_terms": "未读取到官方访问条款（页面需登录；规则页为 SPA）→ unknown，不填允许",
+      "gap": "登录墙；本批未登录、未尝试绕过"
+    },
+    {
+      "id": "P4",
+      "channel": "xiaohongshu",
+      "purpose": "discovery",
+      "url": "https://www.xiaohongshu.com/search_result?keyword=%E6%A8%A1%E6%9D%BF",
+      "method": "web_fetch GET",
+      "executed": true,
+      "observer": "executor",
+      "http_status": null,
+      "app_code": null,
+      "tool_error": "cross-origin redirect to http://www.xiaohongshu.com is not followed automatically; retry against that URL directly",
+      "raw_excerpt": "（无正文返回；工具在跨域重定向上停止）",
+      "fields_observed": [],
+      "result_class": "redirect_loop_tool_error",
+      "access_terms": "同上（unknown）",
+      "gap": "搜索页无法直接取得正文；重定向异常原因未进一步排查（不做绕过）"
+    },
+    {
+      "id": "P5",
+      "channel": "bilibili",
+      "purpose": "discovery",
+      "url": "https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=%E6%A8%A1%E6%9D%BF",
+      "method": "web_fetch GET",
+      "executed": true,
+      "observer": "executor",
+      "http_status": 412,
+      "app_code": -412,
+      "app_message": "request was banned",
+      "raw_excerpt": "code=-412；message=request was banned；ttl=1（原样键值）",
+      "fields_observed": [],
+      "result_class": "blocked_by_risk_control",
+      "access_terms": "该端点为网页前端接口，未见公开授权文档；未核许可与费用 → unknown",
+      "gap": "发现型触风控；未尝试 wbi 签名或 Cookie（禁止绕过）；限流阈值未知"
+    },
+    {
+      "id": "P6",
+      "channel": "bilibili",
+      "purpose": "completion_known_object",
+      "url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1us8MzPEmn",
+      "method": "web_fetch GET",
+      "executed": true,
+      "observer": "executor",
+      "http_status": 200,
+      "app_code": 0,
+      "app_message": "OK",
+      "raw_excerpt": "code=0；message=OK；data.bvid=BV1us8MzPEmn；data.aid=114907487996671；data.title=拼多多全域虚拟电商从零到1实操课；data.pubdate=1753349981；data.ctime=1753349982；data.owner.mid=280758032；data.owner.name=有趣知识八分饱；data.stat.view=5125；data.stat.reply=5；data.stat.favorite=218；data.stat.like=51；data.stat.share=23；data.stat.coin=12；data.stat.danmaku=0；data.duration=9675；data.pages 数量=7",
+      "fields_observed": [
+        "bvid",
+        "aid",
+        "cid",
+        "title",
+        "desc",
+        "pubdate",
+        "ctime",
+        "owner.mid",
+        "owner.name",
+        "stat.view",
+        "stat.danmaku",
+        "stat.reply",
+        "stat.favorite",
+        "stat.like",
+        "stat.share",
+        "stat.coin",
+        "pages[].cid",
+        "pages[].part",
+        "pages[].duration",
+        "duration",
+        "pic",
+        "rights"
+      ],
+      "published_at_converted": "2025-07-24（Asia/Shanghai 约 17:39，由 pubdate=1753349981 换算）",
+      "result_class": "ok_structured_json",
+      "access_terms": "前端接口，无官方授权与 SLA；未核许可与费用 → unknown",
+      "gap": "限流阈值、字段稳定性、长期可用性未验证；仅两次观察（2026-10-07、2026-10-14），本次同值"
+    },
+    {
+      "id": "P7",
+      "channel": "time_source",
+      "purpose": "time_reference",
+      "url": "https://timeapi.io/api/Time/current/zone?timeZone=Asia/Shanghai",
+      "method": "web_fetch GET",
+      "executed": true,
+      "observer": "executor",
+      "http_status": 200,
+      "app_code": null,
+      "raw_excerpt": "year=2026；month=10；day=14；hour=13；minute=5；dateTime=2026-10-14T13:05:10.5192869；timeZone=Asia/Shanghai；dayOfWeek=Wednesday；dstActive=false",
+      "fields_observed": [
+        "dateTime",
+        "timeZone",
+        "dayOfWeek"
+      ],
+      "result_class": "time_source_ok",
+      "access_terms": "公开只读时间服务；仅用于本次观察时点标注",
+      "gap": "第三方时间服务，长期依赖未评估（应用侧不接入）"
+    }
+  ],
+  "not_executed": [
+    {
+      "id": "N1",
+      "item": "小红书笔记级补全（给定 note id 读取）",
+      "reason": "无可用 note ID，且页面需登录；本批禁止登录与绕过",
+      "status": "not_executed"
+    },
+    {
+      "id": "N2",
+      "item": "B站 wbi 签名搜索路径",
+      "reason": "签名/Cookie 属绕过手段，本批明确禁止；是否有官方授权路径未知",
+      "status": "not_executed"
+    },
+    {
+      "id": "N3",
+      "item": "B站热门/排行接口复测（旧观察 code=-352）",
+      "reason": "预算优先给发现型与补全型关键端点；旧观察保留不改写",
+      "status": "not_executed"
+    },
+    {
+      "id": "N4",
+      "item": "闲鱼三方开发平台接口清单与资质",
+      "reason": "页面为 SPA 空壳（S1 记录），本批未尝试绕过；资质与费用需用户确认",
+      "status": "not_executed"
+    },
+    {
+      "id": "N5",
+      "item": "闲鱼/小红书官方条款正文复核",
+      "reason": "本批只读 S1 已留存的协议原文，不重复请求；小红书条款仍为 unknown",
+      "status": "not_executed"
+    },
+    {
+      "id": "N6",
+      "item": "官方授权申请、付费与开通",
+      "reason": "属用户确认事项，本批不涉及、不产生费用",
+      "status": "not_executed"
+    },
+    {
+      "id": "N7",
+      "item": "货源侧 API 调用（Met 等）",
+      "reason": "属 S4 范围；不作为需求发现来源，A 本批未调用任何货源端点",
+      "status": "not_executed"
+    }
+  ],
+  "summary": {
+    "discovery_auto_entry": "none_available",
+    "completion_auto_entry": "bilibili_known_bvid_only",
+    "manual_import_fallback": true,
+    "s3_status_proposal": "partial_completion_only",
+    "old_observations_preserved": true,
+    "stop_position": "第 7 次请求后停止，剩余 1 次预算未用；未重试等待；续接点见 docs/research/S3_READINESS.md 第 7 节"
+  }
+}

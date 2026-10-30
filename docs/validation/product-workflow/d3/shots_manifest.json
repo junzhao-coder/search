@@ -1,0 +1,52 @@
+{
+ "generated_utc": "2026-10-24T14:26:05Z",
+ "shots": {
+  "nav_pick.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 110878,
+   "url": "/pick",
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "ad9a48ab0324a596a44917e43d05e70df7eddbac206bd1504ed3e536b72438a9"
+  },
+  "nav_source.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 75201,
+   "url": "/source?wo=wo:20261024-2c32ceac",
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "4cd801b4604973cfda7809a40f2b51c9c670212502aeb6782965d52799faa5fc"
+  },
+  "nav_copy.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 107850,
+   "url": "/copy?wo=wo:20261024-2c32ceac",
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "5f02886b9c132f95cbe247bc291cb15f401b89bb98bb5816b6216bb54b55da4e"
+  },
+  "guide_source_no_wo.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 61369,
+   "url": "/source",
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "360249eec362631b88cbc1bd5bc39dcf9c6a136aba054e568a3d1980936c1637"
+  },
+  "nav_mobile_menu.jpg": {
+   "width": 390,
+   "height": 844,
+   "bytes": 33417,
+   "url": "/pick（菜单展开）",
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "386f5cbcd24561b6eac51e694ddc5aba07c29b34fb7b1bef471fccb11cb13950",
+   "menu_expanded": "true"
+  }
+ },
+ "workorder_id": "wo:20261024-2c32ceac"
+}

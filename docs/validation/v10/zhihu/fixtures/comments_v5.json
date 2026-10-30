@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": "c1001",
+      "content": "<p>同求，蹲一个能直接打印的版本。</p>",
+      "created_time": 1700000200,
+      "vote_count": 5,
+      "child_comment_count": 2
+    },
+    {
+      "id": "c1002",
+      "content": "我整理过一份，带复习栏。",
+      "created_time": 1700000300,
+      "vote_count": 0,
+      "child_comment_count": 0
+    }
+  ],
+  "paging": {"is_end": false, "next": "offset-2"}
+}

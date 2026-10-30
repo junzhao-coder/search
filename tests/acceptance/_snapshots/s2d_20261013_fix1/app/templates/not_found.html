@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block page_id %}not-found{% endblock %}
+{% block title %}未找到该候选{% endblock %}
+{% block content %}
+    <h1 class="page-title">未找到该候选</h1>
+    <p class="state state-error" role="alert">{{ message }}</p>
+    <p class="meta">请求的候选 id：{{ candidate_id }}</p>
+    <p><a href="{{ url_for('pages.page_home') }}">← 返回候选池</a></p>
+{% endblock %}

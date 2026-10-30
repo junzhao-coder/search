@@ -1,0 +1,84 @@
+{
+ "generated_utc": "2026-10-23T07:32:10Z",
+ "python": "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+ "suites": [
+  {
+   "name": "b1_workflow",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_workflow",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two\\tools\\workbench",
+   "start_utc": "2026-10-23T07:32:10Z",
+   "end_utc": "2026-10-23T07:32:13Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 27 tests in 2.417s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b1\\logs\\b1_workflow.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b1\\logs\\b1_workflow.stderr.txt",
+   "stdout_bytes": 0,
+   "stderr_bytes": 3808
+  },
+  {
+   "name": "workbench_all",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-t",
+    ".",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two\\tools\\workbench",
+   "start_utc": "2026-10-23T07:32:13Z",
+   "end_utc": "2026-10-23T07:32:16Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 89 tests in 2.646s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b1\\logs\\workbench_all.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b1\\logs\\workbench_all.stderr.txt",
+   "stdout_bytes": 0,
+   "stderr_bytes": 11471
+  },
+  {
+   "name": "project_full",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two",
+   "start_utc": "2026-10-23T07:32:16Z",
+   "end_utc": "2026-10-23T07:33:06Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 334 tests in 48.804s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b1\\logs\\project_full.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b1\\logs\\project_full.stderr.txt",
+   "stdout_bytes": 471,
+   "stderr_bytes": 50305
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+  "total_count": 2970,
+  "incomplete_results": false,
+  "items": [
+    {
+      "full_name": "Panniantong/Agent-Reach",
+      "html_url": "https://github.com/Panniantong/Agent-Reach",
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu \u2014 one CLI, zero API fees.",
+      "stargazers_count": 100504,
+      "license": "MIT"
+    },
+    {
+      "full_name": "EdisonChenAI/agent-reach",
+      "html_url": "https://github.com/EdisonChenAI/agent-reach",
+      "description": "Use the internet: search, read, and interact with 13+ platforms including Twitter/X, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu (\u5c0f\u7ea2\u4e66), Douyin (\u6296\u97f3)",
+      "stargazers_count": 147,
+      "license": "MIT"
+    },
+    {
+      "full_name": "Danau5tin/multi-agent-coding-system",
+      "html_url": "https://github.com/Danau5tin/multi-agent-coding-system",
+      "description": "Reached #13 on Stanford's Terminal Bench leaderboard. Orchestrator, explorer & coder agents working together with intelligent context sharing.",
+      "stargazers_count": 1469,
+      "license": "Apache-2.0"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+test_comments_carry_parent_id_and_paging (tests.test_access_weibo.DetailAndCommentsTests.test_comments_carry_parent_id_and_paging) ... ok
+test_comments_json_without_data_is_unsupported (tests.test_access_weibo.DetailAndCommentsTests.test_comments_json_without_data_is_unsupported) ... ok
+test_comments_on_profile_url_are_input_errors (tests.test_access_weibo.DetailAndCommentsTests.test_comments_on_profile_url_are_input_errors) ... ok
+test_detail_on_a_wall_page_locks (tests.test_access_weibo.DetailAndCommentsTests.test_detail_on_a_wall_page_locks) ... ok
+test_detail_rejects_profile_url_without_spending_a_call (tests.test_access_weibo.DetailAndCommentsTests.test_detail_rejects_profile_url_without_spending_a_call) ... ok
+test_detail_returns_one_status_record (tests.test_access_weibo.DetailAndCommentsTests.test_detail_returns_one_status_record) ... ok
+test_doctor_reads_names_only_and_never_touches_network (tests.test_access_weibo.DoctorTests.test_doctor_reads_names_only_and_never_touches_network) ... ok
+test_doctor_without_profile_is_not_an_error (tests.test_access_weibo.DoctorTests.test_doctor_without_profile_is_not_an_error) ... ok
+test_export_is_a_whitelist_and_keeps_weibo_source (tests.test_access_weibo.ExportTests.test_export_is_a_whitelist_and_keeps_weibo_source) ... ok
+test_export_of_missing_file_is_a_nonzero_exit (tests.test_access_weibo.ExportTests.test_export_of_missing_file_is_a_nonzero_exit) ... ok
+test_dead_tab_is_unknown_not_success (tests.test_access_weibo.LoginTests.test_dead_tab_is_unknown_not_success) ... ok
+test_signed_in_is_ok_without_spending_a_call (tests.test_access_weibo.LoginTests.test_signed_in_is_ok_without_spending_a_call) ... ok
+test_signin_copy_is_not_a_wall (tests.test_access_weibo.LoginTests.test_signin_copy_is_not_a_wall) ... ok
+test_timeout_and_poll_limit_are_different_nonzero_exits (tests.test_access_weibo.LoginTests.test_timeout_and_poll_limit_are_different_nonzero_exits) ... ok
+test_wall_is_risk_and_locks (tests.test_access_weibo.LoginTests.test_wall_is_risk_and_locks) ... ok
+test_diagnostics_are_site_aware (tests.test_access_weibo.ReuseTests.test_diagnostics_are_site_aware) ... ok
+test_diagnostics_skeleton_is_whitelisted_and_names_the_phase (tests.test_access_weibo.ReuseTests.test_diagnostics_skeleton_is_whitelisted_and_names_the_phase) ... ok
+test_login_markers_are_weibo_specific_and_not_the_zhihu_ones (tests.test_access_weibo.ReuseTests.test_login_markers_are_weibo_specific_and_not_the_zhihu_ones) ... ok
+test_site_profile_is_data_not_a_second_transport (tests.test_access_weibo.ReuseTests.test_site_profile_is_data_not_a_second_transport) ... ok
+test_source_tags_unknown_survives_only_for_known_sites (tests.test_access_weibo.ReuseTests.test_source_tags_unknown_survives_only_for_known_sites) ... ok
+test_transport_defaults_to_zhihu_and_accepts_weibo (tests.test_access_weibo.ReuseTests.test_transport_defaults_to_zhihu_and_accepts_weibo) ... ok
+test_transport_reports_navigate_phase_when_get_hangs (tests.test_access_weibo.ReuseTests.test_transport_reports_navigate_phase_when_get_hangs) ... ok
+test_budget_refusal_happens_before_the_transport_is_touched (tests.test_access_weibo.SearchTests.test_budget_refusal_happens_before_the_transport_is_touched) ... ok
+test_empty_document_is_empty_not_success (tests.test_access_weibo.SearchTests.test_empty_document_is_empty_not_success) ... ok
+test_html_links_become_status_records (tests.test_access_weibo.SearchTests.test_html_links_become_status_records) ... ok
+test_locked_batch_refuses_the_next_search (tests.test_access_weibo.SearchTests.test_locked_batch_refuses_the_next_search) ... ok
+test_search_charges_one_call_before_fetching (tests.test_access_weibo.SearchTests.test_search_charges_one_call_before_fetching) ... ok
+test_unrecognized_anchors_are_unsupported_not_empty (tests.test_access_weibo.SearchTests.test_unrecognized_anchors_are_unsupported_not_empty) ... ok
+test_wall_locks_the_batch (tests.test_access_weibo.SearchTests.test_wall_locks_the_batch) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.929s
+
+OK

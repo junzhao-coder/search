@@ -1,0 +1,59 @@
+{
+  "handles": {
+    "run1": "Johnsmathjyjp",
+    "run2": "Johnsmathjyjp",
+    "same": true,
+    "expected": "xluchuan",
+    "equals_expected": false
+  },
+  "source": {
+    "HANDLE_JS_clean": true,
+    "residual_body_fallbacks": [
+      "SETTINGS_HANDLE_JS"
+    ],
+    "click_switcher": true,
+    "menu": true,
+    "settings": true,
+    "script_sha": "06ebace18dca4b6223f50162a682abfcc1cb1b24f3d03951214767bd4776d71d"
+  },
+  "cookies": {
+    "x_rows": 15,
+    "auth_token_name_present": true,
+    "ct0_name_present": true
+  },
+  "search": {
+    "exit": 0,
+    "collected": 5,
+    "seen_total": 41,
+    "elapsed_s": 13.5,
+    "rows": 5,
+    "unique": 5,
+    "fields_nonempty": {
+      "tweet_id": 5,
+      "url": 5,
+      "text": 5,
+      "author_handle": 5,
+      "author_name": 5,
+      "created_at": 5,
+      "lang": 5,
+      "replies": 5,
+      "retweets": 5,
+      "likes": 5,
+      "views": 3,
+      "media_urls": 3,
+      "discovered_by_keyword": 5,
+      "fetched_at": 5
+    }
+  },
+  "hashes": {
+    "equal": true,
+    "mismatches": [],
+    "business": {
+      "sha256": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+      "bytes": 241664,
+      "wal": false,
+      "shm": false
+    },
+    "script_sha": "06ebace18dca4b6223f50162a682abfcc1cb1b24f3d03951214767bd4776d71d"
+  }
+}

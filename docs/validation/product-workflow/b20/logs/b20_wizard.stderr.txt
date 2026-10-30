@@ -1,0 +1,15 @@
+test_copy_page_saves_version_and_blocks_export (tests.test_wizard.WizardTests.test_copy_page_saves_version_and_blocks_export) ... ok
+test_copy_ready_shows_export_links (tests.test_wizard.WizardTests.test_copy_ready_shows_export_links) ... ok
+test_invalid_wo_404 (tests.test_wizard.WizardTests.test_invalid_wo_404) ... ok
+test_old_routes_still_work (tests.test_wizard.WizardTests.test_old_routes_still_work) ... ok
+test_pick_filter_keeps_state (tests.test_wizard.WizardTests.test_pick_filter_keeps_state) ... ok
+test_pick_invalid_param_notice (tests.test_wizard.WizardTests.test_pick_invalid_param_notice) ... ok
+test_pick_renders_with_wizard_bar (tests.test_wizard.WizardTests.test_pick_renders_with_wizard_bar) ... ok
+test_source_and_copy_require_wo (tests.test_wizard.WizardTests.test_source_and_copy_require_wo) ... ok
+test_source_confirm_after_select (tests.test_wizard.WizardTests.test_source_confirm_after_select) ... ok
+test_source_shows_summary_and_blocks_confirm (tests.test_wizard.WizardTests.test_source_shows_summary_and_blocks_confirm) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.385s
+
+OK

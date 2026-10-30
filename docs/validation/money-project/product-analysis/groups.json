@@ -1,0 +1,379 @@
+{
+ "generated_utc": "2026-10-22T14:44:46Z",
+ "source_sha256": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+ "rules_version": "analysis.py@rev2-intent-first",
+ "group_count": 7,
+ "groups": [
+  {
+   "group_key": "type:学习或生活规划模板",
+   "group_name": "学习或生活规划模板",
+   "members": [
+    "x:1824402140070285653",
+    "x:1641088397874802688",
+    "bili:BV11i4y147FS",
+    "x:2072504480298582351",
+    "x:1580068264650022912",
+    "x:1793934695430062328",
+    "x:1677985545585328129",
+    "x:1407234631427002375",
+    "x:2110652419877359978",
+    "x:2113159521321222261",
+    "x:2110981653271122067"
+   ],
+   "count": 11,
+   "demand_sum": 24544.0,
+   "demand_max_norm": 0.931,
+   "sellability_mean": 0.4591,
+   "margin_range": [
+    0.45,
+    0.95
+   ],
+   "risks_top": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "representative_urls": [
+    "https://x.com/aeshoui/status/1824402140070285653",
+    "https://x.com/IAmPascio/status/1641088397874802688",
+    "https://www.bilibili.com/video/BV11i4y147FS"
+   ],
+   "representatives": [
+    {
+     "item_id": "x:1824402140070285653",
+     "title": "˗ˋˏ°• notion template for your class! •°ˎˊ˗ here's the notion template as requested by everyone! I'm selling it for 5 ph",
+     "url": "https://x.com/aeshoui/status/1824402140070285653",
+     "total_score": 0.763534
+    },
+    {
+     "item_id": "x:1641088397874802688",
+     "title": "I created a Search Planner for ChatGPT. This Notion template will help you organize searches and prompts in one place. N",
+     "url": "https://x.com/IAmPascio/status/1641088397874802688",
+     "total_score": 0.702241
+    },
+    {
+     "item_id": "bili:BV11i4y147FS",
+     "title": "177 Notion 教程 No.46 template-1：学习笔记模板（Template Study-Notes）",
+     "url": "https://www.bilibili.com/video/BV11i4y147FS",
+     "total_score": 0.694158
+    }
+   ],
+   "max_total_score": 0.7635,
+   "sources": [],
+   "risk_variants": 5
+  },
+  {
+   "group_key": "carrier:notion",
+   "group_name": "Notion 模板（品类待定）",
+   "members": [
+    "x:1467843989533442054",
+    "x:1674662364057317382",
+    "x:1674994814016954371",
+    "bili:BV1LY411V77i",
+    "x:2075424566042849509",
+    "x:2111873792008237254",
+    "bili:BV1vL4y1x7Qi",
+    "x:1880608606153998536",
+    "x:1628266176856965121",
+    "bili:BV14x4y1k75t",
+    "bili:BV1FXDyBWEyF",
+    "x:2112084330390675474",
+    "bili:BV18v411W7EL",
+    "gh:lakshaybhushan/nextjs-notion-waitlist-template",
+    "bili:BV1Gm4y1S7Ey",
+    "x:2112022643314487666",
+    "bili:BV1qWVRzaEVY",
+    "x:2111287632991060187",
+    "gh:wildcatco/notion-blog",
+    "x:2110780239853003256",
+    "x:2110673556187345270",
+    "gh:makenotion/notion-sdk-typescript-starter",
+    "gh:timovv/notion-website-template",
+    "bili:BV1KW4y177Eb",
+    "gh:heyman333/agent-notion-template-docs",
+    "bili:BV1AC411j7JN",
+    "gh:2skydev/Notion-Next.js-blog-starter-kit",
+    "bili:BV1eQgd63Ejy",
+    "bili:BV1oPtc6iEGH"
+   ],
+   "count": 29,
+   "demand_sum": 59748.0,
+   "demand_max_norm": 1.0,
+   "sellability_mean": 0.4724,
+   "margin_range": [
+    0.35,
+    0.95
+   ],
+   "risks_top": [
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测",
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）"
+   ],
+   "representative_urls": [
+    "https://x.com/booorenjiiy/status/1467843989533442054",
+    "https://x.com/mareidaily/status/1674662364057317382",
+    "https://x.com/opteemisty/status/1674994814016954371"
+   ],
+   "representatives": [
+    {
+     "item_id": "x:1467843989533442054",
+     "title": "•ଓ.° template notion •ଓ.° — a thread by me *̥₊˚‧☆ﾐ",
+     "url": "https://x.com/booorenjiiy/status/1467843989533442054",
+     "total_score": 0.755
+    },
+    {
+     "item_id": "x:1674662364057317382",
+     "title": "CARA MENCARI & REKOMENDASI TEMPLATE NOTION GEMAS UNTUK KALIAN! A thread by @mareidaily",
+     "url": "https://x.com/mareidaily/status/1674662364057317382",
+     "total_score": 0.746207
+    },
+    {
+     "item_id": "x:1674994814016954371",
+     "title": "notion template <3 some of you asked for a notion reveal, so I created this simple template for everyone to use and pers",
+     "url": "https://x.com/opteemisty/status/1674994814016954371",
+     "total_score": 0.719828
+    }
+   ],
+   "max_total_score": 0.755,
+   "sources": [
+    {
+     "name": "vercel-labs/marketing-team-eve-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "可商用",
+     "license_spdx": "MIT",
+     "evidence_url": "https://github.com/vercel-labs/marketing-team-eve-template/blob/HEAD/LICENSE",
+     "match": "近似匹配"
+    },
+    {
+     "name": "lakshaybhushan/nextjs-notion-waitlist-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "禁止或不明",
+     "license_spdx": "NONE",
+     "evidence_url": "https://api.github.com/repos/lakshaybhushan/nextjs-notion-waitlist-template/license",
+     "match": "近似匹配"
+    }
+   ],
+   "risk_variants": 9
+  },
+  {
+   "group_key": "type:求职简历资料",
+   "group_name": "求职简历资料",
+   "members": [
+    "x:1747215882965979516"
+   ],
+   "count": 1,
+   "demand_sum": 3577.0,
+   "demand_max_norm": 0.8966,
+   "sellability_mean": 0.5,
+   "margin_range": [
+    0.7,
+    0.95
+   ],
+   "risks_top": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "representative_urls": [
+    "https://x.com/worksfess/status/1747215882965979516"
+   ],
+   "representatives": [
+    {
+     "item_id": "x:1747215882965979516",
+     "title": "work! adaaa yang butuh template notion buat ngedata lamaran kerja yang kita apply? sender habis bikin versi nya sender, ",
+     "url": "https://x.com/worksfess/status/1747215882965979516",
+     "total_score": 0.728621
+    }
+   ],
+   "max_total_score": 0.7286,
+   "sources": [],
+   "risk_variants": 1
+  },
+  {
+   "group_key": "type:教学内容",
+   "group_name": "教学内容",
+   "members": [
+    "bili:BV19A411f7cH",
+    "bili:BV1vr421K7EJ",
+    "bili:BV1HtpezrEWC",
+    "x:1857108850773537161",
+    "bili:BV1PP411C7pK",
+    "bili:BV1qh411i7sj",
+    "bili:BV1iP411w7xT",
+    "bili:BV1GG411b7iE",
+    "bili:BV1GU4y1z7Xp"
+   ],
+   "count": 9,
+   "demand_sum": 44580.0,
+   "demand_max_norm": 1.0,
+   "sellability_mean": 0.5,
+   "margin_range": [
+    0.35,
+    0.95
+   ],
+   "risks_top": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "representative_urls": [
+    "https://www.bilibili.com/video/BV19A411f7cH",
+    "https://www.bilibili.com/video/BV1vr421K7EJ",
+    "https://www.bilibili.com/video/BV1HtpezrEWC"
+   ],
+   "representatives": [
+    {
+     "item_id": "bili:BV19A411f7cH",
+     "title": "Notion模板怎么导入？简单！",
+     "url": "https://www.bilibili.com/video/BV19A411f7cH",
+     "total_score": 0.721
+    },
+    {
+     "item_id": "bili:BV1vr421K7EJ",
+     "title": "【Notion教程】小白友好：如何拷贝模板？如何设置中文版？",
+     "url": "https://www.bilibili.com/video/BV1vr421K7EJ",
+     "total_score": 0.707579
+    },
+    {
+     "item_id": "bili:BV1HtpezrEWC",
+     "title": "FLO.W 思流 - Notion 一站式全能模板【使用教程】",
+     "url": "https://www.bilibili.com/video/BV1HtpezrEWC",
+     "total_score": 0.653895
+    }
+   ],
+   "max_total_score": 0.721,
+   "sources": [],
+   "risk_variants": 3
+  },
+  {
+   "group_key": "type:提示词或数字包",
+   "group_name": "提示词或数字包",
+   "members": [
+    "x:1878867196971016675",
+    "x:2111381711162638646",
+    "x:2112961620725105107"
+   ],
+   "count": 3,
+   "demand_sum": 698.0,
+   "demand_max_norm": 0.4828,
+   "sellability_mean": 0.85,
+   "margin_range": [
+    0.7,
+    0.95
+   ],
+   "risks_top": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "representative_urls": [
+    "https://x.com/JamesEbringer/status/1878867196971016675",
+    "https://x.com/marjanarbab/status/2111381711162638646",
+    "https://x.com/newfeng20/status/2112961620725105107"
+   ],
+   "representatives": [
+    {
+     "item_id": "x:1878867196971016675",
+     "title": "Create a Notion template Make 3 variations Sell it for $14 / $21 / $28 Put it on Gumroad Put 50% fee on Gumroad Submit t",
+     "url": "https://x.com/JamesEbringer/status/1878867196971016675",
+     "total_score": 0.690604
+    },
+    {
+     "item_id": "x:2111381711162638646",
+     "title": "25 Notion templates in one bundle: CRM, projects, finance, HR, content and more. A look inside https:// notionmarkethub.",
+     "url": "https://x.com/marjanarbab/status/2111381711162638646",
+     "total_score": 0.562586
+    },
+    {
+     "item_id": "x:2112961620725105107",
+     "title": "Gumroad 搜索是字面匹配：template 匹配不到 templates。 有人测了 200 个「商品×搜索词」组合，69 个完全不匹配；他自己说确定的漏配约 20 个，十分之一。排第一的 notion template 商品，买家搜",
+     "url": "https://x.com/newfeng20/status/2112961620725105107",
+     "total_score": 0.545
+    }
+   ],
+   "max_total_score": 0.6906,
+   "sources": [],
+   "risk_variants": 1
+  },
+  {
+   "group_key": "carrier:unknown",
+   "group_name": "载体未明确（品类待定）",
+   "members": [
+    "gh:enescingoz/awesome-n8n-templates",
+    "gh:InlitX/Obsidian-Dashboard-Gallery",
+    "gh:vercel-labs/marketing-team-eve-template",
+    "gh:amjarmed/Awesome-AnyType-Resources",
+    "x:2111095065732886624",
+    "x:2111095067825869230"
+   ],
+   "count": 6,
+   "demand_sum": 27604.0,
+   "demand_max_norm": 1.0,
+   "sellability_mean": 0.5,
+   "margin_range": [
+    0.45,
+    0.95
+   ],
+   "risks_top": [
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）",
+    "毛利低置信：区间宽度 40%（45%–85%），估计范围过宽"
+   ],
+   "representative_urls": [
+    "https://github.com/enescingoz/awesome-n8n-templates",
+    "https://github.com/InlitX/Obsidian-Dashboard-Gallery",
+    "https://github.com/vercel-labs/marketing-team-eve-template"
+   ],
+   "representatives": [
+    {
+     "item_id": "gh:enescingoz/awesome-n8n-templates",
+     "title": "enescingoz/awesome-n8n-templates",
+     "url": "https://github.com/enescingoz/awesome-n8n-templates",
+     "total_score": 0.67425
+    },
+    {
+     "item_id": "gh:InlitX/Obsidian-Dashboard-Gallery",
+     "title": "InlitX/Obsidian-Dashboard-Gallery",
+     "url": "https://github.com/InlitX/Obsidian-Dashboard-Gallery",
+     "total_score": 0.667167
+    },
+    {
+     "item_id": "gh:vercel-labs/marketing-team-eve-template",
+     "title": "vercel-labs/marketing-team-eve-template",
+     "url": "https://github.com/vercel-labs/marketing-team-eve-template",
+     "total_score": 0.638833
+    }
+   ],
+   "max_total_score": 0.6743,
+   "sources": [],
+   "risk_variants": 2
+  },
+  {
+   "group_key": "type:设计素材",
+   "group_name": "设计素材",
+   "members": [
+    "x:1671556814406836224"
+   ],
+   "count": 1,
+   "demand_sum": 1248.0,
+   "demand_max_norm": 0.6897,
+   "sellability_mean": 0.5,
+   "margin_range": [
+    0.7,
+    0.95
+   ],
+   "risks_top": [
+    "竞争偏密：稀疏度仅 35%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "representative_urls": [
+    "https://x.com/NotionHQ/status/1671556814406836224"
+   ],
+   "representatives": [
+    {
+     "item_id": "x:1671556814406836224",
+     "title": "Say hello to the newly redesigned Notion Template Gallery. Creator profiles. Improved search. Over 5,000 templates acros",
+     "url": "https://x.com/NotionHQ/status/1671556814406836224",
+     "total_score": 0.667362
+    }
+   ],
+   "max_total_score": 0.6674,
+   "sources": [],
+   "risk_variants": 1
+  }
+ ]
+}

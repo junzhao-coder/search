@@ -1,0 +1,1448 @@
+{
+ "generated_utc": "2026-10-22T14:44:46Z",
+ "source_sha256": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+ "rules_version": "taxonomy.py@rev1-carrier-x-use",
+ "conservation": {
+  "total": 60,
+  "classified": 38,
+  "pending": 22,
+  "product": 47,
+  "content": 13,
+  "checked": true
+ },
+ "notion29": {
+  "total": 29,
+  "breakdown": {
+   "Notion 其它（待人工）": 15,
+   "Notion 学习笔记模板": 6,
+   "Notion 赠送引流模板": 1,
+   "Notion 内容创作选题库": 2,
+   "Notion 设计作品集模板": 1,
+   "Notion 资源推荐清单": 4
+  },
+  "pending": 15,
+  "checked": true
+ },
+ "coverage": {
+  "items_with_text": 60,
+  "items_total": 60
+ },
+ "targets": {
+  "notion_total": 58,
+  "notion_other": 20,
+  "notion_other_ratio": 0.3448,
+  "subcats_ge2": [
+   "Notion 学习笔记模板",
+   "Notion 赠送引流模板",
+   "Notion 设计作品集模板",
+   "Notion 内容创作选题库",
+   "Notion 生活计划（预算/健身/旅行）",
+   "Notion 资源推荐清单",
+   "Notion 使用教程/导入设置"
+  ],
+  "target_other_le_18": false,
+  "target_four_subcats_ge2": true,
+  "met": false,
+  "notion_other_platforms": {
+   "bilibili": 4,
+   "github": 6,
+   "x": 10
+  },
+  "notion_other_samples": [
+   {
+    "item_id": "x:1467843989533442054",
+    "title": "•ଓ.° template notion •ଓ.° — a thread by me *̥₊˚‧☆ﾐ",
+    "text_len": 157
+   },
+   {
+    "item_id": "x:1674994814016954371",
+    "title": "notion template <3 some of you asked for a notion reveal, so I created",
+    "text_len": 232
+   },
+   {
+    "item_id": "gh:InlitX/Obsidian-Dashboard-Gallery",
+    "title": "InlitX/Obsidian-Dashboard-Gallery",
+    "text_len": 194
+   },
+   {
+    "item_id": "x:2111873792008237254",
+    "title": "this is my AI psychosis (ft @bot x @notionhq )",
+    "text_len": 149
+   },
+   {
+    "item_id": "x:1880608606153998536",
+    "title": "Finally made a Notion template for 12 Week Year.",
+    "text_len": 151
+   }
+  ],
+  "other_missing_count": 20,
+  "remaining_needs_manual": 20
+ },
+ "other_missing": [
+  {
+   "item_id": "x:1467843989533442054",
+   "platform": "x",
+   "title_snippet": "•ଓ.° template notion •ଓ.° — a thread by me *̥₊˚‧☆ﾐ",
+   "text_len": 157,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "x:1674994814016954371",
+   "platform": "x",
+   "title_snippet": "notion template <3 some of you asked for a notion reveal, so I created",
+   "text_len": 232,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "gh:InlitX/Obsidian-Dashboard-Gallery",
+   "platform": "github",
+   "title_snippet": "InlitX/Obsidian-Dashboard-Gallery",
+   "text_len": 194,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "x:2111873792008237254",
+   "platform": "x",
+   "title_snippet": "this is my AI psychosis (ft @bot x @notionhq )",
+   "text_len": 149,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "x:1880608606153998536",
+   "platform": "x",
+   "title_snippet": "Finally made a Notion template for 12 Week Year.",
+   "text_len": 151,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "bili:BV1FXDyBWEyF",
+   "platform": "bilibili",
+   "title_snippet": "🔥 J人实录｜用Notion频繁的记录自己真的太爽啦！！",
+   "text_len": 109,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "bili:BV1Gm4y1S7Ey",
+   "platform": "bilibili",
+   "title_snippet": "万物皆可Notion｜『折叠条』内无法分列？一步操作轻松搞定",
+   "text_len": 111,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "x:2112022643314487666",
+   "platform": "x",
+   "title_snippet": "What does Notion add that Grok Bot cannot do on its own? Is it visibil",
+   "text_len": 147,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "x:2111095065732886624",
+   "platform": "x",
+   "title_snippet": "The prettiest Google Sheet you'll ever open",
+   "text_len": 154,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "x:2111287632991060187",
+   "platform": "x",
+   "title_snippet": "海外项目传到国内，常晚半年。 这段空窗期，就是信息差。 Notion模板，海外卖9到99美元。 改成飞书、WPS中文版，小红书、闲鱼开卖",
+   "text_len": 150,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "x:2112961620725105107",
+   "platform": "x",
+   "title_snippet": "Gumroad 搜索是字面匹配：template 匹配不到 templates。 有人测了 200 个「商品×搜索词」组合，69 个完全不匹",
+   "text_len": 178,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "bili:BV1qh411i7sj",
+   "platform": "bilibili",
+   "title_snippet": "[Notion]手把手教学！追星人必备爱豆模板教程",
+   "text_len": 112,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "gh:wildcatco/notion-blog",
+   "platform": "github",
+   "title_snippet": "wildcatco/notion-blog",
+   "text_len": 136,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "x:2111095067825869230",
+   "platform": "x",
+   "title_snippet": "Download this google sheet template here",
+   "text_len": 154,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "x:2110673556187345270",
+   "platform": "x",
+   "title_snippet": "notion template dashboards show everything...",
+   "text_len": 152,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "gh:makenotion/notion-sdk-typescript-starter",
+   "platform": "github",
+   "title_snippet": "makenotion/notion-sdk-typescript-starter",
+   "text_len": 155,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "gh:timovv/notion-website-template",
+   "platform": "github",
+   "title_snippet": "timovv/notion-website-template",
+   "text_len": 145,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "gh:heyman333/agent-notion-template-docs",
+   "platform": "github",
+   "title_snippet": "heyman333/agent-notion-template-docs",
+   "text_len": 263,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "gh:2skydev/Notion-Next.js-blog-starter-kit",
+   "platform": "github",
+   "title_snippet": "2skydev/Notion-Next.js-blog-starter-kit",
+   "text_len": 275,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  },
+  {
+   "item_id": "bili:BV1eQgd63Ejy",
+   "platform": "bilibili",
+   "title_snippet": "扒谱notion",
+   "text_len": 107,
+   "missing": "缺用途词（求职/学习/内容/生活/设计/赠送）且未命中内容型词（import/setup/推荐/rekomendasi/变现 等）"
+  }
+ ],
+ "categories": [
+  {
+   "group_key": "cat:Notion 学习笔记模板",
+   "group_name": "Notion 学习笔记模板",
+   "category": "Notion 学习笔记模板",
+   "kind": "商品",
+   "carrier": "Notion",
+   "use_case": "学习",
+   "unclassified_reason": "",
+   "members": [
+    "x:1824402140070285653",
+    "bili:BV11i4y147FS",
+    "x:1580068264650022912",
+    "bili:BV1LY411V77i",
+    "bili:BV1HtpezrEWC",
+    "x:1793934695430062328",
+    "bili:BV1vL4y1x7Qi",
+    "x:1407234631427002375",
+    "bili:BV14x4y1k75t",
+    "bili:BV1PP411C7pK",
+    "bili:BV1qWVRzaEVY",
+    "bili:BV1GU4y1z7Xp",
+    "bili:BV1AC411j7JN",
+    "bili:BV1oPtc6iEGH"
+   ],
+   "count": 14,
+   "share": 0.2333,
+   "demand_sum": 57113.0,
+   "demand_max_norm": 0.931,
+   "sellability_mean": 0.4393,
+   "margin_range": [
+    0.35,
+    0.95
+   ],
+   "risks_top": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "representative_urls": [
+    "https://x.com/aeshoui/status/1824402140070285653",
+    "https://www.bilibili.com/video/BV11i4y147FS",
+    "https://x.com/heyeaslo/status/1580068264650022912"
+   ],
+   "max_total_score": 0.7635,
+   "hit_words": {
+    "x:1824402140070285653": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "class",
+      "study"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    },
+    "bili:BV11i4y147FS": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "class",
+      "study",
+      "notes",
+      "学习",
+      "笔记"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": []
+    },
+    "x:1580068264650022912": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "student"
+     ],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "bili:BV1LY411V77i": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "class"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": []
+    },
+    "bili:BV1HtpezrEWC": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "class",
+      "笔记"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": []
+    },
+    "x:1793934695430062328": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "student",
+      "exam"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    },
+    "bili:BV1vL4y1x7Qi": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "class"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": []
+    },
+    "x:1407234631427002375": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "student",
+      "study"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    },
+    "bili:BV14x4y1k75t": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "class"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": []
+    },
+    "bili:BV1PP411C7pK": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "class"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": []
+    },
+    "bili:BV1qWVRzaEVY": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "class"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": []
+    },
+    "bili:BV1GU4y1z7Xp": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "class"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": []
+    },
+    "bili:BV1AC411j7JN": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "class"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": []
+    },
+    "bili:BV1oPtc6iEGH": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "class"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": []
+    }
+   },
+   "analysis": {
+    "what": "Notion 学习笔记模板（载体 Notion × 用途 学习）",
+    "who": "人群未明确",
+    "demand_evidence": "组内 14 条内容信号：需求合计 57113、最高分位 93%；可售性均值 44；参考价来自 price_signals 20 条样本（1.0–1.88），非该类型自身成交价",
+    "competition": "本组占全部机会 23%（14/60）；可售（≥0.8）条目 1 条；无竞品计数数据，需补采集平台在售数量",
+    "pricing_risk": "毛利区间 35%–95%（模型假设）；组内高频风险：毛利低置信：区间宽度 35%（45%–80%），估计范围过宽、成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测；无真实成交与订单数据，定价需补采集",
+    "kind_note": "商品型"
+   },
+   "secondary_top": [],
+   "sources": [
+    {
+     "name": "vercel-labs/marketing-team-eve-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "可商用",
+     "match": "近似匹配"
+    },
+    {
+     "name": "lakshaybhushan/nextjs-notion-waitlist-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "禁止或不明",
+     "match": "近似匹配"
+    }
+   ]
+  },
+  {
+   "group_key": "cat:Notion 其它（待人工）",
+   "group_name": "Notion 其它（待人工）",
+   "category": "Notion 其它（待人工）",
+   "kind": "商品",
+   "carrier": "Notion",
+   "use_case": "未判定",
+   "unclassified_reason": "标题与全文均无商品用途词，也未命中内容型词（import/推荐/变现 等）",
+   "members": [
+    "x:1467843989533442054",
+    "x:1674994814016954371",
+    "gh:InlitX/Obsidian-Dashboard-Gallery",
+    "x:2111873792008237254",
+    "x:1880608606153998536",
+    "bili:BV1FXDyBWEyF",
+    "bili:BV1Gm4y1S7Ey",
+    "x:2112022643314487666",
+    "x:2111095065732886624",
+    "x:2111287632991060187",
+    "x:2112961620725105107",
+    "bili:BV1qh411i7sj",
+    "gh:wildcatco/notion-blog",
+    "x:2111095067825869230",
+    "x:2110673556187345270",
+    "gh:makenotion/notion-sdk-typescript-starter",
+    "gh:timovv/notion-website-template",
+    "gh:heyman333/agent-notion-template-docs",
+    "gh:2skydev/Notion-Next.js-blog-starter-kit",
+    "bili:BV1eQgd63Ejy"
+   ],
+   "count": 20,
+   "share": 0.3333,
+   "demand_sum": 21271.0,
+   "demand_max_norm": 1.0,
+   "sellability_mean": 0.515,
+   "margin_range": [
+    0.35,
+    0.95
+   ],
+   "risks_top": [
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "representative_urls": [
+    "https://x.com/booorenjiiy/status/1467843989533442054",
+    "https://x.com/opteemisty/status/1674994814016954371",
+    "https://github.com/InlitX/Obsidian-Dashboard-Gallery"
+   ],
+   "max_total_score": 0.755,
+   "hit_words": {
+    "x:1467843989533442054": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "x:1674994814016954371": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    },
+    "gh:InlitX/Obsidian-Dashboard-Gallery": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "raw.github.description",
+     "secondary_tags": []
+    },
+    "x:2111873792008237254": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "x:1880608606153998536": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "bili:BV1FXDyBWEyF": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "bili:BV1Gm4y1S7Ey": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "x:2112022643314487666": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "x:2111095065732886624": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "x:2111287632991060187": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "x:2112961620725105107": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    },
+    "bili:BV1qh411i7sj": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "gh:wildcatco/notion-blog": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "x:2111095067825869230": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "x:2110673556187345270": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "gh:makenotion/notion-sdk-typescript-starter": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "gh:timovv/notion-website-template": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "gh:heyman333/agent-notion-template-docs": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "raw.github.description",
+     "secondary_tags": []
+    },
+    "gh:2skydev/Notion-Next.js-blog-starter-kit": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "raw.github.description",
+     "secondary_tags": []
+    },
+    "bili:BV1eQgd63Ejy": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    }
+   },
+   "analysis": {
+    "what": "Notion 其它（待人工）（载体 Notion × 用途 未判定）",
+    "who": "人群未明确",
+    "demand_evidence": "组内 20 条内容信号：需求合计 21271、最高分位 100%；可售性均值 52；参考价来自 price_signals 20 条样本（1.0–1.88），非该类型自身成交价",
+    "competition": "本组占全部机会 33%（20/60）；可售（≥0.8）条目 1 条；无竞品计数数据，需补采集平台在售数量",
+    "pricing_risk": "毛利区间 35%–95%（模型假设）；组内高频风险：成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测、竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）；无真实成交与订单数据，定价需补采集",
+    "kind_note": "商品型"
+   },
+   "secondary_top": [],
+   "sources": [
+    {
+     "name": "vercel-labs/marketing-team-eve-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "可商用",
+     "match": "近似匹配"
+    },
+    {
+     "name": "lakshaybhushan/nextjs-notion-waitlist-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "禁止或不明",
+     "match": "近似匹配"
+    }
+   ]
+  },
+  {
+   "group_key": "cat:Notion 求职投递追踪表",
+   "group_name": "Notion 求职投递追踪表",
+   "category": "Notion 求职投递追踪表",
+   "kind": "商品",
+   "carrier": "Notion",
+   "use_case": "求职",
+   "unclassified_reason": "",
+   "members": [
+    "x:1747215882965979516"
+   ],
+   "count": 1,
+   "share": 0.0167,
+   "demand_sum": 3577.0,
+   "demand_max_norm": 0.8966,
+   "sellability_mean": 0.5,
+   "margin_range": [
+    0.7,
+    0.95
+   ],
+   "risks_top": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "representative_urls": [
+    "https://x.com/worksfess/status/1747215882965979516"
+   ],
+   "max_total_score": 0.7286,
+   "hit_words": {
+    "x:1747215882965979516": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "apply",
+      "lamaran"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    }
+   },
+   "analysis": {
+    "what": "Notion 求职投递追踪表（载体 Notion × 用途 求职）",
+    "who": "人群未明确",
+    "demand_evidence": "组内 1 条内容信号：需求合计 3577、最高分位 90%；可售性均值 50；参考价来自 price_signals 20 条样本（1.0–1.88），非该类型自身成交价",
+    "competition": "本组占全部机会 2%（1/60）；组内暂无可售条目；无竞品计数数据，需补采集平台在售数量",
+    "pricing_risk": "毛利区间 70%–95%（模型假设）；组内高频风险：竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）、成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测；无真实成交与订单数据，定价需补采集",
+    "kind_note": "商品型"
+   },
+   "secondary_top": [],
+   "sources": [
+    {
+     "name": "vercel-labs/marketing-team-eve-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "可商用",
+     "match": "近似匹配"
+    },
+    {
+     "name": "lakshaybhushan/nextjs-notion-waitlist-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "禁止或不明",
+     "match": "近似匹配"
+    }
+   ]
+  },
+  {
+   "group_key": "cat:Notion 赠送引流模板",
+   "group_name": "Notion 赠送引流模板",
+   "category": "Notion 赠送引流模板",
+   "kind": "商品",
+   "carrier": "Notion",
+   "use_case": "赠送引流",
+   "unclassified_reason": "",
+   "members": [
+    "x:1641088397874802688",
+    "x:1628266176856965121"
+   ],
+   "count": 2,
+   "share": 0.0333,
+   "demand_sum": 2637.0,
+   "demand_max_norm": 0.7931,
+   "sellability_mean": 0.5,
+   "margin_range": [
+    0.5,
+    0.95
+   ],
+   "risks_top": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "representative_urls": [
+    "https://x.com/IAmPascio/status/1641088397874802688",
+    "https://x.com/heyeaslo/status/1628266176856965121"
+   ],
+   "max_total_score": 0.7022,
+   "hit_words": {
+    "x:1641088397874802688": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "free"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    },
+    "x:1628266176856965121": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "free"
+     ],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    }
+   },
+   "analysis": {
+    "what": "Notion 赠送引流模板（载体 Notion × 用途 赠送引流）",
+    "who": "人群未明确",
+    "demand_evidence": "组内 2 条内容信号：需求合计 2637、最高分位 79%；可售性均值 50；参考价来自 price_signals 20 条样本（1.0–1.88），非该类型自身成交价",
+    "competition": "本组占全部机会 3%（2/60）；组内暂无可售条目；无竞品计数数据，需补采集平台在售数量",
+    "pricing_risk": "毛利区间 50%–95%（模型假设）；组内高频风险：竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）、成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测；无真实成交与订单数据，定价需补采集",
+    "kind_note": "商品型"
+   },
+   "secondary_top": [],
+   "sources": [
+    {
+     "name": "vercel-labs/marketing-team-eve-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "可商用",
+     "match": "近似匹配"
+    },
+    {
+     "name": "lakshaybhushan/nextjs-notion-waitlist-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "禁止或不明",
+     "match": "近似匹配"
+    }
+   ]
+  },
+  {
+   "group_key": "cat:Notion 设计作品集模板",
+   "group_name": "Notion 设计作品集模板",
+   "category": "Notion 设计作品集模板",
+   "kind": "商品",
+   "carrier": "Notion",
+   "use_case": "设计",
+   "unclassified_reason": "",
+   "members": [
+    "x:1671556814406836224",
+    "bili:BV18v411W7EL"
+   ],
+   "count": 2,
+   "share": 0.0333,
+   "demand_sum": 4070.0,
+   "demand_max_norm": 0.6897,
+   "sellability_mean": 0.5,
+   "margin_range": [
+    0.45,
+    0.95
+   ],
+   "risks_top": [
+    "竞争偏密：稀疏度仅 35%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "representative_urls": [
+    "https://x.com/NotionHQ/status/1671556814406836224",
+    "https://www.bilibili.com/video/BV18v411W7EL"
+   ],
+   "max_total_score": 0.6674,
+   "hit_words": {
+    "x:1671556814406836224": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "design"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    },
+    "bili:BV18v411W7EL": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "设计"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": [
+      "Notion 资源推荐清单"
+     ]
+    }
+   },
+   "analysis": {
+    "what": "Notion 设计作品集模板（载体 Notion × 用途 设计）",
+    "who": "人群未明确",
+    "demand_evidence": "组内 2 条内容信号：需求合计 4070、最高分位 69%；可售性均值 50；参考价来自 price_signals 20 条样本（1.0–1.88），非该类型自身成交价",
+    "competition": "本组占全部机会 3%（2/60）；组内暂无可售条目；无竞品计数数据，需补采集平台在售数量",
+    "pricing_risk": "毛利区间 45%–95%（模型假设）；组内高频风险：竞争偏密：稀疏度仅 35%（低于 50% 阈值，同质供给多）、成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测；无真实成交与订单数据，定价需补采集",
+    "kind_note": "商品型"
+   },
+   "secondary_top": [
+    "Notion 资源推荐清单"
+   ],
+   "sources": [
+    {
+     "name": "InlitX/Obsidian-Dashboard-Gallery",
+     "type": "设计资产/模板",
+     "license_verdict": "可商用",
+     "match": "近似匹配"
+    },
+    {
+     "name": "vercel-labs/marketing-team-eve-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "可商用",
+     "match": "近似匹配"
+    }
+   ]
+  },
+  {
+   "group_key": "cat:未归类（待人工）",
+   "group_name": "未归类（待人工）",
+   "category": "未归类（待人工）",
+   "kind": "商品",
+   "carrier": "其他",
+   "use_case": "未判定",
+   "unclassified_reason": "既未命中载体，也未命中用途词",
+   "members": [
+    "gh:vercel-labs/marketing-team-eve-template",
+    "x:2110652419877359978"
+   ],
+   "count": 2,
+   "share": 0.0333,
+   "demand_sum": 527.0,
+   "demand_max_norm": 0.7778,
+   "sellability_mean": 0.5,
+   "margin_range": [
+    0.45,
+    0.95
+   ],
+   "risks_top": [
+    "毛利低置信：区间宽度 40%（45%–85%），估计范围过宽",
+    "竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）"
+   ],
+   "representative_urls": [
+    "https://github.com/vercel-labs/marketing-team-eve-template",
+    "https://x.com/JocelynTowweeh/status/2110652419877359978"
+   ],
+   "max_total_score": 0.6388,
+   "hit_words": {
+    "gh:vercel-labs/marketing-team-eve-template": {
+     "carrier_hits": [],
+     "use_hits": [],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "x:2110652419877359978": {
+     "carrier_hits": [],
+     "use_hits": [
+      "habit"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    }
+   },
+   "analysis": {
+    "what": "未归类（待人工）（载体 其他 × 用途 未判定）",
+    "who": "人群未明确",
+    "demand_evidence": "组内 2 条内容信号：需求合计 527、最高分位 78%；可售性均值 50；参考价来自 price_signals 20 条样本（1.0–1.88），非该类型自身成交价",
+    "competition": "本组占全部机会 3%（2/60）；组内暂无可售条目；无竞品计数数据，需补采集平台在售数量",
+    "pricing_risk": "毛利区间 45%–95%（模型假设）；组内高频风险：毛利低置信：区间宽度 40%（45%–85%），估计范围过宽、竞争偏密：稀疏度仅 30%（低于 50% 阈值，同质供给多）；无真实成交与订单数据，定价需补采集",
+    "kind_note": "商品型"
+   },
+   "secondary_top": [],
+   "sources": []
+  },
+  {
+   "group_key": "cat:Notion 内容创作选题库",
+   "group_name": "Notion 内容创作选题库",
+   "category": "Notion 内容创作选题库",
+   "kind": "商品",
+   "carrier": "Notion",
+   "use_case": "内容创作",
+   "unclassified_reason": "",
+   "members": [
+    "gh:amjarmed/Awesome-AnyType-Resources",
+    "x:2112084330390675474",
+    "x:2111381711162638646",
+    "x:2110780239853003256"
+   ],
+   "count": 4,
+   "share": 0.0667,
+   "demand_sum": 317.0,
+   "demand_max_norm": 0.5556,
+   "sellability_mean": 0.575,
+   "margin_range": [
+    0.45,
+    0.95
+   ],
+   "risks_top": [
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测",
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）"
+   ],
+   "representative_urls": [
+    "https://github.com/amjarmed/Awesome-AnyType-Resources",
+    "https://x.com/wustep/status/2112084330390675474",
+    "https://x.com/marjanarbab/status/2111381711162638646"
+   ],
+   "max_total_score": 0.5907,
+   "hit_words": {
+    "gh:amjarmed/Awesome-AnyType-Resources": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "content"
+     ],
+     "text_source": "raw.github.description",
+     "secondary_tags": []
+    },
+    "x:2112084330390675474": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "edit"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    },
+    "x:2111381711162638646": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "content"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    },
+    "x:2110780239853003256": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "内容"
+     ],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    }
+   },
+   "analysis": {
+    "what": "Notion 内容创作选题库（载体 Notion × 用途 内容创作）",
+    "who": "人群未明确",
+    "demand_evidence": "组内 4 条内容信号：需求合计 317、最高分位 56%；可售性均值 57；参考价来自 price_signals 20 条样本（1.0–1.88），非该类型自身成交价",
+    "competition": "本组占全部机会 7%（4/60）；可售（≥0.8）条目 1 条；无竞品计数数据，需补采集平台在售数量",
+    "pricing_risk": "毛利区间 45%–95%（模型假设）；组内高频风险：成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测、竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）；无真实成交与订单数据，定价需补采集",
+    "kind_note": "商品型"
+   },
+   "secondary_top": [],
+   "sources": [
+    {
+     "name": "vercel-labs/marketing-team-eve-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "可商用",
+     "match": "近似匹配"
+    },
+    {
+     "name": "lakshaybhushan/nextjs-notion-waitlist-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "禁止或不明",
+     "match": "近似匹配"
+    }
+   ]
+  },
+  {
+   "group_key": "cat:Notion 生活计划（预算/健身/旅行）",
+   "group_name": "Notion 生活计划（预算/健身/旅行）",
+   "category": "Notion 生活计划（预算/健身/旅行）",
+   "kind": "商品",
+   "carrier": "Notion",
+   "use_case": "生活",
+   "unclassified_reason": "",
+   "members": [
+    "x:2113159521321222261",
+    "x:2110981653271122067"
+   ],
+   "count": 2,
+   "share": 0.0333,
+   "demand_sum": 7.0,
+   "demand_max_norm": 0.3103,
+   "sellability_mean": 0.5,
+   "margin_range": [
+    0.7,
+    0.95
+   ],
+   "risks_top": [
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测",
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）"
+   ],
+   "representative_urls": [
+    "https://x.com/MONABLIZUIUX/status/2113159521321222261",
+    "https://x.com/Notiondashboard/status/2110981653271122067"
+   ],
+   "max_total_score": 0.5791,
+   "hit_words": {
+    "x:2113159521321222261": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "budget",
+      "finance"
+     ],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "x:2110981653271122067": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "finance"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    }
+   },
+   "analysis": {
+    "what": "Notion 生活计划（预算/健身/旅行）（载体 Notion × 用途 生活）",
+    "who": "人群未明确",
+    "demand_evidence": "组内 2 条内容信号：需求合计 7、最高分位 31%；可售性均值 50；参考价来自 price_signals 20 条样本（1.0–1.88），非该类型自身成交价",
+    "competition": "本组占全部机会 3%（2/60）；组内暂无可售条目；无竞品计数数据，需补采集平台在售数量",
+    "pricing_risk": "毛利区间 70%–95%（模型假设）；组内高频风险：成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测、竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）；无真实成交与订单数据，定价需补采集",
+    "kind_note": "商品型"
+   },
+   "secondary_top": [],
+   "sources": [
+    {
+     "name": "vercel-labs/marketing-team-eve-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "可商用",
+     "match": "近似匹配"
+    },
+    {
+     "name": "lakshaybhushan/nextjs-notion-waitlist-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "禁止或不明",
+     "match": "近似匹配"
+    }
+   ]
+  },
+  {
+   "group_key": "cat:Notion 资源推荐清单",
+   "group_name": "Notion 资源推荐清单",
+   "category": "Notion 资源推荐清单",
+   "kind": "内容",
+   "carrier": "Notion",
+   "use_case": "推荐",
+   "unclassified_reason": "",
+   "members": [
+    "x:1674662364057317382",
+    "gh:enescingoz/awesome-n8n-templates",
+    "x:2072504480298582351",
+    "x:2075424566042849509",
+    "x:1677985545585328129",
+    "gh:lakshaybhushan/nextjs-notion-waitlist-template",
+    "bili:BV1KW4y177Eb"
+   ],
+   "count": 7,
+   "share": 0.1167,
+   "demand_sum": 36145.0,
+   "demand_max_norm": 1.0,
+   "sellability_mean": 0.4429,
+   "margin_range": [
+    0.35,
+    0.95
+   ],
+   "risks_top": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "representative_urls": [
+    "https://x.com/mareidaily/status/1674662364057317382",
+    "https://github.com/enescingoz/awesome-n8n-templates",
+    "https://x.com/Doy0u10veme/status/2072504480298582351"
+   ],
+   "max_total_score": 0.7462,
+   "hit_words": {
+    "x:1674662364057317382": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "rekomendasi",
+      "cara mencari"
+     ],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "gh:enescingoz/awesome-n8n-templates": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "list"
+     ],
+     "text_source": "raw.github.description",
+     "secondary_tags": []
+    },
+    "x:2072504480298582351": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "list"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    },
+    "x:2075424566042849509": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "list"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    },
+    "x:1677985545585328129": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "list"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    },
+    "gh:lakshaybhushan/nextjs-notion-waitlist-template": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "list"
+     ],
+     "text_source": "raw.github.description",
+     "secondary_tags": []
+    },
+    "bili:BV1KW4y177Eb": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "list"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": []
+    }
+   },
+   "analysis": {
+    "what": "Notion 资源推荐清单（载体 Notion × 内容主题 推荐）",
+    "who": "人群未明确",
+    "demand_evidence": "组内 7 条内容信号：需求合计 36145、最高分位 100%；可售性均值 44；参考价来自 price_signals 20 条样本（1.0–1.88），非该类型自身成交价",
+    "competition": "本组占全部机会 12%（7/60）；组内暂无可售条目；无竞品计数数据，需补采集平台在售数量",
+    "pricing_risk": "内容型（非商品），不估算毛利；流量价值：组内 7 条、需求合计 36145、最高分位 100%；引流去向：站内主页 / 合集 / 私信关键词；可带货的相邻商品：同主题的 Notion 模板、PPT 模板或资料包（需人工挑选，数据中未标注）",
+    "kind_note": "内容型（非商品），不计入可售商品口径"
+   },
+   "secondary_top": [],
+   "sources": [
+    {
+     "name": "vercel-labs/marketing-team-eve-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "可商用",
+     "match": "近似匹配"
+    },
+    {
+     "name": "lakshaybhushan/nextjs-notion-waitlist-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "禁止或不明",
+     "match": "近似匹配"
+    }
+   ]
+  },
+  {
+   "group_key": "cat:Notion 使用教程/导入设置",
+   "group_name": "Notion 使用教程/导入设置",
+   "category": "Notion 使用教程/导入设置",
+   "kind": "内容",
+   "carrier": "Notion",
+   "use_case": "教程",
+   "unclassified_reason": "",
+   "members": [
+    "bili:BV19A411f7cH",
+    "bili:BV1vr421K7EJ",
+    "x:1857108850773537161",
+    "bili:BV1iP411w7xT",
+    "bili:BV1GG411b7iE"
+   ],
+   "count": 5,
+   "share": 0.0833,
+   "demand_sum": 35638.0,
+   "demand_max_norm": 1.0,
+   "sellability_mean": 0.5,
+   "margin_range": [
+    0.35,
+    0.95
+   ],
+   "risks_top": [
+    "毛利低置信：区间宽度 35%（45%–80%），估计范围过宽",
+    "成本缺失：无公开成本输入，毛利 62% 为假设区间而非实测"
+   ],
+   "representative_urls": [
+    "https://www.bilibili.com/video/BV19A411f7cH",
+    "https://www.bilibili.com/video/BV1vr421K7EJ",
+    "https://x.com/NotionHQ/status/1857108850773537161"
+   ],
+   "max_total_score": 0.721,
+   "hit_words": {
+    "bili:BV19A411f7cH": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "导入",
+      "怎么导入"
+     ],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    },
+    "bili:BV1vr421K7EJ": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "拷贝",
+      "设置"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": []
+    },
+    "x:1857108850773537161": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "setup",
+      "how to"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": [
+      "Notion 资源推荐清单"
+     ]
+    },
+    "bili:BV1iP411w7xT": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "setup",
+      "设置"
+     ],
+     "text_source": "raw.bilibili.description",
+     "secondary_tags": [
+      "Notion 资源推荐清单"
+     ]
+    },
+    "bili:BV1GG411b7iE": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "导入"
+     ],
+     "text_source": "items.raw_summary",
+     "secondary_tags": []
+    }
+   },
+   "analysis": {
+    "what": "Notion 使用教程/导入设置（载体 Notion × 内容主题 教程）",
+    "who": "人群未明确",
+    "demand_evidence": "组内 5 条内容信号：需求合计 35638、最高分位 100%；可售性均值 50；参考价来自 price_signals 20 条样本（1.0–1.88），非该类型自身成交价",
+    "competition": "本组占全部机会 8%（5/60）；组内暂无可售条目；无竞品计数数据，需补采集平台在售数量",
+    "pricing_risk": "内容型（非商品），不估算毛利；流量价值：组内 5 条、需求合计 35638、最高分位 100%；引流去向：站内主页 / 合集 / 私信关键词；可带货的相邻商品：同主题的 Notion 模板、PPT 模板或资料包（需人工挑选，数据中未标注）",
+    "kind_note": "内容型（非商品），不计入可售商品口径"
+   },
+   "secondary_top": [
+    "Notion 资源推荐清单"
+   ],
+   "sources": [
+    {
+     "name": "vercel-labs/marketing-team-eve-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "可商用",
+     "match": "近似匹配"
+    },
+    {
+     "name": "lakshaybhushan/nextjs-notion-waitlist-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "禁止或不明",
+     "match": "近似匹配"
+    }
+   ]
+  },
+  {
+   "group_key": "cat:Notion 教学变现",
+   "group_name": "Notion 教学变现",
+   "category": "Notion 教学变现",
+   "kind": "内容",
+   "carrier": "Notion",
+   "use_case": "变现教学",
+   "unclassified_reason": "",
+   "members": [
+    "x:1878867196971016675"
+   ],
+   "count": 1,
+   "share": 0.0167,
+   "demand_sum": 697.0,
+   "demand_max_norm": 0.4828,
+   "sellability_mean": 0.95,
+   "margin_range": [
+    0.7,
+    0.95
+   ],
+   "risks_top": [
+    "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+    "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+   ],
+   "representative_urls": [
+    "https://x.com/JamesEbringer/status/1878867196971016675"
+   ],
+   "max_total_score": 0.6906,
+   "hit_words": {
+    "x:1878867196971016675": {
+     "carrier_hits": [
+      "notion"
+     ],
+     "use_hits": [
+      "sell it for"
+     ],
+     "text_source": "raw.x_search.text",
+     "secondary_tags": []
+    }
+   },
+   "analysis": {
+    "what": "Notion 教学变现（载体 Notion × 内容主题 变现教学）",
+    "who": "人群未明确",
+    "demand_evidence": "组内 1 条内容信号：需求合计 697、最高分位 48%；可售性均值 95；参考价来自 price_signals 20 条样本（1.0–1.88），非该类型自身成交价",
+    "competition": "本组占全部机会 2%（1/60）；可售（≥0.8）条目 1 条；无竞品计数数据，需补采集平台在售数量",
+    "pricing_risk": "内容型（非商品），不估算毛利；流量价值：组内 1 条、需求合计 697、最高分位 48%；引流去向：站内主页 / 合集 / 私信关键词；可带货的相邻商品：同主题的 Notion 模板、PPT 模板或资料包（需人工挑选，数据中未标注）",
+    "kind_note": "内容型（非商品），不计入可售商品口径"
+   },
+   "secondary_top": [],
+   "sources": [
+    {
+     "name": "vercel-labs/marketing-team-eve-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "可商用",
+     "match": "近似匹配"
+    },
+    {
+     "name": "lakshaybhushan/nextjs-notion-waitlist-template",
+     "type": "站点/Notion 模板",
+     "license_verdict": "禁止或不明",
+     "match": "近似匹配"
+    }
+   ]
+  }
+ ]
+}

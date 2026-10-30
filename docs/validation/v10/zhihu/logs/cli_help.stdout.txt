@@ -1,0 +1,28 @@
+usage: python -m tools.selection.access.zhihu [-h] [--state-dir STATE_DIR]
+                                              [--profile PROFILE]
+                                              [--batch-id BATCH_ID]
+                                              [--mode {offline,public-http,authenticated-browser}]
+                                              {doctor,login,search,detail,comments,export,budget}
+                                              ...
+
+Zhihu read-only access with a durable state-dir budget
+
+positional arguments:
+  {doctor,login,search,detail,comments,export,budget}
+    doctor              local-only profile/cookie-name check
+    login               visible window for the user to sign in
+    search              one search call
+    detail              one detail page call
+    comments            one root-comment call
+    export              normalize local records into an export
+    budget              show the persisted budget snapshot
+
+options:
+  -h, --help            show this help message and exit
+  --state-dir STATE_DIR
+                        runtime dir holding the budget; one dir == one budget
+  --profile PROFILE     dedicated Chrome profile dir (never committed)
+  --batch-id BATCH_ID   label for this run; does NOT reset counters or locks
+  --mode {offline,public-http,authenticated-browser}
+                        offline (default) | public-http | authenticated-
+                        browser

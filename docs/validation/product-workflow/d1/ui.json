@@ -1,0 +1,95 @@
+{
+ "generated_utc": "2026-10-24T13:32:53Z",
+ "port": 5026,
+ "db": "C:\\Users\\19183\\AppData\\Local\\Temp\\d1-ui-uxwtc3cd\\w.db",
+ "pages": {
+  "desktop /pick": {
+   "innerW": 1440,
+   "innerH": 900,
+   "scrollW": 1440,
+   "scrollH": 1292,
+   "overflowX": false,
+   "nav_labels": [
+    "选品",
+    "选源",
+    "起草介绍"
+   ]
+  },
+  "desktop /source?wo=wo:20261024-a4f52c63": {
+   "innerW": 1440,
+   "innerH": 900,
+   "scrollW": 1440,
+   "scrollH": 985,
+   "overflowX": false,
+   "nav_labels": [
+    "选品",
+    "选源",
+    "起草介绍"
+   ]
+  },
+  "desktop /copy?wo=wo:20261024-a4f52c63": {
+   "innerW": 1440,
+   "innerH": 900,
+   "scrollW": 1440,
+   "scrollH": 1401,
+   "overflowX": false,
+   "nav_labels": [
+    "选品",
+    "选源",
+    "起草介绍"
+   ]
+  },
+  "mobile /pick": {
+   "innerW": 390,
+   "innerH": 844,
+   "scrollW": 390,
+   "scrollH": 2251,
+   "overflowX": false,
+   "nav_labels": [
+    "选品",
+    "选源",
+    "起草介绍"
+   ]
+  },
+  "mobile /source?wo=wo:20261024-a4f52c63": {
+   "innerW": 390,
+   "innerH": 844,
+   "scrollW": 390,
+   "scrollH": 1261,
+   "overflowX": false,
+   "nav_labels": [
+    "选品",
+    "选源",
+    "起草介绍"
+   ]
+  },
+  "mobile /copy?wo=wo:20261024-a4f52c63": {
+   "innerW": 390,
+   "innerH": 844,
+   "scrollW": 390,
+   "scrollH": 2148,
+   "overflowX": false,
+   "nav_labels": [
+    "选品",
+    "选源",
+    "起草介绍"
+   ]
+  }
+ },
+ "probes": {
+  "continue_block_present": true,
+  "continue_links_to_wo": true,
+  "source_no_wo": {
+   "status": 400,
+   "has_hint": true
+  },
+  "copy_invalid_wo": {
+   "status": 404,
+   "has_hint": true
+  },
+  "root": {
+   "status": 200
+  }
+ },
+ "workorder_id": "wo:20261024-a4f52c63"
+}

@@ -1,0 +1,15 @@
+{
+ "generated_utc": "2026-10-24T12:31:28Z",
+ "url": "http://127.0.0.1:5015/copy?wo=wo:20261023-88ef9a66",
+ "shots": {
+  "copy_publish_guide.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 88890,
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "d32b4d0d52e88e2f5aae8bef125b6e0fef6dd7dc79caa89f851179268a30f345",
+   "guide_visible_in_dom": true
+  }
+ }
+}

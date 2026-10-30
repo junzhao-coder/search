@@ -1,0 +1,110 @@
+{
+ "mobile": [
+  {
+   "url": "http://127.0.0.1:5015/",
+   "innerWidth": 390,
+   "innerHeight": 844,
+   "scrollWidth": 390,
+   "scrollHeight": 1490,
+   "overflowX": false,
+   "widest": {
+    "right": 689,
+    "tag": "TABLE.#"
+   },
+   "rows": 5,
+   "navCollapsed": true,
+   "screenshot": "D:\\桌面\\two\\docs\\validation\\money-project\\workbench-ui\\shots\\mobile_index.jpg"
+  },
+  {
+   "url": "http://127.0.0.1:5015/opportunities",
+   "innerWidth": 390,
+   "innerHeight": 844,
+   "scrollWidth": 390,
+   "scrollHeight": 6149,
+   "overflowX": false,
+   "widest": {
+    "right": 669,
+    "tag": "TABLE.#"
+   },
+   "rows": 60,
+   "navCollapsed": true,
+   "screenshot": "D:\\桌面\\two\\docs\\validation\\money-project\\workbench-ui\\shots\\mobile_opportunities.jpg"
+  },
+  {
+   "url": "http://127.0.0.1:5015/sources",
+   "innerWidth": 390,
+   "innerHeight": 844,
+   "scrollWidth": 390,
+   "scrollHeight": 5539,
+   "overflowX": false,
+   "widest": {
+    "right": 797,
+    "tag": "TABLE.#"
+   },
+   "rows": 44,
+   "navCollapsed": true,
+   "screenshot": "D:\\桌面\\two\\docs\\validation\\money-project\\workbench-ui\\shots\\mobile_sources.jpg"
+  }
+ ],
+ "shots": {
+  "desktop_collect.jpg": {
+   "format": "jpeg",
+   "width": 1418,
+   "height": 802,
+   "bytes": 112090
+  },
+  "desktop_daily.jpg": {
+   "format": "jpeg",
+   "width": 1418,
+   "height": 802,
+   "bytes": 67801
+  },
+  "desktop_index.jpg": {
+   "format": "jpeg",
+   "width": 1418,
+   "height": 802,
+   "bytes": 113760
+  },
+  "desktop_opportunities.jpg": {
+   "format": "jpeg",
+   "width": 1418,
+   "height": 802,
+   "bytes": 130999
+  },
+  "desktop_opportunities_expanded.jpg": {
+   "format": "jpeg",
+   "width": 1258,
+   "height": 926,
+   "bytes": 122550
+  },
+  "desktop_sources.jpg": {
+   "format": "jpeg",
+   "width": 1418,
+   "height": 802,
+   "bytes": 110703
+  },
+  "mobile_index.jpg": {
+   "format": "jpeg",
+   "width": 390,
+   "height": 844,
+   "bytes": 49092
+  },
+  "mobile_opportunities.jpg": {
+   "format": "jpeg",
+   "width": 390,
+   "height": 844,
+   "bytes": 44887
+  },
+  "mobile_sources.jpg": {
+   "format": "jpeg",
+   "width": 390,
+   "height": 844,
+   "bytes": 47771
+  }
+ },
+ "errors": [],
+ "viewport": {
+  "width": 390,
+  "height": 844
+ }
+}

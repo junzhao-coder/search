@@ -1,0 +1,27 @@
+{
+ "generated_utc": "2026-10-23T13:40:47Z",
+ "production": {
+  "db": "D:\\桌面\\two\\tools\\workbench\\runtime\\workflow.sqlite3",
+  "db_existed_before": false,
+  "workorder_id": "wo:c3-prod-20261023",
+  "workorders": 1,
+  "list_contains": true,
+  "detail_ok_chips": 6,
+  "detail_warn_chips": 1,
+  "ready": false,
+  "blockers": [
+   "目标平台条件有证据（xianyu）：缺少目标平台条件证据（platform_evidence 为空）"
+  ],
+  "export_status": 409
+ },
+ "synthetic": {
+  "md_status": 200,
+  "json_status": 200,
+  "post_status": 200,
+  "recorded_header": "true",
+  "internal_hits": [],
+  "faq_count": 6,
+  "selling_points": 5
+ },
+ "db_sha256_prod": "0914b137950e945bc6e6fd7d215b240f60ddcf3d04a346e6deb02d79868c3d1c"
+}

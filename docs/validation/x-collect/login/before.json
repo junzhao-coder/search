@@ -1,0 +1,134 @@
+{
+ "mode": "before",
+ "recorded_utc": "2026-10-21T15:31:25Z",
+ "cwd": "D:\\桌面\\two",
+ "paths": {
+  "dsh_home": "C:\\Users\\19183\\.dsh",
+  "dsh_core": "C:\\Users\\19183\\AppData\\Local\\Programs\\DeepSeek Harness\\resources\\app\\dsh",
+  "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "tool": "C:\\Users\\19183\\.dsh\\tools\\x-collect",
+  "python": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\venv\\Scripts\\python.exe",
+  "chrome_bytes": 4720792,
+  "chrome_mtime_utc": "2026-10-15T02:21:57Z"
+ },
+ "files": {
+  "requirements": {
+   "path": "D:\\桌面\\two\\requirements.txt",
+   "exists": true,
+   "bytes": 179,
+   "sha256": "0af19a0f1c100e99483b79e7f11b500ccf6a5a1477d8ac4b560c077b2bea7731"
+  },
+  "contract": {
+   "path": "D:\\桌面\\two\\docs\\design\\CONTRACT.md",
+   "exists": true,
+   "bytes": 74839,
+   "sha256": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9"
+  },
+  "wiring": {
+   "path": "D:\\桌面\\two\\app\\sources\\wiring.py",
+   "exists": true,
+   "bytes": 8402,
+   "sha256": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05"
+  },
+  "bilibili_view": {
+   "path": "D:\\桌面\\two\\app\\sources\\bilibili_view.py",
+   "exists": true,
+   "bytes": 12866,
+   "sha256": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e"
+  },
+  "importer": {
+   "path": "D:\\桌面\\two\\app\\core\\importer.py",
+   "exists": true,
+   "bytes": 49011,
+   "sha256": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1"
+  },
+  "real_link": {
+   "path": "D:\\桌面\\two\\app\\sources\\real_link.py",
+   "exists": true,
+   "bytes": 23228,
+   "sha256": "46cbd635b5e70cc2d1b6441befde31e25b8203caf28d39b772203c43b8f5802c"
+  },
+  "migration_0001": {
+   "path": "D:\\桌面\\two\\app\\storage\\migrations\\0001_init.sql",
+   "exists": true,
+   "bytes": 14102,
+   "sha256": "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb"
+  },
+  "migration_0002": {
+   "path": "D:\\桌面\\two\\app\\storage\\migrations\\0002_draft_feedback.sql",
+   "exists": true,
+   "bytes": 2688,
+   "sha256": "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed"
+  },
+  "business_db": {
+   "path": "D:\\桌面\\two\\instance\\app.db",
+   "exists": true,
+   "bytes": 241664,
+   "sha256": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85"
+  }
+ },
+ "dsh_core_package_json": {
+  "path": "C:\\Users\\19183\\AppData\\Local\\Programs\\DeepSeek Harness\\resources\\app\\dsh\\package.json",
+  "exists": true,
+  "bytes": 17100,
+  "sha256": "b67a65b9719272b2eb54093b63c121d05907da062a1393e8c9f871e1cd18f94e"
+ },
+ "dsh_mcp_client": {
+  "root": "C:\\Users\\19183\\AppData\\Local\\Programs\\DeepSeek Harness\\resources\\app\\dsh\\node_modules\\@deepseek-ai\\dsh-mcp-client",
+  "exists": true,
+  "file_count": 6,
+  "files": [
+   {
+    "rel": "lib\\index.js",
+    "bytes": 35041,
+    "sha256": "758d8fc473b700b5d351158d06ce9f9e92c16e8b25497b08bb7bd2122a87f5dd"
+   },
+   {
+    "rel": "LICENSE",
+    "bytes": 1065,
+    "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+   },
+   {
+    "rel": "package.json",
+    "bytes": 2272,
+    "sha256": "43b54ea675c6aac0cc135ee0aa9951ae7f2808be4b65576cd2baed83851a7f33"
+   },
+   {
+    "rel": "README.i18n.yaml",
+    "bytes": 3894,
+    "sha256": "342b303800175afd98281c1d60ed30707666fa575857e5d0bbbe81e828d6becd"
+   },
+   {
+    "rel": "README.md",
+    "bytes": 18463,
+    "sha256": "346ad21f0c7f8bd7248a021513228769fcde1dec7065a3ea77e809f999805806"
+   },
+   {
+    "rel": "README.zh.md",
+    "bytes": 17063,
+    "sha256": "7238d7c53a955b818f6c765615b83eb54d371959e38d1ea677175772ac064cfb"
+   }
+  ],
+  "tree_sha256": "9fc3a99a4b5eddf6facc485a60e5fecfd6764314ad9028b7cca88fce2a8a9ea4"
+ },
+ "tool_dir": {
+  "root": "C:\\Users\\19183\\.dsh\\tools\\x-collect",
+  "exists": true,
+  "entries": [
+   "data",
+   "logs",
+   "profile",
+   "scripts",
+   "venv"
+  ],
+  "venv_file_count": 1227,
+  "venv_bytes": 18971868,
+  "profile_file_count": 1093
+ },
+ "business_db_sidecars": {
+  "wal": false,
+  "shm": false
+ },
+ "dsh_profiles_touched": false,
+ "daily_chrome_touched": false
+}

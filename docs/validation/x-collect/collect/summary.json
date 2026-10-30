@@ -1,0 +1,179 @@
+{
+ "captured_utc": "2026-10-22T03:16Z",
+ "stats": {
+  "search": {
+   "command": "search",
+   "url": "https://x.com/search?q=Anthropic&f=live",
+   "keyword": "Anthropic",
+   "started_utc": "2026-10-22T03:10:58Z",
+   "finished_utc": "2026-10-22T03:11:03Z",
+   "elapsed_s": 5.1,
+   "requested_limit": 5,
+   "collected": 5,
+   "duplicates": 0,
+   "seen_total": 10,
+   "nonempty_text": 5,
+   "nonempty_text_ratio": 1.0,
+   "stop_reason": "LIMIT",
+   "jsonl": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\data\\search-2026-10-22T031103Z.jsonl",
+   "exit": 0
+  },
+  "user": {
+   "command": "user",
+   "url": "https://x.com/OpenAI",
+   "keyword": "OpenAI",
+   "started_utc": "2026-10-22T03:11:20Z",
+   "finished_utc": "2026-10-22T03:11:55Z",
+   "elapsed_s": 35.5,
+   "requested_limit": 5,
+   "collected": 5,
+   "duplicates": 6,
+   "seen_total": 15,
+   "nonempty_text": 5,
+   "nonempty_text_ratio": 1.0,
+   "stop_reason": "LIMIT",
+   "jsonl": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\data\\user-2026-10-22T031155Z.jsonl",
+   "exit": 0
+  },
+  "tweet": {
+   "command": "tweet",
+   "url": "https://x.com/OpenAI/status/2107895002022187411",
+   "keyword": "2107895002022187411",
+   "started_utc": "2026-10-22T03:14:47Z",
+   "finished_utc": "2026-10-22T03:14:52Z",
+   "elapsed_s": 5.1,
+   "requested_limit": 1,
+   "collected": 1,
+   "duplicates": 0,
+   "seen_total": 18,
+   "nonempty_text": 1,
+   "nonempty_text_ratio": 1.0,
+   "stop_reason": "LIMIT",
+   "jsonl": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\data\\tweet-2026-10-22T031452Z.jsonl",
+   "exit": 0
+  },
+  "tweet_replies": {
+   "command": "tweet",
+   "url": "https://x.com/OpenAI/status/2107895002022187411",
+   "keyword": "2107895002022187411",
+   "started_utc": "2026-10-22T03:15:25Z",
+   "finished_utc": "2026-10-22T03:15:52Z",
+   "elapsed_s": 27.6,
+   "requested_limit": 5,
+   "collected": 5,
+   "duplicates": 13,
+   "seen_total": 23,
+   "nonempty_text": 5,
+   "nonempty_text_ratio": 1.0,
+   "stop_reason": "LIMIT",
+   "jsonl": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\data\\tweet-2026-10-22T031552Z.jsonl",
+   "exit": 0
+  }
+ },
+ "samples": {
+  "search": {
+   "file": "search-2026-10-22T031103Z.jsonl",
+   "rows": 5,
+   "first": {
+    "tweet_id": "2113105798004117667",
+    "url": "https://x.com/xluchuan/status/2113105798004117667",
+    "text": "话虽如此，anthropic会感到伤心",
+    "author_handle": "xluchuan",
+    "author_name": "鹿川 Luchuan",
+    "created_at": "2026-10-22T03:10:56.000Z",
+    "lang": "zh",
+    "replies": 0,
+    "retweets": 0,
+    "likes": 0,
+    "views": null,
+    "media_urls": [],
+    "discovered_by_keyword": "Anthropic",
+    "fetched_at": "2026-10-22T03:11:03Z"
+   }
+  },
+  "user": {
+   "file": "user-2026-10-22T031155Z.jsonl",
+   "rows": 5,
+   "first": {
+    "tweet_id": "2107894997538525580",
+    "url": "https://x.com/OpenAI/status/2107894997538525580",
+    "text": "GPT-6 and Intelligent UI, now rolling out in ChatGPT for everyone.\n\nIntelligent UI in ChatGPT delivers fast, interactive answers that make everyday questions more visual, complex topics easier to grasp, and interactive tools for your task available on the spot.",
+    "author_handle": "OpenAI",
+    "author_name": "OpenAI",
+    "created_at": "2026-10-07T18:05:04.000Z",
+    "lang": "en",
+    "replies": 1498,
+    "retweets": 3474,
+    "likes": 23973,
+    "views": 1498,
+    "media_urls": [
+     "blob:https://x.com/1c90339b-e198-4238-b517-85c9d052ab5f",
+     "https://pbs.twimg.com/media/HUDAEy0a4AAdfz8.jpg"
+    ],
+    "discovered_by_keyword": "user:OpenAI",
+    "fetched_at": "2026-10-22T03:11:35Z"
+   }
+  },
+  "tweet": {
+   "file": "tweet-2026-10-22T031452Z.jsonl",
+   "rows": 1,
+   "first": {
+    "tweet_id": "2107895002022187411",
+    "url": "https://x.com/OpenAI/status/2107895002022187411",
+    "text": "Create interactive tools you can use right in the conversation, like a game or interactive budget planning calculator.",
+    "author_handle": "OpenAI",
+    "author_name": "OpenAI",
+    "created_at": "2026-10-07T18:05:05.000Z",
+    "lang": "en",
+    "replies": 26,
+    "retweets": 63,
+    "likes": 1360,
+    "views": 26,
+    "media_urls": [],
+    "discovered_by_keyword": "tweet:2107895002022187411",
+    "fetched_at": "2026-10-22T03:14:52Z"
+   }
+  },
+  "tweet_replies": {
+   "file": "tweet-2026-10-22T031552Z.jsonl",
+   "rows": 5,
+   "first": {
+    "tweet_id": "2107895003490169213",
+    "url": "https://x.com/OpenAI/status/2107895003490169213",
+    "text": "Deepen your understanding of a topic with visuals that bring concepts to life.",
+    "author_handle": "OpenAI",
+    "author_name": "OpenAI",
+    "created_at": "2026-10-07T18:05:06.000Z",
+    "lang": "en",
+    "replies": 12,
+    "retweets": 36,
+    "likes": 1047,
+    "views": 12,
+    "media_urls": [],
+    "discovered_by_keyword": "tweet:2107895002022187411",
+    "fetched_at": "2026-10-22T03:15:31Z"
+   }
+  }
+ },
+ "seen_file": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\data\\seen.jsonl",
+ "seen_rows": 23,
+ "error_branches": "not triggered in these runs (code paths: exit2 login, exit3 risk/captcha, exit4 parse empty)",
+ "limits": "limit<=60, wall-clock<=900s; samples not hitting caps",
+ "invalid_tweet_run": {
+  "command": "tweet",
+  "url": "https://x.com/OpenAI/status/1",
+  "exit": 4,
+  "elapsed_s": 24.7,
+  "collected": 0,
+  "stop_reason": "SINGLE",
+  "reason": "PARSE_EMPTY（页面正常但无推文 article）",
+  "log": "logs/tweet-2026-10-22T031709Z.log"
+ },
+ "logs": [
+  "search-2026-10-22T031058Z.log",
+  "tweet-2026-10-22T031447Z.log",
+  "tweet-2026-10-22T031525Z.log",
+  "tweet-2026-10-22T031709Z.log",
+  "user-2026-10-22T031120Z.log"
+ ]
+}

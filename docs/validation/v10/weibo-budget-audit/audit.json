@@ -1,0 +1,375 @@
+{
+ "generated_utc": "2026-10-29T13:48:25Z",
+ "scope": {
+  "root": "D:\\桌面\\two",
+  "search_root": "docs/validation/v10",
+  "include_pattern": "**/budget.sqlite3",
+  "path_filter": "路径含 'weibo'",
+  "exclude_pattern": "路径含 'profile'",
+  "note": "不覆盖 instance/、tools/**/runtime/、docs/validation/v10 之外的账本",
+  "state_dirs": 9,
+  "dirs": [
+   "docs\\validation\\v10\\weibo\\checks\\state_comments",
+   "docs\\validation\\v10\\weibo\\checks\\state_detail",
+   "docs\\validation\\v10\\weibo\\checks\\state_login",
+   "docs\\validation\\v10\\weibo\\checks\\state_search",
+   "docs\\validation\\v10\\weibo-login\\state-login",
+   "docs\\validation\\v10\\weibo-probe\\state-probe1",
+   "docs\\validation\\v10\\weibo-probe\\state-probe2",
+   "docs\\validation\\v10\\weibo-probe\\state-probe3",
+   "docs\\validation\\v10\\weibo-verify\\state-login"
+  ]
+ },
+ "limits": [
+  "immutable=1 会忽略未 checkpoint 的 -wal：读到的行可能偏少（本次已确认被审目录无 -wal 文件）",
+  "无抓包/无 devtools 事件日志：重定向与子资源请求数未知，digits 不能换算成 HTTP 请求数",
+  "ledger 只是过程证据；额度只由 budget.calls / polls / locked 决定",
+  "calls 只统计 charge()；login（含 check-session）只 charge_poll()，不计 calls"
+ ],
+ "total_calls": 6,
+ "total_polls": 200,
+ "any_locked": false,
+ "lock_scope_note": "仅限本次发现范围；不能据此断言项目历史从未触发风控",
+ "rows": [
+  {
+   "state_dir": "docs\\validation\\v10\\weibo\\checks\\state_comments",
+   "batch_id": "batch-0bd57e922206",
+   "calls": 1,
+   "polls": 0,
+   "locked": false,
+   "lock_reason": null,
+   "lock_source": null,
+   "ledger_rows": 2,
+   "ledger_kinds": {
+    "charge": 1,
+    "transport_error": 1
+   },
+   "window_utc": {
+    "first": "2026-10-27T15:27:26Z",
+    "last": "2026-10-27T15:27:26Z"
+   },
+   "offline_marker": true
+  },
+  {
+   "state_dir": "docs\\validation\\v10\\weibo\\checks\\state_detail",
+   "batch_id": "batch-296ca6ae3e1e",
+   "calls": 1,
+   "polls": 0,
+   "locked": false,
+   "lock_reason": null,
+   "lock_source": null,
+   "ledger_rows": 2,
+   "ledger_kinds": {
+    "charge": 1,
+    "transport_error": 1
+   },
+   "window_utc": {
+    "first": "2026-10-27T15:27:25Z",
+    "last": "2026-10-27T15:27:25Z"
+   },
+   "offline_marker": true
+  },
+  {
+   "state_dir": "docs\\validation\\v10\\weibo\\checks\\state_login",
+   "batch_id": "batch-ccdd90ed2656",
+   "calls": 0,
+   "polls": 0,
+   "locked": false,
+   "lock_reason": null,
+   "lock_source": null,
+   "ledger_rows": 0,
+   "ledger_kinds": {},
+   "window_utc": {
+    "first": null,
+    "last": null
+   },
+   "offline_marker": false
+  },
+  {
+   "state_dir": "docs\\validation\\v10\\weibo\\checks\\state_search",
+   "batch_id": "batch-c3a95da8844b",
+   "calls": 1,
+   "polls": 0,
+   "locked": false,
+   "lock_reason": null,
+   "lock_source": null,
+   "ledger_rows": 2,
+   "ledger_kinds": {
+    "charge": 1,
+    "transport_error": 1
+   },
+   "window_utc": {
+    "first": "2026-10-27T15:27:25Z",
+    "last": "2026-10-27T15:27:25Z"
+   },
+   "offline_marker": true
+  },
+  {
+   "state_dir": "docs\\validation\\v10\\weibo-login\\state-login",
+   "batch_id": "batch-8fdd2a665a28",
+   "calls": 0,
+   "polls": 100,
+   "locked": false,
+   "lock_reason": null,
+   "lock_source": null,
+   "ledger_rows": 100,
+   "ledger_kinds": {
+    "poll": 100
+   },
+   "window_utc": {
+    "first": "2026-10-27T15:36:07Z",
+    "last": "2026-10-27T15:41:06Z"
+   },
+   "offline_marker": false,
+   "observed_navigation": true
+  },
+  {
+   "state_dir": "docs\\validation\\v10\\weibo-probe\\state-probe1",
+   "batch_id": "weibo-probe-1",
+   "calls": 1,
+   "polls": 0,
+   "locked": false,
+   "lock_reason": null,
+   "lock_source": null,
+   "ledger_rows": 1,
+   "ledger_kinds": {
+    "charge": 1
+   },
+   "window_utc": {
+    "first": "2026-10-27T15:05:47Z",
+    "last": "2026-10-27T15:05:47Z"
+   },
+   "offline_marker": false,
+   "observed_navigation": false
+  },
+  {
+   "state_dir": "docs\\validation\\v10\\weibo-probe\\state-probe2",
+   "batch_id": "weibo-probe-2",
+   "calls": 1,
+   "polls": 0,
+   "locked": false,
+   "lock_reason": null,
+   "lock_source": null,
+   "ledger_rows": 2,
+   "ledger_kinds": {
+    "charge": 1,
+    "search_result": 1
+   },
+   "window_utc": {
+    "first": "2026-10-27T15:13:13Z",
+    "last": "2026-10-27T15:13:18Z"
+   },
+   "offline_marker": false,
+   "observed_navigation": true
+  },
+  {
+   "state_dir": "docs\\validation\\v10\\weibo-probe\\state-probe3",
+   "batch_id": "weibo-probe-3",
+   "calls": 1,
+   "polls": 0,
+   "locked": false,
+   "lock_reason": null,
+   "lock_source": null,
+   "ledger_rows": 2,
+   "ledger_kinds": {
+    "charge": 1,
+    "search_result": 1
+   },
+   "window_utc": {
+    "first": "2026-10-27T15:27:55Z",
+    "last": "2026-10-27T15:28:02Z"
+   },
+   "offline_marker": false,
+   "observed_navigation": true
+  },
+  {
+   "state_dir": "docs\\validation\\v10\\weibo-verify\\state-login",
+   "batch_id": "batch-1ac1643ee579",
+   "calls": 0,
+   "polls": 100,
+   "locked": false,
+   "lock_reason": null,
+   "lock_source": null,
+   "ledger_rows": 100,
+   "ledger_kinds": {
+    "poll": 100
+   },
+   "window_utc": {
+    "first": "2026-10-27T15:49:06Z",
+    "last": "2026-10-27T15:54:04Z"
+   },
+   "offline_marker": false,
+   "observed_navigation": true
+  }
+ ],
+ "classification": {
+  "probe_precharges": [
+   {
+    "state_dir": "docs\\validation\\v10\\weibo-probe\\state-probe1",
+    "batch_id": "weibo-probe-1",
+    "calls": 1,
+    "polls": 0,
+    "locked": false,
+    "lock_reason": null,
+    "lock_source": null,
+    "ledger_rows": 1,
+    "ledger_kinds": {
+     "charge": 1
+    },
+    "window_utc": {
+     "first": "2026-10-27T15:05:47Z",
+     "last": "2026-10-27T15:05:47Z"
+    },
+    "offline_marker": false,
+    "observed_navigation": false
+   },
+   {
+    "state_dir": "docs\\validation\\v10\\weibo-probe\\state-probe2",
+    "batch_id": "weibo-probe-2",
+    "calls": 1,
+    "polls": 0,
+    "locked": false,
+    "lock_reason": null,
+    "lock_source": null,
+    "ledger_rows": 2,
+    "ledger_kinds": {
+     "charge": 1,
+     "search_result": 1
+    },
+    "window_utc": {
+     "first": "2026-10-27T15:13:13Z",
+     "last": "2026-10-27T15:13:18Z"
+    },
+    "offline_marker": false,
+    "observed_navigation": true
+   },
+   {
+    "state_dir": "docs\\validation\\v10\\weibo-probe\\state-probe3",
+    "batch_id": "weibo-probe-3",
+    "calls": 1,
+    "polls": 0,
+    "locked": false,
+    "lock_reason": null,
+    "lock_source": null,
+    "ledger_rows": 2,
+    "ledger_kinds": {
+     "charge": 1,
+     "search_result": 1
+    },
+    "window_utc": {
+     "first": "2026-10-27T15:27:55Z",
+     "last": "2026-10-27T15:28:02Z"
+    },
+    "offline_marker": false,
+    "observed_navigation": true
+   }
+  ],
+  "offline_precharges": [
+   {
+    "state_dir": "docs\\validation\\v10\\weibo\\checks\\state_comments",
+    "batch_id": "batch-0bd57e922206",
+    "calls": 1,
+    "polls": 0,
+    "locked": false,
+    "lock_reason": null,
+    "lock_source": null,
+    "ledger_rows": 2,
+    "ledger_kinds": {
+     "charge": 1,
+     "transport_error": 1
+    },
+    "window_utc": {
+     "first": "2026-10-27T15:27:26Z",
+     "last": "2026-10-27T15:27:26Z"
+    },
+    "offline_marker": true
+   },
+   {
+    "state_dir": "docs\\validation\\v10\\weibo\\checks\\state_detail",
+    "batch_id": "batch-296ca6ae3e1e",
+    "calls": 1,
+    "polls": 0,
+    "locked": false,
+    "lock_reason": null,
+    "lock_source": null,
+    "ledger_rows": 2,
+    "ledger_kinds": {
+     "charge": 1,
+     "transport_error": 1
+    },
+    "window_utc": {
+     "first": "2026-10-27T15:27:25Z",
+     "last": "2026-10-27T15:27:25Z"
+    },
+    "offline_marker": true
+   },
+   {
+    "state_dir": "docs\\validation\\v10\\weibo\\checks\\state_search",
+    "batch_id": "batch-c3a95da8844b",
+    "calls": 1,
+    "polls": 0,
+    "locked": false,
+    "lock_reason": null,
+    "lock_source": null,
+    "ledger_rows": 2,
+    "ledger_kinds": {
+     "charge": 1,
+     "transport_error": 1
+    },
+    "window_utc": {
+     "first": "2026-10-27T15:27:25Z",
+     "last": "2026-10-27T15:27:25Z"
+    },
+    "offline_marker": true
+   }
+  ],
+  "login_navigations": [
+   {
+    "state_dir": "docs\\validation\\v10\\weibo-login\\state-login",
+    "batch_id": "batch-8fdd2a665a28",
+    "calls": 0,
+    "polls": 100,
+    "locked": false,
+    "lock_reason": null,
+    "lock_source": null,
+    "ledger_rows": 100,
+    "ledger_kinds": {
+     "poll": 100
+    },
+    "window_utc": {
+     "first": "2026-10-27T15:36:07Z",
+     "last": "2026-10-27T15:41:06Z"
+    },
+    "offline_marker": false,
+    "observed_navigation": true
+   },
+   {
+    "state_dir": "docs\\validation\\v10\\weibo-verify\\state-login",
+    "batch_id": "batch-1ac1643ee579",
+    "calls": 0,
+    "polls": 100,
+    "locked": false,
+    "lock_reason": null,
+    "lock_source": null,
+    "ledger_rows": 100,
+    "ledger_kinds": {
+     "poll": 100
+    },
+    "window_utc": {
+     "first": "2026-10-27T15:49:06Z",
+     "last": "2026-10-27T15:54:04Z"
+    },
+    "offline_marker": false,
+    "observed_navigation": true
+   }
+  ],
+  "conservative_units": {
+   "historical_probe_precharges": 3,
+   "historical_login_navigations": 2,
+   "planned_check_session": 1,
+   "planned_search": 1,
+   "total": 7,
+   "note": "这些是「保守计费单位」，不是已发生的导航次数，更不是 HTTP 请求数：probe1 为启动失败预扣（未观察到导航）；probe2/3 各一次显式浏览器搜索尝试；两次登录窗为已发生的主动导航但未计入 calls；check-session 与搜索尚未执行。"
+  }
+ }
+}

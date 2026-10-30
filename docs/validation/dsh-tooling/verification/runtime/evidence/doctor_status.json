@@ -1,0 +1,86 @@
+{
+  "channels": {
+    "github": {
+      "status": "warn",
+      "active_backend": null
+    },
+    "twitter": {
+      "status": "warn",
+      "active_backend": null
+    },
+    "youtube": {
+      "status": "off",
+      "active_backend": null
+    },
+    "reddit": {
+      "status": "off",
+      "active_backend": null
+    },
+    "facebook": {
+      "status": "off",
+      "active_backend": null
+    },
+    "instagram": {
+      "status": "off",
+      "active_backend": null
+    },
+    "bilibili": {
+      "status": "ok",
+      "active_backend": "B站搜索 API"
+    },
+    "xiaohongshu": {
+      "status": "off",
+      "active_backend": null
+    },
+    "linkedin": {
+      "status": "off",
+      "active_backend": null
+    },
+    "boss": {
+      "status": "off",
+      "active_backend": null
+    },
+    "xiaoyuzhou": {
+      "status": "off",
+      "active_backend": null
+    },
+    "v2ex": {
+      "status": "ok",
+      "active_backend": "V2EX API (public)"
+    },
+    "xueqiu": {
+      "status": "warn",
+      "active_backend": null
+    },
+    "rss": {
+      "status": "ok",
+      "active_backend": "feedparser"
+    },
+    "exa_search": {
+      "status": "off",
+      "active_backend": null
+    },
+    "web": {
+      "status": "ok",
+      "active_backend": "Jina Reader"
+    }
+  },
+  "raw_keys": [
+    "github",
+    "twitter",
+    "youtube",
+    "reddit",
+    "facebook",
+    "instagram",
+    "bilibili",
+    "xiaohongshu",
+    "linkedin",
+    "boss",
+    "xiaoyuzhou",
+    "v2ex",
+    "xueqiu",
+    "rss",
+    "exa_search",
+    "web"
+  ]
+}

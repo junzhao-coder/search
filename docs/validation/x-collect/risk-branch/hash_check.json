@@ -1,0 +1,39 @@
+{
+ "requirements": {
+  "same": true,
+  "sha256": "0af19a0f1c100e99483b79e7f11b500ccf6a5a1477d8ac4b560c077b2bea7731"
+ },
+ "contract": {
+  "same": true,
+  "sha256": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9"
+ },
+ "wiring": {
+  "same": true,
+  "sha256": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05"
+ },
+ "bilibili_view": {
+  "same": true,
+  "sha256": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e"
+ },
+ "importer": {
+  "same": true,
+  "sha256": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1"
+ },
+ "real_link": {
+  "same": true,
+  "sha256": "46cbd635b5e70cc2d1b6441befde31e25b8203caf28d39b772203c43b8f5802c"
+ },
+ "business_db": {
+  "same": true,
+  "sha256": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85"
+ },
+ "wal": false,
+ "shm": false,
+ "x_collect_before": "fcd74b5a7a5d1f6bb471e3e6206f0ed3a100e69ee333f21cf7865718803b0f5c",
+ "x_collect_after": "5b1441339537e42317b9c95bfb9dff0dd95dc9bec285a871b30b5c36052b4985",
+ "temp_profile": {
+  "path": "D:\\桌面\\two\\docs\\validation\\x-collect\\risk-branch\\tmp\\empty-profile",
+  "files": 0,
+  "bytes": 0
+ }
+}

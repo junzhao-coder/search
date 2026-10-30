@@ -1,0 +1,213 @@
+{
+  "utc": "2026-10-23T12:33:30Z",
+  "file": "sample-study-planner-v1.xlsx",
+  "bytes": 13559,
+  "sheets": [
+    "使用说明",
+    "课程与考试",
+    "考试倒计时",
+    "周计划",
+    "复习进度"
+  ],
+  "formula_count": 50,
+  "functions": {
+    "TODAY": 10,
+    "COUNTIF": 5,
+    "IF": 44,
+    "SUM": 1,
+    "COUNTA": 2,
+    "COUNT": 1,
+    "AVERAGE": 1
+  },
+  "formula_samples": [
+    {
+      "sheet": "使用说明",
+      "cell": "B23",
+      "formula": "=TODAY()"
+    },
+    {
+      "sheet": "课程与考试",
+      "cell": "B10",
+      "formula": "=COUNTA(B3:B8)"
+    },
+    {
+      "sheet": "课程与考试",
+      "cell": "D10",
+      "formula": "=SUM(D3:D8)"
+    },
+    {
+      "sheet": "课程与考试",
+      "cell": "F10",
+      "formula": "=COUNT(E3:E8)"
+    },
+    {
+      "sheet": "考试倒计时",
+      "cell": "B1",
+      "formula": "=TODAY()"
+    },
+    {
+      "sheet": "考试倒计时",
+      "cell": "A4",
+      "formula": "=IF('课程与考试'!B3=\"\",\"\",'课程与考试'!B3)"
+    },
+    {
+      "sheet": "考试倒计时",
+      "cell": "B4",
+      "formula": "=IF('课程与考试'!E3=\"\",\"\",'课程与考试'!E3)"
+    },
+    {
+      "sheet": "考试倒计时",
+      "cell": "C4",
+      "formula": "=IF($B4=\"\",\"\",$B4-$B$1)"
+    },
+    {
+      "sheet": "考试倒计时",
+      "cell": "D4",
+      "formula": "=IF($B4=\"\",\"未排期\",IF($C4<0,\"已过期\",IF($C4<=3,\"紧急\",IF($C4<=7,\"临近\",\"正常\"))))"
+    },
+    {
+      "sheet": "考试倒计时",
+      "cell": "E4",
+      "formula": "=IF('课程与考试'!F3=\"\",\"\",'课程与考试'!F3)"
+    },
+    {
+      "sheet": "考试倒计时",
+      "cell": "A5",
+      "formula": "=IF('课程与考试'!B4=\"\",\"\",'课程与考试'!B4)"
+    },
+    {
+      "sheet": "考试倒计时",
+      "cell": "B5",
+      "formula": "=IF('课程与考试'!E4=\"\",\"\",'课程与考试'!E4)"
+    }
+  ],
+  "external_links": {
+    "_external_links": 0,
+    "parts": []
+  },
+  "images": {
+    "使用说明": 0,
+    "课程与考试": 0,
+    "考试倒计时": 0,
+    "周计划": 0,
+    "复习进度": 0
+  },
+  "charts": {
+    "使用说明": 0,
+    "课程与考试": 0,
+    "考试倒计时": 0,
+    "周计划": 0,
+    "复习进度": 0
+  },
+  "drawings_or_media_parts": [],
+  "macro_parts": [],
+  "conditional_formatting_ranges": 3,
+  "data_validations": 1,
+  "print_areas": {
+    "使用说明": "'使用说明'!$A$1:$D$24",
+    "课程与考试": "'课程与考试'!$A$1:$G$10",
+    "考试倒计时": "'考试倒计时'!$A$1:$E$11",
+    "周计划": "'周计划'!$A$1:$H$15",
+    "复习进度": "'复习进度'!$A$1:$G$14"
+  },
+  "freeze_panes": {
+    "使用说明": null,
+    "课程与考试": "A3",
+    "考试倒计时": "A4",
+    "周计划": "A4",
+    "复习进度": "A3"
+  },
+  "fonts": [
+    "Calibri",
+    "宋体"
+  ],
+  "checks": [
+    {
+      "id": "01-sheet-names-exact",
+      "ok": true,
+      "detail": "sheets=['使用说明', '课程与考试', '考试倒计时', '周计划', '复习进度']"
+    },
+    {
+      "id": "02-sheet-count",
+      "ok": true,
+      "detail": "count=5"
+    },
+    {
+      "id": "03-formula-count>=10",
+      "ok": true,
+      "detail": "formulas=50"
+    },
+    {
+      "id": "04-key-functions-present",
+      "ok": true,
+      "detail": "{'TODAY': 10, 'COUNTIF': 5, 'IF': 44, 'SUM': 1, 'COUNTA': 2, 'COUNT': 1, 'AVERAGE': 1}"
+    },
+    {
+      "id": "05-no-external-links-object",
+      "ok": true,
+      "detail": "_external_links=0"
+    },
+    {
+      "id": "06-no-external-links-parts",
+      "ok": true,
+      "detail": "parts=[]"
+    },
+    {
+      "id": "07-no-images",
+      "ok": true,
+      "detail": "images={'使用说明': 0, '课程与考试': 0, '考试倒计时': 0, '周计划': 0, '复习进度': 0}"
+    },
+    {
+      "id": "08-no-charts",
+      "ok": true,
+      "detail": "charts={'使用说明': 0, '课程与考试': 0, '考试倒计时': 0, '周计划': 0, '复习进度': 0}"
+    },
+    {
+      "id": "09-no-drawing-media-parts",
+      "ok": true,
+      "detail": "parts=[]"
+    },
+    {
+      "id": "10-no-macros",
+      "ok": true,
+      "detail": "macro_parts=[]"
+    },
+    {
+      "id": "11-conditional-formatting",
+      "ok": true,
+      "detail": "ranges=3"
+    },
+    {
+      "id": "12-data-validation",
+      "ok": true,
+      "detail": "validations=1"
+    },
+    {
+      "id": "13-print-areas-set",
+      "ok": true,
+      "detail": "areas={'使用说明': \"'使用说明'!$A$1:$D$24\", '课程与考试': \"'课程与考试'!$A$1:$G$10\", '考试倒计时': \"'考试倒计时'!$A$1:$E$11\", '周计划': \"'周计划'!$A$1:$H$15\", '复习进度': \"'复习进度'!$A$1:$G$14\"}"
+    },
+    {
+      "id": "14-week-a4-portrait",
+      "ok": true,
+      "detail": "orientation=portrait paper=9"
+    },
+    {
+      "id": "15-freeze-first-row",
+      "ok": true,
+      "detail": "frozen={'使用说明': None, '课程与考试': 'A3', '考试倒计时': 'A4', '周计划': 'A4', '复习进度': 'A3'}"
+    },
+    {
+      "id": "16-fonts-system-only",
+      "ok": true,
+      "detail": "fonts=['Calibri', '宋体']"
+    },
+    {
+      "id": "17-size-reasonable",
+      "ok": true,
+      "detail": "bytes=13559"
+    }
+  ],
+  "failed": [],
+  "verdict": "PASS"
+}

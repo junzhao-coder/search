@@ -1,0 +1,59 @@
+{% extends "dash/base.html" %}
+{% block title %}总览 · 机会情报 Dashboard{% endblock %}
+{% block content %}
+<h1 class="page-title">总览</h1>
+<p class="hint">把已验收的机会评分、货源许可与闲鱼价格信号放到同一页；所有数字来自本机文件，不写库。</p>
+
+<section class="cards" aria-label="数据计数">
+  <div class="card"><span class="n">{{ counts.scores or 0 }}</span><span class="l">机会评分行</span></div>
+  <div class="card"><span class="n">{{ counts.sources or 0 }}</span><span class="l">货源条目</span></div>
+  <div class="card"><span class="n">{{ counts.prices or 0 }}</span><span class="l">闲鱼价格信号</span></div>
+  <div class="card"><span class="n">{{ counts.join or 0 }}</span><span class="l">机会-货源联动</span></div>
+  <div class="card"><span class="n">{{ counts.xianyu or 0 }}</span><span class="l">闲鱼采集</span></div>
+  <div class="card"><span class="n">{{ counts.xiaohongshu or 0 }}</span><span class="l">小红书采集</span></div>
+  <div class="card"><span class="n">{{ top20|length }}</span><span class="l">主题采集榜单行</span></div>
+</section>
+
+<section class="panel" aria-labelledby="h-top">
+  <h2 id="h-top">机会 Top 5 <a class="meta" href="{{ url_for('dash.opportunities') }}">查看全部</a></h2>
+  {% if scores %}
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr><th>#</th><th>分数</th><th>平台</th><th>机会</th><th>毛利区间</th></tr></thead>
+      <tbody>
+      {% for row in scores %}
+        <tr>
+          <td>{{ row.rank }}</td>
+          <td class="num">{{ '%.3f'|format(row.total_score|float) }}</td>
+          <td>{{ row.platform }}</td>
+          <td><a href="{{ row.url }}" rel="noreferrer">{{ row.title }}</a><br><span class="muted">{{ row.author }} · {{ row.published_at }}</span></td>
+          <td>{{ row.margin_low }}–{{ row.margin_high }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}<p class="state state-empty">暂无数据：scores.csv 缺失或为空。</p>{% endif %}
+</section>
+
+<section class="panel" aria-labelledby="h-src">
+  <h2 id="h-src">货源许可概览 <a class="meta" href="{{ url_for('dash.sources') }}">货源库</a></h2>
+  <p>
+    <span class="badge badge-ok">可商用 {{ verdicts.get('可商用', 0) }}</span>
+    <span class="badge badge-warn">需授权 {{ verdicts.get('需授权', 0) }}</span>
+    <span class="badge badge-err">禁止或不明 {{ verdicts.get('禁止或不明', 0) }}</span>
+  </p>
+  <p class="muted">许可明细与逐条证据见“货源”页；本页不重新判定许可证。</p>
+</section>
+
+<section class="panel" aria-labelledby="h-join">
+  <h2 id="h-join">机会-货源联动 Top 3</h2>
+  {% if join %}
+  <ul class="list">
+    {% for row in join[:3] %}
+    <li><a href="{{ row.url }}" rel="noreferrer">{{ row.title[:80] }}</a> — 货源 {{ row.source_id }} / {{ row.license_verdict }}；毛利 {{ row.gross_margin_low }}–{{ row.gross_margin_high }}</li>
+    {% endfor %}
+  </ul>
+  {% else %}<p class="state state-empty">暂无联动数据。</p>{% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,252 @@
+{
+  "commands": [
+    {
+      "log": "logs/fetch_index_andrewbouras.log",
+      "label": "fetch_index_andrewbouras",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 45 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\index_andrewbouras.txt -w %{http_code} %{size_download}\\n https://raw.githubusercontent.com/andrewbouras/step2-study-system/main/index.html",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:48:40+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/fetch_license_MalandinX.log",
+      "label": "fetch_license_MalandinX",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 30 -A Mozilla/5.0 -o docs\\validation\\product-workflow\\b2\\raw\\license_MalandinX.txt -w %{http_code} %{size_download}\\n https://raw.githubusercontent.com/MalandinX/studynotes-ai/master/LICENSE",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:51:54+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/fetch_license_StudySphere.log",
+      "label": "fetch_license_StudySphere",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 45 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\license_StudySphere.txt -w %{http_code} %{size_download}\\n https://raw.githubusercontent.com/SenaThenu/StudySphere/main/LICENSE",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:48:35+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/fetch_notion_link_GPA95.log",
+      "label": "fetch_notion_link_GPA95",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 45 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\notion_link_GPA95.txt -w %{http_code} %{size_download}\\n https://raw.githubusercontent.com/GPA95/Student_Academic_Workspace_Notion/main/notion-link.txt",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:48:37+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/fetch_notion_terms.log",
+      "label": "fetch_notion_terms",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 45 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\notion_terms.txt -w %{http_code} %{size_download}\\n https://www.notion.com/help/template-gallery-guidelines-and-terms",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:48:42+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/fetch_readme_aliaxandra.log",
+      "label": "fetch_readme_aliaxandra",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 45 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\readme_aliaxandra.txt -w %{http_code} %{size_download}\\n https://raw.githubusercontent.com/aliaxandra/RS-School-LearnSpace/main/README.md",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:48:38+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/fetch_readme_GPA95.log",
+      "label": "fetch_readme_GPA95",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 45 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\readme_GPA95.txt -w %{http_code} %{size_download}\\n https://raw.githubusercontent.com/GPA95/Student_Academic_Workspace_Notion/main/README.md",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:48:36+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/fetch_readme_StudySphere.log",
+      "label": "fetch_readme_StudySphere",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 45 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\readme_StudySphere.txt -w %{http_code} %{size_download}\\n https://raw.githubusercontent.com/SenaThenu/StudySphere/main/README.md",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:48:15+00:00",
+      "exit": "56"
+    },
+    {
+      "log": "logs/fetch_readme_StudySphere_api.log",
+      "label": "fetch_readme_StudySphere_api",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json -o docs\\validation\\product-workflow\\b2\\raw\\readme_StudySphere_api.json -w %{http_code} %{size_download}\\n https://api.github.com/repos/SenaThenu/StudySphere/readme",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:48:57+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/fetch_readme_tfxhk.log",
+      "label": "fetch_readme_tfxhk",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 45 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\readme_tfxhk.txt -w %{http_code} %{size_download}\\n https://raw.githubusercontent.com/tfxhk/Notion-templates/main/README.md",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:48:39+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/fetch_target_tweet.log",
+      "label": "fetch_target_tweet",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -o docs\\validation\\product-workflow\\b2\\raw\\target_tweet.json -w %{http_code} %{size_download}\\n https://api.fxtwitter.com/status/1824402140070285653",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:52:34+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/gh_contents_aliaxandra__RS-School-LearnSpace.log",
+      "label": "gh_contents_aliaxandra__RS-School-LearnSpace",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json -o docs\\validation\\product-workflow\\b2\\raw\\gh_contents_aliaxandra__RS-School-LearnSpace.json -w %{http_code}\\n https://api.github.com/repos/aliaxandra/RS-School-LearnSpace/contents",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:47:49+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/gh_contents_andrewbouras__step2-study-system.log",
+      "label": "gh_contents_andrewbouras__step2-study-system",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json -o docs\\validation\\product-workflow\\b2\\raw\\gh_contents_andrewbouras__step2-study-system.json -w %{http_code}\\n https://api.github.com/repos/andrewbouras/step2-study-system/contents",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:47:51+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/gh_contents_GPA95__Student_Academic_Workspace_Notion.log",
+      "label": "gh_contents_GPA95__Student_Academic_Workspace_Notion",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json -o docs\\validation\\product-workflow\\b2\\raw\\gh_contents_GPA95__Student_Academic_Workspace_Notion.json -w %{http_code}\\n https://api.github.com/repos/GPA95/Student_Academic_Workspace_Notion/contents",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:47:48+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/gh_contents_SenaThenu__StudySphere.log",
+      "label": "gh_contents_SenaThenu__StudySphere",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json -o docs\\validation\\product-workflow\\b2\\raw\\gh_contents_SenaThenu__StudySphere.json -w %{http_code}\\n https://api.github.com/repos/SenaThenu/StudySphere/contents",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:47:48+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/gh_contents_tfxhk__Notion-templates.log",
+      "label": "gh_contents_tfxhk__Notion-templates",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json -o docs\\validation\\product-workflow\\b2\\raw\\gh_contents_tfxhk__Notion-templates.json -w %{http_code}\\n https://api.github.com/repos/tfxhk/Notion-templates/contents",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:47:50+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/gh_repo_aliaxandra__RS-School-LearnSpace.log",
+      "label": "gh_repo_aliaxandra__RS-School-LearnSpace",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json -o docs\\validation\\product-workflow\\b2\\raw\\gh_repo_aliaxandra__RS-School-LearnSpace.json -w %{http_code}\\n https://api.github.com/repos/aliaxandra/RS-School-LearnSpace",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:46:22+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/gh_repo_andrewbouras__step2-study-system.log",
+      "label": "gh_repo_andrewbouras__step2-study-system",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json -o docs\\validation\\product-workflow\\b2\\raw\\gh_repo_andrewbouras__step2-study-system.json -w %{http_code}\\n https://api.github.com/repos/andrewbouras/step2-study-system",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:46:24+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/gh_repo_GPA95__Student_Academic_Workspace_Notion.log",
+      "label": "gh_repo_GPA95__Student_Academic_Workspace_Notion",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json -o docs\\validation\\product-workflow\\b2\\raw\\gh_repo_GPA95__Student_Academic_Workspace_Notion.json -w %{http_code}\\n https://api.github.com/repos/GPA95/Student_Academic_Workspace_Notion",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:46:21+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/gh_repo_MalandinX__studynotes-ai.log",
+      "label": "gh_repo_MalandinX__studynotes-ai",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json -o docs\\validation\\product-workflow\\b2\\raw\\gh_repo_MalandinX__studynotes-ai.json -w %{http_code}\\n https://api.github.com/repos/MalandinX/studynotes-ai",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:46:25+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/gh_repo_SenaThenu__StudySphere.log",
+      "label": "gh_repo_SenaThenu__StudySphere",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json -o docs\\validation\\product-workflow\\b2\\raw\\gh_repo_SenaThenu__StudySphere.json -w %{http_code}\\n https://api.github.com/repos/SenaThenu/StudySphere",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:46:20+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/gh_repo_tfxhk__Notion-templates.log",
+      "label": "gh_repo_tfxhk__Notion-templates",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json -o docs\\validation\\product-workflow\\b2\\raw\\gh_repo_tfxhk__Notion-templates.json -w %{http_code}\\n https://api.github.com/repos/tfxhk/Notion-templates",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:46:23+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/gh_search_notion_study_template.log",
+      "label": "gh_search_notion_study_template",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: b2-research -H Accept: application/vnd.github+json https://api.github.com/search/repositories?q=notion+study+template&per_page=20&sort=stars&order=desc",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:44:37+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/page_gumroad_177slh_studynotes2.log",
+      "label": "page_gumroad_177slh_studynotes2",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 60 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\gumroad_177slh_studynotes2.html -w %{http_code} %{size_download}\\n https://177slh.gumroad.com/l/studynotes2",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:46:47+00:00",
+      "exit": "28"
+    },
+    {
+      "log": "logs/page_gumroad_digitalix_study_space.log",
+      "label": "page_gumroad_digitalix_study_space",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 60 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\gumroad_digitalix_study_space.html -w %{http_code} %{size_download}\\n https://digitalixstudios.gumroad.com/l/crmgue",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:47:09+00:00",
+      "exit": "28"
+    },
+    {
+      "log": "logs/page_notion_aliaxandra_template.log",
+      "label": "page_notion_aliaxandra_template",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 45 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\notion_aliaxandra_template.html -w %{http_code} %{size_download}\\n https://sashaserge.notion.site/RS-School-Learn-Space-Template-bd00e2d759fa47629a4383844f70f4c1",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:51:03+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/page_notion_college_notes.log",
+      "label": "page_notion_college_notes",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 60 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\notion_college_notes.html -w %{http_code} %{size_download}\\n https://www.notion.com/templates/college-notes",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:46:43+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/page_notion_college_planner.log",
+      "label": "page_notion_college_planner",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 60 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\notion_college_planner.html -w %{http_code} %{size_download}\\n https://www.notion.com/templates/college-planner-and-dashboard",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:46:45+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/page_notion_gpa95_workspace.log",
+      "label": "page_notion_gpa95_workspace",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 45 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\notion_gpa95_workspace.html -w %{http_code} %{size_download}\\n https://tungsten-horn-302.notion.site/Student-Academic-Workspace-2113d32a130d802389b4ca7d378f9d00?pvs=74",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:51:02+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/page_notion_lecture_notes.log",
+      "label": "page_notion_lecture_notes",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 60 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\notion_lecture_notes.html -w %{http_code} %{size_download}\\n https://www.notion.com/templates/lecture-notes-database",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:46:46+00:00",
+      "exit": "0"
+    },
+    {
+      "log": "logs/page_notion_studysphere_duplicate.log",
+      "label": "page_notion_studysphere_duplicate",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 45 -A Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36 -o docs\\validation\\product-workflow\\b2\\raw\\notion_studysphere_duplicate.html -w %{http_code} %{size_download}\\n https://slicky.notion.site/1e47d591140f81d4b788f742300dab8f?v=1e47d591140f814aabec000c3fc31d14&pvs=4",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-23T10:51:00+00:00",
+      "exit": "0"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+ "port": 5019,
+ "db": "C:\\Users\\19183\\AppData\\Local\\Temp\\b6fix-probe-qq9f_a4c\\workflow.sqlite3",
+ "steps": [
+  {
+   "step": "GET export (not ready)",
+   "status": 409,
+   "before": {
+    "export_rows": 0,
+    "db_sha256": "aa7b0a5498d9bf1bb7892cb4a7169d7d4dda459782bab6b35af2514227e3a516"
+   },
+   "after": {
+    "export_rows": 0,
+    "db_sha256": "aa7b0a5498d9bf1bb7892cb4a7169d7d4dda459782bab6b35af2514227e3a516"
+   }
+  },
+  {
+   "step": "GET export (ready)",
+   "status": 200,
+   "recorded_header": "false",
+   "before": {
+    "export_rows": 0,
+    "db_sha256": "4a52a8de9732a6a53a644d5047021012e540de1c450db8c96483772bb84e0a8e"
+   },
+   "after": {
+    "export_rows": 0,
+    "db_sha256": "4a52a8de9732a6a53a644d5047021012e540de1c450db8c96483772bb84e0a8e"
+   },
+   "content_bytes": 259,
+   "zero_write": true
+  },
+  {
+   "step": "POST export/record",
+   "status": 200,
+   "recorded_header": "true",
+   "before": {
+    "export_rows": 0,
+    "db_sha256": "4a52a8de9732a6a53a644d5047021012e540de1c450db8c96483772bb84e0a8e"
+   },
+   "after": {
+    "export_rows": 1,
+    "db_sha256": "c5a5391ff8799fe3f88114187124df86af062110e66797a9a15c4b0814d132de"
+   },
+   "rows_added": 1
+  }
+ ],
+ "workorder_id": "wo:20261023-89b6128b",
+ "verdict": {
+  "get_zero_write": true,
+  "d1_fixed": true
+ }
+}

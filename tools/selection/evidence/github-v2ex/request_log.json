@@ -1,0 +1,45 @@
+{
+  "generated_utc": "2026-10-25T13:56:56Z",
+  "total_requests": 3,
+  "requests": [
+    {
+      "platform": "v2ex",
+      "url": "https://www.v2ex.com/api/topics/show.json?node_name=notion",
+      "status": null,
+      "note": "first live request completed but tool call was aborted before log capture; raw exists and parsed 5 items",
+      "bytes": 47035,
+      "items": 5,
+      "raw_path": "tools\\selection\\evidence\\github-v2ex\\v2ex_topics_notion_20261025T134939Z.json",
+      "raw_sha256": "b2c683c68debb274967b892497a5e00d99345dd9fcb366fd871082d38bb546e1",
+      "finished_utc": "2026-10-25T13:49:49Z"
+    },
+    {
+      "platform": "v2ex",
+      "url": "https://www.v2ex.com/api/topics/show.json?node_name=notion",
+      "status": 200,
+      "bytes": 47035,
+      "items": 5,
+      "elapsed_s": 11.125,
+      "raw_path": "tools\\selection\\evidence\\github-v2ex\\v2ex_topics_notion_20261025T135538Z.json",
+      "raw_sha256": "b2c683c68debb274967b892497a5e00d99345dd9fcb366fd871082d38bb546e1",
+      "finished_utc": "2026-10-25T13:55:49Z"
+    },
+    {
+      "platform": "github",
+      "url": "https://api.github.com/search/issues?q=notion%20template%20type%3Aissue&per_page=3",
+      "status": 200,
+      "bytes": 16135,
+      "items": 3,
+      "elapsed_s": 9.907,
+      "raw_path": "tools\\selection\\evidence\\github-v2ex\\github_issues_20261025T135508Z.json",
+      "raw_sha256": "6d85730d6cb8360652f0e680ad5da7b1a383e814dc83bfda090e72c54fd113f9",
+      "finished_utc": "2026-10-25T13:55:18Z"
+    }
+  ],
+  "limits": {
+    "v2ex_max_requests": 3,
+    "github_max_requests": 3,
+    "interval_min_seconds": 3,
+    "token": false
+  }
+}

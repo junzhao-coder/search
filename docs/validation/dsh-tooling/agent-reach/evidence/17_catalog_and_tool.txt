@@ -1,0 +1,6 @@
+DSH skill catalog evidence (2026-10-21, same model step after skill install)
+- The session's available-skills catalog now contains an `agent-reach` entry whose description matches
+  `C:\Users\19183\.dsh\skills\agent-reach\SKILL.md` frontmatter (read-only internet research/search/read).
+- This catalog is the DSH skill discovery surface; the new user-level skill appeared without restarting DSH.
+- Direct load attempt: `skill(name="agent-reach")` -> "Flow 当前角色不允许此工具；未知工具及其他代理/脚本通道默认拒绝".
+  Loading is therefore NOT verified by this executor; only discovery is verified.

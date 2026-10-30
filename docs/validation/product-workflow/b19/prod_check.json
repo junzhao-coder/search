@@ -1,0 +1,30 @@
+{
+ "health": {
+  "status": 200,
+  "app_id": true
+ },
+ "detail": {
+  "status": 200,
+  "new_block": true,
+  "readiness": true,
+  "old_text": true,
+  "bytes": 17394
+ },
+ "export": {
+  "status": 409,
+  "body_has_platform": true
+ },
+ "production_db": {
+  "sha256": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c",
+  "tables": {
+   "workorder": 1,
+   "workorder_export": 0,
+   "workorder_supply_candidate": "no such table: workorder_supply_candidate"
+  },
+  "ids": [
+   "wo:20261023-88ef9a66"
+  ]
+ },
+ "wal": false,
+ "shm": false
+}

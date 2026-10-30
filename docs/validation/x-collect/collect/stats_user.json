@@ -1,0 +1,17 @@
+{
+ "command": "user",
+ "url": "https://x.com/OpenAI",
+ "keyword": "OpenAI",
+ "started_utc": "2026-10-22T03:11:20Z",
+ "finished_utc": "2026-10-22T03:11:55Z",
+ "elapsed_s": 35.5,
+ "requested_limit": 5,
+ "collected": 5,
+ "duplicates": 6,
+ "seen_total": 15,
+ "nonempty_text": 5,
+ "nonempty_text_ratio": 1.0,
+ "stop_reason": "LIMIT",
+ "jsonl": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\data\\user-2026-10-22T031155Z.jsonl",
+ "exit": 0
+}

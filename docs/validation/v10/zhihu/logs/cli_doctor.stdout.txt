@@ -1,0 +1,1 @@
+{"command": "doctor", "cookie_db_exists": false, "cookie_names": {}, "exit": 0, "network": "none", "note": "cookie names only; presence is not proof of a valid session", "ok": true, "online": "unverified", "profile": "C:\\Users\\19183\\.dsh\\tools\\zhihu-collect\\profile", "profile_exists": false}

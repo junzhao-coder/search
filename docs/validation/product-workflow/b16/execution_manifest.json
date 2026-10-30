@@ -1,0 +1,165 @@
+{
+ "generated_utc": "2026-10-24T04:28:09Z",
+ "suites": [
+  {
+   "name": "b16_supply_sample",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_supply_sample",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two\\tools\\workbench",
+   "start_utc": "2026-10-24T04:28:09Z",
+   "end_utc": "2026-10-24T04:28:11Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 11 tests in 1.792s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\b16_supply_sample.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\b16_supply_sample.stderr.txt"
+  },
+  {
+   "name": "b15_copy_publish",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_copy_publish",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two\\tools\\workbench",
+   "start_utc": "2026-10-24T04:28:11Z",
+   "end_utc": "2026-10-24T04:28:13Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 10 tests in 2.152s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\b15_copy_publish.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\b15_copy_publish.stderr.txt"
+  },
+  {
+   "name": "b12_selfmade",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_selfmade",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two\\tools\\workbench",
+   "start_utc": "2026-10-24T04:28:13Z",
+   "end_utc": "2026-10-24T04:28:15Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 10 tests in 1.579s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\b12_selfmade.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\b12_selfmade.stderr.txt"
+  },
+  {
+   "name": "b1_workflow",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_workflow",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two\\tools\\workbench",
+   "start_utc": "2026-10-24T04:28:15Z",
+   "end_utc": "2026-10-24T04:28:19Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 27 tests in 4.150s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\b1_workflow.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\b1_workflow.stderr.txt"
+  },
+  {
+   "name": "b3_export",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_export",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two\\tools\\workbench",
+   "start_utc": "2026-10-24T04:28:19Z",
+   "end_utc": "2026-10-24T04:28:24Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 24 tests in 4.422s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\b3_export.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\b3_export.stderr.txt"
+  },
+  {
+   "name": "workbench_all",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-t",
+    ".",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two\\tools\\workbench",
+   "start_utc": "2026-10-24T04:28:24Z",
+   "end_utc": "2026-10-24T04:28:38Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 144 tests in 13.813s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\workbench_all.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\workbench_all.stderr.txt"
+  },
+  {
+   "name": "project_full",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two",
+   "start_utc": "2026-10-24T04:28:38Z",
+   "end_utc": "2026-10-24T04:29:31Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 334 tests in 51.661s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\project_full.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b16\\logs\\project_full.stderr.txt"
+  }
+ ]
+}

@@ -1,0 +1,651 @@
+{
+ "utc": "2026-10-24T05:35:00Z",
+ "steps": {},
+ "workorder": "wo:20261024-d9e4dec3",
+ "add": {
+  "A": "sc:4887bf3f",
+  "B": "sc:36c19324"
+ },
+ "select_A": 303,
+ "sample_A": 303,
+ "evidence_A": 303,
+ "baseline": {
+  "record": {
+   "selected_supply_id": "sc:4887bf3f",
+   "supply_version": "20261024T052017",
+   "supply_license_commercial": "yes",
+   "supply_license_redistribute": "yes",
+   "supply_license_resell": "yes",
+   "supply_note": "A self:A",
+   "sample_status": "verified",
+   "sample_ref": "docs\\validation\\product-workflow\\b7\\sample-study-planner-v1.xlsx（13559 B）：存在与大小:13559 B; sheets:5 张（stdlib 解析）; 非空单元格:317; 公式:50; 外部链接:0 个; 宏(vbaProject):无; 解析器:openpyxl 不可用，已回退 stdlib（只读）",
+   "cost_minor": 500,
+   "cost_known": "yes",
+   "platform_evidence": "demo://b19/synthetic-platform-evidence",
+   "revision": 4,
+   "copy_version": "copy-v1"
+  },
+  "readiness": {
+   "specs": true,
+   "supply": true,
+   "license": true,
+   "sample": true,
+   "cost": true,
+   "platform": true,
+   "copy": true
+  },
+  "blockers": [],
+  "validity": {
+   "has_export": false,
+   "valid": false,
+   "reason": "尚未导出"
+  },
+  "last_export": null,
+  "candidates": [
+   {
+    "id": "sc:36c19324",
+    "provider": "B",
+    "commercial": "yes",
+    "redistribute": "yes",
+    "resale": "yes",
+    "is_active": 1,
+    "updated_at": "2026-10-24T05:20:17Z"
+   },
+   {
+    "id": "sc:4887bf3f",
+    "provider": "A",
+    "commercial": "yes",
+    "redistribute": "yes",
+    "resale": "yes",
+    "is_active": 1,
+    "updated_at": "2026-10-24T05:20:17Z"
+   }
+  ]
+ },
+ "export_baseline": {
+  "status": 200,
+  "dedup": "false"
+ },
+ "baseline_after_export": {
+  "record": {
+   "selected_supply_id": "sc:4887bf3f",
+   "supply_version": "20261024T052017",
+   "supply_license_commercial": "yes",
+   "supply_license_redistribute": "yes",
+   "supply_license_resell": "yes",
+   "supply_note": "A self:A",
+   "sample_status": "verified",
+   "sample_ref": "docs\\validation\\product-workflow\\b7\\sample-study-planner-v1.xlsx（13559 B）：存在与大小:13559 B; sheets:5 张（stdlib 解析）; 非空单元格:317; 公式:50; 外部链接:0 个; 宏(vbaProject):无; 解析器:openpyxl 不可用，已回退 stdlib（只读）",
+   "cost_minor": 500,
+   "cost_known": "yes",
+   "platform_evidence": "demo://b19/synthetic-platform-evidence",
+   "revision": 4,
+   "copy_version": "copy-v1"
+  },
+  "readiness": {
+   "specs": true,
+   "supply": true,
+   "license": true,
+   "sample": true,
+   "cost": true,
+   "platform": true,
+   "copy": true
+  },
+  "blockers": [],
+  "validity": {
+   "has_export": true,
+   "valid": true,
+   "changed": [],
+   "reason": "无变化",
+   "created_utc": "2026-10-24T05:20:17Z",
+   "format": "json",
+   "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86"
+  },
+  "last_export": {
+   "id": 1,
+   "workorder_id": "wo:20261024-d9e4dec3",
+   "format": "json",
+   "revision": 4,
+   "copy_version": "copy-v1",
+   "supply_id": "sc:4887bf3f",
+   "supply_version": "20261024T052017",
+   "stamp_hash": "473a0f862d24c374f670fccbef497cec3a69b49cbaa8678110016316d1618310",
+   "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86",
+   "created_utc": "2026-10-24T05:20:17Z",
+   "dedupe_key": "4|copy-v1|sc:4887bf3f|20261024T052017",
+   "publish_version": 0
+  },
+  "candidates": [
+   {
+    "id": "sc:36c19324",
+    "provider": "B",
+    "commercial": "yes",
+    "redistribute": "yes",
+    "resale": "yes",
+    "is_active": 1,
+    "updated_at": "2026-10-24T05:20:17Z"
+   },
+   {
+    "id": "sc:4887bf3f",
+    "provider": "A",
+    "commercial": "yes",
+    "redistribute": "yes",
+    "resale": "yes",
+    "is_active": 1,
+    "updated_at": "2026-10-24T05:20:17Z"
+   }
+  ]
+ },
+ "control": {
+  "update": 303,
+  "deactivate": 303,
+  "record_same": true,
+  "state": {
+   "record": {
+    "selected_supply_id": "sc:4887bf3f",
+    "supply_version": "20261024T052017",
+    "supply_license_commercial": "yes",
+    "supply_license_redistribute": "yes",
+    "supply_license_resell": "yes",
+    "supply_note": "A self:A",
+    "sample_status": "verified",
+    "sample_ref": "docs\\validation\\product-workflow\\b7\\sample-study-planner-v1.xlsx（13559 B）：存在与大小:13559 B; sheets:5 张（stdlib 解析）; 非空单元格:317; 公式:50; 外部链接:0 个; 宏(vbaProject):无; 解析器:openpyxl 不可用，已回退 stdlib（只读）",
+    "cost_minor": 500,
+    "cost_known": "yes",
+    "platform_evidence": "demo://b19/synthetic-platform-evidence",
+    "revision": 4,
+    "copy_version": "copy-v1"
+   },
+   "readiness": {
+    "specs": true,
+    "supply": true,
+    "license": true,
+    "sample": true,
+    "cost": true,
+    "platform": true,
+    "copy": true
+   },
+   "blockers": [],
+   "validity": {
+    "has_export": true,
+    "valid": true,
+    "changed": [],
+    "reason": "无变化",
+    "created_utc": "2026-10-24T05:20:17Z",
+    "format": "json",
+    "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86"
+   },
+   "last_export": {
+    "id": 1,
+    "workorder_id": "wo:20261024-d9e4dec3",
+    "format": "json",
+    "revision": 4,
+    "copy_version": "copy-v1",
+    "supply_id": "sc:4887bf3f",
+    "supply_version": "20261024T052017",
+    "stamp_hash": "473a0f862d24c374f670fccbef497cec3a69b49cbaa8678110016316d1618310",
+    "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86",
+    "created_utc": "2026-10-24T05:20:17Z",
+    "dedupe_key": "4|copy-v1|sc:4887bf3f|20261024T052017",
+    "publish_version": 0
+   },
+   "candidates": [
+    {
+     "id": "sc:36c19324",
+     "provider": "B",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "no",
+     "is_active": 0,
+     "updated_at": "2026-10-24T05:20:18Z"
+    },
+    {
+     "id": "sc:4887bf3f",
+     "provider": "A",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "yes",
+     "is_active": 1,
+     "updated_at": "2026-10-24T05:20:17Z"
+    }
+   ]
+  },
+  "get_export": 200
+ },
+ "D2": {
+  "update": 303,
+  "state": {
+   "record": {
+    "selected_supply_id": "sc:4887bf3f",
+    "supply_version": "2026-10-24T05:20:18Z",
+    "supply_license_commercial": "yes",
+    "supply_license_redistribute": "yes",
+    "supply_license_resell": "no",
+    "supply_note": "A self:A",
+    "sample_status": null,
+    "sample_ref": null,
+    "cost_minor": null,
+    "cost_known": "no",
+    "platform_evidence": "demo://b19/synthetic-platform-evidence",
+    "revision": 5,
+    "copy_version": "copy-v1"
+   },
+   "readiness": {
+    "specs": true,
+    "supply": true,
+    "license": false,
+    "sample": false,
+    "cost": false,
+    "platform": true,
+    "copy": true
+   },
+   "blockers": [
+    "许可三档均允许（可商用/可再分发/可转售）：未通过：可商用=yes、可再分发=yes、可转售=no",
+    "样品或交付入口已核验：未核验样品/交付入口（sample_status 非 verified）",
+    "成本已知：成本未知（cost_minor 未填且 cost_known 非 yes）"
+   ],
+   "validity": {
+    "has_export": true,
+    "valid": false,
+    "changed": [
+     "工作单版本",
+     "货源版本"
+    ],
+    "reason": "已失效，需重新检查并导出：工作单版本、货源版本",
+    "created_utc": "2026-10-24T05:20:17Z",
+    "format": "json",
+    "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86"
+   },
+   "last_export": {
+    "id": 1,
+    "workorder_id": "wo:20261024-d9e4dec3",
+    "format": "json",
+    "revision": 4,
+    "copy_version": "copy-v1",
+    "supply_id": "sc:4887bf3f",
+    "supply_version": "20261024T052017",
+    "stamp_hash": "473a0f862d24c374f670fccbef497cec3a69b49cbaa8678110016316d1618310",
+    "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86",
+    "created_utc": "2026-10-24T05:20:17Z",
+    "dedupe_key": "4|copy-v1|sc:4887bf3f|20261024T052017",
+    "publish_version": 0
+   },
+   "candidates": [
+    {
+     "id": "sc:36c19324",
+     "provider": "B",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "no",
+     "is_active": 0,
+     "updated_at": "2026-10-24T05:20:18Z"
+    },
+    {
+     "id": "sc:4887bf3f",
+     "provider": "A",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "no",
+     "is_active": 1,
+     "updated_at": "2026-10-24T05:20:18Z"
+    }
+   ]
+  },
+  "get_export": {
+   "status": 409,
+   "bytes": 2637
+  }
+ },
+ "D2_recovery": {
+  "update_yes": 303,
+  "sample": 303,
+  "evidence": 303,
+  "state": {
+   "record": {
+    "selected_supply_id": "sc:4887bf3f",
+    "supply_version": "2026-10-24T05:20:18Z",
+    "supply_license_commercial": "yes",
+    "supply_license_redistribute": "yes",
+    "supply_license_resell": "yes",
+    "supply_note": "A self:A",
+    "sample_status": "verified",
+    "sample_ref": "docs\\validation\\product-workflow\\b7\\sample-study-planner-v1.xlsx（13559 B）：存在与大小:13559 B; sheets:5 张（stdlib 解析）; 非空单元格:317; 公式:50; 外部链接:0 个; 宏(vbaProject):无; 解析器:openpyxl 不可用，已回退 stdlib（只读）",
+    "cost_minor": 500,
+    "cost_known": "yes",
+    "platform_evidence": "demo://b19/synthetic-platform-evidence",
+    "revision": 8,
+    "copy_version": "copy-v1"
+   },
+   "readiness": {
+    "specs": true,
+    "supply": true,
+    "license": true,
+    "sample": true,
+    "cost": true,
+    "platform": true,
+    "copy": true
+   },
+   "blockers": [],
+   "validity": {
+    "has_export": true,
+    "valid": false,
+    "changed": [
+     "工作单版本",
+     "货源版本"
+    ],
+    "reason": "已失效，需重新检查并导出：工作单版本、货源版本",
+    "created_utc": "2026-10-24T05:20:17Z",
+    "format": "json",
+    "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86"
+   },
+   "last_export": {
+    "id": 1,
+    "workorder_id": "wo:20261024-d9e4dec3",
+    "format": "json",
+    "revision": 4,
+    "copy_version": "copy-v1",
+    "supply_id": "sc:4887bf3f",
+    "supply_version": "20261024T052017",
+    "stamp_hash": "473a0f862d24c374f670fccbef497cec3a69b49cbaa8678110016316d1618310",
+    "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86",
+    "created_utc": "2026-10-24T05:20:17Z",
+    "dedupe_key": "4|copy-v1|sc:4887bf3f|20261024T052017",
+    "publish_version": 0
+   },
+   "candidates": [
+    {
+     "id": "sc:36c19324",
+     "provider": "B",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "no",
+     "is_active": 0,
+     "updated_at": "2026-10-24T05:20:18Z"
+    },
+    {
+     "id": "sc:4887bf3f",
+     "provider": "A",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "yes",
+     "is_active": 1,
+     "updated_at": "2026-10-24T05:20:18Z"
+    }
+   ]
+  },
+  "get_export": 200
+ },
+ "D3": {
+  "deactivate": 303,
+  "state": {
+   "record": {
+    "selected_supply_id": null,
+    "supply_version": "2026-10-24T05:20:18Z",
+    "supply_license_commercial": "unknown",
+    "supply_license_redistribute": "unknown",
+    "supply_license_resell": "unknown",
+    "supply_note": "A self:A",
+    "sample_status": null,
+    "sample_ref": null,
+    "cost_minor": null,
+    "cost_known": "no",
+    "platform_evidence": "demo://b19/synthetic-platform-evidence",
+    "revision": 9,
+    "copy_version": "copy-v1"
+   },
+   "readiness": {
+    "specs": true,
+    "supply": false,
+    "license": false,
+    "sample": false,
+    "cost": false,
+    "platform": true,
+    "copy": true
+   },
+   "blockers": [
+    "已选货源：未选货源（selected_supply_id 为空）",
+    "许可三档均允许（可商用/可再分发/可转售）：未通过：可商用=unknown、可再分发=unknown、可转售=unknown",
+    "样品或交付入口已核验：未核验样品/交付入口（sample_status 非 verified）",
+    "成本已知：成本未知（cost_minor 未填且 cost_known 非 yes）"
+   ],
+   "validity": {
+    "has_export": true,
+    "valid": false,
+    "changed": [
+     "工作单版本",
+     "货源",
+     "货源版本"
+    ],
+    "reason": "已失效，需重新检查并导出：工作单版本、货源、货源版本",
+    "created_utc": "2026-10-24T05:20:17Z",
+    "format": "json",
+    "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86"
+   },
+   "last_export": {
+    "id": 1,
+    "workorder_id": "wo:20261024-d9e4dec3",
+    "format": "json",
+    "revision": 4,
+    "copy_version": "copy-v1",
+    "supply_id": "sc:4887bf3f",
+    "supply_version": "20261024T052017",
+    "stamp_hash": "473a0f862d24c374f670fccbef497cec3a69b49cbaa8678110016316d1618310",
+    "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86",
+    "created_utc": "2026-10-24T05:20:17Z",
+    "dedupe_key": "4|copy-v1|sc:4887bf3f|20261024T052017",
+    "publish_version": 0
+   },
+   "candidates": [
+    {
+     "id": "sc:36c19324",
+     "provider": "B",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "no",
+     "is_active": 0,
+     "updated_at": "2026-10-24T05:20:18Z"
+    },
+    {
+     "id": "sc:4887bf3f",
+     "provider": "A",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "yes",
+     "is_active": 0,
+     "updated_at": "2026-10-24T05:20:18Z"
+    }
+   ]
+  },
+  "get_export": {
+   "status": 409,
+   "bytes": 2717
+  }
+ },
+ "D4": {
+  "select": 303,
+  "state": {
+   "record": {
+    "selected_supply_id": "sc:71f31eec",
+    "supply_version": "20261024T052018",
+    "supply_license_commercial": "yes",
+    "supply_license_redistribute": "yes",
+    "supply_license_resell": "yes",
+    "supply_note": "B2 self:B2",
+    "sample_status": null,
+    "sample_ref": null,
+    "cost_minor": null,
+    "cost_known": "no",
+    "platform_evidence": "demo://b19/synthetic-platform-evidence",
+    "revision": 10,
+    "copy_version": "copy-v1"
+   },
+   "readiness": {
+    "specs": true,
+    "supply": true,
+    "license": true,
+    "sample": false,
+    "cost": false,
+    "platform": true,
+    "copy": true
+   },
+   "blockers": [
+    "样品或交付入口已核验：未核验样品/交付入口（sample_status 非 verified）",
+    "成本已知：成本未知（cost_minor 未填且 cost_known 非 yes）"
+   ],
+   "validity": {
+    "has_export": true,
+    "valid": false,
+    "changed": [
+     "工作单版本",
+     "货源",
+     "货源版本"
+    ],
+    "reason": "已失效，需重新检查并导出：工作单版本、货源、货源版本",
+    "created_utc": "2026-10-24T05:20:17Z",
+    "format": "json",
+    "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86"
+   },
+   "last_export": {
+    "id": 1,
+    "workorder_id": "wo:20261024-d9e4dec3",
+    "format": "json",
+    "revision": 4,
+    "copy_version": "copy-v1",
+    "supply_id": "sc:4887bf3f",
+    "supply_version": "20261024T052017",
+    "stamp_hash": "473a0f862d24c374f670fccbef497cec3a69b49cbaa8678110016316d1618310",
+    "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86",
+    "created_utc": "2026-10-24T05:20:17Z",
+    "dedupe_key": "4|copy-v1|sc:4887bf3f|20261024T052017",
+    "publish_version": 0
+   },
+   "candidates": [
+    {
+     "id": "sc:71f31eec",
+     "provider": "B2",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "yes",
+     "is_active": 1,
+     "updated_at": "2026-10-24T05:20:18Z"
+    },
+    {
+     "id": "sc:36c19324",
+     "provider": "B",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "no",
+     "is_active": 0,
+     "updated_at": "2026-10-24T05:20:18Z"
+    },
+    {
+     "id": "sc:4887bf3f",
+     "provider": "A",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "yes",
+     "is_active": 0,
+     "updated_at": "2026-10-24T05:20:18Z"
+    }
+   ]
+  },
+  "get_export": {
+   "status": 409,
+   "bytes": 2507
+  }
+ },
+ "D4_recovery": {
+  "sample": 303,
+  "evidence": 303,
+  "state": {
+   "record": {
+    "selected_supply_id": "sc:71f31eec",
+    "supply_version": "20261024T052018",
+    "supply_license_commercial": "yes",
+    "supply_license_redistribute": "yes",
+    "supply_license_resell": "yes",
+    "supply_note": "B2 self:B2",
+    "sample_status": "verified",
+    "sample_ref": "docs\\validation\\product-workflow\\b7\\sample-study-planner-v1.xlsx（13559 B）：存在与大小:13559 B; sheets:5 张（stdlib 解析）; 非空单元格:317; 公式:50; 外部链接:0 个; 宏(vbaProject):无; 解析器:openpyxl 不可用，已回退 stdlib（只读）",
+    "cost_minor": 500,
+    "cost_known": "yes",
+    "platform_evidence": "demo://b19/synthetic-platform-evidence",
+    "revision": 12,
+    "copy_version": "copy-v1"
+   },
+   "readiness": {
+    "specs": true,
+    "supply": true,
+    "license": true,
+    "sample": true,
+    "cost": true,
+    "platform": true,
+    "copy": true
+   },
+   "blockers": [],
+   "validity": {
+    "has_export": true,
+    "valid": false,
+    "changed": [
+     "工作单版本",
+     "货源",
+     "货源版本"
+    ],
+    "reason": "已失效，需重新检查并导出：工作单版本、货源、货源版本",
+    "created_utc": "2026-10-24T05:20:17Z",
+    "format": "json",
+    "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86"
+   },
+   "last_export": {
+    "id": 1,
+    "workorder_id": "wo:20261024-d9e4dec3",
+    "format": "json",
+    "revision": 4,
+    "copy_version": "copy-v1",
+    "supply_id": "sc:4887bf3f",
+    "supply_version": "20261024T052017",
+    "stamp_hash": "473a0f862d24c374f670fccbef497cec3a69b49cbaa8678110016316d1618310",
+    "content_sha256": "38623c5990243f41bc7a0f9be7f72def159344f0f3b3868b0db134bf5718db86",
+    "created_utc": "2026-10-24T05:20:17Z",
+    "dedupe_key": "4|copy-v1|sc:4887bf3f|20261024T052017",
+    "publish_version": 0
+   },
+   "candidates": [
+    {
+     "id": "sc:71f31eec",
+     "provider": "B2",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "yes",
+     "is_active": 1,
+     "updated_at": "2026-10-24T05:20:18Z"
+    },
+    {
+     "id": "sc:36c19324",
+     "provider": "B",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "no",
+     "is_active": 0,
+     "updated_at": "2026-10-24T05:20:18Z"
+    },
+    {
+     "id": "sc:4887bf3f",
+     "provider": "A",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "yes",
+     "is_active": 0,
+     "updated_at": "2026-10-24T05:20:18Z"
+    }
+   ]
+  },
+  "get_export": 200
+ },
+ "db_counts": {
+  "workorder": 1,
+  "workorder_supply_candidate": 3,
+  "workorder_event": 21,
+  "workorder_export": 1
+ }
+}

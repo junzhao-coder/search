@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "type": "search_result",
+      "object": {
+        "type": "answer",
+        "id": 1111111111,
+        "content": "<p>求一个能直接打印的周计划模板，孩子用。</p>",
+        "created_time": 1700000000,
+        "voteup_count": "1.2万",
+        "comment_count": 34,
+        "question": {"id": 900000000, "name": "有哪些适合初中生的学习计划模板？"}
+      }
+    },
+    {
+      "type": "search_result",
+      "object": {"type": "unrecognized_object", "id": 333}
+    }
+  ],
+  "paging": {"is_end": false, "next": "offset-2"}
+}

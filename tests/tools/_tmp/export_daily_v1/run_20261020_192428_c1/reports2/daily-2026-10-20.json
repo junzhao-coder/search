@@ -1,0 +1,69 @@
+{
+ "kind": "daily_digest",
+ "as_of": "2026-10-20T12:00:00Z",
+ "digest_date": "2026-10-20",
+ "rank_version": "rank-v1",
+ "daily_limit": 3,
+ "scenario_params": {
+  "variant": "base",
+  "amortize_orders": null,
+  "monthly_orders": null
+ },
+ "budget_minutes": 30,
+ "pools": {
+  "excluded": 0,
+  "blocked": 0,
+  "recommended": 1,
+  "observing": 0,
+  "exploring": 0,
+  "insufficient": 0
+ },
+ "top": [
+  {
+   "rank": 1,
+   "candidate_id": "c_97ac0a4d9c1f485d",
+   "pool": "recommended",
+   "tier": "T1",
+   "score": 100,
+   "reasons": [
+    "四门槛均 verified",
+    "net=150 分/单（complete）",
+    "观察时间新鲜度 7d（相对 as_of）",
+    "有效 G2 货源稳定",
+    "人工 10 分钟"
+   ],
+   "gaps": [],
+   "next_action": "可直接进入人工复核/试单准备",
+   "daily_pick": true,
+   "inputs_used": {
+    "observed_at": "2026-10-20T11:25:35Z",
+    "verified_gates": 4,
+    "manual_minutes": 10,
+    "net_per_order_minor": 150,
+    "scenario_complete": true,
+    "scenario_params": {
+     "variant": "base",
+     "amortize_orders": null,
+     "monthly_orders": null
+    }
+   }
+  }
+ ],
+ "blocked": [],
+ "observing": [],
+ "exploring": [],
+ "omitted": [],
+ "counts": {
+  "top": 1,
+  "blocked": 0,
+  "observing": 0,
+  "exploring": 0,
+  "omitted": 0,
+  "insufficient": 0,
+  "excluded": 0
+ },
+ "pending_confirmation": true,
+ "budget_note": "预算只作展示提示，不改变排序与条数（与 PLAN §8 偏差待裁定）；权重为启发式 rank-v1，待用户确认。",
+ "display_note": "每日摘要仅供人工查看：重点机会最多 5 条（不足按实展示、不凑数）；排序分是启发式展示次序，不是收益、概率或证据。",
+ "source": "ranking.rank_candidates"
+}

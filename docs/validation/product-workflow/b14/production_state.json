@@ -1,0 +1,17 @@
+{
+ "path": "D:\\桌面\\two\\tools\\workbench\\runtime\\workflow.sqlite3",
+ "exists": true,
+ "sha256": "d9349c03faf29df35f8a846b1000779f54e689fc5633189270c33d68bf7f6cf2",
+ "tables": {
+  "workorder": 1,
+  "workorder_event": 2,
+  "workorder_export": 0
+ },
+ "errors": {
+  "workorder_copy_version": "no such table: workorder_copy_version",
+  "workorder_publish": "no such table: workorder_publish"
+ },
+ "ids": [
+  "wo:20261023-88ef9a66"
+ ]
+}

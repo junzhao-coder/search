@@ -1,0 +1,12 @@
+{
+ "changed_workspace_files": [],
+ "business_db_same": true,
+ "business_db_sha256": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+ "wal": false,
+ "shm": false,
+ "dsh_core_package_same": true,
+ "dsh_mcp_client_same": true,
+ "dsh_mcp_client_tree": "9fc3a99a4b5eddf6facc485a60e5fecfd6764314ad9028b7cca88fce2a8a9ea4",
+ "profile_files": 3144,
+ "venv_files": 1227
+}

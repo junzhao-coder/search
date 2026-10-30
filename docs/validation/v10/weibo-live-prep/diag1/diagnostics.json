@@ -1,0 +1,56 @@
+{
+ "anchors_recognized": 6,
+ "anchors_rejected": 27,
+ "anchors_total": 33,
+ "dom_anchor_count": 33,
+ "elapsed_ms": 0,
+ "final_url": "https://m.weibo.cn/search",
+ "final_url_known": true,
+ "href_shapes": {
+  "detail": 0,
+  "non_http": 1,
+  "other": 0,
+  "other_cross_origin": 4,
+  "other_same_origin": 22,
+  "post": 0,
+  "profile": 0,
+  "relative_other": 0,
+  "status": 6
+ },
+ "html_bytes": 83479,
+ "parse_state": "records",
+ "phase": "read",
+ "probe": {
+  "anchorCount": 33,
+  "anchors_recognized": 6,
+  "anchors_rejected": 27,
+  "anchors_total": 33,
+  "contentish": 0,
+  "emptyish": false,
+  "level": 1,
+  "readyState": "complete",
+  "render_wait_ms": 797,
+  "sampled": 33,
+  "state": "result",
+  "textLen": 0,
+  "wall": null
+ },
+ "probe_elapsed_ms": {
+  "1": 125,
+  "2": 140,
+  "3": 77
+ },
+ "probe_level": 1,
+ "ready_state": "complete",
+ "render_wait_exhausted": null,
+ "render_wait_ms": 797,
+ "requested_url": "https://m.weibo.cn/search",
+ "selectors_assumed": [
+  "result_container (assumed)",
+  "candidate_links=/detail/<id>, /status/<id>, /<uid>/<bid> (assumed)",
+  "empty_markers text (assumed)",
+  "wall_markers text (assumed)"
+ ],
+ "state": "result",
+ "web_state": "result"
+}

@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "type": "search_result",
+      "object": {
+        "type": "answer",
+        "id": 1111111111,
+        "content": "<p>求一个能直接打印的周计划模板，孩子用。</p><p>补充：希望有复习栏。</p>",
+        "created_time": 1700000000,
+        "voteup_count": "1.2万",
+        "comment_count": 34,
+        "question": {"id": 900000000, "name": "有哪些适合初中生的学习计划模板？"}
+      }
+    },
+    {
+      "type": "search_result",
+      "object": {
+        "type": "article",
+        "id": 2222222222,
+        "title": "我把三年的备考节奏整理成了一张表",
+        "content": "每天两小时，按周复盘……",
+        "created": 1700000100,
+        "voteup_count": 128,
+        "comment_count": 9
+      }
+    }
+  ],
+  "paging": {"is_end": true}
+}

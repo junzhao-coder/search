@@ -1,0 +1,208 @@
+{
+ "structure": {
+  "x_raw_keys": [
+   "author_handle",
+   "author_name",
+   "created_at",
+   "discovered_by_keyword",
+   "fetched_at",
+   "lang",
+   "likes",
+   "media_urls",
+   "replies",
+   "retweets",
+   "text",
+   "tweet_id",
+   "url",
+   "views"
+  ],
+  "price_header": [
+   "item_id",
+   "title_snippet",
+   "listed_price",
+   "effective_price",
+   "reference_price",
+   "wants",
+   "province",
+   "delivery",
+   "parse_status",
+   "price_assumption",
+   "raw_price_tail",
+   "source_url",
+   "collected_at"
+  ],
+  "top10_header": [
+   "rank",
+   "opportunity_id",
+   "platform",
+   "title",
+   "url",
+   "score",
+   "price_category",
+   "price_scope",
+   "price_signal_count",
+   "effective_low",
+   "effective_high",
+   "reference_max",
+   "wants_sum",
+   "source_id",
+   "source_name",
+   "source_url",
+   "license_spdx",
+   "license_verdict",
+   "source_evidence_url",
+   "match_quality",
+   "match_reason",
+   "source_alternatives",
+   "gross_margin_low",
+   "gross_margin_high",
+   "gross_margin_mid",
+   "assumptions"
+  ],
+  "price_item_id_prefixes": [
+   "1000478514229",
+   "1025321139124",
+   "1039901404381",
+   "1043035002242",
+   "1048356581667",
+   "1052243348747",
+   "1052576440518",
+   "1062306387075",
+   "1062513180069",
+   "1065944971904"
+  ],
+  "price_item_id_sample": [
+   "1052243348747",
+   "1065944971904",
+   "934041348964",
+   "1083364048246",
+   "1000478514229"
+  ],
+  "license_checks_type": "dict",
+  "license_checks_keys": [
+   "checked_at",
+   "count",
+   "results"
+  ],
+  "license_files": [
+   "2skydev__Notion-Next.js-blog-starter-kit.json",
+   "enescingoz__awesome-n8n-templates.json",
+   "lakshaybhushan__nextjs-notion-waitlist-template.json",
+   "makenotion__notion-sdk-typescript-starter.json",
+   "timovv__notion-website-template.json",
+   "wildcatco__notion-blog.json"
+  ]
+ },
+ "data_samples": [
+  {
+   "check": "scores.csv.demand_raw == x_raw(likes+retweets+replies)",
+   "item_id": "x:1467843989533442054",
+   "scores_demand_raw": 5968.0,
+   "raw_engagement_sum": 5968,
+   "match": true,
+   "raw_record_found": true
+  },
+  {
+   "check": "rows(scores.csv) == rows(items.jsonl)",
+   "scores": 60,
+   "items": 60,
+   "match": true
+  },
+  {
+   "check": "top10.opportunity_id \u2208 price_signals.item_id ?",
+   "top10_ids_sample": [
+    "x:1467843989533442054",
+    "x:1674662364057317382",
+    "x:1747215882965979516"
+   ],
+   "price_ids_sample": [
+    "1092924085684",
+    "1062513180069",
+    "1052576440518"
+   ],
+   "exact_hits": 0,
+   "interpretation": "\u4e24\u8868 id \u65cf\u4e0d\u540c\uff08top10 \u542b x:/bili:/gh: \u673a\u4f1a id\uff0cprice_signals \u4e3a\u95f2\u9c7c item_id\uff09\uff0c0 \u547d\u4e2d\u5c5e\u8bbe\u8ba1\u800c\u975e\u7f3a\u9677\u2014\u2014\u9700\u4eba\u5de5\u786e\u8ba4\u4e24\u8868\u662f\u5426\u6709\u5176\u4ed6\u8fde\u63a5\u952e",
+   "match": null
+  }
+ ],
+ "license_checks": [
+  {
+   "repo": "enescingoz/awesome-n8n-templates",
+   "csv_spdx": "NOASSERTION",
+   "csv_verdict": "\u9700\u6388\u6743",
+   "csv_source": "license_file",
+   "raw_file": "enescingoz__awesome-n8n-templates.json",
+   "raw_spdx": null,
+   "key_sentence": "Creative Commons Attribution 4.0 International License",
+   "match": null
+  },
+  {
+   "repo": "InlitX/Obsidian-Dashboard-Gallery",
+   "csv_spdx": "MIT",
+   "csv_verdict": "\u53ef\u5546\u7528",
+   "csv_source": "api_license",
+   "raw_file": null,
+   "raw_spdx": null,
+   "key_sentence": "MIT License",
+   "match": null
+  },
+  {
+   "repo": "vercel-labs/marketing-team-eve-template",
+   "csv_spdx": "MIT",
+   "csv_verdict": "\u53ef\u5546\u7528",
+   "csv_source": "api_license",
+   "raw_file": null,
+   "raw_spdx": null,
+   "key_sentence": "MIT License",
+   "match": null
+  }
+ ],
+ "github_api_reused": true,
+ "github_api_reused_from_v1": [
+  {
+   "repo": "enescingoz/awesome-n8n-templates",
+   "status": 200,
+   "spdx": "NOASSERTION",
+   "stars": 26046,
+   "pushed_at": "2026-09-12T13:00:32Z",
+   "archived": false,
+   "sources_csv": {
+    "spdx": "NOASSERTION",
+    "stars": "26045",
+    "pushed_at": "2026-09-12T13:00:32Z"
+   },
+   "spdx_consistent": true,
+   "stars_consistent": false
+  },
+  {
+   "repo": "InlitX/Obsidian-Dashboard-Gallery",
+   "status": 200,
+   "spdx": "MIT",
+   "stars": 814,
+   "pushed_at": "2026-10-12T13:35:42Z",
+   "archived": false,
+   "sources_csv": {
+    "spdx": "MIT",
+    "stars": "814",
+    "pushed_at": "2026-10-12T13:35:42Z"
+   },
+   "spdx_consistent": true,
+   "stars_consistent": true
+  },
+  {
+   "repo": "vercel-labs/marketing-team-eve-template",
+   "status": 200,
+   "spdx": "MIT",
+   "stars": 455,
+   "pushed_at": "2026-10-20T19:57:00Z",
+   "archived": false,
+   "sources_csv": {
+    "spdx": "MIT",
+    "stars": "455",
+    "pushed_at": "2026-10-20T19:57:00Z"
+   },
+   "spdx_consistent": true,
+   "stars_consistent": true
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+{"command": "login", "detail": {"chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", "nodriver": false, "nodriver_version": null, "usable": false}, "error": "browser_unavailable", "exit": 7, "profile": "C:\\Users\\19183\\.dsh\\tools\\zhihu-collect\\profile", "status": "unavailable"}

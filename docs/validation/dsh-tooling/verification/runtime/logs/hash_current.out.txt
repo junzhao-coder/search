@@ -1,0 +1,3 @@
+files=13 agent_skill=13 stealth_skill=2 mismatches=0 all_ok=True
+business {'sha256': 'e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85', 'bytes': 241664, 'wal': False, 'shm': False}
+stealth_repo {'pyproject.toml': {'sha256': 'bd0dd9e040e4853ab9df4a19038fc2904c6780c300d984ab3915063032cc7b29', 'bytes': 1456}, 'src/server.py': {'sha256': '30baa58f6ce4aff7268fee9914dabc68275ef759e8c77eee851d086b07673a23', 'bytes': 104222}, 'LICENSE': {'sha256': '4cf9ac505861e08eaf3fbe45a955ede2513a4cb88636370d47b00502ee066009', 'bytes': 1091}}

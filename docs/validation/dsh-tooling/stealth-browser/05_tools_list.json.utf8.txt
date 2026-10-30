@@ -1,0 +1,137 @@
+{
+  "command": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\Scripts\\python.exe",
+  "args": [
+    "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\repo\\src\\server.py",
+    "--minimal"
+  ],
+  "cwd": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\repo",
+  "env_keys": [
+    "APPDATA",
+    "BROWSER_FILE_UPLOAD_ALLOWED_DIRS",
+    "BROWSER_ORPHAN_PROFILE_MAX_AGE",
+    "LOCALAPPDATA",
+    "PATH",
+    "PYTHONIOENCODING",
+    "STEALTH_BROWSER_DEBUG",
+    "STEALTH_BROWSER_EXECUTABLE",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "USERPROFILE"
+  ],
+  "protocolVersion": "2025-11-25",
+  "serverInfo": {
+    "name": "Browser Automation MCP",
+    "version": "1.30.0"
+  },
+  "tool_count": 21,
+  "tool_names": [
+    "spawn_browser",
+    "list_instances",
+    "close_instance",
+    "get_instance_state",
+    "navigate",
+    "go_back",
+    "go_forward",
+    "reload_page",
+    "query_elements",
+    "click_element",
+    "type_text",
+    "paste_text",
+    "press_key",
+    "file_upload",
+    "select_option",
+    "get_element_state",
+    "wait_for_element",
+    "scroll_page",
+    "execute_script",
+    "get_page_content",
+    "take_screenshot"
+  ],
+  "tools": [
+    {
+      "name": "spawn_browser",
+      "description": "Spawn a new browser instance.\n\nArgs:\n    headless (bool): Run in headless mode.\n    user_agent (Optional[str]): Custom user agent string.\n    viewport_width (in"
+    },
+    {
+      "name": "list_instances",
+      "description": "List all active browser instances.\n\nReturns:\n    List[Dict[str, Any]]: List of browser instances with their current state."
+    },
+    {
+      "name": "close_instance",
+      "description": "Close a browser instance.\n\nArgs:\n    instance_id (str): Browser instance ID.\n\nReturns:\n    bool: True if closed successfully."
+    },
+    {
+      "name": "get_instance_state",
+      "description": "Get detailed state of a browser instance.\n\nArgs:\n    instance_id (str): Browser instance ID.\n\nReturns:\n    Optional[Dict[str, Any]]: Complete state information."
+    },
+    {
+      "name": "navigate",
+      "description": "Navigate to a URL.\n\nArgs:\n    instance_id (str): Browser instance ID.\n    url (str): URL to navigate to.\n    wait_until (str): Wait condition - 'load', 'domcont"
+    },
+    {
+      "name": "go_back",
+      "description": "Navigate back in history.\n\nArgs:\n    instance_id (str): Browser instance ID.\n\nReturns:\n    bool: True if navigation was successful."
+    },
+    {
+      "name": "go_forward",
+      "description": "Navigate forward in history.\n\nArgs:\n    instance_id (str): Browser instance ID.\n\nReturns:\n    bool: True if navigation was successful."
+    },
+    {
+      "name": "reload_page",
+      "description": "Reload the current page.\n\nArgs:\n    instance_id (str): Browser instance ID.\n    ignore_cache (bool): Whether to ignore cache when reloading.\n\nReturns:\n    bool:"
+    },
+    {
+      "name": "query_elements",
+      "description": "Query DOM elements.\n\nArgs:\n    instance_id (str): Browser instance ID.\n    selector (str): CSS selector or XPath (starts with '//').\n    text_filter (Optional[s"
+    },
+    {
+      "name": "click_element",
+      "description": "Click an element.\n\nArgs:\n    instance_id (str): Browser instance ID.\n    selector (str): CSS selector or XPath.\n    text_match (Optional[str]): Click element wi"
+    },
+    {
+      "name": "type_text",
+      "description": "   Type text into an input field with trusted keyboard events.\n\n   Every character produces keydown, keypress, input, and keyup events.\n\n   Args:\n       instanc"
+    },
+    {
+      "name": "paste_text",
+      "description": "Paste text instantly into an input field.\n\nArgs:\n    instance_id (str): Browser instance ID.\n    selector (str): CSS selector or XPath.\n    text (str): Text to "
+    },
+    {
+      "name": "press_key",
+      "description": "Press a real key using trusted CDP key events.\n\nSends Input.dispatchKeyEvent keyDown/keyUp pairs, so the page sees trusted\nevents. Use this for control keys suc"
+    },
+    {
+      "name": "file_upload",
+      "description": "Upload allowed local files to a <input type=\"file\"> element via CDP DOM.setFileInputFiles.\n\nResolves the actual file input even if the selector matches a wrappe"
+    },
+    {
+      "name": "select_option",
+      "description": "Select an option from a dropdown.\n\nArgs:\n    instance_id (str): Browser instance ID.\n    selector (str): CSS selector for the select element.\n    value (Optiona"
+    },
+    {
+      "name": "get_element_state",
+      "description": "Get complete state of an element.\n\nArgs:\n    instance_id (str): Browser instance ID.\n    selector (str): CSS selector or XPath.\n\nReturns:\n    Dict[str, Any]: El"
+    },
+    {
+      "name": "wait_for_element",
+      "description": "Wait for an element to appear.\n\nArgs:\n    instance_id (str): Browser instance ID.\n    selector (str): CSS selector or XPath.\n    timeout (int): Timeout in milli"
+    },
+    {
+      "name": "scroll_page",
+      "description": "Scroll the page.\n\nArgs:\n    instance_id (str): Browser instance ID.\n    direction (str): 'down', 'up', 'left', 'right', 'top', or 'bottom'.\n    amount (int): Pi"
+    },
+    {
+      "name": "execute_script",
+      "description": "Execute JavaScript in page context.\n\nArgs:\n    instance_id (str): Browser instance ID.\n    script (str): JavaScript code to execute.\n    args (Optional[List[Any"
+    },
+    {
+      "name": "get_page_content",
+      "description": "Get page HTML and text content.\n\nArgs:\n    instance_id (str): Browser instance ID.\n    include_frames (bool): Include iframe information.\n\nReturns:\n    Dict[str"
+    },
+    {
+      "name": "take_screenshot",
+      "description": "Take a screenshot of the page.\n\nThe image is returned as MCP image content with metadata. It is scaled\ndown, keeping its aspect ratio, when it is wider than max"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+test_charge_after_lock_in_same_instance (tests.test_access_budget.BudgetTests.test_charge_after_lock_in_same_instance) ... ok
+test_charge_failure_rolls_back_the_counter (tests.test_access_budget.BudgetTests.test_charge_failure_rolls_back_the_counter) ... ok
+test_counters_survive_reopen (tests.test_access_budget.BudgetTests.test_counters_survive_reopen) ... ok
+test_exhausted_calls_cannot_be_revived_by_new_id (tests.test_access_budget.BudgetTests.test_exhausted_calls_cannot_be_revived_by_new_id) ... ok
+test_explicit_batch_id_only_relabels (tests.test_access_budget.BudgetTests.test_explicit_batch_id_only_relabels) ... ok
+test_failed_call_is_not_refunded (tests.test_access_budget.BudgetTests.test_failed_call_is_not_refunded) ... ok
+test_interval_enforced (tests.test_access_budget.BudgetTests.test_interval_enforced) ... ok
+test_ledger_records_charge_and_lock (tests.test_access_budget.BudgetTests.test_ledger_records_charge_and_lock) ... ok
+test_lock_survives_restart_and_any_relabel (tests.test_access_budget.BudgetTests.test_lock_survives_restart_and_any_relabel) ... ok
+test_locked_budget_keeps_its_counters_visible (tests.test_access_budget.BudgetTests.test_locked_budget_keeps_its_counters_visible) ... ok
+test_login_cannot_relabel_around_a_lock (tests.test_access_budget.BudgetTests.test_login_cannot_relabel_around_a_lock) ... ok
+test_poll_is_refused_when_locked (tests.test_access_budget.BudgetTests.test_poll_is_refused_when_locked) ... ok
+test_poll_quota_exhausts (tests.test_access_budget.BudgetTests.test_poll_quota_exhausts) ... ok
+test_polls_do_not_touch_the_call_counter (tests.test_access_budget.BudgetTests.test_polls_do_not_touch_the_call_counter) ... ok
+test_records_cap (tests.test_access_budget.BudgetTests.test_records_cap) ... ok
+test_relabel_does_not_reset_records_or_window (tests.test_access_budget.BudgetTests.test_relabel_does_not_reset_records_or_window) ... ok
+test_relabel_writes_a_ledger_line (tests.test_access_budget.BudgetTests.test_relabel_writes_a_ledger_line) ... ok
+test_three_calls_then_refused (tests.test_access_budget.BudgetTests.test_three_calls_then_refused) ... ok
+test_unwritable_state_dir_refuses_before_any_call (tests.test_access_budget.BudgetTests.test_unwritable_state_dir_refuses_before_any_call) ... ok
+test_window_blocks_after_max_seconds (tests.test_access_budget.BudgetTests.test_window_blocks_after_max_seconds) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.467s
+
+OK

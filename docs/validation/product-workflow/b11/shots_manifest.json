@@ -1,0 +1,56 @@
+{
+ "base": "http://127.0.0.1:5015",
+ "workorder": "wo:c3-prod-20261023",
+ "shots": {
+  "production_list.png": {
+   "file": "production_list.png",
+   "width": 1440,
+   "height": 900,
+   "bytes": 66003,
+   "sha256": "9ecd2145839a74dac94bd6e1884c073cf3bd694e78dd4d514767337e532092f2",
+   "page_contains_workorder": true
+  },
+  "production_readiness.png": {
+   "found": true,
+   "title": "上架准备检查（服务端判定）",
+   "clip": {
+    "x": 256,
+    "y": 1753,
+    "width": 1160,
+    "height": 650,
+    "scale": 1
+   },
+   "hasChecks": true,
+   "hasDisabled": true,
+   "hasExportLink": false,
+   "okChips": 6,
+   "warnChips": 1,
+   "file": "production_readiness.png",
+   "width": 1160,
+   "height": 650,
+   "bytes": 55771,
+   "sha256": "efc419fe109b6cbe1e53ca67a11f9e583b812e538acd622f8c9e5126b901812f"
+  },
+  "mobile_readiness.png": {
+   "found": true,
+   "title": "上架准备检查（服务端判定）",
+   "clip": {
+    "x": 14,
+    "y": 2773,
+    "width": 362,
+    "height": 948,
+    "scale": 1
+   },
+   "hasChecks": true,
+   "hasDisabled": true,
+   "hasExportLink": false,
+   "okChips": 6,
+   "warnChips": 1,
+   "file": "mobile_readiness.png",
+   "width": 362,
+   "height": 948,
+   "bytes": 53699,
+   "sha256": "8f86eac87c1cc6320cb513d3bc70ca3a843eeb6bbc91c24f166fe8547445f717"
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "generated_utc": "2026-10-24T12:19:11Z",
+ "port": 5027,
+ "shots": {
+  "copy_platform_hint.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 108699,
+   "url": "/copy?wo=wo:20261024-ed17db2c",
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "60c66322140876e439a497f7b9970dd0bbb9e25a83f9221c98c2925cf13a80df",
+   "hint_visible_in_dom": true
+  }
+ },
+ "workorder_id": "wo:20261024-ed17db2c"
+}

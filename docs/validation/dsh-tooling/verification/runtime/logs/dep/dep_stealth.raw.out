@@ -1,0 +1,90 @@
+{
+  "label": "stealth",
+  "python": {
+    "version": "3.10.9",
+    "executable": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\Scripts\\python.exe",
+    "prefix": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv",
+    "base_prefix": "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python310",
+    "in_venv": true
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "distributions": {
+    "agent-reach": {
+      "installed": false
+    },
+    "stealth-browser-mcp": {
+      "installed": false
+    },
+    "fastmcp": {
+      "installed": true,
+      "version": "2.11.2",
+      "direct_url": null,
+      "file_count": 207,
+      "location": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\lib\\site-packages"
+    },
+    "nodriver": {
+      "installed": true,
+      "version": "0.47.0",
+      "direct_url": null,
+      "file_count": 137,
+      "location": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\lib\\site-packages"
+    },
+    "mcp": {
+      "installed": true,
+      "version": "1.30.0",
+      "direct_url": null,
+      "file_count": 228,
+      "location": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\lib\\site-packages"
+    },
+    "pydantic": {
+      "installed": true,
+      "version": "2.11.7",
+      "direct_url": null,
+      "file_count": 216,
+      "location": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\lib\\site-packages"
+    },
+    "flask": {
+      "installed": false
+    },
+    "requests": {
+      "installed": true,
+      "version": "2.33.1",
+      "direct_url": null,
+      "file_count": 44,
+      "location": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\lib\\site-packages"
+    }
+  },
+  "modules": {
+    "fastmcp": {
+      "imported": true,
+      "file": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\Lib\\site-packages\\fastmcp\\__init__.py",
+      "version_attr": "2.11.2"
+    },
+    "nodriver": {
+      "imported": true,
+      "file": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\Lib\\site-packages\\nodriver\\__init__.py",
+      "version_attr": null
+    },
+    "mcp": {
+      "imported": true,
+      "file": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\Lib\\site-packages\\mcp\\__init__.py",
+      "version_attr": null
+    },
+    "server": {
+      "imported": false,
+      "error": "ModuleNotFoundError: No module named 'server'"
+    }
+  },
+  "sys_path": [
+    "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\verification\\runtime\\tools",
+    "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python310\\python310.zip",
+    "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python310\\DLLs",
+    "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python310\\lib",
+    "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python310",
+    "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv",
+    "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\lib\\site-packages",
+    "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\lib\\site-packages\\win32",
+    "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\lib\\site-packages\\win32\\lib",
+    "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\lib\\site-packages\\pythonwin"
+  ]
+}

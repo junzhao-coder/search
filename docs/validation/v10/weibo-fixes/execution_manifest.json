@@ -1,0 +1,74 @@
+{
+ "generated_utc": "2026-10-27T14:52:12Z",
+ "network": "none",
+ "browser": "none",
+ "command": "python -X utf8 -m unittest <module> -v",
+ "suites": [
+  {
+   "name": "tests.test_access_weibo",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_access_weibo",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two",
+   "start_utc": "2026-10-27T14:52:00Z",
+   "end_utc": "2026-10-27T14:52:01Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 32 tests in 0.877s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-fixes\\logs\\test_access_weibo.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-fixes\\logs\\test_access_weibo.stderr.txt"
+  },
+  {
+   "name": "tests.test_access_zhihu",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_access_zhihu",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two",
+   "start_utc": "2026-10-27T14:52:01Z",
+   "end_utc": "2026-10-27T14:52:10Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 96 tests in 8.024s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-fixes\\logs\\test_access_zhihu.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-fixes\\logs\\test_access_zhihu.stderr.txt"
+  },
+  {
+   "name": "tests.test_access_budget",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_access_budget",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two",
+   "start_utc": "2026-10-27T14:52:10Z",
+   "end_utc": "2026-10-27T14:52:12Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 20 tests in 2.480s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-fixes\\logs\\test_access_budget.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-fixes\\logs\\test_access_budget.stderr.txt"
+  }
+ ]
+}

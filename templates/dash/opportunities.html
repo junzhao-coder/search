@@ -1,0 +1,40 @@
+{% extends "dash/base.html" %}
+{% block title %}机会榜 · 机会情报 Dashboard{% endblock %}
+{% block content %}
+<h1 class="page-title">机会榜</h1>
+<p class="hint">来自 <code>scoring/scores.csv</code> 的六维模型结果；分数是筛选参考，不是收益承诺。</p>
+
+<section class="panel" aria-labelledby="h-opps">
+  <h2 id="h-opps">全部机会（{{ scores|length }} 条）</h2>
+  <div class="toolbar">
+    <label for="opp-filter">搜索：</label>
+    <input id="opp-filter" data-filter="#opps-table" placeholder="标题/作者/平台">
+    <span class="muted">点击表头可排序</span>
+  </div>
+  {% if scores %}
+  <div class="table-wrap">
+    <table class="data" id="opps-table">
+      <thead><tr>
+        <th data-sort="num">#</th><th data-sort="num">分数</th><th>平台</th><th>机会</th>
+        <th>作者</th><th>发布时间</th><th data-sort="num">需求原始</th><th>毛利区间</th><th>建议</th>
+      </tr></thead>
+      <tbody>
+      {% for row in scores %}
+        <tr>
+          <td class="num">{{ row.rank }}</td>
+          <td class="num">{{ '%.3f'|format(row.total_score|float) }}</td>
+          <td>{{ row.platform }}</td>
+          <td><a href="{{ row.url }}" rel="noreferrer">{{ row.title }}</a><br><span class="muted">{{ row.source }}</span></td>
+          <td>{{ row.author }}</td>
+          <td>{{ row.published_at }}</td>
+          <td class="num">{{ row.demand_raw }}</td>
+          <td>{{ row.margin_low }}–{{ row.margin_high }}</td>
+          <td>{% if row.total_score|float >= 0.6 %}推荐验证{% elif row.total_score|float >= 0.5 %}谨慎验证{% else %}暂缓{% endif %}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}<p class="state state-empty">暂无数据：scores.csv 缺失或为空。</p>{% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,33 @@
+{
+  "generated_utc": "2026-10-25T10:53:54Z",
+  "raw": [
+    {
+      "file": "raw\\bilibili_reply_p1_bilibili-20261025T105316Z-7b7b2b.json",
+      "bytes": 39578,
+      "sha256": "d737e4aeaf18f96e6810e12019478db06a54a8472585e2ce5ec973158157f7df"
+    },
+    {
+      "file": "raw\\bilibili_view_bilibili-20261025T105316Z-7b7b2b.json",
+      "bytes": 236653,
+      "sha256": "c60355710926052d8decc587e3b90a7610557487bbe6947dbb73d1e3d1d0a151"
+    }
+  ],
+  "source": {
+    "file": "tools/platform-login/data/xianyu_items.jsonl",
+    "bytes": 16332,
+    "sha256": "c70f15801db70d9c0a170024c24ddd18ab9cedf056f21c708207066915c851e0"
+  },
+  "databases": [
+    {
+      "file": "runtime\\bilibili.sqlite3",
+      "bytes": 40960,
+      "sha256": "0d2034616ce57b34a60a0db136131e79be678fb11aa2cedd1320d700148b69b1"
+    },
+    {
+      "file": "runtime\\xianyu.sqlite3",
+      "bytes": 69632,
+      "sha256": "d612dec37012f12cdc59bc98d7d120f6a1d93b9f5205dc927a60806f6cf6d69c"
+    }
+  ],
+  "note": "raw = Bilibili sanitized responses; source = read-only Xianyu JSONL; databases = isolated evidence DBs"
+}

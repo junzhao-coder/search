@@ -1,0 +1,31 @@
+{
+  "run": "zhihu-live-3",
+  "argv": [
+    "C:\\Users\\19183\\.dsh\\tools\\x-collect\\venv\\Scripts\\python.exe",
+    "-m",
+    "tools.selection.access.zhihu",
+    "--state-dir",
+    "docs\\validation\\v10\\zhihu\\runtime_live3",
+    "--batch-id",
+    "zhihu-live-3",
+    "--mode",
+    "authenticated-browser",
+    "--profile",
+    "C:\\Users\\19183\\.dsh\\tools\\zhihu-collect\\profile",
+    "search",
+    "学习计划模板",
+    "--limit",
+    "5"
+  ],
+  "cwd": "D:\\桌面\\two",
+  "pythonpath": "D:\\桌面\\two",
+  "started_utc": "2026-10-27T09:55:52Z",
+  "finished_utc": "2026-10-27T09:55:54Z",
+  "elapsed_s_observed": 1.529,
+  "exit": 3,
+  "external_180s_timeout_triggered": false,
+  "wait_for_timeout_triggered": false,
+  "state_dir": "docs/validation/v10/zhihu/runtime_live3",
+  "batch_id": "zhihu-live-3",
+  "note": "single real call; not retried; source stdout copied to UTF-8 above"
+}

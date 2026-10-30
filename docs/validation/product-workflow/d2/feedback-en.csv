@@ -1,0 +1,2 @@
+﻿date,workorder_id,channel,impressions,inquiries,orders,refunds,actual_price_cny,net_received_cny,manual_minutes,delivery,note
+2026-10-24,wo:20261024-33da03de,xianyu,na,4,1,0,19.9,18.5,45,standalone,synthetic 走查

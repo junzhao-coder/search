@@ -1,0 +1,77 @@
+{
+ "calc": {
+  "rows": 2,
+  "inquiries": 10.0,
+  "orders": 2.0,
+  "refunds": 0,
+  "gross": 35.82,
+  "minutes": 240.0,
+  "conversion_pct": 20.0,
+  "unit_gross": 17.91,
+  "unit_net": 17.91,
+  "hourly": 4.48,
+  "refund_pct": 0.0,
+  "recommendation": "提价"
+ },
+ "script_metrics": {
+  "询单转化率%": 20.0,
+  "单件到手元": 17.91,
+  "单件净利元": 17.91,
+  "折算时薪元": 4.48,
+  "退款率%": 0.0
+ },
+ "script_totals": {
+  "行数": 2,
+  "询单合计": 10.0,
+  "成交合计": 2.0,
+  "退款合计": 0.0,
+  "到手合计": 35.82,
+  "耗时合计分钟": 240.0
+ },
+ "comparison": {
+  "conversion": {
+   "independent": 20.0,
+   "script": 20.0,
+   "same": true
+  },
+  "unit_gross": {
+   "independent": 17.91,
+   "script": 17.91,
+   "same": true
+  },
+  "unit_net": {
+   "independent": 17.91,
+   "script": 17.91,
+   "same": true
+  },
+  "hourly": {
+   "independent": 4.48,
+   "script": 4.48,
+   "same": true
+  },
+  "refund": {
+   "independent": 0.0,
+   "script": 0.0,
+   "same": true
+  },
+  "orders": {
+   "independent": 2.0,
+   "script": 2.0,
+   "same": true
+  },
+  "gross": {
+   "independent": 35.82,
+   "script": 35.82,
+   "same": true
+  }
+ },
+ "all_match": true,
+ "recommendation": {
+  "label": "提价",
+  "reasons": [
+   "折算时薪 4.48 元 < 30.0 元/小时，但单件净利仍为正：提价，或把交付标准化（模板化/自助化）来压缩耗时。"
+  ]
+ },
+ "synthetic": true,
+ "columns": 12
+}

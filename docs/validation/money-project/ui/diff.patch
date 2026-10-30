@@ -1,0 +1,896 @@
+diff --git a/app/__init__.py b/app/__init__.py
+--- a/app/__init__.py
++++ b/app/__init__.py
+--- a/app/__init__.py
++++ b/app/__init__.py
+@@ -14,7 +14,8 @@
+ from flask import Flask, jsonify
+ 
+ from . import api
+-from .core.config import load_config
++from . import dash
++from .core.config import ROOT, load_config
+ from .core.errors import AppError
+ from .storage import db as db_module
+ 
+@@ -31,6 +32,8 @@
+     db_module.init_app(app)
+     app.register_blueprint(api.bp)
+     app.register_blueprint(api.pages)
++    app.config["DASH_DATA_ROOT"] = cfg.get("DASH_DATA_ROOT", str(ROOT))
++    app.register_blueprint(dash.bp)
+     _register_error_handlers(app)
+     return app
+ 
+diff --git a/tests/api/test_daily_endpoint.py b/tests/api/test_daily_endpoint.py
+--- a/tests/api/test_daily_endpoint.py
++++ b/tests/api/test_daily_endpoint.py
+--- a/tests/api/test_daily_endpoint.py
++++ b/tests/api/test_daily_endpoint.py
+@@ -148,8 +148,10 @@
+         self.assertIn("/api/summary/daily", rules)
+         self.assertNotIn("/api/daily", rules)
+         self.assertEqual(len(rules), 24)                         # 23 + summary/daily - daily
++        # The legacy four pages are unchanged; /dash is a separate read-only namespace.
+         pages = [r for r in self.client.application.url_map.iter_rules()
+-                 if not str(r).startswith("/api/") and not str(r).startswith("/static")]
++                 if not str(r).startswith("/api/") and not str(r).startswith("/static")
++                 and not str(r).startswith("/dash")]
+         self.assertEqual(len(pages), 4)
+ 
+ 
+diff --git a/app/dash/__init__.py b/app/dash/__init__.py
+new file mode 100644
+--- /dev/null
++++ b/app/dash/__init__.py
+--- /dev/null
++++ b/app/dash/__init__.py
+@@ -0,0 +1,15 @@
++"""Read-only /dash blueprint: four work pages plus overview."""
++
++from __future__ import annotations
++
++import pathlib
++
++from flask import Blueprint, redirect, url_for
++
++ROOT = pathlib.Path(__file__).resolve().parents[2]
++bp = Blueprint("dash", __name__, url_prefix="/dash",
++               template_folder=str(ROOT / "templates"))
++
++from . import routes  # noqa: E402,F401
++
++__all__ = ["bp"]
+diff --git a/app/dash/data.py b/app/dash/data.py
+new file mode 100644
+--- /dev/null
++++ b/app/dash/data.py
+--- /dev/null
++++ b/app/dash/data.py
+@@ -0,0 +1,180 @@
++"""Read-only dashboard data loaders (stdlib only)."""
++
++from __future__ import annotations
++
++import csv
++import datetime
++import json
++import pathlib
++
++ROOT = pathlib.Path(__file__).resolve().parents[2]
++
++#: All paths are relative to the project root (or DASH_DATA_ROOT in tests).
++SOURCES = [
++    ("scores", "docs/validation/money-project/scoring/scores.csv", "csv"),
++    ("scoring_report", "docs/validation/money-project/scoring/report.md", "text"),
++    ("sources", "docs/validation/money-project/sourcing/sources.csv", "csv"),
++    ("prices", "docs/validation/money-project/sourcing/price_signals.csv", "csv"),
++    ("join", "docs/validation/money-project/sourcing/opportunity_sourcing_top10.csv", "csv"),
++    ("xianyu", "tools/platform-login/data/xianyu_items.jsonl", "jsonl"),
++    ("xiaohongshu", "tools/platform-login/data/xiaohongshu_items.jsonl", "jsonl"),
++    ("topic_top20", "docs/validation/x-collect/topic-crawler/top20.md", "text"),
++    ("topic_summary", "docs/validation/x-collect/topic-crawler/filtered/summary.csv", "csv"),
++]
++
++FALLBACKS = {
++    "xianyu": ["login/data/xianyu_items.jsonl"],
++    "xiaohongshu": ["login/data/xiaohongshu_items.jsonl"],
++}
++
++
++def utc_from_ts(ts: float | None) -> str:
++    if not ts:
++        return "暂无数据"
++    return datetime.datetime.fromtimestamp(ts, datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
++
++
++def read_csv(path: pathlib.Path) -> tuple[list[dict], str | None]:
++    try:
++        with path.open(encoding="utf-8-sig", newline="") as fh:
++            return list(csv.DictReader(fh)), None
++    except FileNotFoundError:
++        return [], "文件缺失"
++    except Exception as exc:  # noqa: BLE001
++        return [], f"读取失败：{type(exc).__name__}"
++
++
++def read_jsonl(path: pathlib.Path) -> tuple[list[dict], int, str | None]:
++    rows, bad = [], 0
++    try:
++        for line in path.read_text(encoding="utf-8").splitlines():
++            if not line.strip():
++                continue
++            try:
++                rows.append(json.loads(line))
++            except json.JSONDecodeError:
++                bad += 1
++    except FileNotFoundError:
++        return [], 0, "文件缺失"
++    except Exception as exc:  # noqa: BLE001
++        return [], bad, f"读取失败：{type(exc).__name__}"
++    return rows, bad, None
++
++
++def read_text(path: pathlib.Path) -> tuple[str, str | None]:
++    try:
++        return path.read_text(encoding="utf-8"), None
++    except FileNotFoundError:
++        return "", "文件缺失"
++    except Exception as exc:  # noqa: BLE001
++        return "", f"读取失败：{type(exc).__name__}"
++
++
++def _resolve(root: pathlib.Path, key: str, rel: str) -> pathlib.Path:
++    path = root / rel
++    if path.exists():
++        return path
++    for alt in FALLBACKS.get(key, []):
++        alt_path = root / alt
++        if alt_path.exists():
++            return alt_path
++    return path
++
++
++def _num(row: dict, key: str, default: float = 0.0) -> float:
++    try:
++        return float(row.get(key) or default)
++    except (TypeError, ValueError):
++        return default
++
++
++def load_dashboard_data(root: str | pathlib.Path | None = None) -> dict:
++    """Load all files; never raises for missing/corrupt files."""
++    base = pathlib.Path(root) if root else ROOT
++    datasets: dict[str, dict] = {}
++    warnings: list[str] = []
++    content: dict[str, object] = {}
++
++    for key, rel, kind in SOURCES:
++        path = _resolve(base, key, rel)
++        entry = {"key": key, "path": str(path.relative_to(base)) if path.is_relative_to(base) else str(path),
++                 "exists": path.exists(), "kind": kind, "count": 0, "bad_lines": 0,
++                 "mtime": utc_from_ts(path.stat().st_mtime if path.exists() else None),
++                 "error": None, "size": path.stat().st_size if path.exists() else 0}
++        if kind == "csv":
++            rows, err = read_csv(path)
++            content[key] = rows
++            entry["count"] = len(rows)
++        elif kind == "jsonl":
++            rows, bad, err = read_jsonl(path)
++            content[key] = rows
++            entry["count"] = len(rows)
++            entry["bad_lines"] = bad
++        else:
++            text, err = read_text(path)
++            content[key] = text
++            entry["count"] = len(text.splitlines()) if text else 0
++        entry["error"] = err
++        if err:
++            warnings.append(f"{rel}：{err}")
++        elif entry["bad_lines"]:
++            warnings.append(f"{rel}：跳过 {entry['bad_lines']} 条坏 JSONL")
++        datasets[key] = entry
++
++    scores = content.get("scores", [])
++    scores = sorted(scores, key=lambda r: _num(r, "total_score"), reverse=True)
++    sources = content.get("sources", [])
++    prices = content.get("prices", [])
++    join = content.get("join", [])
++    xianyu = content.get("xianyu", [])
++    xhs = content.get("xiaohongshu", [])
++
++    verdicts = {}
++    for row in sources:
++        verdict = row.get("license_verdict") or "未知"
++        verdicts[verdict] = verdicts.get(verdict, 0) + 1
++    effective = []
++    for row in prices:
++        try:
++            effective.append(float(row.get("effective_price")))
++        except (TypeError, ValueError):
++            continue
++    wants = []
++    for row in prices:
++        try:
++            wants.append(int(float(row.get("wants"))))
++        except (TypeError, ValueError):
++            continue
++
++    top20_text = content.get("topic_top20", "")
++    top20 = []
++    for line in top20_text.splitlines():
++        if line[:2].strip().rstrip(".").isdigit() and "|" in line:
++            top20.append(line.strip())
++    topic_summary = content.get("topic_summary", [])
++
++    latest = max((entry["mtime"] for entry in datasets.values() if entry["mtime"] != "暂无数据"),
++                 default="暂无数据")
++    counts = {key: entry["count"] for key, entry in datasets.items()}
++    return {
++        "root": str(base),
++        "datasets": datasets,
++        "warnings": warnings,
++        "generated_at": latest,
++        "scores": scores,
++        "sources": sources,
++        "prices": prices,
++        "join": join,
++        "xianyu": xianyu,
++        "xiaohongshu": xhs,
++        "top20": top20,
++        "topic_summary": topic_summary,
++        "counts": counts,
++        "license_verdicts": verdicts,
++        "price_stats": {"count": len(prices), "effective_min": min(effective) if effective else None,
++                        "effective_max": max(effective) if effective else None,
++                        "wants_count": len(wants), "wants_sum": sum(wants) if wants else 0},
++    }
++
++
++__all__ = ["load_dashboard_data", "ROOT"]
+diff --git a/app/dash/routes.py b/app/dash/routes.py
+new file mode 100644
+--- /dev/null
++++ b/app/dash/routes.py
+--- /dev/null
++++ b/app/dash/routes.py
+@@ -0,0 +1,78 @@
++"""Routes for the read-only dashboard."""
++
++from __future__ import annotations
++
++from flask import current_app, redirect, render_template, url_for
++
++from . import bp
++from .data import load_dashboard_data
++
++NAV = [
++    ("overview", "总览", "dash.index"),
++    ("collect", "采集", "dash.collect"),
++    ("opportunities", "机会", "dash.opportunities"),
++    ("sources", "货源", "dash.sources"),
++    ("daily", "每日摘要", "dash.daily"),
++]
++
++
++def _data():
++    root = current_app.config.get("DASH_DATA_ROOT")
++    return load_dashboard_data(root)
++
++
++def _context(active: str, data: dict) -> dict:
++    return {
++        "active": active,
++        "nav": NAV,
++        "generated_at": data["generated_at"],
++        "warnings": data["warnings"],
++        "datasets": data["datasets"],
++        "counts": data["counts"],
++    }
++
++
++@bp.get("")
++def dash_root():
++    return redirect(url_for("dash.index"))
++
++
++@bp.get("/")
++def index():
++    data = _data()
++    return render_template("dash/index.html", **_context("overview", data),
++                           scores=data["scores"][:5], sources=data["sources"][:5],
++                           join=data["join"][:5], price_stats=data["price_stats"],
++                           verdicts=data["license_verdicts"], top20=data["top20"])
++
++
++@bp.get("/collect")
++def collect():
++    data = _data()
++    return render_template("dash/collect.html", **_context("collect", data),
++                           xianyu=data["xianyu"][:12], xiaohongshu=data["xiaohongshu"][:12],
++                           top20=data["top20"][:20], topic_summary=data["topic_summary"])
++
++
++@bp.get("/opportunities")
++def opportunities():
++    data = _data()
++    return render_template("dash/opportunities.html", **_context("opportunities", data),
++                           scores=data["scores"])
++
++
++@bp.get("/sources")
++def sources():
++    data = _data()
++    return render_template("dash/sources.html", **_context("sources", data),
++                           sources=data["sources"], prices=data["prices"], join=data["join"],
++                           verdicts=data["license_verdicts"], price_stats=data["price_stats"])
++
++
++@bp.get("/daily")
++def daily():
++    data = _data()
++    return render_template("dash/daily.html", **_context("daily", data),
++                           scores=data["scores"][:5], sources=data["sources"],
++                           join=data["join"][:5], price_stats=data["price_stats"],
++                           verdicts=data["license_verdicts"])
+diff --git a/templates/dash/base.html b/templates/dash/base.html
+new file mode 100644
+--- /dev/null
++++ b/templates/dash/base.html
+--- /dev/null
++++ b/templates/dash/base.html
+@@ -0,0 +1,95 @@
++<!doctype html>
++<html lang="zh-CN">
++<head>
++  <meta charset="utf-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1">
++  <title>{% block title %}机会情报 Dashboard{% endblock %}</title>
++  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
++  <style>
++    .dash-meta { display:flex; flex-wrap:wrap; gap:8px 20px; color:var(--muted); font-size:13px; margin:0 0 14px; }
++    .dash-meta code { font-size:12px; }
++    .notice { border:1px solid #d4a72c; background:#fff8c5; padding:8px 12px; border-radius:6px; margin:0 0 14px; font-size:13px; }
++    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:0 0 16px; }
++    .card { border:1px solid var(--line); border-radius:6px; padding:10px 12px; background:var(--panel); }
++    .card .n { font-size:22px; font-weight:700; display:block; }
++    .card .l { color:var(--muted); font-size:13px; }
++    .table-wrap { overflow:auto; max-height:70vh; }
++    table.data { border-collapse:collapse; width:100%; font-size:13px; }
++    table.data th, table.data td { border-bottom:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
++    table.data th { position:sticky; top:0; background:var(--panel); cursor:pointer; white-space:nowrap; }
++    table.data td.num { text-align:right; font-variant-numeric:tabular-nums; }
++    .badge { display:inline-block; border:1px solid var(--line); border-radius:10px; padding:0 7px; font-size:12px; }
++    .badge-ok { border-color:#1a7f37; color:#1a7f37; }
++    .badge-warn { border-color:#9a6700; color:#9a6700; }
++    .badge-err { border-color:#b42318; color:#b42318; }
++    .muted { color:var(--muted); }
++    .toolbar { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin:0 0 8px; }
++    .toolbar input { padding:4px 6px; border:1px solid var(--line); border-radius:4px; min-width:240px; }
++  </style>
++</head>
++<body data-page="dash-{{ active }}">
++  <a class="skip-link" href="#main">跳到主要内容</a>
++  <header class="topbar">
++    <p class="brand">机会情报 Dashboard <span class="muted">（只读）</span></p>
++    <nav class="nav" aria-label="Dashboard 导航">
++      {% for key, label, endpoint in nav %}
++      <a href="{{ url_for(endpoint) }}"{% if active == key %} aria-current="page"{% endif %}>{{ label }}</a>
++      {% endfor %}
++    </nav>
++  </header>
++  <main id="main" class="main">
++    <div class="dash-meta">
++      <span>数据来源：<code>docs/validation/money-project/{scoring,sourcing}</code> · <code>tools/platform-login/data</code> · <code>docs/validation/x-collect/topic-crawler</code></span>
++      <span>文件更新时间（UTC）：<strong>{{ generated_at }}</strong></span>
++      <span>只读视图；不查询/写入业务库，不触发采集或账号动作。</span>
++    </div>
++    {% if warnings %}
++    <div class="notice" role="alert">
++      <strong>数据提示：</strong>
++      <ul>{% for warning in warnings %}<li>{{ warning }}</li>{% endfor %}</ul>
++    </div>
++    {% endif %}
++    {% block content %}{% endblock %}
++  </main>
++  <footer class="footer">
++    <p>只读 Dashboard：数据来自本机 CSV/JSONL 产物；缺失文件显示“暂无数据/文件缺失”，不补造数据。</p>
++  </footer>
++  <script>
++    (function () {
++      function cellValue(row, index) {
++        return (row.cells[index] ? row.cells[index].innerText : '').trim();
++      }
++      document.addEventListener('click', function (event) {
++        var th = event.target.closest('th[data-sort]');
++        if (!th) return;
++        var table = th.closest('table');
++        var body = table.tBodies[0];
++        if (!body) return;
++        var index = Array.prototype.indexOf.call(th.parentNode.cells, th);
++        var dir = th.getAttribute('data-dir') === 'asc' ? -1 : 1;
++        th.setAttribute('data-dir', dir === 1 ? 'desc' : 'asc');
++        var rows = Array.prototype.slice.call(body.rows);
++        rows.sort(function (a, b) {
++          var av = cellValue(a, index), bv = cellValue(b, index);
++          if (th.getAttribute('data-sort') === 'num') {
++            av = parseFloat(av.replace(/[^0-9.\-]/g, '')) || 0;
++            bv = parseFloat(bv.replace(/[^0-9.\-]/g, '')) || 0;
++          }
++          return (av > bv ? 1 : av < bv ? -1 : 0) * dir;
++        });
++        rows.forEach(function (row) { body.appendChild(row); });
++      });
++      document.addEventListener('input', function (event) {
++        var input = event.target.closest('input[data-filter]');
++        if (!input) return;
++        var table = document.querySelector(input.getAttribute('data-filter'));
++        if (!table || !table.tBodies[0]) return;
++        var q = input.value.toLowerCase();
++        Array.prototype.forEach.call(table.tBodies[0].rows, function (row) {
++          row.hidden = q && row.innerText.toLowerCase().indexOf(q) < 0;
++        });
++      });
++    })();
++  </script>
++</body>
++</html>
+diff --git a/templates/dash/index.html b/templates/dash/index.html
+new file mode 100644
+--- /dev/null
++++ b/templates/dash/index.html
+--- /dev/null
++++ b/templates/dash/index.html
+@@ -0,0 +1,59 @@
++{% extends "dash/base.html" %}
++{% block title %}总览 · 机会情报 Dashboard{% endblock %}
++{% block content %}
++<h1 class="page-title">总览</h1>
++<p class="hint">把已验收的机会评分、货源许可与闲鱼价格信号放到同一页；所有数字来自本机文件，不写库。</p>
++
++<section class="cards" aria-label="数据计数">
++  <div class="card"><span class="n">{{ counts.scores or 0 }}</span><span class="l">机会评分行</span></div>
++  <div class="card"><span class="n">{{ counts.sources or 0 }}</span><span class="l">货源条目</span></div>
++  <div class="card"><span class="n">{{ counts.prices or 0 }}</span><span class="l">闲鱼价格信号</span></div>
++  <div class="card"><span class="n">{{ counts.join or 0 }}</span><span class="l">机会-货源联动</span></div>
++  <div class="card"><span class="n">{{ counts.xianyu or 0 }}</span><span class="l">闲鱼采集</span></div>
++  <div class="card"><span class="n">{{ counts.xiaohongshu or 0 }}</span><span class="l">小红书采集</span></div>
++  <div class="card"><span class="n">{{ top20|length }}</span><span class="l">主题采集榜单行</span></div>
++</section>
++
++<section class="panel" aria-labelledby="h-top">
++  <h2 id="h-top">机会 Top 5 <a class="meta" href="{{ url_for('dash.opportunities') }}">查看全部</a></h2>
++  {% if scores %}
++  <div class="table-wrap">
++    <table class="data">
++      <thead><tr><th>#</th><th>分数</th><th>平台</th><th>机会</th><th>毛利区间</th></tr></thead>
++      <tbody>
++      {% for row in scores %}
++        <tr>
++          <td>{{ row.rank }}</td>
++          <td class="num">{{ '%.3f'|format(row.total_score|float) }}</td>
++          <td>{{ row.platform }}</td>
++          <td><a href="{{ row.url }}" rel="noreferrer">{{ row.title }}</a><br><span class="muted">{{ row.author }} · {{ row.published_at }}</span></td>
++          <td>{{ row.margin_low }}–{{ row.margin_high }}</td>
++        </tr>
++      {% endfor %}
++      </tbody>
++    </table>
++  </div>
++  {% else %}<p class="state state-empty">暂无数据：scores.csv 缺失或为空。</p>{% endif %}
++</section>
++
++<section class="panel" aria-labelledby="h-src">
++  <h2 id="h-src">货源许可概览 <a class="meta" href="{{ url_for('dash.sources') }}">货源库</a></h2>
++  <p>
++    <span class="badge badge-ok">可商用 {{ verdicts.get('可商用', 0) }}</span>
++    <span class="badge badge-warn">需授权 {{ verdicts.get('需授权', 0) }}</span>
++    <span class="badge badge-err">禁止或不明 {{ verdicts.get('禁止或不明', 0) }}</span>
++  </p>
++  <p class="muted">许可明细与逐条证据见“货源”页；本页不重新判定许可证。</p>
++</section>
++
++<section class="panel" aria-labelledby="h-join">
++  <h2 id="h-join">机会-货源联动 Top 3</h2>
++  {% if join %}
++  <ul class="list">
++    {% for row in join[:3] %}
++    <li><a href="{{ row.url }}" rel="noreferrer">{{ row.title[:80] }}</a> — 货源 {{ row.source_id }} / {{ row.license_verdict }}；毛利 {{ row.gross_margin_low }}–{{ row.gross_margin_high }}</li>
++    {% endfor %}
++  </ul>
++  {% else %}<p class="state state-empty">暂无联动数据。</p>{% endif %}
++</section>
++{% endblock %}
+diff --git a/templates/dash/collect.html b/templates/dash/collect.html
+new file mode 100644
+--- /dev/null
++++ b/templates/dash/collect.html
+--- /dev/null
++++ b/templates/dash/collect.html
+@@ -0,0 +1,80 @@
++{% extends "dash/base.html" %}
++{% block title %}采集 · 机会情报 Dashboard{% endblock %}
++{% block content %}
++<h1 class="page-title">采集任务与状态</h1>
++<p class="hint">只读展示已落盘采集产物；本页不启动采集、不访问平台、不写库。</p>
++
++<section class="panel" aria-labelledby="h-status">
++  <h2 id="h-status">文件状态</h2>
++  <div class="table-wrap">
++    <table class="data">
++      <thead><tr><th>数据集</th><th>路径</th><th>状态</th><th class="num">行数</th><th>坏行</th><th>更新时间（UTC）</th></tr></thead>
++      <tbody>
++      {% for key, entry in datasets.items() %}
++        <tr>
++          <td><code>{{ key }}</code></td>
++          <td><code>{{ entry.path }}</code></td>
++          <td>{% if not entry.exists %}<span class="badge badge-err">文件缺失</span>{% elif entry.error %}<span class="badge badge-err">{{ entry.error }}</span>{% else %}<span class="badge badge-ok">已读取</span>{% endif %}</td>
++          <td class="num">{{ entry.count }}</td>
++          <td>{% if entry.bad_lines %}<span class="badge badge-warn">{{ entry.bad_lines }}</span>{% else %}0{% endif %}</td>
++          <td>{{ entry.mtime }}</td>
++        </tr>
++      {% endfor %}
++      </tbody>
++    </table>
++  </div>
++</section>
++
++<section class="panel" aria-labelledby="h-xy">
++  <h2 id="h-xy">闲鱼采集（前 12 条）</h2>
++  {% if xianyu %}
++  <div class="table-wrap">
++    <table class="data">
++      <thead><tr><th>标题</th><th>标价</th><th>raw 摘要</th><th>链接</th></tr></thead>
++      <tbody>
++      {% for row in xianyu %}
++        <tr><td>{{ row.title }}</td><td>{{ row.price }}</td><td class="muted">{{ row.raw_text[:120] if row.raw_text else '' }}</td>
++        <td>{% if row.href %}<a href="{{ row.href }}" rel="noreferrer">商品</a>{% endif %}</td></tr>
++      {% endfor %}
++      </tbody>
++    </table>
++  </div>
++  {% else %}<p class="state state-empty">暂无数据：闲鱼 JSONL 缺失或为空。</p>{% endif %}
++</section>
++
++<section class="panel" aria-labelledby="h-xhs">
++  <h2 id="h-xhs">小红书采集（前 12 条）</h2>
++  {% if xiaohongshu %}
++  <div class="table-wrap">
++    <table class="data">
++      <thead><tr><th>标题</th><th>价格</th><th>raw 摘要</th><th>链接</th></tr></thead>
++      <tbody>
++      {% for row in xiaohongshu %}
++        <tr><td>{{ row.title }}</td><td>{{ row.price if row.price is not none else 'null' }}</td>
++        <td class="muted">{{ row.raw_text[:100] if row.raw_text else '' }}</td>
++        <td>{% if row.href %}<a href="{{ row.href }}" rel="noreferrer">笔记</a>{% endif %}</td></tr>
++      {% endfor %}
++      </tbody>
++    </table>
++  </div>
++  {% else %}<p class="state state-empty">暂无数据：小红书 JSONL 缺失或为空。</p>{% endif %}
++</section>
++
++<section class="panel" aria-labelledby="h-topic">
++  <h2 id="h-topic">主题采集榜单（topic-crawler）</h2>
++  {% if top20 %}
++  <ul class="list">
++    {% for line in top20 %}<li>{{ line }}</li>{% endfor %}
++  </ul>
++  {% else %}<p class="state state-empty">暂无数据：top20.md 缺失或为空。</p>{% endif %}
++  {% if topic_summary %}
++  <h3>filtered summary.csv</h3>
++  <div class="table-wrap">
++    <table class="data">
++      <thead><tr>{% for key in topic_summary[0].keys() %}<th>{{ key }}</th>{% endfor %}</tr></thead>
++      <tbody>{% for row in topic_summary %}<tr>{% for value in row.values() %}<td>{{ value }}</td>{% endfor %}</tr>{% endfor %}</tbody>
++    </table>
++  </div>
++  {% endif %}
++</section>
++{% endblock %}
+diff --git a/templates/dash/opportunities.html b/templates/dash/opportunities.html
+new file mode 100644
+--- /dev/null
++++ b/templates/dash/opportunities.html
+--- /dev/null
++++ b/templates/dash/opportunities.html
+@@ -0,0 +1,40 @@
++{% extends "dash/base.html" %}
++{% block title %}机会榜 · 机会情报 Dashboard{% endblock %}
++{% block content %}
++<h1 class="page-title">机会榜</h1>
++<p class="hint">来自 <code>scoring/scores.csv</code> 的六维模型结果；分数是筛选参考，不是收益承诺。</p>
++
++<section class="panel" aria-labelledby="h-opps">
++  <h2 id="h-opps">全部机会（{{ scores|length }} 条）</h2>
++  <div class="toolbar">
++    <label for="opp-filter">搜索：</label>
++    <input id="opp-filter" data-filter="#opps-table" placeholder="标题/作者/平台">
++    <span class="muted">点击表头可排序</span>
++  </div>
++  {% if scores %}
++  <div class="table-wrap">
++    <table class="data" id="opps-table">
++      <thead><tr>
++        <th data-sort="num">#</th><th data-sort="num">分数</th><th>平台</th><th>机会</th>
++        <th>作者</th><th>发布时间</th><th data-sort="num">需求原始</th><th>毛利区间</th><th>建议</th>
++      </tr></thead>
++      <tbody>
++      {% for row in scores %}
++        <tr>
++          <td class="num">{{ row.rank }}</td>
++          <td class="num">{{ '%.3f'|format(row.total_score|float) }}</td>
++          <td>{{ row.platform }}</td>
++          <td><a href="{{ row.url }}" rel="noreferrer">{{ row.title }}</a><br><span class="muted">{{ row.source }}</span></td>
++          <td>{{ row.author }}</td>
++          <td>{{ row.published_at }}</td>
++          <td class="num">{{ row.demand_raw }}</td>
++          <td>{{ row.margin_low }}–{{ row.margin_high }}</td>
++          <td>{% if row.total_score|float >= 0.6 %}推荐验证{% elif row.total_score|float >= 0.5 %}谨慎验证{% else %}暂缓{% endif %}</td>
++        </tr>
++      {% endfor %}
++      </tbody>
++    </table>
++  </div>
++  {% else %}<p class="state state-empty">暂无数据：scores.csv 缺失或为空。</p>{% endif %}
++</section>
++{% endblock %}
+diff --git a/templates/dash/sources.html b/templates/dash/sources.html
+new file mode 100644
+--- /dev/null
++++ b/templates/dash/sources.html
+--- /dev/null
++++ b/templates/dash/sources.html
+@@ -0,0 +1,79 @@
++{% extends "dash/base.html" %}
++{% block title %}货源库 · 机会情报 Dashboard{% endblock %}
++{% block content %}
++<h1 class="page-title">货源库与价格信号</h1>
++<p class="hint">许可证结论来自已核验的 sources.csv；¥1 为引流标价，参考价/想要人数不是成交数据。</p>
++
++<section class="cards" aria-label="货源与价格统计">
++  <div class="card"><span class="n">{{ sources|length }}</span><span class="l">货源条目</span></div>
++  <div class="card"><span class="n">{{ verdicts.get('可商用', 0) }}</span><span class="l">可商用</span></div>
++  <div class="card"><span class="n">{{ verdicts.get('需授权', 0) }}</span><span class="l">需授权（署名/有条件）</span></div>
++  <div class="card"><span class="n">{{ verdicts.get('禁止或不明', 0) }}</span><span class="l">禁止或不明</span></div>
++  <div class="card"><span class="n">{{ price_stats.count }}</span><span class="l">价格信号</span></div>
++</section>
++
++<section class="panel" aria-labelledby="h-sources">
++  <h2 id="h-sources">sources.csv（{{ sources|length }} 行）</h2>
++  {% if sources %}
++  <div class="table-wrap">
++    <table class="data" id="sources-table">
++      <thead><tr>
++        <th>ID</th><th>名称</th><th>类型</th><th>SPDX</th><th>结论</th><th>成本</th><th> effort</th><th data-sort="num">稳定性</th><th>售后风险</th><th>证据</th>
++      </tr></thead>
++      <tbody>
++      {% for row in sources %}
++        <tr>
++          <td><code>{{ row.source_id }}</code></td>
++          <td><a href="{{ row.repo_or_url }}" rel="noreferrer">{{ row.name }}</a></td>
++          <td>{{ row.type }}</td>
++          <td>{{ row.license_spdx }}</td>
++          <td>{% if row.license_verdict == '可商用' %}<span class="badge badge-ok">可商用</span>{% elif row.license_verdict == '需授权' %}<span class="badge badge-warn">需授权</span>{% else %}<span class="badge badge-err">禁止或不明</span>{% endif %}</td>
++          <td>{{ row.cost }}</td><td>{{ row.effort }}</td><td class="num">{{ row.stability }}</td><td>{{ row.after_sales_risk }}</td>
++          <td>{% if row.evidence_url %}<a href="{{ row.evidence_url }}" rel="noreferrer">license</a>{% endif %}</td>
++        </tr>
++      {% endfor %}
++      </tbody>
++    </table>
++  </div>
++  {% else %}<p class="state state-empty">暂无数据：sources.csv 缺失或为空。</p>{% endif %}
++</section>
++
++<section class="panel" aria-labelledby="h-prices">
++  <h2 id="h-prices">price_signals.csv（{{ prices|length }} 行）</h2>
++  <p class="muted">有效价范围：{% if price_stats.effective_min is not none %}¥{{ price_stats.effective_min }}–¥{{ price_stats.effective_max }}{% else %}暂无{% endif %}；想要人数合计（兴趣代理）：{{ price_stats.wants_sum }}。</p>
++  {% if prices %}
++  <div class="table-wrap">
++    <table class="data">
++      <thead><tr><th>item</th><th>标题</th><th data-sort="num">标价</th><th data-sort="num">有效价</th><th data-sort="num">参考价</th><th data-sort="num">想要</th><th>状态</th></tr></thead>
++      <tbody>
++      {% for row in prices %}
++        <tr><td><code>{{ row.item_id }}</code></td><td>{{ row.title_snippet }}</td><td class="num">{{ row.listed_price }}</td>
++        <td class="num">{{ row.effective_price }}</td><td class="num">{{ row.reference_price or '—' }}</td>
++        <td class="num">{{ row.wants or '—' }}</td><td class="muted">{{ row.parse_status }}</td></tr>
++      {% endfor %}
++      </tbody>
++    </table>
++  </div>
++  {% else %}<p class="state state-empty">暂无数据：price_signals.csv 缺失或为空。</p>{% endif %}
++</section>
++
++<section class="panel" aria-labelledby="h-join">
++  <h2 id="h-join">机会-货源联动（{{ join|length }} 行）</h2>
++  {% if join %}
++  <div class="table-wrap">
++    <table class="data">
++      <thead><tr><th>#</th><th>机会</th><th>货源</th><th>许可</th><th>匹配</th><th>价格信号</th><th>毛利区间</th></tr></thead>
++      <tbody>
++      {% for row in join %}
++        <tr><td class="num">{{ row.rank }}</td><td><a href="{{ row.url }}" rel="noreferrer">{{ row.title[:70] }}</a></td>
++        <td>{{ row.source_id }}<br><span class="muted">{{ row.source_name }}</span></td>
++        <td>{{ row.license_verdict }} ({{ row.license_spdx }})</td><td>{{ row.match_reason }}</td>
++        <td>¥{{ row.effective_low }}–{{ row.effective_high }}{% if row.price_scope == 'all_20_fallback' %} *代理*{% endif %}</td>
++        <td>{{ row.gross_margin_low }}–{{ row.gross_margin_high }}</td></tr>
++      {% endfor %}
++      </tbody>
++    </table>
++  </div>
++  {% else %}<p class="state state-empty">暂无联动数据。</p>{% endif %}
++</section>
++{% endblock %}
+diff --git a/templates/dash/daily.html b/templates/dash/daily.html
+new file mode 100644
+--- /dev/null
++++ b/templates/dash/daily.html
+--- /dev/null
++++ b/templates/dash/daily.html
+@@ -0,0 +1,44 @@
++{% extends "dash/base.html" %}
++{% block title %}每日摘要 · 机会情报 Dashboard{% endblock %}
++{% block content %}
++<h1 class="page-title">每日摘要</h1>
++<p class="hint">本页是静态产物的只读聚合，不调用业务库、不写库、不生成/发送提醒；每日摘要业务 API 仍以现有接口为准。</p>
++
++<section class="cards" aria-label="每日摘要计数">
++  <div class="card"><span class="n">{{ scores|length }}</span><span class="l">重点机会（最多 5）</span></div>
++  <div class="card"><span class="n">{{ sources|length }}</span><span class="l">货源</span></div>
++  <div class="card"><span class="n">{{ verdicts.get('可商用', 0) }}</span><span class="l">可商用货源</span></div>
++  <div class="card"><span class="n">{{ price_stats.count }}</span><span class="l">价格信号</span></div>
++  <div class="card"><span class="n">{{ price_stats.wants_sum }}</span><span class="l">想要人数合计（代理）</span></div>
++</section>
++
++<section class="panel" aria-labelledby="h-top">
++  <h2 id="h-top">今日重点（按既有评分取前 5）</h2>
++  {% if scores %}
++  <ol class="list">
++    {% for row in scores %}
++    <li><a href="{{ row.url }}" rel="noreferrer">{{ row.title }}</a> — 分数 {{ '%.3f'|format(row.total_score|float) }}，毛利 {{ row.margin_low }}–{{ row.margin_high }}（{{ row.platform }}）</li>
++    {% endfor %}
++  </ol>
++  {% else %}<p class="state state-empty">暂无数据：scores.csv 缺失或为空。</p>{% endif %}
++</section>
++
++<section class="panel" aria-labelledby="h-join">
++  <h2 id="h-join">联动提示</h2>
++  {% if join %}
++  <ul class="list">
++    {% for row in join %}
++    <li>#{{ row.rank }} {{ row.title[:60] }} → {{ row.source_id }}（{{ row.license_verdict }}），匹配 {{ row.match_reason }}，毛利 {{ row.gross_margin_low }}–{{ row.gross_margin_high }}</li>
++    {% endfor %}
++  </ul>
++  {% else %}<p class="state state-empty">暂无联动数据。</p>{% endif %}
++</section>
++
++<section class="panel" aria-labelledby="h-status">
++  <h2 id="h-status">数据完整性</h2>
++  <p class="muted">文件更新时间（UTC）：{{ generated_at }}</p>
++  {% if warnings %}
++  <ul class="list">{% for warning in warnings %}<li class="badge badge-warn">{{ warning }}</li>{% endfor %}</ul>
++  {% else %}<p>全部预期文件已读取；缺失项会在此显示。</p>{% endif %}
++</section>
++{% endblock %}
+diff --git a/tests/dash/__init__.py b/tests/dash/__init__.py
+new file mode 100644
+--- /dev/null
++++ b/tests/dash/__init__.py
+--- /dev/null
++++ b/tests/dash/__init__.py
+@@ -0,0 +1 @@
++"""Dashboard tests package."""
+diff --git a/tests/dash/test_routes.py b/tests/dash/test_routes.py
+new file mode 100644
+--- /dev/null
++++ b/tests/dash/test_routes.py
+--- /dev/null
++++ b/tests/dash/test_routes.py
+@@ -0,0 +1,107 @@
++"""Read-only /dash route and data-loader tests (stdlib unittest)."""
++
++from __future__ import annotations
++
++import json
++import pathlib
++import sys
++import tempfile
++import unittest
++
++ROOT = pathlib.Path(__file__).resolve().parents[2]
++if str(ROOT) not in sys.path:
++    sys.path.insert(0, str(ROOT))
++
++from app import create_app  # noqa: E402
++from app.dash.data import load_dashboard_data  # noqa: E402
++
++ROUTES = ("/dash/", "/dash/collect", "/dash/opportunities", "/dash/sources", "/dash/daily")
++
++
++class DashRouteTests(unittest.TestCase):
++    def setUp(self):
++        self.tmp = tempfile.mkdtemp(prefix="dash_")
++        self.db_path = str(pathlib.Path(self.tmp) / "app.db")
++        self.app = create_app({"db_path": self.db_path})
++        self.client = self.app.test_client()
++
++    def get(self, route: str):
++        resp = self.client.get(route)
++        return resp.status_code, resp.headers.get("Content-Type", ""), resp.get_data(as_text=True)
++
++    def test_five_routes_render_html_200(self):
++        for route in ROUTES:
++            status, content_type, body = self.get(route)
++            self.assertEqual(status, 200, route)
++            self.assertIn("text/html", content_type, route)
++            self.assertIn("数据来源", body, route)
++            self.assertIn("文件更新时间", body, route)
++            self.assertNotIn("Traceback", body, route)
++
++    def test_overview_shows_counts_and_license_summary(self):
++        _, _, body = self.get("/dash/")
++        self.assertIn("机会评分行", body)
++        self.assertIn("货源条目", body)
++        self.assertIn("可商用", body)
++        self.assertIn("需授权", body)
++        self.assertIn("机会 Top 5", body)
++
++    def test_collect_shows_xianyu_and_file_status(self):
++        _, _, body = self.get("/dash/collect")
++        self.assertIn("闲鱼采集", body)
++        self.assertIn("文件状态", body)
++        self.assertIn("已读取", body)
++
++    def test_opportunities_shows_model_rows_and_links(self):
++        _, _, body = self.get("/dash/opportunities")
++        self.assertIn("机会榜", body)
++        self.assertIn("booorenjiiy", body)
++        self.assertIn("0.800", body)
++        self.assertIn("https://x.com/", body)
++
++    def test_sources_shows_license_rows_and_prices(self):
++        _, _, body = self.get("/dash/sources")
++        self.assertIn("gh-01", body)
++        self.assertIn("需授权", body)
++        self.assertIn("price_signals.csv", body)
++        self.assertIn("¥1.88", body)
++
++    def test_daily_is_read_only_summary(self):
++        _, _, body = self.get("/dash/daily")
++        self.assertIn("每日摘要", body)
++        self.assertIn("今日重点", body)
++        self.assertIn("不写库", body)
++
++    def test_api_health_unchanged(self):
++        payload = self.client.get("/api/health").get_json()
++        self.assertEqual(sorted(payload.keys()), ["ok", "schema_version", "time", "version"])
++
++    def test_missing_data_root_degrades_friendly(self):
++        empty = pathlib.Path(tempfile.mkdtemp(prefix="dash_missing_"))
++        app = create_app({"db_path": str(empty / "app.db"), "DASH_DATA_ROOT": str(empty / "data")})
++        client = app.test_client()
++        for route in ROUTES:
++            resp = client.get(route)
++            body = resp.get_data(as_text=True)
++            self.assertEqual(resp.status_code, 200, route)
++            self.assertTrue("文件缺失" in body or "暂无数据" in body, route)
++            self.assertNotIn("Traceback", body, route)
++
++    def test_bad_jsonl_line_is_counted_and_skipped(self):
++        root = pathlib.Path(tempfile.mkdtemp(prefix="dash_bad_"))
++        data_dir = root / "tools" / "platform-login" / "data"
++        data_dir.mkdir(parents=True)
++        (data_dir / "xianyu_items.jsonl").write_text(
++            json.dumps({"title": "ok", "price": "¥1"}, ensure_ascii=False) + "\n{bad json}\n",
++            encoding="utf-8",
++        )
++        data = load_dashboard_data(root)
++        self.assertEqual(data["datasets"]["xianyu"]["count"], 1)
++        self.assertEqual(data["datasets"]["xianyu"]["bad_lines"], 1)
++        self.assertTrue(any("坏 JSONL" in warning for warning in data["warnings"]))
++        self.assertEqual(data["scores"], [])
++        self.assertFalse(data["datasets"]["scores"]["exists"])
++
++
++if __name__ == "__main__":  # pragma: no cover
++    unittest.main()

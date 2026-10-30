@@ -1,0 +1,122 @@
+[
+  {
+    "label": "classified",
+    "item_id": "x:1747215882965979516",
+    "platform": "x",
+    "title": "work! adaaa yang butuh template notion buat ngedata lamaran kerja yang kita apply? sender habis bikin versi nya sender, ",
+    "total_score": "0.728621",
+    "demand_norm": "0.896552",
+    "demand_raw": "3577.0",
+    "sellability_norm": "0.5",
+    "sellability_reason": "无价格/购买入口/赠送信号，按中性",
+    "profile": {
+      "product_type": "求职简历资料",
+      "target_user": "求职者",
+      "deliverable": "简历/求职排版与投递资料（可编辑文件）",
+      "positioning": "求职简历资料，面向求职者，交付形态为简历/求职排版与投递资料（可编辑文件）；载体为 Notion 模板（可复制到自己的工作区）",
+      "why": [
+        "需求位于本平台样本第 90% 分位（平台内百分位，原始需求值 3577）",
+        "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+        "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+      ],
+      "risks": [
+        "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+        "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+      ],
+      "commercial_form": "无价格信号",
+      "demand_tier": "高",
+      "evidence_fields": [
+        "apply",
+        "competition_norm",
+        "cost_input",
+        "demand_norm",
+        "demand_raw",
+        "lamaran",
+        "margin_high",
+        "margin_low",
+        "margin_mid",
+        "sellability_norm",
+        "sellability_reason",
+        "title:notion(carrier)"
+      ]
+    }
+  },
+  {
+    "label": "unclassified_demand100",
+    "item_id": "x:1467843989533442054",
+    "platform": "x",
+    "title": "•ଓ.° template notion •ଓ.° — a thread by me *̥₊˚‧☆ﾐ",
+    "total_score": "0.755",
+    "demand_norm": "1.0",
+    "demand_raw": "5968.0",
+    "sellability_norm": "0.5",
+    "sellability_reason": "无价格/购买入口/赠送信号，按中性",
+    "profile": {
+      "product_type": "未分类",
+      "target_user": "人群未明确",
+      "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+      "positioning": "无价格信号（可售性 50（未达可售））的高需求线索（需求分位 100%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+      "why": [
+        "需求位于本平台样本第 100% 分位（平台内百分位，原始需求值 5968）",
+        "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+        "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+      ],
+      "risks": [
+        "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+        "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+      ],
+      "commercial_form": "无价格信号",
+      "demand_tier": "高",
+      "evidence_fields": [
+        "competition_norm",
+        "cost_input",
+        "demand_norm",
+        "demand_raw",
+        "margin_high",
+        "margin_low",
+        "margin_mid",
+        "sellability_norm",
+        "sellability_reason",
+        "title:notion(carrier)"
+      ]
+    }
+  },
+  {
+    "label": "unclassified_low_sell",
+    "item_id": "bili:BV1qWVRzaEVY",
+    "platform": "bilibili",
+    "title": "Notion 安卓手机 免费下载安装方法 一起高效起来",
+    "total_score": "0.556987",
+    "demand_norm": "0.842105",
+    "demand_raw": "11039.0",
+    "sellability_norm": "0.1",
+    "sellability_reason": "含 free/赠送/领取/求推荐等低可售词",
+    "profile": {
+      "product_type": "未分类",
+      "target_user": "人群未明确",
+      "deliverable": "待确认（需人工打开原始链接判断交付形态）",
+      "positioning": "免费引流（可售性 10）的高需求线索（需求分位 84%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+      "why": [
+        "需求位于本平台样本第 84% 分位（平台内百分位，原始需求值 11039）",
+        "可售性 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+        "毛利估算 52%，区间 35%–70%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+      ],
+      "risks": [
+        "可售性仅 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+        "毛利低置信：区间宽度 35%（35%–70%），估计范围过宽"
+      ],
+      "commercial_form": "免费引流",
+      "demand_tier": "高",
+      "evidence_fields": [
+        "demand_norm",
+        "demand_raw",
+        "margin_high",
+        "margin_low",
+        "margin_mid",
+        "sellability_norm",
+        "sellability_reason",
+        "title:notion(carrier)"
+      ]
+    }
+  }
+]

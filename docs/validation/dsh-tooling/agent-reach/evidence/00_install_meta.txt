@@ -1,0 +1,4 @@
+01_python312_version exit=0 cmd=C:\Users\19183\AppData\Local\Programs\Python\Python312\python.exe -V
+02_create_venv exit=0 cmd=C:\Users\19183\AppData\Local\Programs\Python\Python312\python.exe -m venv C:\Users\19183\.agent-reach-venv
+03_venv_python_version exit=0 cmd=C:\Users\19183\.agent-reach-venv\Scripts\python.exe -V
+04_pip_install_agent_reach exit=0 cmd=C:\Users\19183\.agent-reach-venv\Scripts\python.exe -m pip install --no-cache-dir --disable-pip-version-check https://codeload.github.com/Panniantong/Agent-Reach/tar.gz/94f06c1969dfc1834001269d79d3ad0972d9dee6

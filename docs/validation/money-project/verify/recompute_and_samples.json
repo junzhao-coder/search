@@ -1,0 +1,214 @@
+{
+ "generated_utc": "2026-10-22T09:08:49Z",
+ "counts": {
+  "scores_rows": 60,
+  "items_jsonl_rows": 60,
+  "sources_rows": 14,
+  "price_signals_rows": 20,
+  "top10_rows": 10
+ },
+ "score_recompute": [
+  {
+   "item_id": "x:1467843989533442054",
+   "platform": "x",
+   "rank": "1",
+   "recomputed": {
+    "demand_norm": 1.0,
+    "competition_norm": 0.4,
+    "margin_mid": 0.825,
+    "fulfillment_norm": 0.9,
+    "compliance_norm": 0.8,
+    "replicability_norm": 0.85
+   },
+   "recomputed_total": 0.8,
+   "reported": {
+    "demand_norm": 1.0,
+    "competition_norm": 0.4,
+    "margin_mid": 0.825,
+    "fulfillment_norm": 0.9,
+    "compliance_norm": 0.8,
+    "replicability_norm": 0.85,
+    "total_score": 0.8
+   },
+   "diffs": {
+    "demand_norm": 0.0,
+    "competition_norm": 0.0,
+    "margin_mid": 0.0,
+    "fulfillment_norm": 0.0,
+    "compliance_norm": 0.0,
+    "replicability_norm": 0.0,
+    "total_score": 0.0
+   },
+   "within_tolerance_1e-3": true
+  },
+  {
+   "item_id": "bili:BV19A411f7cH",
+   "platform": "bilibili",
+   "rank": "4",
+   "recomputed": {
+    "demand_norm": 1.0,
+    "competition_norm": 0.55,
+    "margin_mid": 0.625,
+    "fulfillment_norm": 0.75,
+    "compliance_norm": 0.8,
+    "replicability_norm": 0.7
+   },
+   "recomputed_total": 0.76,
+   "reported": {
+    "demand_norm": 1.0,
+    "competition_norm": 0.55,
+    "margin_mid": 0.625,
+    "fulfillment_norm": 0.75,
+    "compliance_norm": 0.8,
+    "replicability_norm": 0.7,
+    "total_score": 0.76
+   },
+   "diffs": {
+    "demand_norm": 0.0,
+    "competition_norm": 0.0,
+    "margin_mid": 0.0,
+    "fulfillment_norm": 0.0,
+    "compliance_norm": 0.0,
+    "replicability_norm": 0.0,
+    "total_score": 0.0
+   },
+   "within_tolerance_1e-3": true
+  },
+  {
+   "item_id": "gh:enescingoz/awesome-n8n-templates",
+   "platform": "github",
+   "rank": "12",
+   "recomputed": {
+    "demand_norm": 1.0,
+    "competition_norm": 0.3,
+    "margin_mid": 0.65,
+    "fulfillment_norm": 0.8,
+    "compliance_norm": 0.55,
+    "replicability_norm": 0.8
+   },
+   "recomputed_total": 0.705,
+   "reported": {
+    "demand_norm": 1.0,
+    "competition_norm": 0.3,
+    "margin_mid": 0.65,
+    "fulfillment_norm": 0.8,
+    "compliance_norm": 0.55,
+    "replicability_norm": 0.8,
+    "total_score": 0.705
+   },
+   "diffs": {
+    "demand_norm": 0.0,
+    "competition_norm": 0.0,
+    "margin_mid": 0.0,
+    "fulfillment_norm": 0.0,
+    "compliance_norm": 0.0,
+    "replicability_norm": 0.0,
+    "total_score": 0.0
+   },
+   "within_tolerance_1e-3": true
+  }
+ ],
+ "data_samples": [
+  {
+   "check": "scores.csv demand_raw ↔ x_search.jsonl 互动和",
+   "item_id": "x:1467843989533442054",
+   "scores_demand_raw": 5968.0,
+   "raw_engagement_sum": null,
+   "match": false
+  },
+  {
+   "check": "items.jsonl ↔ scores.csv 行数",
+   "items_jsonl": 60,
+   "scores_csv": 60,
+   "match": true
+  },
+  {
+   "check": "opportunity_sourcing_top10.csv ↔ price_signals.csv 连接",
+   "join": {
+    "top10_key": "opportunity_id",
+    "value": "x:1467843989533442054",
+    "price_signals_hits": 0
+   },
+   "match": false
+  }
+ ],
+ "license_checks": [
+  {
+   "repo": "enescingoz/awesome-n8n-templates",
+   "sources_csv_spdx": "NOASSERTION",
+   "sources_csv_verdict": "需授权",
+   "sources_csv_license_source": "license_file",
+   "raw_license_file": "enescingoz__awesome-n8n-templates.json",
+   "raw_spdx": null,
+   "match": null,
+   "note": "Creative Commons Attribution 4.0 International License"
+  },
+  {
+   "repo": "InlitX/Obsidian-Dashboard-Gallery",
+   "sources_csv_spdx": "MIT",
+   "sources_csv_verdict": "可商用",
+   "sources_csv_license_source": "api_license",
+   "raw_license_file": null,
+   "raw_spdx": null,
+   "match": null,
+   "note": "MIT License"
+  },
+  {
+   "repo": "vercel-labs/marketing-team-eve-template",
+   "sources_csv_spdx": "MIT",
+   "sources_csv_verdict": "可商用",
+   "sources_csv_license_source": "api_license",
+   "raw_license_file": null,
+   "raw_spdx": null,
+   "match": null,
+   "note": "MIT License"
+  }
+ ],
+ "github_api": [
+  {
+   "repo": "enescingoz/awesome-n8n-templates",
+   "status": 200,
+   "spdx": "NOASSERTION",
+   "stars": 26046,
+   "pushed_at": "2026-09-12T13:00:32Z",
+   "archived": false,
+   "sources_csv": {
+    "spdx": "NOASSERTION",
+    "stars": "26045",
+    "pushed_at": "2026-09-12T13:00:32Z"
+   },
+   "spdx_consistent": true,
+   "stars_consistent": false
+  },
+  {
+   "repo": "InlitX/Obsidian-Dashboard-Gallery",
+   "status": 200,
+   "spdx": "MIT",
+   "stars": 814,
+   "pushed_at": "2026-10-12T13:35:42Z",
+   "archived": false,
+   "sources_csv": {
+    "spdx": "MIT",
+    "stars": "814",
+    "pushed_at": "2026-10-12T13:35:42Z"
+   },
+   "spdx_consistent": true,
+   "stars_consistent": true
+  },
+  {
+   "repo": "vercel-labs/marketing-team-eve-template",
+   "status": 200,
+   "spdx": "MIT",
+   "stars": 455,
+   "pushed_at": "2026-10-20T19:57:00Z",
+   "archived": false,
+   "sources_csv": {
+    "spdx": "MIT",
+    "stars": "455",
+    "pushed_at": "2026-10-20T19:57:00Z"
+   },
+   "spdx_consistent": true,
+   "stars_consistent": true
+  }
+ ]
+}

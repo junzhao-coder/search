@@ -1,0 +1,13 @@
+--- before_x_collect.py
++++ after_x_collect.py
+@@ -53,9 +53,7 @@
+ (() => {
+   const input = document.querySelector('input[name="username"]');
+   if (input && input.value) return input.value.replace(/^@/, '');
+-  const text = document.body ? document.body.innerText : '';
+-  const m = text.match(/@([A-Za-z0-9_]{1,20})/);
+-  return m ? m[1] : null;
++  return null;
+ })()
+ """
+ 

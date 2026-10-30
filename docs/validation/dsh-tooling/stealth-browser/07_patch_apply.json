@@ -1,0 +1,33 @@
+{
+  "entries_before": 6,
+  "existing_ids": [
+    "ui-settings-account",
+    "ui-chat",
+    "ui-settings",
+    "agent-default-model",
+    "llm-pi-ai",
+    "subagent-model-selection-settings"
+  ],
+  "existing_mcp_servers": [],
+  "added": {
+    "id": "stealth-browser-mcp",
+    "serverName": "stealth",
+    "transport": "stdio",
+    "command": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\Scripts\\python.exe",
+    "args": [
+      "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\repo\\src\\server.py",
+      "--minimal"
+    ],
+    "cwd": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\repo",
+    "env_keys": [
+      "BROWSER_FILE_UPLOAD_ALLOWED_DIRS",
+      "BROWSER_ORPHAN_PROFILE_MAX_AGE",
+      "PYTHONIOENCODING",
+      "STEALTH_BROWSER_DEBUG",
+      "STEALTH_BROWSER_EXECUTABLE"
+    ]
+  },
+  "backup": "C:\\Users\\19183\\.dsh\\tooling-backups\\stealth-browser\\cordis.patch.yml.pre-stealth-20261021T132904Z",
+  "entries_after": 7,
+  "action": "applied"
+}

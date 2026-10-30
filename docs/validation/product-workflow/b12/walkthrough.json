@@ -1,0 +1,119 @@
+{
+ "generated_utc": "2026-10-23T14:01:41Z",
+ "port": 5020,
+ "db": "C:\\Users\\19183\\AppData\\Local\\Temp\\b12-walk-lbymcq7u\\workflow.sqlite3",
+ "ops": [
+  {
+   "op": "GET /worksheet/new",
+   "status": 200,
+   "has_form": true
+  },
+  {
+   "op": "POST /worksheet/new (self_made=1)",
+   "status": 200,
+   "wid": "wo:20261023-ee6025fc",
+   "id_format_ok": true
+  },
+  {
+   "op": "POST evidence[supply]",
+   "status": 200,
+   "revision_used": "1",
+   "ok_chips": 2,
+   "warn_chips": 5
+  },
+  {
+   "op": "POST evidence[license]",
+   "status": 200,
+   "revision_used": "2",
+   "ok_chips": 3,
+   "warn_chips": 4
+  },
+  {
+   "op": "POST evidence[sample]",
+   "status": 200,
+   "revision_used": "3",
+   "ok_chips": 4,
+   "warn_chips": 3
+  },
+  {
+   "op": "POST evidence[cost]",
+   "status": 200,
+   "revision_used": "4",
+   "ok_chips": 5,
+   "warn_chips": 2
+  },
+  {
+   "op": "POST evidence[copy]",
+   "status": 200,
+   "revision_used": "5",
+   "ok_chips": 6,
+   "warn_chips": 1
+  },
+  {
+   "op": "GET export (platform 空)",
+   "status": 409,
+   "mentions_platform": true
+  },
+  {
+   "op": "POST evidence[platform demo]",
+   "status": 200
+  },
+  {
+   "op": "GET export (demo 平台)",
+   "status": 200,
+   "buyer_fields": [
+    "title",
+    "selling_points",
+    "contents",
+    "format",
+    "price",
+    "delivery",
+    "aftersales",
+    "faq"
+   ],
+   "seller_fields_absent": true
+  },
+  {
+   "op": "POST export/record",
+   "status": 200
+  }
+ ],
+ "workorder_id": "wo:20261023-ee6025fc",
+ "workorder_blocked": "wo:20261023-065e98a6",
+ "shots": {
+  "desktop_new_form.png": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 78154,
+   "sha256": "72ea290bfd1be1a3cc47f5e0346ec86fb1128d9597806def1a031a5c13639f29"
+  },
+  "desktop_detail_6_1.png": {
+   "width": 1160,
+   "height": 650,
+   "bytes": 55787,
+   "sha256": "d6f2c5d5b12d5ad47c979d61055e9dbb556ae5e96b46b135e52d430195a60fcf",
+   "ok": 6,
+   "warn": 1,
+   "hasExportLink": false
+  },
+  "desktop_detail_ready.png": {
+   "width": 1160,
+   "height": 770,
+   "bytes": 57698,
+   "sha256": "e8d6aef564fc13bf142a3fed33e7529d44d6ec0335becd494513438908c88a30",
+   "ok": 7,
+   "warn": 0,
+   "hasExportLink": true
+  },
+  "mobile_detail_ready.png": {
+   "width": 362,
+   "height": 928,
+   "bytes": 53593,
+   "sha256": "b769b2327058f15f1195862ad70abea2920237dce6296b11c7b16aa3dba3d05c",
+   "ok": 7,
+   "warn": 0,
+   "hasExportLink": true
+  }
+ },
+ "db_sha256": "57a45ae4f5d5fe9980de61f7c63b4952dbd789084bcd6b7ee2d4b50c20c7ebfd"
+}

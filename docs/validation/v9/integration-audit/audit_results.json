@@ -1,0 +1,563 @@
+{
+ "env": {
+  "V9_SELECTION_DB": "C:\\Users\\19183\\AppData\\Local\\Temp\\v9_audit_tg8zu_3d\\selection.sqlite3",
+  "WORKBENCH_WORKFLOW_DB": "C:\\Users\\19183\\AppData\\Local\\Temp\\v9_audit_tg8zu_3d\\workflow.sqlite3",
+  "WORKBENCH_SECRET_FILE": "C:\\Users\\19183\\AppData\\Local\\Temp\\v9_audit_tg8zu_3d\\secret",
+  "APP_DB_PATH": "C:\\Users\\19183\\AppData\\Local\\Temp\\v9_audit_tg8zu_3d\\app.db"
+ },
+ "experiments": [
+  {
+   "id": "ui_start_cards",
+   "title": "选品页开轮后应能生成方向卡",
+   "expected": "POST /leads/round 实际请求 2 次；signals=1；categories/card>0",
+   "actual": {
+    "http": 303,
+    "location": "/leads?msg=round%201%20complete%20requests%3D2&err=",
+    "fetch_calls": 2,
+    "signals": 2,
+    "categories": 0,
+    "cards": 0,
+    "events": 0,
+    "round_status": "complete"
+   },
+   "verdict": "FAIL",
+   "code_refs": [
+    "tools/workbench/app.py:1403-1434（start 只调用 collect_round，无 categorize/make_cards）",
+    "tools/selection/categories.py:162-205（categorize/make_cards 仅 CLI 调用）"
+   ],
+   "evidence": {
+    "fake_urls": [
+     "https://api.bilibili.com/x/web-interface/view?aid=1",
+     "https://api.bilibili.com/x/v2/reply?type=1&oid=1&pn=1&ps=5&sort=2"
+    ]
+   }
+  },
+  {
+   "id": "ui_resume_requests",
+   "title": "Continue/Resume should continue actual collection",
+   "expected": "paused 后 POST resume 触发 reply 请求；requests_used 增加；reply 不再 pending",
+   "actual": {
+    "first_collect": "paused",
+    "before_calls": 1,
+    "post": 303,
+    "after_calls": 1,
+    "round_status": "running",
+    "items": [
+     {
+      "item_key": "bilibili:view",
+      "state": "done",
+      "last_error": null
+     },
+     {
+      "item_key": "bilibili:reply",
+      "state": "pending",
+      "last_error": null
+     }
+    ],
+    "signals": 0,
+    "stats": {
+     "errors": [],
+     "requests_used": 1,
+     "view": {
+      "aid": 1,
+      "bvid": "BV1",
+      "title": "synthetic audit video"
+     },
+     "raw_files": [
+      {
+       "kind": "view",
+       "path": "C:\\Users\\19183\\AppData\\Local\\Temp\\v9_audit_tg8zu_3d\\raw_resume\\bilibili_view_1.json",
+       "sha256": "f96d38cf9f185f5a9d0830f2cbb5e4894ab0c32e2229c8f7e6d1f07a40978024"
+      }
+     ],
+     "cursor": {
+      "last_item_key": "bilibili:view"
+     },
+     "last_item_key": "bilibili:view"
+    }
+   },
+   "verdict": "FAIL",
+   "code_refs": [
+    "tools/workbench/app.py:1436-1454（resume 只调用 sel_rounds.resume，不调用 collect_round）",
+    "tools/selection/rounds.py:105-120（resume 只改状态/interrupted）"
+   ],
+   "evidence": {
+    "fake_urls": [
+     "https://api.bilibili.com/x/web-interface/view?aid=1"
+    ]
+   }
+  },
+  {
+   "id": "repeat_categorize_cards",
+   "title": "Repeated categorize should be idempotent and refresh card evidence",
+   "expected": "第二次/第三次不新增重复事件；同品类新 signal 后卡片 evidence 包含 1,2；review 不重复",
+   "actual": {
+    "run1": {
+     "signals": 1,
+     "new": 1,
+     "update": 0,
+     "review": 0,
+     "categories": 1
+    },
+    "run2": {
+     "signals": 2,
+     "new": 0,
+     "update": 2,
+     "review": 0,
+     "categories": 1
+    },
+    "run3": {
+     "signals": 2,
+     "new": 0,
+     "update": 2,
+     "review": 0,
+     "categories": 1
+    },
+    "card1": {
+     "created": 1,
+     "cards": 1
+    },
+    "card2": {
+     "created": 0,
+     "cards": 1
+    },
+    "events_after_first": 1,
+    "events_after_second": 3,
+    "events_after_third": 5,
+    "card_evidence": [
+     1
+    ],
+    "review_rows_after_two_runs": 2
+   },
+   "verdict": "FAIL",
+   "code_refs": [
+    "tools/selection/categories.py:162-175（run_categorize 全表重扫，每次生成 update）",
+    "tools/selection/categories.py:178-205（existing card 直接 continue，不补 evidence）"
+   ],
+   "evidence": {
+    "signal_ids": [
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "merged_excluded_attribution",
+   "title": "Excluded/merged categories must not receive new signals as active",
+   "expected": "excluded signal 进 review/new，不进 excluded；merged signal 归 target 或 review，不进 source",
+   "actual": {
+    "excluded": {
+     "outcome": "update",
+     "category_id": 1,
+     "identity_key": "61443f530661b3bf027fb369fc609c5274e11a335b68b52f214897134a56b19f",
+     "fields": {
+      "audience": "student",
+      "task": "study_planning",
+      "deliverable_family": "notion_template",
+      "locale": "zh"
+     }
+    },
+    "excluded_status": "excluded",
+    "merged": {
+     "outcome": "update",
+     "category_id": 1,
+     "identity_key": "61443f530661b3bf027fb369fc609c5274e11a335b68b52f214897134a56b19f",
+     "fields": {
+      "audience": "student",
+      "task": "study_planning",
+      "deliverable_family": "notion_template",
+      "locale": "zh"
+     }
+    },
+    "merged_source_status": "merged",
+    "merged_target_status": "active"
+   },
+   "verdict": "FAIL",
+   "code_refs": [
+    "tools/selection/categories.py:106-126（_category 不检查 status）",
+    "tools/selection/categories.py:224-237（merge 只移事件/卡片，不限制后续归类）"
+   ],
+   "evidence": {}
+  },
+  {
+   "id": "split_undo",
+   "title": "Split undo should restore category/evidence/card relation",
+   "expected": "undo 后 signal1 事件回到原 category；新 category 不再持有；卡片 evidence 恢复",
+   "actual": {
+    "before_card": {
+     "id": 1,
+     "category_id": 1,
+     "audience": "student",
+     "task": "study_planning",
+     "deliverable": "notion_template",
+     "evidence_ids_json": "[1, 2]",
+     "gaps_json": "[\"price_unknown\", \"wants_unknown\", \"comments_or_second_platform_unknown\"]",
+     "status": "draft",
+     "created_at": "2026-10-25T12:10:53Z"
+    },
+    "split": {
+     "new_category": 2,
+     "categories": [
+      {
+       "id": 1,
+       "status": "active",
+       "merged_into": null
+      },
+      {
+       "id": 2,
+       "status": "active",
+       "merged_into": null
+      }
+     ],
+     "card": {
+      "id": 1,
+      "category_id": 1,
+      "audience": "student",
+      "task": "study_planning",
+      "deliverable": "notion_template",
+      "evidence_ids_json": "[1, 2]",
+      "gaps_json": "[\"price_unknown\", \"wants_unknown\", \"comments_or_second_platform_unknown\"]",
+      "status": "draft",
+      "created_at": "2026-10-25T12:10:53Z"
+     },
+     "signal1_events": [
+      {
+       "category_id": 2,
+       "kind": "new",
+       "signal_id": 1
+      },
+      {
+       "category_id": 2,
+       "kind": "split",
+       "signal_id": 1
+      }
+     ]
+    },
+    "undo": {
+     "undo": {
+      "undo_event_id": 5,
+      "undo_of": 4
+     },
+     "categories": [
+      {
+       "id": 1,
+       "status": "active",
+       "merged_into": null
+      },
+      {
+       "id": 2,
+       "status": "active",
+       "merged_into": null
+      }
+     ],
+     "signal1_events": [
+      {
+       "category_id": 2,
+       "kind": "new",
+       "signal_id": 1
+      },
+      {
+       "category_id": 2,
+       "kind": "split",
+       "signal_id": 1
+      }
+     ],
+     "card": {
+      "id": 1,
+      "category_id": 1,
+      "audience": "student",
+      "task": "study_planning",
+      "deliverable": "notion_template",
+      "evidence_ids_json": "[1, 2]",
+      "gaps_json": "[\"price_unknown\", \"wants_unknown\", \"comments_or_second_platform_unknown\"]",
+      "status": "draft",
+      "created_at": "2026-10-25T12:10:53Z"
+     }
+    }
+   },
+   "verdict": "FAIL",
+   "code_refs": [
+    "tools/selection/categories.py:289-313（split 移动事件，不动卡片 evidence）",
+    "tools/selection/categories.py:240-266（undo 只处理 merge/exclude，split 仅追加 undo 事件）"
+   ],
+   "evidence": {}
+  },
+  {
+   "id": "import_bad_json_budget",
+   "title": "Bad JSON should not abort later valid rows; max_rows must bound",
+   "expected": "坏行记录后继续第三行，status partial，signals=2；max_rows=1 只处理 1 行",
+   "actual": {
+    "bad_import_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 34 (char 33)",
+    "bad_signals": 1,
+    "bad_run": {
+     "status": "failed",
+     "stop_reason": "Expecting ',' delimiter: line 1 column 34 (char 33)"
+    },
+    "max_rows": {
+     "rows": 1,
+     "new": 1,
+     "updated": 0,
+     "duplicate": 0,
+     "errors": [],
+     "wants_missing": 0,
+     "wants_sum": 5,
+     "reference_present": 0,
+     "batch_id": "xianyu_import-20261025T121053Z-c6b68e",
+     "origin_kind": "imported",
+     "stop_reason": "rows_exceeded",
+     "run_id": 1,
+     "status": "stopped",
+     "db": "C:\\Users\\19183\\AppData\\Local\\Temp\\v9_audit_tg8zu_3d\\import_budget.sqlite3"
+    }
+   },
+   "verdict": "FAIL",
+   "code_refs": [
+    "tools/selection/xianyu.py:71-83（json.loads 在生成器内、单行 try 外）",
+    "tools/selection/xianyu.py:105-133（for 只捕获 _row_to_signal，不能捕获生成器解析异常）"
+   ],
+   "evidence": {}
+  },
+  {
+   "id": "identity_carrier_origin",
+   "title": "Carrier-only change should not create new category; origin should not silently overwrite",
+   "expected": "notion→excel 同需求 1 category；同 native_id 的 imported→real 应冲突/保留 provenance",
+   "actual": {
+    "carrier": {
+     "o1": {
+      "outcome": "new",
+      "category_id": 1,
+      "identity_key": "61443f530661b3bf027fb369fc609c5274e11a335b68b52f214897134a56b19f",
+      "fields": {
+       "audience": "student",
+       "task": "study_planning",
+       "deliverable_family": "notion_template",
+       "locale": "zh"
+      }
+     },
+     "o2": {
+      "outcome": "new",
+      "category_id": 2,
+      "identity_key": "5032ef3ffeac54ba897ed0ce14caba767ef82a5d8cbd139a3c4ceb1722a2b1f4",
+      "fields": {
+       "audience": "student",
+       "task": "study_planning",
+       "deliverable_family": "excel_template",
+       "locale": "zh"
+      }
+     },
+     "categories": 2
+    },
+    "origin": {
+     "imported": [
+      "new",
+      1
+     ],
+     "same_content_real": [
+      "duplicate",
+      1
+     ],
+     "changed_content_real": [
+      "updated",
+      1
+     ],
+     "stored": {
+      "origin_kind": "real",
+      "version": 2
+     }
+    }
+   },
+   "verdict": "FAIL",
+   "code_refs": [
+    "tools/selection/categories.py:30-36,58-61（deliverable_family 进 identity）",
+    "tools/selection/db.py:45,175-204（platform+native_id 唯一，update 覆盖 origin_kind）"
+   ],
+   "evidence": {}
+  },
+  {
+   "id": "merge_cards_undo",
+   "title": "Merge with existing cards must be atomic; undo must restore only source relation",
+   "expected": "两个 category 都有 card 时 merge 不崩溃且可 undo；undo 不搬走 target 原有事件",
+   "actual": {
+    "merge_with_cards_error": "IntegrityError: UNIQUE constraint failed: direction_card.category_id",
+    "merge_with_cards_state": {
+     "categories": [
+      {
+       "id": 1,
+       "status": "merged",
+       "merged_into": 2
+      },
+      {
+       "id": 2,
+       "status": "active",
+       "merged_into": null
+      }
+     ],
+     "cards": [
+      {
+       "category_id": 1
+      },
+      {
+       "category_id": 2
+      }
+     ],
+     "events": 2
+    },
+    "undo_before_target_events": 1,
+    "undo_after_merge_target_events": 2,
+    "undo_after": {
+     "source_events": 4,
+     "target_events": 0,
+     "categories": [
+      {
+       "id": 1,
+       "status": "active",
+       "merged_into": null
+      },
+      {
+       "id": 2,
+       "status": "active",
+       "merged_into": null
+      }
+     ]
+    }
+   },
+   "verdict": "FAIL",
+   "code_refs": [
+    "tools/selection/db.py:93-103（direction_card.category_id UNIQUE）",
+    "tools/selection/categories.py:224-237（merge 无 transaction/rollback）",
+    "tools/selection/categories.py:245-258（undo 把 target 全部事件/卡片迁回 source）"
+   ],
+   "evidence": {}
+  },
+  {
+   "id": "round_edges",
+   "title": "Cancel must stop loop; interval must sleep; idempotency key must detect conflict",
+   "expected": "cancel 后不再发 reply；interval=3 至少间隔约 3s；同 key 不同 budget/video 应报冲突",
+   "actual": {
+    "cancel": {
+     "exception": "ValueError: illegal_transition:cancelled->complete",
+     "result": {},
+     "round_status": "cancelled",
+     "items": [
+      {
+       "item_key": "bilibili:view",
+       "state": "done"
+      },
+      {
+       "item_key": "bilibili:reply",
+       "state": "done"
+      }
+     ],
+     "signals": 2,
+     "fetch_calls": 2
+    },
+    "interval": {
+     "elapsed_seconds": 0.016,
+     "status": "complete",
+     "fetch_calls": 2
+    },
+    "idempotency": {
+     "first": {
+      "id": 1,
+      "kind": "bilibili",
+      "platform": "bilibili",
+      "status": "draft",
+      "budget_json": "{\"max_requests\": 3}",
+      "cursor_json": null,
+      "idempotency_key": "same-key",
+      "started_at": "2026-10-25T12:10:54Z",
+      "ended_at": null,
+      "error_count": 0,
+      "stats_json": null,
+      "reused": false
+     },
+     "second": {
+      "id": 1,
+      "kind": "bilibili",
+      "platform": "bilibili",
+      "status": "draft",
+      "budget_json": "{\"max_requests\": 3}",
+      "cursor_json": null,
+      "idempotency_key": "same-key",
+      "started_at": "2026-10-25T12:10:54Z",
+      "ended_at": null,
+      "error_count": 0,
+      "stats_json": null,
+      "reused": true
+     }
+    }
+   },
+   "verdict": "FAIL",
+   "code_refs": [
+    "tools/selection/bilibili.py:284-372（循环只查 paused；无 interval sleep）",
+    "tools/selection/rounds.py:44-56（start 仅按 key 复用，不校验参数）"
+   ],
+   "evidence": {}
+  }
+ ],
+ "hashes_before": {
+  "tools/selection/db.py": "aebfbb78f2017685e6393a88d4008d7fd8cf9b4a779035478346e3b39e1c9c70",
+  "tools/selection/models.py": "06a1e41e0e68fa7f8588cc3eff47520ba1171da094e56601c96baeafa522c8e8",
+  "tools/selection/categories.py": "aa114fc16ef921d3e23ee9bf77b2ef49ad9ec2e17eb1ecfae25546edb6f29b16",
+  "tools/selection/bilibili.py": "87305ab409f8ab3dfdd1310884ad89d74d4cce9aa8ee6d5c00fef386e912c6e6",
+  "tools/selection/rounds.py": "4896242004f44b6bf79d1c5b8df8ce617d0239c9a58208717abaac0c6f200b31",
+  "tools/selection/xianyu.py": "aec1cb96382e7a3415c62193f87d96add23affe6fbfa2a0b89f5e05ad04fb233",
+  "tools/selection/cli.py": "59ec2964f35aa09330d760c1dacfab17fdf21e8d9c24189998b103ef1a886180",
+  "tools/workbench/app.py": "2cecbbf8bbd609478b075335778303eac1d7141fd164a6dd81384710cd2106d2",
+  "tools/workbench/views_leads.py": "23224ae9f532407b012704d083745762c8becce4c320912373e6f3462119b795",
+  "tests/test_selection_categories.py": "6b07d9fd139f8feded6f05fb40d33dcf7540e7a25be1fe93d0a23bb5983a11cb",
+  "tests/test_selection_rounds_state.py": "731b2c631f663253a201460dd56e6068df17c9794bf796f8e712cc63334dd016",
+  "tests/test_selection_leads.py": "78bc3e5ad2233b00b10c276596e1fdf0125dd34064428bd7323caadfbce2a51f",
+  "tests/test_selection_db.py": "d507ae24f1edd662d8457fa38ca266354f1184ef7df5068336f459a2a2467d7d",
+  "instance/app.db": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85"
+ },
+ "hashes_after": {
+  "tools/selection/db.py": "aebfbb78f2017685e6393a88d4008d7fd8cf9b4a779035478346e3b39e1c9c70",
+  "tools/selection/models.py": "06a1e41e0e68fa7f8588cc3eff47520ba1171da094e56601c96baeafa522c8e8",
+  "tools/selection/categories.py": "aa114fc16ef921d3e23ee9bf77b2ef49ad9ec2e17eb1ecfae25546edb6f29b16",
+  "tools/selection/bilibili.py": "87305ab409f8ab3dfdd1310884ad89d74d4cce9aa8ee6d5c00fef386e912c6e6",
+  "tools/selection/rounds.py": "4896242004f44b6bf79d1c5b8df8ce617d0239c9a58208717abaac0c6f200b31",
+  "tools/selection/xianyu.py": "aec1cb96382e7a3415c62193f87d96add23affe6fbfa2a0b89f5e05ad04fb233",
+  "tools/selection/cli.py": "59ec2964f35aa09330d760c1dacfab17fdf21e8d9c24189998b103ef1a886180",
+  "tools/workbench/app.py": "2cecbbf8bbd609478b075335778303eac1d7141fd164a6dd81384710cd2106d2",
+  "tools/workbench/views_leads.py": "23224ae9f532407b012704d083745762c8becce4c320912373e6f3462119b795",
+  "tests/test_selection_categories.py": "6b07d9fd139f8feded6f05fb40d33dcf7540e7a25be1fe93d0a23bb5983a11cb",
+  "tests/test_selection_rounds_state.py": "731b2c631f663253a201460dd56e6068df17c9794bf796f8e712cc63334dd016",
+  "tests/test_selection_leads.py": "78bc3e5ad2233b00b10c276596e1fdf0125dd34064428bd7323caadfbce2a51f",
+  "tests/test_selection_db.py": "d507ae24f1edd662d8457fa38ca266354f1184ef7df5068336f459a2a2467d7d",
+  "instance/app.db": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85"
+ },
+ "hash_same": {
+  "tools/selection/db.py": true,
+  "tools/selection/models.py": true,
+  "tools/selection/categories.py": true,
+  "tools/selection/bilibili.py": true,
+  "tools/selection/rounds.py": true,
+  "tools/selection/xianyu.py": true,
+  "tools/selection/cli.py": true,
+  "tools/workbench/app.py": true,
+  "tools/workbench/views_leads.py": true,
+  "tests/test_selection_categories.py": true,
+  "tests/test_selection_rounds_state.py": true,
+  "tests/test_selection_leads.py": true,
+  "tests/test_selection_db.py": true,
+  "instance/app.db": true
+ },
+ "summary": {
+  "verdicts": {
+   "ui_start_cards": "FAIL",
+   "ui_resume_requests": "FAIL",
+   "repeat_categorize_cards": "FAIL",
+   "merged_excluded_attribution": "FAIL",
+   "split_undo": "FAIL",
+   "import_bad_json_budget": "FAIL",
+   "identity_carrier_origin": "FAIL",
+   "merge_cards_undo": "FAIL",
+   "round_edges": "FAIL"
+  },
+  "fail_count": 9,
+  "pass_count": 0,
+  "error_count": 0,
+  "all_hashes_same": true
+ }
+}

@@ -1,0 +1,92 @@
+{
+  "utc_start": "2026-10-21T13:27:40Z",
+  "steps": [
+    {
+      "step": "spawn_browser",
+      "secs": 5.66,
+      "result": {
+        "instance_id": "73a58d48-287d-472f-8c68-10ed3ed68a60",
+        "state": "ready",
+        "headless": true,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "spawn_diagnostics": {
+          "effective_browser_args": [
+            "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+          ],
+          "proxy_server": null,
+          "launch_proxy_server": null,
+          "timezone_id": null,
+          "idle_timeout_seconds": 600,
+          "sandbox": true,
+          "headless": true,
+          "user_data_dir": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\profiles\\chain1"
+        }
+      }
+    },
+    {
+      "step": "navigate",
+      "secs": 1.02,
+      "result": {
+        "url": "https://example.com/",
+        "title": "Example Domain",
+        "success": true
+      }
+    },
+    {
+      "step": "get_page_content",
+      "secs": 0.07,
+      "contains_example_domain": true,
+      "bytes": 840,
+      "sample": "{\"html\": \"<!DOCTYPE html><html lang=\\\"en\\\"><head><meta charset=\\\"utf-8\\\"><link rel=\\\"icon\\\" href=\\\"data:,\\\"><meta name=\\\"viewport\\\" content=\\\"width=device-width,initial-scale=1\\\"><title>Example Domain</title><style>html{color-scheme:light dark;background:light-dark(#eee,#222)}body{font:16px/1.6 system-ui,sans-serif;max-width:26em;margin:auto;padding:25vh 2em 2em;text-align:center}</style></head><body><p>This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.</p><script src=\\\"/s.js\\\"></script></"
+    },
+    {
+      "step": "take_screenshot",
+      "secs": 1.78,
+      "result": {
+        "raw": "Screenshot saved on the server: D:\\桌面\\two\\docs\\validation\\dsh-tooling\\stealth-browser\\06_call_chain_screenshot.png"
+      }
+    },
+    {
+      "step": "close_instance",
+      "secs": 1.74,
+      "result": {
+        "result": true
+      }
+    }
+  ],
+  "chrome_before": [],
+  "tools_available": 21,
+  "instance_id": "73a58d48-287d-472f-8c68-10ed3ed68a60",
+  "screenshot": {
+    "path": "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\stealth-browser\\06_call_chain_screenshot.png",
+    "exists": true,
+    "bytes": 49944,
+    "magic": "89504e470d0a1a0a"
+  },
+  "after_close_list_instances": {
+    "result": []
+  },
+  "after_close_state": {
+    "result": null
+  },
+  "chrome_after": [],
+  "profile_dir_exists": true,
+  "profile_dir_entries": [
+    "ActorSafetyLists",
+    "AmountExtractionHeuristicRegexes",
+    "CaptchaProviders",
+    "CertificateRevocation",
+    "Crashpad",
+    "Crowd Deny",
+    "Default",
+    "FileTypePolicies",
+    "FirstPartySetsPreloaded",
+    "GPUPersistentCache",
+    "GrShaderCache",
+    "Last Browser"
+  ],
+  "utc_end": "2026-10-21T13:27:55Z"
+}

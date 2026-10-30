@@ -1,0 +1,103 @@
+{% extends "dash/base.html" %}
+{% block title %}货源库 · 机会情报 Dashboard{% endblock %}
+{% block content %}
+<h1 class="page-title">货源库与价格信号</h1>
+<p class="hint">许可证结论来自已核验的 sources.csv；¥1 为引流标价，参考价/想要人数不是成交数据。</p>
+
+<section class="cards" aria-label="货源与价格统计">
+  <div class="card"><span class="n">{{ sources|length }}</span><span class="l">货源条目</span></div>
+  <div class="card"><span class="n">{{ verdicts.get('可商用', 0) }}</span><span class="l">可商用</span></div>
+  <div class="card"><span class="n">{{ verdicts.get('需授权', 0) }}</span><span class="l">需授权（署名/有条件）</span></div>
+  <div class="card"><span class="n">{{ verdicts.get('禁止或不明', 0) }}</span><span class="l">禁止或不明</span></div>
+  <div class="card"><span class="n">{{ price_stats.count }}</span><span class="l">价格信号</span></div>
+</section>
+
+<section class="panel" aria-labelledby="h-sources">
+  <h2 id="h-sources">sources.csv（{{ sources|length }} 行）</h2>
+  {% if sources %}
+  <div class="table-wrap">
+    <table class="data" id="sources-table">
+      <thead><tr>
+        <th>ID</th><th>名称</th><th>类型</th><th>SPDX</th><th>结论</th><th>成本</th><th> effort</th><th data-sort="num">稳定性</th><th>售后风险</th><th>证据</th>
+      </tr></thead>
+      <tbody>
+      {% for row in sources %}
+        <tr>
+          <td><code>{{ row.source_id }}</code></td>
+          <td><a href="{{ row.repo_or_url }}" rel="noreferrer">{{ row.name }}</a></td>
+          <td>{{ row.type }}</td>
+          <td>{{ row.license_spdx }}</td>
+          <td>{% if row.license_verdict == '可商用' %}<span class="badge badge-ok">可商用</span>{% elif row.license_verdict == '需授权' %}<span class="badge badge-warn">需授权</span>{% else %}<span class="badge badge-err">禁止或不明</span>{% endif %}</td>
+          <td>{{ row.cost }}</td><td>{{ row.effort }}</td><td class="num">{{ row.stability }}</td><td>{{ row.after_sales_risk }}</td>
+          <td>{% if row.evidence_url %}<a href="{{ row.evidence_url }}" rel="noreferrer">license</a>{% endif %}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}<p class="state state-empty">暂无数据：sources.csv 缺失或为空。</p>{% endif %}
+</section>
+
+<section class="panel" aria-labelledby="h-prices">
+  <h2 id="h-prices">price_signals.csv（{{ prices|length }} 行）</h2>
+  <p class="muted">有效价范围：{% if price_stats.effective_min is not none %}¥{{ price_stats.effective_min }}–¥{{ price_stats.effective_max }}{% else %}暂无{% endif %}；想要人数合计（兴趣代理）：{{ price_stats.wants_sum }}。</p>
+  {% if prices %}
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr><th>item</th><th>标题</th><th data-sort="num">标价</th><th data-sort="num">有效价</th><th data-sort="num">参考价</th><th data-sort="num">想要</th><th>状态</th></tr></thead>
+      <tbody>
+      {% for row in prices %}
+        <tr><td><code>{{ row.item_id }}</code></td><td>{{ row.title_snippet }}</td><td class="num">{{ row.listed_price }}</td>
+        <td class="num">{{ row.effective_price }}</td><td class="num">{{ row.reference_price or '—' }}</td>
+        <td class="num">{{ row.wants or '—' }}</td><td class="muted">{{ row.parse_status }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}<p class="state state-empty">暂无数据：price_signals.csv 缺失或为空。</p>{% endif %}
+</section>
+
+<section class="panel" aria-labelledby="h-join">
+  <h2 id="h-join">机会-货源联动（{{ join|length }} 行）</h2>
+  {% if join %}
+  <div class="table-wrap">
+    <table class="data join-table" id="join-table">
+      <thead><tr>
+        <th>#</th><th>机会</th><th>货源</th><th>许可</th><th>匹配</th>
+        <th>价格口径（样本）</th><th>价格信号</th><th>毛利区间</th><th>依据</th><th>置信度</th>
+      </tr></thead>
+      <tbody>
+      {% for row in join %}
+        <tr>
+          <td class="num">{{ row.rank }}</td>
+          <td><a href="{{ row.url }}" rel="noreferrer">{{ row.title[:70] }}</a></td>
+          <td>{{ row.source_id }}<br><span class="muted">{{ row.source_name }}</span></td>
+          <td>{{ row.license_verdict }} ({{ row.license_spdx }})</td>
+          <td>{{ row.match_reason }}</td>
+          <td title="price_scope={{ row.price_scope }}">
+            {% if row.price_scope == 'all_20_fallback' %}<span class="badge badge-warn">全量回退（{{ row.price_signal_count }} 条）</span>{% else %}<span class="badge badge-ok">品类过滤（{{ row.price_signal_count }} 条）</span>{% endif %}
+          </td>
+          <td>¥{{ row.effective_low }}–{{ row.effective_high }}{% if row.reference_max %}<br><span class="muted">参考最高 ¥{{ row.reference_max }}</span>{% endif %}</td>
+          <td>{{ row.gross_margin_low }}–{{ row.gross_margin_high }}<br><span class="muted">mid {{ row.gross_margin_mid }}</span></td>
+          <td title="margin_basis={{ row.margin_basis }} · {{ row.margin_note }}">
+            {% if row.margin_basis == 'category_reference_median' %}品类参考价中位
+            {% elif row.margin_basis == 'category_effective_high' %}品类有效价上限
+            {% elif row.margin_basis == 'all20_reference_median_widened' %}全量参考价+放宽
+            {% elif row.margin_basis == 'all20_effective_high_widened' %}全量有效价+放宽
+            {% elif row.margin_basis == 'model_assumption_fallback' %}模型假设 fallback
+            {% else %}{{ row.margin_basis }}{% endif %}
+          </td>
+          <td title="margin_confidence={{ row.margin_confidence }}">
+            {% if row.margin_confidence == 'high' %}<span class="badge badge-ok">高</span>
+            {% elif row.margin_confidence == 'medium' %}<span class="badge badge-warn">中</span>
+            {% else %}<span class="badge badge-warn">低</span>{% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="hint">说明：¥1 为引流价，已排除，不作为价格下限；毛利按参考价中位数（无参考价则品类有效价上限）与成本 ¥0.5–3/单估算；全量回退额外放宽 ±0.15，置信度 low。</p>
+  {% else %}<p class="state state-empty">暂无联动数据。</p>{% endif %}
+</section>
+{% endblock %}

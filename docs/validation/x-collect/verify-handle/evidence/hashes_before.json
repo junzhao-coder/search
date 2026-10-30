@@ -1,0 +1,79 @@
+{
+  "label": "before",
+  "sampled_at_utc": "2026-10-22T04:01:33Z",
+  "files": {
+    "D:\\桌面\\two\\instance\\app.db": {
+      "sha256": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+      "bytes": 241664,
+      "expected_sha256": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+      "ok": true
+    },
+    "D:\\桌面\\two\\requirements.txt": {
+      "sha256": "0af19a0f1c100e99483b79e7f11b500ccf6a5a1477d8ac4b560c077b2bea7731",
+      "bytes": 179,
+      "expected_sha256": "0af19a0f1c100e99483b79e7f11b500ccf6a5a1477d8ac4b560c077b2bea7731",
+      "ok": true
+    },
+    "D:\\桌面\\two\\docs\\design\\CONTRACT.md": {
+      "sha256": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+      "bytes": 74839,
+      "expected_sha256": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+      "ok": true
+    },
+    "D:\\桌面\\two\\app\\sources\\wiring.py": {
+      "sha256": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+      "bytes": 8402,
+      "expected_sha256": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+      "ok": true
+    },
+    "D:\\桌面\\two\\app\\sources\\bilibili_view.py": {
+      "sha256": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+      "bytes": 12866,
+      "expected_sha256": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+      "ok": true
+    },
+    "D:\\桌面\\two\\app\\core\\importer.py": {
+      "sha256": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+      "bytes": 49011,
+      "expected_sha256": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+      "ok": true
+    },
+    "D:\\桌面\\two\\app\\sources\\real_link.py": {
+      "sha256": "46cbd635b5e70cc2d1b6441befde31e25b8203caf28d39b772203c43b8f5802c",
+      "bytes": 23228,
+      "expected_sha256": "46cbd635b5e70cc2d1b6441befde31e25b8203caf28d39b772203c43b8f5802c",
+      "ok": true
+    },
+    "D:\\桌面\\two\\app\\storage\\migrations\\0001_init.sql": {
+      "sha256": "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb",
+      "bytes": 14102,
+      "expected_sha256": "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb",
+      "ok": true
+    },
+    "D:\\桌面\\two\\app\\storage\\migrations\\0002_draft_feedback.sql": {
+      "sha256": "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed",
+      "bytes": 2688,
+      "expected_sha256": "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed",
+      "ok": true
+    },
+    "C:\\Users\\19183\\.dsh\\profiles\\desktop\\cordis.patch.yml": {
+      "sha256": "b78f7ab004745153d6a82f8cf2b2d3fd3a7a78b4f65d7080780303099c2bd2dc",
+      "bytes": 10939,
+      "expected_sha256": null,
+      "ok": true
+    },
+    "C:\\Users\\19183\\.dsh\\tools\\x-collect\\scripts\\x_collect.py": {
+      "sha256": "06ebace18dca4b6223f50162a682abfcc1cb1b24f3d03951214767bd4776d71d",
+      "bytes": 29253,
+      "expected_sha256": "06ebace18dca4b6223f50162a682abfcc1cb1b24f3d03951214767bd4776d71d",
+      "ok": true
+    }
+  },
+  "mismatches": [],
+  "business_db": {
+    "sha256": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+    "bytes": 241664,
+    "wal": false,
+    "shm": false
+  }
+}

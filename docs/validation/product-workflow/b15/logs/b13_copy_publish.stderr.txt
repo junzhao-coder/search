@@ -1,0 +1,17 @@
+test_copy_version_created_and_deduplicated (tests.test_copy_publish.CopyPublishTests.test_copy_version_created_and_deduplicated) ... ok
+test_detail_get_zero_write (tests.test_copy_publish.CopyPublishTests.test_detail_get_zero_write) ... ok
+test_export_dedupe_unique_index_and_concurrency (tests.test_copy_publish.CopyPublishTests.test_export_dedupe_unique_index_and_concurrency)
+两连接并发写同戳：唯一索引兜底，最终仅 1 行，另一方返回 deduplicated=true。 ... ok
+test_export_record_dedup (tests.test_copy_publish.CopyPublishTests.test_export_record_dedup) ... ok
+test_publish_page_sections (tests.test_copy_publish.CopyPublishTests.test_publish_page_sections) ... ok
+test_publish_saved_and_change_hint (tests.test_copy_publish.CopyPublishTests.test_publish_saved_and_change_hint) ... ok
+test_publish_validation (tests.test_copy_publish.CopyPublishTests.test_publish_validation) ... ok
+test_rollback_creates_new_version (tests.test_copy_publish.CopyPublishTests.test_rollback_creates_new_version) ... ok
+test_rollback_validation (tests.test_copy_publish.CopyPublishTests.test_rollback_validation) ... ok
+test_unique_index_allows_multiple_nulls (tests.test_copy_publish.CopyPublishTests.test_unique_index_allows_multiple_nulls)
+SQLite 唯一索引允许多个 NULL：历史行 dedupe_key 置 NULL 后不互相冲突。 ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.197s
+
+OK

@@ -1,0 +1,50 @@
+[
+  {
+    "tweet_id": "2113079963796516926",
+    "status": "CHECKED",
+    "fx_http": 200,
+    "fx_url": "https://api.fxtwitter.com/status/2113079963796516926",
+    "tweet_url": "https://x.com/bulba_gunwook/status/2113079963796516926",
+    "local_url": "https://x.com/bulba_gunwook/status/2113079963796516926",
+    "local_author": "bulba_gunwook",
+    "fx_author": "bulba_gunwook",
+    "local_created_at": "2026-10-22T01:28:17.000Z",
+    "fx_created_at": "Thu Oct 22 01:28:17 +0000 2026",
+    "local_text_excerpt": "Found it. To track individual days I use a template inside each cycle",
+    "fx_text_excerpt": "@seungjinprompts @peachoats Found it. To track individual days I use a template inside each cycle\nhttps://www.reddit.com/r/Notion/s/90ZCjB7Y0m",
+    "text_probe_match": true,
+    "method": "web_fetch api.fxtwitter.com HTTP 200"
+  },
+  {
+    "tweet_id": "2113042387169853575",
+    "status": "CHECKED",
+    "fx_http": 200,
+    "fx_url": "https://api.fxtwitter.com/status/2113042387169853575",
+    "tweet_url": "https://x.com/bulba_gunwook/status/2113042387169853575",
+    "local_url": "https://x.com/bulba_gunwook/status/2113042387169853575",
+    "local_author": "bulba_gunwook",
+    "fx_author": "bulba_gunwook",
+    "local_created_at": "2026-10-21T22:58:58.000Z",
+    "fx_created_at": "Wed Oct 21 22:58:58 +0000 2026",
+    "local_text_excerpt": "I use a notion template that runs numbers and  gives predictions and stuff",
+    "fx_text_excerpt": "@peachoats I use a notion template that runs numbers and  gives predictions and stuff",
+    "text_probe_match": true,
+    "method": "web_fetch api.fxtwitter.com HTTP 200"
+  },
+  {
+    "tweet_id": "2112996273897005393",
+    "status": "CHECKED",
+    "fx_http": 200,
+    "fx_url": "https://api.fxtwitter.com/status/2112996273897005393",
+    "tweet_url": "https://x.com/Arjun432992/status/2112996273897005393",
+    "local_url": "https://x.com/Arjun432992/status/2112996273897005393",
+    "local_author": "Arjun432992",
+    "fx_author": "Arjun432992",
+    "local_created_at": "2026-10-21T19:55:43.000Z",
+    "fx_created_at": "Wed Oct 21 19:55:43 +0000 2026",
+    "local_text_excerpt": "If you are looking for an effective note taking strategy. \n\nCheckout the \"The Cornell Note-Taking System\" which I found out recently. I am following this note t",
+    "fx_text_excerpt": "If you are looking for an effective note taking strategy. \n\nCheckout the \"The Cornell Note-Taking System\" which I found out recently.",
+    "text_probe_match": true,
+    "method": "web_fetch api.fxtwitter.com HTTP 200"
+  }
+]

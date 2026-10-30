@@ -1,0 +1,27 @@
+{
+ "generated_utc": "2026-10-24T06:00:20Z",
+ "suites": [
+  {
+   "name": "b20_wizard",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_wizard",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two\\tools\\workbench",
+   "start_utc": "2026-10-24T06:00:18Z",
+   "end_utc": "2026-10-24T06:00:20Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 16 tests in 1.647s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b20\\logs\\b20_only.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b20\\logs\\b20_only.stderr.txt"
+  }
+ ]
+}

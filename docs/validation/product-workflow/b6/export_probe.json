@@ -1,0 +1,131 @@
+{
+ "utc": "2026-10-23T12:10:00Z",
+ "steps": [],
+ "workorder": {
+  "status": 303,
+  "id": "wo:20261023-b6a77d92"
+ },
+ "not_ready": {
+  "status": 409,
+  "has_blocker": true,
+  "counts_before": {
+   "workorder": 1,
+   "export": 0
+  },
+  "counts_after": {
+   "workorder": 1,
+   "export": 0
+  },
+  "no_export_write": true
+ },
+ "get_detail": {
+  "counts_before": {
+   "workorder": 1,
+   "export": 0
+  },
+  "counts_after": {
+   "workorder": 1,
+   "export": 0
+  },
+  "zero_write": true
+ },
+ "fill_evidence": {
+  "status": 303
+ },
+ "ready_export": {
+  "status": 200,
+  "attachment": "attachment; filename=\"wo-20261023-b6a77d92-r2.json\"",
+  "counts_before": {
+   "workorder": 1,
+   "export": 0
+  },
+  "counts_after": {
+   "workorder": 1,
+   "export": 1
+  },
+  "get_export_wrote": true,
+  "stamp_fields": [
+   "contents",
+   "copy_version",
+   "generated_utc",
+   "revision",
+   "stamp_hash",
+   "supply_id",
+   "supply_version",
+   "workorder_id"
+  ],
+  "stamp": {
+   "workorder_id": "wo:20261023-b6a77d92",
+   "revision": 2,
+   "copy_version": "copy-v1",
+   "supply_id": "sup-mit-1",
+   "supply_version": "v1",
+   "generated_utc": "2026-10-23T12:15:59Z",
+   "contents": [
+    "title",
+    "selling_points",
+    "listing_contents",
+    "format",
+    "price",
+    "delivery",
+    "aftersales",
+    "faq"
+   ],
+   "stamp_hash": "c8a54f2212900e7c6b2d350616e0a95caf8afa4ebecd1c40220891b6c8d28eaa"
+  },
+  "buyer_fields": [
+   "title",
+   "selling_points",
+   "contents",
+   "format",
+   "price",
+   "delivery",
+   "aftersales",
+   "faq"
+  ],
+  "internal_hits": [],
+  "internal_keys": [],
+  "has_cost": false
+ },
+ "stamp_invalidation": {
+  "has_export": true,
+  "valid": false,
+  "changed": [
+   "工作单版本",
+   "文案版本"
+  ]
+ },
+ "forged_fields": {
+  "status": 403,
+  "db_unchanged": true
+ },
+ "origin": {
+  "cross_site": 403,
+  "cross_protocol": 403
+ },
+ "revision_invalid": [
+  {
+   "revision": "abc",
+   "status": 400
+  },
+  {
+   "revision": "1.5",
+   "status": 400
+  },
+  {
+   "revision": "-1",
+   "status": 400
+  }
+ ],
+ "leak_selfcheck": {
+  "status": 409,
+  "code": "export_internal_leak"
+ },
+ "db": {
+  "counts_final": {
+   "workorder": 1,
+   "export": 1
+  },
+  "path": "C:\\Users\\19183\\AppData\\Local\\Temp\\b6_verify_71hy2m8b\\workflow.sqlite3"
+ }
+}

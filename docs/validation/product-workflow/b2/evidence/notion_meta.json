@@ -1,0 +1,103 @@
+{
+  "notion_college_notes": {
+    "title": "College Notes Template | Notion Marketplace",
+    "ld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "category": "Student Life",
+        "name": "College Notes",
+        "description": "A clean, student-friendly space to capture lectures, readings, and study sessions without fuss. The inline database lets you create a new note for each class, tag it by module, and attach related lecture files so everything stays organized and easy to review.",
+        "image": [
+          "https://s3-us-west-2.amazonaws.com/public.notion-static.com/template/1774bb5f-4696-4ab7-911c-8a031dc49635/1776624774809/desktop.jpg",
+          "https://s3-us-west-2.amazonaws.com/public.notion-static.com/template/1774bb5f-4696-4ab7-911c-8a031dc49635/1776624774809/mobile.jpg"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": 0
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.868512110726644,
+          "reviewCount": 578
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 5,
+              "bestRating": 5
+            },
+            "name": "its good",
+            "reviewBody": "easy to use, can be applied in multiple contexts, especially for storing knowledge",
+            "datePublished": "2026-08-27T15:46:19.002Z",
+            "author": {
+              "@type": "Person",
+              "name": "Ch\u00e2u Ng\u1ecdc"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "notion_college_planner": {
+    "title": "College Planner & Dashboard Template by Naomi | Notada | Notion Marketplace",
+    "ld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "category": "Back to school",
+        "name": "College Planner & Dashboard",
+        "description": "The all-in-one digital workspace to stay organised each semester",
+        "image": [
+          "https://s3.us-west-2.amazonaws.com/public.notion-static.com/template/b205483a-d873-4643-986f-c21dfaaa6903/desktop.png",
+          "https://s3.us-west-2.amazonaws.com/public.notion-static.com/template/b205483a-d873-4643-986f-c21dfaaa6903/mobile.png",
+          "https://s3.us-west-2.amazonaws.com/public.notion-static.com/template/2e88f2a3-2907-4071-9288-6a7a0cc59bc9/1719260670876/mobile.jpg",
+          "https://s3.us-west-2.amazonaws.com/public.notion-static.com/template/de2d5e51-36d5-4705-addb-1321adb6ca28/1719260684414/mobile.jpg",
+          "https://s3.us-west-2.amazonaws.com/public.notion-static.com/template/7c707950-adda-4218-95e6-0a088b56afa3/1719260697412/mobile.jpg",
+          "https://s3.us-west-2.amazonaws.com/public.notion-static.com/template/2e88f2a3-2907-4071-9288-6a7a0cc59bc9/1719260670876/desktop.jpg",
+          "https://s3.us-west-2.amazonaws.com/public.notion-static.com/template/de2d5e51-36d5-4705-addb-1321adb6ca28/1719260684414/desktop.jpg",
+          "https://s3.us-west-2.amazonaws.com/public.notion-static.com/template/7c707950-adda-4218-95e6-0a088b56afa3/1719260697412/desktop.jpg"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": 4.5
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 5,
+          "reviewCount": 1
+        }
+      }
+    ]
+  },
+  "notion_lecture_notes": {
+    "title": "Lecture Notes Database Template | Notion Marketplace",
+    "ld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "category": "Study Planner",
+        "name": "Lecture Notes Database",
+        "description": "Free Notion lecture notes database: one row per lecture with summary, key points, questions, key terms and review status tracking.",
+        "image": [
+          "https://s3-us-west-2.amazonaws.com/public.notion-static.com/template/15dfd4fb-40d9-4ac9-8db9-50e5a1c33eea/1786113377476/desktop.jpg",
+          "https://s3-us-west-2.amazonaws.com/public.notion-static.com/template/15dfd4fb-40d9-4ac9-8db9-50e5a1c33eea/1786113377476/mobile.jpg"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": 0
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 5,
+          "reviewCount": 1
+        }
+      }
+    ]
+  }
+}

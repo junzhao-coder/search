@@ -1,0 +1,369 @@
+test_compatibility_routes (api.test_daily_endpoint.SummaryDailyTest.test_compatibility_routes) ... ok
+test_date_required_and_validated (api.test_daily_endpoint.SummaryDailyTest.test_date_required_and_validated) ... ok
+test_default_is_real_only_but_includes_real_data (api.test_daily_endpoint.SummaryDailyTest.test_default_is_real_only_but_includes_real_data) ... ok
+test_empty_db_returns_200 (api.test_daily_endpoint.SummaryDailyTest.test_empty_db_returns_200) ... ok
+test_include_synthetic_matrix (api.test_daily_endpoint.SummaryDailyTest.test_include_synthetic_matrix) ... ok
+test_matches_daily_digest_directly (api.test_daily_endpoint.SummaryDailyTest.test_matches_daily_digest_directly) ... ok
+test_same_query_is_deterministic (api.test_daily_endpoint.SummaryDailyTest.test_same_query_is_deterministic) ... ok
+test_zero_write (api.test_daily_endpoint.SummaryDailyTest.test_zero_write) ... ok
+test_model_assisted_requires_a_configured_model (api.test_feedback_draft.DraftTest.test_model_assisted_requires_a_configured_model) ... ok
+test_template_draft_works_without_a_model (api.test_feedback_draft.DraftTest.test_template_draft_works_without_a_model) ... ok
+test_expense_inquiry_and_server_field_rejections (api.test_feedback_draft.FeedbackTest.test_expense_inquiry_and_server_field_rejections) ... ok
+test_manual_time_record_and_correction (api.test_feedback_draft.FeedbackTest.test_manual_time_record_and_correction) ... ok
+test_refund_requires_matching_sale (api.test_feedback_draft.FeedbackTest.test_refund_requires_matching_sale) ... ok
+test_rejected_import_leaves_no_idempotency_record (api.test_feedback_draft.FeedbackTest.test_rejected_import_leaves_no_idempotency_record)
+The idempotency row shares the business transaction, so a rejected batch stores nothing. ... ok
+test_sale_snapshot_is_generated_and_frozen (api.test_feedback_draft.FeedbackTest.test_sale_snapshot_is_generated_and_frozen) ... ok
+test_end_to_end_chain_and_restart (api.test_feedback_draft.FullChainTest.test_end_to_end_chain_and_restart) ... ok
+test_contribution_800_case (api.test_gates_scenario.ContractRowsTest.test_contribution_800_case) ... ok
+test_example_scenario_190_and_g3_needs_grounding (api.test_gates_scenario.ContractRowsTest.test_example_scenario_190_and_g3_needs_grounding) ... ok
+test_expiry_by_evidence_expires_and_resequences (api.test_gates_scenario.ContractRowsTest.test_expiry_by_evidence_expires_and_resequences) ... D:\桌面\two\tests\api\test_gates_scenario.py:389: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  soon = (_dt.datetime.utcnow() + _dt.timedelta(days=6)).strftime("%Y-%m-%dT%H:%M:%SZ")
+D:\桌面\two\tests\api\test_gates_scenario.py:402: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  past = (_dt.datetime.utcnow() - _dt.timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
+ok
+test_loss_snapshot_and_negative_derived_value (api.test_gates_scenario.ContractRowsTest.test_loss_snapshot_and_negative_derived_value)
+S2-19②: sale 10.00 with 12.00 per-order cost -> contribution -200, snapshot saveable. ... ok
+test_no_purchase_or_payment_endpoints (api.test_gates_scenario.ContractRowsTest.test_no_purchase_or_payment_endpoints) ... ok
+test_supply_ttl_degrades_supply_and_cost_gates (api.test_gates_scenario.ContractRowsTest.test_supply_ttl_degrades_supply_and_cost_gates) ... D:\桌面\two\tests\api\test_gates_scenario.py:426: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  stale = (_dt.datetime.utcnow() - _dt.timedelta(days=40)).strftime("%Y-%m-%dT%H:%M:%SZ")
+ok
+test_evidence_and_fact_kind_changes_are_semantic (api.test_gates_scenario.CostRebindingTest.test_evidence_and_fact_kind_changes_are_semantic) ... ok
+test_partial_rebinding_cannot_fake_g3_completeness (api.test_gates_scenario.CostRebindingTest.test_partial_rebinding_cannot_fake_g3_completeness)
+静态疑点实测：只把三档采购改绑 B、其余成本仍属 A 时，G3 不得凭 A 的已知值通过。 ... ok
+test_same_values_can_be_rebound_to_another_supply (api.test_gates_scenario.CostRebindingTest.test_same_values_can_be_rebound_to_another_supply) ... ok
+test_atomic_rollback_undoes_downgrade (api.test_gates_scenario.DowngradeTest.test_atomic_rollback_undoes_downgrade) ... ok
+test_blocking_review_on_subrecord_makes_candidate_stale (api.test_gates_scenario.DowngradeTest.test_blocking_review_on_subrecord_makes_candidate_stale) ... ok
+test_import_price_change_downgrades_without_new_cost_row (api.test_gates_scenario.DowngradeTest.test_import_price_change_downgrades_without_new_cost_row) ... ok
+test_override_archived_from_stale (api.test_gates_scenario.DowngradeTest.test_override_archived_from_stale) ... ok
+test_same_second_supersede_downgrades_cost_gate (api.test_gates_scenario.DowngradeTest.test_same_second_supersede_downgrades_cost_gate) ... ok
+test_supply_ttl_and_recompute_are_idempotent (api.test_gates_scenario.DowngradeTest.test_supply_ttl_and_recompute_are_idempotent) ... D:\桌面\two\tests\api\test_gates_scenario.py:317: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  stale_stamp = (_dt.datetime.utcnow() - _dt.timedelta(days=40)).strftime("%Y-%m-%dT%H:%M:%SZ")
+ok
+test_validate_mode_never_materializes_downgrade (api.test_gates_scenario.DowngradeTest.test_validate_mode_never_materializes_downgrade) ... ok
+test_cost_gate_rejects_unknown_roles_and_ungrounded_rows (api.test_gates_scenario.GateAdmissionTest.test_cost_gate_rejects_unknown_roles_and_ungrounded_rows) ... ok
+test_cost_gate_requires_grounding_for_imported_rows (api.test_gates_scenario.GateAdmissionTest.test_cost_gate_requires_grounding_for_imported_rows) ... ok
+test_demand_gate_requires_signal_derived_evidence (api.test_gates_scenario.GateAdmissionTest.test_demand_gate_requires_signal_derived_evidence) ... ok
+test_four_gates_make_candidate_testable_with_ttls (api.test_gates_scenario.GateAdmissionTest.test_four_gates_make_candidate_testable_with_ttls) ... ok
+test_gate_write_idempotency_and_override (api.test_gates_scenario.GateAdmissionTest.test_gate_write_idempotency_and_override) ... ok
+test_platform_gate_version_must_match_selected_supply (api.test_gates_scenario.GateAdmissionTest.test_platform_gate_version_must_match_selected_supply) ... ok
+test_seller_promo_cannot_pass_demand_gate (api.test_gates_scenario.GateAdmissionTest.test_seller_promo_cannot_pass_demand_gate) ... ok
+test_supply_gate_rejects_licence_and_sample_gaps (api.test_gates_scenario.GateAdmissionTest.test_supply_gate_rejects_licence_and_sample_gaps) ... ok
+test_expired_evidence_cannot_produce_verified (api.test_gates_scenario.GateEvidenceContextTest.test_expired_evidence_cannot_produce_verified) ... D:\桌面\two\tests\api\test_gates_scenario.py:665: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  past = (_dt.datetime.utcnow() - _dt.timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
+ok
+test_explicit_evidence_path_is_the_control (api.test_gates_scenario.GateEvidenceContextTest.test_explicit_evidence_path_is_the_control) ... D:\桌面\two\tests\api\test_gates_scenario.py:641: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  short = (_dt.datetime.utcnow() + _dt.timedelta(days=2)).strftime("%Y-%m-%dT%H:%M:%SZ")
+ok
+test_failed_gate_write_leaves_no_partial_row (api.test_gates_scenario.GateEvidenceContextTest.test_failed_gate_write_leaves_no_partial_row) ... ok
+test_g2_default_clause_evidence_is_persisted_and_used_for_ttl (api.test_gates_scenario.GateEvidenceContextTest.test_g2_default_clause_evidence_is_persisted_and_used_for_ttl) ... D:\桌面\two\tests\api\test_gates_scenario.py:606: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  short = (_dt.datetime.utcnow() + _dt.timedelta(days=5)).strftime("%Y-%m-%dT%H:%M:%SZ")
+ok
+test_invalidated_evidence_cannot_produce_verified (api.test_gates_scenario.GateEvidenceContextTest.test_invalidated_evidence_cannot_produce_verified) ... ok
+test_cost_gate_cannot_be_switched_to_another_supply (api.test_gates_scenario.GateSelectionBoundaryTest.test_cost_gate_cannot_be_switched_to_another_supply) ... ok
+test_cross_candidate_supply_is_rejected (api.test_gates_scenario.GateSelectionBoundaryTest.test_cross_candidate_supply_is_rejected) ... ok
+test_expired_g2_history_is_not_the_current_selection (api.test_gates_scenario.GateSelectionBoundaryTest.test_expired_g2_history_is_not_the_current_selection) ... ok
+test_g3_requires_a_currently_verified_g2 (api.test_gates_scenario.GateSelectionBoundaryTest.test_g3_requires_a_currently_verified_g2) ... ok
+test_platform_version_follows_the_current_g2 (api.test_gates_scenario.GateSelectionBoundaryTest.test_platform_version_follows_the_current_g2) ... ok
+test_missing_recurring_row_stays_unknown (api.test_gates_scenario.PeriodCostBoundaryTest.test_missing_recurring_row_stays_unknown) ... ok
+test_monthly_explicit_zero_is_complete_with_zero_total (api.test_gates_scenario.PeriodCostBoundaryTest.test_monthly_explicit_zero_is_complete_with_zero_total) ... ok
+test_monthly_positive_sets_monthly_total_and_gap (api.test_gates_scenario.PeriodCostBoundaryTest.test_monthly_positive_sets_monthly_total_and_gap) ... ok
+test_non_monthly_explicit_zero_is_complete (api.test_gates_scenario.PeriodCostBoundaryTest.test_non_monthly_explicit_zero_is_complete) ... ok
+test_quarterly_positive_keeps_contribution_but_not_complete (api.test_gates_scenario.PeriodCostBoundaryTest.test_quarterly_positive_keeps_contribution_but_not_complete) ... ok
+test_yearly_positive_is_not_complete (api.test_gates_scenario.PeriodCostBoundaryTest.test_yearly_positive_is_not_complete) ... ok
+test_recompute_materializes_failed_g2 (api.test_gates_scenario.RecomputeMaterializationTest.test_recompute_materializes_failed_g2) ... ok
+test_recompute_materializes_version_change_for_cost_and_platform (api.test_gates_scenario.RecomputeMaterializationTest.test_recompute_materializes_version_change_for_cost_and_platform) ... ok
+test_resolve_does_not_resurrect_downgraded_rows (api.test_gates_scenario.RecomputeMaterializationTest.test_resolve_does_not_resurrect_downgraded_rows) ... ok
+test_all_zero_rows_need_no_volume_assumption (api.test_gates_scenario.ScenarioAmortizationTest.test_all_zero_rows_need_no_volume_assumption) ... ok
+test_default_non_monthly_explicit_zero_keeps_s2_complete (api.test_gates_scenario.ScenarioAmortizationTest.test_default_non_monthly_explicit_zero_keeps_s2_complete) ... ok
+test_default_path_is_field_for_field_s2 (api.test_gates_scenario.ScenarioAmortizationTest.test_default_path_is_field_for_field_s2) ... ok
+test_default_path_matches_frozen_s2_reference (api.test_gates_scenario.ScenarioAmortizationTest.test_default_path_matches_frozen_s2_reference)
+冻结 S2 实现对照：默认路径逐字段（含 explanation/assumptions）一致。 ... ok
+test_example_b_amortized_matches_contract_negative_fifty (api.test_gates_scenario.ScenarioAmortizationTest.test_example_b_amortized_matches_contract_negative_fifty) ... ok
+test_explicit_assumption_explanations_distinguish_reasons (api.test_gates_scenario.ScenarioAmortizationTest.test_explicit_assumption_explanations_distinguish_reasons) ... ok
+test_get_is_zero_write (api.test_gates_scenario.ScenarioAmortizationTest.test_get_is_zero_write) ... ok
+test_loss_with_assumptions_has_no_contradictory_explanation (api.test_gates_scenario.ScenarioAmortizationTest.test_loss_with_assumptions_has_no_contradictory_explanation) ... ok
+test_mixed_periods_via_real_api (api.test_gates_scenario.ScenarioAmortizationTest.test_mixed_periods_via_real_api)
+混合周期（跨 role）走真实 API：procurement monthly 100 + other recurring quarterly 10000。 ... ok
+test_only_amortize_orders_leaves_period_share_unknown (api.test_gates_scenario.ScenarioAmortizationTest.test_only_amortize_orders_leaves_period_share_unknown) ... ok
+test_only_monthly_orders_without_normalization (api.test_gates_scenario.ScenarioAmortizationTest.test_only_monthly_orders_without_normalization) ... ok
+test_only_normalization_without_monthly_orders (api.test_gates_scenario.ScenarioAmortizationTest.test_only_normalization_without_monthly_orders) ... ok
+test_quarterly_10001_per_order_833_not_834 (api.test_gates_scenario.ScenarioAmortizationTest.test_quarterly_10001_per_order_833_not_834) ... ok
+test_quarterly_normalization_display_and_detail (api.test_gates_scenario.ScenarioAmortizationTest.test_quarterly_normalization_display_and_detail) ... ok
+test_quarterly_one_with_monthly_orders_is_complete (api.test_gates_scenario.ScenarioAmortizationTest.test_quarterly_one_with_monthly_orders_is_complete) ... ok
+test_quarterly_one_without_monthly_orders_is_not_complete (api.test_gates_scenario.ScenarioAmortizationTest.test_quarterly_one_without_monthly_orders_is_not_complete) ... ok
+test_query_validation_http_and_core (api.test_gates_scenario.ScenarioAmortizationTest.test_query_validation_http_and_core) ... ok
+test_same_role_recurring_is_still_unique_but_cross_role_is_allowed (api.test_gates_scenario.ScenarioAmortizationTest.test_same_role_recurring_is_still_unique_but_cross_role_is_allowed) ... ok
+test_single_supply_estimate_does_not_upgrade_gate (api.test_gates_scenario.ScenarioAmortizationTest.test_single_supply_estimate_does_not_upgrade_gate) ... ok
+test_snapshot_immutable_and_actual_null (api.test_gates_scenario.ScenarioAmortizationTest.test_snapshot_immutable_and_actual_null) ... ok
+test_unknown_period_is_not_guessed_as_yearly (api.test_gates_scenario.ScenarioAmortizationTest.test_unknown_period_is_not_guessed_as_yearly) ... ok
+test_unknown_recurring_row_keeps_everything_null (api.test_gates_scenario.ScenarioAmortizationTest.test_unknown_recurring_row_keeps_everything_null) ... ok
+test_unknown_recurring_row_reason_is_reported_by_actual_rows (api.test_gates_scenario.ScenarioAmortizationTest.test_unknown_recurring_row_reason_is_reported_by_actual_rows) ... ok
+test_unknown_recurring_row_without_gap_still_reports_reason (api.test_gates_scenario.ScenarioAmortizationTest.test_unknown_recurring_row_without_gap_still_reports_reason) ... ok
+test_yearly_normalized_per_order_and_net (api.test_gates_scenario.ScenarioAmortizationTest.test_yearly_normalized_per_order_and_net) ... ok
+test_buyout_nulls_net_and_reports_gap (api.test_gates_scenario.ScenarioTest.test_buyout_nulls_net_and_reports_gap) ... ok
+test_example_a_all_known (api.test_gates_scenario.ScenarioTest.test_example_a_all_known) ... ok
+test_sale_price_never_joins_cost_sum (api.test_gates_scenario.ScenarioTest.test_sale_price_never_joins_cost_sum) ... ok
+test_unknown_components_never_inferred_as_zero (api.test_gates_scenario.ScenarioTest.test_unknown_components_never_inferred_as_zero) ... ok
+test_failed_g2_does_not_fall_back (api.test_gates_scenario.SelectionSwitchTest.test_failed_g2_does_not_fall_back) ... ok
+test_g2_invalidation_does_not_fall_back_to_old_verified (api.test_gates_scenario.SelectionSwitchTest.test_g2_invalidation_does_not_fall_back_to_old_verified) ... ok
+test_legacy_null_supply_rows_are_conservatively_expired (api.test_gates_scenario.SelectionSwitchTest.test_legacy_null_supply_rows_are_conservatively_expired) ... ok
+test_mismatching_and_cross_candidate_supplies_still_refused (api.test_gates_scenario.SelectionSwitchTest.test_mismatching_and_cross_candidate_supplies_still_refused) ... ok
+test_recovery_after_switch_needs_user_reverification (api.test_gates_scenario.SelectionSwitchTest.test_recovery_after_switch_needs_user_reverification) ... ok
+test_same_supply_g2_replay_keeps_other_gates (api.test_gates_scenario.SelectionSwitchTest.test_same_supply_g2_replay_keeps_other_gates) ... ok
+test_star_version_keeps_applying_after_version_change (api.test_gates_scenario.SelectionSwitchTest.test_star_version_keeps_applying_after_version_change) ... ok
+test_switch_to_other_supply_invalidates_old_rows (api.test_gates_scenario.SelectionSwitchTest.test_switch_to_other_supply_invalidates_old_rows) ... ok
+test_verified_rows_store_the_supply_actually_used (api.test_gates_scenario.SelectionSwitchTest.test_verified_rows_store_the_supply_actually_used) ... ok
+test_version_change_requires_g4_reverification (api.test_gates_scenario.SelectionSwitchTest.test_version_change_requires_g4_reverification) ... ok
+test_health_has_no_paths_or_secret_fields (api.test_health_version.HealthVersionTest.test_health_has_no_paths_or_secret_fields) ... ok
+test_health_returns_version_and_schema (api.test_health_version.HealthVersionTest.test_health_returns_version_and_schema) ... ok
+test_health_version_matches_package_version (api.test_health_version.HealthVersionTest.test_health_version_matches_package_version) ... ok
+test_revisit_keeps_idempotency_and_validate_modes (api.test_import_api.HistoryHashRevisitTest.test_revisit_keeps_idempotency_and_validate_modes) ... ok
+test_revisit_keeps_invalidated_evidence_invalid (api.test_import_api.HistoryHashRevisitTest.test_revisit_keeps_invalidated_evidence_invalid) ... ok
+test_revisit_keeps_supply_and_cost_judged_independently (api.test_import_api.HistoryHashRevisitTest.test_revisit_keeps_supply_and_cost_judged_independently) ... ok
+test_revisit_native_id_json_isolated_by_source_and_origin (api.test_import_api.HistoryHashRevisitTest.test_revisit_native_id_json_isolated_by_source_and_origin) ... ok
+test_revisit_then_new_content_appends_v3 (api.test_import_api.HistoryHashRevisitTest.test_revisit_then_new_content_appends_v3) ... ok
+test_revisit_url_identity_is_duplicate_not_500 (api.test_import_api.HistoryHashRevisitTest.test_revisit_url_identity_is_duplicate_not_500) ... ok
+test_content_change_adds_version (api.test_import_api.ImportApiTest.test_content_change_adds_version) ... ok
+test_cross_channel_same_native_id_stays_two_candidates (api.test_import_api.ImportApiTest.test_cross_channel_same_native_id_stays_two_candidates) ... ok
+test_detail_exposes_evidence_and_keeps_gates_pending (api.test_import_api.ImportApiTest.test_detail_exposes_evidence_and_keeps_gates_pending) ... ok
+test_four_candidate_groups_stay_pending (api.test_import_api.ImportApiTest.test_four_candidate_groups_stay_pending) ... ok
+test_health_and_empty_start (api.test_import_api.ImportApiTest.test_health_and_empty_start) ... ok
+test_idempotency_replay_and_conflict (api.test_import_api.ImportApiTest.test_idempotency_replay_and_conflict) ... ok
+test_idempotency_survives_restart (api.test_import_api.ImportApiTest.test_idempotency_survives_restart) ... ok
+test_json_positive_sample_maps_minor_and_yuan_forms (api.test_import_api.ImportApiTest.test_json_positive_sample_maps_minor_and_yuan_forms) ... ok
+test_list_order_is_stable_and_repeatable (api.test_import_api.ImportApiTest.test_list_order_is_stable_and_repeatable) ... ok
+test_negative_rows_are_rejected_atomically_with_reasons (api.test_import_api.ImportApiTest.test_negative_rows_are_rejected_atomically_with_reasons) ... ok
+test_non_utf8_body_is_rejected (api.test_import_api.ImportApiTest.test_non_utf8_body_is_rejected) ... ok
+test_not_found_contract (api.test_import_api.ImportApiTest.test_not_found_contract) ... ok
+test_oversized_and_malformed_inputs (api.test_import_api.ImportApiTest.test_oversized_and_malformed_inputs) ... ok
+test_page_routes_render_pages (api.test_import_api.ImportApiTest.test_page_routes_render_pages)
+S2-C: the four page routes now render templates instead of 501 stubs. ... ok
+test_positive_csv_import_counts_and_run_record (api.test_import_api.ImportApiTest.test_positive_csv_import_counts_and_run_record) ... ok
+test_procurement_bases_are_independent (api.test_import_api.ImportApiTest.test_procurement_bases_are_independent) ... ok
+test_real_and_synthetic_are_isolated (api.test_import_api.ImportApiTest.test_real_and_synthetic_are_isolated) ... ok
+test_recurring_without_period_is_row_rejected (api.test_import_api.ImportApiTest.test_recurring_without_period_is_row_rejected) ... ok
+test_reimport_same_file_does_not_proliferate (api.test_import_api.ImportApiTest.test_reimport_same_file_does_not_proliferate) ... ok
+test_restart_keeps_data (api.test_import_api.ImportApiTest.test_restart_keeps_data) ... ok
+test_same_content_different_url_creates_suspect_review (api.test_import_api.ImportApiTest.test_same_content_different_url_creates_suspect_review) ... ok
+test_same_demand_with_new_cost_row_keeps_sub_records (api.test_import_api.ImportApiTest.test_same_demand_with_new_cost_row_keeps_sub_records) ... ok
+test_sources_and_runs_endpoints (api.test_import_api.ImportApiTest.test_sources_and_runs_endpoints) ... ok
+test_title_only_row_reuses_candidate (api.test_import_api.ImportApiTest.test_title_only_row_reuses_candidate) ... ok
+test_unknown_cost_and_explicit_zero_are_distinct (api.test_import_api.ImportApiTest.test_unknown_cost_and_explicit_zero_are_distinct) ... ok
+test_url_only_supply_keeps_gap_and_observed_at_warning (api.test_import_api.ImportApiTest.test_url_only_supply_keeps_gap_and_observed_at_warning) ... ok
+test_validate_mode_writes_nothing (api.test_import_api.ImportApiTest.test_validate_mode_writes_nothing) ... ok
+test_as_of_required_and_deterministic (core.test_daily.DailyDigestTest.test_as_of_required_and_deterministic) ... ok
+test_empty_database_returns_empty_digest (core.test_daily.DailyDigestTest.test_empty_database_returns_empty_digest) ... ok
+test_full_digest_matches_ranking_and_truncates_top (core.test_daily.DailyDigestTest.test_full_digest_matches_ranking_and_truncates_top) ... ok
+test_limit_is_passed_through (core.test_daily.DailyDigestTest.test_limit_is_passed_through) ... ok
+test_zero_write (core.test_daily.DailyDigestTest.test_zero_write) ... ok
+test_candidate_identity_reuses_demand_then_title (core.test_identity.IdentityTest.test_candidate_identity_reuses_demand_then_title) ... ok
+test_content_hash_changes_with_excerpt (core.test_identity.IdentityTest.test_content_hash_changes_with_excerpt) ... ok
+test_distinct_sources_same_native_id_are_distinct_candidates (core.test_identity.IdentityTest.test_distinct_sources_same_native_id_are_distinct_candidates) ... ok
+test_identity_keys_are_namespaced (core.test_identity.IdentityTest.test_identity_keys_are_namespaced) ... ok
+test_normalize_collapses_and_lowercases_ascii (core.test_identity.IdentityTest.test_normalize_collapses_and_lowercases_ascii) ... ok
+test_title_norm_hash_is_stable (core.test_identity.IdentityTest.test_title_norm_hash_is_stable) ... ok
+test_url_norm_drops_tracking_and_sorts_params (core.test_identity.IdentityTest.test_url_norm_drops_tracking_and_sorts_params) ... ok
+test_m01_full_import_is_needs_review_never_adaptable (core.test_matching.MatchingTest.test_m01_full_import_is_needs_review_never_adaptable) ... ok
+test_m02_unknown_license_needs_review_and_g2_still_422 (core.test_matching.MatchingTest.test_m02_unknown_license_needs_review_and_g2_still_422) ... ok
+test_m03_supplier_self_claim_does_not_upgrade (core.test_matching.MatchingTest.test_m03_supplier_self_claim_does_not_upgrade) ... ok
+test_m04_invalid_supply_excluded_and_existing_review_fires (core.test_matching.MatchingTest.test_m04_invalid_supply_excluded_and_existing_review_fires) ... ok
+test_m05_license_change_reflected_as_license_changed (core.test_matching.MatchingTest.test_m05_license_change_reflected_as_license_changed) ... ok
+test_m06_supply_price_change_does_not_move_contribution (core.test_matching.MatchingTest.test_m06_supply_price_change_does_not_move_contribution) ... ok
+test_m07a_supply_ttl_excludes_and_materializes_supply_invalid (core.test_matching.MatchingTest.test_m07a_supply_ttl_excludes_and_materializes_supply_invalid) ... ok
+test_m07b_gate_ttl_marks_gate_expired (core.test_matching.MatchingTest.test_m07b_gate_ttl_marks_gate_expired) ... ok
+test_m08_no_supply_reports_gap_not_zero_demand (core.test_matching.MatchingTest.test_m08_no_supply_reports_gap_not_zero_demand) ... ok
+test_m09_two_supplies_reports_current_g2_and_keeps_selection (core.test_matching.MatchingTest.test_m09_two_supplies_reports_current_g2_and_keeps_selection) ... ok
+test_m10_version_mismatch_is_gap_and_g4_stays_unverified (core.test_matching.MatchingTest.test_m10_version_mismatch_is_gap_and_g4_stays_unverified) ... ok
+test_m11_match_is_read_only_on_all_paths (core.test_matching.MatchingTest.test_m11_match_is_read_only_on_all_paths) ... ok
+test_m12_s4_scenario_unchanged_by_matching (core.test_matching.MatchingTest.test_m12_s4_scenario_unchanged_by_matching) ... ok
+test_m13_g2_switch_expires_old_g4_without_misleading_reason (core.test_matching.MatchingTest.test_m13_g2_switch_expires_old_g4_without_misleading_reason)
+策划返工裁定：G2 变更导致旧 G4 行失效，不得冒充 license_changed/失效类 reason。 ... ok
+test_derived_negative_is_not_produced_by_inputs (core.test_money.MoneyTest.test_derived_negative_is_not_produced_by_inputs) ... ok
+test_labor_rounding (core.test_money.MoneyTest.test_labor_rounding) ... ok
+test_minor_int_rejects_bool_and_negative (core.test_money.MoneyTest.test_minor_int_rejects_bool_and_negative) ... ok
+test_rate_rounding_half_up (core.test_money.MoneyTest.test_rate_rounding_half_up) ... ok
+test_unknown_vs_zero_display (core.test_money.MoneyTest.test_unknown_vs_zero_display) ... ok
+test_yuan_rejects_bad_shapes (core.test_money.MoneyTest.test_yuan_rejects_bad_shapes) ... ok
+test_yuan_to_minor_exact (core.test_money.MoneyTest.test_yuan_to_minor_exact) ... ok
+test_r01_t1_full_score (core.test_ranking.RankingTest.test_r01_t1_full_score) ... ok
+test_r02a_tie_break_candidate_id (core.test_ranking.RankingTest.test_r02a_tie_break_candidate_id) ... ok
+test_r02b_manual_minutes_affects_score_and_order (core.test_ranking.RankingTest.test_r02b_manual_minutes_affects_score_and_order) ... ok
+test_r03_t2_via_missing_assumptions_then_t1_with_params (core.test_ranking.RankingTest.test_r03_t2_via_missing_assumptions_then_t1_with_params) ... ok
+test_r04_observing_pool (core.test_ranking.RankingTest.test_r04_observing_pool) ... ok
+test_r05_exploring_pool_and_material_gap_penalty (core.test_ranking.RankingTest.test_r05_exploring_pool_and_material_gap_penalty) ... ok
+test_r06_blocked_pool_from_invalid_supply (core.test_ranking.RankingTest.test_r06_blocked_pool_from_invalid_supply) ... ok
+test_r07_old_observation_loses_freshness_points (core.test_ranking.RankingTest.test_r07_old_observation_loses_freshness_points) ... ok
+test_r08_negative_net_is_shown_without_positive_points (core.test_ranking.RankingTest.test_r08_negative_net_is_shown_without_positive_points) ... ok
+test_r09_limit_five_and_omitted_global_rank (core.test_ranking.RankingTest.test_r09_limit_five_and_omitted_global_rank) ... ok
+test_r10_fewer_than_limit_not_padded (core.test_ranking.RankingTest.test_r10_fewer_than_limit_not_padded) ... ok
+test_r11_manual_override_excluded_from_items (core.test_ranking.RankingTest.test_r11_manual_override_excluded_from_items) ... ok
+test_r12_deterministic_and_zero_write (core.test_ranking.RankingTest.test_r12_deterministic_and_zero_write) ... ok
+test_r13_output_shape_and_no_predictions (core.test_ranking.RankingTest.test_r13_output_shape_and_no_predictions) ... ok
+test_r14_weights_frozen_for_version (core.test_ranking.RankingTest.test_r14_weights_frozen_for_version) ... ok
+test_r15_stale_from_failed_gate_lands_in_blocked (core.test_ranking.RankingTest.test_r15_stale_from_failed_gate_lands_in_blocked) ... ok
+test_r16_candidate_without_demand_rows_is_insufficient (core.test_ranking.RankingTest.test_r16_candidate_without_demand_rows_is_insufficient) ... ok
+test_api_health_unchanged (dash.test_routes.DashRouteTests.test_api_health_unchanged) ... ok
+test_bad_jsonl_line_is_counted_and_skipped (dash.test_routes.DashRouteTests.test_bad_jsonl_line_is_counted_and_skipped) ... ok
+test_collect_shows_xianyu_and_file_status (dash.test_routes.DashRouteTests.test_collect_shows_xianyu_and_file_status) ... ok
+test_daily_is_read_only_summary (dash.test_routes.DashRouteTests.test_daily_is_read_only_summary) ... ok
+test_five_routes_render_html_200 (dash.test_routes.DashRouteTests.test_five_routes_render_html_200) ... ok
+test_missing_data_root_degrades_friendly (dash.test_routes.DashRouteTests.test_missing_data_root_degrades_friendly) ... ok
+test_opportunities_shows_model_rows_and_links (dash.test_routes.DashRouteTests.test_opportunities_shows_model_rows_and_links) ... ok
+test_overview_shows_counts_and_license_summary (dash.test_routes.DashRouteTests.test_overview_shows_counts_and_license_summary) ... ok
+test_sources_shows_license_rows_and_prices (dash.test_routes.DashRouteTests.test_sources_shows_license_rows_and_prices) ... ok
+test_bilibili_video_url_is_accepted_and_normalised (sources.test_bilibili_view.BilibiliViewReaderTest.test_bilibili_video_url_is_accepted_and_normalised) ... ok
+test_bvid_mismatch_fails_without_identity (sources.test_bilibili_view.BilibiliViewReaderTest.test_bvid_mismatch_fails_without_identity) ... ok
+test_cache_hit_within_24h_then_refresh (sources.test_bilibili_view.BilibiliViewReaderTest.test_cache_hit_within_24h_then_refresh) ... ok
+test_cache_shares_content_but_rebuilds_url_per_input (sources.test_bilibili_view.BilibiliViewReaderTest.test_cache_shares_content_but_rebuilds_url_per_input) ... ok
+test_cross_origin_redirect_is_failed_not_login (sources.test_bilibili_view.BilibiliViewReaderTest.test_cross_origin_redirect_is_failed_not_login) ... ok
+test_data_not_dict_fails_cleanly (sources.test_bilibili_view.BilibiliViewReaderTest.test_data_not_dict_fails_cleanly) ... ok
+test_default_port_is_accepted (sources.test_bilibili_view.BilibiliViewReaderTest.test_default_port_is_accepted) ... ok
+test_desc_non_string_falls_back_to_title (sources.test_bilibili_view.BilibiliViewReaderTest.test_desc_non_string_falls_back_to_title) ... ok
+test_excerpt_change_changes_hash (sources.test_bilibili_view.BilibiliViewReaderTest.test_excerpt_change_changes_hash) ... ok
+test_explicit_observed_at_accepts_z_and_offset (sources.test_bilibili_view.BilibiliViewReaderTest.test_explicit_observed_at_accepts_z_and_offset) ... ok
+test_failure_is_not_cached_and_not_retried (sources.test_bilibili_view.BilibiliViewReaderTest.test_failure_is_not_cached_and_not_retried) ... ok
+test_failure_mapping_follows_frozen_caliber (sources.test_bilibili_view.BilibiliViewReaderTest.test_failure_mapping_follows_frozen_caliber) ... ok
+test_fixtures_declare_provenance (sources.test_bilibili_view.BilibiliViewReaderTest.test_fixtures_declare_provenance) ... ok
+test_html_shell_is_failed (sources.test_bilibili_view.BilibiliViewReaderTest.test_html_shell_is_failed) ... ok
+test_invalid_observed_at_falls_back_and_is_recorded (sources.test_bilibili_view.BilibiliViewReaderTest.test_invalid_observed_at_falls_back_and_is_recorded) ... ok
+test_invalid_or_untrusted_targets_never_reach_transport (sources.test_bilibili_view.BilibiliViewReaderTest.test_invalid_or_untrusted_targets_never_reach_transport) ... ok
+test_invisible_object_62002_maps_to_failed (sources.test_bilibili_view.BilibiliViewReaderTest.test_invisible_object_62002_maps_to_failed) ... ok
+test_login_only_from_explicit_markers (sources.test_bilibili_view.BilibiliViewReaderTest.test_login_only_from_explicit_markers) ... ok
+test_login_path_segment_matching (sources.test_bilibili_view.BilibiliViewReaderTest.test_login_path_segment_matching) ... ok
+test_login_similar_paths_are_not_login (sources.test_bilibili_view.BilibiliViewReaderTest.test_login_similar_paths_are_not_login) ... ok
+test_long_excerpt_is_truncated_to_limit (sources.test_bilibili_view.BilibiliViewReaderTest.test_long_excerpt_is_truncated_to_limit) ... ok
+test_missing_bvid_field_fails_without_identity (sources.test_bilibili_view.BilibiliViewReaderTest.test_missing_bvid_field_fails_without_identity) ... ok
+test_missing_desc_falls_back_to_title (sources.test_bilibili_view.BilibiliViewReaderTest.test_missing_desc_falls_back_to_title) ... ok
+test_module_has_no_network_client (sources.test_bilibili_view.BilibiliViewReaderTest.test_module_has_no_network_client) ... ok
+test_non_integer_app_codes_fail_without_identity (sources.test_bilibili_view.BilibiliViewReaderTest.test_non_integer_app_codes_fail_without_identity) ... ok
+test_observed_at_change_does_not_change_hash (sources.test_bilibili_view.BilibiliViewReaderTest.test_observed_at_change_does_not_change_hash) ... ok
+test_observed_at_defaults_to_import_time_and_is_not_pubdate (sources.test_bilibili_view.BilibiliViewReaderTest.test_observed_at_defaults_to_import_time_and_is_not_pubdate) ... ok
+test_ok_record_uses_contract_fields (sources.test_bilibili_view.BilibiliViewReaderTest.test_ok_record_uses_contract_fields) ... ok
+test_overlong_title_fallback_is_truncated (sources.test_bilibili_view.BilibiliViewReaderTest.test_overlong_title_fallback_is_truncated) ... ok
+test_owner_malformed_stays_unknown (sources.test_bilibili_view.BilibiliViewReaderTest.test_owner_malformed_stays_unknown) ... ok
+test_owner_name_missing_stays_unknown (sources.test_bilibili_view.BilibiliViewReaderTest.test_owner_name_missing_stays_unknown) ... ok
+test_payload_not_dict_fails_cleanly (sources.test_bilibili_view.BilibiliViewReaderTest.test_payload_not_dict_fails_cleanly) ... ok
+test_pubdate_malformed_variants_stay_unknown (sources.test_bilibili_view.BilibiliViewReaderTest.test_pubdate_malformed_variants_stay_unknown) ... ok
+test_pubdate_out_of_range_stays_unknown (sources.test_bilibili_view.BilibiliViewReaderTest.test_pubdate_out_of_range_stays_unknown) ... ok
+test_resolve_target_returns_bvid_and_original_url (sources.test_bilibili_view.BilibiliViewReaderTest.test_resolve_target_returns_bvid_and_original_url) ... ok
+test_risk_control_keeps_raw_reason_without_threshold_claim (sources.test_bilibili_view.BilibiliViewReaderTest.test_risk_control_keeps_raw_reason_without_threshold_claim) ... ok
+test_stat_change_does_not_change_hash (sources.test_bilibili_view.BilibiliViewReaderTest.test_stat_change_does_not_change_hash) ... ok
+test_stat_non_dict_yields_empty_engagement (sources.test_bilibili_view.BilibiliViewReaderTest.test_stat_non_dict_yields_empty_engagement) ... ok
+test_title_must_be_nonempty_string (sources.test_bilibili_view.BilibiliViewReaderTest.test_title_must_be_nonempty_string) ... ok
+test_unknown_fields_not_shared_between_records (sources.test_bilibili_view.BilibiliViewReaderTest.test_unknown_fields_not_shared_between_records) ... ok
+test_unknown_http_stays_none_for_timeout_and_redirect (sources.test_bilibili_view.BilibiliViewReaderTest.test_unknown_http_stays_none_for_timeout_and_redirect) ... ok
+test_a1_index_attribution_middle_failure (sources.test_real_link.RealLinkTest.test_a1_index_attribution_middle_failure) ... ok
+test_a2_index_attribution_import_rejected_first (sources.test_real_link.RealLinkTest.test_a2_index_attribution_import_rejected_first) ... ok
+test_api_url_normalization (sources.test_real_link.RealLinkTest.test_api_url_normalization) ... ok
+test_b1_record_failure_error_not_double_counted (sources.test_real_link.RealLinkTest.test_b1_record_failure_error_not_double_counted) ... ok
+test_b2_record_failure_always_raising_bubbles_once (sources.test_real_link.RealLinkTest.test_b2_record_failure_always_raising_bubbles_once) ... ok
+test_batch_result_file_written (sources.test_real_link.RealLinkTest.test_batch_result_file_written) ... ok
+test_budget_exhausted_notes_and_stop (sources.test_real_link.RealLinkTest.test_budget_exhausted_notes_and_stop) ... ok
+test_budget_truncation_records_failed_run (sources.test_real_link.RealLinkTest.test_budget_truncation_records_failed_run) ... ok
+test_cfg_validation_before_network (sources.test_real_link.RealLinkTest.test_cfg_validation_before_network) ... ok
+test_d_audit_write_failure_propagates_without_recursive_run (sources.test_real_link.RealLinkTest.test_d_audit_write_failure_propagates_without_recursive_run) ... ok
+test_d_import_sqlite_error_marks_failed (sources.test_real_link.RealLinkTest.test_d_import_sqlite_error_marks_failed) ... ok
+test_d_mixed_success_and_failure_summary (sources.test_real_link.RealLinkTest.test_d_mixed_success_and_failure_summary) ... ok
+test_d_non_success_http_code_is_failure (sources.test_real_link.RealLinkTest.test_d_non_success_http_code_is_failure) ... ok
+test_default_transport_timeout_clamped_to_remaining (sources.test_real_link.RealLinkTest.test_default_transport_timeout_clamped_to_remaining) ... ok
+test_failures_are_not_cached (sources.test_real_link.RealLinkTest.test_failures_are_not_cached) ... ok
+test_import_failure_never_reports_ok (sources.test_real_link.RealLinkTest.test_import_failure_never_reports_ok) ... ok
+test_interval_crossing_deadline_blocks_second_request (sources.test_real_link.RealLinkTest.test_interval_crossing_deadline_blocks_second_request) ... ok
+test_invalid_budget_and_interval_rejected (sources.test_real_link.RealLinkTest.test_invalid_budget_and_interval_rejected) ... ok
+test_normalize_response_layers (sources.test_real_link.RealLinkTest.test_normalize_response_layers) ... ok
+test_real_and_synthetic_coexist (sources.test_real_link.RealLinkTest.test_real_and_synthetic_coexist) ... ok
+test_reconcile_duplicate_bvid_budget_one (sources.test_real_link.RealLinkTest.test_reconcile_duplicate_bvid_budget_one) ... ok
+test_reconcile_single_target_mapping_failure (sources.test_real_link.RealLinkTest.test_reconcile_single_target_mapping_failure) ... ok
+test_remaining_below_threshold_never_calls (sources.test_real_link.RealLinkTest.test_remaining_below_threshold_never_calls) ... ok
+test_remaining_non_positive_never_calls_transport (sources.test_real_link.RealLinkTest.test_remaining_non_positive_never_calls_transport) ... ok
+test_retry_counts_toward_budget (sources.test_real_link.RealLinkTest.test_retry_counts_toward_budget) ... ok
+test_successful_import_creates_real_row (sources.test_real_link.RealLinkTest.test_successful_import_creates_real_row) ... ok
+test_timeout_after_retry_wait_blocks_request (sources.test_real_link.RealLinkTest.test_timeout_after_retry_wait_blocks_request) ... ok
+test_timeout_uses_remaining_without_floor (sources.test_real_link.RealLinkTest.test_timeout_uses_remaining_without_floor) ... ok
+test_transport_exception_is_recorded_as_failed_run (sources.test_real_link.RealLinkTest.test_transport_exception_is_recorded_as_failed_run) ... ok
+test_unauthorized_never_touches_network (sources.test_real_link.RealLinkTest.test_unauthorized_never_touches_network) ... ok
+test_unrequested_target_is_not_failed_run (sources.test_real_link.RealLinkTest.test_unrequested_target_is_not_failed_run) ... ok
+test_s3w01_success_mapping_evidence_and_run (sources.test_wiring_offline.WiringOfflineTest.test_s3w01_success_mapping_evidence_and_run) ... ok
+test_s3w02_replay_is_duplicate_and_refreshes_last_seen (sources.test_wiring_offline.WiringOfflineTest.test_s3w02_replay_is_duplicate_and_refreshes_last_seen) ... ok
+test_s3w03_content_change_adds_version_with_faithful_counts (sources.test_wiring_offline.WiringOfflineTest.test_s3w03_content_change_adds_version_with_faithful_counts) ... ok
+test_s3w04_stat_only_change_stays_duplicate (sources.test_wiring_offline.WiringOfflineTest.test_s3w04_stat_only_change_stays_duplicate) ... ok
+test_s3w05_illegal_observed_at_keeps_adapter_fallback_stamp (sources.test_wiring_offline.WiringOfflineTest.test_s3w05_illegal_observed_at_keeps_adapter_fallback_stamp) ... ok
+test_s3w06_rate_limited_failure_writes_no_business_row (sources.test_wiring_offline.WiringOfflineTest.test_s3w06_rate_limited_failure_writes_no_business_row) ... ok
+test_s3w07_login_timeout_and_html_shell_fail_without_rows (sources.test_wiring_offline.WiringOfflineTest.test_s3w07_login_timeout_and_html_shell_fail_without_rows) ... ok
+test_s3w08_long_title_is_refused_without_truncation (sources.test_wiring_offline.WiringOfflineTest.test_s3w08_long_title_is_refused_without_truncation) ... ok
+test_s3w09_synthetic_url_is_example_domain_only (sources.test_wiring_offline.WiringOfflineTest.test_s3w09_synthetic_url_is_example_domain_only) ... ok
+test_s3w10_validation_layer_rejects_real_url_for_synthetic_row (sources.test_wiring_offline.WiringOfflineTest.test_s3w10_validation_layer_rejects_real_url_for_synthetic_row) ... ok
+test_s3w11_origin_and_source_isolation_is_import_level (sources.test_wiring_offline.WiringOfflineTest.test_s3w11_origin_and_source_isolation_is_import_level) ... ok
+test_s3w12_detail_and_sources_endpoint_unchanged (sources.test_wiring_offline.WiringOfflineTest.test_s3w12_detail_and_sources_endpoint_unchanged) ... ok
+test_s3w13_new_candidate_pending_and_override_untouched (sources.test_wiring_offline.WiringOfflineTest.test_s3w13_new_candidate_pending_and_override_untouched)
+状态语义：沿用既有派生/override，不新增门槛；已核验 testable 的保持由联合门槛套件覆盖。 ... ok
+test_s3w14_no_network_and_no_http_client_in_modules (sources.test_wiring_offline.WiringOfflineTest.test_s3w14_no_network_and_no_http_client_in_modules) ... ok
+test_s3w15_default_import_path_is_unaffected (sources.test_wiring_offline.WiringOfflineTest.test_s3w15_default_import_path_is_unaffected) ... ok
+test_s3w16_s4_default_and_explicit_assumption_still_work (sources.test_wiring_offline.WiringOfflineTest.test_s3w16_s4_default_and_explicit_assumption_still_work) ... ok
+test_s3w17_revisit_through_wiring_keeps_chain (sources.test_wiring_offline.WiringOfflineTest.test_s3w17_revisit_through_wiring_keeps_chain) ... ok
+test_s3w18_external_supply_cost_gate_keys_are_dropped (sources.test_wiring_offline.WiringOfflineTest.test_s3w18_external_supply_cost_gate_keys_are_dropped) ... ok
+test_s3w19_internal_parameter_rules (sources.test_wiring_offline.WiringOfflineTest.test_s3w19_internal_parameter_rules) ... ok
+test_s3w20_failure_audit_matrix (sources.test_wiring_offline.WiringOfflineTest.test_s3w20_failure_audit_matrix) ... ok
+test_s3w21_missing_bvid_and_unknown_target_are_audited_without_rows (sources.test_wiring_offline.WiringOfflineTest.test_s3w21_missing_bvid_and_unknown_target_are_audited_without_rows) ... ok
+test_input_money_must_be_non_negative_and_derived_columns_are_free (storage.test_migrations.MigrationTest.test_input_money_must_be_non_negative_and_derived_columns_are_free) ... ok
+test_run_record_allows_null_source_and_rejects_source_dash_string (storage.test_migrations.MigrationTest.test_run_record_allows_null_source_and_rejects_source_dash_string) ... ok
+test_schema_applies_and_is_repeatable (storage.test_migrations.MigrationTest.test_schema_applies_and_is_repeatable) ... ok
+test_seed_sources_exist (storage.test_migrations.MigrationTest.test_seed_sources_exist) ... ok
+test_ensure_schema_directly_refuses_higher_version (storage.test_schema_version_guard.SchemaVersionGuardTest.test_ensure_schema_directly_refuses_higher_version) ... ok
+test_fresh_database_boots (storage.test_schema_version_guard.SchemaVersionGuardTest.test_fresh_database_boots) ... ok
+test_higher_version_refuses_startup (storage.test_schema_version_guard.SchemaVersionGuardTest.test_higher_version_refuses_startup) ... ok
+test_lower_version_gets_upgraded (storage.test_schema_version_guard.SchemaVersionGuardTest.test_lower_version_gets_upgraded) ... ok
+test_refused_startup_does_not_write_business_tables (storage.test_schema_version_guard.SchemaVersionGuardTest.test_refused_startup_does_not_write_business_tables) ... ok
+test_same_version_is_idempotent (storage.test_schema_version_guard.SchemaVersionGuardTest.test_same_version_is_idempotent) ... ok
+test_backup_creates_db_and_manifest (tools.test_backup_restore.BackupRestoreTest.test_backup_creates_db_and_manifest) ... ok
+test_backup_does_not_modify_source_and_adds_no_sidecars (tools.test_backup_restore.BackupRestoreTest.test_backup_does_not_modify_source_and_adds_no_sidecars) ... ok
+test_backup_missing_source_rejected (tools.test_backup_restore.BackupRestoreTest.test_backup_missing_source_rejected) ... ok
+test_backup_refuses_overwrite (tools.test_backup_restore.BackupRestoreTest.test_backup_refuses_overwrite) ... ok
+test_backup_refuses_source_with_wal_sidecars (tools.test_backup_restore.BackupRestoreTest.test_backup_refuses_source_with_wal_sidecars) ... ok
+test_cli_backup_and_restore (tools.test_backup_restore.BackupRestoreTest.test_cli_backup_and_restore) ... ok
+test_restore_refuses_backup_with_sidecars (tools.test_backup_restore.BackupRestoreTest.test_restore_refuses_backup_with_sidecars) ... ok
+test_restore_refuses_business_db_target (tools.test_backup_restore.BackupRestoreTest.test_restore_refuses_business_db_target) ... ok
+test_restore_refuses_existing_target (tools.test_backup_restore.BackupRestoreTest.test_restore_refuses_existing_target) ... ok
+test_restore_rejects_corrupted_backup (tools.test_backup_restore.BackupRestoreTest.test_restore_rejects_corrupted_backup) ... ok
+test_restore_rejects_higher_schema_version (tools.test_backup_restore.BackupRestoreTest.test_restore_rejects_higher_schema_version)
+R-02：库版本高于应用支持版本 → 恢复层明确拒绝（应用层不拒绝的差距如实保留）。 ... ok
+test_restore_rejects_manifest_mismatch (tools.test_backup_restore.BackupRestoreTest.test_restore_rejects_manifest_mismatch) ... ok
+test_restore_to_isolated_copy_verified (tools.test_backup_restore.BackupRestoreTest.test_restore_to_isolated_copy_verified) ... ok
+test_verify_manifest_detects_tampering (tools.test_backup_restore.BackupRestoreTest.test_verify_manifest_detects_tampering) ... ok
+test_as_of_and_limit_are_honored (tools.test_export_daily.ExportDailyTest.test_as_of_and_limit_are_honored) ... ok
+test_cli_rejects_bad_as_of_and_instance_out_dir (tools.test_export_daily.ExportDailyTest.test_cli_rejects_bad_as_of_and_instance_out_dir) ... ok
+test_cli_requires_as_of (tools.test_export_daily.ExportDailyTest.test_cli_requires_as_of) ... ok
+test_cli_success_writes_files (tools.test_export_daily.ExportDailyTest.test_cli_success_writes_files) ... ok
+test_export_is_read_only (tools.test_export_daily.ExportDailyTest.test_export_is_read_only) ... ok
+test_exports_json_and_csv_utf8 (tools.test_export_daily.ExportDailyTest.test_exports_json_and_csv_utf8) ... ok
+test_instance_input_is_readonly_allowed (tools.test_export_daily.ExportDailyTest.test_instance_input_is_readonly_allowed)
+输入库允许 instance/app.db：用 tmp 构造 instance 目录并 monkeypatch ROOT 指向，不读真实业务库。 ... ok
+test_out_dir_custom_created (tools.test_export_daily.ExportDailyTest.test_out_dir_custom_created) ... ok
+test_rejects_instance_out_dir (tools.test_export_daily.ExportDailyTest.test_rejects_instance_out_dir) ... ok
+test_rejects_missing_database (tools.test_export_daily.ExportDailyTest.test_rejects_missing_database) ... ok
+test_detail_feedback_region_keeps_stable_tbody_and_toggles_empty_state (ui.test_pages.PageTests.test_detail_feedback_region_keeps_stable_tbody_and_toggles_empty_state) ... ok
+test_empty_database_pages_open_with_states_and_no_501 (ui.test_pages.PageTests.test_empty_database_pages_open_with_states_and_no_501) ... ok
+test_home_exposes_pagination_controls (ui.test_pages.PageTests.test_home_exposes_pagination_controls) ... ok
+test_import_page_gates_confirm_and_shows_source_three_states (ui.test_pages.PageTests.test_import_page_gates_confirm_and_shows_source_three_states) ... ok
+test_import_then_list_and_detail_render_key_fields (ui.test_pages.PageTests.test_import_then_list_and_detail_render_key_fields) ... ok
+test_missing_candidate_renders_not_found_page (ui.test_pages.PageTests.test_missing_candidate_renders_not_found_page) ... ok
+test_page_work_does_not_change_api_contract (ui.test_pages.PageTests.test_page_work_does_not_change_api_contract) ... ok
+test_pages_expose_no_send_publish_or_purchase_controls (ui.test_pages.PageTests.test_pages_expose_no_send_publish_or_purchase_controls) ... ok
+test_pages_use_frozen_api_endpoints_via_static_assets (ui.test_pages.PageTests.test_pages_use_frozen_api_endpoints_via_static_assets) ... C:\Users\19183\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\Lib\unittest\case.py:589: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\桌面\\two\\app\\static/ui.js'>
+  if method() is not None:
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\19183\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\Lib\unittest\case.py:589: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\桌面\\two\\app\\static/style.css'>
+  if method() is not None:
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_script_title_is_rendered_as_text_without_script_node (ui.test_pages.PageTests.test_script_title_is_rendered_as_text_without_script_node) ... ok
+test_unknown_cost_shows_unknown_and_explicit_zero_shows_zero (ui.test_pages.PageTests.test_unknown_cost_shows_unknown_and_explicit_zero_shows_zero) ... ok
+test_js_refund_payload_is_accepted_by_real_endpoint (ui.test_ui_behavior.CapturedFeedbackPayloadTest.test_js_refund_payload_is_accepted_by_real_endpoint) ... ok
+test_every_element_id_used_by_js_exists_in_templates (ui.test_ui_behavior.UiBehaviourTest.test_every_element_id_used_by_js_exists_in_templates) ... ok
+test_node_behaviour_harness_passes (ui.test_ui_behavior.UiBehaviourTest.test_node_behaviour_harness_passes) ... ok
+
+----------------------------------------------------------------------
+Ran 334 tests in 48.109s
+
+OK

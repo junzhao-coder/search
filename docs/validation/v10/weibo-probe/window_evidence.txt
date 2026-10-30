@@ -1,0 +1,1 @@
+﻿{"sampled_utc":"2026-10-27T15:03:10.093Z","pid":115716,"title":"Legacy: woleiaaa@gmail.com | Service Accounts - Google Chrome","handle":5639076,"visible":true,"responding":true,"rect":"-7,-7,1714,1026"}

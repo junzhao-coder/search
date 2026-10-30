@@ -1,0 +1,22 @@
+{
+  "channel": "DSH native web_search tool (this session). NOT the Agent Reach CLI and NOT an account-free platform API call. Reported separately on purpose.",
+  "recorded_utc": "2026-10-21T13:48:00Z",
+  "query": "Panniantong Agent Reach v1.5.0 MIT MCP",
+  "status": "success",
+  "sources": [
+    {"title": "GitHub 94k Star 工具 Agent Reach：给 AI Agent 装上互联网能力，零 API 费用接入 13 个平台 - ai建国", "url": "https://cloud.tencent.cn/developer/article/2757255#1"},
+    {"title": "Panniantong/Agent-Reach v1.5.0 on GitHub", "url": "https://newreleases.io/project/github/Panniantong/Agent-Reach/release/v1.5.0"},
+    {"title": "Agent Reach：给 AI Agent 装上互联网能力，零 API 费用接入 13 个平台（2026 年 10 月）", "url": "https://news.qiniu.com/archives/1791511252431#1"},
+    {"title": "stars/Panniantong/Agent-Reach.md at master · DavidWells/stars", "url": "https://github.com/DavidWells/stars/blob/master/stars/Panniantong/Agent-Reach.md#1"},
+    {"title": "v1.5.0 实测 15 个渠道 · Issue #566 · Panniantong/Agent-Reach", "url": "https://github.com/Panniantong/Agent-Reach/issues/566#1"},
+    {"title": "推荐一个10万星的开源项目，Agent Reach", "url": "https://zhuanlan.zhihu.com/p/2094482493701354381"},
+    {"title": "Panniantong/Agent-Reach · Subagents for Claude AI", "url": "https://claudewave.com/en/repo/panniantong-agent-reach"},
+    {"title": "agent-reach-mcp - glama.ai MCP server listing", "url": "https://glama.ai/mcp/servers/M0-AR/agent-reach-mcp/tree#1"}
+  ],
+  "independent_conclusions": [
+    "A third-party release page (newreleases.io) independently lists Panniantong/Agent-Reach v1.5.0, supporting the version label used in the local SKILL.md frontmatter.",
+    "Upstream issue #566 (v1.5.0, 15 channels tested) reports real v1.5.0 channel weaknesses: YouTube subtitle routing broken, doctor cannot resolve backends for login-gated platforms, transcribe.sh unusable on Windows. This supports the local report's stance that doctor=ok is not the same as working.",
+    "None of these sources claims the local install works; they are upstream/community references only."
+  ],
+  "limits": ["This is a general web search via the DSH tool, not the Agent Reach no-account channel test (Bilibili search API / GitHub REST via curl) that the task asks to re-run; that re-run needs a shell."]
+}

@@ -1,0 +1,35 @@
+{
+  "current": {
+    "path": "C:\\Users\\19183\\.dsh\\profiles\\desktop\\cordis.patch.yml",
+    "bytes": 10899,
+    "sha256": "fda036e9aec82a7e07054df16e0ec425c0276ce6b6107e158239198fdb13c355",
+    "lines": 383,
+    "expected_sha256": "fda036e9aec82a7e07054df16e0ec425c0276ce6b6107e158239198fdb13c355",
+    "sha_matches": true
+  },
+  "backup": {
+    "path": "C:\\Users\\19183\\.dsh\\tooling-backups\\stealth-browser\\cordis.patch.yml.pre-stealth-20261021T132904Z",
+    "bytes": 9980,
+    "sha256": "7fe6843373d8ae1e772d0db38f08b2a360b19966aa5b073e03f7f1af3fadefde",
+    "lines": 363,
+    "expected_sha256": "7fe6843373d8ae1e772d0db38f08b2a360b19966aa5b073e03f7f1af3fadefde",
+    "sha_matches": true
+  },
+  "prefix": {
+    "byte_prefix_equal": true,
+    "normalized_text_prefix_equal": true,
+    "line_prefix_equal": true,
+    "common_bytes": 9980
+  },
+  "verdict": {
+    "append_only": true,
+    "only_one_insert_block": true,
+    "added_id_is_stealth": true,
+    "block_contract_ok": true,
+    "rollback_by_suffix_delete_restores_backup": true,
+    "actual_rollback_performed": false
+  },
+  "ok": true
+}
+added_block_sha256 8af9ecdd26473656e3501fa457ad05c31d89feb7e31ce6e9f950e069f016e2af
+added_lines 20

@@ -1,0 +1,81 @@
+{
+ "title": "[SYNTHETIC 自拟] AI 提示词包｜会议纪要与周报 10 条模板（纯文本）",
+ "selling_points": [
+  "10 条可直接套用的提示词模板，覆盖会议纪要、周报、反馈归类、摘要、验收标准等高频场景。",
+  "每条都写成「输入什么 → 输出什么」，替换方括号内容即可用。",
+  "纯文本交付（.md/.txt），不需要任何软件或插件。",
+  "不含代写服务、不承诺效果；输出质量取决于你给的材料。",
+  "可自行复制到任意对话式 AI 工具中使用。"
+ ],
+ "contents": {
+  "includes": "纯文本文件（.md 或 .txt）一份，含 10 条提示词模板与使用说明；每条含用途、输入示例、输出结构；不含任何第三方付费模板内容",
+  "excludes": "不含代写/代运营服务；不含账号/订阅；不含图片素材；不承诺效果或收益；不含特定平台专属玩法（可能随平台规则变化）"
+ },
+ "format": {
+  "fmt": "md",
+  "language": "中文",
+  "version": "v1"
+ },
+ "price": {
+  "amount_minor": 1990,
+  "currency": "CNY",
+  "note": "定价建议，最终以卖家填写为准"
+ },
+ "delivery": "交付：单个 .md/.txt 文件；不含账号/订阅；不代填不代写",
+ "aftersales": "不承诺更新与效果；售后范围/时限/退款政策未定，以平台规则为准；不含代运营",
+ "faq": [
+  {
+   "q": "需要什么软件？",
+   "a": "任意文本编辑器即可；使用时复制到你所用的对话式 AI 工具。"
+  },
+  {
+   "q": "能在手机上用吗？",
+   "a": "可以，纯文本无格式依赖。"
+  },
+  {
+   "q": "会更新吗？",
+   "a": "当前为一次性版本，不承诺更新。"
+  },
+  {
+   "q": "能保证效果吗？",
+   "a": "不能；输出质量取决于你提供的材料与所用模型。"
+  },
+  {
+   "q": "可以商用吗？",
+   "a": "自用/团队内使用可以；再分发或转售需另行确认。"
+  },
+  {
+   "q": "怎么交付？",
+   "a": "以文本文件交付（站内文件/网盘等方式以平台规则为准）。"
+  }
+ ],
+ "version_stamp": {
+  "workorder_id": "wo:pp-synthetic",
+  "revision": 1,
+  "copy_version": "pp-v1-copy",
+  "supply_id": "self:prompt-pack-v1",
+  "supply_version": "pp-v1",
+  "generated_utc": "2026-10-23T13:41:57Z",
+  "contents": [
+   "title",
+   "selling_points",
+   "listing_contents",
+   "format",
+   "price",
+   "delivery",
+   "aftersales",
+   "faq"
+  ],
+  "stamp_hash": "e3c660dd6cdcd772e8c94ce61818e196e4a94ad733a626139f4173ba2b6bf2c7"
+ },
+ "buyer_visible_fields": [
+  "title",
+  "selling_points",
+  "contents",
+  "format",
+  "price",
+  "delivery",
+  "aftersales",
+  "faq"
+ ]
+}

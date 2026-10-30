@@ -1,0 +1,27 @@
+usage: agent-reach [-h] [-v] [--version]
+                   {setup,install,configure,doctor,uninstall,skill,format,transcribe,check-update,watch,version}
+                   ...
+
+Give your AI Agent eyes to see the entire internet
+
+positional arguments:
+  {setup,install,configure,doctor,uninstall,skill,format,transcribe,check-update,watch,version}
+                        Available commands
+    setup               Interactive configuration wizard
+    install             One-shot installer with flags
+    configure           Set a config value or auto-extract from browser
+    doctor              Check platform availability
+    uninstall           Remove all Agent Reach config, tokens, and skill files
+    skill               Manage agent skill registration
+    format              Clean and format platform API output
+    transcribe          Transcribe a URL or local audio file (Whisper via
+                        Groq/OpenAI)
+    check-update        Check for new versions and changes
+    watch               Quick health check + update check (for scheduled
+                        tasks)
+    version             Show version
+
+options:
+  -h, --help            show this help message and exit
+  -v, --verbose         Show debug logs
+  --version             show program's version number and exit

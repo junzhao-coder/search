@@ -1,0 +1,57 @@
+{
+ "utc": "2026-10-23T11:55:00Z",
+ "files": {
+  "instance/app.db": {
+   "exists": true,
+   "sha256": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+   "bytes": 241664
+  },
+  "docs/design/CONTRACT.md": {
+   "exists": true,
+   "sha256": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+   "bytes": 74839
+  },
+  "app/sources/wiring.py": {
+   "exists": true,
+   "sha256": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+   "bytes": 8402
+  },
+  "app/sources/bilibili_view.py": {
+   "exists": true,
+   "sha256": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+   "bytes": 12866
+  },
+  "app/core/importer.py": {
+   "exists": true,
+   "sha256": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+   "bytes": 49011
+  },
+  "docs/validation/money-project/scoring/scores.csv": {
+   "exists": true,
+   "sha256": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+   "bytes": 37342
+  },
+  "docs/validation/money-project/sourcing/sources.csv": {
+   "exists": true,
+   "sha256": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+   "bytes": 5488
+  },
+  "docs/validation/money-project/sourcing/price_signals.csv": {
+   "exists": true,
+   "sha256": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691",
+   "bytes": 17897
+  },
+  "app/storage/migrations/0001_init.sql": {
+   "exists": true,
+   "sha256": "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb",
+   "bytes": 14102
+  },
+  "app/storage/migrations/0002_draft_feedback.sql": {
+   "exists": true,
+   "sha256": "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed",
+   "bytes": 2688
+  }
+ },
+ "wal": false,
+ "shm": false
+}

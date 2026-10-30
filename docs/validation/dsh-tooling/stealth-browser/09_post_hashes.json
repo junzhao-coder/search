@@ -1,0 +1,84 @@
+{
+    "utc":  "2026-10-21T13:32:01.7283251Z",
+    "files":  [
+                  {
+                      "path":  "D:\\桌面\\two\\instance\\app.db",
+                      "before":  "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+                      "after":  "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+                      "same":  true
+                  },
+                  {
+                      "path":  "D:\\桌面\\two\\requirements.txt",
+                      "before":  "0af19a0f1c100e99483b79e7f11b500ccf6a5a1477d8ac4b560c077b2bea7731",
+                      "after":  "0af19a0f1c100e99483b79e7f11b500ccf6a5a1477d8ac4b560c077b2bea7731",
+                      "same":  true
+                  },
+                  {
+                      "path":  "D:\\桌面\\two\\docs\\design\\CONTRACT.md",
+                      "before":  "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+                      "after":  "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+                      "same":  true
+                  },
+                  {
+                      "path":  "D:\\桌面\\two\\app\\sources\\wiring.py",
+                      "before":  "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+                      "after":  "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+                      "same":  true
+                  },
+                  {
+                      "path":  "D:\\桌面\\two\\app\\core\\importer.py",
+                      "before":  "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+                      "after":  "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+                      "same":  true
+                  },
+                  {
+                      "path":  "D:\\桌面\\two\\app\\sources\\bilibili_view.py",
+                      "before":  "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+                      "after":  "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+                      "same":  true
+                  },
+                  {
+                      "path":  "C:\\Users\\19183\\.dsh\\profiles\\desktop\\package.json",
+                      "before":  "10424b6b3ce5609fef0aeb63f6d55da740a6c5a4b4a1f6f569879b9dcdccac5c",
+                      "after":  "10424b6b3ce5609fef0aeb63f6d55da740a6c5a4b4a1f6f569879b9dcdccac5c",
+                      "same":  true
+                  },
+                  {
+                      "path":  "C:\\Users\\19183\\.dsh\\profiles\\desktop\\cordis.patch.yml",
+                      "before":  "7fe6843373d8ae1e772d0db38f08b2a360b19966aa5b073e03f7f1af3fadefde",
+                      "after":  "fda036e9aec82a7e07054df16e0ec425c0276ce6b6107e158239198fdb13c355",
+                      "same":  false
+                  },
+                  {
+                      "path":  "C:\\Users\\19183\\AppData\\Local\\Programs\\DeepSeek Harness\\resources\\app\\dsh\\package.json",
+                      "before":  "b67a65b9719272b2eb54093b63c121d05907da062a1393e8c9f871e1cd18f94e",
+                      "after":  "b67a65b9719272b2eb54093b63c121d05907da062a1393e8c9f871e1cd18f94e",
+                      "same":  true
+                  },
+                  {
+                      "path":  "C:\\Users\\19183\\AppData\\Local\\Programs\\DeepSeek Harness\\resources\\app\\dsh\\node_modules\\@deepseek-ai\\dsh-mcp-client\\lib\\index.js",
+                      "before":  "758d8fc473b700b5d351158d06ce9f9e92c16e8b25497b08bb7bd2122a87f5dd",
+                      "after":  "758d8fc473b700b5d351158d06ce9f9e92c16e8b25497b08bb7bd2122a87f5dd",
+                      "same":  true
+                  }
+              ],
+    "migrations":  [
+                       {
+                           "name":  "0001_init.sql",
+                           "before":  "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb",
+                           "after":  "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb",
+                           "same":  true
+                       },
+                       {
+                           "name":  "0002_draft_feedback.sql",
+                           "before":  "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed",
+                           "after":  "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed",
+                           "same":  true
+                       }
+                   ],
+    "intended_changes":  [
+                             "C:\\Users\\19183\\.dsh\\profiles\\desktop\\cordis.patch.yml"
+                         ],
+    "unexpected_changes":  0,
+    "all_expected":  true
+}

@@ -1,0 +1,55 @@
+{
+  "task": "task-c9b56db4d019ff4dfd23ad094f7001a5",
+  "run_id": "xhs-login-20261026T020529Z",
+  "command": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\venv\\Scripts\\python.exe -X utf8 C:\\Users\\19183\\.dsh\\tools\\xhs-collect\\xhs_collect.py login",
+  "cwd": "C:\\Users\\19183\\.dsh\\tools\\xhs-collect",
+  "started_utc": "2026-10-26T02:05:29Z",
+  "timeout_at_utc": "2026-10-26T02:10:30Z",
+  "python_pid": 130584,
+  "chrome_pid": 101568,
+  "window_handle": 458988,
+  "window_title": "小红书 - 你的生活兴趣社区 - Google Chrome",
+  "window_visible": true,
+  "window_responding": true,
+  "window_rect": [10, 10, 1060, 1009],
+  "profile": "C:\\Users\\19183\\.dsh\\tools\\xhs-collect\\profile",
+  "login_stdout": "LOGIN_TIMEOUT",
+  "login_stderr": "",
+  "login_exit_code": "not captured",
+  "login_exit_note": "Start-Process PID object was not retained across shell invocations; not inferred from source and login was not rerun.",
+  "cookies_mtime_observation_utc": "2026-10-26T02:08:39Z",
+  "cookies_mtime_note": "File mtime observation only; accurate login time unknown.",
+  "live_detection": "timed out at 300s; after browser close local cookie names were readable; cause not investigated",
+  "doctor_checks": [
+    {
+      "start_utc": "2026-10-26T02:13:53Z",
+      "exit": 0,
+      "state": "ready",
+      "cookie_names": {
+        "db_exists": true,
+        "web_session": true,
+        "a1": true,
+        "webId": true,
+        "customerClientId": false
+      },
+      "log": "tools/selection/logs/xhs_doctor_20261026_run.log",
+      "role": "primary"
+    },
+    {
+      "start_utc": "2026-10-26T02:18:49Z",
+      "exit": 0,
+      "state": "ready",
+      "cookie_names": {
+        "db_exists": true,
+        "web_session": true,
+        "a1": true,
+        "webId": true,
+        "customerClientId": false
+      },
+      "log": "tools/selection/logs/xhs_doctor_20261026_recheck.log",
+      "role": "recheck"
+    }
+  ],
+  "interpretation": "Local profile has readable cookie names and doctor state=ready at both logged checks. Online session validity and accurate login time are not verified. The live login script timed out; the cause of the timeout is not established.",
+  "no_sensitive_values": true
+}

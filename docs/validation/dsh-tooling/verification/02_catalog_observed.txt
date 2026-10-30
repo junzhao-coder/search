@@ -1,0 +1,32 @@
+Skill catalog observed in the fresh Flow executor session (independent of installers)
+recorded_utc=2026-10-21T13:50:57Z
+session=session-2ec5f901-e129-5a00-a488-80333567fa52  role=executor A  cwd_D:\桌面\two
+
+catalog entries visible to THIS session (verbatim names from the available_skills block):
+- agent-reach
+- diagnose-windows-sandbox-acl
+- impeccable
+- office
+- office-docx
+- office-export-pdf
+- office-pptx
+- office-recalculate
+- office-render
+- office-xlsx
+- ponytail
+- ponytail-audit
+- ponytail-debt
+- ponytail-gain
+- ponytail-help
+- ponytail-review
+- stealth-browser-mcp
+- x-ui-deploy
+
+result:
+- agent-reach            : PRESENT in catalog (description matches C:\Users\19183\.dsh\skills\agent-reach\SKILL.md frontmatter, incl. Bilibili/V2EX/GitHub/RSS/小红书 routing and read-only rules)
+- stealth-browser-mcp    : PRESENT in catalog (description matches C:\Users\19183\.dsh\skills\stealth-browser-mcp\SKILL.md frontmatter)
+- skill tool to LOAD them: NOT PRESENT in this session's function schema -> native load could not be attempted (see 04_native_capability_probe.md)
+
+command=no command executed (no shell in this session)
+cwd=D:\桌面\two
+exit=not-applicable (observation-only, no process spawned)

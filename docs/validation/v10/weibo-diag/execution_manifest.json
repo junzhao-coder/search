@@ -1,0 +1,73 @@
+{
+ "generated_utc": "2026-10-27T15:22:57Z",
+ "network": "none",
+ "browser": "none",
+ "suites": [
+  {
+   "name": "tests.test_access_weibo",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_access_weibo",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two",
+   "start_utc": "2026-10-27T15:22:43Z",
+   "end_utc": "2026-10-27T15:22:47Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 42 tests in 3.441s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-diag\\logs\\test_access_weibo.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-diag\\logs\\test_access_weibo.stderr.txt"
+  },
+  {
+   "name": "tests.test_access_zhihu",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_access_zhihu",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two",
+   "start_utc": "2026-10-27T15:22:47Z",
+   "end_utc": "2026-10-27T15:22:55Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 96 tests in 7.972s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-diag\\logs\\test_access_zhihu.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-diag\\logs\\test_access_zhihu.stderr.txt"
+  },
+  {
+   "name": "tests.test_access_budget",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_access_budget",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two",
+   "start_utc": "2026-10-27T15:22:55Z",
+   "end_utc": "2026-10-27T15:22:57Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 20 tests in 1.589s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-diag\\logs\\test_access_budget.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-diag\\logs\\test_access_budget.stderr.txt"
+  }
+ ]
+}

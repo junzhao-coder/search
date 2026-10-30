@@ -1,0 +1,27 @@
+{
+ "before_sha": "06ebace18dca4b6223f50162a682abfcc1cb1b24f3d03951214767bd4776d71d",
+ "after_sha": "fcd74b5a7a5d1f6bb471e3e6206f0ed3a100e69ee333f21cf7865718803b0f5c",
+ "diff_lines": 13,
+ "runs": [
+  {
+   "log": "doctor_run1.log",
+   "handle": "@Johnsmathjyjp",
+   "utc": "2026-10-22T04:08:00Z",
+   "exit": 0,
+   "elapsed_s": 6.0,
+   "cookie_check": "COOKIE_CHECK exists=True x_rows=15 auth_token=True ct0=True"
+  },
+  {
+   "log": "doctor_run2.log",
+   "handle": "@Johnsmathjyjp",
+   "utc": "2026-10-22T04:08:07Z",
+   "exit": 0,
+   "elapsed_s": 6.0,
+   "cookie_check": "COOKIE_CHECK exists=True x_rows=15 auth_token=True ct0=True"
+  }
+ ],
+ "same_handle": true,
+ "settings_body_fallback_present": false,
+ "handle": "@Johnsmathjyjp",
+ "note": "仅删除 SETTINGS_HANDLE_JS 正文回退"
+}

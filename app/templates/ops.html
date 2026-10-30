@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block page_id %}ops{% endblock %}
+{% block title %}成本与运行{% endblock %}
+{% block content %}
+    <h1 class="page-title">成本与运行</h1>
+    <p class="hint">运行记录来自本机 API；未实现的区域以“待 S5／S6”明确占位，不展示估算或示例金额。</p>
+
+    <section class="panel" aria-labelledby="runs-h">
+      <h2 id="runs-h">运行记录</h2>
+      {% if runs_error %}
+      <p class="state state-error" role="alert">读取运行记录失败：{{ runs_error }}</p>
+      {% elif runs %}
+      <table class="table">
+        <caption class="visually-hidden">最近运行记录</caption>
+        <thead>
+          <tr>
+            <th scope="col">类型</th>
+            <th scope="col">触发</th>
+            <th scope="col">逻辑日期</th>
+            <th scope="col">状态</th>
+            <th scope="col">开始</th>
+            <th scope="col">结束</th>
+            <th scope="col">发现／新增／重复</th>
+            <th scope="col">备注</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for run in runs %}
+          <tr>
+            <td>{{ run.run_type }}</td>
+            <td>{{ run.trigger }}</td>
+            <td>{{ run.logical_date }}</td>
+            <td><span class="badge badge-run-{{ run.status }}">{{ run.status }}</span></td>
+            <td>{{ run.started_at }}</td>
+            <td>{{ run.finished_at or "—" }}</td>
+            <td>{{ run.items_found }}／{{ run.items_new }}／{{ run.items_dup }}</td>
+            <td>{{ run.error_summary or run.notes or "—" }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p class="state state-empty">暂无运行记录：导入或手动触发一次运行后出现。</p>
+      {% endif %}
+    </section>
+
+    <section class="panel" aria-labelledby="budget-h">
+      <h2 id="budget-h">月度运行支出</h2>
+      <p class="state state-empty">待 S5 实现：运行费用台账与调用预算保护（每月新增运行支出上限 100 元、累计计费与待发调用预估预留）。当前无数据，不显示任何金额。</p>
+    </section>
+
+    <section class="panel" aria-labelledby="procurement-h">
+      <h2 id="procurement-h">采购费用台账</h2>
+      <p class="state state-empty">待 S5 实现：采购费用逐项确认与台账（采购费用另账，仍逐项确认）。当前不显示任何采购金额。</p>
+    </section>
+
+    <section class="panel" aria-labelledby="backup-h">
+      <h2 id="backup-h">备份与恢复</h2>
+      <p class="state state-empty">待 S6 实现：数据库备份／恢复入口与演练记录。当前不提供下载或恢复动作。</p>
+    </section>
+{% endblock %}

@@ -1,0 +1,29 @@
+{
+ "generated_utc": "2026-10-27T13:59:51Z",
+ "suites": [
+  {
+   "name": "test_access_zhihu",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_access_zhihu",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two",
+   "start_utc": "2026-10-27T13:59:43Z",
+   "end_utc": "2026-10-27T13:59:51Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 84 tests in 7.591s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\v10\\zhihu-readiness\\logs\\test_access_zhihu.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\v10\\zhihu-readiness\\logs\\test_access_zhihu.stderr.txt",
+   "network": "none",
+   "browser": "none"
+  }
+ ]
+}

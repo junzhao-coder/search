@@ -1,0 +1,170 @@
+{
+ "generated_utc": "2026-10-29T14:54:14Z",
+ "read_only": "sqlite mode=ro&immutable=1",
+ "platform": {
+  "path": "tools\\selection\\access\\runtime\\platform_weibo.sqlite3",
+  "mtime_utc": "2026-10-29T14:46:06Z",
+  "wal_present": false,
+  "batches": [
+   {
+    "batch_id": "weibo-verify-1",
+    "site": "weibo",
+    "authorized_calls": 3,
+    "records_cap": 5,
+    "seed_used": 2,
+    "seed_source": "history:uncharged_navigation",
+    "seed_note": "",
+    "window_seconds": 300.0,
+    "started_at": 1793285139.7521708,
+    "source": "user:2026-10-29 reopen window",
+    "note": "two logins bound as seed; one search left",
+    "started_at_utc": "2026-10-29T14:45:39Z",
+    "window_end_utc": "2026-10-29T14:50:39Z"
+   }
+  ],
+  "events": [
+   {
+    "id": 1,
+    "kind": "search",
+    "at_utc": "2026-10-29T14:46:02Z",
+    "source": "weibo.search",
+    "detail": "https://m.weibo.cn/search"
+   },
+   {
+    "id": 2,
+    "kind": "search_result",
+    "at_utc": "2026-10-29T14:46:06Z",
+    "source": "weibo.result",
+    "detail": "success"
+   }
+  ],
+  "reservations": [
+   {
+    "count": 5,
+    "at_utc": "2026-10-29T14:46:06Z"
+   }
+  ],
+  "locks": [],
+  "history": {
+   "imported_at_utc": "2026-10-29T14:45:39Z",
+   "test_only": false,
+   "rows": [
+    {
+     "source_key": "probe1",
+     "classification": "pre_deducted",
+     "calls": 1,
+     "records": 0,
+     "locked": false
+    },
+    {
+     "source_key": "probe2",
+     "classification": "pre_deducted",
+     "calls": 1,
+     "records": 0,
+     "locked": false
+    },
+    {
+     "source_key": "probe3",
+     "classification": "pre_deducted",
+     "calls": 1,
+     "records": 0,
+     "locked": false
+    },
+    {
+     "source_key": "login-window-1",
+     "classification": "uncharged_navigation",
+     "calls": 0,
+     "records": 0,
+     "locked": false
+    },
+    {
+     "source_key": "login-window-2",
+     "classification": "uncharged_navigation",
+     "calls": 0,
+     "records": 0,
+     "locked": false
+    },
+    {
+     "source_key": "offline-login",
+     "classification": "offline_check",
+     "calls": 0,
+     "records": 0,
+     "locked": false
+    },
+    {
+     "source_key": "offline-search",
+     "classification": "offline_check",
+     "calls": 1,
+     "records": 0,
+     "locked": false
+    },
+    {
+     "source_key": "offline-detail",
+     "classification": "offline_check",
+     "calls": 1,
+     "records": 0,
+     "locked": false
+    },
+    {
+     "source_key": "offline-comments",
+     "classification": "offline_check",
+     "calls": 1,
+     "records": 0,
+     "locked": false
+    }
+   ]
+  }
+ },
+ "state_search": {
+  "path": "docs\\validation\\v10\\weibo-live-prep\\state-search\\budget.sqlite3",
+  "mtime_utc": "2026-10-29T14:46:06Z",
+  "wal_present": false,
+  "budget": {
+   "id": 1,
+   "state_dir": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-live-prep\\state-search",
+   "batch_id": "weibo-verify-1",
+   "created_at": 1793285162.4942622,
+   "started_at": 1793285162.4942622,
+   "calls": 1,
+   "records": 5,
+   "polls": 0,
+   "last_call_at": 1793285162.5103793,
+   "locked": 0,
+   "lock_reason": null,
+   "lock_source": null,
+   "started_at_utc": "2026-10-29T14:46:02Z",
+   "last_call_at_utc": "2026-10-29T14:46:02Z"
+  },
+  "ledger": [
+   {
+    "id": 1,
+    "kind": "charge",
+    "at_utc": "2026-10-29T14:46:02Z",
+    "detail": "{\"kind\": \"search\", \"detail\": \"https://m.weibo.cn/search\", \"batch_id\": \"weibo-verify-1\"}"
+   },
+   {
+    "id": 2,
+    "kind": "records",
+    "at_utc": "2026-10-29T14:46:06Z",
+    "detail": "{\"count\": 5, \"batch_id\": \"weibo-verify-1\"}"
+   },
+   {
+    "id": 3,
+    "kind": "search_result",
+    "at_utc": "2026-10-29T14:46:06Z",
+    "detail": "{\"count\": 5, \"exit\": 0}"
+   }
+  ]
+ },
+ "argparse_order": {
+  "option_before_subcommand": {
+   "exit": 2,
+   "stderr_last": "weibo: error: argument command: invalid choice: 'diag1' (choose from doctor, login, search, detail, comments, export, budget)"
+  },
+  "option_after_subcommand": {
+   "exit": 0,
+   "diagnostics_dir": "diag1",
+   "keyword": "kw"
+  }
+ }
+}

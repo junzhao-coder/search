@@ -1,0 +1,8 @@
+{
+ "workflow_db_sha256": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c",
+ "instance_sha256": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+ "contract_sha256": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+ "scores_sha256": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+ "wal": false,
+ "shm": false
+}

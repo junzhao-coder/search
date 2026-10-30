@@ -1,0 +1,34 @@
+{
+ "checked": 4,
+ "all_pass": true,
+ "cases": [
+  {
+   "case": "locked_source",
+   "status": "ok",
+   "calls": 2,
+   "locked": true,
+   "lock_reason": "text:安全验证",
+   "error": null,
+   "pass": true
+  },
+  {
+   "case": "corrupted_source",
+   "status": "unknown",
+   "locked": null,
+   "error": "read_failed:DatabaseError:file is not a database",
+   "pass": true
+  },
+  {
+   "case": "missing_source",
+   "status": "unknown",
+   "error": "missing",
+   "pass": true
+  },
+  {
+   "case": "wal_sidecar",
+   "status": "unknown",
+   "error": "wal_present",
+   "pass": true
+  }
+ ]
+}

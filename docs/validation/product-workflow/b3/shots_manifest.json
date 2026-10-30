@@ -1,0 +1,192 @@
+{
+ "base": "http://127.0.0.1:5018",
+ "workorders": {
+  "ready": "wo:20261023-df472755",
+  "blocked": "wo:20261023-11938b30"
+ },
+ "shots": {
+  "desktop_checks_not_ready.png": {
+   "found": true,
+   "sectionTitle": "上架准备检查（服务端判定）",
+   "clip": {
+    "x": 256,
+    "y": 1683,
+    "width": 1160,
+    "height": 749,
+    "scale": 1
+   },
+   "scrollY": 0,
+   "innerW": 1440,
+   "innerH": 900,
+   "scrollW": 1440,
+   "overflowX": false,
+   "hasChecks": true,
+   "hasBlockers": true,
+   "hasDisabled": true,
+   "hasExportLink": false,
+   "file": "desktop_checks_not_ready.png",
+   "path": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b3\\shots\\desktop_checks_not_ready.png",
+   "width": 1160,
+   "height": 749,
+   "bytes": 83205,
+   "sha256": "0c518cb90a07b8d5ab813c0e96a3ecd2e2665a9a8d8324880fc6d0f6fd8feac3",
+   "selector": "section[aria-labelledby=\"h-ready\"]",
+   "method": "cdp clip (capture_beyond_viewport)"
+  },
+  "desktop_checks_ready.png": {
+   "found": true,
+   "sectionTitle": "上架准备检查（服务端判定）",
+   "clip": {
+    "x": 256,
+    "y": 1683,
+    "width": 1160,
+    "height": 629,
+    "scale": 1
+   },
+   "scrollY": 0,
+   "innerW": 1440,
+   "innerH": 900,
+   "scrollW": 1440,
+   "overflowX": false,
+   "hasChecks": true,
+   "hasBlockers": true,
+   "hasDisabled": false,
+   "hasExportLink": true,
+   "file": "desktop_checks_ready.png",
+   "path": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b3\\shots\\desktop_checks_ready.png",
+   "width": 1160,
+   "height": 629,
+   "bytes": 45369,
+   "sha256": "352645c87064194d8a81c1f1e11e394dd0e24a9f829b6a357266264b9ccd5efe",
+   "selector": "section[aria-labelledby=\"h-ready\"]",
+   "method": "cdp clip (capture_beyond_viewport)"
+  },
+  "mobile_checks_ready.png": {
+   "found": true,
+   "sectionTitle": "上架准备检查（服务端判定）",
+   "clip": {
+    "x": 14,
+    "y": 2566,
+    "width": 362,
+    "height": 746,
+    "scale": 1
+   },
+   "scrollY": 0,
+   "innerW": 390,
+   "innerH": 844,
+   "scrollW": 390,
+   "overflowX": false,
+   "hasChecks": true,
+   "hasBlockers": true,
+   "hasDisabled": false,
+   "hasExportLink": true,
+   "file": "mobile_checks_ready.png",
+   "path": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b3\\shots\\mobile_checks_ready.png",
+   "width": 362,
+   "height": 746,
+   "bytes": 41925,
+   "sha256": "dc34cbe1d9919d1e56908a54302c979b7f41c177b4025a62e38759057383a107",
+   "selector": "section[aria-labelledby=\"h-ready\"]",
+   "method": "cdp clip (capture_beyond_viewport)"
+  },
+  "mobile_checks_not_ready.png": {
+   "found": true,
+   "sectionTitle": "上架准备检查（服务端判定）",
+   "clip": {
+    "x": 14,
+    "y": 2566,
+    "width": 362,
+    "height": 1307,
+    "scale": 1
+   },
+   "scrollY": 0,
+   "innerW": 390,
+   "innerH": 844,
+   "scrollW": 390,
+   "overflowX": false,
+   "hasChecks": true,
+   "hasBlockers": true,
+   "hasDisabled": true,
+   "hasExportLink": false,
+   "file": "mobile_checks_not_ready.png",
+   "path": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b3\\shots\\mobile_checks_not_ready.png",
+   "width": 362,
+   "height": 1307,
+   "bytes": 80331,
+   "sha256": "a0ff18b477c2c25ba2f105c9ad87102ba955770dd801fa0544fdc9c8e767d5e5",
+   "selector": "section[aria-labelledby=\"h-ready\"]",
+   "method": "cdp clip (capture_beyond_viewport)"
+  }
+ },
+ "checks": {
+  "desktop_checks_not_ready": {
+   "sectionTitle": "上架准备检查（服务端判定）",
+   "clip": {
+    "x": 256,
+    "y": 1683,
+    "width": 1160,
+    "height": 749,
+    "scale": 1
+   },
+   "scrollY": 0,
+   "hasChecks": true,
+   "hasBlockers": true,
+   "hasDisabled": true,
+   "hasExportLink": false
+  },
+  "desktop_checks_ready": {
+   "sectionTitle": "上架准备检查（服务端判定）",
+   "clip": {
+    "x": 256,
+    "y": 1683,
+    "width": 1160,
+    "height": 629,
+    "scale": 1
+   },
+   "scrollY": 0,
+   "hasChecks": true,
+   "hasBlockers": true,
+   "hasDisabled": false,
+   "hasExportLink": true
+  },
+  "mobile_checks_ready": {
+   "sectionTitle": "上架准备检查（服务端判定）",
+   "clip": {
+    "x": 14,
+    "y": 2566,
+    "width": 362,
+    "height": 746,
+    "scale": 1
+   },
+   "scrollY": 0,
+   "hasChecks": true,
+   "hasBlockers": true,
+   "hasDisabled": false,
+   "hasExportLink": true
+  },
+  "mobile_checks_not_ready": {
+   "sectionTitle": "上架准备检查（服务端判定）",
+   "clip": {
+    "x": 14,
+    "y": 2566,
+    "width": 362,
+    "height": 1307,
+    "scale": 1
+   },
+   "scrollY": 0,
+   "hasChecks": true,
+   "hasBlockers": true,
+   "hasDisabled": true,
+   "hasExportLink": false
+  }
+ },
+ "state_distinct": {
+  "desktop_checks_not_ready vs desktop_checks_ready": true,
+  "mobile_checks_not_ready vs mobile_checks_ready": true
+ },
+ "verification": {
+  "checked": 4,
+  "failed": [],
+  "ok": true
+ }
+}

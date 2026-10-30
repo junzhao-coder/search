@@ -1,0 +1,31 @@
+{
+  "script": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\scripts\\x_collect.py",
+  "action_hits": [],
+  "action_hits_count": 0,
+  "log_credential_hits": [],
+  "script_credential_hits": [],
+  "cookie_meta": {
+    "path": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\\Default\\Network\\Cookies",
+    "exists": true,
+    "x_rows": 14,
+    "names": [
+      "__cf_bm",
+      "__cuid",
+      "auth_token",
+      "cf_clearance",
+      "ct0",
+      "g_state",
+      "gt",
+      "guest_id",
+      "guest_id_ads",
+      "guest_id_marketing",
+      "lang",
+      "personalization_id",
+      "twid"
+    ],
+    "auth_token_name_present": true,
+    "ct0_name_present": true
+  },
+  "read_only_conclusion": true,
+  "logs_clean_conclusion": true
+}

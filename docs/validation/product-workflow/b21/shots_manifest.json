@@ -1,0 +1,44 @@
+{
+ "generated_utc": "2026-10-24T11:30:22Z",
+ "port": 5025,
+ "shots": {
+  "nav_pick_desktop.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 118576,
+   "url": "/pick?wo=wo:20261024-1defa51d",
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "5891c30bc674f359c7a45403fb6e6d80b886fe50007192103da1dc0f08ecdb2f"
+  },
+  "nav_source_desktop.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 80662,
+   "url": "/source?wo=wo:20261024-1defa51d",
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "11754ce94e8d44d77c4a4bd1fcf2c999553d31aca9214e7859d2012ce5567117"
+  },
+  "nav_copy_desktop.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 90831,
+   "url": "/copy?wo=wo:20261024-1defa51d",
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "addb0f63888b0da9cb542bf71754a13ca81fa218f4cd40e59c576140788e0d81"
+  },
+  "nav_mobile_menu.jpg": {
+   "width": 390,
+   "height": 844,
+   "bytes": 49550,
+   "url": "/pick?wo=wo:20261024-1defa51d（菜单展开）",
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "c9f71a20578c8a49fe3d017c258a3f3f3ac58dc8e1f5b6fe4d224e5af1d4272c",
+   "menu_expanded": "true"
+  }
+ },
+ "workorder_id": "wo:20261024-1defa51d"
+}

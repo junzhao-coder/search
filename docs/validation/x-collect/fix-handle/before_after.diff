@@ -1,0 +1,119 @@
+--- before_x_collect.py
++++ after_x_collect.py
+@@ -44,9 +44,44 @@
+     const m = t.match(/@([A-Za-z0-9_]{1,20})/);
+     if (m) return m[1];
+   }
+-  const body = document.body ? document.body.innerText : '';
+-  const hits = body.match(/@([A-Za-z0-9_]{2,20})/g) || [];
+-  return hits.length ? hits[0].slice(1) : null;
++  return null;
++})()
++"""
++
++SETTINGS_URL = "https://x.com/settings/account"
++SETTINGS_HANDLE_JS = r"""
++(() => {
++  const input = document.querySelector('input[name="username"]');
++  if (input && input.value) return input.value.replace(/^@/, '');
++  const text = document.body ? document.body.innerText : '';
++  const m = text.match(/@([A-Za-z0-9_]{1,20})/);
++  return m ? m[1] : null;
++})()
++"""
++
++CLICK_SWITCHER_JS = r"""
++(() => {
++  const b = document.querySelector('[data-testid="SideNav_AccountSwitcher_Button"]');
++  if (!b) return false;
++  b.click();
++  return true;
++})()
++"""
++
++MENU_HANDLE_JS = r"""
++(() => {
++  const logout = document.querySelector('[data-testid="AccountSwitcher_Logout_Button"]');
++  if (logout) {
++    const t = (logout.innerText || '') + ' ' + (logout.getAttribute('aria-label') || '');
++    const m = t.match(/@([A-Za-z0-9_]{1,20})/);
++    if (m) return m[1];
++  }
++  const menu = document.querySelector('[role="menu"]');
++  if (menu) {
++    const m = (menu.innerText || '').match(/@([A-Za-z0-9_]{1,20})/);
++    if (m) return m[1];
++  }
++  return null;
+ })()
+ """
+ 
+@@ -229,9 +264,46 @@
+     return str(href or ""), str(title or ""), str(content or "")
+ 
+ 
+-async def _handle(tab) -> str | None:
+-    value = await tab.evaluate(HANDLE_JS)
+-    return value if isinstance(value, str) and value else None
++async def _handle(tab, *, settings_fallback: bool = False, log: RunLog | None = None) -> str | None:
++    value = _decode_cdp(await tab.evaluate(HANDLE_JS))
++    if isinstance(value, str) and value:
++        return value
++    try:
++        clicked = _decode_cdp(await tab.evaluate(CLICK_SWITCHER_JS))
++        if log and clicked:
++            log.write("HANDLE_SWITCHER_CLICKED")
++        await asyncio.sleep(2)
++        value = _decode_cdp(await tab.evaluate(MENU_HANDLE_JS))
++        if isinstance(value, str) and value:
++            return value
++        try:
++            await tab.evaluate("(() => { document.body.click(); return true; })()")
++        except Exception:  # noqa: BLE001
++            pass
++    except Exception as exc:  # noqa: BLE001
++        if log:
++            log.write(f"HANDLE_MENU_ERROR={type(exc).__name__}")
++    if not settings_fallback:
++        return None
++    try:
++        await tab.get(SETTINGS_URL)
++    except Exception as exc:  # noqa: BLE001
++        if log:
++            log.write(f"SETTINGS_NAV_ERROR={type(exc).__name__}")
++        return None
++    for _ in range(6):
++        await asyncio.sleep(2)
++        try:
++            value = _decode_cdp(await tab.evaluate(SETTINGS_HANDLE_JS))
++        except Exception as exc:  # noqa: BLE001
++            if log:
++                log.write(f"SETTINGS_EVAL_ERROR={type(exc).__name__}")
++            value = None
++        if isinstance(value, str) and value:
++            return value.lstrip("@")
++    if log:
++        log.write("SETTINGS_HANDLE_UNKNOWN")
++    return None
+ 
+ 
+ def _expired(href: str, title: str, html: str, body_text_flag: bool | None = None) -> bool:
+@@ -271,15 +343,15 @@
+         handle = None
+         for _ in range(3):
+             try:
+-                handle = await _handle(tab)
++                handle = await _handle(tab, settings_fallback=True, log=log)
+             except Exception as exc:  # noqa: BLE001
+                 log.write(f"HANDLE_EVAL_ERROR={type(exc).__name__}")
+             if handle:
+                 break
+             await asyncio.sleep(2)
+         if not handle:
+-            log.write("UNKNOWN_HANDLE (home loaded but handle not found)")
+-            return ERROR
++            log.write("HANDLE_UNKNOWN (account switcher and settings/account both unavailable)")
++            return 0
+         log.write(f"LOGGED_IN handle=@{handle} utc={utc()}")
+         return 0
+     finally:

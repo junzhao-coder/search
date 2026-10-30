@@ -1,0 +1,109 @@
+{
+  "script": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\scripts\\x_collect.py",
+  "script_sha256": "06ebace18dca4b6223f50162a682abfcc1cb1b24f3d03951214767bd4776d71d",
+  "before_sha256": "efd95bcaf59a3065a352410aa833d4ddc01e24e79ea45d3b362438006da361e4",
+  "blocks": {
+    "HANDLE_JS": {
+      "found": true,
+      "start_line": 39,
+      "end_line": 49,
+      "body": "\n(() => {\n  const b = document.querySelector('[data-testid=\"SideNav_AccountSwitcher_Button\"]');\n  if (b) {\n    const t = (b.innerText || '') + ' ' + (b.getAttribute('aria-label') || '');\n    const m = t.match(/@([A-Za-z0-9_]{1,20})/);\n    if (m) return m[1];\n  }\n  return null;\n})()\n",
+      "has_document_body": false,
+      "has_body_innertext": false,
+      "has_at_regex": true
+    },
+    "SETTINGS_HANDLE_JS": {
+      "found": true,
+      "start_line": 52,
+      "end_line": 60,
+      "body": "\n(() => {\n  const input = document.querySelector('input[name=\"username\"]');\n  if (input && input.value) return input.value.replace(/^@/, '');\n  const text = document.body ? document.body.innerText : '';\n  const m = text.match(/@([A-Za-z0-9_]{1,20})/);\n  return m ? m[1] : null;\n})()\n",
+      "has_document_body": true,
+      "has_body_innertext": true,
+      "has_at_regex": true
+    },
+    "CLICK_SWITCHER_JS": {
+      "found": true,
+      "start_line": 62,
+      "end_line": 69,
+      "body": "\n(() => {\n  const b = document.querySelector('[data-testid=\"SideNav_AccountSwitcher_Button\"]');\n  if (!b) return false;\n  b.click();\n  return true;\n})()\n",
+      "has_document_body": false,
+      "has_body_innertext": false,
+      "has_at_regex": false
+    },
+    "MENU_HANDLE_JS": {
+      "found": true,
+      "start_line": 71,
+      "end_line": 86,
+      "body": "\n(() => {\n  const logout = document.querySelector('[data-testid=\"AccountSwitcher_Logout_Button\"]');\n  if (logout) {\n    const t = (logout.innerText || '') + ' ' + (logout.getAttribute('aria-label') || '');\n    const m = t.match(/@([A-Za-z0-9_]{1,20})/);\n    if (m) return m[1];\n  }\n  const menu = document.querySelector('[role=\"menu\"]');\n  if (menu) {\n    const m = (menu.innerText || '').match(/@([A-Za-z0-9_]{1,20})/);\n    if (m) return m[1];\n  }\n  return null;\n})()\n",
+      "has_document_body": false,
+      "has_body_innertext": false,
+      "has_at_regex": true
+    }
+  },
+  "changed_line_count": 90,
+  "changed_lines_sample": [
+    "-  const body = document.body ? document.body.innerText : '';",
+    "-  const hits = body.match(/@([A-Za-z0-9_]{2,20})/g) || [];",
+    "-  return hits.length ? hits[0].slice(1) : null;",
+    "+  return null;",
+    "+})()",
+    "+\"\"\"",
+    "+",
+    "+SETTINGS_URL = \"https://x.com/settings/account\"",
+    "+SETTINGS_HANDLE_JS = r\"\"\"",
+    "+(() => {",
+    "+  const input = document.querySelector('input[name=\"username\"]');",
+    "+  if (input && input.value) return input.value.replace(/^@/, '');",
+    "+  const text = document.body ? document.body.innerText : '';",
+    "+  const m = text.match(/@([A-Za-z0-9_]{1,20})/);",
+    "+  return m ? m[1] : null;",
+    "+})()",
+    "+\"\"\"",
+    "+",
+    "+CLICK_SWITCHER_JS = r\"\"\"",
+    "+(() => {",
+    "+  const b = document.querySelector('[data-testid=\"SideNav_AccountSwitcher_Button\"]');",
+    "+  if (!b) return false;",
+    "+  b.click();",
+    "+  return true;",
+    "+})()",
+    "+\"\"\"",
+    "+",
+    "+MENU_HANDLE_JS = r\"\"\"",
+    "+(() => {",
+    "+  const logout = document.querySelector('[data-testid=\"AccountSwitcher_Logout_Button\"]');"
+  ],
+  "handle_def_start_line": 267,
+  "handle_sequence_has_switcher_click": true,
+  "handle_sequence_has_menu": true,
+  "handle_sequence_has_settings": true,
+  "handle_sequence_has_document_body": true,
+  "handle_sequence_excerpt": "async def _handle(tab, *, settings_fallback: bool = False, log: RunLog | None = None) -> str | None:\n    value = _decode_cdp(await tab.evaluate(HANDLE_JS))\n    if isinstance(value, str) and value:\n        return value\n    try:\n        clicked = _decode_cdp(await tab.evaluate(CLICK_SWITCHER_JS))\n        if log and clicked:\n            log.write(\"HANDLE_SWITCHER_CLICKED\")\n        await asyncio.sleep(2)\n        value = _decode_cdp(await tab.evaluate(MENU_HANDLE_JS))\n        if isinstance(value, str) and value:\n            return value\n        try:\n            await tab.evaluate(\"(() => { document.body.click(); return true; })()\")\n        except Exception:  # noqa: BLE001\n            pass\n    except Exception as exc:  # noqa: BLE001\n        if log:\n            log.write(f\"HANDLE_MENU_ERROR={type(exc).__name__}\")\n    if not settings_fallback:\n        return None\n    try:\n        await tab.get(SETTINGS_URL)\n    except Exception as exc:  # noqa: BLE001\n        if log:\n            log.write(f\"SETTINGS_NAV_ERROR={type(exc).__name__}\")\n        return None\n    for _ in range(6):\n        await asyncio.sleep(2)\n        try:\n            value = _decode_cdp(await tab.evaluate(SETTINGS_HANDLE_JS))\n        except Exception as exc:  # noqa: BLE001\n            if log:\n                log.write(f\"SETTINGS_EVAL_ERROR={type(exc).__name__}\")\n            value = None\n        if isinstance(value, str) and value:\n            return value.lstrip(\"@\")\n    if log:\n        log.write(\"SETTINGS_HANDLE_UNKNOWN\")\n    return None\n\n\n",
+  "residual_body_fallbacks": [
+    "SETTINGS_HANDLE_JS"
+  ],
+  "HANDLE_JS_clean": true,
+  "cookie_meta": {
+    "path": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\\Default\\Network\\Cookies",
+    "exists": true,
+    "x_rows": 15,
+    "names": [
+      "__cf_bm",
+      "__cuid",
+      "_twitter_sess",
+      "auth_token",
+      "cf_clearance",
+      "ct0",
+      "g_state",
+      "gt",
+      "guest_id",
+      "guest_id_ads",
+      "guest_id_marketing",
+      "lang",
+      "personalization_id",
+      "twid"
+    ],
+    "auth_token_name_present": true,
+    "ct0_name_present": true
+  }
+}

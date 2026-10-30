@@ -1,0 +1,49 @@
+{
+  "generated_at_utc": "2026-10-22T11:40:41Z",
+  "weights": {
+    "demand_strength": 0.255,
+    "competition_sparsity": 0.17,
+    "gross_margin": 0.17,
+    "fulfillment_ease": 0.085,
+    "compliance_safety": 0.085,
+    "replicability": 0.085,
+    "sellability": 0.15
+  },
+  "weight_sum": 1.0,
+  "weight_sum_ok": true,
+  "old_six_sum": 0.8500000000000001,
+  "old_six_sum_ok": true,
+  "sellability_weight": 0.15,
+  "model_3_5": {
+    "found": true,
+    "start_line": 82,
+    "end_line": 96,
+    "has_0_15": false,
+    "has_0_85": true,
+    "mentions_sellability": true,
+    "section_excerpt": "### 3.5 可售性 sellability（新增，纯函数）\n\n规则不区分大小写，按标题/URL/作者文本匹配：\n\n| 档位 | 分值 | 触发 |\n| --- | --- | --- |\n| 高 | 0.80–1.00 | 显式售价（`¥/$/价格/售价/selling for/sold for`）、购买入口（链接/扫码/私信购买/下单/buy/checkout）、商品化词（合集/素材包/模板包/教程包/bundle/pack/collection） |\n| 低 | 0.00–0.20 | `free`（排除 `free shipping`）、`giveaway/giving away`、`免费/领取/抽奖/赠送/求推荐/有没有/推荐一下/求模板/谁有`；`送` 仅在“免费送/送出/送模板/送资料”等短语命中，避免“发送”误伤 |\n| 中性 | 0.40–0.60 | 无以上信号 |\n\n- **冲突处理**：免费词与售价/购买词同时出现时，按**是否存在购买入口**决定——有购买入口按高（0.90）并写明冲突；无购买入口按低（0.10）并写明冲突。\n- **误伤防护**：`\\bfree\\b` 加负向断言排除 `free shipping`；`\\bfreedom\\b` 不命中；`送` 不匹配裸字，避免“发送”。\n- **闲鱼引流价**：`platform=xianyu` 或带 `price` 的条目给 **0.55**，reason 写明“闲鱼标价为引流价（¥1 类），有价格但不可当真实售价”；不进 scoring items 的 60 条样本，仅规则单测覆盖。\n- 可售性只影响总分，不改变既有六维公式；旧六维按 0.85 缩放。\n"
+  },
+  "model_consistent": true,
+  "model_explicit_0_15": false,
+  "scores": {
+    "rows": 60,
+    "required_columns": [
+      "rank",
+      "sellability_norm",
+      "sellability_raw",
+      "sellability_reason",
+      "sellability_weighted",
+      "total_score"
+    ],
+    "missing_columns": [],
+    "sellability_norm_count": 60,
+    "sellability_norm_min": 0.1,
+    "sellability_norm_max": 0.95,
+    "sellability_out_of_range": [],
+    "ranks_sequential": true,
+    "rank_total_inversions": [],
+    "tie_item_id_order_issues": [],
+    "sellability_weighted_mismatch": []
+  },
+  "ok": true
+}

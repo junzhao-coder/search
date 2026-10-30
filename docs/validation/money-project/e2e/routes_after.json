@@ -1,0 +1,63 @@
+{
+ "routes": [
+  {
+   "path": "/dash",
+   "status": 302,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 199,
+   "u_fffd": 0,
+   "location": "/dash/"
+  },
+  {
+   "path": "/dash/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 10760,
+   "u_fffd": 0,
+   "location": null
+  },
+  {
+   "path": "/dash/collect",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 42913,
+   "u_fffd": 0,
+   "location": null
+  },
+  {
+   "path": "/dash/opportunities",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 41161,
+   "u_fffd": 0,
+   "location": null
+  },
+  {
+   "path": "/dash/sources",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 31003,
+   "u_fffd": 0,
+   "location": null
+  },
+  {
+   "path": "/dash/daily",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 9392,
+   "u_fffd": 0,
+   "location": null
+  }
+ ],
+ "data": {
+  "items": 60,
+  "scores": 60,
+  "sources": 14,
+  "prices": 20,
+  "join": 10
+ },
+ "test": {
+  "tests": 334,
+  "exit": 0
+ }
+}

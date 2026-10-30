@@ -1,0 +1,8 @@
+utc=2026-10-25T04:56Z
+tool=agent-reach 1.5.0 (C:\Users\19183\.agent-reach-venv\Scripts\agent-reach.exe)
+doctor=twitter: warn, twitter-cli not installed; github: warn, gh CLI no explicit auth
+command=curl.exe -sS -L --max-time 30 -A Mozilla/5.0 -o x_search_probe.html -w "http=%{http_code} bytes=%{size_download}" "https://x.com/search?q=%22crawler%22%20resume&src=typed_query&f=live"
+result=exit 35; curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed
+bytes=0
+note=No X content retrieved. This is an access-blocked record, not a claim of no posts.
+web_search_site_x=site:x.com queries returned no results.

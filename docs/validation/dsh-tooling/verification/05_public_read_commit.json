@@ -1,0 +1,28 @@
+{
+  "channel": "DSH native web_fetch tool (this session). NOT the Agent Reach CLI, NOT curl. Reported separately on purpose.",
+  "recorded_utc": "2026-10-21T13:47:00Z",
+  "request": {
+    "url": "https://api.github.com/repos/Panniantong/Agent-Reach/commits/94f06c1969dfc1834001269d79d3ad0972d9dee6",
+    "http_status": 200,
+    "result": "success"
+  },
+  "response_excerpt": {
+    "sha": "94f06c1969dfc1834001269d79d3ad0972d9dee6",
+    "commit_author_date": "2026-10-07T17:17:26Z",
+    "commit_message_first_line": "Merge pull request #787 from Panniantong/chore/step0-hotfixes",
+    "verification_verified": true,
+    "stats": {"total": 51, "additions": 2, "deletions": 49},
+    "files_changed": [
+      {"filename": "CLAUDE.md", "status": "removed"},
+      {"filename": "agent_reach/skill/SKILL.md", "status": "modified"},
+      {"filename": "llms.txt", "status": "modified"}
+    ],
+    "html_url": "https://github.com/Panniantong/Agent-Reach/commit/94f06c1969dfc1834001269d79d3ad0972d9dee6"
+  },
+  "independent_conclusions": [
+    "The pinned commit exists in Panniantong/Agent-Reach and is a real signed (verified=true) merge commit dated 2026-10-07T17:17:26Z - independent of any installer claim.",
+    "That commit does NOT contain a version bump: it removes CLAUDE.md and fixes SKILL.md/llms.txt wording, so v1.5.0 is inherited from earlier history. The '1.5.0' label therefore cannot be validated from this commit alone.",
+    "The upstream llms.txt change in this commit says the PyPI package named agent-reach is NOT this project - consistent with installing from the codeload tarball instead of PyPI."
+  ],
+  "limits": ["This proves network egress from this session works and the commit matches. It does NOT prove the local venv contents, which would need a CLI run (no shell here)."]
+}

@@ -1,0 +1,40 @@
+{
+  "test_file": {
+    "path": "tests/dash/test_routes.py",
+    "lines": 163,
+    "bytes": 7397,
+    "sha256": "cd925fcb9939464a29096aff1037a7dc03ac9b7095d33200903e22eeb4947266"
+  },
+  "before_test": {
+    "path": "docs/validation/money-project/scoring-closeout/before_test_routes.py",
+    "lines": 121,
+    "sha256": "e269f021d5ac3a0339f8ad7f99ca17243178f50c20b135e9104641ac38fac814"
+  },
+  "diff_lines": 76,
+  "products": [
+    {
+      "path": "docs\\validation\\money-project\\scoring\\scores.csv",
+      "bytes": 37342,
+      "mtime_utc": "2026-10-22T11:21:59Z",
+      "sha256": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1"
+    },
+    {
+      "path": "docs\\validation\\money-project\\sourcing\\sources.csv",
+      "bytes": 5488,
+      "mtime_utc": "2026-10-22T08:07:35Z",
+      "sha256": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4"
+    },
+    {
+      "path": "docs\\validation\\money-project\\scoring\\scorer.py",
+      "bytes": 21338,
+      "mtime_utc": "2026-10-22T10:32:25Z",
+      "sha256": "4e105acf59007a62dc62e4d1d5c707613bf8983f00f7d00749f71ab8a31da69e"
+    },
+    {
+      "path": "docs\\validation\\money-project\\scoring\\model.md",
+      "bytes": 7951,
+      "mtime_utc": "2026-10-22T11:19:49Z",
+      "sha256": "7637531355970c1d23cd08338fdc633c8f64a8c48f75fb312b2eec2c044d0c80"
+    }
+  ]
+}

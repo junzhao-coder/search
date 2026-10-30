@@ -1,0 +1,62 @@
+{
+  "sampled_at_utc": "2026-10-21T14:07:22Z",
+  "current": {
+    "path": "C:\\Users\\19183\\.dsh\\profiles\\desktop\\cordis.patch.yml",
+    "bytes": 10899,
+    "sha256": "fda036e9aec82a7e07054df16e0ec425c0276ce6b6107e158239198fdb13c355",
+    "lines": 383,
+    "expected_sha256": "fda036e9aec82a7e07054df16e0ec425c0276ce6b6107e158239198fdb13c355",
+    "sha_matches": true
+  },
+  "backup": {
+    "path": "C:\\Users\\19183\\.dsh\\tooling-backups\\stealth-browser\\cordis.patch.yml.pre-stealth-20261021T132904Z",
+    "bytes": 9980,
+    "sha256": "7fe6843373d8ae1e772d0db38f08b2a360b19966aa5b073e03f7f1af3fadefde",
+    "lines": 363,
+    "expected_sha256": "7fe6843373d8ae1e772d0db38f08b2a360b19966aa5b073e03f7f1af3fadefde",
+    "sha_matches": true
+  },
+  "prefix": {
+    "byte_prefix_equal": true,
+    "normalized_text_prefix_equal": true,
+    "line_prefix_equal": true,
+    "common_bytes": 9980
+  },
+  "delta": {
+    "added_lines": 20,
+    "insert_blocks": 1,
+    "added_ids": [
+      "stealth-browser-mcp"
+    ],
+    "added_block_sha256": "8af9ecdd26473656e3501fa457ad05c31d89feb7e31ce6e9f950e069f016e2af",
+    "added_text": "\n# --- stealth-browser-mcp (installed by executor C, task-fb8e9c8c8ba064c6e9db93d9749fead9) ---\n- insert:\n    - id: stealth-browser-mcp\n      name: \"@deepseek-ai/dsh-mcp-client\"\n      config:\n        serverName: stealth\n        transport: stdio\n        command: \"C:\\\\Users\\\\19183\\\\.dsh\\\\tools\\\\stealth-browser-mcp\\\\venv\\\\Scripts\\\\python.exe\"\n        args:\n          - \"C:\\\\Users\\\\19183\\\\.dsh\\\\tools\\\\stealth-browser-mcp\\\\repo\\\\src\\\\server.py\"\n          - \"--minimal\"\n        cwd: \"C:\\\\Users\\\\19183\\\\.dsh\\\\tools\\\\stealth-browser-mcp\\\\repo\"\n        env:\n          STEALTH_BROWSER_EXECUTABLE: \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\"\n          BROWSER_ORPHAN_PROFILE_MAX_AGE: \"0\"\n          BROWSER_FILE_UPLOAD_ALLOWED_DIRS: \"C:\\\\Users\\\\19183\\\\.dsh\\\\tools\\\\stealth-browser-mcp\\\\profiles\\\\uploads\"\n          STEALTH_BROWSER_DEBUG: \"0\"\n          PYTHONIOENCODING: \"utf-8\"\n        failOnStartupError: true\n",
+    "block_fields": {
+      "serverName": "stealth",
+      "transport": "stdio",
+      "command": "C:\\\\Users\\\\19183\\\\.dsh\\\\tools\\\\stealth-browser-mcp\\\\venv\\\\Scripts\\\\python.exe",
+      "args": [
+        "C:\\\\Users\\\\19183\\\\.dsh\\\\tools\\\\stealth-browser-mcp\\\\repo\\\\src\\\\server.py",
+        "--minimal"
+      ],
+      "cwd": "C:\\\\Users\\\\19183\\\\.dsh\\\\tools\\\\stealth-browser-mcp\\\\repo",
+      "env_keys": [
+        "STEALTH_BROWSER_EXECUTABLE",
+        "BROWSER_ORPHAN_PROFILE_MAX_AGE",
+        "BROWSER_FILE_UPLOAD_ALLOWED_DIRS",
+        "STEALTH_BROWSER_DEBUG",
+        "PYTHONIOENCODING"
+      ],
+      "name": "@deepseek-ai/dsh-mcp-client",
+      "failOnStartupError": "true"
+    }
+  },
+  "verdict": {
+    "append_only": true,
+    "only_one_insert_block": true,
+    "added_id_is_stealth": true,
+    "block_contract_ok": true,
+    "rollback_by_suffix_delete_restores_backup": true,
+    "actual_rollback_performed": false
+  },
+  "ok": true
+}

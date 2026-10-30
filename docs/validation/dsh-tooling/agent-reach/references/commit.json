@@ -1,0 +1,5 @@
+{
+    "sha":  "94f06c1969dfc1834001269d79d3ad0972d9dee6",
+    "date":  "2026-10-07T17:17:26Z",
+    "message":  "Merge pull request #787 from Panniantong/chore/step0-hotfixes\n\nfix: SKILL.md env leak, wrong PyPI install, drop CLAUDE.m"
+}

@@ -1,0 +1,36 @@
+test_atomic_update_rowcount_and_no_false_audit (tests.test_workflow.AtomicAndRejectTests.test_atomic_update_rowcount_and_no_false_audit) ... ok
+test_atomic_update_zero_rows_after_prefetch (tests.test_workflow.AtomicAndRejectTests.test_atomic_update_zero_rows_after_prefetch)
+受控用例：patch wf.update 内部首次 wf.get 返回旧快照（库已是 rev2）→ UPDATE 命中 0 行。 ... ok
+test_fixture_source_rejections (tests.test_workflow.AtomicAndRejectTests.test_fixture_source_rejections) ... ok
+test_get_does_not_create_db (tests.test_workflow.AtomicAndRejectTests.test_get_does_not_create_db) ... ok
+test_get_zero_write_strict (tests.test_workflow.AtomicAndRejectTests.test_get_zero_write_strict) ... ok
+test_origin_rejects_null_file_relative_malformed_and_foreign (tests.test_workflow.AtomicAndRejectTests.test_origin_rejects_null_file_relative_malformed_and_foreign) ... ok
+test_origin_scheme_must_match_host_url (tests.test_workflow.AtomicAndRejectTests.test_origin_scheme_must_match_host_url)
+服务是 http 时，同 host 但 https 的 Origin/Referer 必须 403；同源 http 成功。 ... ok
+test_referer_checked_too (tests.test_workflow.AtomicAndRejectTests.test_referer_checked_too) ... ok
+test_revision_invalid_returns_4xx (tests.test_workflow.AtomicAndRejectTests.test_revision_invalid_returns_4xx) ... ok
+test_sequential_conflict_two_connections (tests.test_workflow.AtomicAndRejectTests.test_sequential_conflict_two_connections)
+顺序冲突（A 预读 → B 提交 → A 过期）；**非多线程并发压测**。 ... ok
+test_unicode_and_bad_csrf_are_403_not_500 (tests.test_workflow.AtomicAndRejectTests.test_unicode_and_bad_csrf_are_403_not_500) ... ok
+test_create_from_real_product (tests.test_workflow.WorkflowTestBase.test_create_from_real_product) ... ok
+test_csrf_required_and_origin_checked (tests.test_workflow.WorkflowTestBase.test_csrf_required_and_origin_checked) ... ok
+test_edit_cannot_escalate_status (tests.test_workflow.WorkflowTestBase.test_edit_cannot_escalate_status) ... ok
+test_edit_updates_and_bumps_revision (tests.test_workflow.WorkflowTestBase.test_edit_updates_and_bumps_revision) ... ok
+test_gaps_and_stages (tests.test_workflow.WorkflowTestBase.test_gaps_and_stages) ... ok
+test_get_does_not_create_db_file (tests.test_workflow.WorkflowTestBase.test_get_does_not_create_db_file) ... ok
+test_get_requests_do_not_write_workorder (tests.test_workflow.WorkflowTestBase.test_get_requests_do_not_write_workorder)
+GET 零写：记录/事件快照 + 文件 sha256 前后严格相等。 ... ok
+test_idempotent_same_key_same_payload (tests.test_workflow.WorkflowTestBase.test_idempotent_same_key_same_payload) ... ok
+test_missing_submit_key_rejected (tests.test_workflow.WorkflowTestBase.test_missing_submit_key_rejected) ... ok
+test_missing_workorder_404 (tests.test_workflow.WorkflowTestBase.test_missing_workorder_404) ... ok
+test_persists_across_new_app_instance (tests.test_workflow.WorkflowTestBase.test_persists_across_new_app_instance) ... ok
+test_rejects_content_and_unclassified_and_missing (tests.test_workflow.WorkflowTestBase.test_rejects_content_and_unclassified_and_missing) ... ok
+test_rejects_ready_verified_and_forged_fields (tests.test_workflow.WorkflowTestBase.test_rejects_ready_verified_and_forged_fields) ... ok
+test_same_key_different_payload_conflicts (tests.test_workflow.WorkflowTestBase.test_same_key_different_payload_conflicts) ... ok
+test_stale_revision_conflicts_without_data_loss (tests.test_workflow.WorkflowTestBase.test_stale_revision_conflicts_without_data_loss) ... ok
+test_validation_failure_keeps_record (tests.test_workflow.WorkflowTestBase.test_validation_failure_keeps_record) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 4.682s
+
+OK

@@ -1,0 +1,78 @@
+{
+  "generated_utc": "2026-10-29T14:26:21Z",
+  "python": "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+  "total_tests": 235,
+  "total_skipped": 0,
+  "all_green": true,
+  "runs": [
+    {
+      "module": "tests.test_access_weibo",
+      "argv": [
+        "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "tests.test_access_weibo",
+        "-v"
+      ],
+      "cwd": "D:\\桌面\\two",
+      "started_utc": "2026-10-29T14:25:47Z",
+      "finished_utc": "2026-10-29T14:26:03Z",
+      "exit": 0,
+      "tests_run": 92,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "verdict": "OK",
+      "stdout_log": "test_access_weibo_stdout.log",
+      "stderr_log": "test_access_weibo_stderr.log"
+    },
+    {
+      "module": "tests.test_access_zhihu",
+      "argv": [
+        "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "tests.test_access_zhihu",
+        "-v"
+      ],
+      "cwd": "D:\\桌面\\two",
+      "started_utc": "2026-10-29T14:26:03Z",
+      "finished_utc": "2026-10-29T14:26:12Z",
+      "exit": 0,
+      "tests_run": 96,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "verdict": "OK",
+      "stdout_log": "test_access_zhihu_stdout.log",
+      "stderr_log": "test_access_zhihu_stderr.log"
+    },
+    {
+      "module": "tests.test_access_budget",
+      "argv": [
+        "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "tests.test_access_budget",
+        "-v"
+      ],
+      "cwd": "D:\\桌面\\two",
+      "started_utc": "2026-10-29T14:26:12Z",
+      "finished_utc": "2026-10-29T14:26:21Z",
+      "exit": 0,
+      "tests_run": 47,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "verdict": "OK",
+      "stdout_log": "test_access_budget_stdout.log",
+      "stderr_log": "test_access_budget_stderr.log"
+    }
+  ]
+}

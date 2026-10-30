@@ -1,0 +1,45 @@
+{
+  "generated_utc": "2026-10-25T12:43:05Z",
+  "files": [
+    {
+      "file": "raw\\search_5.jsonl",
+      "bytes": 2672,
+      "sha256": "c9a656c73e6a0dcad27c6aa914d6c0162de2e865d5a2af890dd5bf66d19d446f"
+    },
+    {
+      "file": "raw\\search_stats.json",
+      "bytes": 472,
+      "sha256": "a92a70e66bb33a25dc14b63be07ce86fdecde91fe569cd5ac17b15a9c9024f0c"
+    },
+    {
+      "file": "logs\\doctor.log",
+      "bytes": 4206,
+      "sha256": "778cb02e0b7a5c3bcebedd9ecee5e678b4ab411647602f29ac6a6b01054bde80"
+    },
+    {
+      "file": "logs\\doctor_tool.log",
+      "bytes": 662,
+      "sha256": "2feaf2673f9a2e0676eada05441ac33d37bfebe908dc4341545adf901afa4b00"
+    },
+    {
+      "file": "logs\\search.log",
+      "bytes": 1498,
+      "sha256": "72c5f5bc1d1766746f04e67d5cbdfbb03cac422aa8512451ea842e1184e0222d"
+    },
+    {
+      "file": "logs\\search_tool.log",
+      "bytes": 1137,
+      "sha256": "6834a9246b03b56de1fbb8edc5a9bd61dbee0fc46f674e0d3c7e8a952694257c"
+    },
+    {
+      "file": "ACCOUNT-SAFETY.md",
+      "bytes": 6262,
+      "sha256": "d0020fecf71157a797632f026a66daa1f14adce9c9d8cd04dbd21abf21401990"
+    },
+    {
+      "file": "REPORT.md",
+      "bytes": 3154,
+      "sha256": "f642165456a5538e40feaea37e4208aec60ace31d6a7a0479597c8a150709829"
+    }
+  ]
+}

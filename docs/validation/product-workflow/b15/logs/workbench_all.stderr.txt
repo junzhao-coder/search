@@ -1,0 +1,144 @@
+test_copy_version_created_and_deduplicated (tests.test_copy_publish.CopyPublishTests.test_copy_version_created_and_deduplicated) ... ok
+test_detail_get_zero_write (tests.test_copy_publish.CopyPublishTests.test_detail_get_zero_write) ... ok
+test_export_dedupe_unique_index_and_concurrency (tests.test_copy_publish.CopyPublishTests.test_export_dedupe_unique_index_and_concurrency)
+两连接并发写同戳：唯一索引兜底，最终仅 1 行，另一方返回 deduplicated=true。 ... ok
+test_export_record_dedup (tests.test_copy_publish.CopyPublishTests.test_export_record_dedup) ... ok
+test_publish_page_sections (tests.test_copy_publish.CopyPublishTests.test_publish_page_sections) ... ok
+test_publish_saved_and_change_hint (tests.test_copy_publish.CopyPublishTests.test_publish_saved_and_change_hint) ... ok
+test_publish_validation (tests.test_copy_publish.CopyPublishTests.test_publish_validation) ... ok
+test_rollback_creates_new_version (tests.test_copy_publish.CopyPublishTests.test_rollback_creates_new_version) ... ok
+test_rollback_validation (tests.test_copy_publish.CopyPublishTests.test_rollback_validation) ... ok
+test_unique_index_allows_multiple_nulls (tests.test_copy_publish.CopyPublishTests.test_unique_index_allows_multiple_nulls)
+SQLite 唯一索引允许多个 NULL：历史行 dedupe_key 置 NULL 后不互相冲突。 ... ok
+test_all_blocked_initially (tests.test_export.ExportTests.test_all_blocked_initially) ... ok
+test_detail_get_zero_write (tests.test_export.ExportTests.test_detail_get_zero_write) ... ok
+test_detail_page_shows_checks_and_disabled_buttons (tests.test_export.ExportTests.test_detail_page_shows_checks_and_disabled_buttons) ... ok
+test_evidence_revision_and_validation (tests.test_export.ExportTests.test_evidence_revision_and_validation) ... ok
+test_export_blocked_when_not_ready_then_ok (tests.test_export.ExportTests.test_export_blocked_when_not_ready_then_ok) ... ok
+test_export_internal_marker_rejected (tests.test_export.ExportTests.test_export_internal_marker_rejected) ... ok
+test_export_md_and_json_whitelist (tests.test_export.ExportTests.test_export_md_and_json_whitelist) ... ok
+test_forged_ready_rejected_and_state_unchanged (tests.test_export.ExportTests.test_forged_ready_rejected_and_state_unchanged) ... ok
+test_partial_then_full (tests.test_export.ExportTests.test_partial_then_full) ... ok
+test_stamp_invalidates_old_export (tests.test_export.ExportTests.test_stamp_invalidates_old_export) ... ok
+test_all_blocked_initially (tests.test_export.GetExportZeroWriteTests.test_all_blocked_initially) ... ok
+test_detail_get_zero_write (tests.test_export.GetExportZeroWriteTests.test_detail_get_zero_write) ... ok
+test_detail_page_shows_checks_and_disabled_buttons (tests.test_export.GetExportZeroWriteTests.test_detail_page_shows_checks_and_disabled_buttons) ... ok
+test_evidence_revision_and_validation (tests.test_export.GetExportZeroWriteTests.test_evidence_revision_and_validation) ... ok
+test_export_blocked_when_not_ready_then_ok (tests.test_export.GetExportZeroWriteTests.test_export_blocked_when_not_ready_then_ok) ... ok
+test_export_internal_marker_rejected (tests.test_export.GetExportZeroWriteTests.test_export_internal_marker_rejected) ... ok
+test_export_md_and_json_whitelist (tests.test_export.GetExportZeroWriteTests.test_export_md_and_json_whitelist) ... ok
+test_forged_ready_rejected_and_state_unchanged (tests.test_export.GetExportZeroWriteTests.test_forged_ready_rejected_and_state_unchanged) ... ok
+test_get_export_not_ready_409_does_not_write (tests.test_export.GetExportZeroWriteTests.test_get_export_not_ready_409_does_not_write) ... ok
+test_get_export_ready_does_not_write (tests.test_export.GetExportZeroWriteTests.test_get_export_ready_does_not_write) ... ok
+test_partial_then_full (tests.test_export.GetExportZeroWriteTests.test_partial_then_full) ... ok
+test_post_record_not_ready_409_and_no_write (tests.test_export.GetExportZeroWriteTests.test_post_record_not_ready_409_and_no_write) ... ok
+test_post_record_requires_csrf_and_writes_one_row (tests.test_export.GetExportZeroWriteTests.test_post_record_requires_csrf_and_writes_one_row) ... ok
+test_stamp_invalidates_old_export (tests.test_export.GetExportZeroWriteTests.test_stamp_invalidates_old_export) ... ok
+test_create_self_made_and_id_format (tests.test_selfmade.SelfMadeTests.test_create_self_made_and_id_format) ... ok
+test_demo_platform_enables_export (tests.test_selfmade.SelfMadeTests.test_demo_platform_enables_export) ... ok
+test_forged_ready_403 (tests.test_selfmade.SelfMadeTests.test_forged_ready_403) ... ok
+test_get_zero_write (tests.test_selfmade.SelfMadeTests.test_get_zero_write) ... ok
+test_idempotent (tests.test_selfmade.SelfMadeTests.test_idempotent) ... ok
+test_new_form_page (tests.test_selfmade.SelfMadeTests.test_new_form_page) ... ok
+test_required_missing_rejected (tests.test_selfmade.SelfMadeTests.test_required_missing_rejected) ... ok
+test_revision_conflict_and_rollback (tests.test_selfmade.SelfMadeTests.test_revision_conflict_and_rollback) ... ok
+test_self_prefix_enforced (tests.test_selfmade.SelfMadeTests.test_self_prefix_enforced) ... ok
+test_seven_evidence_via_ui (tests.test_selfmade.SelfMadeTests.test_seven_evidence_via_ui) ... ok
+test_competition_risk_only_below_threshold (tests.test_workbench.AnalysisTests.test_competition_risk_only_below_threshold) ... ok
+test_intent_priority_beats_tool_word (tests.test_workbench.AnalysisTests.test_intent_priority_beats_tool_word) ... ok
+test_low_sellability_becomes_top_risk (tests.test_workbench.AnalysisTests.test_low_sellability_becomes_top_risk) ... ok
+test_missing_fields_do_not_invent_numbers (tests.test_workbench.AnalysisTests.test_missing_fields_do_not_invent_numbers) ... ok
+test_notion_is_carrier_not_type (tests.test_workbench.AnalysisTests.test_notion_is_carrier_not_type) ... ok
+test_opportunities_page_shows_analysis_columns (tests.test_workbench.AnalysisTests.test_opportunities_page_shows_analysis_columns) ... ok
+test_pack_maps_to_prompt_or_digital_bundle (tests.test_workbench.AnalysisTests.test_pack_maps_to_prompt_or_digital_bundle) ... ok
+test_planner_maps_to_study_or_life_planner (tests.test_workbench.AnalysisTests.test_planner_maps_to_study_or_life_planner) ... ok
+test_risks_differ_between_rows (tests.test_workbench.AnalysisTests.test_risks_differ_between_rows) ... ok
+test_search_blob_covers_product_summary (tests.test_workbench.AnalysisTests.test_search_blob_covers_product_summary) ... ok
+test_unclassified_uses_commercial_and_demand_tiers (tests.test_workbench.AnalysisTests.test_unclassified_uses_commercial_and_demand_tiers) ... ok
+test_unclassified_when_no_keyword_or_platform_hint (tests.test_workbench.AnalysisTests.test_unclassified_when_no_keyword_or_platform_hint) ... ok
+test_why_items_carry_real_numbers_and_deterministic (tests.test_workbench.AnalysisTests.test_why_items_carry_real_numbers_and_deterministic) ... ok
+test_content_page_has_three_groups_totaling_13 (tests.test_workbench.ContentPageTests.test_content_page_has_three_groups_totaling_13) ... ok
+test_content_page_hides_source_and_margin_fields (tests.test_workbench.ContentPageTests.test_content_page_hides_source_and_margin_fields) ... ok
+test_default_scope_is_all_classified_products (tests.test_workbench.ContentPageTests.test_default_scope_is_all_classified_products) ... ok
+test_funnel_conservation_25_13_22 (tests.test_workbench.ContentPageTests.test_funnel_conservation_25_13_22) ... ok
+test_opportunities_has_no_content_groups (tests.test_workbench.ContentPageTests.test_opportunities_has_no_content_groups) ... ok
+test_quality_toggle_on_products_only (tests.test_workbench.ContentPageTests.test_quality_toggle_on_products_only) ... ok
+test_text_consistency_between_header_and_buttons (tests.test_workbench.ContentPageTests.test_text_consistency_between_header_and_buttons) ... ok
+test_daily_uses_same_sellability_function (tests.test_workbench.FixtureCase.test_daily_uses_same_sellability_function) ... ok
+test_evidence_has_seventh_dimension (tests.test_workbench.FixtureCase.test_evidence_has_seventh_dimension) ... ok
+test_license_three_tiers (tests.test_workbench.FixtureCase.test_license_three_tiers) ... ok
+test_min_score_row_level (tests.test_workbench.FixtureCase.test_min_score_row_level) ... ok
+test_no_business_db_write (tests.test_workbench.FixtureCase.test_no_business_db_write) ... ok
+test_raw_price_preserved_and_margin_has_no_currency (tests.test_workbench.FixtureCase.test_raw_price_preserved_and_margin_has_no_currency) ... ok
+test_real_root_pages_and_healthz (tests.test_workbench.FixtureCase.test_real_root_pages_and_healthz) ... ok
+test_sellability_filter_counts (tests.test_workbench.FixtureCase.test_sellability_filter_counts) ... ok
+test_sellability_reads_only_sellability_norm (tests.test_workbench.FixtureCase.test_sellability_reads_only_sellability_norm) ... ok
+test_sort_direction_flips_rows (tests.test_workbench.FixtureCase.test_sort_direction_flips_rows) ... ok
+test_sort_link_preserves_filters (tests.test_workbench.FixtureCase.test_sort_link_preserves_filters) ... ok
+test_different_product_types_do_not_merge (tests.test_workbench.GroupTests.test_different_product_types_do_not_merge) ... ok
+test_empty_rows_produce_no_groups (tests.test_workbench.GroupTests.test_empty_rows_produce_no_groups) ... ok
+test_group_stats_are_recomputable (tests.test_workbench.GroupTests.test_group_stats_are_recomputable) ... ok
+test_grouped_page_expands_to_member_count (tests.test_workbench.GroupTests.test_grouped_page_expands_to_member_count) ... ok
+test_same_carrier_merges_into_one_group (tests.test_workbench.GroupTests.test_same_carrier_merges_into_one_group) ... ok
+test_unclassified_without_carrier_uses_unknown_group (tests.test_workbench.GroupTests.test_unclassified_without_carrier_uses_unknown_group) ... ok
+test_content_groups_have_badge_and_guidance (tests.test_workbench.GroupedViewTests.test_content_groups_have_badge_and_guidance) ... ok
+test_default_scope_keeps_all_classified (tests.test_workbench.GroupedViewTests.test_default_scope_keeps_all_classified) ... ok
+test_expand_is_button_with_aria_controls (tests.test_workbench.GroupedViewTests.test_expand_is_button_with_aria_controls) ... ok
+test_funnel_counts_conserved (tests.test_workbench.GroupedViewTests.test_funnel_counts_conserved) ... ok
+test_kind_quick_filter_counts (tests.test_workbench.GroupedViewTests.test_kind_quick_filter_counts) ... ok
+test_quality_threshold_boundaries (tests.test_workbench.GroupedViewTests.test_quality_threshold_boundaries) ... ok
+test_quality_toggle_uses_only_passing_set (tests.test_workbench.GroupedViewTests.test_quality_toggle_uses_only_passing_set) ... ok
+test_sellability_header_has_unit_and_tooltip (tests.test_workbench.GroupedViewTests.test_sellability_header_has_unit_and_tooltip) ... ok
+test_unclassified_not_in_group_stats (tests.test_workbench.GroupedViewTests.test_unclassified_not_in_group_stats) ... ok
+test_weak_not_double_counted_as_removed (tests.test_workbench.GroupedViewTests.test_weak_not_double_counted_as_removed) ... ok
+test_conservation_sums_to_total (tests.test_workbench.TaxonomyTests.test_conservation_sums_to_total) ... ok
+test_content_not_counted_as_product (tests.test_workbench.TaxonomyTests.test_content_not_counted_as_product) ... ok
+test_five_carrier_use_combinations (tests.test_workbench.TaxonomyTests.test_five_carrier_use_combinations) ... ok
+test_five_part_analysis_present (tests.test_workbench.TaxonomyTests.test_five_part_analysis_present) ... ok
+test_full_text_beats_title_for_use_detection (tests.test_workbench.TaxonomyTests.test_full_text_beats_title_for_use_detection) ... ok
+test_full_text_index_covers_all_rows (tests.test_workbench.TaxonomyTests.test_full_text_index_covers_all_rows) ... ok
+test_notion29_subset_conserved_in_artifact (tests.test_workbench.TaxonomyTests.test_notion29_subset_conserved_in_artifact) ... ok
+test_notion_without_use_goes_to_manual (tests.test_workbench.TaxonomyTests.test_notion_without_use_goes_to_manual) ... ok
+test_other_missing_explains_each_pending_row (tests.test_workbench.TaxonomyTests.test_other_missing_explains_each_pending_row) ... ok
+test_pure_list_goes_to_recommendation (tests.test_workbench.TaxonomyTests.test_pure_list_goes_to_recommendation) ... ok
+test_secondary_tags_recorded_on_group (tests.test_workbench.TaxonomyTests.test_secondary_tags_recorded_on_group) ... ok
+test_strong_design_words_beat_generic_best_list (tests.test_workbench.TaxonomyTests.test_strong_design_words_beat_generic_best_list) ... ok
+test_three_content_categories_hit (tests.test_workbench.TaxonomyTests.test_three_content_categories_hit) ... ok
+test_unclassified_fallback_with_reason (tests.test_workbench.TaxonomyTests.test_unclassified_fallback_with_reason) ... ok
+test_vague_names_are_forbidden (tests.test_workbench.TaxonomyTests.test_vague_names_are_forbidden) ... ok
+test_atomic_update_rowcount_and_no_false_audit (tests.test_workflow.AtomicAndRejectTests.test_atomic_update_rowcount_and_no_false_audit) ... ok
+test_atomic_update_zero_rows_after_prefetch (tests.test_workflow.AtomicAndRejectTests.test_atomic_update_zero_rows_after_prefetch)
+受控用例：patch wf.update 内部首次 wf.get 返回旧快照（库已是 rev2）→ UPDATE 命中 0 行。 ... ok
+test_fixture_source_rejections (tests.test_workflow.AtomicAndRejectTests.test_fixture_source_rejections) ... ok
+test_get_does_not_create_db (tests.test_workflow.AtomicAndRejectTests.test_get_does_not_create_db) ... ok
+test_get_zero_write_strict (tests.test_workflow.AtomicAndRejectTests.test_get_zero_write_strict) ... ok
+test_origin_rejects_null_file_relative_malformed_and_foreign (tests.test_workflow.AtomicAndRejectTests.test_origin_rejects_null_file_relative_malformed_and_foreign) ... ok
+test_origin_scheme_must_match_host_url (tests.test_workflow.AtomicAndRejectTests.test_origin_scheme_must_match_host_url)
+服务是 http 时，同 host 但 https 的 Origin/Referer 必须 403；同源 http 成功。 ... ok
+test_referer_checked_too (tests.test_workflow.AtomicAndRejectTests.test_referer_checked_too) ... ok
+test_revision_invalid_returns_4xx (tests.test_workflow.AtomicAndRejectTests.test_revision_invalid_returns_4xx) ... ok
+test_sequential_conflict_two_connections (tests.test_workflow.AtomicAndRejectTests.test_sequential_conflict_two_connections)
+顺序冲突（A 预读 → B 提交 → A 过期）；**非多线程并发压测**。 ... ok
+test_unicode_and_bad_csrf_are_403_not_500 (tests.test_workflow.AtomicAndRejectTests.test_unicode_and_bad_csrf_are_403_not_500) ... ok
+test_create_from_real_product (tests.test_workflow.WorkflowTestBase.test_create_from_real_product) ... ok
+test_csrf_required_and_origin_checked (tests.test_workflow.WorkflowTestBase.test_csrf_required_and_origin_checked) ... ok
+test_edit_cannot_escalate_status (tests.test_workflow.WorkflowTestBase.test_edit_cannot_escalate_status) ... ok
+test_edit_updates_and_bumps_revision (tests.test_workflow.WorkflowTestBase.test_edit_updates_and_bumps_revision) ... ok
+test_gaps_and_stages (tests.test_workflow.WorkflowTestBase.test_gaps_and_stages) ... ok
+test_get_does_not_create_db_file (tests.test_workflow.WorkflowTestBase.test_get_does_not_create_db_file) ... ok
+test_get_requests_do_not_write_workorder (tests.test_workflow.WorkflowTestBase.test_get_requests_do_not_write_workorder)
+GET 零写：记录/事件快照 + 文件 sha256 前后严格相等。 ... ok
+test_idempotent_same_key_same_payload (tests.test_workflow.WorkflowTestBase.test_idempotent_same_key_same_payload) ... ok
+test_missing_submit_key_rejected (tests.test_workflow.WorkflowTestBase.test_missing_submit_key_rejected) ... ok
+test_missing_workorder_404 (tests.test_workflow.WorkflowTestBase.test_missing_workorder_404) ... ok
+test_persists_across_new_app_instance (tests.test_workflow.WorkflowTestBase.test_persists_across_new_app_instance) ... ok
+test_rejects_content_and_unclassified_and_missing (tests.test_workflow.WorkflowTestBase.test_rejects_content_and_unclassified_and_missing) ... ok
+test_rejects_ready_verified_and_forged_fields (tests.test_workflow.WorkflowTestBase.test_rejects_ready_verified_and_forged_fields) ... ok
+test_same_key_different_payload_conflicts (tests.test_workflow.WorkflowTestBase.test_same_key_different_payload_conflicts) ... ok
+test_stale_revision_conflicts_without_data_loss (tests.test_workflow.WorkflowTestBase.test_stale_revision_conflicts_without_data_loss) ... ok
+test_validation_failure_keeps_record (tests.test_workflow.WorkflowTestBase.test_validation_failure_keeps_record) ... ok
+
+----------------------------------------------------------------------
+Ran 133 tests in 11.756s
+
+OK

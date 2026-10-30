@@ -1,0 +1,27 @@
+{
+ "utc": "2026-10-24T05:10:00Z",
+ "production_before_sha": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c",
+ "copy_before": {
+  "table_exists": false,
+  "candidate_count": null,
+  "workorders": [
+   "wo:20261023-88ef9a66"
+  ]
+ },
+ "detail": {
+  "status": 200,
+  "supply_section": true
+ },
+ "post": {
+  "status": 303,
+  "location": "/worksheet/wo:20261023-88ef9a66#h-supply"
+ },
+ "copy_after": {
+  "table_exists": true,
+  "candidate_count": 1,
+  "workorders": [
+   "wo:20261023-88ef9a66"
+  ]
+ },
+ "production_after_sha": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c"
+}

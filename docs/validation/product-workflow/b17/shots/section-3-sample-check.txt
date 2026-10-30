@@ -1,0 +1,17 @@
+# 样品自检区（详情页）
+# url: http://127.0.0.1:5015/worksheet/wo:20261023-88ef9a66
+# utc: 2026-10-24T04:36:04Z
+# 方式: 页面文字摘录（HTML→纯文本；只读 GET，未提交表单）
+# 重跑方式: GET http://127.0.0.1:5015/worksheet/wo:20261023-88ef9a66 并滚动到「样品自检」
+
+样品自检（本地文件）
+只读检查工作区内 docs/ 或 tools/ 下的
+.xlsx/.pptx/.md/.csv/.pdf（≤20MB）。xlsx 会读表数/非空单元格/公式数，并检查无外部链接、无 vbaProject；
+绝不执行宏或脚本 。通过后写入 sample_status=verified 与 sample_ref。
+当前样品状态： verified
+b7:selfcheck 17/17（结构/公式自检；非真实 Excel 打开）
+[控件]
+文件路径（工作区内） *
+[控件]
+例如：docs/validation/product-workflow/b7/sample-study-planner-v1.xlsx
+执行自检

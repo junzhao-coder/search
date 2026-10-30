@@ -1,0 +1,183 @@
+{
+ "generated_utc": "2026-10-23T07:33:18Z",
+ "items": {
+  "instance/app.db": {
+   "exists": true,
+   "kind": "file",
+   "bytes": 241664,
+   "sha256": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+   "mtime_utc": "2026-10-09T11:53:00Z"
+  },
+  "docs/design/CONTRACT.md": {
+   "exists": true,
+   "kind": "file",
+   "bytes": 74839,
+   "sha256": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+   "mtime_utc": "2026-10-09T11:51:19Z"
+  },
+  "app/sources/wiring.py": {
+   "exists": true,
+   "kind": "file",
+   "bytes": 8402,
+   "sha256": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+   "mtime_utc": "2026-10-15T14:32:40Z"
+  },
+  "app/sources/bilibili_view.py": {
+   "exists": true,
+   "kind": "file",
+   "bytes": 12866,
+   "sha256": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+   "mtime_utc": "2026-10-14T14:58:22Z"
+  },
+  "app/core/importer.py": {
+   "exists": true,
+   "kind": "file",
+   "bytes": 49011,
+   "sha256": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+   "mtime_utc": "2026-10-15T14:07:46Z"
+  },
+  "docs/validation/money-project/scoring/scores.csv": {
+   "exists": true,
+   "kind": "file",
+   "bytes": 37342,
+   "sha256": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+   "mtime_utc": "2026-10-22T11:21:59Z"
+  },
+  "docs/validation/money-project/scoring/items.jsonl": {
+   "exists": true,
+   "kind": "file",
+   "bytes": 60396,
+   "sha256": "ccb5d3071d0fb8fd9b883c80b7b714c999497b674c01b944030454cebdd10706",
+   "mtime_utc": "2026-10-22T08:49:45Z"
+  },
+  "docs/validation/money-project/scoring/model.md": {
+   "exists": true,
+   "kind": "file",
+   "bytes": 7951,
+   "sha256": "7637531355970c1d23cd08338fdc633c8f64a8c48f75fb312b2eec2c044d0c80",
+   "mtime_utc": "2026-10-22T11:19:49Z"
+  },
+  "docs/validation/money-project/scoring/raw": {
+   "exists": true,
+   "kind": "dir",
+   "files": 3,
+   "tree_sha256": "d96944236230293bf1415669757bcf9e3ee0f3fa79beb41d47599adfe2d35ace"
+  },
+  "docs/validation/money-project/sourcing/sources.csv": {
+   "exists": true,
+   "kind": "file",
+   "bytes": 5488,
+   "sha256": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+   "mtime_utc": "2026-10-22T08:07:35Z"
+  },
+  "docs/validation/money-project/sourcing/price_signals.csv": {
+   "exists": true,
+   "kind": "file",
+   "bytes": 17897,
+   "sha256": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691",
+   "mtime_utc": "2026-10-22T08:49:59Z"
+  },
+  "docs/validation/money-project/sourcing/opportunity_sourcing_top10.csv": {
+   "exists": true,
+   "kind": "file",
+   "bytes": 12033,
+   "sha256": "da5e4461041291ccad4f823a9cfcd7202f76638a7fce26984c195840b55bd939",
+   "mtime_utc": "2026-10-22T09:49:48Z"
+  },
+  "docs/validation/money-project/sourcing/raw": {
+   "exists": true,
+   "kind": "dir",
+   "files": 13,
+   "tree_sha256": "ab6deba3d702d3e74f56fa86114fbb659f9901cefc47c0edeea53df3392df51b"
+  },
+  "migrations": {
+   "exists": false
+  },
+  "alembic": {
+   "exists": false
+  }
+ },
+ "baseline": {
+  "path": "docs\\validation\\money-project\\verify\\baseline_before.json",
+  "entries": 14,
+  "source": "docs/validation/money-project/verify/baseline_before.json（上一轮独立只读核验产物）"
+ },
+ "comparisons": {
+  "instance/app.db": {
+   "expected": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+   "actual": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+   "match": true
+  },
+  "docs/design/CONTRACT.md": {
+   "expected": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+   "actual": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+   "match": true
+  },
+  "docs/validation/money-project/scoring/scores.csv": {
+   "expected": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+   "actual": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+   "match": true
+  },
+  "docs/validation/money-project/sourcing/sources.csv": {
+   "expected": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+   "actual": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+   "match": true
+  },
+  "app/core/importer.py": {
+   "expected": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+   "actual": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+   "match": true
+  },
+  "app/sources/wiring.py": {
+   "expected": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+   "actual": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+   "match": true
+  },
+  "docs/validation/money-project/scoring/model.md": {
+   "expected": "41c2809b91f01c7608a05714227f7611214039b0a9dbee8263ef166b9dee5f94",
+   "actual": "7637531355970c1d23cd08338fdc633c8f64a8c48f75fb312b2eec2c044d0c80",
+   "match": false
+  },
+  "docs/validation/money-project/scoring/items.jsonl": {
+   "expected": "ccb5d3071d0fb8fd9b883c80b7b714c999497b674c01b944030454cebdd10706",
+   "actual": "ccb5d3071d0fb8fd9b883c80b7b714c999497b674c01b944030454cebdd10706",
+   "match": true
+  },
+  "docs/validation/money-project/scoring/raw": {
+   "expected": "d96944236230293bf1415669757bcf9e3ee0f3fa79beb41d47599adfe2d35ace",
+   "actual": "d96944236230293bf1415669757bcf9e3ee0f3fa79beb41d47599adfe2d35ace",
+   "match": true
+  },
+  "docs/validation/money-project/sourcing/price_signals.csv": {
+   "expected": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691",
+   "actual": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691",
+   "match": true
+  },
+  "docs/validation/money-project/sourcing/opportunity_sourcing_top10.csv": {
+   "expected": "0c365fb813ad969bf86dc392182464fe20a4146ed8d7329c53d8782a26556b1f",
+   "actual": "da5e4461041291ccad4f823a9cfcd7202f76638a7fce26984c195840b55bd939",
+   "match": false
+  },
+  "docs/validation/money-project/sourcing/raw": {
+   "expected": "ab6deba3d702d3e74f56fa86114fbb659f9901cefc47c0edeea53df3392df51b",
+   "actual": "ab6deba3d702d3e74f56fa86114fbb659f9901cefc47c0edeea53df3392df51b",
+   "match": true
+  }
+ },
+ "changed": [
+  "docs/validation/money-project/scoring/model.md",
+  "docs/validation/money-project/sourcing/opportunity_sourcing_top10.csv"
+ ],
+ "changed_external": [
+  {
+   "path": "docs/validation/money-project/scoring/model.md",
+   "reason": "外部评分产物重生成（mtime 2026-10-22T11:19:49Z），发生于 B1 实施之前，非本任务写入"
+  },
+  {
+   "path": "docs/validation/money-project/sourcing/opportunity_sourcing_top10.csv",
+   "reason": "外部货源联动产物重生成（mtime 2026-10-22T09:49:48Z），发生于 B1 实施之前，非本任务写入"
+  }
+ ],
+ "changed_by_this_task": [],
+ "baseline_note": "baseline_before.json 生成于上一轮只读核验（2026-10-22T09:08Z）；其后外部任务重生成过 scoring/model.md 与 sourcing/opportunity_sourcing_top10.csv，故这两项与旧 baseline 不同属预期，已在 changed_external 逐条归因。"
+}

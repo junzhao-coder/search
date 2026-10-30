@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block page_id %}import{% endblock %}
+{% block title %}导入与来源{% endblock %}
+{% block content %}
+    <h1 class="page-title">导入与来源</h1>
+    <p class="hint">先预览（<code>mode=validate</code>：只读、不保存），确认后再写入（atomic）。导入失败给出行级原因；来源一律按“人工导入”登记，不声称自动化接入。</p>
+
+    <section class="panel" aria-labelledby="upload-h">
+      <h2 id="upload-h">导入 CSV/JSON</h2>
+      <form id="import-form">
+        <p class="row">
+          <label for="import-file">选择 CSV/JSON 文件</label>
+          <input type="file" id="import-file" name="file" accept=".csv,.json,text/csv,application/json">
+        </p>
+        <p class="row">
+          <label for="import-format">格式</label>
+          <select id="import-format" name="format">
+            <option value="">按扩展名判断</option>
+            <option value="csv">CSV</option>
+            <option value="json">JSON</option>
+          </select>
+        </p>
+        <p class="row">
+          <button type="button" id="import-validate">预览（不保存）</button>
+          <button type="button" id="import-commit" disabled>确认导入（写入）</button>
+        </p>
+        <p id="import-hint" class="hint" hidden></p>
+      </form>
+      <p id="import-loading" class="state state-loading" hidden>处理中…</p>
+      <p id="import-error" class="state state-error" role="alert" hidden></p>
+      <div id="import-result" hidden>
+        <h3>结果</h3>
+        <dl class="kv" id="import-summary"></dl>
+        <p id="import-saved-note" class="state state-empty" hidden>本次为预览：<strong>未保存</strong>——未写入业务数据、导入批次、运行记录与幂等记录，也不占用 client_ref。</p>
+        <h4>行级结果</h4>
+        <ul id="import-rows" class="list"></ul>
+        <p id="import-batch" class="meta"></p>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="src-h">
+      <h2 id="src-h">来源状态</h2>
+      {% if sources_error %}
+      <p class="state state-error" role="alert">读取来源失败：{{ sources_error }}</p>
+      {% elif sources %}
+      <table class="table">
+        <caption class="visually-hidden">来源登记与访问方式</caption>
+        <thead><tr><th scope="col">来源</th><th scope="col">渠道</th><th scope="col">访问方式</th><th scope="col">仅人工导入</th><th scope="col">访问条件已核验</th><th scope="col">最后成功</th><th scope="col">最后错误</th><th scope="col">备注</th></tr></thead>
+        <tbody>
+        {% for s in sources %}
+          <tr>
+            <td>{{ s.name }}</td>
+            <td>{{ s.channel }}</td>
+            <td>{% if s.access_mode == "manual_import" %}人工导入{% else %}{{ s.access_mode }}{% endif %}</td>
+            <td>{{ "是（人工导入，不是自动化接入）" if s.access_mode == "manual_import" else "否" }}</td>
+            <td>{{ tri_state(s.access_verified) }}</td>
+            <td>{{ s.last_success_at or "—" }}</td>
+            <td>{{ s.last_error or "—" }}</td>
+            <td>{{ s.cost_note or s.rate_limit_note or s.terms_note or "—" }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p class="state state-empty">暂无来源记录。</p>
+      {% endif %}
+      <h3>导入历史</h3>
+      <p class="hint">本页只展示本次导入的批次与行级结果（通过 <code>GET /api/imports/&lt;batch_id&gt;</code>）。跨会话的历史批次列表需在后续阶段增加只读端点后再提供，当前不伪造历史。</p>
+    </section>
+{% endblock %}

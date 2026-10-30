@@ -1,0 +1,24 @@
+{
+ "source_sha_unchanged": true,
+ "source_sidecars_after": [],
+ "backup_sidecars_after": [],
+ "restore_target_sidecars_after": [],
+ "backup": {
+  "path": "D:\\桌面\\two\\tests\\tools\\_tmp\\backup_restore_v1\\run_20261020_200654_immut1\\backups\\app-20261020-160000.db",
+  "sha256": "aedd5478864563ac906d1d92a2023ebc13cc1fecaa92fb9ab0eb2678dfbcc944",
+  "bytes": 241664,
+  "schema_version": 2,
+  "integrity": "ok",
+  "row_hashes": {
+   "candidate": "753595f77c1769d9ab3971bb2f4b497b920e5e70717a2473df95917ccdd874e3",
+   "demand_signal": "26fa7c0494fb7e12c0821f4ef8096b0de0acd79b3baca32c1f86732dc5e67a7b",
+   "supply_offer": "934fc73982a8074a8ffea49bc42d535ad9f82d253cbd0fe8d5717e3b2741f52b"
+  }
+ },
+ "restore": {
+  "manifest_checked": true,
+  "schema_version": 2,
+  "row_hashes_equal": true,
+  "counts_equal": true
+ }
+}

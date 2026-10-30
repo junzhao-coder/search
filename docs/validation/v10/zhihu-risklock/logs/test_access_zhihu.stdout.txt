@@ -1,0 +1,1 @@
+{"command": "search", "detail": "input not found: C:\\Users\\19183\\AppData\\Local\\Temp\\tmpxalyxy0e\\nope.json", "exit": 8, "ok": false, "stop": "input_not_found"}

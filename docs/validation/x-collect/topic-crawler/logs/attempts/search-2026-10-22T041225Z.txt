@@ -1,0 +1,86 @@
+utc=2026-10-22T04:12:25Z
+kind=search
+url=https://x.com/search?q=web%20scraping&f=live
+title=web scraping - Search / X
+body_excerpt=To view keyboard shortcuts, press question mark
+View keyboard shortcuts
+Top
+Latest
+People
+Media
+Lists
+See new posts
+Search timeline
+Rho Rider
+@RhoRider
+·
+3h
+As the internet dies the inevitable future I see is a closed web…
+
+Imagine social media reverts to 2005 era Facebook/AIM…closed loop networks of friends/family only…in person, human verified connections 
+
+Websites become outbound info only again rather than places you
+Show more
+Quote
+Rho Rider
+@RhoRider
+·
+7h
+The core of Dead Internet Theory is so many bots will flood the open internet, it will be impossible to find genuine human content…forcing humans to eventually stop engaging. We’re no doubt speeding towards that outcome
+
+But what’s likely coming even sooner is AI hacking x.com/nsacyber/statu…
+2
+3
+19
+2K
+SpyTech Ai
+@RizeOnline
+·
+3h
+Meet GPT Researcher, an open deep-research agent for web and local documents that turns a task into a cited report through planning, parallel research, context filtering, and publication.
+
+ Overview
+GPT Researcher is designed to produce detailed, factual research reports with
+Show more
+45
+BCMINE1988
+@YMINE1988
+·
+4h
+Replying to 
+@teneo_protocol
+Great! Real household IPs solve major issues with cloud-based web scraping for AI.
+11
+Ruben
+@rdominguezibar
+·
+5h
+Amorphic Labs (
+@amorphiclabs
+) is building OpenRouter for agent capabilities.
+
+AgentMuxer gives agents one MCP and one balance to find and pay for tools like web search and scraping. Every request routes to the best provider, benchmarked on real tasks, with fallbacks when one
+Show more
+Quote
+Ruben
+@rdominguezibar
+·
+14h
+2:13
+PERSONAL NEWS: After 1 year in stealth @guilleflorvs and I are launching GR Angel
+
+We invest in exceptional founders, put them in front of one of the biggest tech audiences in the world: + 600k followers, + 400k subs & 10M weekly views
+
+Across our personal angel investments and
+2
+3
+266
+Wisdom_Udo
+@dreamwisedomain
+·
+5h
+Replying to 
+@dreamwisedomain
+P.S. I’m 
+@dreamwisedomain
+ . I help proxy, web scraping, and dat

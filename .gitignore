@@ -1,0 +1,85 @@
+# --- Python / 环境 ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# --- 运行数据（业务库绝不入库）---
+instance/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+backups/
+
+# --- 测试/演练临时产物 ---
+# 只用**顶层测试目录的显式清单**；不写 `tests/**/_tmp/` 或 `_tmp/`：
+# 快照 `tests/acceptance/_snapshots/**` 内部带有嵌套 `tests/*/_tmp/`（含 92 个 .db 证据），
+# 递归模式会先排除其父目录，使下方否定例外失效（git 规则：父目录被排除则无法重新包含）。
+tests/api/_tmp/
+tests/core/_tmp/
+tests/sources/_tmp/
+tests/storage/_tmp/
+tests/ui/_tmp/
+tests/acceptance/_tmp/
+restore/
+*.log
+
+# --- 系统与编辑器 ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+
+# --- 交付与证据文件（不要忽略）---
+# README.md、requirements.txt、app/**、tests/**、docs/**、tests/fixtures/**、
+# tests/acceptance/_snapshots/**（含其嵌套 tests/*/_tmp/ 下的 .db 证据）
+# 如需运行记录：instance/env_checks.txt 等应按交付策略人工复制，而非依赖本文件。
+
+# --- 交付证据例外（必须位于所有排除规则之后；其父目录 tests/ 与 tests/acceptance/ 均未被排除）---
+!tests/acceptance/_snapshots/
+!tests/acceptance/_snapshots/**
+!tests/fixtures/
+!tests/fixtures/**
+# --- 浏览器 profile（登录态绝不入仓库）---
+**/profile/
+**/Cookies
+**/Cookies-journal
+**/profiles/
+**/profile_empty*/
+**/Login Data
+**/Web Data
+**/Local State
+# --- 测试快照里的业务库副本（含 app.db 等），绝不入库 ---
+tests/acceptance/_snapshots/**/*.db
+tests/acceptance/_snapshots/**/*.sqlite3
+
+# --- B 方案（2026-10-30）：原始抓取内容不入库 ---
+# 理由：这些文件含真实个人数据——闲鱼卖家昵称与价格、小红书笔记原文、
+# 微博评论原文（含真实昵称）。私有仓库也不传，只传代码与验收报告。
+tools/platform-login/data/
+tools/platform-login/pages/
+docs/validation/**/raw/
+docs/validation/**/samples/
+# 原始落盘：记录级 jsonl、抓取页 html、每次运行的日志 json（含昵称/正文原文）
+docs/validation/**/*.jsonl
+docs/validation/**/*.html
+docs/validation/**/logs/*.json
+# evidence 逐文件判断后的例外：这些含真实昵称/帖子原文，单独排除
+docs/validation/dsh-tooling/agent-reach/evidence/12_bilibili_search.json
+docs/validation/dsh-tooling/agent-reach/evidence/16_summary.json
+docs/validation/dsh-tooling/agent-reach/evidence/22_restricted_path_bili.json
+docs/validation/dsh-tooling/agent-reach/evidence/25_cwd_bili.json
+tools/selection/evidence/github-v2ex/parsed_signals.json
+tools/selection/evidence/github-v2ex/v2ex_topics_notion_20261025T134939Z.json
+tools/selection/evidence/github-v2ex/v2ex_topics_notion_20261025T135538Z.json

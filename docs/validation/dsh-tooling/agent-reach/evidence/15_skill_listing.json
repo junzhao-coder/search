@@ -1,0 +1,72 @@
+{
+ "recorded_utc": "2026-10-21T13:33Z",
+ "skill_root": "C:\\Users\\19183\\.dsh\\skills\\agent-reach",
+ "file_count": 13,
+ "files": [
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\DSH-INSTALL-NOTES.md",
+   "bytes": 6000,
+   "sha256": "9373ebfc423597a986ba227c301fa08815c3b944e426a8cd57721c2add9c945c"
+  },
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\LICENSE",
+   "bytes": 1067,
+   "sha256": "e94c131ac1c2f78cfd8f7e69da354c0ff58e4e54071697703d56856c036de402"
+  },
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\career.md",
+   "bytes": 9249,
+   "sha256": "ade444ac499e55f02c84bd663253a28cebc1eefc7f56c7248dc6792841fbe53e"
+  },
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\dev.md",
+   "bytes": 1383,
+   "sha256": "f6f91107557eacf1d28a023d597eb5a61353a8a6ede286c3c0a4888d274df9fe"
+  },
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\finance.md",
+   "bytes": 1474,
+   "sha256": "c0cf89af1119d81890f6797ff9e8154a00ee08c17141e7d18c1b09658a916551"
+  },
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\install.md",
+   "bytes": 22167,
+   "sha256": "269dfa9308f0adf06d9efe22591fd60a48af785b2c4921302ff2d6726ee579f5"
+  },
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\README.md",
+   "bytes": 22830,
+   "sha256": "7b723bcd4e5992c37ad1c25c3a2badd89c723a105b787fde9d1aa19a215f7ff7"
+  },
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\search.md",
+   "bytes": 1066,
+   "sha256": "23bfc54a3b85847ac7c1e12d6dbb0913d6fa3bb89a706d79e2b36396a8a8ef5d"
+  },
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\social.md",
+   "bytes": 10521,
+   "sha256": "e2e6451eb931effd4f63ea407fbb109bea1e98de34bd703c52753ad0cc7025b3"
+  },
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\video.md",
+   "bytes": 5515,
+   "sha256": "167ce732382c664eea63b884685dc085caa27cd69820138f7eeb91b0162efac8"
+  },
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\references\\web.md",
+   "bytes": 1087,
+   "sha256": "b238fc897975a693d7bb262600ca2ea69cd13a4892e870d346dbe375c880b303"
+  },
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\SKILL.md",
+   "bytes": 6316,
+   "sha256": "1bb7eae7322220f89299d683f9ce7caac8d2800ad5ee898d353010e5dfcd3fa9"
+  },
+  {
+   "file": "C:\\Users\\19183\\.dsh\\skills\\agent-reach\\SOURCE.md",
+   "bytes": 1679,
+   "sha256": "6b134cdc7d16ffbf317cc45e08ae1da4c16970508e5c604fcdf7ebec3ecd2ce0"
+  }
+ ]
+}

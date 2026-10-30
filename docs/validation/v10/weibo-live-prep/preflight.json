@@ -1,0 +1,165 @@
+{
+ "generated_utc": "2026-10-29T14:35:51Z",
+ "platform_api": {
+  "DEFAULT_PATH": "tools\\selection\\access\\runtime\\platform_weibo.sqlite3",
+  "MAX_AUTHORIZED_CALLS": 20,
+  "MAX_SECONDS": 300.0,
+  "MIN_INTERVAL": 15.0,
+  "MAX_RECORDS": 5,
+  "call_kinds": [
+   "active_nav",
+   "search",
+   "detail",
+   "comments"
+  ],
+  "history_sources": 9
+ },
+ "sources": [
+  {
+   "source_key": "probe1",
+   "path": "docs/validation/v10/weibo-probe/state-probe1",
+   "classification": "pre_deducted",
+   "exists": true,
+   "db_path": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-probe\\state-probe1\\budget.sqlite3",
+   "status": "ok",
+   "calls": 1,
+   "records": 0,
+   "locked": false,
+   "lock_reason": null,
+   "error": null,
+   "sidecars": []
+  },
+  {
+   "source_key": "probe2",
+   "path": "docs/validation/v10/weibo-probe/state-probe2",
+   "classification": "pre_deducted",
+   "exists": true,
+   "db_path": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-probe\\state-probe2\\budget.sqlite3",
+   "status": "ok",
+   "calls": 1,
+   "records": 0,
+   "locked": false,
+   "lock_reason": null,
+   "error": null,
+   "sidecars": []
+  },
+  {
+   "source_key": "probe3",
+   "path": "docs/validation/v10/weibo-probe/state-probe3",
+   "classification": "pre_deducted",
+   "exists": true,
+   "db_path": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-probe\\state-probe3\\budget.sqlite3",
+   "status": "ok",
+   "calls": 1,
+   "records": 0,
+   "locked": false,
+   "lock_reason": null,
+   "error": null,
+   "sidecars": []
+  },
+  {
+   "source_key": "login-window-1",
+   "path": "docs/validation/v10/weibo-login/state-login",
+   "classification": "uncharged_navigation",
+   "exists": true,
+   "db_path": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-login\\state-login\\budget.sqlite3",
+   "status": "ok",
+   "calls": 0,
+   "records": 0,
+   "locked": false,
+   "lock_reason": null,
+   "error": null,
+   "sidecars": []
+  },
+  {
+   "source_key": "login-window-2",
+   "path": "docs/validation/v10/weibo-verify/state-login",
+   "classification": "uncharged_navigation",
+   "exists": true,
+   "db_path": "D:\\桌面\\two\\docs\\validation\\v10\\weibo-verify\\state-login\\budget.sqlite3",
+   "status": "ok",
+   "calls": 0,
+   "records": 0,
+   "locked": false,
+   "lock_reason": null,
+   "error": null,
+   "sidecars": []
+  },
+  {
+   "source_key": "offline-login",
+   "path": "docs/validation/v10/weibo/checks/state_login",
+   "classification": "offline_check",
+   "exists": true,
+   "db_path": "D:\\桌面\\two\\docs\\validation\\v10\\weibo\\checks\\state_login\\budget.sqlite3",
+   "status": "ok",
+   "calls": 0,
+   "records": 0,
+   "locked": false,
+   "lock_reason": null,
+   "error": null,
+   "sidecars": []
+  },
+  {
+   "source_key": "offline-search",
+   "path": "docs/validation/v10/weibo/checks/state_search",
+   "classification": "offline_check",
+   "exists": true,
+   "db_path": "D:\\桌面\\two\\docs\\validation\\v10\\weibo\\checks\\state_search\\budget.sqlite3",
+   "status": "ok",
+   "calls": 1,
+   "records": 0,
+   "locked": false,
+   "lock_reason": null,
+   "error": null,
+   "sidecars": []
+  },
+  {
+   "source_key": "offline-detail",
+   "path": "docs/validation/v10/weibo/checks/state_detail",
+   "classification": "offline_check",
+   "exists": true,
+   "db_path": "D:\\桌面\\two\\docs\\validation\\v10\\weibo\\checks\\state_detail\\budget.sqlite3",
+   "status": "ok",
+   "calls": 1,
+   "records": 0,
+   "locked": false,
+   "lock_reason": null,
+   "error": null,
+   "sidecars": []
+  },
+  {
+   "source_key": "offline-comments",
+   "path": "docs/validation/v10/weibo/checks/state_comments",
+   "classification": "offline_check",
+   "exists": true,
+   "db_path": "D:\\桌面\\two\\docs\\validation\\v10\\weibo\\checks\\state_comments\\budget.sqlite3",
+   "status": "ok",
+   "calls": 1,
+   "records": 0,
+   "locked": false,
+   "lock_reason": null,
+   "error": null,
+   "sidecars": []
+  }
+ ],
+ "sources_summary": {
+  "total": 9,
+  "ok": 9,
+  "unknown": 0,
+  "locked": [],
+  "unknown_keys": [],
+  "no_lock_conclusion_allowed": true,
+  "note": "只有全部源 status=ok 且无人 locked 时，才允许说「未发现锁」；unknown 一律不当作无锁"
+ },
+ "platform": {
+  "path": "tools\\selection\\access\\runtime\\platform_weibo.sqlite3",
+  "exists": false,
+  "status": "absent",
+  "note": "平台账本尚未创建：历史未导入、批次未授权（本预检不会创建）"
+ },
+ "profile": {
+  "path": "docs\\validation\\v10\\weibo-login\\profile",
+  "exists": true,
+  "note": "只判断目录存在；未打开、未读 cookie"
+ }
+}

@@ -1,0 +1,20 @@
+{
+  "count": 8,
+  "kinds": {
+    "同款": 3,
+    "替代": 4,
+    "不匹配": 1
+  },
+  "license_verdicts": {
+    "禁止或不明": 6,
+    "可商用": 2
+  },
+  "sample_status": {
+    "部分": 5,
+    "已核对": 3
+  },
+  "free": 7,
+  "paid": 1,
+  "problems": [],
+  "ok": true
+}

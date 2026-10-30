@@ -1,0 +1,76 @@
+--- a/tests/dash/test_routes.py
++++ b/tests/dash/test_routes.py
+@@ -53,19 +53,61 @@
+         self.assertIn("已读取", body)
+ 
+     def test_opportunities_shows_model_rows_and_links(self):
+-        # Keep the route test independent from live scoring data: the fixture
+-        # is synthetic and does not assert the current production top item.
+-        fixture = ROOT / "tests" / "dash" / "_fixtures" / "opportunities_data"
+-        app = create_app({"db_path": str(pathlib.Path(self.tmp) / "fixture.db"),
+-                          "DASH_DATA_ROOT": str(fixture)})
+-        body = app.test_client().get("/dash/opportunities").get_data(as_text=True)
+-        fixture_scores = fixture / "docs/validation/money-project/scoring/scores.csv"
+-        with fixture_scores.open(encoding="utf-8", newline="") as fh:
+-            expected_score = list(csv.DictReader(fh))[0]["total_score"]
++        # Isolate the route from live scoring data: build a temporary DASH_DATA_ROOT
++        # with explicitly synthetic scores.csv and sources.csv, then assert that
++        # the page renders the synthetic score/link (never the production top row).
++        data_root = pathlib.Path(self.tmp) / "isolated_data"
++        scoring_dir = data_root / "docs" / "validation" / "money-project" / "scoring"
++        sourcing_dir = data_root / "docs" / "validation" / "money-project" / "sourcing"
++        scoring_dir.mkdir(parents=True)
++        sourcing_dir.mkdir(parents=True)
++
++        score = "0.812"
++        scores_path = scoring_dir / "scores.csv"
++        score_fields = [
++            "rank", "item_id", "platform", "title", "url", "author", "published_at",
++            "demand_raw", "margin_low", "margin_high", "source", "total_score",
++        ]
++        with scores_path.open("w", encoding="utf-8", newline="") as fh:
++            writer = csv.DictWriter(fh, fieldnames=score_fields)
++            writer.writeheader()
++            writer.writerow({
++                "rank": "1", "item_id": "fixture:isolated:1", "platform": "fixture",
++                "title": "isolated fixture opportunity", "url": "https://example.test/isolated-opportunity",
++                "author": "@fixture", "published_at": "2026-01-01T00:00:00Z",
++                "demand_raw": "10", "margin_low": "0.7", "margin_high": "0.9",
++                "source": "fixture", "total_score": score,
++            })
++
++        sources_path = sourcing_dir / "sources.csv"
++        source_fields = [
++            "source_id", "name", "type", "license_spdx", "license_verdict", "cost",
++            "effort", "stability", "after_sales_risk", "evidence_url", "repo_or_url",
++        ]
++        with sources_path.open("w", encoding="utf-8", newline="") as fh:
++            writer = csv.DictWriter(fh, fieldnames=source_fields)
++            writer.writeheader()
++            writer.writerow({
++                "source_id": "fixture-src", "name": "fixture source", "type": "fixture",
++                "license_spdx": "MIT", "license_verdict": "可商用", "cost": "0",
++                "effort": "low", "stability": "1.0", "after_sales_risk": "none",
++                "evidence_url": "https://example.test/source-license",
++                "repo_or_url": "https://example.test/source",
++            })
++
++        app = create_app({"db_path": str(data_root / "fixture.db"),
++                          "DASH_DATA_ROOT": str(data_root)})
++        client = app.test_client()
++        body = client.get("/dash/opportunities").get_data(as_text=True)
++        expected_display = f"{float(score):.3f}"
+         self.assertIn("机会榜", body)
+-        self.assertIn("fixture opportunity", body)
+-        self.assertIn(expected_score, body)
+-        self.assertIn("https://example.test/fixture", body)
++        self.assertIn("isolated fixture opportunity", body)
++        self.assertIn(expected_display, body)
++        self.assertIn("https://example.test/isolated-opportunity", body)
++
++        sources_body = client.get("/dash/sources").get_data(as_text=True)
++        self.assertIn("fixture-src", sources_body)
++        self.assertIn("https://example.test/source", sources_body)
+ 
+     def test_sources_shows_license_rows_and_prices(self):
+         _, _, body = self.get("/dash/sources")

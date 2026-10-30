@@ -1,0 +1,95 @@
+{
+ "port": 5017,
+ "db": "C:\\Users\\19183\\AppData\\Local\\Temp\\b1-e2e-y7cw8nu3\\workflow_e2e.sqlite3",
+ "steps": [
+  {
+   "step": "GET /opportunities",
+   "status": 200
+  },
+  {
+   "step": "POST create",
+   "status": 200,
+   "url": "http://127.0.0.1:5017/worksheet/wo:20261023-f78da178"
+  },
+  {
+   "step": "POST create duplicate",
+   "status": 200,
+   "url": "http://127.0.0.1:5017/worksheet/wo:20261023-f78da178?deduplicated=1"
+  },
+  {
+   "step": "POST edit ok",
+   "status": 200,
+   "url": "http://127.0.0.1:5017/worksheet/wo:20261023-f78da178"
+  },
+  {
+   "step": "POST stale revision",
+   "status": 409
+  },
+  {
+   "step": "POST escalate status=ready",
+   "status": 403
+  },
+  {
+   "step": "POST bad csrf",
+   "status": 403
+  },
+  {
+   "step": "POST create status=verified",
+   "status": 403
+  },
+  {
+   "step": "after restart GET detail",
+   "status": 200,
+   "contains_name": true
+  }
+ ],
+ "csrf_present": true,
+ "pick": {
+  "csrf": "***redacted***",
+  "group": "Notion 学习笔记模板",
+  "item_id": "x:1824402140070285653",
+  "submit_key": "pick-Notion 学习笔记模板-x:1824402140070285653",
+  "name": "Notion 学习笔记模板 工作单",
+  "use_case": "Notion 学习笔记模板",
+  "deliverable": "学习/生活规划模板（可复制的页面或文档）",
+  "target_buyer": "学生",
+  "target_platform": "xianyu"
+ },
+ "credentials": "测试凭据已脱敏（csrf 不落盘）；测试密钥在系统临时目录，跑完即删；未触碰生产 runtime/secret_key",
+ "workorder_id": "wo:20261023-f78da178",
+ "db_after_create": {
+  "count": 1,
+  "fields": {
+   "workorder_id": "wo:20261023-f78da178",
+   "status": "pending_supply",
+   "selected_supply_id": null,
+   "gate_demand": "unverified",
+   "gate_supply_distribution": "unverified",
+   "gate_cost": "unverified",
+   "gate_platform_policy": "unverified",
+   "revision": 1,
+   "name": "Notion 学习笔记模板 工作单",
+   "source_group": "Notion 学习笔记模板",
+   "source_item_id": "x:1824402140070285653"
+  }
+ },
+ "idempotent_count": 1,
+ "db_after_edit": {
+  "name": "改名后的工作单",
+  "status": "in_review",
+  "revision": 2
+ },
+ "db_after_stale": {
+  "name": "改名后的工作单",
+  "revision": 2
+ },
+ "db_after_escalate": {
+  "status": "in_review",
+  "revision": 2
+ },
+ "count_after_forgeries": 1,
+ "after_restart": {
+  "count": 1,
+  "list_has_id": true
+ }
+}

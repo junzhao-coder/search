@@ -1,0 +1,16 @@
+test_add_and_list (tests.test_supply_sample.SupplySampleTests.test_add_and_list) ... ok
+test_deactivate_requires_confirm_and_soft_deletes (tests.test_supply_sample.SupplySampleTests.test_deactivate_requires_confirm_and_soft_deletes) ... ok
+test_detail_page_sections (tests.test_supply_sample.SupplySampleTests.test_detail_page_sections) ... ok
+test_import_json_with_skipped (tests.test_supply_sample.SupplySampleTests.test_import_json_with_skipped) ... ok
+test_md_file_check (tests.test_supply_sample.SupplySampleTests.test_md_file_check) ... ok
+test_sample_check_failure_keeps_state (tests.test_supply_sample.SupplySampleTests.test_sample_check_failure_keeps_state) ... ok
+test_sample_check_passes_on_b7_sample (tests.test_supply_sample.SupplySampleTests.test_sample_check_passes_on_b7_sample) ... ok
+test_sample_check_rejects_escapes_and_wrong_ext (tests.test_supply_sample.SupplySampleTests.test_sample_check_rejects_escapes_and_wrong_ext) ... ok
+test_select_and_replace_events (tests.test_supply_sample.SupplySampleTests.test_select_and_replace_events) ... ok
+test_select_requires_valid_revision (tests.test_supply_sample.SupplySampleTests.test_select_requires_valid_revision) ... ok
+test_update_and_validation (tests.test_supply_sample.SupplySampleTests.test_update_and_validation) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.850s
+
+OK

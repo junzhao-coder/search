@@ -1,0 +1,33 @@
+python.exe : test_backup_creates_db_and_manifest (__main__.BackupRestoreTest.test_backup_creates_db_and_manifest) ... o
+k
+所在位置 行:1 字符: 508
++ ... alse); $o = & $py -X utf8 -m tests.tools.test_backup_restore -v 2>&1; ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_backup_cre...anifest) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_backup_does_not_modify_source_and_adds_no_sidecars (__main__.BackupRestoreTest.test_backup_does_not_modify_source_
+and_adds_no_sidecars) ... ok
+test_backup_missing_source_rejected (__main__.BackupRestoreTest.test_backup_missing_source_rejected) ... ok
+test_backup_refuses_overwrite (__main__.BackupRestoreTest.test_backup_refuses_overwrite) ... ok
+test_backup_refuses_source_with_wal_sidecars (__main__.BackupRestoreTest.test_backup_refuses_source_with_wal_sidecars) 
+... ok
+test_cli_backup_and_restore (__main__.BackupRestoreTest.test_cli_backup_and_restore) ... ok
+test_restore_refuses_backup_with_sidecars (__main__.BackupRestoreTest.test_restore_refuses_backup_with_sidecars) ... ok
+test_restore_refuses_business_db_target (__main__.BackupRestoreTest.test_restore_refuses_business_db_target) ... ok
+test_restore_refuses_existing_target (__main__.BackupRestoreTest.test_restore_refuses_existing_target) ... ok
+test_restore_rejects_corrupted_backup (__main__.BackupRestoreTest.test_restore_rejects_corrupted_backup) ... ok
+test_restore_rejects_higher_schema_version (__main__.BackupRestoreTest.test_restore_rejects_higher_schema_version)
+R-02：库版本高于应用支持版本 → 恢复层明确拒绝（应用层不拒绝的差距如实保留）。 ... ok
+test_restore_rejects_manifest_mismatch (__main__.BackupRestoreTest.test_restore_rejects_manifest_mismatch) ... ok
+test_restore_to_isolated_copy_verified (__main__.BackupRestoreTest.test_restore_to_isolated_copy_verified) ... ok
+test_verify_manifest_detects_tampering (__main__.BackupRestoreTest.test_verify_manifest_detects_tampering) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.040s
+
+OK
+backup: ok C:\Users\19183\AppData\Local\Temp\bk_bl3rnu3l\backups\app-20261020-130000.db sha256=0eb337466251717f076624de2e9fa42bbea7e9eed990b9aa59851ecf017bc46a bytes=241664 schema=2 manifest=C:\Users\19183\AppData\Local\Temp\bk_bl3rnu3l\backups\app-20261020-130000.db.manifest.json
+restore: ok target=C:\Users\19183\AppData\Local\Temp\bk_bl3rnu3l\restore\cli\app.db schema=2 manifest_checked=True sha256=0eb337466251717f076624de2e9fa42bbea7e9eed990b9aa59851ecf017bc46a
+
+module_exit=0

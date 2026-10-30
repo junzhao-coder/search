@@ -1,0 +1,85 @@
+{
+ "routes": [
+  {
+   "path": "/dash",
+   "status": 302,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 199,
+   "location": "/dash/"
+  },
+  {
+   "path": "/dash/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 9262,
+   "location": null
+  },
+  {
+   "path": "/dash/collect",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 41056,
+   "location": null
+  },
+  {
+   "path": "/dash/opportunities",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 39634,
+   "location": null
+  },
+  {
+   "path": "/dash/sources",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 29315,
+   "location": null
+  },
+  {
+   "path": "/dash/daily",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7888,
+   "location": null
+  }
+ ],
+ "shots": [
+  {
+   "page": "overview",
+   "path": "shots/overview.png",
+   "bytes": 111241,
+   "sha256": "66ce890d0392421cb0b325c9671a13e9cfb157964ed76d71d8deb94ba867974b"
+  },
+  {
+   "page": "collect",
+   "path": "shots/collect.png",
+   "bytes": 268426,
+   "sha256": "1b68bd6170f1ccd7949b4f7def86cd1b9f53bddbe3b60629802c6bdde1adac9c"
+  },
+  {
+   "page": "opportunities",
+   "path": "shots/opportunities.png",
+   "bytes": 176971,
+   "sha256": "e6e3e7bddc0bd0f2b8aff9dbe9bcdd2ac58680e9aaea961148dd040bbd2d8842"
+  },
+  {
+   "page": "sources",
+   "path": "shots/sources.png",
+   "bytes": 155209,
+   "sha256": "517102ea9c57b3fbba1be6de810b845935458eb621bd294a0fae03bfb39bf9ae"
+  },
+  {
+   "page": "daily",
+   "path": "shots/daily.png",
+   "bytes": 111982,
+   "sha256": "46f57577ea6fdb21d4a99c996077b4430e1fe510f01695c647fb2a4a2eafc78b"
+  }
+ ],
+ "test": {
+  "command": ".venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+  "tests": 334,
+  "exit": 0,
+  "result": "OK",
+  "elapsed_s": 48.651
+ }
+}

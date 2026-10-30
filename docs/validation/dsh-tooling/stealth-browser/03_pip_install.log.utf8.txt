@@ -1,0 +1,306 @@
+START_UTC=2026-10-21T13:23:05.7134414Z
+CMD=C:\Users\19183\.dsh\tools\stealth-browser-mcp\venv\Scripts\python.exe -m pip install -r C:\Users\19183\.dsh\tools\stealth-browser-mcp\repo\requirements.txt
+Collecting py2js@ git+https://github.com/am230/py2js.git@31a83c7c25a51ab0cc3255f484a2279d26278ec3
+  Cloning https://github.com/am230/py2js.git (to revision 31a83c7c25a51ab0cc3255f484a2279d26278ec3) to c:\users\19183\appdata\local\temp\pip-install-no52kcgi\py2js_8f16fda60c2d437b9c4bec23b217cf07
+python.exe :   Running command git clone --filter=blob:none --quiet https://github.com/am230/py2js.git 'C:\Users\19183\
+AppData\Local\Temp\pip-install-no52kcgi\py2js_8f16fda60c2d437b9c4bec23b217cf07'
+所在位置 行:8 字符: 1
++ & $vpy -m pip install --no-input -r (Join-Path $tools 'repo\requireme ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  Running comma...4bec23b217cf07':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Running command git rev-parse -q --verify 'sha^31a83c7c25a51ab0cc3255f484a2279d26278ec3'
+  Running command git fetch -q https://github.com/am230/py2js.git 31a83c7c25a51ab0cc3255f484a2279d26278ec3
+  Resolved https://github.com/am230/py2js.git to commit 31a83c7c25a51ab0cc3255f484a2279d26278ec3
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting fastmcp==2.11.2
+  Using cached fastmcp-2.11.2-py3-none-any.whl (257 kB)
+Collecting nodriver==0.47.0
+  Downloading nodriver-0.47.0-py3-none-any.whl (357 kB)
+     ------------------------------------- 357.4/357.4 kB 11.2 MB/s eta 0:00:00
+Collecting pydantic==2.11.7
+  Downloading pydantic-2.11.7-py3-none-any.whl (444 kB)
+     -------------------------------------- 444.8/444.8 kB 9.4 MB/s eta 0:00:00
+Collecting python-dotenv==1.1.1
+  Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+Collecting jsbeautifier==1.15.4
+  Downloading jsbeautifier-1.15.4-py3-none-any.whl (94 kB)
+     ---------------------------------------- 94.7/94.7 kB 5.3 MB/s eta 0:00:00
+Collecting strinpy==0.0.4
+  Downloading strinpy-0.0.4.tar.gz (2.7 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting strbuilder==1.1.3
+  Downloading strbuilder-1.1.3.tar.gz (2.7 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting uvicorn[standard]==0.35.0
+  Downloading uvicorn-0.35.0-py3-none-any.whl (66 kB)
+     ---------------------------------------- 66.4/66.4 kB ? eta 0:00:00
+Collecting psutil==7.0.0
+  Downloading psutil-7.0.0-cp37-abi3-win_amd64.whl (244 kB)
+     -------------------------------------- 244.9/244.9 kB 7.3 MB/s eta 0:00:00
+Collecting pillow==11.3.0
+  Downloading pillow-11.3.0-cp310-cp310-win_amd64.whl (7.0 MB)
+     ---------------------------------------- 7.0/7.0 MB 10.4 MB/s eta 0:00:00
+Collecting requests==2.33.1
+  Downloading requests-2.33.1-py3-none-any.whl (64 kB)
+     ---------------------------------------- 64.9/64.9 kB 3.4 MB/s eta 0:00:00
+Collecting pyperclip>=1.9.0
+  Downloading pyperclip-1.11.0-py3-none-any.whl (11 kB)
+Collecting authlib>=1.5.2
+  Downloading authlib-1.9.1-py2.py3-none-any.whl (266 kB)
+     -------------------------------------- 266.0/266.0 kB 8.0 MB/s eta 0:00:00
+Collecting cyclopts>=3.0.0
+  Downloading cyclopts-4.25.3-py3-none-any.whl (242 kB)
+     ------------------------------------- 242.7/242.7 kB 14.5 MB/s eta 0:00:00
+Collecting exceptiongroup>=1.2.2
+  Using cached exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Collecting pydantic[email]>=2.11.7
+  Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+     ------------------------------------- 488.1/488.1 kB 10.2 MB/s eta 0:00:00
+Collecting rich>=13.9.4
+  Using cached rich-15.0.0-py3-none-any.whl (310 kB)
+Collecting mcp>=1.10.0
+  Downloading mcp-2.3.0-py3-none-any.whl (368 kB)
+     ------------------------------------- 368.7/368.7 kB 11.6 MB/s eta 0:00:00
+Collecting httpx>=0.28.1
+  Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Collecting openapi-core>=0.19.5
+  Downloading openapi_core-0.23.1-py3-none-any.whl (115 kB)
+     ---------------------------------------- 115.2/115.2 kB ? eta 0:00:00
+Collecting openapi-pydantic>=0.5.1
+  Downloading openapi_pydantic-0.6.0-py3-none-any.whl (96 kB)
+     ---------------------------------------- 96.9/96.9 kB ? eta 0:00:00
+Collecting mss
+  Downloading mss-10.2.0-py3-none-any.whl (67 kB)
+     ---------------------------------------- 67.1/67.1 kB 3.6 MB/s eta 0:00:00
+Collecting websockets>=14
+  Downloading websockets-16.1.1-cp310-cp310-win_amd64.whl (180 kB)
+     ------------------------------------- 180.2/180.2 kB 11.3 MB/s eta 0:00:00
+Collecting deprecated
+  Downloading deprecated-1.3.1-py2.py3-none-any.whl (11 kB)
+Collecting typing-extensions>=4.12.2
+  Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+     ---------------------------------------- 45.6/45.6 kB ? eta 0:00:00
+Collecting typing-inspection>=0.4.0
+  Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Collecting annotated-types>=0.6.0
+  Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Collecting pydantic-core==2.33.2
+  Downloading pydantic_core-2.33.2-cp310-cp310-win_amd64.whl (2.0 MB)
+     ---------------------------------------- 2.0/2.0 MB 9.5 MB/s eta 0:00:00
+Collecting six>=1.13.0
+  Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Collecting editorconfig>=0.12.2
+  Downloading editorconfig-0.17.1-py3-none-any.whl (16 kB)
+Collecting h11>=0.8
+  Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Collecting click>=7.0
+  Downloading click-8.5.0-py3-none-any.whl (125 kB)
+     -------------------------------------- 125.3/125.3 kB 7.2 MB/s eta 0:00:00
+Collecting colorama>=0.4
+  Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Collecting pyyaml>=5.1
+  Using cached pyyaml-6.0.3-cp310-cp310-win_amd64.whl (158 kB)
+Collecting watchfiles>=0.13
+  Downloading watchfiles-1.3.0-cp310-abi3-win_amd64.whl (290 kB)
+     -------------------------------------- 290.6/290.6 kB 8.8 MB/s eta 0:00:00
+Collecting httptools>=0.6.3
+  Downloading httptools-0.9.0-cp310-cp310-win_amd64.whl (92 kB)
+     ---------------------------------------- 92.6/92.6 kB 5.5 MB/s eta 0:00:00
+Collecting idna<4,>=2.5
+  Downloading idna-3.20-py3-none-any.whl (69 kB)
+     -------------------------------------- 69.6/69.6 kB 760.8 kB/s eta 0:00:00
+Collecting certifi>=2023.5.7
+  Downloading certifi-2026.10.19-py3-none-any.whl (136 kB)
+     -------------------------------------- 136.5/136.5 kB 7.9 MB/s eta 0:00:00
+Collecting charset_normalizer<4,>=2
+  Downloading charset_normalizer-3.5.2-cp310-cp310-win_amd64.whl (215 kB)
+     -------------------------------------- 215.4/215.4 kB 6.4 MB/s eta 0:00:00
+Collecting urllib3<3,>=1.26
+  Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+     -------------------------------------- 135.7/135.7 kB 7.8 MB/s eta 0:00:00
+Collecting joserfc>=1.6.8
+  Downloading joserfc-1.7.7-py3-none-any.whl (71 kB)
+     ---------------------------------------- 71.8/71.8 kB ? eta 0:00:00
+Collecting cryptography>=45.0.1
+  Downloading cryptography-50.0.2-cp39-abi3-win_amd64.whl (3.9 MB)
+     ---------------------------------------- 3.9/3.9 MB 10.7 MB/s eta 0:00:00
+Collecting docstring-parser<4.0,>=0.15
+  Downloading docstring_parser-0.18.0-py3-none-any.whl (22 kB)
+Collecting attrs>=23.1.0
+  Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+     ---------------------------------------- 67.5/67.5 kB ? eta 0:00:00
+Collecting tomli>=2.0.0
+  Downloading tomli-2.5.0-py3-none-any.whl (14 kB)
+Collecting rich-rst<3.0.0,>=1.3.1
+  Downloading rich_rst-2.2.0-py3-none-any.whl (279 kB)
+     ------------------------------------- 279.3/279.3 kB 16.8 MB/s eta 0:00:00
+Collecting anyio
+  Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+     -------------------------------------- 132.1/132.1 kB 8.1 MB/s eta 0:00:00
+Collecting httpcore==1.*
+  Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Collecting httpx2>=2.10.0
+  Downloading httpx2-2.14.0-py3-none-any.whl (96 kB)
+     ---------------------------------------- 96.9/96.9 kB 5.8 MB/s eta 0:00:00
+Collecting python-multipart>=0.0.9
+  Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+Collecting pywin32>=311
+  Downloading pywin32-312-cp310-cp310-win_amd64.whl (6.9 MB)
+     ---------------------------------------- 6.9/6.9 MB 9.4 MB/s eta 0:00:00
+Collecting jsonschema>=4.20.0
+  Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+     ---------------------------------------- 90.6/90.6 kB 5.4 MB/s eta 0:00:00
+Collecting mcp-types==2.3.0
+  Downloading mcp_types-2.3.0-py3-none-any.whl (69 kB)
+     ---------------------------------------- 69.1/69.1 kB 3.7 MB/s eta 0:00:00
+Collecting starlette>=0.27
+  Downloading starlette-1.7.0-py3-none-any.whl (78 kB)
+     ---------------------------------------- 79.0/79.0 kB ? eta 0:00:00
+Collecting mcp>=1.10.0
+  Downloading mcp-2.2.0-py3-none-any.whl (365 kB)
+     ------------------------------------- 365.7/365.7 kB 11.1 MB/s eta 0:00:00
+Collecting mcp-types==2.2.0
+  Downloading mcp_types-2.2.0-py3-none-any.whl (69 kB)
+     ---------------------------------------- 69.1/69.1 kB 3.7 MB/s eta 0:00:00
+Collecting mcp>=1.10.0
+  Downloading mcp-2.1.1-py3-none-any.whl (357 kB)
+     ------------------------------------- 357.9/357.9 kB 11.2 MB/s eta 0:00:00
+  Downloading mcp-2.1.0-py3-none-any.whl (357 kB)
+     ------------------------------------- 357.3/357.3 kB 10.8 MB/s eta 0:00:00
+Collecting mcp-types==2.1.0
+  Downloading mcp_types-2.1.0-py3-none-any.whl (69 kB)
+     ---------------------------------------- 69.7/69.7 kB ? eta 0:00:00
+Collecting mcp>=1.10.0
+  Downloading mcp-2.0.1-py3-none-any.whl (350 kB)
+     ------------------------------------- 350.6/350.6 kB 11.0 MB/s eta 0:00:00
+Collecting mcp-types==2.0.1
+  Downloading mcp_types-2.0.1-py3-none-any.whl (69 kB)
+     ---------------------------------------- 69.6/69.6 kB 4.0 MB/s eta 0:00:00
+Collecting mcp>=1.10.0
+  Downloading mcp-2.0.0-py3-none-any.whl (349 kB)
+     ------------------------------------- 350.0/350.0 kB 10.6 MB/s eta 0:00:00
+Collecting mcp-types==2.0.0
+  Downloading mcp_types-2.0.0-py3-none-any.whl (69 kB)
+     ---------------------------------------- 69.6/69.6 kB ? eta 0:00:00
+Collecting mcp>=1.10.0
+  Downloading mcp-1.30.0-py3-none-any.whl (234 kB)
+     ---------------------------------------- 234.6/234.6 kB ? eta 0:00:00
+Collecting httpx-sse>=0.4
+  Downloading httpx_sse-0.4.3-py3-none-any.whl (9.0 kB)
+Collecting sse-starlette>=1.6.1
+  Downloading sse_starlette-3.5.0-py3-none-any.whl (17 kB)
+Collecting pydantic-settings>=2.5.2
+  Downloading pydantic_settings-2.15.0-py3-none-any.whl (69 kB)
+     ---------------------------------------- 69.4/69.4 kB ? eta 0:00:00
+Collecting pyjwt[crypto]>=2.10.1
+  Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+Collecting werkzeug>=2.1.0
+  Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+     -------------------------------------- 228.7/228.7 kB 7.0 MB/s eta 0:00:00
+Collecting jsonschema-path<0.5.0,>=0.4.5
+  Downloading jsonschema_path-0.4.6-py3-none-any.whl (19 kB)
+Collecting openapi-spec-validator<0.9.0,>=0.8.0
+  Downloading openapi_spec_validator-0.8.5-py3-none-any.whl (50 kB)
+     ---------------------------------------- 50.3/50.3 kB ? eta 0:00:00
+Collecting openapi-schema-validator<0.9.0,>=0.7.0
+  Downloading openapi_schema_validator-0.8.1-py3-none-any.whl (19 kB)
+Collecting more-itertools
+  Downloading more_itertools-11.1.0-py3-none-any.whl (72 kB)
+     ---------------------------------------- 72.2/72.2 kB ? eta 0:00:00
+Collecting isodate
+  Downloading isodate-0.7.2-py3-none-any.whl (22 kB)
+Collecting pydantic[email]>=2.11.7
+  Downloading pydantic-2.14.0-py3-none-any.whl (487 kB)
+     -------------------------------------- 487.1/487.1 kB 7.6 MB/s eta 0:00:00
+  Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+     -------------------------------------- 472.6/472.6 kB 9.8 MB/s eta 0:00:00
+  Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+     -------------------------------------- 472.3/472.3 kB 9.8 MB/s eta 0:00:00
+  Downloading pydantic-2.13.3-py3-none-any.whl (471 kB)
+     -------------------------------------- 472.0/472.0 kB 9.8 MB/s eta 0:00:00
+  Downloading pydantic-2.13.2-py3-none-any.whl (471 kB)
+     -------------------------------------- 471.9/471.9 kB 9.8 MB/s eta 0:00:00
+  Downloading pydantic-2.13.1-py3-none-any.whl (471 kB)
+     -------------------------------------- 471.9/471.9 kB 9.8 MB/s eta 0:00:00
+  Downloading pydantic-2.13.0-py3-none-any.whl (471 kB)
+     -------------------------------------- 471.9/471.9 kB 9.8 MB/s eta 0:00:00
+  Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+     -------------------------------------- 463.6/463.6 kB 9.6 MB/s eta 0:00:00
+  Downloading pydantic-2.12.4-py3-none-any.whl (463 kB)
+     -------------------------------------- 463.4/463.4 kB 9.6 MB/s eta 0:00:00
+  Downloading pydantic-2.12.3-py3-none-any.whl (462 kB)
+     -------------------------------------- 462.4/462.4 kB 9.8 MB/s eta 0:00:00
+  Downloading pydantic-2.12.2-py3-none-any.whl (460 kB)
+     -------------------------------------- 460.6/460.6 kB 9.6 MB/s eta 0:00:00
+  Downloading pydantic-2.12.0-py3-none-any.whl (459 kB)
+     -------------------------------------- 459.7/459.7 kB 9.6 MB/s eta 0:00:00
+  Downloading pydantic-2.11.10-py3-none-any.whl (444 kB)
+     -------------------------------------- 444.8/444.8 kB 9.2 MB/s eta 0:00:00
+  Downloading pydantic-2.11.9-py3-none-any.whl (444 kB)
+     ------------------------------------- 444.9/444.9 kB 14.0 MB/s eta 0:00:00
+  Downloading pydantic-2.11.8-py3-none-any.whl (444 kB)
+     -------------------------------------- 444.8/444.8 kB 9.2 MB/s eta 0:00:00
+Collecting email-validator>=2.0.0
+  Downloading email_validator-2.3.0-py3-none-any.whl (35 kB)
+Collecting markdown-it-py>=2.2.0
+  Using cached markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Collecting pygments<3.0.0,>=2.13.0
+  Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+     ---------------------------------------- 1.3/1.3 MB 9.9 MB/s eta 0:00:00
+Collecting wrapt<3,>=1.10
+  Downloading wrapt-2.5.1-cp310-cp310-win_amd64.whl (105 kB)
+     -------------------------------------- 105.7/105.7 kB 6.0 MB/s eta 0:00:00
+Collecting cffi>=2.0.0
+  Downloading cffi-2.1.1-cp310-cp310-win_amd64.whl (185 kB)
+     ------------------------------------- 185.1/185.1 kB 10.9 MB/s eta 0:00:00
+Collecting dnspython>=2.0.0
+  Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+     ------------------------------------- 331.1/331.1 kB 10.4 MB/s eta 0:00:00
+Collecting jsonschema-specifications>=2023.03.6
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Collecting referencing>=0.28.4
+  Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Collecting rpds-py>=0.25.0
+  Downloading rpds_py-0.30.0-cp310-cp310-win_amd64.whl (235 kB)
+     -------------------------------------- 235.8/235.8 kB 7.3 MB/s eta 0:00:00
+Collecting pathable<0.6.0,>=0.5.0
+  Downloading pathable-0.5.0-py3-none-any.whl (16 kB)
+Collecting mdurl~=0.1
+  Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting rfc3339-validator
+  Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Collecting lazy-object-proxy<2.0,>=1.7.1
+  Downloading lazy_object_proxy-1.12.0-cp310-cp310-win_amd64.whl (26 kB)
+Collecting markupsafe>=2.1.1
+  Downloading markupsafe-3.0.4-cp310-cp310-win_amd64.whl (14 kB)
+Collecting pycparser
+  Downloading pycparser-3.11-py3-none-any.whl (51 kB)
+     ---------------------------------------- 51.2/51.2 kB ? eta 0:00:00
+Installing collected packages: strinpy, strbuilder, pyperclip, py2js, wrapt, websockets, urllib3, typing-extensions, tomli, six, rpds-py, pyyaml, pywin32, python-multipart, python-dotenv, pygments, pycparser, psutil, pillow, pathable, mss, more-itertools, mdurl, markupsafe, lazy-object-proxy, isodate, idna, httpx-sse, httptools, h11, editorconfig, docstring-parser, dnspython, colorama, click, charset_normalizer, certifi, attrs, annotated-types, werkzeug, uvicorn, typing-inspection, rfc3339-validator, requests, referencing, pyjwt, pydantic-core, markdown-it-py, jsbeautifier, httpcore, exceptiongroup, email-validator, deprecated, cffi, rich, pydantic, nodriver, jsonschema-specifications, jsonschema-path, cryptography, anyio, watchfiles, starlette, rich-rst, pydantic-settings, openapi-pydantic, jsonschema, joserfc, httpx, sse-starlette, openapi-schema-validator, cyclopts, authlib, openapi-spec-validator, mcp, openapi-core, fastmcp
+  DEPRECATION: strinpy is being installed using the legacy 'setup.py install' method, because it does not have a 'pypro
+ject.toml' and the 'wheel' package is not installed. pip 23.1 will enforce this behaviour change. A possible replacemen
+t is to enable the '--use-pep517' option. Discussion can be found at https://github.com/pypa/pip/issues/8559
+  Running setup.py install for strinpy: started
+  Running setup.py install for strinpy: finished with status 'done'
+  DEPRECATION: strbuilder is being installed using the legacy 'setup.py install' method, because it does not have a 'py
+project.toml' and the 'wheel' package is not installed. pip 23.1 will enforce this behaviour change. A possible replace
+ment is to enable the '--use-pep517' option. Discussion can be found at https://github.com/pypa/pip/issues/8559
+  Running setup.py install for strbuilder: started
+  Running setup.py install for strbuilder: finished with status 'done'
+  DEPRECATION: py2js is being installed using the legacy 'setup.py install' method, because it does not have a 'pyproje
+ct.toml' and the 'wheel' package is not installed. pip 23.1 will enforce this behaviour change. A possible replacement 
+is to enable the '--use-pep517' option. Discussion can be found at https://github.com/pypa/pip/issues/8559
+  Running setup.py install for py2js: started
+  Running setup.py install for py2js: finished with status 'done'
+Successfully installed annotated-types-0.8.0 anyio-4.15.1 attrs-26.1.0 authlib-1.9.1 certifi-2026.10.19 cffi-2.1.1 charset_normalizer-3.5.2 click-8.5.0 colorama-0.4.6 cryptography-50.0.2 cyclopts-4.25.3 deprecated-1.3.1 dnspython-2.8.0 docstring-parser-0.18.0 editorconfig-0.17.1 email-validator-2.3.0 exceptiongroup-1.3.1 fastmcp-2.11.2 h11-0.16.0 httpcore-1.0.9 httptools-0.9.0 httpx-0.28.1 httpx-sse-0.4.3 idna-3.20 isodate-0.7.2 joserfc-1.7.7 jsbeautifier-1.15.4 jsonschema-4.26.0 jsonschema-path-0.4.6 jsonschema-specifications-2025.9.1 lazy-object-proxy-1.12.0 markdown-it-py-4.2.0 markupsafe-3.0.4 mcp-1.30.0 mdurl-0.1.2 more-itertools-11.1.0 mss-10.2.0 nodriver-0.47.0 openapi-core-0.23.1 openapi-pydantic-0.6.0 openapi-schema-validator-0.8.1 openapi-spec-validator-0.8.5 pathable-0.5.0 pillow-11.3.0 psutil-7.0.0 py2js-1.2.1 pycparser-3.11 pydantic-2.11.7 pydantic-core-2.33.2 pydantic-settings-2.15.0 pygments-2.21.0 pyjwt-2.15.1 pyperclip-1.11.0 python-dotenv-1.1.1 python-multipart-0.0.32 pywin32-312 pyyaml-6.0.3 referencing-0.37.0 requests-2.33.1 rfc3339-validator-0.1.4 rich-15.0.0 rich-rst-2.2.0 rpds-py-0.30.0 six-1.17.0 sse-starlette-3.5.0 starlette-1.7.0 strbuilder-1.1.3 strinpy-0.0.4 tomli-2.5.0 typing-extensions-4.16.0 typing-inspection-0.4.4 urllib3-2.8.0 uvicorn-0.35.0 watchfiles-1.3.0 websockets-16.1.1 werkzeug-3.1.9 wrapt-2.5.1
+
+[notice] A new release of pip available: 22.3.1 -> 26.2.2
+[notice] To update, run: C:\Users\19183\.dsh\tools\stealth-browser-mcp\venv\Scripts\python.exe -m pip install --upgrade
+ pip
+PIP_INSTALL_EXIT=0
+END_UTC=2026-10-21T13:25:49.7474613Z

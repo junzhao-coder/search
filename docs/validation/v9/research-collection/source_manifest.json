@@ -1,0 +1,389 @@
+{
+  "utc": "2026-10-25T05:25:37Z",
+  "scope": "docs/validation/v9/research-collection",
+  "method": "GitHub REST API + raw.githubusercontent（按 commit sha 取件）＋ 本项目 x-collect CLI 只读 --help/doctor；文本统一「字节→UTF-8 严格解码→LF」；未运行任何候选程序",
+  "tooling": {
+    "skill_tool": "absent — 本会话函数表无 skill 工具，未“加载技能”",
+    "agent_reach_cli": "absent — PATH 上 agent-reach/reach/agentreach/areach 均 not found",
+    "stealth_browser_mcp": "absent — 本会话无可调用 mcp__stealth__* 工具",
+    "github_api": "ok — 60/hr；本次共 21 次（rate_limit 1 + 检索 7 + repo 5 + contents 4 + commits 4）",
+    "raw_githubusercontent": "ok — 统一「下载字节→UTF-8 严格解码→LF」；44 件全部严格解码通过",
+    "web_search_site_x_com": "站点限定检索未命中（2 组查询，0 条 X 原帖）；唯一线索为第三方 V2EX 帖→cv-cat/catbus",
+    "x_collect_cli": "ok（只读）— --help exit=0；doctor exit=0，handle=@Johnsmathjyjp utc=2026-10-25T05:23:40Z；未运行 search（输出落工具目录，超出本 scope）",
+    "npx_catbus": "未安装、未运行（npx 可能触发下载与执行，不称“无执行干跑”）"
+  },
+  "corrections_in_this_revision": [
+    "BiliScraper 末次 commit 2023-04-25；距观测日 2026-10-25＝42 个月（repo pushed_at 2024-02-21＝32 个月）——删除“停更约 1.5 年”",
+    "readme_BilibiliCommentScraper.md 与 readme_BilibiliCommentScraper_master.md 的 sha256 相同（重复件、内容一致），上一版“不同版本”有误",
+    "44 个原始件全部通过 UTF-8 严格解码（bad=0）；上一版“字段乱码”是控制台按 ANSI 显示所致，文件未损坏",
+    "issue 数一律写 open_issues_count 计数，标注“不等于已核对的已知故障”",
+    "catbus 降级为“待验证候选”，不作为全局依赖；未运行 npx/--help",
+    "首批范围改为 P1/P2/P3 三条与“≥3 平台且含交易源”相容的路径（提案，非裁定）"
+  ],
+  "file_count": 44,
+  "utf8_bad_files": [],
+  "identical_sha_groups": [
+    [
+      "raw/readme_BilibiliCommentScraper.md",
+      "raw/readme_BilibiliCommentScraper_master.md"
+    ]
+  ],
+  "files": [
+    {
+      "file": "raw/commit_locks.json",
+      "bytes": 1308,
+      "sha256": "3529dce9e6d2cdec33bbe0799647ad74ac0e0b17bfea476c2ac31df20c1694c4",
+      "mtime_utc": "2026-10-25T05:18:01Z",
+      "utf8_strict": "ok",
+      "source_url": "4 个候选的 commit sha/时间/链接汇总"
+    },
+    {
+      "file": "raw/gh_commit_Cialle__RedCrack.json",
+      "bytes": 3173,
+      "sha256": "132d2c8fd910112d55b6bf027063adc78d8c6d2a576b66a9d4a5c2b4e9476fa4",
+      "mtime_utc": "2026-10-25T05:17:59Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/Cialle/RedCrack/commits?per_page=1（sha a557e32…）"
+    },
+    {
+      "file": "raw/gh_commit_cv-cat__catbus.json",
+      "bytes": 3234,
+      "sha256": "43627a31227a57d0cf6e1b1706ee02da9dbef660b7a3f527aa874fac66912f4b",
+      "mtime_utc": "2026-10-25T05:17:58Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/cv-cat/catbus/commits?per_page=1（sha 0a6e705…）"
+    },
+    {
+      "file": "raw/gh_commit_Ghauster__BilibiliCommentScraper.json",
+      "bytes": 4070,
+      "sha256": "ca4db567491ae3951b7792d3d8acbb66ad0e51d19ad8c5cb0462ae6d6c754c35",
+      "mtime_utc": "2026-10-25T05:18:00Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/Ghauster/BilibiliCommentScraper/commits?per_page=1（sha 0b39e06…, 2023-04-25）"
+    },
+    {
+      "file": "raw/gh_commit_NanmiCoder__MediaCrawler.json",
+      "bytes": 3347,
+      "sha256": "44e161a911a57cf4da0640c77237758bc6c8ad0de7296c304a3f48d14f41b34d",
+      "mtime_utc": "2026-10-25T05:17:56Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/NanmiCoder/MediaCrawler/commits?per_page=1（sha 8f58399…）"
+    },
+    {
+      "file": "raw/gh_contents_Cialle__RedCrack.json",
+      "bytes": 4156,
+      "sha256": "f9d370dd561b97230556221b08712b0c6f50f80dfd8e11473ac9aeaaea1fc37d",
+      "mtime_utc": "2026-10-25T04:57:19Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/Cialle/RedCrack/contents/?ref=master"
+    },
+    {
+      "file": "raw/gh_contents_cv-cat__catbus.json",
+      "bytes": 23047,
+      "sha256": "d328590ea649a8f581b8eae446e995bef66c233fd1ba8dde397e947b35362d54",
+      "mtime_utc": "2026-10-25T04:59:11Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/cv-cat/catbus/contents/?ref=master"
+    },
+    {
+      "file": "raw/gh_contents_dataabc__weibo-crawler.json",
+      "bytes": 12328,
+      "sha256": "61bbcc06f22363705ac56f3cc851fd0091494f8f835154e08a088be2082f5a6b",
+      "mtime_utc": "2026-10-25T04:57:23Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/dataabc/weibo-crawler/contents/?ref=master（无 LICENSE）"
+    },
+    {
+      "file": "raw/gh_contents_Nemo2011__bilibili-api.json",
+      "bytes": 758,
+      "sha256": "c5ea1f79a2415efdd0c1e0243288001b947a5d6ede9368a8dcdf5aa6154e1f16",
+      "mtime_utc": "2026-10-25T04:57:21Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/Nemo2011/bilibili-api/contents/?ref=main（无 LICENSE）"
+    },
+    {
+      "file": "raw/gh_repo_Cialle__RedCrack.json",
+      "bytes": 5500,
+      "sha256": "25ee8d4105782bb36b4c6295d68a1a847eb8253e12c17f570e9bae1321745697",
+      "mtime_utc": "2026-10-25T04:56:48Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/Cialle/RedCrack"
+    },
+    {
+      "file": "raw/gh_repo_cv-cat__catbus.json",
+      "bytes": 5242,
+      "sha256": "6d7b1bc188ac16d2a0227cf3dc75da1e3fce8e5cfff23aa0c6fd25b59396d1a5",
+      "mtime_utc": "2026-10-25T04:58:57Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/cv-cat/catbus（该件为 PowerShell .Content 解码，中文描述可能失真；数值字段已核对）"
+    },
+    {
+      "file": "raw/gh_repo_dataabc__weibo-crawler.json",
+      "bytes": 5299,
+      "sha256": "757fa9b3259990bdde03b123fa7d183fe187fd68d849d33e47213d421f0176e1",
+      "mtime_utc": "2026-10-25T04:56:51Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/dataabc/weibo-crawler"
+    },
+    {
+      "file": "raw/gh_repo_NanmiCoder__MediaCrawler.json",
+      "bytes": 5661,
+      "sha256": "ed3d63636725d732ceace86f800f7f9271d14e874bd07607fed660d0254b2765",
+      "mtime_utc": "2026-10-25T04:56:53Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/NanmiCoder/MediaCrawler"
+    },
+    {
+      "file": "raw/gh_repo_Nemo2011__bilibili-api.json",
+      "bytes": 5161,
+      "sha256": "4d4c0e2c8d315f63221ae46ad2f2c442b0a90d1d2851fc728ea401d3efc724a3",
+      "mtime_utc": "2026-10-25T04:56:50Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/Nemo2011/bilibili-api"
+    },
+    {
+      "file": "raw/gh_search_catbus.json",
+      "bytes": 31182,
+      "sha256": "798d2e0b053a44e33c3a35ef9e568b0f208e55610ad168273cf64180242c3fa5",
+      "mtime_utc": "2026-10-25T04:58:44Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/search/repositories?q=catbus&sort=stars&order=desc&per_page=6"
+    },
+    {
+      "file": "raw/gh_search_q_bili_comment.json",
+      "bytes": 900631,
+      "sha256": "f0a20e8d12cd1cef055f3ea7cc14edbe7b5f5d56093d8758c52a46be28f5a347",
+      "mtime_utc": "2026-10-25T04:57:52Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/search/repositories?q=bilibili 评论 爬虫&sort=stars&order=desc&per_page=8"
+    },
+    {
+      "file": "raw/gh_search_q_mediacrawler.json",
+      "bytes": 55574,
+      "sha256": "a09a8e01acab5f574ff0c260da755e6f508febbf3a122a8c67343ca651a9c84b",
+      "mtime_utc": "2026-10-25T04:56:10Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/search/repositories?q=MediaCrawler&sort=stars&order=desc&per_page=10"
+    },
+    {
+      "file": "raw/gh_search_q_multi_cn.json",
+      "bytes": 894977,
+      "sha256": "4180d6f835b0b9792f62c42774e4c7ec36d0e86983f3b90882c2085d8efd83d7",
+      "mtime_utc": "2026-10-25T04:56:22Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/search/repositories?q=多平台 采集 评论 爬虫&sort=stars&order=desc&per_page=10"
+    },
+    {
+      "file": "raw/gh_search_q_xhs_comment.json",
+      "bytes": 53618,
+      "sha256": "251c8325d1af661ade8747c65773fe54ceadf7de1a740ac5391d7cdde849188a",
+      "mtime_utc": "2026-10-25T04:56:23Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/search/repositories?q=xhs 评论 爬虫&sort=stars&order=desc&per_page=10"
+    },
+    {
+      "file": "raw/gh_search_q_xianyu.json",
+      "bytes": 900901,
+      "sha256": "e2517fd3ffd0be2b26160a3bcec28fb955592ec2d26eef5c720dc240c6a0212f",
+      "mtime_utc": "2026-10-25T04:56:47Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/search/repositories?q=闲鱼 爬虫 商品 采集&sort=stars&order=desc&per_page=8"
+    },
+    {
+      "file": "raw/gh_search_小红书_抖音_B站_微博_贴吧_采集_CLI.json",
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f",
+      "mtime_utc": "2026-10-25T04:58:45Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/search/repositories?q=小红书 抖音 B站 微博 贴吧 采集 CLI（total=0）"
+    },
+    {
+      "file": "raw/gh_tree_catbus.json",
+      "bytes": 269833,
+      "sha256": "633f660c67d8bc2c29087d538540a6a4dbeb54c69d6b91dccb6a830f105a7ad0",
+      "mtime_utc": "2026-10-25T05:22:26Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/cv-cat/catbus/git/trees/0a6e705…?recursive=1"
+    },
+    {
+      "file": "raw/gh_tree_RedCrack.json",
+      "bytes": 11278,
+      "sha256": "8b1c85881877c5b6accaf3b6036a72922f7033b2f32bd94d9e23af53ba60aea1",
+      "mtime_utc": "2026-10-25T05:22:39Z",
+      "utf8_strict": "ok",
+      "source_url": "https://api.github.com/repos/Cialle/RedCrack/git/trees/a557e32…?recursive=1"
+    },
+    {
+      "file": "raw/license_BilibiliCommentScraper.txt",
+      "bytes": 1065,
+      "sha256": "9272dc6ff266e6f959ecf28e01cb03c086844a2a0e3a8f12ca8861106f2ff843",
+      "mtime_utc": "2026-10-25T04:58:26Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/Ghauster/BilibiliCommentScraper/0b39e0659c78fe695d2c675edc1f9c0042935ee4/LICENSE（MIT）"
+    },
+    {
+      "file": "raw/license_catbus.txt",
+      "bytes": 1063,
+      "sha256": "c9e49466458d708b961a48cba008694c531b7bd438a9c5bcf14b107927913d54",
+      "mtime_utc": "2026-10-25T04:59:23Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/cv-cat/catbus/0a6e705f95d991ac3cdc896b774570479a23c0ad/LICENSE（MIT）"
+    },
+    {
+      "file": "raw/license_MediaCrawler.txt",
+      "bytes": 4775,
+      "sha256": "aeff21de8609bec9d6e939bbbba7c2914ae0a6e7c9470ea7945c03f7d17a2a33",
+      "mtime_utc": "2026-10-25T04:57:04Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/NanmiCoder/MediaCrawler/main/LICENSE（NON-COMMERCIAL LEARNING LICENSE 1.1）"
+    },
+    {
+      "file": "raw/license_RedCrack.txt",
+      "bytes": 1062,
+      "sha256": "4bcf915907f83dfe23b3f255e5a3cc3a35c96ebf3fae597385d0a7f23d6d94ce",
+      "mtime_utc": "2026-10-25T04:57:34Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/Cialle/RedCrack/a557e328b6e723f63dcd75f1c52640794f2c84b5/LICENSE（MIT）"
+    },
+    {
+      "file": "raw/pyproject_MediaCrawler.toml",
+      "bytes": 1181,
+      "sha256": "d9dca06609bbc55d649d10bc243bf8c304042584e2b9bb168c8dd1d301b4b549",
+      "mtime_utc": "2026-10-25T04:57:35Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/NanmiCoder/MediaCrawler/main/pyproject.toml"
+    },
+    {
+      "file": "raw/readme_BilibiliCommentScraper.md",
+      "bytes": 6348,
+      "sha256": "e47f5e77a7b1784ad493c27c23e3c821698864b1067b8ff2083ff6cae3271b18",
+      "mtime_utc": "2026-10-25T04:58:26Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/Ghauster/BilibiliCommentScraper/0b39e0659c78fe695d2c675edc1f9c0042935ee4/README.md"
+    },
+    {
+      "file": "raw/readme_BilibiliCommentScraper_master.md",
+      "bytes": 6348,
+      "sha256": "e47f5e77a7b1784ad493c27c23e3c821698864b1067b8ff2083ff6cae3271b18",
+      "mtime_utc": "2026-10-25T04:58:06Z",
+      "utf8_strict": "ok",
+      "source_url": "（GitHub API/raw 抓取件；未逐件登记 URL）"
+    },
+    {
+      "file": "raw/readme_catbus.md",
+      "bytes": 10092,
+      "sha256": "816b20c1e174b59b992ac1bb64cbf38f6258caa92463ca06a6798543a2324057",
+      "mtime_utc": "2026-10-25T04:59:23Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/cv-cat/catbus/0a6e705f95d991ac3cdc896b774570479a23c0ad/README.md"
+    },
+    {
+      "file": "raw/readme_ECommerceCrawlers.md",
+      "bytes": 13050,
+      "sha256": "0a2a1d945fa9127c7a38f9af0ff0ca038412c9fd25670198c42612daf4877bd5",
+      "mtime_utc": "2026-10-25T04:57:45Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/DropsDevopsOrg/ECommerceCrawlers/master/README.md"
+    },
+    {
+      "file": "raw/readme_MediaCrawler.md",
+      "bytes": 24447,
+      "sha256": "bf59313fd8ce8c75c92d38b73390b8124e86eb964e63484b80b6b3d6a518fb01",
+      "mtime_utc": "2026-10-25T04:57:05Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/NanmiCoder/MediaCrawler/main/README.md"
+    },
+    {
+      "file": "raw/readme_RedCrack.md",
+      "bytes": 7317,
+      "sha256": "2ace0e06de10bd3e37d63e6eee6bff8e7d22cc066d6bd954df3d97f3613b8a84",
+      "mtime_utc": "2026-10-25T04:57:34Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/Cialle/RedCrack/a557e328b6e723f63dcd75f1c52640794f2c84b5/README.md"
+    },
+    {
+      "file": "raw/readme_weibo-crawler.md",
+      "bytes": 51550,
+      "sha256": "7f3b3433ad849a660c2d4b39f5e62364fb2b6e7f382d9810e3480c293c95cc47",
+      "mtime_utc": "2026-10-25T04:57:08Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/dataabc/weibo-crawler/master/README.md"
+    },
+    {
+      "file": "raw/src_catbus_auth_handlers.ts",
+      "bytes": 1829,
+      "sha256": "62b7e30e5dcdcda42eae72b3d363810a6d9ab3bb38d6770830643c24fdbac27b",
+      "mtime_utc": "2026-10-25T05:22:49Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/cv-cat/catbus/0a6e705f95d991ac3cdc896b774570479a23c0ad/src/core/auth-handlers.ts"
+    },
+    {
+      "file": "raw/src_catbus_capabilities.md",
+      "bytes": 17700,
+      "sha256": "21f585e9311873677f8b2fa575c4d91ff42e7a089c6a2afd5477f44f59ed1ede",
+      "mtime_utc": "2026-10-25T05:22:37Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/cv-cat/catbus/0a6e705f95d991ac3cdc896b774570479a23c0ad/docs/capabilities.md"
+    },
+    {
+      "file": "raw/src_catbus_confirm.ts",
+      "bytes": 849,
+      "sha256": "499e2633f796bd17dad6d9b1d4cecbaf2c52d78717943da04982690d08d27fc0",
+      "mtime_utc": "2026-10-25T05:22:49Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/cv-cat/catbus/0a6e705f95d991ac3cdc896b774570479a23c0ad/src/cli/confirm.ts"
+    },
+    {
+      "file": "raw/src_catbus_errors.md",
+      "bytes": 4339,
+      "sha256": "3dbc09ffac9a596740e429f878761f25ab62cd6bd28ef1dd704c2c26f3228270",
+      "mtime_utc": "2026-10-25T05:22:38Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/cv-cat/catbus/0a6e705f95d991ac3cdc896b774570479a23c0ad/.claude/skills/catbus/workflows/errors.md"
+    },
+    {
+      "file": "raw/src_catbus_SKILL.md",
+      "bytes": 8992,
+      "sha256": "bd5173a3f1a28ebafa76deb35f2ce286607f8cdc973a3b8f2a14b7ca40723d7e",
+      "mtime_utc": "2026-10-25T05:22:37Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/cv-cat/catbus/0a6e705f95d991ac3cdc896b774570479a23c0ad/.claude/skills/catbus/SKILL.md"
+    },
+    {
+      "file": "raw/src_MediaCrawler_base_config.py",
+      "bytes": 6631,
+      "sha256": "1ce06701d311b4e4cffeaeac67f00bc09471c41ddafef14c53e0a766f64676e7",
+      "mtime_utc": "2026-10-25T05:22:23Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/NanmiCoder/MediaCrawler/8f583999006d5b692272c608440e193ca282e73b/config/base_config.py"
+    },
+    {
+      "file": "raw/src_MediaCrawler_bilibili_core.py",
+      "bytes": 40851,
+      "sha256": "b45c68a33c0b1f2bd79cc9b85875c745a5bed353fc31fa2b82cf09dff3ebf344",
+      "mtime_utc": "2026-10-25T05:22:23Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/NanmiCoder/MediaCrawler/8f583999006d5b692272c608440e193ca282e73b/media_platform/bilibili/core.py"
+    },
+    {
+      "file": "raw/src_MediaCrawler_bilibili_field.py",
+      "bytes": 1399,
+      "sha256": "a08a56084ff7ddcf861ac05a3bde5f53c1aae20ea399de7e0b93de85bff31268",
+      "mtime_utc": "2026-10-25T05:22:23Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/NanmiCoder/MediaCrawler/8f583999006d5b692272c608440e193ca282e73b/media_platform/bilibili/field.py"
+    },
+    {
+      "file": "raw/src_RedCrack_comments.py",
+      "bytes": 7241,
+      "sha256": "3ea6b67374f1338d496f61fbb7719c20f25171784258f5f32bf8f3c98ff4becd",
+      "mtime_utc": "2026-10-25T05:22:48Z",
+      "utf8_strict": "ok",
+      "source_url": "https://raw.githubusercontent.com/Cialle/RedCrack/a557e328b6e723f63dcd75f1c52640794f2c84b5/request/web/apis/comments.py"
+    }
+  ],
+  "external_probe": {
+    "log": "x_collect_probe.log",
+    "note": "本项目自有 X 工具：--help exit=0；doctor exit=0，LOGGED_IN handle=@Johnsmathjyjp；未读 cookie 值、未登录、未发布"
+  }
+}

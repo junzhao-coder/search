@@ -1,0 +1,22 @@
+{
+ "utc": "2026-10-24T05:12:00Z",
+ "status": 200,
+ "present": {
+  "四门槛均未核验": true,
+  "未选货源": false,
+  "未验货": true,
+  "未准备文案与素材": true,
+  "未人工复核": true,
+  "未生成上架包": true,
+  "B2 待实现": true,
+  "B3 待实现": true,
+  "B4 待实现": true,
+  "B5 待实现": true,
+  "上架准备检查（服务端判定）": true,
+  "货源候选": true,
+  "样品自检（本地文件）": true
+ },
+ "excerpt": [
+  "<ul class=\"gaps\"><li>四门槛均未核验：demand / supply_distribution / cost / platform_policy</li><li>未选定货源（selected_supply_id 为空）</li><li>无可比参考价（未出现在机会-货源联动表）</li><li>可售性未评估（缺少 sellability_norm）</li><li>无公开成本输入，毛利为假设区间</li><li>未验货（B2 待实现）</li><li>未准备文案与素材（B3 待实现）</li><li>未人工复核（B4 待实现）</li><li>未生成上架包（B5 待实现）</li></ul>"
+ ]
+}

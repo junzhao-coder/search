@@ -1,0 +1,91 @@
+{
+ "generated_utc": "2026-10-23T15:31:52Z",
+ "db": "D:\\桌面\\two\\tools\\workbench\\runtime\\workflow.sqlite3",
+ "workorder": "wo:20261023-88ef9a66",
+ "backup": {
+  "path": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b15\\backup\\workflow-20261023T153152Z.sqlite3",
+  "sha256": "d9349c03faf29df35f8a846b1000779f54e689fc5633189270c33d68bf7f6cf2"
+ },
+ "before": {
+  "sha256": "d9349c03faf29df35f8a846b1000779f54e689fc5633189270c33d68bf7f6cf2",
+  "counts": {
+   "workorder": 1,
+   "workorder_event": 2,
+   "workorder_export": 0,
+   "tables": [
+    "sqlite_sequence",
+    "workorder",
+    "workorder_event",
+    "workorder_export"
+   ],
+   "export_indexes": []
+  }
+ },
+ "after_first": {
+  "sha256": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c",
+  "counts": {
+   "workorder": 1,
+   "workorder_event": 2,
+   "workorder_export": 0,
+   "workorder_copy_version": 0,
+   "workorder_publish": 0,
+   "tables": [
+    "sqlite_sequence",
+    "workorder",
+    "workorder_copy_version",
+    "workorder_event",
+    "workorder_export",
+    "workorder_publish"
+   ],
+   "export_indexes": [
+    {
+     "name": "idx_export_dedupe_unique",
+     "unique": true
+    }
+   ]
+  }
+ },
+ "after_second": {
+  "sha256": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c",
+  "counts": {
+   "workorder": 1,
+   "workorder_event": 2,
+   "workorder_export": 0,
+   "workorder_copy_version": 0,
+   "workorder_publish": 0,
+   "tables": [
+    "sqlite_sequence",
+    "workorder",
+    "workorder_copy_version",
+    "workorder_event",
+    "workorder_export",
+    "workorder_publish"
+   ],
+   "export_indexes": [
+    {
+     "name": "idx_export_dedupe_unique",
+     "unique": true
+    }
+   ]
+  }
+ },
+ "idempotent": true,
+ "rows_preserved": true,
+ "created_tables": [
+  "workorder_copy_version",
+  "workorder_publish"
+ ],
+ "unique_index": [
+  {
+   "name": "idx_export_dedupe_unique",
+   "unique": true
+  }
+ ],
+ "verify": {
+  "detail_status": 200,
+  "has_copy_section": true,
+  "has_publish_section": true,
+  "export_status": 409,
+  "export_zero_write": true
+ }
+}

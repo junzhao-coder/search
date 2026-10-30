@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}机会情报 Dashboard{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body { font-family: "Segoe UI", "Microsoft YaHei", "Segoe UI Emoji", "Noto Color Emoji", system-ui, sans-serif; }
+    .main { max-width: 1180px; padding: 24px; }
+    .dash-meta { display:flex; flex-wrap:wrap; gap:8px 20px; color:var(--muted); font-size:13px; margin:0 0 16px; padding:10px 12px; background:var(--panel); border:1px solid var(--line); border-radius:6px; }
+    .dash-meta code { font-size:12px; }
+    .notice { border:1px solid #d4a72c; background:#fff8c5; padding:10px 12px; border-radius:6px; margin:0 0 16px; font-size:13px; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:0 0 18px; }
+    .card { border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:6px; padding:12px 14px; background:var(--panel); transition:box-shadow .15s ease, transform .15s ease; }
+    .card:hover { box-shadow:0 2px 8px rgba(31,35,40,.08); transform:translateY(-1px); }
+    .card .n { font-size:24px; line-height:1.2; font-weight:700; display:block; }
+    .card .l { color:var(--muted); font-size:13px; }
+    .panel { padding:16px 18px; margin:0 0 18px; box-shadow:0 1px 2px rgba(31,35,40,.04); }
+    .panel h2 { font-size:18px; margin:0 0 12px; letter-spacing:-.01em; }
+    .page-title { font-size:24px; line-height:1.25; margin:4px 0 8px; letter-spacing:-.02em; }
+    .table-wrap { overflow:auto; max-height:70vh; border:1px solid var(--line); border-radius:6px; }
+    table.data { border-collapse:collapse; width:100%; font-size:13px; }
+    table.data th, table.data td { border-bottom:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top; line-height:1.5; }
+    table.data th { position:sticky; top:0; background:#eef2f6; color:var(--muted); font-size:12px; font-weight:600; white-space:nowrap; z-index:1; cursor:pointer; }
+    table.data tbody tr:nth-child(even) { background:#fbfcfd; }
+    table.data tbody tr:hover { background:#f1f6fb; }
+    table.data td a { word-break:break-word; }
+    table.data td.num { text-align:right; font-variant-numeric:tabular-nums; }
+    .join-table { table-layout:fixed; min-width:1020px; font-size:12px; }
+    .join-table th:nth-child(1) { width:34px; }
+    .join-table th:nth-child(2) { width:220px; }
+    .join-table th:nth-child(3) { width:100px; }
+    .join-table th:nth-child(4) { width:104px; }
+    .join-table th:nth-child(5) { width:56px; }
+    .join-table th:nth-child(6) { width:132px; }
+    .join-table th:nth-child(7) { width:108px; }
+    .join-table th:nth-child(8) { width:96px; }
+    .join-table th:nth-child(9) { width:108px; }
+    .join-table th:nth-child(10) { width:64px; }
+    .join-table code { font-size:11px; word-break:break-all; }
+    .badge { display:inline-block; border:1px solid var(--line); border-radius:10px; padding:1px 8px; font-size:12px; font-weight:600; white-space:nowrap; }
+    .badge-ok { border-color:#1a7f37; color:#1a7f37; background:#f0fff4; }
+    .badge-warn { border-color:#9a6700; color:#9a6700; background:#fff8c5; }
+    .badge-err { border-color:#b42318; color:#b42318; background:#fff1f0; }
+    .muted { color:var(--muted); }
+    .state-empty { color:var(--muted); background:var(--panel); border:1px dashed var(--line); border-radius:6px; padding:10px 12px; }
+    .state-error { color:var(--err); background:#fff1f0; border:1px solid #ffccc7; border-radius:6px; padding:10px 12px; }
+    .toolbar { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin:0 0 10px; }
+    .toolbar input { padding:5px 8px; border:1px solid var(--line); border-radius:4px; min-width:240px; }
+    @media (max-width: 640px) {
+      .main { padding: 14px; }
+      table.data { font-size: 12px; }
+      table.data th, table.data td { padding: 6px; }
+    }
+  </style>
+</head>
+<body data-page="dash-{{ active }}">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="topbar">
+    <p class="brand">机会情报 Dashboard <span class="muted">（只读）</span></p>
+    <nav class="nav" aria-label="Dashboard 导航">
+      {% for key, label, endpoint in nav %}
+      <a href="{{ url_for(endpoint) }}"{% if active == key %} aria-current="page"{% endif %}>{{ label }}</a>
+      {% endfor %}
+    </nav>
+  </header>
+  <main id="main" class="main">
+    <div class="dash-meta">
+      <span>数据来源：<code>docs/validation/money-project/{scoring,sourcing}</code> · <code>tools/platform-login/data</code> · <code>docs/validation/x-collect/topic-crawler</code></span>
+      <span>文件更新时间（UTC）：<strong>{{ generated_at }}</strong></span>
+      <span>只读视图；不查询/写入业务库，不触发采集或账号动作。</span>
+    </div>
+    {% if warnings %}
+    <div class="notice" role="alert">
+      <strong>数据提示：</strong>
+      <ul>{% for warning in warnings %}<li>{{ warning }}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer">
+    <p>只读 Dashboard：数据来自本机 CSV/JSONL 产物；缺失文件显示“暂无数据/文件缺失”，不补造数据。</p>
+  </footer>
+  <script>
+    (function () {
+      function cellValue(row, index) {
+        return (row.cells[index] ? row.cells[index].innerText : '').trim();
+      }
+      document.addEventListener('click', function (event) {
+        var th = event.target.closest('th[data-sort]');
+        if (!th) return;
+        var table = th.closest('table');
+        var body = table.tBodies[0];
+        if (!body) return;
+        var index = Array.prototype.indexOf.call(th.parentNode.cells, th);
+        var dir = th.getAttribute('data-dir') === 'asc' ? -1 : 1;
+        th.setAttribute('data-dir', dir === 1 ? 'desc' : 'asc');
+        var rows = Array.prototype.slice.call(body.rows);
+        rows.sort(function (a, b) {
+          var av = cellValue(a, index), bv = cellValue(b, index);
+          if (th.getAttribute('data-sort') === 'num') {
+            av = parseFloat(av.replace(/[^0-9.\-]/g, '')) || 0;
+            bv = parseFloat(bv.replace(/[^0-9.\-]/g, '')) || 0;
+          }
+          return (av > bv ? 1 : av < bv ? -1 : 0) * dir;
+        });
+        rows.forEach(function (row) { body.appendChild(row); });
+      });
+      document.addEventListener('input', function (event) {
+        var input = event.target.closest('input[data-filter]');
+        if (!input) return;
+        var table = document.querySelector(input.getAttribute('data-filter'));
+        if (!table || !table.tBodies[0]) return;
+        var q = input.value.toLowerCase();
+        Array.prototype.forEach.call(table.tBodies[0].rows, function (row) {
+          row.hidden = q && row.innerText.toLowerCase().indexOf(q) < 0;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

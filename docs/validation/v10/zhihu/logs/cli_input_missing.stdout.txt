@@ -1,0 +1,1 @@
+{"command": "search", "detail": "input not found: D:\\桌面\\two\\docs\\validation\\v10\\zhihu\\fixtures\\does_not_exist.json", "exit": 8, "ok": false, "stop": "input_not_found"}

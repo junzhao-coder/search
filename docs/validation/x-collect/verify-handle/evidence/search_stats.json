@@ -1,0 +1,17 @@
+{
+ "command": "search",
+ "url": "https://x.com/search?q=AI%20tools&f=live",
+ "keyword": "AI tools",
+ "started_utc": "2026-10-22T04:03:11Z",
+ "finished_utc": "2026-10-22T04:03:24Z",
+ "elapsed_s": 13.5,
+ "requested_limit": 5,
+ "collected": 5,
+ "duplicates": 4,
+ "seen_total": 41,
+ "nonempty_text": 5,
+ "nonempty_text_ratio": 1.0,
+ "stop_reason": "LIMIT",
+ "jsonl": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\data\\search-2026-10-22T040324Z.jsonl",
+ "exit": 0
+}

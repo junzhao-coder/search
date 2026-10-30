@@ -1,0 +1,6 @@
+manual_export_ok json=daily-2026-10-20.json csv=daily-2026-10-20.csv
+as_of=2026-10-20T12:00:00Z digest_date=2026-10-20 daily_limit=3 counts={"top": 1, "blocked": 0, "observing": 0, "exploring": 0, "omitted": 0, "insufficient": 0, "excluded": 0}
+csv_rows=1
+kind=daily_digest source=ranking.rank_candidates
+cli_exit=0 stdout=export_daily: ok as_of=2026-10-20T12:00:00Z date=2026-10-20 top=1 json=D:\桌面\two\tests\tools\_tmp\export_daily_v1\run_20261020_192428_c1\reports2\daily-2026-10-20.json csv=D:\桌面\two\tests\tools\_tmp\export_daily_v1\run_20261020_192428_c1\reports2\daily-2026-10-20.csv
+reject_exits=[2, 2] instance_dir_created=False

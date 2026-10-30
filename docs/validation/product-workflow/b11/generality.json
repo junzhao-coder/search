@@ -1,0 +1,150 @@
+{
+ "generated_utc": "2026-10-23T13:41:57Z",
+ "cases": {
+  "blocked": {
+   "ready": false,
+   "checks": [
+    {
+     "key": "specs",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "supply",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "license",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "sample",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "cost",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "platform",
+     "ok": false,
+     "blocker": "缺少目标平台条件证据（platform_evidence 为空）"
+    },
+    {
+     "key": "copy",
+     "ok": true,
+     "blocker": ""
+    }
+   ],
+   "ok_chips": 6,
+   "warn_chips": 1,
+   "export_status": 409,
+   "export_body_has_platform_blocker": true
+  },
+  "synthetic": {
+   "ready": true,
+   "checks": [
+    {
+     "key": "specs",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "supply",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "license",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "sample",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "cost",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "platform",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "copy",
+     "ok": true,
+     "blocker": ""
+    }
+   ],
+   "ok_chips": 7,
+   "warn_chips": 0,
+   "md_status": 200,
+   "json_status": 200,
+   "buyer_fields": [
+    "title",
+    "selling_points",
+    "contents",
+    "format",
+    "price",
+    "delivery",
+    "aftersales",
+    "faq"
+   ],
+   "faq_count": 6,
+   "selling_points": 5,
+   "format_block": {
+    "fmt": "md",
+    "language": "中文",
+    "version": "v1"
+   }
+  }
+ },
+ "generic_compare": {
+  "七项检查键一致": [
+   "specs",
+   "supply",
+   "license",
+   "sample",
+   "cost",
+   "platform",
+   "copy"
+  ],
+  "C3（Excel）表现": "6 通过 / 1 未通过（platform）",
+  "提示词包（纯文本）表现": "6 通过 / 1 未通过（platform）；补 synthetic 后 7/7",
+  "导出买家字段": [
+   "title",
+   "selling_points",
+   "contents",
+   "format",
+   "price",
+   "delivery",
+   "aftersales",
+   "faq"
+  ],
+  "品类相关（需人工）": [
+   "fmt/version 的取值含义（xlsx vs md）",
+   "sample_ref 的核验方式（真实 Excel 打开 vs 文本通读）",
+   "平台类目与虚拟交付规则",
+   "定价档位（按品类客单价）"
+  ],
+  "流程通用（系统保证）": [
+   "七项就绪判定与缺项文案",
+   "买家字段白名单与内部标记扫描",
+   "版本戳与失效判定",
+   "GET 零写 / POST 记录导出",
+   "CSRF 与同源写保护"
+  ]
+ },
+ "db_rows": {
+  "workorder": 2
+ },
+ "db_sha256": "fd8e49aa233f2528ee36a0d61ec9736071859fc305362555cdc8557910953568"
+}

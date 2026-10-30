@@ -1,0 +1,26 @@
+{
+  "budget": {
+    "id": 1,
+    "state_dir": "D:\\桌面\\two\\docs\\validation\\v10\\zhihu\\runtime_live3",
+    "batch_id": "zhihu-live-3",
+    "created_at": 1793094952.795022,
+    "started_at": 1793094952.795022,
+    "calls": 1,
+    "records": 0,
+    "polls": 0,
+    "last_call_at": 1793094952.803087,
+    "locked": 0,
+    "lock_reason": null,
+    "lock_source": null
+  },
+  "ledger": [
+    {
+      "kind": "charge",
+      "detail": "{\"kind\": \"search\", \"detail\": \"https://www.zhihu.com/search?type=content&q=%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92%E6%A8%A1%E6%9D%BF\", \"batch_id\": \"zhihu-live-3\"}"
+    },
+    {
+      "kind": "search_result",
+      "detail": "{\"count\": 0, \"exit\": 3}"
+    }
+  ]
+}

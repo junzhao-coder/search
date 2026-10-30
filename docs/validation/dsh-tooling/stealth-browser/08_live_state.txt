@@ -1,0 +1,4 @@
+captured_utc=2026-10-21T13:31:01.9865653Z
+server_pid=122680 parent=97764 cmd=venv\\Scripts\\python.exe repo\\src\\server.py --minimal
+skill_installed=C:\\Users\\19183\\.dsh\\skills\\stealth-browser-mcp\\SKILL.md sha256=9c48bf657f87918d7856d5e29b8bbd1394e6981f5b7f032446459080009824d6
+skill_catalog_visible=stealth-browser-mcp (session skill catalog refreshed)

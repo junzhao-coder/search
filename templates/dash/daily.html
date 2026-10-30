@@ -1,0 +1,44 @@
+{% extends "dash/base.html" %}
+{% block title %}每日摘要 · 机会情报 Dashboard{% endblock %}
+{% block content %}
+<h1 class="page-title">每日摘要</h1>
+<p class="hint">本页是静态产物的只读聚合，不调用业务库、不写库、不生成/发送提醒；每日摘要业务 API 仍以现有接口为准。</p>
+
+<section class="cards" aria-label="每日摘要计数">
+  <div class="card"><span class="n">{{ scores|length }}</span><span class="l">重点机会（最多 5）</span></div>
+  <div class="card"><span class="n">{{ sources|length }}</span><span class="l">货源</span></div>
+  <div class="card"><span class="n">{{ verdicts.get('可商用', 0) }}</span><span class="l">可商用货源</span></div>
+  <div class="card"><span class="n">{{ price_stats.count }}</span><span class="l">价格信号</span></div>
+  <div class="card"><span class="n">{{ price_stats.wants_sum }}</span><span class="l">想要人数合计（代理）</span></div>
+</section>
+
+<section class="panel" aria-labelledby="h-top">
+  <h2 id="h-top">今日重点（按既有评分取前 5）</h2>
+  {% if scores %}
+  <ol class="list">
+    {% for row in scores %}
+    <li><a href="{{ row.url }}" rel="noreferrer">{{ row.title }}</a> — 分数 {{ '%.3f'|format(row.total_score|float) }}，毛利 {{ row.margin_low }}–{{ row.margin_high }}（{{ row.platform }}）</li>
+    {% endfor %}
+  </ol>
+  {% else %}<p class="state state-empty">暂无数据：scores.csv 缺失或为空。</p>{% endif %}
+</section>
+
+<section class="panel" aria-labelledby="h-join">
+  <h2 id="h-join">联动提示</h2>
+  {% if join %}
+  <ul class="list">
+    {% for row in join %}
+    <li>#{{ row.rank }} {{ row.title[:60] }} → {{ row.source_id }}（{{ row.license_verdict }}），匹配 {{ row.match_reason }}，毛利 {{ row.gross_margin_low }}–{{ row.gross_margin_high }}</li>
+    {% endfor %}
+  </ul>
+  {% else %}<p class="state state-empty">暂无联动数据。</p>{% endif %}
+</section>
+
+<section class="panel" aria-labelledby="h-status">
+  <h2 id="h-status">数据完整性</h2>
+  <p class="muted">文件更新时间（UTC）：{{ generated_at }}</p>
+  {% if warnings %}
+  <ul class="list">{% for warning in warnings %}<li class="badge badge-warn">{{ warning }}</li>{% endfor %}</ul>
+  {% else %}<p>全部预期文件已读取；缺失项会在此显示。</p>{% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-22T13:05:14Z",
+  "base": "http://127.0.0.1:5015",
+  "pages": [
+    {
+      "path": "/",
+      "term_contexts": {
+        "成交": [
+          "用全部 20 条闲鱼信号作篮子代理；<code>category_filtered</code> = 按品类过滤。想要数不是销量，划线价不是成交价。</p> <div class=\"table-wrap\"><table><caption class=\"sr-only\">机会与"
+        ]
+      },
+      "src_external": 0,
+      "href_external": 0
+    },
+    {
+      "path": "/opportunities",
+      "term_contexts": {
+        "成交": [
+          "pan></td></tr></tbody></table></div> <p class=\"hint\">毛利为低置信估算（模型假设，非成交数据），以百分比区间显示、不折合货币；货币符号只用于真实标价。 可售性<strong>只读</strong> <code>sella"
+        ]
+      },
+      "src_external": 0,
+      "href_external": 60
+    },
+    {
+      "path": "/sources",
+      "term_contexts": {},
+      "src_external": 0,
+      "href_external": 14
+    },
+    {
+      "path": "/collect",
+      "term_contexts": {
+        "成交": [
+          "s\">平台样本（闲鱼 / 小红书）</h2><p class=\"hint\">已登录采集的只读样本，最多各展示 20 条；“想要/点赞”不代表成交。</p></div> <form class=\"filters\" method=\"get\" action=\"/collect\" r"
+        ],
+        "爆款": [
+          "7000000002502cbb6\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">爆款场景AI女装指令💥新手也能出赞藏99+ 冻冻梨🍐 09-17 125</a></td><td class=\"num\">—</td></t"
+        ]
+      },
+      "src_external": 0,
+      "href_external": 40
+    },
+    {
+      "path": "/daily",
+      "term_contexts": {},
+      "src_external": 0,
+      "href_external": 0
+    }
+  ]
+}

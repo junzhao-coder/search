@@ -1,0 +1,92 @@
+{
+  "source_file": "D:\\桌面\\two\\docs\\validation\\v10\\zhihu\\live_search_4.out.txt",
+  "source_bytes": 604,
+  "source_sha256": "ece8fcf2ddb11c57d40d5f4d53ba0cb26ec677073799603abe325240392a7140",
+  "has_bom": false,
+  "source_encoding": "gb18030",
+  "source_encoding_evidence": "utf-8 strict decode fails; gb18030 decodes to valid JSON with keyword == searched term; other candidates rejected",
+  "conversion": "decode with gb18030 (no error suppression), re-encode as UTF-8 without BOM; original bytes untouched",
+  "utf8_copy": "D:\\桌面\\two\\docs\\validation\\v10\\zhihu\\live_search_4.out.utf8.txt",
+  "utf8_copy_bytes": 612,
+  "utf8_copy_sha256": "587d92d23bb3f86e035dfc247b2fa323ab4e49c4174e7c66d406a8c062607e94",
+  "parsed_fields": {
+    "stop": "empty",
+    "exit": 3,
+    "count": 0,
+    "parsed_structure": "html:links",
+    "keyword": "学习计划模板",
+    "url": "https://www.zhihu.com/search?q=%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92%E6%A8%A1%E6%9D%BF",
+    "batch": {
+      "batch_id": "zhihu-live-3",
+      "calls": 1,
+      "calls_max": 3,
+      "elapsed_s": 1.529,
+      "last_call_at": 1793094952.803087,
+      "lock_reason": null,
+      "lock_source": null,
+      "locked": false,
+      "polls": 0,
+      "polls_max": 120,
+      "records": 0,
+      "records_max": 5,
+      "seconds_max": 300.0,
+      "state_dir": "D:\\桌面\\two\\docs\\validation\\v10\\zhihu\\runtime_live3"
+    }
+  },
+  "attempts": [
+    {
+      "encoding": "utf-8",
+      "decoded": false,
+      "reason": "decode error at 283"
+    },
+    {
+      "encoding": "gb18030",
+      "decoded": true,
+      "json_ok": true,
+      "keyword": "学习计划模板",
+      "keyword_matches_target": true,
+      "stop": "empty",
+      "exit": 3,
+      "count": 0,
+      "parsed_structure": "html:links"
+    },
+    {
+      "encoding": "gbk",
+      "decoded": true,
+      "json_ok": true,
+      "keyword": "学习计划模板",
+      "keyword_matches_target": true,
+      "stop": "empty",
+      "exit": 3,
+      "count": 0,
+      "parsed_structure": "html:links"
+    },
+    {
+      "encoding": "big5",
+      "decoded": true,
+      "json_ok": true,
+      "keyword": "悝炾數赫耀啣",
+      "keyword_matches_target": false,
+      "stop": "empty",
+      "exit": 3,
+      "count": 0,
+      "parsed_structure": "html:links"
+    },
+    {
+      "encoding": "cp932",
+      "decoded": false,
+      "reason": "decode error at 424"
+    },
+    {
+      "encoding": "latin-1",
+      "decoded": true,
+      "json_ok": true,
+      "keyword": "Ñ§Ï°¼Æ»®Ä£°å",
+      "keyword_matches_target": false,
+      "stop": "empty",
+      "exit": 3,
+      "count": 0,
+      "parsed_structure": "html:links"
+    }
+  ]
+}

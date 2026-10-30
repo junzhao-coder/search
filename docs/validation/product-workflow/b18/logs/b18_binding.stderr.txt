@@ -1,0 +1,11 @@
+test_control_unselected_candidate_changes_nothing (tests.test_binding.BindingTests.test_control_unselected_candidate_changes_nothing) ... ok
+test_d1_legacy_block_labelled_as_snapshot (tests.test_binding.BindingTests.test_d1_legacy_block_labelled_as_snapshot) ... ok
+test_d2_license_change_syncs_and_invalidates (tests.test_binding.BindingTests.test_d2_license_change_syncs_and_invalidates) ... ok
+test_d3_deactivate_selected_clears_supply (tests.test_binding.BindingTests.test_d3_deactivate_selected_clears_supply) ... ok
+test_d4_replace_requires_new_sample_and_cost (tests.test_binding.BindingTests.test_d4_replace_requires_new_sample_and_cost) ... ok
+test_recovery_after_invalidation (tests.test_binding.BindingTests.test_recovery_after_invalidation) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.608s
+
+OK

@@ -1,0 +1,82 @@
+{
+ "batch_id": "e2e-20261022T0842Z",
+ "policy": "scoring X rows replaced by fresh X batch; Bilibili/GitHub rows reused from accepted scoring batch; sourcing price_signals/join replaced by fresh Xianyu; sources.csv unchanged. Old files backed up under e2e/data/previous; no silent mixing.",
+ "sources": [
+  {
+   "platform": "x",
+   "command": "e2e/tools/collect_search.py --keyword 'notion template' --limit 30 --interval-min 8 --interval-max 12",
+   "cwd": "D:\\桌面\\two",
+   "exit": 0,
+   "count": 30,
+   "start_utc": "2026-10-22T08:42:21.6429482Z",
+   "end_utc": "2026-10-22T08:44:55.2364504Z",
+   "raw": "e2e/data/x_search.jsonl",
+   "profile": "x-collect profile (no re-login)",
+   "batch_seen": "e2e/data/x_seen.jsonl"
+  },
+  {
+   "platform": "xianyu",
+   "command": "tools/platform-login/login_and_search.py --platforms xianyu --profile profile --wait 45",
+   "cwd": "D:\\桌面\\two",
+   "exit": 0,
+   "count": 20,
+   "start_utc": "2026-10-22T08:46:26Z",
+   "end_utc": "2026-10-22T08:47:03Z",
+   "raw": "e2e/data/xianyu_items.jsonl",
+   "login": "unb detected; 30 candidates, script saved 20",
+   "captcha": false
+  },
+  {
+   "platform": "xiaohongshu",
+   "command": "tools/platform-login/login_and_search.py --platforms xiaohongshu --profile profiles/xhs --wait 45",
+   "cwd": "D:\\桌面\\two",
+   "exit": 0,
+   "count": 20,
+   "start_utc": "2026-10-22T08:48:33Z",
+   "end_utc": "2026-10-22T08:49:08Z",
+   "raw": "e2e/data/xiaohongshu_items.jsonl",
+   "login": "web_session detected; 27 candidates, script saved 20",
+   "captcha": false
+  }
+ ],
+ "intervals": {
+  "x_to_xianyu_s": 91,
+  "xianyu_to_xhs_s": 90,
+  "min_required_s": 60
+ },
+ "outputs": {
+  "scoring_items": "ccb5d3071d0fb8fd9b883c80b7b714c999497b674c01b944030454cebdd10706",
+  "scores": "ef8310fbcfef1c71c40b28ad27e9d607b548047105da277b26fd95d506fd7eeb",
+  "scoring_report": "41abbfbc009878582c1f2df7872abb61f9323a54f253883cab0a8c0fbd4b27d9",
+  "sources": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+  "price_signals": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691",
+  "join": "0c365fb813ad969bf86dc392182464fe20a4146ed8d7329c53d8782a26556b1f",
+  "sourcing_report": "018c2846472cf2295d8fef044fede7297981a286343e4576648bd245f0008c8e"
+ },
+ "inputs": {
+  "x_raw": "4d98f217abf64e420b193c845fb54ccb4bb299c8b3aca6dc1a9cb0587f6ba6c1",
+  "xianyu_raw": "c70f15801db70d9c0a170024c24ddd18ab9cedf056f21c708207066915c851e0",
+  "xhs_raw": "737019717e619f7e7b4994764541bbc3575e6a59ee17450b155606112c2934a8"
+ },
+ "counts": {
+  "scoring_items": 60,
+  "scoring_x": 30,
+  "scoring_bilibili": 20,
+  "scoring_github": 10,
+  "sources": 14,
+  "price_signals": 20,
+  "join": 10
+ },
+ "encoding": {
+  "u_fffd_files": 0,
+  "u_fffd_total": 0,
+  "conclusion": "source UTF-8 valid; decorative Unicode only"
+ },
+ "test": {
+  "command": ".venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+  "tests": 334,
+  "exit": 0,
+  "result": "OK",
+  "elapsed_s": 49.162
+ }
+}

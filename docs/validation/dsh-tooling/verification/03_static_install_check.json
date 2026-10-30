@@ -1,0 +1,91 @@
+{
+  "recorded_utc": "2026-10-21T13:52:00Z",
+  "session": "session-2ec5f901-e129-5a00-a488-80333567fa52",
+  "method": "read / glob / grep only (no shell in this session). Every path below was opened or matched in this session, not quoted from an installer report.",
+  "agent_reach": {
+    "upstream_repo": "https://github.com/Panniantong/Agent-Reach",
+    "pinned_commit": "94f06c1969dfc1834001269d79d3ad0972d9dee6",
+    "commit_live_check": "PASS - api.github.com returned HTTP 200 for that sha (see 05_public_read_commit.json)",
+    "declared_version_in_skill": "1.5.0 (SKILL.md frontmatter metadata.version)",
+    "license_in_skill": "MIT (SKILL.md frontmatter metadata.license)",
+    "cli_exists": "C:\\Users\\19183\\.agent-reach-venv\\Scripts\\agent-reach.exe (glob hit, Scripts dir also contains python.exe/pip.exe; yt-dlp.exe present as library-level binary only)",
+    "isolated_venv": "C:\\Users\\19183\\.agent-reach-venv",
+    "skill_root": "C:\\Users\\19183\\.dsh\\skills\\agent-reach",
+    "skill_file_count": 13,
+    "skill_files": [
+      "SKILL.md",
+      "SOURCE.md",
+      "DSH-INSTALL-NOTES.md",
+      "LICENSE",
+      "references/README.md",
+      "references/install.md",
+      "references/career.md",
+      "references/dev.md",
+      "references/finance.md",
+      "references/search.md",
+      "references/social.md",
+      "references/video.md",
+      "references/web.md"
+    ],
+    "skill_reference_integrity": "PASS - every references/*.md target named in SKILL.md (lines 84-90) exists on disk; all 13 files matched by glob",
+    "content_level_spotcheck_vs_bundle": "installed SKILL.md lines 25 and 37 are byte-identical in wording to docs/validation/dsh-tooling/agent-reach/skill-bundle/SKILL.md (the DSH-INSTALL-NOTES reference fix); sha256 NOT recomputed (no hash tool)"
+  },
+  "stealth_browser_mcp": {
+    "upstream_repo": "https://github.com/vibheksoni/stealth-browser-mcp",
+    "pinned_commit_declared": "aa6cc9f6f853d6cbc17e4dc9b7946d406caabc6f",
+    "package_version_read_from_pyproject": "0.2.5",
+    "requires_python": ">=3.10",
+    "license_declared": "MIT",
+    "key_pins_read_from_pyproject": ["fastmcp==2.11.2", "nodriver==0.47.0", "pydantic==2.11.7"],
+    "repo_dir": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\repo",
+    "server_entry_exists": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\repo\\src\\server.py (glob hit; 3123 lines)",
+    "venv_python_exists": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\Scripts\\python.exe (glob hit)",
+    "chrome_exists": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe (glob hit)",
+    "skill_root": "C:\\Users\\19183\\.dsh\\skills\\stealth-browser-mcp",
+    "skill_file_count": 2,
+    "skill_files": ["SKILL.md", "agents/openai.yaml"],
+    "protocol_vs_package_version": "distinct: protocol serverInfo.version=1.30.0 (installer C stdio handshake) vs package version 0.2.5 (pyproject, re-read here). Not the same thing."
+  },
+  "dsh_registration": {
+    "file": "C:\\Users\\19183\\.dsh\\profiles\\desktop\\cordis.patch.yml",
+    "current_total_lines": 383,
+    "entries": 7,
+    "backup_pre_change": "C:\\Users\\19183\\.dsh\\tooling-backups\\stealth-browser\\cordis.patch.yml.pre-stealth-20261021T132904Z",
+    "backup_total_lines": 363,
+    "backup_ids": [
+      "ui-settings-account",
+      "ui-chat",
+      "ui-settings",
+      "agent-default-model",
+      "llm-pi-ai",
+      "subagent-model-selection-settings"
+    ],
+    "delta": "APPEND-ONLY: lines 1-363 identical in id structure, delta = line 364 (blank) + line 365 comment + lines 366-383 one '- insert:' block with id stealth-browser-mcp / serverName stealth. No existing entry was rewritten.",
+    "block_head": "line 365: '# --- stealth-browser-mcp (installed by executor C, task-fb8e9c8c8ba064c6e9db93d9749fead9) ---'",
+    "transport": "stdio",
+    "command": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\Scripts\\python.exe",
+    "args": ["C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\repo\\src\\server.py", "--minimal"],
+    "cwd": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\repo",
+    "env_keys": ["STEALTH_BROWSER_EXECUTABLE", "BROWSER_ORPHAN_PROFILE_MAX_AGE", "BROWSER_FILE_UPLOAD_ALLOWED_DIRS", "STEALTH_BROWSER_DEBUG", "PYTHONIOENCODING"],
+    "matches_installer_record": "PASS - identical to 07_patch_apply.json (entries_before=6 -> entries_after=7, same command/args/cwd/env keys, same backup path)"
+  },
+  "rollback_static_check": {
+    "minimal_rollback": "delete only lines 364-383 (the comment + one '- insert:' block) from cordis.patch.yml, keep everything above untouched",
+    "why_not_full_restore": "restoring the 363-line backup wholesale would also revert any later change made after 2026-10-21T13:29:04Z to the same file; deleting just this insert avoids that",
+    "agent_reach_rollback": "remove C:\\Users\\19183\\.dsh\\skills\\agent-reach and C:\\Users\\19183\\.agent-reach-venv; no PATH/proxy/global-pip change existed to undo",
+    "backups_present": [
+      "C:\\Users\\19183\\.dsh\\tooling-backups\\stealth-browser\\20261021T132001Z\\package.json",
+      "C:\\Users\\19183\\.dsh\\tooling-backups\\stealth-browser\\20261021T132001Z\\cordis.patch.yml",
+      "C:\\Users\\19183\\.dsh\\tooling-backups\\stealth-browser\\cordis.patch.yml.pre-stealth-20261021T132904Z",
+      "C:\\Users\\19183\\.dsh\\tooling-backups\\agent-reach\\20261021T132029Z\\before.json",
+      "C:\\Users\\19183\\.dsh\\tooling-backups\\agent-reach\\20261021T132029Z\\README.txt"
+    ]
+  },
+  "workspace_unchanged_by_this_session": {
+    "write_targets": ["docs/validation/dsh-tooling/verification/ (this report dir only)"],
+    "touched_business_paths": "none",
+    "opened_business_db": false,
+    "read_private_chrome_profile": false
+  },
+  "limitations": ["sha256 manifest for the current tree could not be produced here (no shell / no hash tool); installer manifests are pre-normalisation snapshots and must be recomputed by a session that has a shell."]
+}

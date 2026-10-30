@@ -1,0 +1,51 @@
+python.exe : ..........D:\桌面\two\tests\api\test_gates_scenario.py:389: DeprecationWarning: datetime.datetime.utcnow() i
+s deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: d
+atetime.datetime.now(datetime.UTC).
+所在位置 行:1 字符: 676
++ ... utf8); $d = & $py -X utf8 -m unittest discover -s tests -t . 2>&1; $c ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (..........D:\桌面...(datetime.UTC).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  soon = (_dt.datetime.utcnow() + _dt.timedelta(days=6)).strftime("%Y-%m-%dT%H:%M:%SZ")
+D:\桌面\two\tests\api\test_gates_scenario.py:402: DeprecationWarning: datetime.datetime.utcnow() is deprecated and schedu
+led for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(da
+tetime.UTC).
+  past = (_dt.datetime.utcnow() - _dt.timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
+...D:\桌面\two\tests\api\test_gates_scenario.py:426: DeprecationWarning: datetime.datetime.utcnow() is deprecated and sch
+eduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now
+(datetime.UTC).
+  stale = (_dt.datetime.utcnow() - _dt.timedelta(days=40)).strftime("%Y-%m-%dT%H:%M:%SZ")
+.........D:\桌面\two\tests\api\test_gates_scenario.py:317: DeprecationWarning: datetime.datetime.utcnow() is deprecated a
+nd scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.dateti
+me.now(datetime.UTC).
+  stale_stamp = (_dt.datetime.utcnow() - _dt.timedelta(days=40)).strftime("%Y-%m-%dT%H:%M:%SZ")
+..........D:\桌面\two\tests\api\test_gates_scenario.py:665: DeprecationWarning: datetime.datetime.utcnow() is deprecated 
+and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datet
+ime.now(datetime.UTC).
+  past = (_dt.datetime.utcnow() - _dt.timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
+.D:\桌面\two\tests\api\test_gates_scenario.py:641: DeprecationWarning: datetime.datetime.utcnow() is deprecated and sched
+uled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(d
+atetime.UTC).
+  short = (_dt.datetime.utcnow() + _dt.timedelta(days=2)).strftime("%Y-%m-%dT%H:%M:%SZ")
+..D:\桌面\two\tests\api\test_gates_scenario.py:606: DeprecationWarning: datetime.datetime.utcnow() is deprecated and sche
+duled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(
+datetime.UTC).
+  short = (_dt.datetime.utcnow() + _dt.timedelta(days=5)).strftime("%Y-%m-%dT%H:%M:%SZ")
+.......................................................................................................................
+.......................................................................................................................
+...............C:\Users\19183\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\Lib\unittest\case.py:589: Resou
+rceWarning: unclosed file <_io.BufferedReader name='D:\\桌面\\two\\app\\static/ui.js'>
+  if method() is not None:
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\19183\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\Lib\unittest\case.py:589: ResourceWarning: unc
+losed file <_io.BufferedReader name='D:\\桌面\\two\\app\\static/style.css'>
+  if method() is not None:
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+......
+----------------------------------------------------------------------
+Ran 294 tests in 44.258s
+
+OK
+
+discover_exit=0

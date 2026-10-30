@@ -1,0 +1,6 @@
+utc=2026-10-22T04:55:44Z
+kind=search
+url=fixture://web scraping
+title=risk-fixture
+body_excerpt=
+signals={"toast": "Something went wrong. Try reloading.", "captcha": false, "error_page": false, "url": "fixture://risk-toast"}

@@ -1,0 +1,30 @@
+# x-collect 登录窗口 stdout 摘录（job 输出，非日志文件）
+
+说明：本次登录进程在检测到登录后由操作者停止，`RunLog.close()` 未执行，因此 `logs/login-2026-10-22T024603Z.log` 未生成。以下是执行时 job stdout 的逐字摘录（中文提示在控制台编码下显示为乱码，英文关键字保留原样）；未修改时间戳/URL/计数。
+
+```text
+2026-10-22T02:46:03Z CMD=C:\Users\19183\.dsh\tools\x-collect\scripts\x_collect.py login --timeout 1200 CWD=... UTC=2026-10-22T02:46:03Z
+2026-10-22T02:46:03Z START login profile=C:\Users\19183\.dsh\tools\x-collect\profile timeout=1200s
+2026-10-22T02:46:03Z PROXY=system process-level (127.0.0.1:10808)
+2026-10-22T02:46:04Z WAITING_FOR_USER_LOGIN ...（中文提示：窗口已打开，请用户本人登录小号；执行者不读取输入）
+2026-10-22T02:47:16Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:47:20Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:47:25Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:47:29Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:47:34Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:47:38Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:47:43Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:47:47Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:47:52Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:47:56Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:48:01Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:48:05Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:48:09Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:48:14Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:48:18Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:48:23Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:48:27Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+2026-10-22T02:48:32Z HOME_WITHOUT_AUTH_COOKIES url=https://x.com/home x_rows=0 (仍等待)
+```
+
+操作者随后检查窗口标题为 `(2) Home / X - Google Chrome`（已登录态），停止 login 等待脚本，并用 CDP `Browser.close` 优雅关闭以落盘 cookie（见 `close_and_flush.json`）。脚本随后已修正：登录检测改为 DOM 账号按钮 handle（不依赖磁盘 cookie 即时可见），关闭后校验 `auth_token/ct0` 再运行 doctor。

@@ -1,0 +1,51 @@
+{
+ "generated_utc": "2026-10-27T14:17:07Z",
+ "network": "none",
+ "browser": "none",
+ "suites": [
+  {
+   "name": "tests.test_access_zhihu",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_access_zhihu",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two",
+   "start_utc": "2026-10-27T14:16:57Z",
+   "end_utc": "2026-10-27T14:17:06Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 96 tests in 7.934s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\v10\\zhihu-risklock\\logs\\test_access_zhihu.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\v10\\zhihu-risklock\\logs\\test_access_zhihu.stderr.txt"
+  },
+  {
+   "name": "tests.test_access_budget",
+   "argv": [
+    "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "tests.test_access_budget",
+    "-v"
+   ],
+   "cwd": "D:\\桌面\\two",
+   "start_utc": "2026-10-27T14:17:06Z",
+   "end_utc": "2026-10-27T14:17:07Z",
+   "returncode": 0,
+   "summary_lines": [
+    "Ran 20 tests in 1.369s",
+    "OK"
+   ],
+   "stdout_file": "D:\\桌面\\two\\docs\\validation\\v10\\zhihu-risklock\\logs\\test_access_budget.stdout.txt",
+   "stderr_file": "D:\\桌面\\two\\docs\\validation\\v10\\zhihu-risklock\\logs\\test_access_budget.stderr.txt"
+  }
+ ]
+}

@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+{% block page_id %}opportunity{% endblock %}
+{% block title %}{{ detail.candidate.title }}{% endblock %}
+{% block content %}
+    <p class="crumbs"><a href="{{ url_for('pages.page_home') }}">← 返回候选池</a></p>
+    <h1 class="page-title">{{ detail.candidate.title }}</h1>
+    <p class="meta" data-candidate-id="{{ detail.candidate.id }}">
+      <span class="badge badge-status-{{ detail.derived_status }}">分池：{{ pool_labels.get(detail.derived_status, detail.derived_status) }}</span>
+      <span class="badge badge-origin-{{ detail.candidate.data_origin }}">数据来源：{{ origin_labels.get(detail.candidate.data_origin, detail.candidate.data_origin) }}</span>
+      <span class="meta-id">候选 id：{{ detail.candidate.id }}</span>
+    </p>
+    <p class="reason">状态理由：{{ detail.derived_status_reason }}</p>
+    <p class="hint">本页只读展示并准备草稿：没有发送、发布、采购或付款按钮；草稿生成后仅可复制文本。</p>
+
+    <section class="panel" aria-labelledby="demand-h">
+      <h2 id="demand-h">需求信号</h2>
+      {% if detail.demand_signals %}
+      <ul class="list">
+        {% for s in detail.demand_signals %}
+        <li class="item">
+          <p class="item-title">来源链接：{{ s.url or "未提供" }}</p>
+          <p>原文摘录：{{ s.excerpt or "未提供" }}</p>
+          <p class="meta">原生 id：{{ s.native_id or "未知" }}｜信号类型：{{ s.signal_kind or "未标注" }}｜原始发布时间：{{ s.published_at or s.published_date or "未知" }}｜观察时间：{{ s.observed_at or "未知" }}（{{ s.observed_at_source or "未标注来源" }}）｜版本：{{ s.version_no }}{% if s.superseded_by %}｜已被新版取代{% endif %}</p>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}<p class="state state-empty">暂无需求信号：该候选尚未导入需求侧信息。</p>{% endif %}
+    </section>
+
+    <section class="panel" aria-labelledby="evidence-h">
+      <h2 id="evidence-h">证据</h2>
+      {% if detail.evidences %}
+      <table class="table">
+        <caption class="visually-hidden">候选证据列表</caption>
+        <thead><tr><th scope="col">类型</th><th scope="col">来源链接</th><th scope="col">摘录</th><th scope="col">属性</th><th scope="col">观察时间</th><th scope="col">失效</th></tr></thead>
+        <tbody>
+        {% for e in detail.evidences %}
+          <tr>
+            <td>{{ e.evidence_type }}</td>
+            <td>{{ e.source_url or "未提供" }}</td>
+            <td>{{ e.excerpt or "未提供" }}</td>
+            <td>{{ e.fact_kind }}</td>
+            <td>{{ e.observed_at or "未知" }}{% if e.expires_at %}（有效至 {{ e.expires_at }}）{% endif %}</td>
+            <td>{% if e.invalidated_at %}<span class="badge badge-expired">已失效</span> {{ e.invalid_reason or "" }}{% else %}—{% endif %}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% else %}<p class="state state-empty">暂无证据记录：缺少证据时对应门槛保持未核验。</p>{% endif %}
+    </section>
+
+    <section class="panel" aria-labelledby="gates-h">
+      <h2 id="gates-h">四项入池门槛</h2>
+      <table class="table">
+        <caption class="visually-hidden">四项门槛状态</caption>
+        <thead><tr><th scope="col">门槛</th><th scope="col">状态</th><th scope="col">核验时间／有效期</th><th scope="col">缺口</th></tr></thead>
+        <tbody>
+        {% for gate, status in detail.gates.items() %}
+          {% set row = detail.gate_reviews.get(gate) %}
+          <tr>
+            <td>{{ gate_labels.get(gate, gate) }}</td>
+            <td><span class="badge badge-gate-{{ status }}">{{ gate_status_labels.get(status, status) }}</span></td>
+            <td>{{ row.verified_at if row else "—" }}／{{ row.expires_at if row else "—" }}</td>
+            <td>{% if status == "verified" %}已核验（入池不代替用户对实际操作的确认）{% else %}{{ gate_hints.get(gate, "该门槛尚未核验") }}{% endif %}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      <p class="hint">未核验或已过期的门槛不构成通过；四项证据齐备才进入可测试池。</p>
+    </section>
+
+    <section class="panel" aria-labelledby="supply-h">
+      <h2 id="supply-h">货源</h2>
+      {% if detail.supplies %}
+      <table class="table">
+        <caption class="visually-hidden">货源列表</caption>
+        <thead><tr><th scope="col">供应方</th><th scope="col">链接</th><th scope="col">单价</th><th scope="col">许可（商用／再分发／转售）</th><th scope="col">抽检</th><th scope="col">状态</th></tr></thead>
+        <tbody>
+        {% for s in detail.supplies %}
+          <tr>
+            <td>{{ s.provider_name or "未提供" }}</td>
+            <td>{{ s.provider_url or "未提供" }}</td>
+            <td>{{ money(s.unit_price_minor) }}{% if s.currency %} {{ s.currency }}{% endif %}</td>
+            <td>{{ s.commercial_allowed }}／{{ s.redistribute_allowed }}／{{ s.resale_allowed }}</td>
+            <td>{{ s.sample_checked }}{% if s.sample_note %}（{{ s.sample_note }}）{% endif %}</td>
+            <td><span class="badge badge-gate-{{ s.status }}">{{ s.status }}</span></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% else %}<p class="state state-empty">暂无货源：没有现成货源时不进入可测试池。</p>{% endif %}
+    </section>
+
+    <section class="panel" aria-labelledby="cost-h">
+      <h2 id="cost-h">成本项</h2>
+      {% if detail.cost_items %}
+      <table class="table">
+        <caption class="visually-hidden">成本项列表</caption>
+        <thead><tr><th scope="col">角色</th><th scope="col">计价方式</th><th scope="col">取值</th><th scope="col">期间</th><th scope="col">事实／假设</th><th scope="col">生效</th></tr></thead>
+        <tbody>
+        {% for c in detail.cost_items %}
+          <tr>
+            <td>{{ c.role }}</td>
+            <td>{{ c.basis }}</td>
+            <td>
+              {% if c.value_kind == "money" %}{{ money(c.money_minor) }}
+              {% elif c.value_kind == "rate" %}{{ c.rate_bp }} bp
+              {% elif c.value_kind == "minutes" %}{{ c.minutes }} 分钟 × {{ money(c.hourly_rate_minor) }}/小时
+              {% else %}未知{% endif %}
+            </td>
+            <td>{{ c.period or "—" }}</td>
+            <td>{{ c.fact_kind }}{% if c.assumption_note %}（{{ c.assumption_note }}）{% endif %}</td>
+            <td>{{ "是" if c.is_active else "已取代" }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% else %}<p class="state state-empty">暂无成本项：缺少成本信息时按“未知”处理，不当作 0。</p>{% endif %}
+    </section>
+
+    <section class="panel" aria-labelledby="scenario-h">
+      <h2 id="scenario-h">成本与利润情景（variant=base）</h2>
+      {% if scenario_error %}
+      <p class="state state-error" role="alert">情景读取失败：{{ scenario_error }}</p>
+      {% else %}
+      <dl class="kv">
+        <dt>逐单贡献值 contribution</dt><dd>{{ money(scenario.contribution_per_order_minor) }}</dd>
+        <dt>每单净值 net</dt><dd>{{ money(scenario.net_per_order_minor) }}{% if not scenario.complete %}（未完整：存在未知项或未分摊的固定成本，因此不输出净值）{% endif %}</dd>
+        <dt>固定成本缺口 fixed_cost_gap</dt><dd>{{ money(scenario.fixed_cost_gap_minor) }}</dd>
+        <dt>售价（不参与成本求和）</dt><dd>{{ money(scenario.sale_price_minor) }}</dd>
+        <dt>已知逐单成本合计</dt><dd>{{ money(scenario.known_subtotal_minor) }}</dd>
+      </dl>
+      <h3>未知项（按“未知”展示，不按 0）</h3>
+      {% if scenario.unknown_components %}
+      <ul class="list">{% for item in scenario.unknown_components %}<li>{{ item }}</li>{% endfor %}</ul>
+      {% else %}<p>无未知项。</p>{% endif %}
+      <h3>假设</h3>
+      {% if scenario.assumptions %}
+      <ul class="list">{% for a in scenario.assumptions %}<li>{{ a }}</li>{% endfor %}</ul>
+      {% else %}<p>无显式假设记录。</p>{% endif %}
+      <h3>解释</h3>
+      <ul class="list">{% for line in scenario.explanation %}<li>{{ line }}</li>{% endfor %}</ul>
+      <p class="hint">{{ scenario.cost_source_note }}</p>
+      {% endif %}
+    </section>
+
+    <section class="panel" aria-labelledby="draft-h">
+      <h2 id="draft-h">草稿（可复制，不发送）</h2>
+      <form id="draft-form" class="row">
+        <label for="draft-kind">草稿类型</label>
+        <select id="draft-kind" name="kind">
+          <option value="listing_copy">商品文案</option>
+          <option value="reply">回复</option>
+          <option value="delivery_note">交付说明</option>
+        </select>
+        <button type="submit">生成 template 草稿</button>
+      </form>
+      <p id="draft-loading" class="state state-loading" hidden>生成中…</p>
+      <p id="draft-error" class="state state-error" role="alert" hidden></p>
+      <div id="draft-output" hidden>
+        <h3>本次生成的草稿正文</h3>
+        <pre id="draft-body" class="draft-body"></pre>
+        <button type="button" id="draft-copy">复制草稿文本</button>
+        <p id="draft-copy-note" class="hint" hidden></p>
+      </div>
+      <h3>已有草稿</h3>
+      {% if detail.drafts %}
+      <ul class="list">
+        {% for d in detail.drafts %}<li>{{ d.kind }}｜{{ d.method }}｜{{ d.status }}｜{{ d.template_version }}｜{{ d.created_at }}</li>{% endfor %}
+      </ul>
+      {% else %}<p class="state state-empty">暂无草稿。</p>{% endif %}
+    </section>
+
+    <section class="panel" aria-labelledby="feedback-h">
+      <h2 id="feedback-h">经营反馈（最小录入）</h2>
+      <p class="hint">成交会保存当时的预测快照；实际利润核算属 S5，此处不计算实际净值。退款必须关联本候选的成交记录。</p>
+      <form id="feedback-form">
+        <p class="row">
+          <label for="feedback-kind">类型</label>
+          <select id="feedback-kind" name="kind">
+            <option value="sale">成交 sale</option>
+            <option value="refund">退款 refund</option>
+            <option value="manual_time">人工时间 manual_time</option>
+          </select>
+        </p>
+        <p class="row">
+          <label for="fb-amount">金额（元，成交／退款必填）</label>
+          <input id="fb-amount" name="amount" inputmode="decimal" placeholder="如 9.90" autocomplete="off">
+          <label for="fb-order-ref">订单号（可选）</label>
+          <input id="fb-order-ref" name="order_ref" autocomplete="off">
+        </p>
+        <p class="row">
+          <label for="fb-related">关联成交（退款必选）</label>
+          <select id="fb-related" name="related_feedback_id">
+            <option value="">—</option>
+            {% for f in detail.feedback %}
+            {% if f.kind == "sale" %}<option value="{{ f.id }}">{{ f.id }}｜{{ f.order_ref or "无订单号" }}｜{{ money(f.amount_minor) }}</option>{% endif %}
+            {% endfor %}
+          </select>
+          <label for="fb-refund-state">退款状态（退款必填）</label>
+          <select id="fb-refund-state" name="refund_state">
+            <option value="">—</option>
+            <option value="pending">pending</option>
+            <option value="settled">settled</option>
+          </select>
+        </p>
+        <p class="row">
+          <label for="fb-minutes">人工分钟（manual_time 必填）</label>
+          <input id="fb-minutes" name="actual_minutes" inputmode="numeric" autocomplete="off">
+          <button type="submit">提交反馈</button>
+        </p>
+      </form>
+      <p id="feedback-loading" class="state state-loading" hidden>提交中…</p>
+      <p id="feedback-error" class="state state-error" role="alert" hidden></p>
+      <p id="feedback-ok" class="state state-empty" hidden></p>
+      <h3>已记录反馈</h3>
+      <table class="table" id="feedback-table"{% if not detail.feedback %} hidden{% endif %}>
+        <caption class="visually-hidden">反馈记录</caption>
+        <thead><tr><th scope="col">类型</th><th scope="col">金额</th><th scope="col">订单号</th><th scope="col">发生时间</th><th scope="col">成交时预测快照</th><th scope="col">退款状态</th><th scope="col">实际净值（S5）</th></tr></thead>
+        <tbody id="feedback-rows">
+        {% for f in detail.feedback %}
+          <tr>
+            <td>{{ f.kind }}</td>
+            <td>{{ money(f.amount_minor) }}</td>
+            <td>{{ f.order_ref or "—" }}</td>
+            <td>{{ f.occurred_at }}</td>
+            <td>{{ money(f.predicted_net_per_order_minor) }}</td>
+            <td>{{ f.refund_state or "—" }}</td>
+            <td>{{ money(f.actual_net_per_order_minor) }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      <p id="feedback-empty" class="state state-empty"{% if detail.feedback %} hidden{% endif %}>暂无反馈记录：本候选还没有成交、退款或人工时间记录。</p>
+    </section>
+
+    <section class="panel" aria-labelledby="reviews-h">
+      <h2 id="reviews-h">复核项</h2>
+      {% if detail.review_items %}
+      <table class="table">
+        <caption class="visually-hidden">复核项列表</caption>
+        <thead><tr><th scope="col">类型</th><th scope="col">原因</th><th scope="col">状态</th><th scope="col">阻断</th><th scope="col">处理</th></tr></thead>
+        <tbody>
+        {% for r in detail.review_items %}
+          <tr>
+            <td>{{ r.kind }}</td>
+            <td>{{ r.reason or "—" }}</td>
+            <td>{{ r.status }}</td>
+            <td>{{ "是" if r.blocking else "否" }}</td>
+            <td>
+              {% if r.status == "open" %}
+              <button type="button" class="review-resolve" data-review-id="{{ r.id }}" data-status="dismissed">标记已处理（不恢复已失效核验）</button>
+              {% else %}—{% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% else %}<p class="state state-empty">暂无复核项。</p>{% endif %}
+      <p id="review-error" class="state state-error" role="alert" hidden></p>
+      <p id="review-ok" class="state state-empty" hidden></p>
+    </section>
+{% endblock %}

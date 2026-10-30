@@ -1,0 +1,222 @@
+{
+  "utc": "2026-10-21T13:43:07Z",
+  "method": "canonical copies are complete files in UTF-8 without BOM and LF endings; 3-part PowerShell log split by anchors (first CRLF, PIP_INSTALL_EXIT=) with per-segment re-encode equality; other files normalised from BOM/NUL/CRLF.",
+  "files": [
+    {
+      "name": "01_baseline_hashes.json",
+      "bytes": 3547,
+      "original_sha256": "a34bf3fc32fc3e35456d1128ee13cdbb9fc1eb135c9bfa19d05fc4202ecbaef5",
+      "utf8_bom": false,
+      "crlf": false,
+      "nul_count": 0,
+      "utf8_strict": true,
+      "shape": "canonical utf-8 (no BOM) + LF",
+      "needs_copy": false
+    },
+    {
+      "name": "02_download.log",
+      "bytes": 266,
+      "original_sha256": "0d43db341c11a9d11914440882ca79560f5770a83185d3ffb8cf17f2b02af967",
+      "utf8_bom": false,
+      "crlf": false,
+      "nul_count": 0,
+      "utf8_strict": true,
+      "shape": "canonical utf-8 (no BOM) + LF",
+      "needs_copy": false
+    },
+    {
+      "name": "03_pip_install.log",
+      "bytes": 39428,
+      "original_sha256": "0f536a6be42a801c013dfccaad0354844f94298e02ade61aa70958938acad1a4",
+      "utf8_bom": true,
+      "crlf": true,
+      "nul_count": 19576,
+      "utf8_strict": false,
+      "segments": [
+        {
+          "codec": "utf-8-sig",
+          "bytes": 204
+        },
+        {
+          "codec": "utf-16-le",
+          "bytes": 39166
+        },
+        {
+          "codec": "utf-8",
+          "bytes": 58
+        }
+      ],
+      "needs_copy": true,
+      "shape": "3-part mix: utf-8-sig + utf-16-le + utf-8",
+      "copy": "03_pip_install.log.utf8.txt",
+      "copy_bytes": 19550,
+      "copy_sha256": "5ef79e8ee8ed954d14fe26657b8cdc3506a543e441a69ac53b909b780a1e622e",
+      "copy_has_bom": false,
+      "copy_has_crlf": false,
+      "lines_original": 306,
+      "lines_copy": 306,
+      "byte_roundtrip_of_original": true,
+      "text_equal_after_normalization": true,
+      "removed_nul_count": 0,
+      "markers": [
+        "START_UTC=",
+        "Successfully installed",
+        "PIP_INSTALL_EXIT=",
+        "END_UTC="
+      ],
+      "equivalence_verdict": "equivalent"
+    },
+    {
+      "name": "03_pip_install_summary.txt",
+      "bytes": 109,
+      "original_sha256": "84808e046d8550dd196e634b749ff673257322ee09956196d0f15bbfc5941344",
+      "utf8_bom": false,
+      "crlf": false,
+      "nul_count": 0,
+      "utf8_strict": true,
+      "shape": "canonical utf-8 (no BOM) + LF",
+      "needs_copy": false
+    },
+    {
+      "name": "04_pip_freeze.txt",
+      "bytes": 1411,
+      "original_sha256": "1e62de71982221fa230190c069e8beb871e6ea0f528757b90be2fe8234d76d84",
+      "utf8_bom": false,
+      "crlf": false,
+      "nul_count": 0,
+      "utf8_strict": true,
+      "shape": "canonical utf-8 (no BOM) + LF",
+      "needs_copy": false
+    },
+    {
+      "name": "05_tools_list.json",
+      "bytes": 6076,
+      "original_sha256": "ad6b1d104097b4ec6b7a523e20f825c36c227ecbadaeb10ddf69b56cf8351847",
+      "utf8_bom": false,
+      "crlf": true,
+      "nul_count": 0,
+      "utf8_strict": true,
+      "needs_copy": true,
+      "shape": "utf-8 with CRLF",
+      "copy": "05_tools_list.json.utf8.txt",
+      "copy_bytes": 5939,
+      "copy_sha256": "09a413dba144885fb621fb9a450594e89a4a0db7bfdd037af8d7445fa25817bf",
+      "copy_has_bom": false,
+      "copy_has_crlf": false,
+      "lines_original": 137,
+      "lines_copy": 137,
+      "byte_roundtrip_of_original": true,
+      "text_equal_after_normalization": true,
+      "removed_nul_count": 0,
+      "markers": [],
+      "equivalence_verdict": "equivalent"
+    },
+    {
+      "name": "06_call_chain.json",
+      "bytes": 3093,
+      "original_sha256": "eb2f992590af999c35622ea04ed951701f8ce73d4ea907524f5bcfba1d447cae",
+      "utf8_bom": false,
+      "crlf": true,
+      "nul_count": 0,
+      "utf8_strict": true,
+      "needs_copy": true,
+      "shape": "utf-8 with CRLF",
+      "copy": "06_call_chain.json.utf8.txt",
+      "copy_bytes": 3001,
+      "copy_sha256": "d6cdb17d65f9ff342c63eb40794f3ce4a518a72b47de543809e9a58890eb2c56",
+      "copy_has_bom": false,
+      "copy_has_crlf": false,
+      "lines_original": 92,
+      "lines_copy": 92,
+      "byte_roundtrip_of_original": true,
+      "text_equal_after_normalization": true,
+      "removed_nul_count": 0,
+      "markers": [],
+      "equivalence_verdict": "equivalent"
+    },
+    {
+      "name": "07_patch_apply.json",
+      "bytes": 982,
+      "original_sha256": "97c276c7dd371c201e0755147c28d62273185143f399e17cba901204d965caef",
+      "utf8_bom": false,
+      "crlf": false,
+      "nul_count": 0,
+      "utf8_strict": true,
+      "shape": "canonical utf-8 (no BOM) + LF",
+      "needs_copy": false
+    },
+    {
+      "name": "08_live_state.txt",
+      "bytes": 360,
+      "original_sha256": "5f2b825395b12db13c4901cf6f3684447622117d5d1e4cbfd05a8102651da9bf",
+      "utf8_bom": false,
+      "crlf": false,
+      "nul_count": 0,
+      "utf8_strict": true,
+      "shape": "canonical utf-8 (no BOM) + LF",
+      "needs_copy": false
+    },
+    {
+      "name": "09_post_hashes.json",
+      "bytes": 4759,
+      "original_sha256": "1262bd78479e83c53bff060221fded5132ef704ea89f9d013cf73bbd9938cad8",
+      "utf8_bom": false,
+      "crlf": false,
+      "nul_count": 0,
+      "utf8_strict": true,
+      "shape": "canonical utf-8 (no BOM) + LF",
+      "needs_copy": false
+    },
+    {
+      "name": "10_permission_probe.md",
+      "bytes": 1917,
+      "original_sha256": "8e9380a958a075cce0f5c31f3e8c838840f01339e9254b5b162da79784d9da87",
+      "utf8_bom": false,
+      "crlf": false,
+      "nul_count": 4,
+      "utf8_strict": true,
+      "nul_text_offsets": [
+        714,
+        733,
+        770,
+        790
+      ],
+      "needs_copy": true,
+      "shape": "utf-8 with embedded NUL characters",
+      "copy": "10_permission_probe.md.utf8.txt",
+      "copy_bytes": 1914,
+      "copy_sha256": "649ab9c4ddc3a63fddaeaf6d9ffdb3257b724c70093c25c4cc620b2049f714ab",
+      "copy_has_bom": false,
+      "copy_has_crlf": false,
+      "lines_original": 21,
+      "lines_copy": 22,
+      "byte_roundtrip_of_original": true,
+      "text_equal_after_normalization": true,
+      "removed_nul_count": 4,
+      "markers": [],
+      "equivalence_verdict": "equivalent"
+    },
+    {
+      "name": "11_encoding_copies.json",
+      "bytes": 6084,
+      "original_sha256": "31a9b16ad4112ea68b12ef31f729ba1c00ed353a7a262130f3f0dfc74f42a428",
+      "utf8_bom": false,
+      "crlf": false,
+      "nul_count": 0,
+      "utf8_strict": true,
+      "shape": "canonical utf-8 (no BOM) + LF",
+      "needs_copy": false
+    },
+    {
+      "name": "INSTALLATION.md",
+      "bytes": 10739,
+      "original_sha256": "9ee02e5b78c49c456464571acdb1aa8fe39e9502a5cff4714644547e5c79f339",
+      "utf8_bom": false,
+      "crlf": false,
+      "nul_count": 0,
+      "utf8_strict": true,
+      "shape": "canonical utf-8 (no BOM) + LF",
+      "needs_copy": false
+    }
+  ]
+}

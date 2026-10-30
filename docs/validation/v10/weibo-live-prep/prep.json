@@ -1,0 +1,28 @@
+{
+ "import": {
+  "status": "recorded",
+  "sha256": "6656d1f113f83cfa990a7ed96c597d880487320c22b8a38c37460a85b1597236",
+  "sources": 9,
+  "test_only": false
+ },
+ "batch": {
+  "batch_id": "weibo-verify-1",
+  "authorized_calls": 3,
+  "seed_used": 2,
+  "records_cap": 5,
+  "window_seconds": 300.0
+ },
+ "summary": {
+  "used": 2,
+  "remaining": 1,
+  "window_open": true,
+  "authorized_calls": 3,
+  "seed_used": 2,
+  "records_reserved": 0
+ },
+ "history": {
+  "pre_deducted_calls": 3,
+  "offline_checks": 4,
+  "uncharged_navigations": 2
+ }
+}

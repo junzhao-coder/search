@@ -1,0 +1,44 @@
+{
+  "script": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\scripts\\x_collect.py",
+  "action_hits": [],
+  "action_hits_count": 0,
+  "log_credential_hits": [
+    {
+      "file": "D:\\桌面\\two\\docs\\validation\\x-collect\\verify\\logs\\hash_before_attempt1.log",
+      "pattern": "long_hex",
+      "line": 8,
+      "text": "MISMATCH {\"path\": \"C:\\\\Users\\\\19183\\\\.dsh\\\\profiles\\\\desktop\\\\cordis.patch.yml\", \"sha256\": \"b78f7ab004745153d6a82f8cf2b2d3fd3a7a78b4f65d7080780303099c2bd2dc\", \"expected_sha256\": \"fda036e9aec82a7e07054df16e0ec425c0276ce6b6107e158239198fdb13c"
+    },
+    {
+      "file": "D:\\桌面\\two\\docs\\validation\\x-collect\\verify\\logs\\hash_before_attempt1.log",
+      "pattern": "long_hex",
+      "line": 8,
+      "text": "MISMATCH {\"path\": \"C:\\\\Users\\\\19183\\\\.dsh\\\\profiles\\\\desktop\\\\cordis.patch.yml\", \"sha256\": \"b78f7ab004745153d6a82f8cf2b2d3fd3a7a78b4f65d7080780303099c2bd2dc\", \"expected_sha256\": \"fda036e9aec82a7e07054df16e0ec425c0276ce6b6107e158239198fdb13c"
+    }
+  ],
+  "script_credential_hits": [],
+  "cookie_meta": {
+    "path": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\\Default\\Network\\Cookies",
+    "exists": true,
+    "x_rows": 14,
+    "names": [
+      "__cf_bm",
+      "__cuid",
+      "auth_token",
+      "cf_clearance",
+      "ct0",
+      "g_state",
+      "gt",
+      "guest_id",
+      "guest_id_ads",
+      "guest_id_marketing",
+      "lang",
+      "personalization_id",
+      "twid"
+    ],
+    "auth_token_name_present": true,
+    "ct0_name_present": true
+  },
+  "read_only_conclusion": true,
+  "logs_clean_conclusion": false
+}

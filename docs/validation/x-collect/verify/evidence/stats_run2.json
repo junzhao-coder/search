@@ -1,0 +1,17 @@
+{
+ "command": "search",
+ "url": "https://x.com/search?q=notion%20template&f=live",
+ "keyword": "notion template",
+ "started_utc": "2026-10-22T03:46:18Z",
+ "finished_utc": "2026-10-22T03:46:52Z",
+ "elapsed_s": 34.4,
+ "requested_limit": 8,
+ "collected": 8,
+ "duplicates": 22,
+ "seen_total": 36,
+ "nonempty_text": 8,
+ "nonempty_text_ratio": 1.0,
+ "stop_reason": "LIMIT",
+ "jsonl": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\data\\search-2026-10-22T034652Z.jsonl",
+ "exit": 0
+}

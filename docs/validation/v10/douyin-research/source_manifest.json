@@ -1,0 +1,134 @@
+{
+ "generated_utc": "2026-10-29T15:14:00Z",
+ "scope": "docs/validation/v10/douyin-research only; no Douyin request, no account, no code/data edits",
+ "local_base": [
+  {
+   "path": "tools/selection/access/__init__.py",
+   "read": "3-5",
+   "role": "shared skeleton; budget + URL/record hygiene, parsing per platform"
+  },
+  {
+   "path": "tools/selection/access/transport.py",
+   "read": "62-107,124-159,345-394",
+   "role": "Refused/PublicHttp/AuthenticatedBrowser transports; SiteProfile"
+  },
+  {
+   "path": "tools/selection/access/browser.py",
+   "read": "48-59,77-175",
+   "role": "browser availability + user-driven login poll; current SIGNED_IN_JS is Zhihu-specific"
+  },
+  {
+   "path": "tools/selection/access/records.py",
+   "read": "22-31,39-44,64-79,158-171",
+   "role": "record whitelist, URL sanitize, field evidence; SOURCE_RULES only zhihu/weibo"
+  },
+  {
+   "path": "tools/selection/access/diagnostics.py",
+   "read": "28-49,67-80",
+   "role": "per-site href shapes/selectors; SITES only zhihu/weibo"
+  },
+  {
+   "path": "tools/selection/access/platform_budget.py",
+   "read": "42-49,193-206",
+   "role": "site-scoped platform ledger; default path is weibo"
+  },
+  {
+   "path": "tools/selection/access/weibo.py",
+   "read": "1-20,76-92,252-321,379-507,860-869",
+   "role": "adapter pattern: site profile, doctor/login, parsers, shared export"
+  },
+  {
+   "path": "tools/selection/access/zhihu.py",
+   "read": "460-484,782",
+   "role": "doctor/export reference"
+  },
+  {
+   "path": "tools/selection/manual.py",
+   "read": "10-18,21-33,72-83",
+   "role": "existing douyin URL parser + manual import"
+  },
+  {
+   "path": "tools/workbench/views_leads.py",
+   "read": "169",
+   "role": "douyin option exists"
+  },
+  {
+   "path": "docs/validation/v9/TOOLS.md",
+   "read": "39,74",
+   "role": "douyin not connected"
+  },
+  {
+   "path": "docs/validation/v9/platform-matrix/MATRIX.md",
+   "read": "11",
+   "role": "douyin template only/unverified"
+  },
+  {
+   "path": "docs/validation/v9/research-collection/RESEARCH.md",
+   "read": "95,135",
+   "role": "catbus/MediaCrawler prior screen; both unverified"
+  }
+ ],
+ "external": [
+  {
+   "repo": "cv-cat/catbus",
+   "url": "https://github.com/cv-cat/catbus",
+   "commit": "0a6e705f95d991ac3cdc896b774570479a23c0ad",
+   "commit_date": "2026-10-22T15:21:45Z",
+   "version": "0.2.1",
+   "license": "MIT",
+   "stars": 512,
+   "language": "TypeScript",
+   "deps": "Node ^22.22.2 || ^24.15.0 || >=26.0.0; 12 runtime deps incl. wreq-js, onnxruntime-web, @napi-rs/canvas, opencv-js",
+   "read": [
+    "sources/catbus_douyin_platform.md",
+    "sources/catbus_package.json",
+    "sources/src_platforms_douyin_web_api.ts",
+    "sources/src_platforms_douyin_web_commands.ts",
+    "sources/src_platforms_douyin_web_client.ts",
+    "sources/src_platforms_douyin_web_normalize.ts",
+    "docs/validation/v9/research-collection/raw/license_catbus.txt"
+   ],
+   "tests_run": false,
+   "live_douyin": false,
+   "limits": "CLI/Node; QR/cookie login; signed web API and device/risk controls; write operations documented as largely failing; no page observed by this project"
+  },
+  {
+   "repo": "NanmiCoder/MediaCrawler",
+   "url": "https://github.com/NanmiCoder/MediaCrawler",
+   "commit": "8f583999006d5b692272c608440e193ca282e73b",
+   "commit_date": "2026-10-15T04:53:36Z",
+   "version": "0.1.0",
+   "license": "NON-COMMERCIAL LEARNING LICENSE 1.1 (GitHub API says NOASSERTION)",
+   "stars": 68377,
+   "language": "Python",
+   "deps": "Python >=3.11; Playwright >=1.61; httpx; FastAPI/SQLAlchemy etc; Node >=16 per README",
+   "read": [
+    "sources/media_douyin_client.py",
+    "sources/media_douyin_core.py",
+    "sources/media_douyin_field.py",
+    "docs/validation/v9/research-collection/raw/license_MediaCrawler.txt",
+    "docs/validation/v9/research-collection/raw/pyproject_MediaCrawler.toml",
+    "docs/validation/v9/research-collection/raw/readme_MediaCrawler.md"
+   ],
+   "tests_run": false,
+   "live_douyin": false,
+   "limits": "non-commercial; browser automation + a_bogus/Argus/session; heavy deps; not suitable to vendor"
+  },
+  {
+   "repo": "Evil0ctal/Douyin_TikTok_Download_API",
+   "url": "https://github.com/Evil0ctal/Douyin_TikTok_Download_API",
+   "license": "Apache-2.0",
+   "stars": 20980,
+   "read": [],
+   "tests_run": false,
+   "live_douyin": false,
+   "limits": "screened from search only; source not read; no recommendation"
+  }
+ ],
+ "x_channel": {
+  "status": "no_result",
+  "reason": "agent-reach doctor: twitter-cli installed but no explicit credentials; web_search site:x.com returned no X posts",
+  "evidence": "sources/X_ATTEMPT.md"
+ },
+ "external_tests": "none run; all external behavior is documented/source-level only, not live-tested"
+}

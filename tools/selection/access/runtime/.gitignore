@@ -1,0 +1,3 @@
+# runtime artifacts: never committed (ledger DB, exports, logs)
+*
+!.gitignore

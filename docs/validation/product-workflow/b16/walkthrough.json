@@ -1,0 +1,91 @@
+{
+ "generated_utc": "2026-10-24T04:27:40Z",
+ "port": 5023,
+ "db": "C:\\Users\\19183\\AppData\\Local\\Temp\\b16-walk-g5ilt35_\\w.db",
+ "ops": [
+  {
+   "op": "POST /worksheet/new",
+   "status": 200,
+   "wid": "wo:20261024-63c6b8cf",
+   "id_ok": true
+  },
+  {
+   "op": "POST 新增候选 1",
+   "status": 200
+  },
+  {
+   "op": "POST 新增候选 2",
+   "status": 200
+  },
+  {
+   "op": "POST 采用第 1 条候选",
+   "status": 200,
+   "selected_shown": true
+  },
+  {
+   "op": "POST 样品自检（b7 xlsx）",
+   "status": 200
+  },
+  {
+   "op": "POST 成本与文案",
+   "status": 200,
+   "ok": 6,
+   "warn": 1
+  },
+  {
+   "op": "POST demo 平台 + GET 导出",
+   "status": "200/200",
+   "buyer_fields": [
+    "title",
+    "selling_points",
+    "contents",
+    "format",
+    "price",
+    "delivery",
+    "aftersales",
+    "faq"
+   ],
+   "no_internal": true
+  }
+ ],
+ "workorder_id": "wo:20261024-63c6b8cf",
+ "candidates": [
+  "sc:c33ec434",
+  "sc:04d1fffe"
+ ],
+ "blocked_export": 409,
+ "page_state": {
+  "ok": 7,
+  "warn": 0
+ },
+ "shots": {
+  "desktop_supply_candidates.png": {
+   "width": 1160,
+   "height": 750,
+   "bytes": 60876,
+   "sha256": "3825b789193f4791885012b1b1fe7f605e79186f09d1f0f92783c3ee5a55dd37"
+  },
+  "desktop_sample_check.png": {
+   "width": 1160,
+   "height": 282,
+   "bytes": 33937,
+   "sha256": "db3ecdab09403fcbea7cf5bbc5b4544f06fd420f83311db502722be727bc02e2"
+  },
+  "mobile_supply_candidates.png": {
+   "width": 362,
+   "height": 1373,
+   "bytes": 52938,
+   "sha256": "1ac04eecc05c5986b62803da132f660b91aa2eba31f36cc02701ffdd623505c8"
+  }
+ },
+ "counts": {
+  "workorder_supply_candidate": 2,
+  "workorder_event": 8
+ },
+ "record": {
+  "selected_supply_id": "sc:c33ec434",
+  "sample_status": "verified",
+  "supply_version": "20261024T042742"
+ },
+ "db_sha256": "ba4208e7becea7c56b29a754ba34f48bbd1054833942016a3ccbe2dcd6d440c9"
+}

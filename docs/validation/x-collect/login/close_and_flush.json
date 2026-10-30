@@ -1,0 +1,14 @@
+{
+ "captured_utc": "2026-10-22T02:49Z",
+ "method": "CDP Browser.close",
+ "websocket_reply": {"id": 1, "result": {}},
+ "chrome_processes_left": 0,
+ "cookies_after_flush": {
+  "path": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\\Default\\Network\\Cookies",
+  "x_rows": 14,
+  "auth_token": true,
+  "ct0": true,
+  "values_logged": false
+ },
+ "note": "优雅关闭后 cookie 才落盘；仅检查名称/行数，未读取或记录任何 cookie 值。"
+}

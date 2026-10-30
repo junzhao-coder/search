@@ -1,0 +1,118 @@
+{
+ "generated_utc": "2026-10-29T15:12:00Z",
+ "queries": {
+  "douyin crawler": {
+   "total_count": 158,
+   "items": [
+    {
+     "full_name": "Evil0ctal/Douyin_TikTok_Download_API",
+     "stars": 20980,
+     "url": "https://github.com/Evil0ctal/Douyin_TikTok_Download_API",
+     "license": "Apache-2.0"
+    },
+    {
+     "full_name": "CharlesPikachu/videodl",
+     "stars": 3165,
+     "url": "https://github.com/CharlesPikachu/videodl",
+     "license": "NOASSERTION"
+    },
+    {
+     "full_name": "3441293738/creatorhub",
+     "stars": 2741,
+     "url": "https://github.com/3441293738/creatorhub",
+     "license": null
+    },
+    {
+     "full_name": "loadchange/amemv-crawler",
+     "stars": 2665,
+     "url": "https://github.com/loadchange/amemv-crawler",
+     "license": "MIT"
+    },
+    {
+     "full_name": "lixi5338619/lxSpider",
+     "stars": 1975,
+     "url": "https://github.com/lixi5338619/lxSpider",
+     "license": "GPL-3.0"
+    }
+   ],
+   "message": null
+  },
+  "douyin comments": {
+   "total_count": 115,
+   "items": [
+    {
+     "full_name": "stream-rec/stream-rec",
+     "stars": 1190,
+     "url": "https://github.com/stream-rec/stream-rec",
+     "license": "MIT"
+    },
+    {
+     "full_name": "alphaply/DouyinComments",
+     "stars": 202,
+     "url": "https://github.com/alphaply/DouyinComments",
+     "license": null
+    },
+    {
+     "full_name": "hua0512/rust-srec",
+     "stars": 103,
+     "url": "https://github.com/hua0512/rust-srec",
+     "license": "MIT"
+    },
+    {
+     "full_name": "GHkmmm/laizan",
+     "stars": 76,
+     "url": "https://github.com/GHkmmm/laizan",
+     "license": null
+    },
+    {
+     "full_name": "risingjerry/social-media-toolkit",
+     "stars": 31,
+     "url": "https://github.com/risingjerry/social-media-toolkit",
+     "license": "Apache-2.0"
+    }
+   ],
+   "message": null
+  },
+  "抖音 采集": {
+   "total_count": 369,
+   "items": [
+    {
+     "full_name": "Evil0ctal/Douyin_TikTok_Download_API",
+     "stars": 20980,
+     "url": "https://github.com/Evil0ctal/Douyin_TikTok_Download_API",
+     "license": "Apache-2.0"
+    },
+    {
+     "full_name": "JoeanAmier/TikTokDownloader",
+     "stars": 17194,
+     "url": "https://github.com/JoeanAmier/TikTokDownloader",
+     "license": "GPL-3.0"
+    },
+    {
+     "full_name": "cirosantilli/china-dictatorship",
+     "stars": 3295,
+     "url": "https://github.com/cirosantilli/china-dictatorship",
+     "license": "CC-BY-SA-4.0"
+    },
+    {
+     "full_name": "3441293738/creatorhub",
+     "stars": 2741,
+     "url": "https://github.com/3441293738/creatorhub",
+     "license": null
+    },
+    {
+     "full_name": "Jamailar/Beav",
+     "stars": 2207,
+     "url": "https://github.com/Jamailar/Beav",
+     "license": "NOASSERTION"
+    }
+   ],
+   "message": null
+  },
+  "douyin web api": {
+   "total_count": null,
+   "items": [],
+   "message": "API rate limit exceeded for 112.224.8.69. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)"
+  }
+ }
+}

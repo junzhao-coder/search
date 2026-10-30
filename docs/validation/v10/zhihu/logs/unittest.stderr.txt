@@ -1,0 +1,81 @@
+test_charge_after_lock_in_same_instance (tests.test_access_budget.BudgetTests.test_charge_after_lock_in_same_instance) ... ok
+test_charge_failure_rolls_back_the_counter (tests.test_access_budget.BudgetTests.test_charge_failure_rolls_back_the_counter) ... ok
+test_counters_survive_reopen (tests.test_access_budget.BudgetTests.test_counters_survive_reopen) ... ok
+test_exhausted_calls_cannot_be_revived_by_new_id (tests.test_access_budget.BudgetTests.test_exhausted_calls_cannot_be_revived_by_new_id) ... ok
+test_explicit_batch_id_only_relabels (tests.test_access_budget.BudgetTests.test_explicit_batch_id_only_relabels) ... ok
+test_failed_call_is_not_refunded (tests.test_access_budget.BudgetTests.test_failed_call_is_not_refunded) ... ok
+test_interval_enforced (tests.test_access_budget.BudgetTests.test_interval_enforced) ... ok
+test_ledger_records_charge_and_lock (tests.test_access_budget.BudgetTests.test_ledger_records_charge_and_lock) ... ok
+test_lock_survives_restart_and_any_relabel (tests.test_access_budget.BudgetTests.test_lock_survives_restart_and_any_relabel) ... ok
+test_locked_budget_keeps_its_counters_visible (tests.test_access_budget.BudgetTests.test_locked_budget_keeps_its_counters_visible) ... ok
+test_login_cannot_relabel_around_a_lock (tests.test_access_budget.BudgetTests.test_login_cannot_relabel_around_a_lock) ... ok
+test_poll_is_refused_when_locked (tests.test_access_budget.BudgetTests.test_poll_is_refused_when_locked) ... ok
+test_poll_quota_exhausts (tests.test_access_budget.BudgetTests.test_poll_quota_exhausts) ... ok
+test_polls_do_not_touch_the_call_counter (tests.test_access_budget.BudgetTests.test_polls_do_not_touch_the_call_counter) ... ok
+test_records_cap (tests.test_access_budget.BudgetTests.test_records_cap) ... ok
+test_relabel_does_not_reset_records_or_window (tests.test_access_budget.BudgetTests.test_relabel_does_not_reset_records_or_window) ... ok
+test_relabel_writes_a_ledger_line (tests.test_access_budget.BudgetTests.test_relabel_writes_a_ledger_line) ... ok
+test_three_calls_then_refused (tests.test_access_budget.BudgetTests.test_three_calls_then_refused) ... ok
+test_unwritable_state_dir_refuses_before_any_call (tests.test_access_budget.BudgetTests.test_unwritable_state_dir_refuses_before_any_call) ... ok
+test_window_blocks_after_max_seconds (tests.test_access_budget.BudgetTests.test_window_blocks_after_max_seconds) ... ok
+test_api_error_field_locks_batch (tests.test_access_zhihu.CommandTests.test_api_error_field_locks_batch) ... ok
+test_budget_exhausted_before_second_call (tests.test_access_zhihu.CommandTests.test_budget_exhausted_before_second_call) ... ok
+test_charge_write_failure_sends_no_request (tests.test_access_zhihu.CommandTests.test_charge_write_failure_sends_no_request) ... ok
+test_clean_search_exits_zero (tests.test_access_zhihu.CommandTests.test_clean_search_exits_zero) ... ok
+test_comments_requires_content_url (tests.test_access_zhihu.CommandTests.test_comments_requires_content_url) ... ok
+test_content_mentioning_captcha_in_json_does_not_lock (tests.test_access_zhihu.CommandTests.test_content_mentioning_captcha_in_json_does_not_lock) ... ok
+test_empty_search_exits_nonzero (tests.test_access_zhihu.CommandTests.test_empty_search_exits_nonzero) ... ok
+test_http_403_locks_the_batch (tests.test_access_zhihu.CommandTests.test_http_403_locks_the_batch) ... ok
+test_offline_refused_transport_is_not_success (tests.test_access_zhihu.CommandTests.test_offline_refused_transport_is_not_success) ... ok
+test_offsite_redirect_locks_the_batch (tests.test_access_zhihu.CommandTests.test_offsite_redirect_locks_the_batch) ... ok
+test_records_cap_blocks_extra_records (tests.test_access_zhihu.CommandTests.test_records_cap_blocks_extra_records) ... ok
+test_risk_locks_budget_and_next_run_refuses (tests.test_access_zhihu.CommandTests.test_risk_locks_budget_and_next_run_refuses) ... ok
+test_search_charges_budget_then_parses (tests.test_access_zhihu.CommandTests.test_search_charges_budget_then_parses) ... ok
+test_transport_error_does_not_lock (tests.test_access_zhihu.CommandTests.test_transport_error_does_not_lock) ... ok
+test_unknown_shape_exits_unsupported (tests.test_access_zhihu.CommandTests.test_unknown_shape_exits_unsupported) ... ok
+test_doctor_does_not_create_a_missing_cookie_db (tests.test_access_zhihu.DoctorTests.test_doctor_does_not_create_a_missing_cookie_db) ... ok
+test_doctor_never_claims_online_from_cookie_presence (tests.test_access_zhihu.DoctorTests.test_doctor_never_claims_online_from_cookie_presence) ... ok
+test_doctor_reads_cookie_names_only (tests.test_access_zhihu.DoctorTests.test_doctor_reads_cookie_names_only) ... ok
+test_doctor_without_profile_is_waiting_not_online (tests.test_access_zhihu.DoctorTests.test_doctor_without_profile_is_waiting_not_online) ... ok
+test_cli_missing_input_file_exits_8_and_charges_nothing (tests.test_access_zhihu.ExportTests.test_cli_missing_input_file_exits_8_and_charges_nothing) ... ok
+test_export_is_a_whitelist_and_drops_nested_secrets (tests.test_access_zhihu.ExportTests.test_export_is_a_whitelist_and_drops_nested_secrets) ... ok
+test_export_missing_input_is_nonzero (tests.test_access_zhihu.ExportTests.test_export_missing_input_is_nonzero) ... ok
+test_export_reads_json_array_too (tests.test_access_zhihu.ExportTests.test_export_reads_json_array_too) ... ok
+test_export_rejects_unknown_evidence_and_source (tests.test_access_zhihu.ExportTests.test_export_rejects_unknown_evidence_and_source) ... ok
+test_final_url_is_sanitized (tests.test_access_zhihu.LoginTests.test_final_url_is_sanitized) ... ok
+test_locked_budget_refuses_login (tests.test_access_zhihu.LoginTests.test_locked_budget_refuses_login) ... ok
+test_poll_limit_is_its_own_nonzero_exit (tests.test_access_zhihu.LoginTests.test_poll_limit_is_its_own_nonzero_exit) ... ok
+test_risk_during_login_locks_budget (tests.test_access_zhihu.LoginTests.test_risk_during_login_locks_budget) ... ok
+test_signed_in_returns_ok_without_using_call_budget (tests.test_access_zhihu.LoginTests.test_signed_in_returns_ok_without_using_call_budget) ... ok
+test_timeout_is_not_success (tests.test_access_zhihu.LoginTests.test_timeout_is_not_success) ... ok
+test_unknown_browser_is_not_success (tests.test_access_zhihu.LoginTests.test_unknown_browser_is_not_success) ... ok
+test_comments_keep_parent_chain (tests.test_access_zhihu.ParserTests.test_comments_keep_parent_chain) ... ok
+test_comments_unsupported (tests.test_access_zhihu.ParserTests.test_comments_unsupported) ... ok
+test_detail_body_mentioning_captcha_with_description_does_not_lock (tests.test_access_zhihu.ParserTests.test_detail_body_mentioning_captcha_with_description_does_not_lock) ... ok
+test_detail_login_wall_and_risk (tests.test_access_zhihu.ParserTests.test_detail_login_wall_and_risk) ... ok
+test_detail_meta_and_heuristics (tests.test_access_zhihu.ParserTests.test_detail_meta_and_heuristics) ... ok
+test_detail_plain_login_link_is_not_a_wall (tests.test_access_zhihu.ParserTests.test_detail_plain_login_link_is_not_a_wall) ... ok
+test_detail_title_containing_captcha_but_with_content_is_content (tests.test_access_zhihu.ParserTests.test_detail_title_containing_captcha_but_with_content_is_content) ... ok
+test_detail_wall_identified_by_meta_title_alone (tests.test_access_zhihu.ParserTests.test_detail_wall_identified_by_meta_title_alone) ... ok
+test_detail_wall_without_description_still_locks (tests.test_access_zhihu.ParserTests.test_detail_wall_without_description_still_locks) ... ok
+test_record_without_evidence_is_unsupported (tests.test_access_zhihu.ParserTests.test_record_without_evidence_is_unsupported) ... ok
+test_search_html_fallback_dedupes_and_skips_unknown (tests.test_access_zhihu.ParserTests.test_search_html_fallback_dedupes_and_skips_unknown) ... ok
+test_search_json_keeps_identity_parent_and_counts (tests.test_access_zhihu.ParserTests.test_search_json_keeps_identity_parent_and_counts) ... ok
+test_search_unsupported_shape_is_not_an_empty_success (tests.test_access_zhihu.ParserTests.test_search_unsupported_shape_is_not_an_empty_success) ... ok
+test_authenticated_transport_blocks_offsite_landing (tests.test_access_zhihu.TransportTests.test_authenticated_transport_blocks_offsite_landing) ... ok
+test_authenticated_transport_returns_html_when_on_site (tests.test_access_zhihu.TransportTests.test_authenticated_transport_returns_html_when_on_site) ... C:\Users\19183\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\Lib\asyncio\base_events.py:730: ResourceWarning: unclosed event loop <ProactorEventLoop running=False closed=False debug=False>
+  _warn(f"unclosed event loop {self!r}", ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_offline_transport_never_reports_success (tests.test_access_zhihu.TransportTests.test_offline_transport_never_reports_success) ... ok
+test_public_http_refuses_to_follow_redirects (tests.test_access_zhihu.TransportTests.test_public_http_refuses_to_follow_redirects)
+A 302 must come back as a result, never be followed inside one charge. ... ok
+test_same_site_check (tests.test_access_zhihu.TransportTests.test_same_site_check) ... ok
+test_only_zhihu_hosts_are_allowed (tests.test_access_zhihu.UrlRuleTests.test_only_zhihu_hosts_are_allowed) ... ok
+test_sanitize_url_drops_tokens_but_keeps_search_term (tests.test_access_zhihu.UrlRuleTests.test_sanitize_url_drops_tokens_but_keeps_search_term) ... ok
+test_url_identity (tests.test_access_zhihu.UrlRuleTests.test_url_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 72 tests in 11.345s
+
+OK

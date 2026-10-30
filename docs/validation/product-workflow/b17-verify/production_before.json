@@ -1,0 +1,20 @@
+{
+ "utc": "2026-10-24T04:40:00Z",
+ "workflow_db": {
+  "path": "D:\\桌面\\two\\tools\\workbench\\runtime\\workflow.sqlite3",
+  "sha256": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c"
+ },
+ "tables": {
+  "workorder": 1,
+  "workorder_event": 2,
+  "workorder_export": 0,
+  "workorder_copy_version": 0,
+  "workorder_publish": 0
+ },
+ "errors": {
+  "workorder_supply_candidate": "no such table: workorder_supply_candidate"
+ },
+ "ids": [
+  "wo:20261023-88ef9a66"
+ ]
+}

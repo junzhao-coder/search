@@ -1,0 +1,3 @@
+PATH=C:\Windows\System32;C:\Windows
+agent-reach version exit=0 out=Agent Reach v1.5.0
+curl bilibili exit=0 bytes=34723

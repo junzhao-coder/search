@@ -1,0 +1,22 @@
+# 权限与调用面探针记录（原样记录，不修改 Flow 策略）
+
+时间（UTC）：2026-10-21T13:32:38.7971722Z
+执行者：C（session-48004521-daf2-548c-a355-487cc6de6e72）
+
+## 1. 本会话是否存在原生 skill 工具入口
+- 结果：**不存在**。本会话可调用的函数集合中没有 skill 函数；也没有 plugin_manager 函数。
+- 因此不是"被 Flow 拒绝并返回拒绝文本"，而是**工具在会话函数表中根本没有暴露**。
+- 对照：策划者转述 AgentReach 安装者收到 Flow 当前角色不允许此工具，属另一种形态（工具存在但被角色策略拦截）。两者都**不能**用脚本反向调用绕过。
+
+## 2. MCP 工具是否"对 Agent 可见"
+- 通过 Host Inspect Provider Tool.listTools（其定义为"Return every Tool schema currently callable by this Agent"）查询：
+  返回 **21** 个 mcp__stealth__<raw>（与 --minimal 的 21 个一一对应），说明 **DSH 侧登记与 MCP 客户端桥接成功**。
+- 但**本会话模型侧函数表未包含**这些名字（本步可见函数仅 Flow/文件/PowerShell/web 等），
+  即：*registry 可见 ≠ 本会话可调用*。这属于**会话工具表未刷新**，不是 Flow 拒绝。
+
+## 3. 判定与后续
+- stdio 独立探针：**已做**（5_tools_list.json、6_call_chain.json）。
+- DSH 登记：**已做**（7_patch_apply.json、8_live_state.txt；Host Config 行 + 真实 server 进程 pid 122680）。
+- DSH 内实际调用：**未做**——需要**正式新会话**（或 GUI 刷新后的会话）让工具进入模型函数表。
+- 需要的协调：由策划者用正式新会话执行 5 步链路并回传截图；或在本任务上下文**明确授权**以 DSH 子会话方式执行（当前 Flow 执行者契约不允许自建下级，故不擅自执行）。
+- 未修改任何 Flow 策略、未以脚本反向调用 host 工具、未重启/结束 DSH。

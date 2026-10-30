@@ -1,0 +1,73 @@
+{
+ "threshold": 50,
+ "engagement_formula": "likes + retweets + replies (None -> 0)",
+ "relevance": {
+  "include_regex": "scrap|scraper|scraping|spider|web\\s*crawl|crawling|爬虫|反爬|采集|selenium|playwright|puppeteer|beautifulsoup|requests\\s*库|数据抓取",
+  "exclude_regex": "reptile|爬虫類|爬蟲|爬宠|トカゲ|蜥蜴|pipe\\s*crawler|sewer|storm\\s*drain|kitten\\s*rescue|robotic\\s*crawler|spider[\\s-]?man|marvel|dc\\s*comics|wall[\\s-]?crawler|superhero|comic",
+  "context_regex": "\\bwebsite\\b|\\bhtml\\b|\\bbrowser\\b|\\bautomation\\b|\\bselenium\\b|\\bplaywright\\b|\\bpuppeteer\\b|\\bbeautifulsoup\\b|\\bscrapy\\b|\\bcrawl(?:er|ing|s)?\\b|\\bspider\\b|\\bapi\\b|\\bpython\\b|\\bproxy\\b|anti[- ]?bot|web\\s+(scrap|crawl|data|spider|page|content|automation)|反爬|采集|抓取|爬取|网页|网站|数据|代码|接口|工具|程序",
+  "note": "exclude takes precedence; include AND context required; only engaged rows are checked"
+ },
+ "dedupe_strategy": "cross-keyword by tweet_id: keep highest engagement; tie -> first seen",
+ "sources": {
+  "web scraping": "raw\\top_run1_web_scraping.jsonl",
+  "crawler": "raw\\top_run2_crawler.jsonl",
+  "爬虫": "raw\\top_run3_pachong.jsonl"
+ },
+ "three_tiers": {
+  "raw": 180,
+  "engaged_ge_50": 116,
+  "engaged_and_relevant": 45,
+  "dropped_irrelevant_raw": 71,
+  "deduped_removed": 0
+ },
+ "per_keyword": {
+  "web scraping": {
+   "raw": 60,
+   "engaged_ge_50": 45,
+   "relevant": 31,
+   "dropped_irrelevant": 14,
+   "pass_rate_raw_to_engaged": 0.75,
+   "pass_rate_engaged_to_relevant": 0.6889
+  },
+  "crawler": {
+   "raw": 60,
+   "engaged_ge_50": 44,
+   "relevant": 7,
+   "dropped_irrelevant": 37,
+   "pass_rate_raw_to_engaged": 0.7333,
+   "pass_rate_engaged_to_relevant": 0.1591
+  },
+  "爬虫": {
+   "raw": 60,
+   "engaged_ge_50": 27,
+   "relevant": 7,
+   "dropped_irrelevant": 20,
+   "pass_rate_raw_to_engaged": 0.45,
+   "pass_rate_engaged_to_relevant": 0.2593
+  }
+ },
+ "threshold_sensitivity_relevant": {
+  "50": 45,
+  "30": 46,
+  "20": 48
+ },
+ "execution_period": {
+  "start": "2026-10-22T04:27:43Z",
+  "end": "2026-10-22T04:46:16Z"
+ },
+ "outputs": {
+  "filtered_all": "filtered\\filtered_all.jsonl",
+  "dropped_irrelevant": "filtered\\dropped_irrelevant.jsonl",
+  "summary_csv": "filtered\\summary.csv",
+  "per_keyword": {
+   "web scraping": "filtered/filtered_web_scraping.jsonl",
+   "crawler": "filtered/filtered_crawler.jsonl",
+   "爬虫": "filtered/filtered_pachong.jsonl"
+  }
+ },
+ "limits": {
+  "low_yield": "f=top + engagement>=50 + relevance may yield few rows; threshold not lowered.",
+  "suggestion": "若第三档不足 10 条：建议扩大 raw（每词 >60 或更多关键词）、阈值下调至 30/20（需用户确认）并扩充同义词/排除词；当前相关计数@50=45、@30=46、@20=48",
+  "attempt_note": "run1 CLI false RISK_CONTROL (/Challenge/i matched tweet text 'challenges'); collection used tools/collect_search.py with selector-based risk check; original x_collect.py unchanged."
+ }
+}

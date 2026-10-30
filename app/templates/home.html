@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block page_id %}home{% endblock %}
+{% block title %}今日工作台{% endblock %}
+{% block content %}
+    <h1 class="page-title">今日工作台</h1>
+    <p class="hint">完整候选池按状态分池展示，条目与来源／运行状态均来自本机 API。每日重点摘要（最多 5 条）属 S5，本页不生成摘要、不补位。</p>
+
+    <section class="panel" aria-labelledby="pool-h">
+      <h2 id="pool-h">候选池</h2>
+      <form id="pool-filter" class="row" role="search">
+        <label for="q">关键词</label>
+        <input type="search" id="q" name="q" placeholder="按标题搜索" autocomplete="off">
+        <label for="status">分池</label>
+        <select id="status" name="status">
+          <option value="">全部</option>
+          <option value="testable">可测试池</option>
+          <option value="explore">探索池（弱证据高潜力）</option>
+          <option value="pending">待核验</option>
+          <option value="stale">已失效</option>
+        </select>
+        <button type="submit">查询</button>
+      </form>
+      <p id="pool-loading" class="state state-loading" hidden>加载中…</p>
+      <p id="pool-empty" class="state state-empty" hidden>暂无候选：请先在“导入与来源”页导入一份 CSV/JSON。</p>
+      <p id="pool-error" class="state state-error" role="alert" hidden></p>
+      <ul id="pool-list" class="list"></ul>
+      <p class="row">
+        <button type="button" id="pool-prev" disabled>上一页</button>
+        <button type="button" id="pool-next">下一页</button>
+        <span id="pool-page" class="meta"></span>
+      </p>
+    </section>
+
+    <section class="panel" aria-labelledby="sources-h">
+      <h2 id="sources-h">来源状态</h2>
+      <p id="sources-loading" class="state state-loading" hidden>加载中…</p>
+      <p id="sources-empty" class="state state-empty" hidden>暂无来源记录。</p>
+      <p id="sources-error" class="state state-error" role="alert" hidden></p>
+      <ul id="sources-list" class="list"></ul>
+    </section>
+
+    <section class="panel" aria-labelledby="runs-h">
+      <h2 id="runs-h">最近运行</h2>
+      <p id="runs-loading" class="state state-loading" hidden>加载中…</p>
+      <p id="runs-empty" class="state state-empty" hidden>暂无运行记录。</p>
+      <p id="runs-error" class="state state-error" role="alert" hidden></p>
+      <ul id="runs-list" class="list"></ul>
+    </section>
+{% endblock %}

@@ -1,0 +1,69 @@
+{
+  "label": "agent-reach",
+  "python": {
+    "version": "3.12.10",
+    "executable": "C:\\Users\\19183\\.agent-reach-venv\\Scripts\\python.exe",
+    "prefix": "C:\\Users\\19183\\.agent-reach-venv",
+    "base_prefix": "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python312",
+    "in_venv": true
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "distributions": {
+    "agent-reach": {
+      "installed": true,
+      "version": "1.5.0",
+      "direct_url": {
+        "archive_info": {
+          "hash": "sha256=d608cc619e460ca982dc11ab72897677837c8d73ea23851026c6374cff864f93",
+          "hashes": {
+            "sha256": "d608cc619e460ca982dc11ab72897677837c8d73ea23851026c6374cff864f93"
+          }
+        },
+        "url": "https://codeload.github.com/Panniantong/Agent-Reach/tar.gz/94f06c1969dfc1834001269d79d3ad0972d9dee6"
+      },
+      "file_count": 96,
+      "location": "C:\\Users\\19183\\.agent-reach-venv\\Lib\\site-packages"
+    },
+    "stealth-browser-mcp": {
+      "installed": false
+    },
+    "fastmcp": {
+      "installed": false
+    },
+    "nodriver": {
+      "installed": false
+    },
+    "mcp": {
+      "installed": false
+    },
+    "pydantic": {
+      "installed": false
+    },
+    "flask": {
+      "installed": false
+    },
+    "requests": {
+      "installed": true,
+      "version": "2.34.2",
+      "direct_url": null,
+      "file_count": 46,
+      "location": "C:\\Users\\19183\\.agent-reach-venv\\Lib\\site-packages"
+    }
+  },
+  "modules": {
+    "agent_reach": {
+      "imported": true,
+      "file": "C:\\Users\\19183\\.agent-reach-venv\\Lib\\site-packages\\agent_reach\\__init__.py",
+      "version_attr": "1.5.0"
+    }
+  },
+  "sys_path": [
+    "D:\\桌面\\two\\docs\\validation\\dsh-tooling\\verification\\runtime\\tools",
+    "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python312\\python312.zip",
+    "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python312\\DLLs",
+    "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python312\\Lib",
+    "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python312",
+    "C:\\Users\\19183\\.agent-reach-venv",
+    "C:\\Users\\19183\\.agent-reach-venv\\Lib\\site-packages"
+  ]
+}

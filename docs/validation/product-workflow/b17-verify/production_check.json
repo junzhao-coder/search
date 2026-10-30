@@ -1,0 +1,21 @@
+{
+ "health": {
+  "status": 200,
+  "body": "{\"app_id\":\"workbench-opportunity/1\",\"counts\":{\"join\":10,\"prices\":20,\"scores\":60,\"scoring_report\":140,\"sources\":14,\"topic_summary\":45,\"topic_top20\":25,\"xianyu\":20,\"xiaohongshu\":20},\"generated_at\":\"2026-10-22T11:21:59Z\",\"root\":\"D:\\\\\\u684c\\u9762\\\\two\",\"status\":\"ok\",\"workflow\":{\"db\":\"D:\\\\\\u684c\\u9762\\\\two\\\\tools\\\\workbench\\\\runtime\\\\workflow.sqlite3\",\"workorders\":1}}\n"
+ },
+ "detail": {
+  "status": 200,
+  "supply": true,
+  "sample": true,
+  "candidate_form": true,
+  "bytes": 17199
+ },
+ "export": {
+  "status": 409,
+  "has_platform_blocker": true,
+  "is_html": "text/html; charset=utf-8; charset=utf-8"
+ },
+ "production_db_sha256": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c",
+ "wal": false,
+ "shm": false
+}

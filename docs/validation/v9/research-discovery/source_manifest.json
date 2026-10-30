@@ -1,0 +1,363 @@
+{
+ "generated_utc": "2026-10-25T05:10:00Z",
+ "workspace": "D:/桌面/two",
+ "scope": "docs/validation/v9/research-discovery only",
+ "tooling": {
+  "agent_reach": {
+   "version": "1.5.0",
+   "doctor": {
+    "github": "warn: gh CLI present, no explicit auth",
+    "twitter": "warn: twitter-cli not installed",
+    "web": "ok",
+    "bilibili": "ok"
+   }
+  },
+  "ponytail": {
+   "status": "catalog-listed but no local skill directory/callable skill tool found; not loaded; minimality applied manually"
+  },
+  "network_x": {
+   "status": "blocked",
+   "evidence": [
+    "agent-reach doctor twitter warn: twitter-cli not installed",
+    "curl x.com search exit 35 schannel SSL/TLS handshake failure",
+    "web_search site:x.com queries returned no results"
+   ]
+  }
+ },
+ "github_queries": [
+  {
+   "file": "gh_demand_mining_product_ideas_python.json",
+   "total_count": 0,
+   "top": [],
+   "message": null
+  },
+  {
+   "file": "gh_fuzzy_duplicate_categories_python.json",
+   "total_count": 1,
+   "top": [
+    {
+     "full_name": "LJrobinson/menu-clone-hunter",
+     "html_url": "https://github.com/LJrobinson/menu-clone-hunter",
+     "stargazers_count": 0,
+     "license": null
+    }
+   ],
+   "message": null
+  },
+  {
+   "file": "gh_incremental_crawl_checkpoint_python.json",
+   "total_count": 0,
+   "top": [],
+   "message": null
+  },
+  {
+   "file": "gh_rapidfuzz_fuzzy_string_matching.json",
+   "total_count": 24,
+   "top": [
+    {
+     "full_name": "rapidfuzz/RapidFuzz",
+     "html_url": "https://github.com/rapidfuzz/RapidFuzz",
+     "stargazers_count": 4177,
+     "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+     }
+    },
+    {
+     "full_name": "rapidfuzz/rapidfuzz-cpp",
+     "html_url": "https://github.com/rapidfuzz/rapidfuzz-cpp",
+     "stargazers_count": 381,
+     "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+     }
+    },
+    {
+     "full_name": "rapidfuzz/rapidfuzz-rs",
+     "html_url": "https://github.com/rapidfuzz/rapidfuzz-rs",
+     "stargazers_count": 72,
+     "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+     }
+    },
+    {
+     "full_name": "Raffinert/FuzzySharp",
+     "html_url": "https://github.com/Raffinert/FuzzySharp",
+     "stargazers_count": 48,
+     "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+     }
+    },
+    {
+     "full_name": "MuntashirAkon/rapidfuzz-android",
+     "html_url": "https://github.com/MuntashirAkon/rapidfuzz-android",
+     "stargazers_count": 10,
+     "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+     }
+    }
+   ],
+   "message": null
+  },
+  {
+   "file": "gh_resumable_crawler_sqlite.json",
+   "total_count": 15,
+   "top": [
+    {
+     "full_name": "Pryodon/Webspider",
+     "html_url": "https://github.com/Pryodon/Webspider",
+     "stargazers_count": 10,
+     "license": {
+      "key": "agpl-3.0",
+      "name": "GNU Affero General Public License v3.0",
+      "spdx_id": "AGPL-3.0",
+      "url": "https://api.github.com/licenses/agpl-3.0",
+      "node_id": "MDc6TGljZW5zZTE="
+     }
+    },
+    {
+     "full_name": "abbysallord/oppy",
+     "html_url": "https://github.com/abbysallord/oppy",
+     "stargazers_count": 4,
+     "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+     }
+    },
+    {
+     "full_name": "Ace-Kelly/AMAC-FundData",
+     "html_url": "https://github.com/Ace-Kelly/AMAC-FundData",
+     "stargazers_count": 1,
+     "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+     }
+    },
+    {
+     "full_name": "3495735391-cyber/safe_crawler",
+     "html_url": "https://github.com/3495735391-cyber/safe_crawler",
+     "stargazers_count": 1,
+     "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+     }
+    },
+    {
+     "full_name": "Zaalar/resumable-catalog-crawler",
+     "html_url": "https://github.com/Zaalar/resumable-catalog-crawler",
+     "stargazers_count": 0,
+     "license": null
+    }
+   ],
+   "message": null
+  },
+  {
+   "file": "gh_scrapy_jobdir_resume.json",
+   "total_count": 0,
+   "top": [],
+   "message": null
+  }
+ ],
+ "x_attempts": [
+  {
+   "query": "\"crawler\" resume",
+   "url": "https://x.com/search?q=%22crawler%22%20resume&src=typed_query&f=live",
+   "utc": "2026-10-25T04:56Z",
+   "result": "curl exit 35 TLS handshake failure; no content",
+   "access": "blocked"
+  },
+  {
+   "query": "site:x.com resume crawler",
+   "url": "web_search (not direct X)",
+   "utc": "2026-10-25T04:57Z",
+   "result": "no results",
+   "access": "no_results"
+  },
+  {
+   "query": "site:x.com \"crawling\" \"checkpoint\"",
+   "url": "web_search (not direct X)",
+   "utc": "2026-10-25T05:02Z",
+   "result": "no results",
+   "access": "no_results"
+  }
+ ],
+ "candidates": [
+  {
+   "name": "Scrapy",
+   "repo": {
+    "full_name": "scrapy/scrapy",
+    "url": "https://github.com/scrapy/scrapy",
+    "stars": 65001,
+    "open_issues": 173,
+    "license": "BSD-3-Clause",
+    "default_branch": "master",
+    "pushed_at": "2026-10-22T21:57:27Z",
+    "archived": false,
+    "language": "Python"
+   },
+   "commit": {
+    "sha": "171ccbedb734c988fd86708fd5e0803029b6c730",
+    "url": "https://github.com/scrapy/scrapy/commit/171ccbedb734c988fd86708fd5e0803029b6c730",
+    "date": "2026-10-22T21:57:27Z",
+    "message": "Deprecate passing coros to iterate_spider_output(). (#8394)"
+   },
+   "release": {
+    "tag": "2.19.0",
+    "name": "",
+    "published_at": "2026-09-10T11:48:30Z",
+    "url": "https://github.com/scrapy/scrapy/releases/tag/2.19.0"
+   },
+   "license_text": "sources/scrapy_LICENSE.txt",
+   "key_files": [
+    "sources/scrapy_jobs.rst",
+    "sources/scrapy_dupefilters.py",
+    "sources/scrapy_pyproject.toml"
+   ],
+   "mechanism": "JOBDIR persists scheduler/request queue, seen fingerprints and spider state; docs lines 7-17,25-29,45-50; DiskDupeFilter SQLite seen state dupefilters.py:179-205",
+   "limitations": [
+    "clean pause only; same Scrapy version; serializable requests; cookies expire; Twisted async framework heavy"
+   ],
+   "dependency_cost": {
+    "runtime": [
+     "Twisted",
+     "lxml",
+     "parsel",
+     "w3lib",
+     "cryptography",
+     "aiohttp"
+    ],
+    "pyproject": "sources/scrapy_pyproject.toml:9-36"
+   },
+   "decision": "reuse concepts only; do not adopt framework"
+  },
+  {
+   "name": "RapidFuzz",
+   "repo": {
+    "full_name": "rapidfuzz/RapidFuzz",
+    "url": "https://github.com/rapidfuzz/RapidFuzz",
+    "stars": 4177,
+    "open_issues": 36,
+    "license": "MIT",
+    "default_branch": "main",
+    "pushed_at": "2026-10-21T13:56:25Z",
+    "archived": false,
+    "language": "Python"
+   },
+   "commit": {
+    "sha": "09328422916b13181238660cd3b23a71905d1ec9",
+    "url": "https://github.com/rapidfuzz/RapidFuzz/commit/09328422916b13181238660cd3b23a71905d1ec9",
+    "date": "2026-10-19T00:28:28Z",
+    "message": "Bump pypa/cibuildwheel from 4.3.0 to 4.3.1 in the github-actions group"
+   },
+   "release": {
+    "tag": "v3.14.6-1",
+    "name": "Release 3.14.6",
+    "published_at": "2026-08-30T18:15:41Z",
+    "url": "https://github.com/rapidfuzz/RapidFuzz/releases/tag/v3.14.6-1"
+   },
+   "license_text": "sources/rapid_LICENSE.txt",
+   "key_files": [
+    "sources/rapid_process_py.py",
+    "sources/rapid_README.md",
+    "sources/rapid_pyproject.toml"
+   ],
+   "mechanism": "extract_iter/process choices with scorer, processor and score_cutoff; process_py.py:21-124; MIT",
+   "limitations": [
+    "returns similarity candidates, no category identity/aliases/review/undo",
+    "C++ extension wheels; Python>=3.11; not needed for 60-item local ledger"
+   ],
+   "dependency_cost": {
+    "runtime": "optional numpy; C++ extension; no mandatory runtime deps in pyproject",
+    "requires_python": ">=3.11"
+   },
+   "decision": "use only if scale grows; default stdlib exact/alias + manual review"
+  }
+ ],
+ "domestic_evidence": {
+  "note": "Existing project artifacts only; no new interviews/collection in V9-0.",
+  "xianyu_price_signals": {
+   "path": "docs/validation/money-project/sourcing/price_signals.csv",
+   "rows": 20,
+   "reference_price_rows": 3,
+   "wants_rows": 16,
+   "wants_sum": 8093
+  },
+  "b25_feedback": {
+   "path": "docs/validation/product-workflow/b25/feedback-log.csv",
+   "rows": 2,
+   "synthetic": true
+  },
+  "bilibili_seed": {
+   "path": "docs/validation/money-project/scoring/raw/bilibili_search.json",
+   "note": "20 public videos; content sample, not audience interviews"
+  }
+ },
+ "license_texts": {
+  "scrapy": "BSD-3-Clause",
+  "rapidfuzz": "MIT"
+ },
+ "raw_files": [
+  "gh_demand_mining_product_ideas_python.json",
+  "gh_fuzzy_duplicate_categories_python.json",
+  "gh_incremental_crawl_checkpoint_python.json",
+  "gh_rapidfuzz_fuzzy_string_matching.json",
+  "gh_resumable_crawler_sqlite.json",
+  "gh_scrapy_jobdir_resume.json",
+  "rapid_commit.json",
+  "rapid_issues.json",
+  "rapid_LICENSE.json",
+  "rapid_LICENSE.txt",
+  "rapid_process.json",
+  "rapid_process_py.json",
+  "rapid_process_py.py",
+  "rapid_pyproject.json",
+  "rapid_pyproject.toml",
+  "rapid_readme.json",
+  "rapid_README.md",
+  "rapid_release.json",
+  "rapid_tree.json",
+  "rapidfuzz_repo.json",
+  "scrapy_commit.json",
+  "scrapy_dupefilters.json",
+  "scrapy_dupefilters.py",
+  "scrapy_engine.json",
+  "scrapy_engine.py",
+  "scrapy_issues.json",
+  "scrapy_jobs.json",
+  "scrapy_jobs.rst",
+  "scrapy_LICENSE.json",
+  "scrapy_LICENSE.txt",
+  "scrapy_pyproject.json",
+  "scrapy_pyproject.toml",
+  "scrapy_release.json",
+  "scrapy_repo.json",
+  "x_search_probe.txt"
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "all_passed": true,
+ "count": 7,
+ "results": [
+  {
+   "id": "normal_challenges",
+   "html": "normal_challenges.html",
+   "html_exists": true,
+   "signals": {
+    "toast": "",
+    "captcha": false,
+    "error_page": false,
+    "url": "https://x.com/home"
+   },
+   "expected_risk": false,
+   "actual_risk": false,
+   "passed": true
+  },
+  {
+   "id": "normal_challenge_accepted",
+   "html": "normal_challenge_accepted.html",
+   "html_exists": true,
+   "signals": {
+    "toast": "",
+    "captcha": false,
+    "error_page": false,
+    "url": "https://x.com/home"
+   },
+   "expected_risk": false,
+   "actual_risk": false,
+   "passed": true
+  },
+  {
+   "id": "normal_toast_other",
+   "html": "normal_toast_other.html",
+   "html_exists": true,
+   "signals": {
+    "toast": "Your post was sent.",
+    "captcha": false,
+    "error_page": false,
+    "url": "https://x.com/home"
+   },
+   "expected_risk": false,
+   "actual_risk": false,
+   "passed": true
+  },
+  {
+   "id": "risk_toast",
+   "html": "risk_toast.html",
+   "html_exists": true,
+   "signals": {
+    "toast": "Something went wrong. Try reloading.",
+    "captcha": false,
+    "error_page": false,
+    "url": "https://x.com/search"
+   },
+   "expected_risk": true,
+   "actual_risk": true,
+   "passed": true
+  },
+  {
+   "id": "risk_rate_limit",
+   "html": "risk_rate_limit.html",
+   "html_exists": true,
+   "signals": {
+    "toast": "Rate limit exceeded. Please try again later.",
+    "captcha": false,
+    "error_page": false,
+    "url": "https://x.com/home"
+   },
+   "expected_risk": true,
+   "actual_risk": true,
+   "passed": true
+  },
+  {
+   "id": "risk_captcha",
+   "html": "risk_captcha.html",
+   "html_exists": true,
+   "signals": {
+    "toast": "",
+    "captcha": true,
+    "error_page": false,
+    "url": "https://x.com/home"
+   },
+   "expected_risk": true,
+   "actual_risk": true,
+   "passed": true
+  },
+  {
+   "id": "risk_error_page",
+   "html": "risk_error_page.html",
+   "html_exists": true,
+   "signals": {
+    "toast": "",
+    "captcha": false,
+    "error_page": true,
+    "url": "https://x.com/home"
+   },
+   "expected_risk": true,
+   "actual_risk": true,
+   "passed": true
+  }
+ ]
+}

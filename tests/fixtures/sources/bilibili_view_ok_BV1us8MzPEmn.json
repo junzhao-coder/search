@@ -1,0 +1,50 @@
+{
+  "_fixture": {
+    "kind": "real_excerpt",
+    "is_complete_raw_response": false,
+    "provenance": "docs/research/S3_PROBES.json P6（2026-10-14 13:05 Asia/Shanghai，web_fetch 只读；2026-10-07 另一次观察同值）",
+    "note": "仅为真实返回结构的有限摘录，用于离线回放；tname/rights/pic/多分P 等字段未收录，不得当作完整原始响应，也不代表数据接口已获授权",
+    "used_by": "tests/sources/test_bilibili_view.py"
+  },
+  "transport": {
+    "http_status": 200,
+    "app_code": 0,
+    "app_message": "OK",
+    "error": null,
+    "payload": {
+      "code": 0,
+      "message": "OK",
+      "data": {
+        "bvid": "BV1us8MzPEmn",
+        "aid": 114907487996671,
+        "cid": 31249924489,
+        "title": "拼多多全域虚拟电商从零到1实操课",
+        "pubdate": 1753349981,
+        "ctime": 1753349982,
+        "desc": "拼多多全域虚拟电商从零到1实操课\n拼多多全域虚拟电商从零到1实操课",
+        "owner": {
+          "mid": 280758032,
+          "name": "有趣知识八分饱"
+        },
+        "stat": {
+          "view": 5125,
+          "danmaku": 0,
+          "reply": 5,
+          "favorite": 218,
+          "coin": 12,
+          "share": 23,
+          "like": 51
+        },
+        "duration": 9675,
+        "pages": [
+          {
+            "cid": 31249924489,
+            "page": 1,
+            "part": "1_一：什么是虚拟电商？和大纲介绍_ev",
+            "duration": 1710
+          }
+        ]
+      }
+    }
+  }
+}

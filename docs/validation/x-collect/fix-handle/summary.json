@@ -1,0 +1,49 @@
+{
+ "diff_lines": 119,
+ "runs": [
+  {
+   "log": "doctor_run1.log",
+   "handle": "@Johnsmathjyjp",
+   "utc": "2026-10-22T03:56:28Z",
+   "exit": 0,
+   "cookie_check": "COOKIE_CHECK exists=True x_rows=15 auth_token=True ct0=True",
+   "start_utc": "2026-10-22T03:56:22Z",
+   "elapsed_s": 6.0
+  },
+  {
+   "log": "doctor_run2.log",
+   "handle": "@Johnsmathjyjp",
+   "utc": "2026-10-22T03:56:42Z",
+   "exit": 0,
+   "cookie_check": "COOKIE_CHECK exists=True x_rows=15 auth_token=True ct0=True",
+   "start_utc": "2026-10-22T03:56:36Z",
+   "elapsed_s": 6.0
+  }
+ ],
+ "cookies": {
+  "x_rows": 15,
+  "auth_token": true,
+  "ct0": true,
+  "names": [
+   "__cf_bm",
+   "__cuid",
+   "_twitter_sess",
+   "auth_token",
+   "cf_clearance",
+   "ct0",
+   "g_state",
+   "gt",
+   "guest_id",
+   "guest_id_ads",
+   "guest_id_marketing",
+   "lang",
+   "personalization_id",
+   "twid"
+  ],
+  "previous_rows": 14,
+  "note": "行数由 14 变 15（浏览/菜单），仅名称/行数，未读值"
+ },
+ "same_handle": true,
+ "actual_equals_expected": false,
+ "profile": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile"
+}

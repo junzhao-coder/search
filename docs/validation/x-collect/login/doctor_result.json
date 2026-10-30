@@ -1,0 +1,19 @@
+{
+ "captured_utc": "2026-10-22T02:53:07Z",
+ "log_file": "D:\\桌面\\two\\docs\\validation\\x-collect\\login\\logs\\doctor-2026-10-22T024937Z.log",
+ "exit": 0,
+ "handle": "@xluchuan",
+ "utc": "2026-10-22T02:49:43Z",
+ "headless": true,
+ "headless_fallback": false,
+ "cookie_check": "COOKIE_CHECK exists=True x_rows=14 auth_token=True ct0=True",
+ "lines": [
+  "2026-10-22T02:49:37Z CMD=C:\\Users\\19183\\.dsh\\tools\\x-collect\\scripts\\x_collect.py doctor CWD=D:\\桌面\\two UTC=2026-10-22T02:49:37Z",
+  "2026-10-22T02:49:37Z COOKIE_CHECK exists=True x_rows=14 auth_token=True ct0=True",
+  "2026-10-22T02:49:37Z START doctor headed=False profile=C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile",
+  "2026-10-22T02:49:37Z PROXY=system process-level (127.0.0.1:10808)",
+  "2026-10-22T02:49:41Z DOCTOR href=https://x.com/home title='(2) X' bodylen=130 html_len=836676",
+  "2026-10-22T02:49:43Z LOGGED_IN handle=@xluchuan utc=2026-10-22T02:49:43Z",
+  "2026-10-22T02:49:43Z EXIT=0"
+ ]
+}

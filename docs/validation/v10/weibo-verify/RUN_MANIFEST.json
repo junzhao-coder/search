@@ -1,0 +1,108 @@
+{
+  "generated_utc": "2026-10-29T13:36:33Z",
+  "python": "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+  "modules": [
+    "tests.test_access_weibo",
+    "tests.test_access_zhihu",
+    "tests.test_access_budget"
+  ],
+  "total_tests_across_modules": 186,
+  "total_skipped": 0,
+  "node_js_class_tests": 13,
+  "node_js_class_skipped": 0,
+  "all_green": true,
+  "runs": [
+    {
+      "tag": "test_access_weibo",
+      "argv": [
+        "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "tests.test_access_weibo",
+        "-v"
+      ],
+      "cwd": "D:\\桌面\\two",
+      "started_utc": "2026-10-29T13:36:16Z",
+      "finished_utc": "2026-10-29T13:36:22Z",
+      "exit": 0,
+      "tests_run": 70,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "verdict": "OK",
+      "stdout_log": "test_access_weibo_stdout.log",
+      "stderr_log": "test_access_weibo_stderr.log"
+    },
+    {
+      "tag": "test_access_zhihu",
+      "argv": [
+        "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "tests.test_access_zhihu",
+        "-v"
+      ],
+      "cwd": "D:\\桌面\\two",
+      "started_utc": "2026-10-29T13:36:22Z",
+      "finished_utc": "2026-10-29T13:36:30Z",
+      "exit": 0,
+      "tests_run": 96,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "verdict": "OK",
+      "stdout_log": "test_access_zhihu_stdout.log",
+      "stderr_log": "test_access_zhihu_stderr.log"
+    },
+    {
+      "tag": "test_access_budget",
+      "argv": [
+        "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "tests.test_access_budget",
+        "-v"
+      ],
+      "cwd": "D:\\桌面\\two",
+      "started_utc": "2026-10-29T13:36:30Z",
+      "finished_utc": "2026-10-29T13:36:32Z",
+      "exit": 0,
+      "tests_run": 20,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "verdict": "OK",
+      "stdout_log": "test_access_budget_stdout.log",
+      "stderr_log": "test_access_budget_stderr.log"
+    },
+    {
+      "tag": "signed_in_js",
+      "argv": [
+        "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "tests.test_access_weibo.SignedInJsTests",
+        "-v"
+      ],
+      "cwd": "D:\\桌面\\two",
+      "started_utc": "2026-10-29T13:36:32Z",
+      "finished_utc": "2026-10-29T13:36:33Z",
+      "exit": 0,
+      "tests_run": 13,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "verdict": "OK",
+      "stdout_log": "signed_in_js_stdout.log",
+      "stderr_log": "signed_in_js_stderr.log"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}本地选品与货源情报{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body data-page="{% block page_id %}{% endblock %}">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="topbar">
+    <p class="brand">本地选品与货源情报</p>
+    <nav class="nav" aria-label="主导航">
+      <a href="{{ url_for('pages.page_home') }}"{% if nav == "home" %} aria-current="page"{% endif %}>今日工作台</a>
+      <a href="{{ url_for('pages.page_import') }}"{% if nav == "import" %} aria-current="page"{% endif %}>导入与来源</a>
+      <a href="{{ url_for('pages.page_ops') }}"{% if nav == "ops" %} aria-current="page"{% endif %}>成本与运行</a>
+    </nav>
+  </header>
+  <main id="main" class="main">
+{% block content %}{% endblock %}
+  </main>
+  <footer class="footer">
+    <p>本地单用户界面：数据来自本机 API；无发送、发布、采购或付款动作；未知成本按“未知”展示，不按 0 处理。</p>
+  </footer>
+  <script src="{{ url_for('static', filename='ui.js') }}" defer></script>
+</body>
+</html>

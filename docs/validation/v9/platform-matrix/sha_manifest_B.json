@@ -1,0 +1,99 @@
+{
+ "generated_utc": "2026-10-25T06:12:00Z",
+ "scope": "docs/validation/v9/platform-matrix",
+ "files": {
+  "docs/validation/v9/platform-matrix/MATRIX_ROWS.md": {
+   "sha256": "ed39075b12755829abea5cd2c519b1c498fd3fa898247d1d409ef8993cf3e4ee",
+   "bytes": 3350
+  },
+  "docs/validation/v9/platform-matrix/PROBES.md": {
+   "sha256": "d46fdd47ab0c33583afbadc92a155ceb4844e40650f01feeadefe65227f86a99",
+   "bytes": 8182
+  },
+  "docs/validation/v9/platform-matrix/MATRIX.md": {
+   "sha256": "c3deba3062fe37b8bbcd0d95582652e4027f90ad91cd43c39277642a198b950e",
+   "bytes": 9827
+  },
+  "docs/validation/v9/platform-matrix/IMPORT_CONTRACT.md": {
+   "sha256": "0e3184ea9c87a1e52baeeae0f0f8b9596c163d808b3f84dfc84de4b4254e8428",
+   "bytes": 8266
+  },
+  "docs/validation/v9/platform-matrix/import_sample_stats.json": {
+   "sha256": "d6fa6f436290493dfeb57cac150e4b30d5aa9ef4bb3d8ae38d11c63555f067d6",
+   "bytes": 4009
+  }
+ },
+ "inputs": {
+  "tools/platform-login/data/xianyu_items.jsonl": {
+   "sha256": "c70f15801db70d9c0a170024c24ddd18ab9cedf056f21c708207066915c851e0",
+   "bytes": 16332
+  },
+  "docs/validation/v9/research-collection/RESEARCH.md": {
+   "sha256": "98b3603ec33e381069dea7c9fe50319d702f7fc16b1295fccf04b9bd09e00e08",
+   "bytes": 23952
+  },
+  "docs/validation/v9/baseline/BASELINE.md": {
+   "sha256": "274d9d56c719eebc1e243043ca887c66011cceb1037d81925687f0ec2553933e",
+   "bytes": 28775
+  },
+  "app/core/importer.py": {
+   "sha256": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+   "bytes": 49011
+  }
+ },
+ "guards": {
+  "instance/app.db": {
+   "b14": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+   "now": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+   "same": true
+  },
+  "docs/design/CONTRACT.md": {
+   "b14": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+   "now": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+   "same": true
+  },
+  "app/sources/wiring.py": {
+   "b14": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+   "now": "bafcf3974cbfb3ed4da99936e5d65d10d6f02c663b6325008255b4eaecc0da05",
+   "same": true
+  },
+  "app/sources/bilibili_view.py": {
+   "b14": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+   "now": "b0dc0ced1bc3be3eca85116559d5acae52f7753dca1dcbbac259e573cc73f98e",
+   "same": true
+  },
+  "app/core/importer.py": {
+   "b14": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+   "now": "a11eaf4d39541ac11459eb1cebb8586f4922838b96714d7f7f3d2e253cff51a1",
+   "same": true
+  },
+  "docs/validation/money-project/scoring/scores.csv": {
+   "b14": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+   "now": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+   "same": true
+  },
+  "docs/validation/money-project/sourcing/sources.csv": {
+   "b14": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+   "now": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+   "same": true
+  },
+  "docs/validation/money-project/sourcing/price_signals.csv": {
+   "b14": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691",
+   "now": "e5b04a9781cb9a19591357d094662579d4b4eeaface5f60b53db2b142301f691",
+   "same": true
+  },
+  "app/storage/migrations/0001_init.sql": {
+   "b14": "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb",
+   "now": "9b0493731305c2e3de3c89a1a16dcc8a53ca5882d014f63333b34e7c872e62bb",
+   "same": true
+  },
+  "app/storage/migrations/0002_draft_feedback.sql": {
+   "b14": "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed",
+   "now": "34d70a1d501ba1aaf2fb93de1351ea80c470dcac9e6bc040617b19c5446c3aed",
+   "same": true
+  }
+ },
+ "wal": false,
+ "shm": false,
+ "workorder_db_sha256": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c"
+}

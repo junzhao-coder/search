@@ -1,0 +1,286 @@
+{
+  "run1": {
+    "rows": 5,
+    "unique_tweet_ids": 5,
+    "stats": {
+      "command": "search",
+      "url": "https://x.com/search?q=notion%20template&f=live",
+      "keyword": "notion template",
+      "started_utc": "2026-10-22T03:44:56Z",
+      "finished_utc": "2026-10-22T03:45:01Z",
+      "elapsed_s": 4.7,
+      "requested_limit": 5,
+      "collected": 5,
+      "duplicates": 0,
+      "seen_total": 28,
+      "nonempty_text": 5,
+      "nonempty_text_ratio": 1.0,
+      "stop_reason": "LIMIT",
+      "jsonl": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\data\\search-2026-10-22T034501Z.jsonl",
+      "exit": 0
+    },
+    "field_nonempty": {
+      "tweet_id": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "url": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "text": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "author_handle": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "author_name": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "created_at": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "lang": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "replies": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "retweets": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "likes": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "views": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "media_urls": {
+        "nonempty": 0,
+        "total": 5,
+        "rate": 0.0
+      },
+      "discovered_by_keyword": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      },
+      "fetched_at": {
+        "nonempty": 5,
+        "total": 5,
+        "rate": 1.0
+      }
+    }
+  },
+  "run2": {
+    "rows": 8,
+    "unique_tweet_ids": 8,
+    "stats": {
+      "command": "search",
+      "url": "https://x.com/search?q=notion%20template&f=live",
+      "keyword": "notion template",
+      "started_utc": "2026-10-22T03:46:18Z",
+      "finished_utc": "2026-10-22T03:46:52Z",
+      "elapsed_s": 34.4,
+      "requested_limit": 8,
+      "collected": 8,
+      "duplicates": 22,
+      "seen_total": 36,
+      "nonempty_text": 8,
+      "nonempty_text_ratio": 1.0,
+      "stop_reason": "LIMIT",
+      "jsonl": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\data\\search-2026-10-22T034652Z.jsonl",
+      "exit": 0
+    },
+    "field_nonempty": {
+      "tweet_id": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "url": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "text": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "author_handle": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "author_name": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "created_at": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "lang": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "replies": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "retweets": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "likes": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "views": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "media_urls": {
+        "nonempty": 2,
+        "total": 8,
+        "rate": 0.25
+      },
+      "discovered_by_keyword": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      },
+      "fetched_at": {
+        "nonempty": 8,
+        "total": 8,
+        "rate": 1.0
+      }
+    }
+  },
+  "combined_unique_ids": 13,
+  "seen": {
+    "before": 23,
+    "after1": 28,
+    "after2": 36,
+    "before_prefix_after1": true,
+    "before_prefix_after2": true,
+    "after1_prefix_after2": true,
+    "unique_ids_before": 23,
+    "unique_ids_after2": 36,
+    "duplicate_ids_after2": 0
+  },
+  "rate_limit": {
+    "run1_round_times": [
+      [
+        "2026-10-22T03:45:01Z",
+        0
+      ]
+    ],
+    "run1_intervals": [],
+    "run2_round_times": [
+      [
+        "2026-10-22T03:46:23Z",
+        0
+      ],
+      [
+        "2026-10-22T03:46:33Z",
+        1
+      ],
+      [
+        "2026-10-22T03:46:43Z",
+        2
+      ],
+      [
+        "2026-10-22T03:46:52Z",
+        3
+      ]
+    ],
+    "run2_intervals": [
+      10.0,
+      10.0,
+      9.0
+    ],
+    "run1_start_to_run2_start_s": 82.0,
+    "run1_finish_to_run2_start_s": 77.0,
+    "run2_intervals_all_ge_8": true,
+    "two_run_gap_ge_60": true
+  },
+  "fxtwitter_compare": [
+    {
+      "tweet_id": "2113079963796516926",
+      "status": "CHECKED",
+      "fx_http": 200,
+      "fx_url": "https://api.fxtwitter.com/status/2113079963796516926",
+      "tweet_url": "https://x.com/bulba_gunwook/status/2113079963796516926",
+      "local_url": "https://x.com/bulba_gunwook/status/2113079963796516926",
+      "local_author": "bulba_gunwook",
+      "fx_author": "bulba_gunwook",
+      "local_created_at": "2026-10-22T01:28:17.000Z",
+      "fx_created_at": "Thu Oct 22 01:28:17 +0000 2026",
+      "local_text_excerpt": "Found it. To track individual days I use a template inside each cycle",
+      "fx_text_excerpt": "@seungjinprompts @peachoats Found it. To track individual days I use a template inside each cycle\nhttps://www.reddit.com/r/Notion/s/90ZCjB7Y0m",
+      "text_probe_match": true,
+      "method": "web_fetch api.fxtwitter.com HTTP 200"
+    },
+    {
+      "tweet_id": "2113042387169853575",
+      "status": "CHECKED",
+      "fx_http": 200,
+      "fx_url": "https://api.fxtwitter.com/status/2113042387169853575",
+      "tweet_url": "https://x.com/bulba_gunwook/status/2113042387169853575",
+      "local_url": "https://x.com/bulba_gunwook/status/2113042387169853575",
+      "local_author": "bulba_gunwook",
+      "fx_author": "bulba_gunwook",
+      "local_created_at": "2026-10-21T22:58:58.000Z",
+      "fx_created_at": "Wed Oct 21 22:58:58 +0000 2026",
+      "local_text_excerpt": "I use a notion template that runs numbers and  gives predictions and stuff",
+      "fx_text_excerpt": "@peachoats I use a notion template that runs numbers and  gives predictions and stuff",
+      "text_probe_match": true,
+      "method": "web_fetch api.fxtwitter.com HTTP 200"
+    },
+    {
+      "tweet_id": "2112996273897005393",
+      "status": "CHECKED",
+      "fx_http": 200,
+      "fx_url": "https://api.fxtwitter.com/status/2112996273897005393",
+      "tweet_url": "https://x.com/Arjun432992/status/2112996273897005393",
+      "local_url": "https://x.com/Arjun432992/status/2112996273897005393",
+      "local_author": "Arjun432992",
+      "fx_author": "Arjun432992",
+      "local_created_at": "2026-10-21T19:55:43.000Z",
+      "fx_created_at": "Wed Oct 21 19:55:43 +0000 2026",
+      "local_text_excerpt": "If you are looking for an effective note taking strategy. \n\nCheckout the \"The Cornell Note-Taking System\" which I found out recently. I am following this note t",
+      "fx_text_excerpt": "If you are looking for an effective note taking strategy. \n\nCheckout the \"The Cornell Note-Taking System\" which I found out recently.",
+      "text_probe_match": true,
+      "method": "web_fetch api.fxtwitter.com HTTP 200"
+    }
+  ]
+}

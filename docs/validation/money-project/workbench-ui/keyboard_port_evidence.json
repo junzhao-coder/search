@@ -1,0 +1,87 @@
+{
+ "keyboard": {
+  "steps": [
+   {
+    "case": "enter_current_page",
+    "before": {
+     "url": "http://127.0.0.1:5015/",
+     "path": "/",
+     "search": "",
+     "q": null,
+     "count": null,
+     "active": "A|总览",
+     "open": 0
+    },
+    "after": {
+     "url": "http://127.0.0.1:5015/",
+     "path": "/",
+     "search": "",
+     "q": null,
+     "count": null,
+     "active": "BODY|跳到主要内容\n\n  \n    机会工",
+     "open": 0
+    },
+    "expected": "URL 不变（非失败）"
+   },
+   {
+    "case": "enter_other_page",
+    "before": {
+     "url": "http://127.0.0.1:5015/",
+     "path": "/",
+     "search": "",
+     "q": null,
+     "count": null,
+     "active": "A|机会线索",
+     "open": 0
+    },
+    "after": {
+     "url": "http://127.0.0.1:5015/opportunities",
+     "path": "/opportunities",
+     "search": "",
+     "q": "",
+     "count": "筛后 60 / 共 60",
+     "active": "BODY|跳到主要内容\n\n  \n    机会工",
+     "open": 0
+    },
+    "expected": "pathname 变为 /opportunities"
+   },
+   {
+    "case": "type_and_enter_submit",
+    "typed_value": "AI",
+    "url_before_submit": "http://127.0.0.1:5015/opportunities",
+    "after": {
+     "url": "http://127.0.0.1:5015/opportunities",
+     "path": "/opportunities",
+     "search": "",
+     "q": "AI",
+     "count": "筛后 60 / 共 60",
+     "active": "BUTTON|筛选",
+     "open": 0
+    },
+    "expected": "search 含 q=ai 且计数变化"
+   },
+   {
+    "case": "space_expand",
+    "after": {
+     "url": "http://127.0.0.1:5015/opportunities",
+     "path": "/opportunities",
+     "search": "",
+     "q": "AI",
+     "count": "筛后 60 / 共 60",
+     "active": "SUMMARY|˗ˋˏ°• notion templ",
+     "open": 1
+    },
+    "expected": "open>=1"
+   }
+  ]
+ },
+ "foreign_port": {
+  "port": 10735,
+  "exit": 3,
+  "stdout": "",
+  "stderr": "[错误] 端口 10735 已被占用。请换一个端口：\n       python tools/workbench/run.py --port 10736\n       本程序不会结束其它进程。\n",
+  "mentions_port_hint": true,
+  "holder_still_listening": true,
+  "port_released_after_close": true
+ }
+}

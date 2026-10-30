@@ -1,0 +1,67 @@
+{
+ "files": [
+  {
+   "file": "docs/validation/money-project/e2e/data/x_search.jsonl",
+   "u_fffd": 0,
+   "utf8_bytes": true
+  },
+  {
+   "file": "docs/validation/money-project/e2e/data/xianyu_items.jsonl",
+   "u_fffd": 0,
+   "utf8_bytes": true
+  },
+  {
+   "file": "docs/validation/money-project/e2e/data/xiaohongshu_items.jsonl",
+   "u_fffd": 0,
+   "utf8_bytes": true
+  },
+  {
+   "file": "docs/validation/money-project/scoring/items.jsonl",
+   "u_fffd": 0,
+   "utf8_bytes": true
+  },
+  {
+   "file": "docs/validation/money-project/scoring/scores.csv",
+   "u_fffd": 0,
+   "utf8_bytes": true
+  },
+  {
+   "file": "docs/validation/money-project/sourcing/price_signals.csv",
+   "u_fffd": 0,
+   "utf8_bytes": true
+  },
+  {
+   "file": "docs/validation/money-project/sourcing/opportunity_sourcing_top10.csv",
+   "u_fffd": 0,
+   "utf8_bytes": true
+  }
+ ],
+ "routes": [
+  {
+   "route": "/dash/",
+   "u_fffd": 0,
+   "status": 200
+  },
+  {
+   "route": "/dash/collect",
+   "u_fffd": 0,
+   "status": 200
+  },
+  {
+   "route": "/dash/opportunities",
+   "u_fffd": 0,
+   "status": 200
+  },
+  {
+   "route": "/dash/sources",
+   "u_fffd": 0,
+   "status": 200
+  },
+  {
+   "route": "/dash/daily",
+   "u_fffd": 0,
+   "status": 200
+  }
+ ],
+ "conclusion": "No U+FFFD in source JSON/CSV or rendered dash pages; decorative Unicode titles are intrinsic source data, not encoding corruption."
+}

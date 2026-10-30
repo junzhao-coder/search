@@ -1,0 +1,50 @@
+{
+ "generated_utc": "2026-10-29T15:20:00Z",
+ "scope": "read-only local base; no writes outside docs/validation/v10/douyin-research",
+ "files": {
+  "tools/selection/access/__init__.py": {
+   "bytes": 276,
+   "sha256": "c0acc31aa4d73c8540a216d3f498dddd4076c03240d90df156a94c526ab448ce"
+  },
+  "tools/selection/access/transport.py": {
+   "bytes": 31995,
+   "sha256": "a860e86a09b1b2fc5839967f5bb36bcc10a2e3deb13d94c2875f31054ad05ba4"
+  },
+  "tools/selection/access/browser.py": {
+   "bytes": 12323,
+   "sha256": "49f60a8cd24a51cfc9e1fbf20ca57734f7faf245a1550548543a62afbef6794c"
+  },
+  "tools/selection/access/records.py": {
+   "bytes": 9822,
+   "sha256": "95c6c9dc3f47c5c9ff4eb5fe7b6bdd2d277bba7cb244c2f33ddbff6343206a1d"
+  },
+  "tools/selection/access/diagnostics.py": {
+   "bytes": 6266,
+   "sha256": "c7410f7bf72c94266bded13af42352c8033c4b85d1dde75004ea8d3419fabbc7"
+  },
+  "tools/selection/access/platform_budget.py": {
+   "bytes": 35710,
+   "sha256": "f13b9e559d0908e25eadc3e40cfdfbbe7ceaef90ad6877c6fd2ea79774921170"
+  },
+  "tools/selection/access/weibo.py": {
+   "bytes": 52044,
+   "sha256": "5ba7d9fd968dd8e4fee147983540d3872ccbfdbba200f92d2aae300ddbbaa151"
+  },
+  "tools/selection/access/zhihu.py": {
+   "bytes": 48386,
+   "sha256": "6e71bff012499bcc9cc0b8c835e0d70a51487b06a774dd525b1a1e15d00e0389"
+  },
+  "tools/selection/manual.py": {
+   "bytes": 3319,
+   "sha256": "e3fb3d8412c1b7198b4fd1f6e07566224e96908f91515a29e446a7cd20e09026"
+  },
+  "tools/workbench/views_leads.py": {
+   "bytes": 12021,
+   "sha256": "c46dfdb54b0cd21ac81dea0228d14cb0896aef3c5d7f24b60192bcca70f1aab1"
+  },
+  "tests/test_selection_manual.py": {
+   "bytes": 7328,
+   "sha256": "b42a27f349964357fd0dd49f625f5dd8280c113ee49c4cd31f3b7c6bf4a5dcd7"
+  }
+ }
+}

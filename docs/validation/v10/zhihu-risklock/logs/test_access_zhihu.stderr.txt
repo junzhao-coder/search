@@ -1,0 +1,117 @@
+test_api_error_field_locks_batch (tests.test_access_zhihu.CommandTests.test_api_error_field_locks_batch) ... ok
+test_budget_exhausted_before_second_call (tests.test_access_zhihu.CommandTests.test_budget_exhausted_before_second_call) ... ok
+test_charge_write_failure_sends_no_request (tests.test_access_zhihu.CommandTests.test_charge_write_failure_sends_no_request) ... ok
+test_clean_search_exits_zero (tests.test_access_zhihu.CommandTests.test_clean_search_exits_zero) ... ok
+test_comments_requires_content_url (tests.test_access_zhihu.CommandTests.test_comments_requires_content_url) ... ok
+test_content_mentioning_captcha_in_json_does_not_lock (tests.test_access_zhihu.CommandTests.test_content_mentioning_captcha_in_json_does_not_lock) ... ok
+test_empty_search_exits_nonzero (tests.test_access_zhihu.CommandTests.test_empty_search_exits_nonzero) ... ok
+test_http_403_locks_the_batch (tests.test_access_zhihu.CommandTests.test_http_403_locks_the_batch) ... ok
+test_offline_refused_transport_is_not_success (tests.test_access_zhihu.CommandTests.test_offline_refused_transport_is_not_success) ... ok
+test_offsite_redirect_locks_the_batch (tests.test_access_zhihu.CommandTests.test_offsite_redirect_locks_the_batch) ... ok
+test_records_cap_blocks_extra_records (tests.test_access_zhihu.CommandTests.test_records_cap_blocks_extra_records) ... ok
+test_risk_locks_budget_and_next_run_refuses (tests.test_access_zhihu.CommandTests.test_risk_locks_budget_and_next_run_refuses) ... ok
+test_search_charges_budget_then_parses (tests.test_access_zhihu.CommandTests.test_search_charges_budget_then_parses) ... ok
+test_transport_error_does_not_lock (tests.test_access_zhihu.CommandTests.test_transport_error_does_not_lock) ... ok
+test_unknown_shape_exits_unsupported (tests.test_access_zhihu.CommandTests.test_unknown_shape_exits_unsupported) ... ok
+test_anchors_that_do_not_match_report_unknown (tests.test_access_zhihu.DiagnosticRedactionTests.test_anchors_that_do_not_match_report_unknown) ... ok
+test_diagnostic_keys_are_whitelisted (tests.test_access_zhihu.DiagnosticRedactionTests.test_diagnostic_keys_are_whitelisted) ... ok
+test_empty_html_is_not_reported_as_readable_links (tests.test_access_zhihu.DiagnosticRedactionTests.test_empty_html_is_not_reported_as_readable_links) ... ok
+test_href_shapes_do_not_leak_urls (tests.test_access_zhihu.DiagnosticRedactionTests.test_href_shapes_do_not_leak_urls) ... ok
+test_query_keys_are_counted_not_valued (tests.test_access_zhihu.DiagnosticRedactionTests.test_query_keys_are_counted_not_valued) ... ok
+test_unreadable_page_is_not_reported_as_empty_success (tests.test_access_zhihu.DiagnosticRedactionTests.test_unreadable_page_is_not_reported_as_empty_success) ... ok
+test_zero_records_still_carry_diagnostics (tests.test_access_zhihu.DiagnosticRedactionTests.test_zero_records_still_carry_diagnostics) ... ok
+test_doctor_does_not_create_a_missing_cookie_db (tests.test_access_zhihu.DoctorTests.test_doctor_does_not_create_a_missing_cookie_db) ... ok
+test_doctor_never_claims_online_from_cookie_presence (tests.test_access_zhihu.DoctorTests.test_doctor_never_claims_online_from_cookie_presence) ... ok
+test_doctor_reads_cookie_names_only (tests.test_access_zhihu.DoctorTests.test_doctor_reads_cookie_names_only) ... ok
+test_doctor_without_profile_is_waiting_not_online (tests.test_access_zhihu.DoctorTests.test_doctor_without_profile_is_waiting_not_online) ... ok
+test_cli_missing_input_file_exits_8_and_charges_nothing (tests.test_access_zhihu.ExportTests.test_cli_missing_input_file_exits_8_and_charges_nothing) ... ok
+test_export_is_a_whitelist_and_drops_nested_secrets (tests.test_access_zhihu.ExportTests.test_export_is_a_whitelist_and_drops_nested_secrets) ... ok
+test_export_missing_input_is_nonzero (tests.test_access_zhihu.ExportTests.test_export_missing_input_is_nonzero) ... ok
+test_export_reads_json_array_too (tests.test_access_zhihu.ExportTests.test_export_reads_json_array_too) ... ok
+test_export_rejects_unknown_evidence_and_source (tests.test_access_zhihu.ExportTests.test_export_rejects_unknown_evidence_and_source) ... ok
+test_detect_risk_unchanged_for_non_login (tests.test_access_zhihu.LoginTests.test_detect_risk_unchanged_for_non_login) ... ok
+test_eval_awaits_coroutine_and_sync_values (tests.test_access_zhihu.LoginTests.test_eval_awaits_coroutine_and_sync_values) ... ok
+test_fake_evaluate_is_async_like_nodriver (tests.test_access_zhihu.LoginTests.test_fake_evaluate_is_async_like_nodriver) ... ok
+test_final_url_is_sanitized (tests.test_access_zhihu.LoginTests.test_final_url_is_sanitized) ... ok
+test_locked_budget_refuses_login (tests.test_access_zhihu.LoginTests.test_locked_budget_refuses_login) ... ok
+test_poll_limit_is_its_own_nonzero_exit (tests.test_access_zhihu.LoginTests.test_poll_limit_is_its_own_nonzero_exit) ... ok
+test_poll_quota_covers_full_window (tests.test_access_zhihu.LoginTests.test_poll_quota_covers_full_window) ... ok
+test_real_wall_still_locks_login (tests.test_access_zhihu.LoginTests.test_real_wall_still_locks_login) ... ok
+test_risk_during_login_locks_budget (tests.test_access_zhihu.LoginTests.test_risk_during_login_locks_budget) ... ok
+test_signed_in_returns_ok_without_using_call_budget (tests.test_access_zhihu.LoginTests.test_signed_in_returns_ok_without_using_call_budget) ... ok
+test_signed_in_wins_over_captcha_copy (tests.test_access_zhihu.LoginTests.test_signed_in_wins_over_captcha_copy) ... ok
+test_signin_copy_is_not_a_wall (tests.test_access_zhihu.LoginTests.test_signin_copy_is_not_a_wall) ... ok
+test_timeout_is_not_success (tests.test_access_zhihu.LoginTests.test_timeout_is_not_success) ... ok
+test_unknown_browser_is_not_success (tests.test_access_zhihu.LoginTests.test_unknown_browser_is_not_success) ... ok
+test_wait_for_login_is_async (tests.test_access_zhihu.LoginTests.test_wait_for_login_is_async) ... ok
+test_comments_keep_parent_chain (tests.test_access_zhihu.ParserTests.test_comments_keep_parent_chain) ... ok
+test_comments_unsupported (tests.test_access_zhihu.ParserTests.test_comments_unsupported) ... ok
+test_detail_body_mentioning_captcha_with_description_does_not_lock (tests.test_access_zhihu.ParserTests.test_detail_body_mentioning_captcha_with_description_does_not_lock) ... ok
+test_detail_login_wall_and_risk (tests.test_access_zhihu.ParserTests.test_detail_login_wall_and_risk) ... ok
+test_detail_meta_and_heuristics (tests.test_access_zhihu.ParserTests.test_detail_meta_and_heuristics) ... ok
+test_detail_plain_login_link_is_not_a_wall (tests.test_access_zhihu.ParserTests.test_detail_plain_login_link_is_not_a_wall) ... ok
+test_detail_title_containing_captcha_but_with_content_is_content (tests.test_access_zhihu.ParserTests.test_detail_title_containing_captcha_but_with_content_is_content) ... ok
+test_detail_wall_identified_by_meta_title_alone (tests.test_access_zhihu.ParserTests.test_detail_wall_identified_by_meta_title_alone) ... ok
+test_detail_wall_without_description_still_locks (tests.test_access_zhihu.ParserTests.test_detail_wall_without_description_still_locks) ... ok
+test_record_without_evidence_is_unsupported (tests.test_access_zhihu.ParserTests.test_record_without_evidence_is_unsupported) ... ok
+test_search_html_fallback_dedupes_and_skips_unknown (tests.test_access_zhihu.ParserTests.test_search_html_fallback_dedupes_and_skips_unknown) ... ok
+test_search_json_keeps_identity_parent_and_counts (tests.test_access_zhihu.ParserTests.test_search_json_keeps_identity_parent_and_counts) ... ok
+test_search_unsupported_shape_is_not_an_empty_success (tests.test_access_zhihu.ParserTests.test_search_unsupported_shape_is_not_an_empty_success) ... ok
+test_always_loading_times_out_as_unknown (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_always_loading_times_out_as_unknown) ... D:\桌面\two\tools\selection\access\transport.py:387: RuntimeWarning: coroutine 'FakeTab.get_content' was never awaited
+  html = await asyncio.wait_for(tab.get_content(), timeout=_remaining(deadline))
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_cli_timeout_and_diagnostics_dir_reach_the_transport (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_cli_timeout_and_diagnostics_dir_reach_the_transport) ... ok
+test_default_timeout_is_60_seconds (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_default_timeout_is_60_seconds) ... ok
+test_explicit_empty_result_is_not_unknown (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_explicit_empty_result_is_not_unknown) ... ok
+test_final_url_read_failure_is_unknown_not_input_url (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_final_url_read_failure_is_unknown_not_input_url) ... ok
+test_hanging_get_content_is_bounded (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_hanging_get_content_is_bounded) ... ok
+test_hanging_get_is_bounded (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_hanging_get_is_bounded) ... ok
+test_heavier_probe_timeout_degrades_to_unknown (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_heavier_probe_timeout_degrades_to_unknown) ... ok
+test_light_probe_success_then_heavier_levels_run (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_light_probe_success_then_heavier_levels_run)
+Level 1 says "not ready" -> levels 2 and 3 must run before giving up. ... C:\Users\19183\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\Lib\asyncio\base_events.py:730: ResourceWarning: unclosed event loop <ProactorEventLoop running=False closed=False debug=False>
+  _warn(f"unclosed event loop {self!r}", ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_light_probe_timeout_degrades_to_unknown (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_light_probe_timeout_degrades_to_unknown)
+A stuck light probe is one level's unknown, not a whole-call failure. ... ok
+test_loading_then_result_is_observed (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_loading_then_result_is_observed) ... ok
+test_login_wall_is_reported_as_risk (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_login_wall_is_reported_as_risk) ... ok
+test_probe_timings_and_level_are_in_diagnostics (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_probe_timings_and_level_are_in_diagnostics) ... ok
+test_stuck_light_probe_stops_without_resetting_deadline (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_stuck_light_probe_stops_without_resetting_deadline)
+A stuck tier ends the wait at that tier, inside the one budget. ... ok
+test_total_deadline_is_not_reset_per_phase (tests.test_access_zhihu.ReadinessAndDeadlineTests.test_total_deadline_is_not_reset_per_phase)
+Phases share one budget: a 0.6s budget cannot take longer than that. ... D:\桌面\two\tools\selection\access\transport.py:387: RuntimeWarning: coroutine 'ReadinessAndDeadlineTests.test_total_deadline_is_not_reset_per_phase.<locals>.SlowTab.get_content' was never awaited
+  html = await asyncio.wait_for(tab.get_content(), timeout=_remaining(deadline))
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_captcha_wall_locks_the_batch (tests.test_access_zhihu.RiskLockTests.test_captcha_wall_locks_the_batch) ... ok
+test_detail_and_comments_paths_lock_as_well (tests.test_access_zhihu.RiskLockTests.test_detail_and_comments_paths_lock_as_well) ... ok
+test_lock_survives_restart_and_blocks_the_next_command (tests.test_access_zhihu.RiskLockTests.test_lock_survives_restart_and_blocks_the_next_command) ... ok
+test_locked_batch_sends_no_second_request (tests.test_access_zhihu.RiskLockTests.test_locked_batch_sends_no_second_request) ... ok
+test_non_risk_errors_still_do_not_lock (tests.test_access_zhihu.RiskLockTests.test_non_risk_errors_still_do_not_lock) ... ok
+test_offsite_redirect_lock_unchanged (tests.test_access_zhihu.RiskLockTests.test_offsite_redirect_lock_unchanged) ... ok
+test_other_wall_markers_lock_too (tests.test_access_zhihu.RiskLockTests.test_other_wall_markers_lock_too) ... ok
+test_probe_reads_document_ready_state (tests.test_access_zhihu.RiskLockTests.test_probe_reads_document_ready_state) ... ok
+test_authenticated_transport_blocks_offsite_landing (tests.test_access_zhihu.TransportTests.test_authenticated_transport_blocks_offsite_landing) ... ok
+test_authenticated_transport_returns_html_when_on_site (tests.test_access_zhihu.TransportTests.test_authenticated_transport_returns_html_when_on_site) ... ok
+test_authenticated_transport_times_out_instead_of_hanging (tests.test_access_zhihu.TransportTests.test_authenticated_transport_times_out_instead_of_hanging)
+A never-returning get must raise TimeoutError, not hang forever. ... ok
+test_authenticated_transport_uses_one_loop (tests.test_access_zhihu.TransportTests.test_authenticated_transport_uses_one_loop)
+Launch and navigation must run on the same event loop. ... ok
+test_offline_transport_never_reports_success (tests.test_access_zhihu.TransportTests.test_offline_transport_never_reports_success) ... ok
+test_public_http_refuses_to_follow_redirects (tests.test_access_zhihu.TransportTests.test_public_http_refuses_to_follow_redirects)
+A 302 must come back as a result, never be followed inside one charge. ... ok
+test_same_site_check (tests.test_access_zhihu.TransportTests.test_same_site_check) ... ok
+test_only_zhihu_hosts_are_allowed (tests.test_access_zhihu.UrlRuleTests.test_only_zhihu_hosts_are_allowed) ... ok
+test_sanitize_url_drops_tokens_but_keeps_search_term (tests.test_access_zhihu.UrlRuleTests.test_sanitize_url_drops_tokens_but_keeps_search_term) ... ok
+test_url_identity (tests.test_access_zhihu.UrlRuleTests.test_url_identity) ... ok
+test_default_construction_is_headless (tests.test_access_zhihu.VisibleWindowFlagTests.test_default_construction_is_headless) ... ok
+test_default_visible_is_false_for_every_command (tests.test_access_zhihu.VisibleWindowFlagTests.test_default_visible_is_false_for_every_command) ... ok
+test_visible_does_not_touch_other_modes (tests.test_access_zhihu.VisibleWindowFlagTests.test_visible_does_not_touch_other_modes) ... ok
+test_visible_flag_reaches_transport_for_every_command (tests.test_access_zhihu.VisibleWindowFlagTests.test_visible_flag_reaches_transport_for_every_command) ... ok
+
+----------------------------------------------------------------------
+Ran 96 tests in 7.934s
+
+OK

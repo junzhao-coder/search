@@ -1,0 +1,483 @@
+{
+ "utc": "2026-10-24T05:05:00Z",
+ "steps": {},
+ "workorder": "wo:20261024-4a3a4a3d",
+ "add": {
+  "A": [
+   303,
+   "sc:cf110507"
+  ],
+  "C": [
+   303,
+   "sc:421839de"
+  ]
+ },
+ "baseline": {
+  "select_A": 303,
+  "sample": 303,
+  "evidence": 303,
+  "export_record": {
+   "status": 200,
+   "dedup": "false"
+  },
+  "state": {
+   "record": {
+    "selected_supply_id": "sc:cf110507",
+    "supply_version": "20261024T045219",
+    "supply_license_commercial": "yes",
+    "supply_license_redistribute": "yes",
+    "supply_license_resell": "yes",
+    "supply_note": "A self:A",
+    "sample_status": "verified",
+    "sample_ref": "docs\\validation\\product-workflow\\b7\\sample-study-planner-v1.xlsx（13559 B）：存在与大小:13559 B; sheets:5 张（stdlib 解析）; 非空单元格:317; 公式:50; 外部链接:0 个; 宏(vbaProject):无; 解析器:openpyxl 不可用，已回退 stdlib（只读）",
+    "cost_minor": 500,
+    "cost_known": "yes",
+    "platform_evidence": "demo://b17/synthetic-platform-evidence",
+    "revision": 4,
+    "copy_version": "copy-v1"
+   },
+   "readiness": {
+    "specs": true,
+    "supply": true,
+    "license": true,
+    "sample": true,
+    "cost": true,
+    "platform": true,
+    "copy": true
+   },
+   "blockers": [],
+   "last_export": {
+    "id": 1,
+    "workorder_id": "wo:20261024-4a3a4a3d",
+    "format": "json",
+    "revision": 4,
+    "copy_version": "copy-v1",
+    "supply_id": "sc:cf110507",
+    "supply_version": "20261024T045219",
+    "stamp_hash": "688337f30a1a3b4fc2bfb7e22af997fc8625fa14ce3eb17d62d6c757ce57cc37",
+    "content_sha256": "bcf7c597cdb049a688201628a6930dc15a3b0b703b96012c431d79bf93a23053",
+    "created_utc": "2026-10-24T04:52:19Z",
+    "dedupe_key": "4|copy-v1|sc:cf110507|20261024T045219",
+    "publish_version": 0
+   },
+   "validity": {
+    "has_export": true,
+    "valid": true,
+    "changed": [],
+    "reason": "无变化",
+    "created_utc": "2026-10-24T04:52:19Z",
+    "format": "json",
+    "content_sha256": "bcf7c597cdb049a688201628a6930dc15a3b0b703b96012c431d79bf93a23053"
+   },
+   "candidates": [
+    {
+     "id": "sc:421839de",
+     "provider": "C",
+     "source_url": "self:C",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "yes",
+     "price_minor": 100,
+     "is_active": 1,
+     "created_at": "2026-10-24T04:52:19Z",
+     "updated_at": "2026-10-24T04:52:19Z"
+    },
+    {
+     "id": "sc:cf110507",
+     "provider": "A",
+     "source_url": "self:A",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "yes",
+     "price_minor": 100,
+     "is_active": 1,
+     "created_at": "2026-10-24T04:52:19Z",
+     "updated_at": "2026-10-24T04:52:19Z"
+    }
+   ]
+  },
+  "pre_export_state": {
+   "record": {
+    "selected_supply_id": "sc:cf110507",
+    "supply_version": "20261024T045219",
+    "supply_license_commercial": "yes",
+    "supply_license_redistribute": "yes",
+    "supply_license_resell": "yes",
+    "supply_note": "A self:A",
+    "sample_status": "verified",
+    "sample_ref": "docs\\validation\\product-workflow\\b7\\sample-study-planner-v1.xlsx（13559 B）：存在与大小:13559 B; sheets:5 张（stdlib 解析）; 非空单元格:317; 公式:50; 外部链接:0 个; 宏(vbaProject):无; 解析器:openpyxl 不可用，已回退 stdlib（只读）",
+    "cost_minor": 500,
+    "cost_known": "yes",
+    "platform_evidence": "demo://b17/synthetic-platform-evidence",
+    "revision": 4,
+    "copy_version": "copy-v1"
+   },
+   "readiness": {
+    "specs": true,
+    "supply": true,
+    "license": true,
+    "sample": true,
+    "cost": true,
+    "platform": true,
+    "copy": true
+   },
+   "blockers": [],
+   "last_export": null,
+   "validity": {
+    "has_export": false,
+    "valid": false,
+    "reason": "尚未导出"
+   },
+   "candidates": [
+    {
+     "id": "sc:421839de",
+     "provider": "C",
+     "source_url": "self:C",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "yes",
+     "price_minor": 100,
+     "is_active": 1,
+     "created_at": "2026-10-24T04:52:19Z",
+     "updated_at": "2026-10-24T04:52:19Z"
+    },
+    {
+     "id": "sc:cf110507",
+     "provider": "A",
+     "source_url": "self:A",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "yes",
+     "price_minor": 100,
+     "is_active": 1,
+     "created_at": "2026-10-24T04:52:19Z",
+     "updated_at": "2026-10-24T04:52:19Z"
+    }
+   ]
+  }
+ },
+ "control_unselected": {
+  "update_status": 303,
+  "same_record": true,
+  "same_readiness": true,
+  "same_validity": true,
+  "candidate": {
+   "id": "sc:421839de",
+   "provider": "C",
+   "source_url": "self:C",
+   "commercial": "no",
+   "redistribute": "yes",
+   "resale": "yes",
+   "price_minor": 111,
+   "is_active": 1,
+   "created_at": "2026-10-24T04:52:19Z",
+   "updated_at": "2026-10-24T04:52:19Z"
+  }
+ },
+ "a_modified_selected": {
+  "update_status": 303,
+  "candidate": {
+   "id": "sc:cf110507",
+   "provider": "A",
+   "source_url": "self:A-v2",
+   "commercial": "no",
+   "redistribute": "yes",
+   "resale": "yes",
+   "price_minor": 222,
+   "is_active": 1,
+   "created_at": "2026-10-24T04:52:19Z",
+   "updated_at": "2026-10-24T04:52:19Z"
+  },
+  "state": {
+   "record": {
+    "selected_supply_id": "sc:cf110507",
+    "supply_version": "20261024T045219",
+    "supply_license_commercial": "yes",
+    "supply_license_redistribute": "yes",
+    "supply_license_resell": "yes",
+    "supply_note": "A self:A",
+    "sample_status": "verified",
+    "sample_ref": "docs\\validation\\product-workflow\\b7\\sample-study-planner-v1.xlsx（13559 B）：存在与大小:13559 B; sheets:5 张（stdlib 解析）; 非空单元格:317; 公式:50; 外部链接:0 个; 宏(vbaProject):无; 解析器:openpyxl 不可用，已回退 stdlib（只读）",
+    "cost_minor": 500,
+    "cost_known": "yes",
+    "platform_evidence": "demo://b17/synthetic-platform-evidence",
+    "revision": 4,
+    "copy_version": "copy-v1"
+   },
+   "readiness": {
+    "specs": true,
+    "supply": true,
+    "license": true,
+    "sample": true,
+    "cost": true,
+    "platform": true,
+    "copy": true
+   },
+   "blockers": [],
+   "last_export": {
+    "id": 1,
+    "workorder_id": "wo:20261024-4a3a4a3d",
+    "format": "json",
+    "revision": 4,
+    "copy_version": "copy-v1",
+    "supply_id": "sc:cf110507",
+    "supply_version": "20261024T045219",
+    "stamp_hash": "688337f30a1a3b4fc2bfb7e22af997fc8625fa14ce3eb17d62d6c757ce57cc37",
+    "content_sha256": "bcf7c597cdb049a688201628a6930dc15a3b0b703b96012c431d79bf93a23053",
+    "created_utc": "2026-10-24T04:52:19Z",
+    "dedupe_key": "4|copy-v1|sc:cf110507|20261024T045219",
+    "publish_version": 0
+   },
+   "validity": {
+    "has_export": true,
+    "valid": true,
+    "changed": [],
+    "reason": "无变化",
+    "created_utc": "2026-10-24T04:52:19Z",
+    "format": "json",
+    "content_sha256": "bcf7c597cdb049a688201628a6930dc15a3b0b703b96012c431d79bf93a23053"
+   },
+   "candidates": [
+    {
+     "id": "sc:421839de",
+     "provider": "C",
+     "source_url": "self:C",
+     "commercial": "no",
+     "redistribute": "yes",
+     "resale": "yes",
+     "price_minor": 111,
+     "is_active": 1,
+     "created_at": "2026-10-24T04:52:19Z",
+     "updated_at": "2026-10-24T04:52:19Z"
+    },
+    {
+     "id": "sc:cf110507",
+     "provider": "A",
+     "source_url": "self:A-v2",
+     "commercial": "no",
+     "redistribute": "yes",
+     "resale": "yes",
+     "price_minor": 222,
+     "is_active": 1,
+     "created_at": "2026-10-24T04:52:19Z",
+     "updated_at": "2026-10-24T04:52:19Z"
+    }
+   ]
+  },
+  "get_export": {
+   "status": 200,
+   "bytes": 1056
+  }
+ },
+ "b_deactivated_selected": {
+  "deactivate_status": 303,
+  "candidate_active": 0,
+  "state": {
+   "record": {
+    "selected_supply_id": "sc:cf110507",
+    "supply_version": "20261024T045219",
+    "supply_license_commercial": "yes",
+    "supply_license_redistribute": "yes",
+    "supply_license_resell": "yes",
+    "supply_note": "A self:A",
+    "sample_status": "verified",
+    "sample_ref": "docs\\validation\\product-workflow\\b7\\sample-study-planner-v1.xlsx（13559 B）：存在与大小:13559 B; sheets:5 张（stdlib 解析）; 非空单元格:317; 公式:50; 外部链接:0 个; 宏(vbaProject):无; 解析器:openpyxl 不可用，已回退 stdlib（只读）",
+    "cost_minor": 500,
+    "cost_known": "yes",
+    "platform_evidence": "demo://b17/synthetic-platform-evidence",
+    "revision": 4,
+    "copy_version": "copy-v1"
+   },
+   "readiness": {
+    "specs": true,
+    "supply": true,
+    "license": true,
+    "sample": true,
+    "cost": true,
+    "platform": true,
+    "copy": true
+   },
+   "blockers": [],
+   "last_export": {
+    "id": 1,
+    "workorder_id": "wo:20261024-4a3a4a3d",
+    "format": "json",
+    "revision": 4,
+    "copy_version": "copy-v1",
+    "supply_id": "sc:cf110507",
+    "supply_version": "20261024T045219",
+    "stamp_hash": "688337f30a1a3b4fc2bfb7e22af997fc8625fa14ce3eb17d62d6c757ce57cc37",
+    "content_sha256": "bcf7c597cdb049a688201628a6930dc15a3b0b703b96012c431d79bf93a23053",
+    "created_utc": "2026-10-24T04:52:19Z",
+    "dedupe_key": "4|copy-v1|sc:cf110507|20261024T045219",
+    "publish_version": 0
+   },
+   "validity": {
+    "has_export": true,
+    "valid": true,
+    "changed": [],
+    "reason": "无变化",
+    "created_utc": "2026-10-24T04:52:19Z",
+    "format": "json",
+    "content_sha256": "bcf7c597cdb049a688201628a6930dc15a3b0b703b96012c431d79bf93a23053"
+   },
+   "candidates": [
+    {
+     "id": "sc:421839de",
+     "provider": "C",
+     "source_url": "self:C",
+     "commercial": "no",
+     "redistribute": "yes",
+     "resale": "yes",
+     "price_minor": 111,
+     "is_active": 1,
+     "created_at": "2026-10-24T04:52:19Z",
+     "updated_at": "2026-10-24T04:52:19Z"
+    },
+    {
+     "id": "sc:cf110507",
+     "provider": "A",
+     "source_url": "self:A-v2",
+     "commercial": "no",
+     "redistribute": "yes",
+     "resale": "yes",
+     "price_minor": 222,
+     "is_active": 0,
+     "created_at": "2026-10-24T04:52:19Z",
+     "updated_at": "2026-10-24T04:52:19Z"
+    }
+   ]
+  },
+  "get_export": {
+   "status": 200,
+   "bytes": 1056
+  }
+ },
+ "c_replaced_by_B": {
+  "add_status": 303,
+  "B_id": "sc:fdeac09f",
+  "select_status": 303,
+  "state": {
+   "record": {
+    "selected_supply_id": "sc:fdeac09f",
+    "supply_version": "20261024T045219",
+    "supply_license_commercial": "yes",
+    "supply_license_redistribute": "yes",
+    "supply_license_resell": "yes",
+    "supply_note": "B self:B",
+    "sample_status": "verified",
+    "sample_ref": "docs\\validation\\product-workflow\\b7\\sample-study-planner-v1.xlsx（13559 B）：存在与大小:13559 B; sheets:5 张（stdlib 解析）; 非空单元格:317; 公式:50; 外部链接:0 个; 宏(vbaProject):无; 解析器:openpyxl 不可用，已回退 stdlib（只读）",
+    "cost_minor": 500,
+    "cost_known": "yes",
+    "platform_evidence": "demo://b17/synthetic-platform-evidence",
+    "revision": 5,
+    "copy_version": "copy-v1"
+   },
+   "readiness": {
+    "specs": true,
+    "supply": true,
+    "license": true,
+    "sample": true,
+    "cost": true,
+    "platform": true,
+    "copy": true
+   },
+   "blockers": [],
+   "last_export": {
+    "id": 1,
+    "workorder_id": "wo:20261024-4a3a4a3d",
+    "format": "json",
+    "revision": 4,
+    "copy_version": "copy-v1",
+    "supply_id": "sc:cf110507",
+    "supply_version": "20261024T045219",
+    "stamp_hash": "688337f30a1a3b4fc2bfb7e22af997fc8625fa14ce3eb17d62d6c757ce57cc37",
+    "content_sha256": "bcf7c597cdb049a688201628a6930dc15a3b0b703b96012c431d79bf93a23053",
+    "created_utc": "2026-10-24T04:52:19Z",
+    "dedupe_key": "4|copy-v1|sc:cf110507|20261024T045219",
+    "publish_version": 0
+   },
+   "validity": {
+    "has_export": true,
+    "valid": false,
+    "changed": [
+     "工作单版本",
+     "货源"
+    ],
+    "reason": "已失效，需重新检查并导出：工作单版本、货源",
+    "created_utc": "2026-10-24T04:52:19Z",
+    "format": "json",
+    "content_sha256": "bcf7c597cdb049a688201628a6930dc15a3b0b703b96012c431d79bf93a23053"
+   },
+   "candidates": [
+    {
+     "id": "sc:421839de",
+     "provider": "C",
+     "source_url": "self:C",
+     "commercial": "no",
+     "redistribute": "yes",
+     "resale": "yes",
+     "price_minor": 111,
+     "is_active": 1,
+     "created_at": "2026-10-24T04:52:19Z",
+     "updated_at": "2026-10-24T04:52:19Z"
+    },
+    {
+     "id": "sc:cf110507",
+     "provider": "A",
+     "source_url": "self:A-v2",
+     "commercial": "no",
+     "redistribute": "yes",
+     "resale": "yes",
+     "price_minor": 222,
+     "is_active": 0,
+     "created_at": "2026-10-24T04:52:19Z",
+     "updated_at": "2026-10-24T04:52:19Z"
+    },
+    {
+     "id": "sc:fdeac09f",
+     "provider": "B",
+     "source_url": "self:B",
+     "commercial": "yes",
+     "redistribute": "yes",
+     "resale": "yes",
+     "price_minor": 100,
+     "is_active": 1,
+     "created_at": "2026-10-24T04:52:19Z",
+     "updated_at": "2026-10-24T04:52:19Z"
+    }
+   ]
+  },
+  "get_export": {
+   "status": 200,
+   "bytes": 1056
+  },
+  "sample_cost_preserved": true
+ },
+ "final_candidates": [
+  {
+   "id": "sc:421839de",
+   "provider": "C",
+   "commercial": "no",
+   "is_active": 1,
+   "created_at": "2026-10-24T04:52:19Z",
+   "updated_at": "2026-10-24T04:52:19Z"
+  },
+  {
+   "id": "sc:cf110507",
+   "provider": "A",
+   "commercial": "no",
+   "is_active": 0,
+   "created_at": "2026-10-24T04:52:19Z",
+   "updated_at": "2026-10-24T04:52:19Z"
+  },
+  {
+   "id": "sc:fdeac09f",
+   "provider": "B",
+   "commercial": "yes",
+   "is_active": 1,
+   "created_at": "2026-10-24T04:52:19Z",
+   "updated_at": "2026-10-24T04:52:19Z"
+  }
+ ]
+}

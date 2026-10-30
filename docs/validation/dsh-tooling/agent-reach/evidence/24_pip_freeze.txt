@@ -1,0 +1,23 @@
+agent-reach @ https://codeload.github.com/Panniantong/Agent-Reach/tar.gz/94f06c1969dfc1834001269d79d3ad0972d9dee6#sha256=d608cc619e460ca982dc11ab72897677837c8d73ea23851026c6374cff864f93
+brotli==1.2.0
+certifi==2026.10.19
+charset-normalizer==3.5.2
+colorama==0.4.6
+feedparser==6.0.14
+feedparser-sgmllib==2.1.0
+idna==3.20
+loguru==0.7.3
+markdown-it-py==4.2.0
+mdurl==0.1.2
+mutagen==1.48.1
+pycryptodomex==3.24.1
+Pygments==2.21.0
+python-dotenv==1.2.4
+PyYAML==6.0.3
+requests==2.34.2
+rich==15.0.0
+urllib3==2.8.0
+websockets==17.3
+win32_setctime==1.2.0
+yt-dlp==2026.8.19
+yt-dlp-ejs==0.8.0

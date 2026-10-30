@@ -1,0 +1,16 @@
+{"cases": [
+ {"id": "normal_challenges", "html": "normal_challenges.html", "expected": false,
+  "signals": {"toast": "", "captcha": false, "error_page": false, "url": "https://x.com/home"}},
+ {"id": "normal_challenge_accepted", "html": "normal_challenge_accepted.html", "expected": false,
+  "signals": {"toast": "", "captcha": false, "error_page": false, "url": "https://x.com/home"}},
+ {"id": "normal_toast_other", "html": "normal_toast_other.html", "expected": false,
+  "signals": {"toast": "Your post was sent.", "captcha": false, "error_page": false, "url": "https://x.com/home"}},
+ {"id": "risk_toast", "html": "risk_toast.html", "expected": true,
+  "signals": {"toast": "Something went wrong. Try reloading.", "captcha": false, "error_page": false, "url": "https://x.com/search"}},
+ {"id": "risk_rate_limit", "html": "risk_rate_limit.html", "expected": true,
+  "signals": {"toast": "Rate limit exceeded. Please try again later.", "captcha": false, "error_page": false, "url": "https://x.com/home"}},
+ {"id": "risk_captcha", "html": "risk_captcha.html", "expected": true,
+  "signals": {"toast": "", "captcha": true, "error_page": false, "url": "https://x.com/home"}},
+ {"id": "risk_error_page", "html": "risk_error_page.html", "expected": true,
+  "signals": {"toast": "", "captcha": false, "error_page": true, "url": "https://x.com/home"}}
+]}

@@ -1,0 +1,50 @@
+{
+  "generated_utc": "2026-10-25T11:43:30Z",
+  "files": [
+    {
+      "file": "shots\\leads_1440x900.jpg",
+      "bytes": 102417,
+      "sha256": "b036c7be35a7b2e63ee03871670908f678863c733587c4eceae83717c91447a1"
+    },
+    {
+      "file": "shots\\leads_390x844.jpg",
+      "bytes": 48243,
+      "sha256": "0e75caf2cef53bf18b7b70aebd395a1a484eaa18e07efc8ad5f2f0294d393311"
+    },
+    {
+      "file": "logs\\project_full.log",
+      "bytes": 3765,
+      "sha256": "555d1a8ee0b442d555ed07b69569f67bad06d34dc4afa563729d64808daac0d9"
+    },
+    {
+      "file": "logs\\server_ui.err.log",
+      "bytes": 1680,
+      "sha256": "9bb421fa3f521795dacaa9e817269519365d0e11f41d9fb294ba9c674e56c863"
+    },
+    {
+      "file": "logs\\server_ui.log",
+      "bytes": 324,
+      "sha256": "3c196252b52604edeb39f3b43261af4ce8bf46aa378952286d1be8463e6fab92"
+    },
+    {
+      "file": "logs\\tests_leads.log",
+      "bytes": 821,
+      "sha256": "c6106b2206b912dd4f7840851a4a1fb031fcf61b8fe1fdd8555f420c5d230337"
+    },
+    {
+      "file": "logs\\workbench_all.log",
+      "bytes": 320,
+      "sha256": "7fe6531f8566159d001a8133dd8124238257992ce3ff54e973a48cac52f260f7"
+    },
+    {
+      "file": "ui_metrics.json",
+      "bytes": 569,
+      "sha256": "b0980a1b9beab6d4522cfd00b3b8b5e7ef78267311c5ec4c0005ef53328bf271"
+    },
+    {
+      "file": "runtime\\ui_demo.sqlite3",
+      "bytes": 131072,
+      "sha256": "998684586d031166367f971b9adc9ba924b21fda1f490f6035b7083b8b39c26b"
+    }
+  ]
+}

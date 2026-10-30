@@ -1,0 +1,26 @@
+{
+  "sale": {
+    "keys": [
+      "amount_minor",
+      "kind"
+    ],
+    "payload": {
+      "kind": "sale",
+      "amount_minor": 990
+    }
+  },
+  "refund": {
+    "keys": [
+      "amount_minor",
+      "kind",
+      "refund_state",
+      "related_feedback_id"
+    ],
+    "payload": {
+      "kind": "refund",
+      "amount_minor": 990,
+      "related_feedback_id": "fb_1",
+      "refund_state": "settled"
+    }
+  }
+}

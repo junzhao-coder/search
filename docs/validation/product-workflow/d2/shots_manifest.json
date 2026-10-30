@@ -1,0 +1,15 @@
+{
+ "generated_utc": "2026-10-24T13:41:08Z",
+ "shots": {
+  "worksheet_publish_rerecord.png": {
+   "width": 1160,
+   "height": 286,
+   "bytes": 28882,
+   "format": "png",
+   "openable": true,
+   "sha256": "526c1ecae280b8be1882ea76022c3163121ac42279c961181be907e7b500113a",
+   "has_rerecord_button": true
+  }
+ },
+ "workorder_id": "wo:20261024-cee6de56"
+}

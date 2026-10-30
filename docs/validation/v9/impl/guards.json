@@ -1,0 +1,17 @@
+{
+  "before": {
+    "instance/app.db": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+    "tools/workbench/runtime/workflow.sqlite3": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c",
+    "docs/design/CONTRACT.md": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+    "docs/validation/money-project/scoring/scores.csv": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+    "docs/validation/money-project/sourcing/sources.csv": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4"
+  },
+  "after": {
+    "instance/app.db": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+    "tools/workbench/runtime/workflow.sqlite3": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c",
+    "docs/design/CONTRACT.md": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+    "docs/validation/money-project/scoring/scores.csv": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+    "docs/validation/money-project/sourcing/sources.csv": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4"
+  },
+  "unchanged": true
+}

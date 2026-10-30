@@ -1,0 +1,224 @@
+{
+  "task_id": "task-3740c52d554a8d2832734912356f8570",
+  "task_revision": 2,
+  "plan_version": 9,
+  "scope": "docs/validation/v9/baseline",
+  "generated_utc": "2026-10-25T05:08:00Z",
+  "read_only": true,
+  "skill_tool": {
+    "available_in_function_table": false,
+    "note": "本会话函数表未暴露 skill 调用器；未声称加载 ponytail。按最小复用原则人工审阅，无网页/GitHub/X 调研。"
+  },
+  "commands": [
+    {
+      "id": "5015_health",
+      "method": "curl -sS --max-time 3 -o NUL -w %{http_code} http://127.0.0.1:5015/healthz",
+      "exit": 7,
+      "http_code": null,
+      "result": "connection refused; 5015 not listening",
+      "evidence": "logs/5015_health.log"
+    },
+    {
+      "id": "5015_pick",
+      "method": "curl -sS --max-time 3 -o NUL -w %{http_code} http://127.0.0.1:5015/pick",
+      "exit": 7,
+      "http_code": null,
+      "result": "connection refused; 5015 not listening",
+      "evidence": "logs/5015_probe.log"
+    },
+    {
+      "id": "5015_process",
+      "method": "Get-NetTCPConnection -State Listen; Get-CimInstance Win32_Process matching workbench/run.py",
+      "exit": 0,
+      "result": "only 127.0.0.1:3553 listening (DSH GUI); no 5015/5000/19387 listener; no workbench python process",
+      "evidence": "raw/5015_process.json"
+    },
+    {
+      "id": "guard_hashes",
+      "method": "read-only SHA-256 of instance/app.db, CONTRACT.md, scores.csv, sources.csv, workflow.sqlite3",
+      "exit": 0,
+      "result": {
+        "instance/app.db": "e073f828cf0f30d6206361bba3a729826be096be3308f5a5dc204406dae4eb85",
+        "docs/design/CONTRACT.md": "826c24cc6c99551178875bed617e085231bd23998b6a049f396116e1e70fb4f9",
+        "scores.csv": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1",
+        "sources.csv": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4",
+        "workflow.sqlite3": "8ae79c58d8ea5c30525c8faeea4a8ab7b7d054595da6daea87b49b806658cd4c"
+      },
+      "evidence": "raw/guards.json"
+    },
+    {
+      "id": "historical_tests",
+      "method": "read existing d1/d3 logs; not re-run",
+      "exit": null,
+      "result": "d1/d3 project_full 334 OK; d3 workbench_all 218 OK; README says 317 (stale)",
+      "evidence": [
+        "docs/validation/product-workflow/d1/logs/project_full.log",
+        "docs/validation/product-workflow/d3/logs/project_full.log",
+        "docs/validation/product-workflow/d3/logs/workbench_all.log"
+      ]
+    },
+    {
+      "id": "paused_tasks",
+      "method": "flow_state view=task metadata + submission fields; no state change",
+      "exit": 0,
+      "result": "task-89750... and task-6d214... both revision 14 / status=paused, planVersion=8, historical submission present",
+      "evidence": "Flow task records"
+    }
+  ],
+  "reads": [
+    {
+      "path": "PRODUCT.md",
+      "key_lines": "D08 L32; D10 L34; D11 L35"
+    },
+    {
+      "path": "README.md",
+      "key_lines": "L58 stale 317 tests; L94-108 capability table; L110-115 gaps"
+    },
+    {
+      "path": "DEVELOPMENT_PLAN.md",
+      "key_lines": "L3 plan v2; L13-17 goal/evidence; L35-40 roles; L46-48 stages"
+    },
+    {
+      "path": "DEVELOPMENT_PROGRESS.md",
+      "key_lines": "L12 S2 checkpoint; L48-54 stage table; L56-81 tasks (historical)"
+    },
+    {
+      "path": "app/core/config.py",
+      "key_lines": "L8 ROOT; L17 APP_DB_PATH default instance/app.db"
+    },
+    {
+      "path": "app/storage/db.py",
+      "key_lines": "L11-13 migrations dir; L20 app_schema_version; L48-83 ensure_schema"
+    },
+    {
+      "path": "app/storage/migrations/0001_init.sql",
+      "key_lines": "L4-20 source; L41-61 candidate; L67-99 demand_signal; L101-123 evidence; L125-158 supply_offer; L160-198 cost_item; L200-218 gate_review; L285-294 source seeds"
+    },
+    {
+      "path": "app/storage/migrations/0002_draft_feedback.sql",
+      "key_lines": "L3-16 draft; L20-51 feedback"
+    },
+    {
+      "path": "app/core/importer.py",
+      "key_lines": "L29-57 columns/origins; L499 process_row; L803-991 handle_import"
+    },
+    {
+      "path": "app/core/identity.py",
+      "key_lines": "L73-84 demand/candidate identity"
+    },
+    {
+      "path": "app/core/gates.py",
+      "key_lines": "L14 TTL; L139-156 G1; L159-187 G2; L190-217 G3; L220-240 G4; L243-248 ADMISSION; L311-363 record_gate"
+    },
+    {
+      "path": "app/core/state.py",
+      "key_lines": "L9 GATES; L10 required roles; L94-120 unknown components; L158-178 effective status; L181-210 recompute/apply_status"
+    },
+    {
+      "path": "app/core/evidence.py",
+      "key_lines": "L10 types; L14-60 add_evidence; L63-91 invalidate"
+    },
+    {
+      "path": "app/core/supplies.py",
+      "key_lines": "L13-17 license fields; L24-126 add/update + downgrade"
+    },
+    {
+      "path": "app/core/costs.py",
+      "key_lines": "L10-13 roles/bases; L20+ cost spec"
+    },
+    {
+      "path": "app/core/feedback.py",
+      "key_lines": "L14-17 kinds/server fields; L37-121 create; L124-164 update; actual net remains server/read-only NULL"
+    },
+    {
+      "path": "app/core/reviews.py",
+      "key_lines": "L14-15 review states; L41-63 resolve; L96-128 recompute"
+    },
+    {
+      "path": "app/core/drafts.py",
+      "key_lines": "L14-16 kinds/methods; L72-124 create/update; no send path"
+    },
+    {
+      "path": "app/sources/wiring.py",
+      "key_lines": "L18-20 source constants; L52-59 synthetic-only; L134-166 complete_known_object"
+    },
+    {
+      "path": "app/sources/real_link.py",
+      "key_lines": "L35-37 source/real; L96-108 authorization; L215-409 run_real_batch"
+    },
+    {
+      "path": "app/sources/bilibili_view.py",
+      "key_lines": "L297 BilibiliViewReader"
+    },
+    {
+      "path": "app/dash/data.py",
+      "key_lines": "L13-25 file sources; L31-35 fallbacks; file-only load"
+    },
+    {
+      "path": "app/dash/routes.py",
+      "key_lines": "L35-73 read-only routes"
+    },
+    {
+      "path": "tools/workbench/workflow.py",
+      "key_lines": "L27-35 paths/DB; L37-52 fields/status; L105-204 schema; L128-131 dormant gate columns; L246-256 B3 columns; L272-285 sources; L305-321 validate_source; L334-352 stale gaps; L356-361 stale stages; L433-491 create"
+    },
+    {
+      "path": "tools/workbench/readiness.py",
+      "key_lines": "L19-39 fields; L46-83 seven checks; L118-138 export whitelist; L260-299 save evidence; L303-335 record export; L396-432 publish; L458-469 export validity"
+    },
+    {
+      "path": "tools/workbench/supply.py",
+      "key_lines": "L56-207 normalize/add/update/deactivate; L248-290 select candidate"
+    },
+    {
+      "path": "tools/workbench/app.py",
+      "key_lines": "L41 NAV; L949-1005 pick; L1015-1048 source; L1155-1176 create; L1199-1217 evidence; L1333-1363 export guard"
+    },
+    {
+      "path": "tools/workbench/run.py",
+      "key_lines": "L18 port 5015; L55-67 port/process check"
+    },
+    {
+      "path": "docs/validation/product-workflow/d1/REPORT.md",
+      "key_lines": "L4 9/9; L19-25 workflow; L27-29 limits; L70-72 334"
+    },
+    {
+      "path": "docs/validation/product-workflow/d3/REPORT.md",
+      "key_lines": "L31-33 66/218/334; L56-60 deployment/guards; L63-67 diff"
+    },
+    {
+      "path": "docs/validation/product-workflow/live-check/REPORT.md",
+      "key_lines": "L7-9 historical online; L11-22 PID; L71-74 not current"
+    },
+    {
+      "path": "docs/validation/product-workflow/d2/REPORT.md",
+      "key_lines": "L5-23 feedback header; L25-34 worksheet/copy semantics; L36-40 rerecord; L42-48 218/334; L56-59 deployment/guards"
+    }
+  ],
+  "not_executed": [
+    "未运行测试（d1/d3 的 334/218 仅历史证据）",
+    "未启动/重启/停止 5015 或任何服务",
+    "未调用 app 工厂/ensure_schema/init_schema；未打开 instance/app.db 或 workflow.sqlite3 内容",
+    "未做浏览器页面走查；5015 当前不可达",
+    "未做 GitHub/X/平台调研（其他执行者负责）",
+    "未实现 V9 新库/桥接/迁移；本任务只出基线"
+  ],
+  "writes": [
+    "docs/validation/v9/baseline/BASELINE.md",
+    "docs/validation/v9/baseline/CHECKS.json",
+    "docs/validation/v9/baseline/raw/5015_process.json",
+    "docs/validation/v9/baseline/raw/5015_http.json",
+    "docs/validation/v9/baseline/raw/guards.json",
+    "docs/validation/v9/baseline/raw/read_manifest.json",
+    "docs/validation/v9/baseline/logs/5015_health.log",
+    "docs/validation/v9/baseline/logs/5015_probe.log"
+  ],
+  "limitations": [
+    "5015 当前未运行，无法核对当前页面特征；历史 PID/在线结论不作当前证据",
+    "四项门槛与七项就绪未做跨库端到端；工作单 gate_* 列无业务写入路径",
+    "V9 需要的 imported origin、10 平台矩阵、跨轮品类台账、run 控制均不存在",
+    "未重跑测试；README 的 317 与历史 d1/d3 334 存在文档漂移",
+    "未打开业务/工作单库内容；只读守卫哈希/元数据，不能证明库内数据当前语义",
+    "本报告不改变/不验收两项 paused 任务，不宣称 V9 完成"
+  ]
+}

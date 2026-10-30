@@ -1,0 +1,56 @@
+{
+  "utc": "2026-10-24T12:37:56Z",
+  "python": "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+  "runs": [
+    {
+      "argv": [
+        "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        ".",
+        "-v"
+      ],
+      "cwd": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b25",
+      "start_utc": "2026-10-24T12:37:56Z",
+      "end_utc": "2026-10-24T12:37:56Z",
+      "returncode": 0,
+      "log": "tests-run.log"
+    },
+    {
+      "argv": [
+        "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "review.py",
+        "feedback-log.csv"
+      ],
+      "cwd": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b25",
+      "start_utc": "2026-10-24T12:37:56Z",
+      "end_utc": "2026-10-24T12:37:56Z",
+      "returncode": 0,
+      "log": "run-default.log"
+    },
+    {
+      "argv": [
+        "D:\\桌面\\two\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "review.py",
+        "feedback-log.csv",
+        "--json"
+      ],
+      "cwd": "D:\\桌面\\two\\docs\\validation\\product-workflow\\b25",
+      "start_utc": "2026-10-24T12:37:56Z",
+      "end_utc": "2026-10-24T12:37:57Z",
+      "returncode": 0,
+      "log": "run-json.log"
+    }
+  ],
+  "all_zero": true
+}

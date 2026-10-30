@@ -1,0 +1,206 @@
+{
+ "generated_utc": "2026-10-23T13:25:12Z",
+ "db": "C:\\Users\\19183\\AppData\\Local\\Temp\\b10-rehearsal-40h07xtg\\workflow.sqlite3",
+ "steps": [],
+ "A": {
+  "readiness": {
+   "checks": [
+    {
+     "key": "specs",
+     "label": "产品规格完整",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "supply",
+     "label": "已选货源",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "license",
+     "label": "许可三档均允许（可商用/可再分发/可转售）",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "sample",
+     "label": "样品或交付入口已核验",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "cost",
+     "label": "成本已知",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "platform",
+     "label": "目标平台条件有证据（xianyu）",
+     "ok": false,
+     "blocker": "缺少目标平台条件证据（platform_evidence 为空）"
+    },
+    {
+     "key": "copy",
+     "label": "文案定稿",
+     "ok": true,
+     "blocker": ""
+    }
+   ],
+   "overall_ready": false,
+   "blockers": [
+    "目标平台条件有证据（xianyu）：缺少目标平台条件证据（platform_evidence 为空）"
+   ]
+  },
+  "rows": {
+   "ok_chips": 6,
+   "warn_chips": 1,
+   "has_readiness": true,
+   "has_blockers": true
+  },
+  "export_status": 409,
+  "export_body_has_blocker": true
+ },
+ "B": {
+  "readiness": {
+   "checks": [
+    {
+     "key": "specs",
+     "label": "产品规格完整",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "supply",
+     "label": "已选货源",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "license",
+     "label": "许可三档均允许（可商用/可再分发/可转售）",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "sample",
+     "label": "样品或交付入口已核验",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "cost",
+     "label": "成本已知",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "platform",
+     "label": "目标平台条件有证据（xianyu）",
+     "ok": true,
+     "blocker": ""
+    },
+    {
+     "key": "copy",
+     "label": "文案定稿",
+     "ok": true,
+     "blocker": ""
+    }
+   ],
+   "overall_ready": true,
+   "blockers": []
+  },
+  "rows": {
+   "ok_chips": 7,
+   "warn_chips": 0,
+   "has_readiness": true,
+   "has_blockers": true
+  },
+  "export_md_status": 200,
+  "export_json_status": 200,
+  "get_recorded_header": "false",
+  "export_json_body_head": "{\n \"title\": \"[SYNTHETIC 演示] 学习计划 Excel 模板｜课程/考试倒计时/周计划/复习进度（单文件）\",\n \"selling_points\": [\n  \"一个 .xlsx 放 5 张基础表：使用说明、课程与考试、考试倒计时、周计划、复习进度；50 个公式，打开即可改课程/日期。\",\n  \"考试倒计时自动算：用 =TODAY() 与 IF 计算剩余天数，并分“已过期/紧急/临近/正常”四档。\",\n  \"期末冲刺版规划多一张“每日任务”表（冲刺日计划，IF/TODAY/COUNTIF）——规划版本，未制作。\",\n  \"考研/四六级版规划多一张“英语分项”表（IF/AVE",
+  "post_record": {
+   "status": 200,
+   "recorded_header": "true",
+   "rows_before": 0,
+   "rows_after": 1
+  },
+  "internal_field_hits": []
+ },
+ "compare": [
+  {
+   "field": "标题",
+   "export": "[SYNTHETIC 演示] 学习计划 Excel 模板｜课程/考试倒计时/周计划/复习进度（单文件）",
+   "copy_md": "学习计划 Excel 模板｜课程/考试倒计时/周计划/复习进度（单文件）",
+   "same": true,
+   "note": "B 带 synthetic 前缀（显著标注）"
+  },
+  {
+   "field": "卖点条数",
+   "export": 5,
+   "copy_md": 5,
+   "same": true,
+   "note": "5 条，与 COPY §2 对齐"
+  },
+  {
+   "field": "卖点关键词（5表/50公式/TODAY/COUNTIF）",
+   "export": [
+    "5 张",
+    "50 个",
+    "TODAY",
+    "COUNTIF"
+   ],
+   "copy_md": [
+    "5 张",
+    "50 个",
+    "TODAY",
+    "COUNTIF"
+   ],
+   "same": true,
+   "note": "卖点为压缩改写，保留可证明关键词"
+  },
+  {
+   "field": "内容清单·包含",
+   "export": "`.xlsx` 单文件；5 张表（使用说明 / 课程与考试 / 考试倒计时 / ",
+   "copy_md": "5 张表 + 50 个公式",
+   "same": true,
+   "note": "改写为单行摘要，事实一致"
+  },
+  {
+   "field": "内容清单·不包含",
+   "export": "不含宏、外部链接、图片、第三方字体/模板；不含自动提醒/云同步；三场景规划版（期",
+   "copy_md": "不含宏、外部链接…",
+   "same": true,
+   "note": "一致"
+  },
+  {
+   "field": "FAQ 条数",
+   "export": 6,
+   "copy_md": 6,
+   "same": true,
+   "note": "6 条，问题与答案取自 COPY §5"
+  },
+  {
+   "field": "交付说明",
+   "export": "交付：.xlsx 文件 + usage.md 使用说明；交付",
+   "copy_md": "交付 .xlsx + usage.md",
+   "same": true,
+   "note": "一致"
+  },
+  {
+   "field": "售后说明",
+   "export": "售后范围/时限/退款政策未定，以商品页与平台规则为准；可协助",
+   "copy_md": "售后未定/不承诺更新",
+   "same": true,
+   "note": "一致"
+  }
+ ],
+ "db_rows": {
+  "workorder": 2,
+  "workorder_export": 1,
+  "workorder_event": 2
+ },
+ "db_sha256": "9911c70b5771db675844e735030a858b40d793a803803272ea8af46a748a63f2"
+}

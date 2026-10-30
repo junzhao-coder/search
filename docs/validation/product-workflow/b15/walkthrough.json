@@ -1,0 +1,40 @@
+{
+ "generated_utc": "2026-10-23T15:35:11Z",
+ "prod_page": {
+  "has_copy": true,
+  "has_publish": true,
+  "text_sample": [
+   "文案版本历史（0）",
+   "文案版本历史",
+   "发布回填"
+  ]
+ },
+ "dedupe": {
+  "first": {
+   "status": 200,
+   "dedup": "false"
+  },
+  "second": {
+   "status": 200,
+   "dedup": "true"
+  },
+  "rows": 1,
+  "indexes": [
+   "idx_export_dedupe_unique"
+  ]
+ },
+ "shots": {
+  "prod_copy_history.png": {
+   "width": 1160,
+   "height": 252,
+   "bytes": 17449,
+   "sha256": "af30516cc5f74b1bf90775c3a3eb18b1aec836b5f15908b1fc6db614153cbf0c"
+  },
+  "prod_publish.png": {
+   "width": 1160,
+   "height": 164,
+   "bytes": 14474,
+   "sha256": "c3a1a6fa81ce08ccd1bed3d538affb1015187bb73e3612098c321a6a692a738c"
+  }
+ }
+}

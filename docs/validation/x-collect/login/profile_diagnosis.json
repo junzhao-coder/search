@@ -1,0 +1,31 @@
+{
+ "captured_utc": "2026-10-22T02:45:14Z",
+ "profile": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile",
+ "singleton": {
+  "SingletonLock": false,
+  "SingletonSocket": false,
+  "SingletonCookie": false
+ },
+ "cookies": {
+  "path": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\\Default\\Network\\Cookies",
+  "exists": true,
+  "bytes": 20480,
+  "mtime_utc": "2026-10-22T02:41:40Z",
+  "x_rows": 9,
+  "auth_token": false,
+  "ct0": false,
+  "names": [
+   "__cf_bm",
+   "__cuid",
+   "g_state",
+   "gt",
+   "guest_id",
+   "guest_id_ads",
+   "guest_id_marketing",
+   "personalization_id"
+  ]
+ },
+ "root_cause": "profile 只有 guest cookies（无 auth_token/ct0）；登录检测仅看 /home 产生误判；doctor 的 headed 兜底每次都会打开登录页，造成用户看到反复弹窗。",
+ "fix": "doctor 启动前先检查 Cookies 表中的 auth_token/ct0（只读、仅名称/计数）；login 仅在 auth cookie 出现后判定成功；关闭改用 CDP Browser.close 以落盘。",
+ "no_values_logged": true
+}

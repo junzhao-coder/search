@@ -1,0 +1,99 @@
+{
+ "generated_utc": "2026-10-23T14:24:40Z",
+ "port": 5021,
+ "db": "C:\\Users\\19183\\AppData\\Local\\Temp\\b13-walk-wb6g9y4t\\workflow.sqlite3",
+ "ops": [
+  {
+   "op": "POST /worksheet/new",
+   "status": 200,
+   "wid": "wo:20261023-fc432ace",
+   "id_ok": true
+  },
+  {
+   "op": "POST evidence（七项 + demo 平台）",
+   "status": 200
+  },
+  {
+   "op": "GET detail",
+   "status": 200,
+   "ok_chips": 7,
+   "warn_chips": 0,
+   "has_copy_section": true,
+   "has_pub_section": true
+  },
+  {
+   "op": "GET export（预览，零写）",
+   "status": 200
+  },
+  {
+   "op": "POST export/record 首次",
+   "status": 200,
+   "dedup": "false"
+  },
+  {
+   "op": "POST export/record 重复",
+   "status": 200,
+   "dedup": "true"
+  },
+  {
+   "op": "POST publish（已发布）",
+   "status": 200
+  },
+  {
+   "op": "POST evidence（改文案 → 新版本）",
+   "status": 200
+  },
+  {
+   "op": "GET detail（改文案后）",
+   "status": 200,
+   "stale": true,
+   "publish_changed": true,
+   "versions": 2
+  },
+  {
+   "op": "POST export/record（新版本戳）",
+   "status": 200,
+   "dedup": "false"
+  },
+  {
+   "op": "POST copy/rollback v1",
+   "status": 200,
+   "rollback_versions": 1
+  }
+ ],
+ "workorder_id": "wo:20261023-fc432ace",
+ "page_text_sample": [
+  "上次导出：已失效 2026-10-23T14:24:41Z · md · sha 12cd2fe19fef · 已失效，需重新检查并导出：工作单版本",
+  "文案版本历史（3）",
+  "文案版本历史",
+  "回滚到此版本",
+  "回滚到此版本",
+  "回滚到此版本",
+  "发布回填"
+ ],
+ "shots": {
+  "desktop_copy_history.png": {
+   "width": 1160,
+   "height": 309,
+   "bytes": 33852,
+   "sha256": "bc7f685ac3abf959ff3ec0fc23e84498731aa4b84a04dc3ea0d844a69188123a"
+  },
+  "desktop_publish.png": {
+   "width": 1160,
+   "height": 200,
+   "bytes": 23303,
+   "sha256": "d39efb576cfd25e327e0e9d5b7fc0706dbe5a5c26beadbaf9735c8594a94c7ee"
+  }
+ },
+ "counts": {
+  "workorder_export": 2,
+  "workorder_copy_version": 3,
+  "workorder_publish": 1
+ },
+ "versions": [
+  1,
+  2,
+  3
+ ],
+ "db_sha256": "72f5f7a99fd3e77828777d7b4e35779d0e179e088bfbb226c053253fdba2f589"
+}

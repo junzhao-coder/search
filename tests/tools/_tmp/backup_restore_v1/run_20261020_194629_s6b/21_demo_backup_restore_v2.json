@@ -1,0 +1,44 @@
+{
+ "source_sha_unchanged": true,
+ "backup": {
+  "path": "D:\\桌面\\two\\tests\\tools\\_tmp\\backup_restore_v1\\run_20261020_194629_s6b\\backups2\\app-20261020-150000.db",
+  "sha256": "f2ac872b0bc0a9f2891022389c6121fbed1ac52647d07b8588a2db5f1b693533",
+  "bytes": 241664,
+  "schema_version": 2,
+  "integrity": "ok",
+  "counts": {
+   "candidate": 1,
+   "demand_signal": 1,
+   "evidence": 2,
+   "supply_offer": 1,
+   "cost_item": 0,
+   "gate_review": 0,
+   "review_item": 0,
+   "schema_migrations": 2
+  },
+  "row_hashes": {
+   "candidate": "c1a06811846bc702cae6042848f9c5b32e3b22c070d0d565c85d075e7ca13945",
+   "demand_signal": "9b4bf3e478523956eb77f54d072f7a9dec07a825c3290ce2e70168a75dcaa3c8",
+   "supply_offer": "7c8e39ace237db3531b78e3e70dbeb8e8c65275c0d6b565359b8dd40da2dc269"
+  }
+ },
+ "restore": {
+  "target": "D:\\桌面\\two\\tests\\tools\\_tmp\\backup_restore_v1\\run_20261020_194629_s6b\\restore2\\run1\\app.db",
+  "manifest_checked": true,
+  "schema_version": 2,
+  "row_hashes_equal": true,
+  "counts_equal": true
+ },
+ "guard_checks": [
+  [
+   "business_db",
+   "rejected",
+   "拒绝覆盖业务库：D:\\桌面\\two\\instance\\app.db"
+  ],
+  [
+   "instance_dir",
+   "rejected",
+   "拒绝在业务库目录（instance/）内创建恢复副本：D:\\桌面\\two\\instance\\x_restore2.db"
+  ]
+ ]
+}

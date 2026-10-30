@@ -1,0 +1,86 @@
+{
+  "generated_utc": "2026-10-25T05:43:34Z",
+  "constraints": {
+    "bilibili_limit": 10,
+    "weibo_limit": 5,
+    "interval_seconds": 3.2,
+    "max_bytes": 204800,
+    "method": "public GET; no cookie/login; no retries",
+    "sanitized": true
+  },
+  "counts": {
+    "bilibili": 7,
+    "weibo": 1
+  },
+  "stopped": {
+    "bilibili": null,
+    "weibo": "login/verification wall marker"
+  },
+  "files": [
+    {
+      "raw_file": "raw/bili_view.json",
+      "raw_bytes": 107067,
+      "raw_sha256": "c466f794b10864bbe330cf59a6a9d467cf227f910d6bc19d5aea1275ab05815b",
+      "truncated": false,
+      "raw_compacted": true,
+      "sanitized": true
+    },
+    {
+      "raw_file": "raw/bili_reply_p1.json",
+      "raw_bytes": 1162,
+      "raw_sha256": "ce4de6d53a3d36a4cefe5596b845e4b436a8021ab1f55d9bcdb0f8b7f2c8e22a",
+      "truncated": false,
+      "sanitized": true
+    },
+    {
+      "raw_file": "raw/bili_reply_p2.json",
+      "raw_bytes": 1162,
+      "raw_sha256": "ce4de6d53a3d36a4cefe5596b845e4b436a8021ab1f55d9bcdb0f8b7f2c8e22a",
+      "truncated": false,
+      "sanitized": true
+    },
+    {
+      "raw_file": "raw/weibo_feed_p1.html",
+      "raw_bytes": 9756,
+      "raw_sha256": "e9ec4a1f4310313fd267cdfe9d61cf7badaf659fd1f92b0bd65bc9b65b9585d1",
+      "truncated": false,
+      "sanitized": true
+    },
+    {
+      "raw_file": "raw/attempt1_bili_view.json",
+      "raw_bytes": 107067,
+      "raw_sha256": "c466f794b10864bbe330cf59a6a9d467cf227f910d6bc19d5aea1275ab05815b",
+      "truncated": false,
+      "sanitized": true,
+      "attempt": 1,
+      "tooling_failure": true,
+      "raw_compacted": true
+    },
+    {
+      "raw_file": "raw/bili_sort2_p1.json",
+      "raw_bytes": 21578,
+      "raw_sha256": "5d26f5d2fed21c4367534b60e4c2db9b62cc243ba8640badf2e6c416813bd32c",
+      "truncated": false,
+      "sanitized": true
+    },
+    {
+      "raw_file": "raw/bili_sort2_p2.json",
+      "raw_bytes": 789,
+      "raw_sha256": "ae076cdbbff2fcef2f51e024079085f67e78ed3671f8570c67c6eb6d4a74e6ab",
+      "truncated": false,
+      "sanitized": true
+    },
+    {
+      "raw_file": "raw/bili_subreply_3000819542.json",
+      "raw_bytes": 4770,
+      "raw_sha256": "aa7e3e77697a6989bad3b22d4d9fbfb2b6a254c85f7963733eef31365242b73f",
+      "truncated": false,
+      "sanitized": true
+    }
+  ],
+  "counts_including_failed_tooling_attempt": {
+    "bilibili": 7,
+    "weibo": 1
+  },
+  "note_counts": "Bilibili: 1 failed view + 3 initial successful + 3 rework; Weibo 1; total Bilibili 7/10, Weibo 1/5"
+}

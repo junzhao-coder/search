@@ -1,0 +1,18 @@
+{
+  "docs\\validation\\money-project\\scoring\\scores.csv": {
+    "bytes": 37342,
+    "sha256": "ab0c3546c3e9e46ffe726aa036aecce7e535c38fd54f3423c4e4b4bb03967cd1"
+  },
+  "docs\\validation\\money-project\\sourcing\\sources.csv": {
+    "bytes": 5488,
+    "sha256": "13679b60d2ba1c326b9bf85e35f24f4bc230104a500c9ee8dde2e3544061b5f4"
+  },
+  "docs\\validation\\money-project\\scoring\\scorer.py": {
+    "bytes": 21338,
+    "sha256": "4e105acf59007a62dc62e4d1d5c707613bf8983f00f7d00749f71ab8a31da69e"
+  },
+  "docs\\validation\\money-project\\scoring\\model.md": {
+    "bytes": 7951,
+    "sha256": "7637531355970c1d23cd08338fdc633c8f64a8c48f75fb312b2eec2c044d0c80"
+  }
+}

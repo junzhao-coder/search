@@ -1,0 +1,160 @@
+{
+ "source": "tools\\platform-login\\data\\xianyu_items.jsonl",
+ "rows": 20,
+ "columns": [
+  "href",
+  "platform",
+  "price",
+  "raw_text",
+  "title"
+ ],
+ "fields": {
+  "href": 20,
+  "title": 20,
+  "price": 20,
+  "raw_text": 20,
+  "platform": 20,
+  "native_id": 20,
+  "wants": 16,
+  "effective_price": 20,
+  "reference_price": 3,
+  "lang": 20
+ },
+ "ids": [
+  "1052243348747",
+  "1065944971904",
+  "934041348964",
+  "1083364048246",
+  "1000478514229",
+  "1071124073115",
+  "1039901404381",
+  "1084228945548",
+  "1074341275640",
+  "1084871922531",
+  "1048356581667",
+  "1082662493871",
+  "1084408789806",
+  "1062513180069",
+  "1092924085684",
+  "1062306387075",
+  "1052576440518",
+  "1043035002242",
+  "831294493027",
+  "1025321139124"
+ ],
+ "native_unique": 20,
+ "wants_count": 16,
+ "wants_sum": 8093,
+ "ref_count": 3,
+ "effective_values": [
+  1.0,
+  1.09,
+  1.1,
+  1.88
+ ],
+ "lang_zh": 20,
+ "raw_sha": [
+  {
+   "native_id": "1052243348747",
+   "line_sha256": "92567fba8635bff10d80098e1cd02b527e85c175b0ea910daa4efe291156ce65",
+   "raw_bytes": 860
+  },
+  {
+   "native_id": "1065944971904",
+   "line_sha256": "aa7da86fc053d465972d32a0bedf98352af89ac717bd985ec4cc1da295ce619f",
+   "raw_bytes": 940
+  },
+  {
+   "native_id": "934041348964",
+   "line_sha256": "92966ef18e5ce17f91d67d8fa384cf7c4d58f6bbd1af9e79aa3fcd29de7600b4",
+   "raw_bytes": 901
+  },
+  {
+   "native_id": "1083364048246",
+   "line_sha256": "b30f5833ea4e11dc445c897b371307764e53dc0d31e72f2b8fb39a75e4068948",
+   "raw_bytes": 759
+  },
+  {
+   "native_id": "1000478514229",
+   "line_sha256": "96b903b1425e85e2faccf03774faa0e44736651d153639084e7168c09c3875a4",
+   "raw_bytes": 682
+  },
+  {
+   "native_id": "1071124073115",
+   "line_sha256": "4c7653637d440b4053e7e29f847373c2ea4cbffb9087f2df843c4c90f26fda22",
+   "raw_bytes": 893
+  },
+  {
+   "native_id": "1039901404381",
+   "line_sha256": "c69c890817d811b005701cf90bfcd8eb8c02b06d4686555b1519655ac9cffa03",
+   "raw_bytes": 779
+  },
+  {
+   "native_id": "1084228945548",
+   "line_sha256": "6ab117cf3bb9a5d0e2e7b1ee02ed1c26f35e8991aa553d29d5db49fc531b1746",
+   "raw_bytes": 722
+  },
+  {
+   "native_id": "1074341275640",
+   "line_sha256": "2ec6152e12844e49561acf9c880d2d2dbd76484d3ae281c920a8417c7362a988",
+   "raw_bytes": 957
+  },
+  {
+   "native_id": "1084871922531",
+   "line_sha256": "1fed721480270c9a55a94d0e237a087780dcc800a67bf547aef7f063d02436dd",
+   "raw_bytes": 809
+  },
+  {
+   "native_id": "1048356581667",
+   "line_sha256": "a73c5f237046b075c371465ca92684f1cedd3d257e40666fb0dbff47e0037aab",
+   "raw_bytes": 892
+  },
+  {
+   "native_id": "1082662493871",
+   "line_sha256": "eddc1569741b0a91443d2d58bb457724bca8f30fe0810f17127c3c045006f9db",
+   "raw_bytes": 919
+  },
+  {
+   "native_id": "1084408789806",
+   "line_sha256": "9aaf269dc9835315ed390ea8e55ec10ddecc9181dddc4b60428abb88eff051a8",
+   "raw_bytes": 800
+  },
+  {
+   "native_id": "1062513180069",
+   "line_sha256": "3479fcde703ee2251134e0919ff48295bd6614ee2999e3ebe1b03e873befafec",
+   "raw_bytes": 808
+  },
+  {
+   "native_id": "1092924085684",
+   "line_sha256": "ddcaa16f3eb3ad851bbde367cb9980ba0204ede83a46d0e26b044bfc0f36a456",
+   "raw_bytes": 895
+  },
+  {
+   "native_id": "1062306387075",
+   "line_sha256": "b8737321c7056944781a346f540133354b8b1544b59aca154177972cd9bb5249",
+   "raw_bytes": 916
+  },
+  {
+   "native_id": "1052576440518",
+   "line_sha256": "8f0cf9e86db74a3b68bed4d1edf96c42c94ff1f389e85d236e9fd3c927f9485e",
+   "raw_bytes": 767
+  },
+  {
+   "native_id": "1043035002242",
+   "line_sha256": "6b00c4d93e991a2223879f961467c9c42287c9fd662653204146270fcc82b809",
+   "raw_bytes": 656
+  },
+  {
+   "native_id": "831294493027",
+   "line_sha256": "c48d1c4eaba80f2d98662eb81134b2f45c153ec4c92ac52b46a236573ca125ab",
+   "raw_bytes": 737
+  },
+  {
+   "native_id": "1025321139124",
+   "line_sha256": "69c579be4e295adaffa5bbf9556e083d6a6fd18ce01f21785b33e5d244aeff4e",
+   "raw_bytes": 600
+  }
+ ],
+ "raw_file_sha256": "c70f15801db70d9c0a170024c24ddd18ab9cedf056f21c708207066915c851e0",
+ "note": "No full title/text copied; sample read-only."
+}

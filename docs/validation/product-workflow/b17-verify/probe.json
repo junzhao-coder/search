@@ -1,0 +1,143 @@
+{
+ "utc": "2026-10-24T04:55:00Z",
+ "sample_sha_before": "ed3c4efa44607d67127595448c2ee0fcb30171a19cce99d933732015f1e3adad",
+ "steps": {
+  "create": {
+   "status": 303,
+   "id": "wo:20261024-cfb274c9"
+  },
+  "sections": {
+   "status": 200,
+   "supply": true,
+   "sample": true
+  },
+  "candidate_add": {
+   "first": 303,
+   "second": 303
+  },
+  "candidate_count": 2,
+  "candidate_update": {
+   "status": 303,
+   "kind": "替代",
+   "conclusion": "可用"
+  },
+  "select": {
+   "first": {
+    "status": 303,
+    "selected": "sc:8957ee03",
+    "version": "20261024T044302",
+    "license": [
+     "yes",
+     "yes",
+     "yes"
+    ],
+    "note": "第二来源 self:pp-v1",
+    "readiness": {
+     "specs": true,
+     "supply": true,
+     "license": true,
+     "sample": false,
+     "cost": false,
+     "platform": false,
+     "copy": false
+    }
+   },
+   "second_status": 303,
+   "selected": "sc:d19b4af2",
+   "events": [
+    {
+     "action": "create",
+     "detail": "category=自制商品 self_made=True"
+    },
+    {
+     "action": "supply_candidate_add",
+     "detail": "sc:d19b4af2 第一来源"
+    },
+    {
+     "action": "supply_candidate_add",
+     "detail": "sc:8957ee03 第二来源"
+    },
+    {
+     "action": "supply_candidate_update",
+     "detail": "sc:8957ee03"
+    },
+    {
+     "action": "supply_select",
+     "detail": "sc:8957ee03"
+    },
+    {
+     "action": "supply_replace",
+     "detail": "sc:8957ee03 -> sc:d19b4af2"
+    }
+   ]
+  },
+  "deactivate": {
+   "no_confirm": 400,
+   "confirm": 303,
+   "is_active": 0,
+   "active_count": 2
+  },
+  "import": {
+   "status": 200,
+   "active_count": 4
+  },
+  "guards": {
+   "no_csrf": 403,
+   "cross_origin": 403
+  },
+  "sample_ok": {
+   "status": 303,
+   "sample_status": "verified",
+   "ref_has_path": true,
+   "ref_has_checks": true,
+   "sha_after": "ed3c4efa44607d67127595448c2ee0fcb30171a19cce99d933732015f1e3adad"
+  },
+  "sample_fail": {
+   "fails": [
+    {
+     "path": "../etc/passwd",
+     "status": 400
+    },
+    {
+     "path": "D:\\桌面\\two\\instance\\app.db",
+     "status": 400
+    },
+    {
+     "path": "docs/../instance/app.db",
+     "status": 400
+    },
+    {
+     "path": "docs/validation/product-workflow/b7/00_build.log",
+     "status": 400
+    },
+    {
+     "path": "docs/not-exists.xlsx",
+     "status": 400
+    },
+    {
+     "path": "C:\\Windows\\win.ini",
+     "status": 400
+    },
+    {
+     "path": "docs/validation/product-workflow/b17-verify/tmp/oversize.xlsx",
+     "status": 400
+    }
+   ],
+   "state_same": true
+  },
+  "absolute_in_root": {
+   "ok": true,
+   "path": "docs\\validation\\product-workflow\\b7\\sample-study-planner-v1.xlsx",
+   "checks": 7
+  },
+  "final": {
+   "counts": {
+    "workorder": 1,
+    "workorder_event": 11,
+    "workorder_supply_candidate": 5
+   },
+   "selected": "sc:d19b4af2"
+  }
+ },
+ "sample_sha_after": "ed3c4efa44607d67127595448c2ee0fcb30171a19cce99d933732015f1e3adad"
+}

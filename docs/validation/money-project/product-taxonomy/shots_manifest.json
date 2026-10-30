@@ -1,0 +1,51 @@
+{
+ "base": "http://127.0.0.1:5015",
+ "shots": {
+  "desktop_grouped.jpg": {
+   "file": "desktop_grouped.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\product-taxonomy\\shots\\desktop_grouped.jpg",
+   "width": 1440,
+   "height": 900,
+   "bytes": 130766,
+   "sha256": "648f8351fbea082b2fee5474326c6fd5a0da69663e5a3daba94356f9c0194812"
+  },
+  "desktop_content.jpg": {
+   "file": "desktop_content.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\product-taxonomy\\shots\\desktop_content.jpg",
+   "width": 1440,
+   "height": 900,
+   "bytes": 109966,
+   "sha256": "0571679b9d1a8635799304679afb9196957fc80f4d2b3d786f919065e55088c4"
+  },
+  "desktop_grouped_expanded.jpg": {
+   "file": "desktop_grouped_expanded.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\product-taxonomy\\shots\\desktop_grouped_expanded.jpg",
+   "width": 1440,
+   "height": 900,
+   "bytes": 146762,
+   "sha256": "bfc0333161c78a4958269d9be880a17d37da26b5e493575de1177463a6a5074e"
+  },
+  "mobile_grouped.jpg": {
+   "file": "mobile_grouped.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\product-taxonomy\\shots\\mobile_grouped.jpg",
+   "width": 390,
+   "height": 844,
+   "bytes": 53886,
+   "sha256": "34aabb234f33ee0e60d4cb4227378c661e44450937f71b2b4e2d81891362da64"
+  }
+ },
+ "expand_state": {
+  "expanded": "true",
+  "hidden": false,
+  "text": "收起组内明细（14 条）"
+ },
+ "mobile_metrics": {
+  "innerW": 390,
+  "scrollW": 390
+ },
+ "verification": {
+  "checked": 4,
+  "mismatches": [],
+  "ok": true
+ }
+}

@@ -1,0 +1,665 @@
+{
+  "meta": {
+    "task_id": "task-b337765c10e4f503e6a84776d1984e06",
+    "plan_version": 2,
+    "stage": "S1-A",
+    "executor_session": "session-01ba487c-f808-55a7-a1f7-5f436ee12811",
+    "planner_session": "session-630d7dac-4fba-4074-b204-b614ddae1b35",
+    "observed_at": "2026-10-07T17:50+08:00",
+    "time_source": "https://timeapi.io/api/Time/current/zone?timeZone=Asia/Shanghai",
+    "scope": "低量公开只读核验；未登录账号、未下载资源、未验货、未联系供应商、未采购、未付款",
+    "companion_doc": "docs/research/FEASIBILITY.md",
+    "is_research_index": true,
+    "not_an_import_file": true,
+    "conversion_policy": "本索引是研究索引，不是应用导入文件；导入格式以 docs/design/CONTRACT.md 第 4 节 format_version=1 为准（映射见 FEASIBILITY.md 第 7 节，待 B 冻结）；转换不得自动升级任何门槛或状态",
+    "status_legend": {
+      "license_reviewed": "许可/条款要点已核对并留有引用或转述；是否逐字读取见各条目 verification_dimensions.license_text_read，观察者见 observer",
+      "lead": "来源存在、页面可访问，但许可或费用未读取，只能作为线索",
+      "blocked": "抓取被反爬拦截，条件未知",
+      "synthetic": "合成示例，仅演示字段格式"
+    },
+    "label_policy": "以上四种为研究标签，只描述本轮读到了什么；与 B 契约 supply_offer.status（candidate/verified/invalid/stale）及四项入池门槛无任何映射，不得作为可测试依据",
+    "observer_policy": "observer 字段区分观察者：executor=执行者本轮调用；planner=策划者独立观察转记。观察者不新增状态取值、不改变 legend 与计数口径",
+    "verification_dimensions_policy": "许可原文核对、页面可读、API 文档条件、端点本次调用、应用已接入为五个独立维度；未核到的保留 null 或 false，不填 true。license_text_read 表示是否读取许可原文，quote_recorded 表示是否留下逐字摘录（摘录见 license_evidence_quote），两者是不同维度",
+    "observation_policy": "同一 URL 在不同时点可能返回不同结果（地区、风控、反爬强度变化）；新旧观察并存留档，不以单次观察否定另一次",
+    "unknown_policy": "未读取到的字段一律为 null 并登记在 unknowns；已知为 0 与未知必须区分，未知不得写 0",
+    "synthetic_policy": "合成条目 id 以 SYN- 前缀且 synthetic=true；除 SYN-001 外，本索引全部为真实来源条目",
+    "counts": {
+      "total": 12,
+      "license_reviewed": 8,
+      "lead": 2,
+      "blocked": 1,
+      "synthetic": 1
+    },
+    "counts_by_observer": {
+      "executor": 7,
+      "planner": 1,
+      "note": "只统计 status=license_reviewed 的条目按 observer 分布；observer 不是状态取值，状态集合仍是 license_reviewed / lead / blocked / synthetic 四种"
+    },
+    "not_claimed": "本索引不代表任何条目已下载、已验货、可通过平台发布或已盈利；研究标签不等于 supply_offer 核验结果"
+  },
+  "samples": [
+    {
+      "id": "S-001",
+      "synthetic": false,
+      "observer": "executor",
+      "name": "The Met Open Access（大都会艺术博物馆开放数据 API）",
+      "category": "数字馆藏图片与元数据（素材类）",
+      "owner": "The Metropolitan Museum of Art",
+      "official_url": "https://metmuseum.github.io/",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_evidence_url": "https://metmuseum.github.io/",
+      "license_evidence_quote": "The Metropolitan Museum of Art provides select datasets of information on more than 470,000 artworks in its Collection for unrestricted commercial and noncommercial use. To the extent possible under law, The Metropolitan Museum of Art has waived all copyright and related or neighboring rights to this dataset using the Creative Commons Zero license.",
+      "license_summary": "数据集以 CC0 发布，允许商用与非商用；API 无需注册或 Key",
+      "delivery_scenario_conditions": null,
+      "license_verified_at": "2026-10-07",
+      "price_cny": 0,
+      "price_note": "免费公开；无 API Key 要求",
+      "download_allowed": true,
+      "commercial_allowed": true,
+      "resale_allowed": true,
+      "resale_condition": "CC0 允许任何用途（含商业与再分发）；需自行按 isPublicDomain 字段筛选公版图像，CC0 不授予商标等第三方权利",
+      "auto_access": {
+        "method": "公开 REST API（JSON）",
+        "conditions_read": true,
+        "conditions_evidence": "At this time, we do not require API users to register or obtain an API key to use the service. Please limit request rate to 80 requests per second.",
+        "requires_login": false,
+        "requires_key": false,
+        "documented_rate_limit": "80 requests/second：文档给出的上限，不是推荐频率；接入须设更低速率、缓存并记录失败",
+        "endpoint_calls": [
+          {
+            "caller": "planner",
+            "observation": "本轮只读调用对象接口 objectID=45734 返回 HTTP 200 真实 JSON，含 isPublicDomain=true、primaryImage、metadataDate；无图像下载（转记，非执行者调用）"
+          }
+        ],
+        "unknowns_note": "长期稳定性、限流触发阈值、字段变更风险未验证；执行者未调用过任何端点"
+      },
+      "verification_dimensions": {
+        "license_text_read": true,
+        "page_readable": true,
+        "api_doc_conditions_read": true,
+        "endpoint_called_by_executor": false,
+        "endpoint_called_by_planner": true,
+        "app_integrated": false
+      },
+      "sample_inspected": false,
+      "status": "license_reviewed",
+      "unknowns": [
+        "具体图像是否公版需逐件核对 isPublicDomain 字段",
+        "未下载任何文件，未验货",
+        "v1/search 已在文档中标注于 2026-10-01 退役，需改用 v1.1 分页接口（文档更新日期 2026-09-04）",
+        "该来源只能服务素材型虚拟商品，无法单独构成需求证据",
+        "端点可用性目前仅有一次策划者独立观察，非长期结论"
+      ],
+      "notes": "许可（CC0）与 API 文档条件均已读取；端点调用与文档条件分列记录。接入前需在应用内实测并记录限速。",
+      "refs": [
+        "https://metmuseum.github.io/",
+        "https://github.com/metmuseum/openaccess"
+      ]
+    },
+    {
+      "id": "S-002",
+      "synthetic": false,
+      "observer": "executor",
+      "name": "Openclipart",
+      "category": "矢量剪贴画（素材类）",
+      "owner": "Openclipart / Fabricatorz Foundation",
+      "official_url": "https://openclipart.org/",
+      "license": "公有领域（CC0 1.0）",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_evidence_url": "https://openclipart.org/share",
+      "license_evidence_quote": "Founded in 2004, Openclipart is an online media collection of more than 180,000 vectorial graphics, entirely in the public domain. ... We try to make it clear that you may use all clipart from Openclipart even for unlimited commercial use. ... All Clipart are Released into the Public Domain.",
+      "license_summary": "全库公有领域（CC0）；FAQ 明示可用于无限制商用",
+      "delivery_scenario_conditions": null,
+      "license_verified_at": "2026-10-07",
+      "price_cny": 0,
+      "price_note": "免费公开，可注册但非必需",
+      "download_allowed": true,
+      "commercial_allowed": true,
+      "resale_allowed": true,
+      "resale_condition": "按 CC0/公有领域允许再分发与商业使用；建议逐件复核被标记 pd_issue 的条目来源",
+      "auto_access": {
+        "method": "站点公开可读；另有 Feed（Atom）与 API 入口",
+        "conditions_read": false,
+        "conditions_evidence": null,
+        "requires_login": false,
+        "requires_key": null,
+        "documented_rate_limit": null,
+        "endpoint_calls": [],
+        "unknowns_note": "Feed/API 的限速、鉴权与许可条件未读取；页面可读不等于可自动获取"
+      },
+      "verification_dimensions": {
+        "license_text_read": true,
+        "page_readable": true,
+        "api_doc_conditions_read": false,
+        "endpoint_called_by_executor": false,
+        "endpoint_called_by_planner": false,
+        "app_integrated": false
+      },
+      "sample_inspected": false,
+      "status": "license_reviewed",
+      "unknowns": [
+        "API/Feed 调用条件（限速、鉴权）未读取",
+        "未逐件核对单件作品的 pd_issue 标记",
+        "未批量下载，未验货",
+        "许可页访问稳定性未长期验证（执行者 /share 成功一次、/faq 一次超时；策划者复测 /share 两次 30s 超时）"
+      ],
+      "notes": "页面底部另有 License 链接注明 100 percent Public Domain；如需批量使用应先在应用内验证 /feed 或 API 的可用性与限速。",
+      "refs": [
+        "https://openclipart.org/share",
+        "https://openclipart.org/"
+      ]
+    },
+    {
+      "id": "S-003",
+      "synthetic": false,
+      "observer": "executor",
+      "name": "Simple Icons",
+      "category": "品牌图标（设计素材类，库级）",
+      "owner": "Simple Icons Contributors",
+      "official_url": "https://github.com/simple-icons/simple-icons",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_evidence_url": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/LICENSE.md",
+      "license_evidence_quote": "CC0 1.0 Universal ... Certain owners wish to permanently relinquish those rights to a Work for the purpose of contributing to a commons of creative, cultural and scientific works ... build upon, modify, incorporate in other works, reuse and redistribute as freely as possible in any form whatsoever and for any purposes, including without limitation commercial purposes.",
+      "license_summary": "库级许可为 CC0；CC0 不放弃商标与专利权利",
+      "delivery_scenario_conditions": null,
+      "license_verified_at": "2026-10-07",
+      "price_cny": 0,
+      "download_allowed": true,
+      "commercial_allowed": true,
+      "resale_allowed": true,
+      "resale_condition": "CC0 允许再分发与出售；品牌图标涉及的商标使用需自行确认，单件素材条款未逐件读取（unknown）",
+      "auto_access": {
+        "method": "GitHub 仓库 raw 文件可读（第三方托管平台）",
+        "conditions_read": false,
+        "conditions_evidence": null,
+        "requires_login": false,
+        "requires_key": null,
+        "documented_rate_limit": null,
+        "endpoint_calls": [],
+        "unknowns_note": "只观察到 raw 文件可读；仓库/镜像的 API 条件与限速未读取"
+      },
+      "verification_dimensions": {
+        "license_text_read": true,
+        "page_readable": true,
+        "api_doc_conditions_read": false,
+        "endpoint_called_by_executor": false,
+        "endpoint_called_by_planner": false,
+        "app_integrated": false
+      },
+      "sample_inspected": false,
+      "status": "license_reviewed",
+      "unknowns": [
+        "具体品牌图标的商标使用限制未逐件核验",
+        "库级许可不等于单件素材/品牌规范已读",
+        "未下载图标文件，未验货"
+      ],
+      "notes": "仅核验库级许可文件；未读取仓库 README 中的使用建议与品牌指南。",
+      "refs": [
+        "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/LICENSE.md"
+      ]
+    },
+    {
+      "id": "S-004",
+      "synthetic": false,
+      "observer": "executor",
+      "name": "Lucide",
+      "category": "通用图标（设计素材类，库级）",
+      "owner": "Lucide Icons and Contributors",
+      "official_url": "https://lucide.dev/license",
+      "license": "ISC（Feather 派生部分为 MIT）",
+      "license_url": "https://lucide.dev/license",
+      "license_evidence_url": "https://lucide.dev/license",
+      "license_evidence_quote": "ISC License ... Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.",
+      "license_summary": "库级许可为 ISC，Feather 派生图标为 MIT；均要求保留声明",
+      "delivery_scenario_conditions": null,
+      "license_verified_at": "2026-10-07",
+      "price_cny": 0,
+      "download_allowed": true,
+      "commercial_allowed": true,
+      "resale_allowed": true,
+      "resale_condition": "允许分发与出售（无许可费），须随附版权与许可声明；Feather 派生图标适用 MIT 并需保留其声明；单件素材条款未逐件读取",
+      "auto_access": {
+        "method": "官网与 GitHub 仓库公开可读",
+        "conditions_read": false,
+        "conditions_evidence": null,
+        "requires_login": false,
+        "requires_key": null,
+        "documented_rate_limit": null,
+        "endpoint_calls": [],
+        "unknowns_note": "包管理器/镜像分发条件与限速未读取"
+      },
+      "verification_dimensions": {
+        "license_text_read": true,
+        "page_readable": true,
+        "api_doc_conditions_read": false,
+        "endpoint_called_by_executor": false,
+        "endpoint_called_by_planner": false,
+        "app_integrated": false
+      },
+      "sample_inspected": false,
+      "status": "license_reviewed",
+      "unknowns": [
+        "未逐条区分 ISC 与 MIT 图标清单的实际再分发要求（页面已列出 Feather 派生图标名单）",
+        "品牌 logo 相关规定（brand logo statement）页面未读取",
+        "未下载图标文件，未验货"
+      ],
+      "notes": "许可页同时给出 Feather 派生图标的 MIT 许可全文；策划者本轮复测该页 HTTP 200 且内容一致。",
+      "refs": [
+        "https://lucide.dev/license",
+        "https://github.com/lucide-icons/lucide"
+      ]
+    },
+    {
+      "id": "S-005",
+      "synthetic": false,
+      "observer": "executor",
+      "name": "得意黑 Smiley Sans",
+      "category": "中文字体（设计素材类，库级）",
+      "owner": "atelier-anchor（atelierAnchor）",
+      "official_url": "https://github.com/atelier-anchor/smiley-sans",
+      "license": "SIL Open Font License 1.1（含保留字体名 Smiley / 得意黑）",
+      "license_url": "https://openfontlicense.org",
+      "license_evidence_url": "https://raw.githubusercontent.com/atelier-anchor/smiley-sans/main/LICENSE",
+      "license_evidence_quote": "The OFL allows the licensed fonts to be used, studied, modified and redistributed freely as long as they are not sold by themselves. ... 1) Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself. 2) Original or Modified Versions of the Font Software may be bundled, redistributed and/or sold with any software, provided that each copy contains the above copyright notice and this license.",
+      "license_summary": "OFL 1.1：可自由使用/修改/再分发；字体本身不得单独售卖；随软件捆绑可分发或销售并随附许可",
+      "delivery_scenario_conditions": null,
+      "license_verified_at": "2026-10-07",
+      "price_cny": 0,
+      "download_allowed": true,
+      "commercial_allowed": true,
+      "resale_allowed": false,
+      "resale_condition": "字体文件不得单独售卖；允许与软件/文档捆绑分发或销售，并随附版权声明与许可文本；派生版本不得使用保留字体名",
+      "auto_access": {
+        "method": "GitHub 仓库 raw 文件可读（第三方托管平台）",
+        "conditions_read": false,
+        "conditions_evidence": null,
+        "requires_login": false,
+        "requires_key": null,
+        "documented_rate_limit": null,
+        "endpoint_calls": [],
+        "unknowns_note": "字体分发渠道/镜像的 API 条件未读取"
+      },
+      "verification_dimensions": {
+        "license_text_read": true,
+        "page_readable": true,
+        "api_doc_conditions_read": false,
+        "endpoint_called_by_executor": false,
+        "endpoint_called_by_planner": false,
+        "app_integrated": false
+      },
+      "sample_inspected": false,
+      "status": "license_reviewed",
+      "unknowns": [
+        "未下载字体文件，未验货",
+        "具体交付物（模板/文档）嵌入字体的声明展示细节未逐条核对"
+      ],
+      "notes": "典型适用场景：把它作为设计交付物（海报、模板成品）的一部分使用，而不是把它当商品本身出售。",
+      "refs": [
+        "https://raw.githubusercontent.com/atelier-anchor/smiley-sans/main/LICENSE"
+      ]
+    },
+    {
+      "id": "S-006",
+      "synthetic": false,
+      "observer": "executor",
+      "name": "霞鹜文楷 LXGW WenKai",
+      "category": "中文字体（设计素材类，库级）",
+      "owner": "LXGW（作者仓库）",
+      "official_url": "https://github.com/lxgw/LxgwWenKai",
+      "license": "SIL Open Font License 1.1（含保留字体名与附加许可）",
+      "license_url": "https://openfontlicense.org",
+      "license_evidence_url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/main/OFL.txt",
+      "license_evidence_quote": "Copyright 2021-2026 LXGW ..., with Reserved Font Name ... This Font Software is licensed under the SIL Open Font License, Version 1.1. ... Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself.",
+      "license_summary": "OFL 1.1 + 保留字体名附加许可；字体本身不得单独售卖",
+      "delivery_scenario_conditions": null,
+      "license_verified_at": "2026-10-07",
+      "price_cny": 0,
+      "download_allowed": true,
+      "commercial_allowed": true,
+      "resale_allowed": false,
+      "resale_condition": "字体文件不得单独售卖；可捆绑分发/销售并随附许可文本；附加许可对保留字体名在重编译、子集化与 web 字体场景有额外限制",
+      "auto_access": {
+        "method": "GitHub 仓库 raw 文件可读（第三方托管平台）",
+        "conditions_read": false,
+        "conditions_evidence": null,
+        "requires_login": false,
+        "requires_key": null,
+        "documented_rate_limit": null,
+        "endpoint_calls": [],
+        "unknowns_note": "字体分发渠道/镜像的 API 条件未读取"
+      },
+      "verification_dimensions": {
+        "license_text_read": true,
+        "page_readable": true,
+        "api_doc_conditions_read": false,
+        "endpoint_called_by_executor": false,
+        "endpoint_called_by_planner": false,
+        "app_integrated": false
+      },
+      "sample_inspected": false,
+      "status": "license_reviewed",
+      "unknowns": [
+        "未下载字体文件，未验货",
+        "附加许可中 web 字体平台相关的具体范围未逐条核对"
+      ],
+      "notes": "许可文件明确保留字体名（霞鹜、霞鶩、落霞孤鹜、落霞孤鶩、LXGW）并对子集化/web 字体给出附加许可。",
+      "refs": [
+        "https://raw.githubusercontent.com/lxgw/LxgwWenKai/main/OFL.txt"
+      ]
+    },
+    {
+      "id": "S-007",
+      "synthetic": false,
+      "observer": "executor",
+      "name": "billryan/resume（LaTeX 简历模板）",
+      "category": "工作/经营模板（文档模板类）",
+      "owner": "billryan（GitHub）",
+      "official_url": "https://github.com/billryan/resume",
+      "license": "MIT",
+      "license_url": "https://opensource.org/license/mit",
+      "license_evidence_url": "https://raw.githubusercontent.com/billryan/resume/master/LICENSE",
+      "license_evidence_quote": "The MIT License (MIT) ... Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the Software), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.",
+      "license_summary": "MIT：可复制、修改、分发、出售，需保留版权与许可声明",
+      "delivery_scenario_conditions": null,
+      "license_verified_at": "2026-10-07",
+      "price_cny": 0,
+      "download_allowed": true,
+      "commercial_allowed": true,
+      "resale_allowed": true,
+      "resale_condition": "允许复制、修改、分发与出售，需保留版权声明与许可文本；不得暗示原作者背书；模板内第三方资源需另行核验",
+      "auto_access": {
+        "method": "GitHub 仓库 raw 文件可读（第三方托管平台）",
+        "conditions_read": false,
+        "conditions_evidence": null,
+        "requires_login": false,
+        "requires_key": null,
+        "documented_rate_limit": null,
+        "endpoint_calls": [],
+        "unknowns_note": "仓库/镜像的 API 条件未读取"
+      },
+      "verification_dimensions": {
+        "license_text_read": true,
+        "page_readable": true,
+        "api_doc_conditions_read": false,
+        "endpoint_called_by_executor": false,
+        "endpoint_called_by_planner": false,
+        "app_integrated": false
+      },
+      "sample_inspected": false,
+      "status": "license_reviewed",
+      "unknowns": [
+        "未编译、未试排、未验货",
+        "模板内是否包含第三方受限字体或图片未核验"
+      ],
+      "notes": "同类模板可继续搜索 GitHub 上带明确开源许可的简历/报告模板，但每个都要单独核许可文件。",
+      "refs": [
+        "https://raw.githubusercontent.com/billryan/resume/master/LICENSE"
+      ]
+    },
+    {
+      "id": "S-008",
+      "synthetic": false,
+      "observer": "executor",
+      "name": "微软 OfficePLUS（officeplus.cn）",
+      "category": "PPT/Word/Excel 模板（工作模板类）",
+      "owner": "Microsoft（中国区模板站）",
+      "official_url": "https://www.officeplus.cn/",
+      "license": null,
+      "license_url": null,
+      "license_evidence_url": null,
+      "license_evidence_quote": null,
+      "license_summary": null,
+      "delivery_scenario_conditions": null,
+      "license_verified_at": null,
+      "price_cny": null,
+      "price_note": "首页同时提供免费模板与「会员权益」入口，具体价格未知",
+      "download_allowed": null,
+      "commercial_allowed": null,
+      "resale_allowed": null,
+      "resale_condition": null,
+      "auto_access": {
+        "method": "站点可访问，未验证批量或接口访问条件",
+        "conditions_read": false,
+        "conditions_evidence": null,
+        "requires_login": null,
+        "requires_key": null,
+        "documented_rate_limit": null,
+        "endpoint_calls": [],
+        "unknowns_note": "使用条款、批量访问与接口条件均未读取"
+      },
+      "verification_dimensions": {
+        "license_text_read": false,
+        "page_readable": true,
+        "api_doc_conditions_read": false,
+        "endpoint_called_by_executor": false,
+        "endpoint_called_by_planner": false,
+        "app_integrated": false
+      },
+      "sample_inspected": false,
+      "status": "lead",
+      "unknowns": [
+        "使用条款/再分发与转售条件未读取",
+        "会员价格未知（未知不等于 0）",
+        "未下载、未验货"
+      ],
+      "notes": "仅作为模板类线索登记；在使用其素材前必须读取其许可条款，且付费属采购，需用户逐项确认。",
+      "refs": [
+        "https://www.officeplus.cn/"
+      ]
+    },
+    {
+      "id": "S-009",
+      "synthetic": false,
+      "observer": "executor",
+      "name": "Unsplash",
+      "category": "摄影图库（素材类）",
+      "owner": "Unsplash Inc.",
+      "official_url": "https://unsplash.com/",
+      "license": null,
+      "license_url": "https://unsplash.com/license",
+      "license_evidence_url": null,
+      "license_evidence_quote": null,
+      "license_summary": null,
+      "delivery_scenario_conditions": null,
+      "license_verified_at": null,
+      "price_cny": null,
+      "price_note": "未知（许可页与站点抓取均被拦截）",
+      "download_allowed": null,
+      "commercial_allowed": null,
+      "resale_allowed": null,
+      "resale_condition": null,
+      "auto_access": {
+        "method": "自动访问被拦截",
+        "conditions_read": false,
+        "conditions_evidence": "https://unsplash.com/license 抓取返回 HTTP 401（Anubis 反爬验证页，要求 JavaScript 工作量证明）",
+        "requires_login": null,
+        "requires_key": null,
+        "documented_rate_limit": null,
+        "endpoint_calls": [],
+        "unknowns_note": "站点存在反爬机制；接口/批量访问条件未知"
+      },
+      "verification_dimensions": {
+        "license_text_read": false,
+        "page_readable": false,
+        "api_doc_conditions_read": false,
+        "endpoint_called_by_executor": false,
+        "endpoint_called_by_planner": false,
+        "app_integrated": false
+      },
+      "sample_inspected": false,
+      "status": "blocked",
+      "unknowns": [
+        "官方许可条款未读取，网上常见的免费可商用说法未取得官方原文，本索引不采用",
+        "是否允许再分发/转售未知",
+        "未下载、未验货"
+      ],
+      "notes": "保留此条目的意义是记录「自动访问条件」本身：该站存在反爬机制，人工浏览可用不代表应用可自动获取。",
+      "refs": [
+        "https://unsplash.com/license"
+      ]
+    },
+    {
+      "id": "S-010",
+      "synthetic": false,
+      "observer": "executor",
+      "name": "国家标准全文公开系统",
+      "category": "标准文件（信息整理类）",
+      "owner": "国家市场监督管理总局 / 国家标准化管理委员会（主办：国家标准技术审评中心）",
+      "official_url": "https://openstd.samr.gov.cn/bzgk/std/",
+      "license": null,
+      "license_url": null,
+      "license_evidence_url": "https://openstd.samr.gov.cn/bzgk/std/",
+      "license_evidence_quote": "本系统收录现行有效强制性国家标准2,031项。其中非采标1,691项可在线阅读和下载，采标340项只可在线阅读。 ... 版权所有 侵权必究",
+      "license_summary": null,
+      "delivery_scenario_conditions": null,
+      "license_verified_at": "2026-10-07",
+      "price_cny": null,
+      "price_note": "阅读/下载未标注价格；再分发许可未知",
+      "download_allowed": true,
+      "commercial_allowed": null,
+      "resale_allowed": null,
+      "resale_condition": "未找到明确的再分发或转售许可，页脚标注版权所有，不能推断可作商品转售",
+      "auto_access": {
+        "method": "站点公开可读",
+        "conditions_read": false,
+        "conditions_evidence": null,
+        "requires_login": null,
+        "requires_key": null,
+        "documented_rate_limit": null,
+        "endpoint_calls": [],
+        "unknowns_note": "下载是否需登录/实名、批量与接口条件均未读取"
+      },
+      "verification_dimensions": {
+        "license_text_read": false,
+        "page_readable": true,
+        "api_doc_conditions_read": false,
+        "endpoint_called_by_executor": false,
+        "endpoint_called_by_planner": false,
+        "app_integrated": false
+      },
+      "sample_inspected": false,
+      "status": "lead",
+      "unknowns": [
+        "下载是否需要登录/实名未知",
+        "再分发、商用与转售条件未知",
+        "未下载任何标准文件，未验货"
+      ],
+      "notes": "只作为信息类公开入口登记；在许可不清时不得进入可测试池，也不得作为货源推荐。页面收录数量与可下载范围来自首页实测文本。",
+      "refs": [
+        "https://openstd.samr.gov.cn/bzgk/std/"
+      ]
+    },
+    {
+      "id": "S-011",
+      "synthetic": false,
+      "observer": "planner",
+      "name": "Pexels",
+      "category": "摄影图库（素材类）",
+      "owner": "Pexels",
+      "official_url": "https://www.pexels.com/license/",
+      "license": null,
+      "license_url": "https://www.pexels.com/license/",
+      "license_evidence_url": "https://www.pexels.com/license/",
+      "license_evidence_quote": "策划者 web_fetch 原文（本索引转记）：「All photos and videos on Pexels can be downloaded and used for free.」「Use the photos and videos online ... a template you sell.」",
+      "license_summary": "策划者本轮读到许可页 HTTP 200 与完整正文：资源可免费下载使用，且允许用于售卖模板等交付场景；限制原样出售与在其他素材/壁纸平台再分发。逐字摘录见上；限制条款的完整边界未逐条读取。",
+      "delivery_scenario_conditions": {
+        "allowed": "可用于（售卖）模板等交付场景（策划者转述）",
+        "restricted": [
+          "不得原样出售（策划者转述）",
+          "不得在其他素材/壁纸平台再分发（策划者转述）"
+        ]
+      },
+      "license_verified_at": null,
+      "observation_note": "来源：策划者本轮 Flow 退回反馈转记（此前执行者观察到 403，两次观察并存）；确切观察时点未提供，故 license_verified_at 为 null",
+      "quote_recorded": true,
+      "quote_source": "planner_web_fetch",
+      "price_cny": null,
+      "price_note": "许可页明确 Pexels 资源可免费下载并使用（策划者转述原文）；但所选单件素材与 API 的价格条件未逐件核验——不得由许可免费推断 API 免费或转售已通过；未采购",
+      "download_allowed": null,
+      "commercial_allowed": null,
+      "resale_allowed": null,
+      "resale_condition": "策划者转述：限制原样出售与其他素材/壁纸平台再分发；其余授权范围未逐条读取；不得由许可免费推断转售已通过",
+      "auto_access": {
+        "method": "站点可访问（本轮策划者观察到许可页 200）",
+        "conditions_read": false,
+        "conditions_evidence": null,
+        "requires_login": null,
+        "requires_key": null,
+        "documented_rate_limit": null,
+        "endpoint_calls": [],
+        "unknowns_note": "API 条件（是否提供接口、限速与鉴权）未验证；不得由许可免费推断 API 免费；此前执行者观察到许可页 403，两次观察并存"
+      },
+      "verification_dimensions": {
+        "license_text_read": true,
+        "page_readable": true,
+        "api_doc_conditions_read": false,
+        "endpoint_called_by_executor": false,
+        "endpoint_called_by_planner": false,
+        "app_integrated": false
+      },
+      "sample_inspected": false,
+      "status": "license_reviewed",
+      "unknowns": [
+        "API 条件未验证（不得由许可免费外推）",
+        "所选单件素材与 API 的价格条件未逐件核验",
+        "限制条款（原样出售、其他素材/壁纸平台再分发）的完整边界未逐条读取",
+        "未下载、未验货",
+        "观察时点未提供：license_verified_at 为 null，来源与轮次见 observation_note"
+      ],
+      "notes": "observer=planner：本条为策划者独立观察的转记，不并入执行者证据链；标签沿用 license_reviewed，观察者单列，不新增状态取值；license_text_read=true 与 quote_recorded=true 是不同维度（读过原文 / 留下逐字摘录）。",
+      "refs": [
+        "https://www.pexels.com/license/"
+      ]
+    },
+    {
+      "id": "SYN-001",
+      "synthetic": true,
+      "observer": "synthetic",
+      "name": "合成示例：不存在的素材包（仅演示字段格式）",
+      "category": "synthetic-demo",
+      "owner": "synthetic",
+      "official_url": null,
+      "license": null,
+      "license_url": null,
+      "license_evidence_url": null,
+      "license_evidence_quote": null,
+      "license_summary": null,
+      "delivery_scenario_conditions": null,
+      "license_verified_at": null,
+      "price_cny": null,
+      "price_note": "合成本条目不参与任何推荐",
+      "download_allowed": null,
+      "commercial_allowed": null,
+      "resale_allowed": null,
+      "resale_condition": null,
+      "auto_access": {
+        "method": null,
+        "conditions_read": false,
+        "conditions_evidence": null,
+        "requires_login": null,
+        "requires_key": null,
+        "documented_rate_limit": null,
+        "endpoint_calls": [],
+        "unknowns_note": null
+      },
+      "verification_dimensions": {
+        "license_text_read": false,
+        "page_readable": false,
+        "api_doc_conditions_read": false,
+        "endpoint_called_by_executor": false,
+        "endpoint_called_by_planner": false,
+        "app_integrated": false
+      },
+      "sample_inspected": false,
+      "status": "synthetic",
+      "unknowns": [
+        "全部字段均为占位，不可作为货源、需求或价格证据"
+      ],
+      "notes": "合成条目，仅用于演示真实/合成标识与字段格式；系统实现时应对合成数据使用独立标识并在界面区分。",
+      "refs": []
+    }
+  ]
+}

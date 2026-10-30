@@ -1,0 +1,17 @@
+{
+ "command": "tweet",
+ "url": "https://x.com/OpenAI/status/2107895002022187411",
+ "keyword": "2107895002022187411",
+ "started_utc": "2026-10-22T03:15:25Z",
+ "finished_utc": "2026-10-22T03:15:52Z",
+ "elapsed_s": 27.6,
+ "requested_limit": 5,
+ "collected": 5,
+ "duplicates": 13,
+ "seen_total": 23,
+ "nonempty_text": 5,
+ "nonempty_text_ratio": 1.0,
+ "stop_reason": "LIMIT",
+ "jsonl": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\data\\tweet-2026-10-22T031552Z.jsonl",
+ "exit": 0
+}

@@ -1,0 +1,29 @@
+test_all_blocked_initially (tests.test_export.ExportTests.test_all_blocked_initially) ... ok
+test_detail_get_zero_write (tests.test_export.ExportTests.test_detail_get_zero_write) ... ok
+test_detail_page_shows_checks_and_disabled_buttons (tests.test_export.ExportTests.test_detail_page_shows_checks_and_disabled_buttons) ... ok
+test_evidence_revision_and_validation (tests.test_export.ExportTests.test_evidence_revision_and_validation) ... ok
+test_export_blocked_when_not_ready_then_ok (tests.test_export.ExportTests.test_export_blocked_when_not_ready_then_ok) ... ok
+test_export_internal_marker_rejected (tests.test_export.ExportTests.test_export_internal_marker_rejected) ... ok
+test_export_md_and_json_whitelist (tests.test_export.ExportTests.test_export_md_and_json_whitelist) ... ok
+test_forged_ready_rejected_and_state_unchanged (tests.test_export.ExportTests.test_forged_ready_rejected_and_state_unchanged) ... ok
+test_partial_then_full (tests.test_export.ExportTests.test_partial_then_full) ... ok
+test_stamp_invalidates_old_export (tests.test_export.ExportTests.test_stamp_invalidates_old_export) ... ok
+test_all_blocked_initially (tests.test_export.GetExportZeroWriteTests.test_all_blocked_initially) ... ok
+test_detail_get_zero_write (tests.test_export.GetExportZeroWriteTests.test_detail_get_zero_write) ... ok
+test_detail_page_shows_checks_and_disabled_buttons (tests.test_export.GetExportZeroWriteTests.test_detail_page_shows_checks_and_disabled_buttons) ... ok
+test_evidence_revision_and_validation (tests.test_export.GetExportZeroWriteTests.test_evidence_revision_and_validation) ... ok
+test_export_blocked_when_not_ready_then_ok (tests.test_export.GetExportZeroWriteTests.test_export_blocked_when_not_ready_then_ok) ... ok
+test_export_internal_marker_rejected (tests.test_export.GetExportZeroWriteTests.test_export_internal_marker_rejected) ... ok
+test_export_md_and_json_whitelist (tests.test_export.GetExportZeroWriteTests.test_export_md_and_json_whitelist) ... ok
+test_forged_ready_rejected_and_state_unchanged (tests.test_export.GetExportZeroWriteTests.test_forged_ready_rejected_and_state_unchanged) ... ok
+test_get_export_not_ready_409_does_not_write (tests.test_export.GetExportZeroWriteTests.test_get_export_not_ready_409_does_not_write) ... ok
+test_get_export_ready_does_not_write (tests.test_export.GetExportZeroWriteTests.test_get_export_ready_does_not_write) ... ok
+test_partial_then_full (tests.test_export.GetExportZeroWriteTests.test_partial_then_full) ... ok
+test_post_record_not_ready_409_and_no_write (tests.test_export.GetExportZeroWriteTests.test_post_record_not_ready_409_and_no_write) ... ok
+test_post_record_requires_csrf_and_writes_one_row (tests.test_export.GetExportZeroWriteTests.test_post_record_requires_csrf_and_writes_one_row) ... ok
+test_stamp_invalidates_old_export (tests.test_export.GetExportZeroWriteTests.test_stamp_invalidates_old_export) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 3.636s
+
+OK

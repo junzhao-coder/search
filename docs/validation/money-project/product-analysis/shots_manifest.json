@@ -1,0 +1,94 @@
+{
+ "shots": {
+  "desktop_collect.jpg": {
+   "file": "desktop_collect.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\workbench-ui\\shots\\desktop_collect.jpg",
+   "width": 1440,
+   "height": 900,
+   "bytes": 118430,
+   "sha256": "de72f123b8a58cb5e5c5563fc3107c36d2035f99ac776c5f0da083cd401d33b9",
+   "viewport": "1440x900",
+   "captured_utc": "2026-10-22T13:43:52Z"
+  },
+  "desktop_daily.jpg": {
+   "file": "desktop_daily.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\workbench-ui\\shots\\desktop_daily.jpg",
+   "width": 1440,
+   "height": 900,
+   "bytes": 78385,
+   "sha256": "c701c85eedc8541a6a3a9de7ada08ad2931122eb192f484c2c3e6ee123e401d8",
+   "viewport": "1440x900",
+   "captured_utc": "2026-10-22T13:43:52Z"
+  },
+  "desktop_index.jpg": {
+   "file": "desktop_index.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\workbench-ui\\shots\\desktop_index.jpg",
+   "width": 1440,
+   "height": 900,
+   "bytes": 128219,
+   "sha256": "0f229b00676f25d9f068717aef56a18a984a06af51a9f5e78db3a68f3c96a6d5",
+   "viewport": "1440x900",
+   "captured_utc": "2026-10-22T13:43:52Z"
+  },
+  "desktop_opportunities.jpg": {
+   "file": "desktop_opportunities.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\workbench-ui\\shots\\desktop_opportunities.jpg",
+   "width": 1440,
+   "height": 900,
+   "bytes": 128953,
+   "sha256": "5314fb359c3a05862d4b25ac96001a84bd9672195077d20f21a5cf010079b3aa",
+   "viewport": "1440x900",
+   "captured_utc": "2026-10-22T13:43:52Z"
+  },
+  "desktop_opportunities_expanded.jpg": {
+   "file": "desktop_opportunities_expanded.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\workbench-ui\\shots\\desktop_opportunities_expanded.jpg",
+   "width": 1440,
+   "height": 900,
+   "bytes": 181486,
+   "sha256": "2a2b92d45e2e74bea04cca31c11982fe821c5c095b4e8e28ccc6f6188a5e70bc",
+   "viewport": "1440x900",
+   "captured_utc": "2026-10-22T13:43:52Z"
+  },
+  "desktop_sources.jpg": {
+   "file": "desktop_sources.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\workbench-ui\\shots\\desktop_sources.jpg",
+   "width": 1440,
+   "height": 900,
+   "bytes": 126919,
+   "sha256": "eda86bc9be96280721e7a47e0067a4a492665fdb145c587d0b05434d50fd9257",
+   "viewport": "1440x900",
+   "captured_utc": "2026-10-22T13:43:52Z"
+  },
+  "mobile_index.jpg": {
+   "file": "mobile_index.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\workbench-ui\\shots\\mobile_index.jpg",
+   "width": 390,
+   "height": 844,
+   "bytes": 45546,
+   "sha256": "4b88a33fd8f0ca093c58b6fde0e98f86ebbe341745a0b7d1385b9a220b4a9ced",
+   "viewport": "390x844",
+   "captured_utc": "2026-10-22T13:43:52Z"
+  },
+  "mobile_opportunities.jpg": {
+   "file": "mobile_opportunities.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\workbench-ui\\shots\\mobile_opportunities.jpg",
+   "width": 390,
+   "height": 844,
+   "bytes": 45779,
+   "sha256": "d602aebcdf63ff77bce3eaeb842c3a1c879f410006bc08764545640d86538b6b",
+   "viewport": "390x844",
+   "captured_utc": "2026-10-22T13:43:52Z"
+  },
+  "mobile_sources.jpg": {
+   "file": "mobile_sources.jpg",
+   "path": "D:\\桌面\\two\\docs\\validation\\money-project\\workbench-ui\\shots\\mobile_sources.jpg",
+   "width": 390,
+   "height": 844,
+   "bytes": 47509,
+   "sha256": "f80fc14da7fb0cdc5373b38447e2ea524ab33a38923efe587bb81189718f6fd7",
+   "viewport": "390x844",
+   "captured_utc": "2026-10-22T13:43:52Z"
+  }
+ }
+}

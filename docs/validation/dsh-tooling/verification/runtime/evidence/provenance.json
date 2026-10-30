@@ -1,0 +1,63 @@
+{
+  "agent_reach": {
+    "upstream": "https://github.com/Panniantong/Agent-Reach",
+    "commit": "94f06c1969dfc1834001269d79d3ad0972d9dee6",
+    "commit_local_metadata_match": true,
+    "version": "1.5.0",
+    "direct_url": {
+      "archive_info": {
+        "hash": "sha256=d608cc619e460ca982dc11ab72897677837c8d73ea23851026c6374cff864f93",
+        "hashes": {
+          "sha256": "d608cc619e460ca982dc11ab72897677837c8d73ea23851026c6374cff864f93"
+        }
+      },
+      "url": "https://codeload.github.com/Panniantong/Agent-Reach/tar.gz/94f06c1969dfc1834001269d79d3ad0972d9dee6"
+    },
+    "module": {
+      "imported": true,
+      "file": "C:\\Users\\19183\\.agent-reach-venv\\Lib\\site-packages\\agent_reach\\__init__.py",
+      "version_attr": "1.5.0"
+    },
+    "python": {
+      "version": "3.12.10",
+      "executable": "C:\\Users\\19183\\.agent-reach-venv\\Scripts\\python.exe",
+      "prefix": "C:\\Users\\19183\\.agent-reach-venv",
+      "base_prefix": "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python312",
+      "in_venv": true
+    },
+    "license": "MIT (LICENSE file hash e94c131a...)"
+  },
+  "stealth_browser_mcp": {
+    "upstream": "https://github.com/vibheksoni/stealth-browser-mcp",
+    "declared_commit": "aa6cc9f6f853d6cbc17e4dc9b7946d406caabc6f",
+    "commit_api_verified": true,
+    "commit_api": {
+      "sha": "aa6cc9f6f853d6cbc17e4dc9b7946d406caabc6f",
+      "html_url": "https://github.com/vibheksoni/stealth-browser-mcp/commit/aa6cc9f6f853d6cbc17e4dc9b7946d406caabc6f",
+      "commit_message_first_line": "Merge pull request #37 from bepcyc/fix/mcp-screenshot-content",
+      "commit_date": "2026-10-19T19:23:19Z"
+    },
+    "pyproject_version": "0.2.5",
+    "package_dist_installed": false,
+    "note": "run from source tree; package metadata not installed as a distribution",
+    "mcp_library_version": "1.30.0",
+    "fastmcp_version": "2.11.2",
+    "nodriver_version": "0.47.0",
+    "pydantic_version": "2.11.7",
+    "python": {
+      "version": "3.10.9",
+      "executable": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\Scripts\\python.exe",
+      "prefix": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv",
+      "base_prefix": "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python310",
+      "in_venv": true
+    },
+    "license": "MIT (pyproject)"
+  },
+  "dsh": {
+    "name": "@deepseek-ai/dsh-desktop-runtime",
+    "version": "0.2.1-rc.2",
+    "mcp_client_name": "@deepseek-ai/dsh-mcp-client",
+    "mcp_client_version": "0.2.1-rc.2"
+  },
+  "no_accounts_cookies_keys_read": true
+}

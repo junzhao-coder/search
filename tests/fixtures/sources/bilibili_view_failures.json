@@ -1,0 +1,100 @@
+{
+  "_fixture": {
+    "kind": "synthetic_failures",
+    "is_real_log": false,
+    "note": "全部为合成失败样本，仅覆盖失败映射分支；不是任何真实请求日志或抓包结果。映射口径：先判显式登录标记（login_redirect=true，或 final_url 路径中存在精确的 login 路径段）-> blocked_login（/login-tips、/loginx 等相似路径不判登录）；再判显式 transport error（timeout -> timeout，cross_origin_redirect / html_shell -> failed）；app_code 与 payload.code 只接受 int（bool 视为非法）否则 failed/unexpected_response；HTTP 412 / code -412 -> rate_limited（保留原始原因，不推断限流阈值、不声称 HTTP 429）；code -101 -> blocked_login；普通 401/403 不视为登录，归 failed；未知 HTTP 留 null",
+    "used_by": "tests/sources/test_bilibili_view.py"
+  },
+  "cases": {
+    "rate_limited_412": {
+      "http_status": 412,
+      "app_code": -412,
+      "app_message": "request was banned",
+      "error": null,
+      "payload": {
+        "code": -412,
+        "message": "request was banned",
+        "ttl": 1
+      }
+    },
+    "login_redirect_200": {
+      "http_status": 200,
+      "app_code": null,
+      "app_message": null,
+      "error": null,
+      "login_redirect": true,
+      "final_url": "https://passport.bilibili.com/login?gourl=https%3A%2F%2Fwww.bilibili.com%2F",
+      "payload": null
+    },
+    "login_final_url_only": {
+      "http_status": 200,
+      "app_code": null,
+      "app_message": null,
+      "error": null,
+      "login_redirect": false,
+      "final_url": "https://passport.bilibili.com/login?gourl=x",
+      "payload": null
+    },
+    "login_path_segment": {
+      "http_status": 200,
+      "app_code": null,
+      "app_message": null,
+      "error": null,
+      "login_redirect": false,
+      "final_url": "https://www.bilibili.com/users/account/login",
+      "payload": null
+    },
+    "http_401_plain": {
+      "http_status": 401,
+      "app_code": null,
+      "app_message": "unauthorized",
+      "error": null,
+      "payload": null
+    },
+    "http_403_plain": {
+      "http_status": 403,
+      "app_code": null,
+      "app_message": "forbidden",
+      "error": null,
+      "payload": null
+    },
+    "html_shell": {
+      "http_status": 200,
+      "app_code": null,
+      "app_message": null,
+      "error": "html_shell",
+      "payload": "<!DOCTYPE html><html><body>验证码_哔哩哔哩</body></html>"
+    },
+    "timeout": {
+      "http_status": null,
+      "app_code": null,
+      "app_message": null,
+      "error": "timeout",
+      "payload": null
+    },
+    "missing_62002": {
+      "http_status": 200,
+      "app_code": 62002,
+      "app_message": "稿件不可见",
+      "error": null,
+      "payload": {
+        "code": 62002,
+        "message": "稿件不可见"
+      }
+    },
+    "cross_origin_redirect": {
+      "http_status": null,
+      "app_code": null,
+      "app_message": null,
+      "error": "cross_origin_redirect",
+      "payload": null
+    },
+    "server_error_500": {
+      "http_status": 500,
+      "app_code": null,
+      "app_message": "internal error",
+      "error": null,
+      "payload": null
+    }
+  }
+}

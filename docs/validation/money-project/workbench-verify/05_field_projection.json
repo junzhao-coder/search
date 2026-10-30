@@ -1,0 +1,256 @@
+{
+  "utc": "2026-10-22T13:03:17Z",
+  "base": "http://127.0.0.1:5017",
+  "rows": [
+    {
+      "label": "classified",
+      "item_id": "x:1747215882965979516",
+      "status": 200,
+      "csv": {
+        "title": "work! adaaa yang butuh template notion buat ngedata lamaran kerja yang kita apply? sender habis bikin versi nya sender, ",
+        "total_score": "0.728621",
+        "demand_norm": "0.896552",
+        "demand_raw": "3577.0",
+        "sellability_norm": "0.5",
+        "sellability_reason": "无价格/购买入口/赠送信号，按中性"
+      },
+      "expected": {
+        "product_type": "求职简历资料",
+        "positioning": "求职简历资料，面向求职者，交付形态为简历/求职排版与投递资料（可编辑文件）；载体为 Notion 模板（可复制到自己的工作区）",
+        "why": [
+          "需求位于本平台样本第 90% 分位（平台内百分位，原始需求值 3577）",
+          "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+          "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+        ],
+        "risks": [
+          "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+          "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+        ],
+        "sell_chip": "不明确 50",
+        "sell_bucket": "不明确",
+        "sell_display": "50",
+        "commercial_form": "无价格信号",
+        "demand_tier": "高"
+      },
+      "profile_row": {
+        "product_type": "求职简历资料",
+        "positioning": "求职简历资料，面向求职者，交付形态为简历/求职排版与投递资料（可编辑文件）；载体为 Notion 模板（可复制到自己的工作区）",
+        "why": [
+          "需求位于本平台样本第 90% 分位（平台内百分位，原始需求值 3577）",
+          "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+          "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+        ],
+        "risks": [
+          "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+          "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+        ],
+        "commercial_form": "无价格信号",
+        "demand_tier": "高"
+      },
+      "checks": {
+        "http_200": true,
+        "positioning_on_page": true,
+        "positioning_matches_profile": true,
+        "why_all_on_page": true,
+        "why_matches_profile": true,
+        "risks_all_on_page": true,
+        "risks_match_profile": true,
+        "total_score_on_page": true,
+        "sell_chip_on_page": true,
+        "sell_reason_on_page": true,
+        "product_type_on_page": true,
+        "unclassified_not_named_category": true
+      },
+      "all_pass": true,
+      "html_sample": "<tr><th scope=\"col\">排名</th><th scope=\"col\">产品定位（是什么 / 给谁用 / 交付形态）</th><th scope=\"col\">选择理由（挂真实指标）</th><th scope=\"col\">主要风险（来自实际字段）</th><th scope=\"col\">评分</th><th scope=\"col\">可售性</th></tr>"
+    },
+    {
+      "label": "unclassified_demand100",
+      "item_id": "x:1467843989533442054",
+      "status": 200,
+      "csv": {
+        "title": "•ଓ.° template notion •ଓ.° — a thread by me *̥₊˚‧☆ﾐ",
+        "total_score": "0.755",
+        "demand_norm": "1.0",
+        "demand_raw": "5968.0",
+        "sellability_norm": "0.5",
+        "sellability_reason": "无价格/购买入口/赠送信号，按中性"
+      },
+      "expected": {
+        "product_type": "未分类",
+        "positioning": "无价格信号（可售性 50（未达可售））的高需求线索（需求分位 100%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+        "why": [
+          "需求位于本平台样本第 100% 分位（平台内百分位，原始需求值 5968）",
+          "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+          "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+        ],
+        "risks": [
+          "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+          "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+        ],
+        "sell_chip": "不明确 50",
+        "sell_bucket": "不明确",
+        "sell_display": "50",
+        "commercial_form": "无价格信号",
+        "demand_tier": "高"
+      },
+      "profile_row": {
+        "product_type": "未分类",
+        "positioning": "无价格信号（可售性 50（未达可售））的高需求线索（需求分位 100%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+        "why": [
+          "需求位于本平台样本第 100% 分位（平台内百分位，原始需求值 5968）",
+          "可售性 50（不明确）：无价格/购买入口/赠送信号，按中性",
+          "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+        ],
+        "risks": [
+          "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+          "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+        ],
+        "commercial_form": "无价格信号",
+        "demand_tier": "高"
+      },
+      "checks": {
+        "http_200": true,
+        "positioning_on_page": true,
+        "positioning_matches_profile": true,
+        "why_all_on_page": true,
+        "why_matches_profile": true,
+        "risks_all_on_page": true,
+        "risks_match_profile": true,
+        "total_score_on_page": true,
+        "sell_chip_on_page": true,
+        "sell_reason_on_page": true,
+        "product_type_on_page": true,
+        "unclassified_not_named_category": true
+      },
+      "all_pass": true,
+      "html_sample": "<tr><th scope=\"col\">排名</th><th scope=\"col\">产品定位（是什么 / 给谁用 / 交付形态）</th><th scope=\"col\">选择理由（挂真实指标）</th><th scope=\"col\">主要风险（来自实际字段）</th><th scope=\"col\">评分</th><th scope=\"col\">可售性</th></tr>"
+    },
+    {
+      "label": "unclassified_low_sell",
+      "item_id": "bili:BV1qWVRzaEVY",
+      "status": 200,
+      "csv": {
+        "title": "Notion 安卓手机 免费下载安装方法 一起高效起来",
+        "total_score": "0.556987",
+        "demand_norm": "0.842105",
+        "demand_raw": "11039.0",
+        "sellability_norm": "0.1",
+        "sellability_reason": "含 free/赠送/领取/求推荐等低可售词"
+      },
+      "expected": {
+        "product_type": "未分类",
+        "positioning": "免费引流（可售性 10）的高需求线索（需求分位 84%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+        "why": [
+          "需求位于本平台样本第 84% 分位（平台内百分位，原始需求值 11039）",
+          "可售性 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+          "毛利估算 52%，区间 35%–70%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+        ],
+        "risks": [
+          "可售性仅 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+          "毛利低置信：区间宽度 35%（35%–70%），估计范围过宽"
+        ],
+        "sell_chip": "低信号 10",
+        "sell_bucket": "低信号",
+        "sell_display": "10",
+        "commercial_form": "免费引流",
+        "demand_tier": "高"
+      },
+      "profile_row": {
+        "product_type": "未分类",
+        "positioning": "免费引流（可售性 10）的高需求线索（需求分位 84%），品类待确认，需人工打开原始链接判断交付形态；载体为 Notion 模板（可复制到自己的工作区）",
+        "why": [
+          "需求位于本平台样本第 84% 分位（平台内百分位，原始需求值 11039）",
+          "可售性 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+          "毛利估算 52%，区间 35%–70%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+        ],
+        "risks": [
+          "可售性仅 10（低信号）：含 free/赠送/领取/求推荐等低可售词",
+          "毛利低置信：区间宽度 35%（35%–70%），估计范围过宽"
+        ],
+        "commercial_form": "免费引流",
+        "demand_tier": "高"
+      },
+      "checks": {
+        "http_200": true,
+        "positioning_on_page": true,
+        "positioning_matches_profile": true,
+        "why_all_on_page": true,
+        "why_matches_profile": true,
+        "risks_all_on_page": true,
+        "risks_match_profile": true,
+        "total_score_on_page": true,
+        "sell_chip_on_page": true,
+        "sell_reason_on_page": true,
+        "product_type_on_page": true,
+        "unclassified_not_named_category": true
+      },
+      "all_pass": true,
+      "html_sample": "<tr><th scope=\"col\">排名</th><th scope=\"col\">产品定位（是什么 / 给谁用 / 交付形态）</th><th scope=\"col\">选择理由（挂真实指标）</th><th scope=\"col\">主要风险（来自实际字段）</th><th scope=\"col\">评分</th><th scope=\"col\">可售性</th></tr>"
+    },
+    {
+      "label": "sellability_0_85",
+      "item_id": "x:1824402140070285653",
+      "status": 200,
+      "csv": {
+        "title": "˗ˋˏ°• notion template for your class! •°ˎˊ˗ here's the notion template as requested by everyone! I'm selling it for 5 ph",
+        "total_score": "0.763534",
+        "demand_norm": "0.827586",
+        "demand_raw": "1592.0",
+        "sellability_norm": "0.85",
+        "sellability_reason": "含明确售价（¥/$/selling for 等）"
+      },
+      "expected": {
+        "product_type": "学习或生活规划模板",
+        "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）；载体为 Notion 模板（可复制到自己的工作区）",
+        "why": [
+          "需求位于本平台样本第 83% 分位（平台内百分位，原始需求值 1592）",
+          "可售性 85（较强售卖）：含明确售价（¥/$/selling for 等）",
+          "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+        ],
+        "risks": [
+          "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+          "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+        ],
+        "sell_chip": "较强售卖 85",
+        "sell_bucket": "较强售卖",
+        "sell_display": "85",
+        "commercial_form": "可售",
+        "demand_tier": "高"
+      },
+      "profile_row": {
+        "product_type": "学习或生活规划模板",
+        "positioning": "学习或生活规划模板，面向学生，交付形态为学习/生活规划模板（可复制的页面或文档）；载体为 Notion 模板（可复制到自己的工作区）",
+        "why": [
+          "需求位于本平台样本第 83% 分位（平台内百分位，原始需求值 1592）",
+          "可售性 85（较强售卖）：含明确售价（¥/$/selling for 等）",
+          "毛利估算 82%，区间 70%–95%（模型假设；价格信号 20 条样本（有效价 1.0–1.88））"
+        ],
+        "risks": [
+          "竞争偏密：稀疏度仅 40%（低于 50% 阈值，同质供给多）",
+          "成本缺失：无公开成本输入，毛利 82% 为假设区间而非实测"
+        ],
+        "commercial_form": "可售",
+        "demand_tier": "高"
+      },
+      "checks": {
+        "http_200": true,
+        "positioning_on_page": true,
+        "positioning_matches_profile": true,
+        "why_all_on_page": true,
+        "why_matches_profile": true,
+        "risks_all_on_page": true,
+        "risks_match_profile": true,
+        "total_score_on_page": true,
+        "sell_chip_on_page": true,
+        "sell_reason_on_page": true,
+        "product_type_on_page": true,
+        "unclassified_not_named_category": true
+      },
+      "all_pass": true,
+      "html_sample": "<tr><th scope=\"col\">排名</th><th scope=\"col\">产品定位（是什么 / 给谁用 / 交付形态）</th><th scope=\"col\">选择理由（挂真实指标）</th><th scope=\"col\">主要风险（来自实际字段）</th><th scope=\"col\">评分</th><th scope=\"col\">可售性</th></tr>"
+    }
+  ],
+  "pass": 4,
+  "total": 4
+}

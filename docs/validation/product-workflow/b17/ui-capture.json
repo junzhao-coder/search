@@ -1,0 +1,39 @@
+{
+  "utc": "2026-10-24T04:35:15Z",
+  "base": "http://127.0.0.1:5015",
+  "method": "HTTP GET read-only (no POST, no DB write); HTML stripped to plain text",
+  "pages": [
+    {
+      "name": "worksheet-new",
+      "path": "/worksheet/new",
+      "status": 200,
+      "bytes": 4659,
+      "text_lines": 56,
+      "file": "ui-worksheet-new.txt"
+    },
+    {
+      "name": "worksheet-list",
+      "path": "/worksheet",
+      "status": 200,
+      "bytes": 2908,
+      "text_lines": 34,
+      "file": "ui-worksheet-list.txt"
+    },
+    {
+      "name": "worksheet-detail",
+      "path": "/worksheet/wo:20261023-88ef9a66",
+      "status": 200,
+      "bytes": 17199,
+      "text_lines": 276,
+      "file": "ui-worksheet-detail.txt"
+    },
+    {
+      "name": "worksheet-edit",
+      "path": "/worksheet/wo:20261023-88ef9a66/edit",
+      "status": 200,
+      "bytes": 4771,
+      "text_lines": 56,
+      "file": "ui-worksheet-edit.txt"
+    }
+  ]
+}

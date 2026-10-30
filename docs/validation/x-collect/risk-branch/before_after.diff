@@ -1,0 +1,243 @@
+--- before_x_collect.py
++++ after_x_collect.py
+@@ -14,6 +14,7 @@
+ import os
+ import pathlib
+ import random
++import re
+ import sys
+ import time
+ from urllib.parse import quote, urlparse
+@@ -147,8 +148,23 @@
+ 
+ RISK_JS = r"""
+ (() => {
+-  const t = document.body ? document.body.innerText : '';
+-  return /Something went wrong|Rate limit|rate limit|Verify you are human|captcha|Challenge|尝试过多|出错了/i.test(t);
++  const visible = (el) => {
++    if (!el) return false;
++    const style = window.getComputedStyle(el);
++    if (style.display === 'none' || style.visibility === 'hidden') return false;
++    const r = el.getBoundingClientRect();
++    return r.width > 0 && r.height > 0;
++  };
++  const toasts = [...document.querySelectorAll('[role="alert"], [data-testid="toast"]')]
++    .filter(visible);
++  const toast = toasts.map((el) => el.innerText || '').join(' | ').slice(0, 500);
++  const captcha = [...document.querySelectorAll(
++    'iframe[src*="captcha" i], iframe[src*="arkose" i], [data-testid*="captcha" i], [id*="captcha" i]'
++  )].some(visible);
++  const error_page = [...document.querySelectorAll(
++    '[data-testid="error-detail"], [data-testid="errorPage"]'
++  )].some(visible);
++  return {toast: toast, captcha: captcha, error_page: error_page, url: location.href};
+ })()
+ """
+ 
+@@ -178,6 +194,26 @@
+ 
+ 
+ 
++RISK_TOAST_RE = re.compile(
++    r"something went wrong|rate limit|too many requests|verify you are human|challenge required|captcha",
++    re.IGNORECASE,
++)
++
++
++def risk_from_signals(signals: dict) -> bool:
++    """Pure predicate: structured DOM signals -> risk boolean.
++
++    Normal tweet text is never inspected here; only visible toast/alert text,
++    captcha containers, and X error-page containers count.
++    """
++    if not isinstance(signals, dict):
++        return False
++    if signals.get("captcha") or signals.get("error_page"):
++        return True
++    toast = str(signals.get("toast") or "")
++    return bool(RISK_TOAST_RE.search(toast))
++
++
+ def utc() -> str:
+     return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+ 
+@@ -236,7 +272,7 @@
+         log.write(f"BROWSER_STOP_ERROR={type(exc).__name__}")
+ 
+ 
+-async def _start(headless: bool, log: RunLog):
++async def _start(headless: bool, log: RunLog, profile: pathlib.Path | None = None):
+     args = ["--disable-blink-features=AutomationControlled"]
+     proxy = system_proxy()
+     if proxy:
+@@ -245,7 +281,7 @@
+     else:
+         log.write("PROXY=none (direct)")
+     return await uc.start(
+-        user_data_dir=str(PROFILE),
++        user_data_dir=str(profile or PROFILE),
+         browser_executable_path=CHROME,
+         headless=headless,
+         browser_args=args,
+@@ -313,9 +349,9 @@
+     return False
+ 
+ 
+-async def _doctor_once(headed: bool, log: RunLog) -> int:
++async def _doctor_once(headed: bool, log: RunLog, profile: pathlib.Path | None = None) -> int:
+     log.write(f"START doctor headed={headed} profile={PROFILE}")
+-    browser = await _start(headless=not headed, log=log)
++    browser = await _start(headless=not headed, log=log, profile=profile)
+     try:
+         tab = await browser.get(HOME_URL)
+         href = ""
+@@ -359,11 +395,11 @@
+             log.write(f"BROWSER_STOP_ERROR={type(exc).__name__}")
+ 
+ 
+-def _cookie_auth() -> dict:
++def _cookie_auth(profile: pathlib.Path | None = None) -> dict:
+     """Read cookie metadata only (names/counts), never values."""
+     import sqlite3
+ 
+-    path = PROFILE / "Default" / "Network" / "Cookies"
++    path = (profile or PROFILE) / "Default" / "Network" / "Cookies"
+     info = {"path": str(path), "exists": path.exists(), "auth_token": False, "ct0": False,
+             "x_rows": 0}
+     if not path.exists():
+@@ -384,17 +420,17 @@
+     return info
+ 
+ 
+-async def doctor_async(headed: bool, log: RunLog) -> int:
+-    meta = _cookie_auth()
++async def doctor_async(headed: bool, log: RunLog, profile: pathlib.Path | None = None) -> int:
++    meta = _cookie_auth(profile)
+     log.write(f"COOKIE_CHECK exists={meta['exists']} x_rows={meta['x_rows']} "
+               f"auth_token={meta['auth_token']} ct0={meta['ct0']}")
+     if not (meta["auth_token"] and meta["ct0"]):
+         log.write("SESSION_EXPIRED (no auth cookies in profile; browser not launched)")
+         return SESSION_EXPIRED
+-    code = await _doctor_once(headed, log)
++    code = await _doctor_once(headed, log, profile=profile)
+     if code == ERROR and not headed:
+         log.write("HEADLESS_BLOCKED_OR_UNKNOWN -> retry headed once")
+-        code = await _doctor_once(True, log)
++        code = await _doctor_once(True, log, profile=profile)
+     return code
+ 
+ 
+@@ -472,11 +508,14 @@
+             fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+ 
+ 
+-def _save_error(kind: str, url: str, title: str, body: str, log: RunLog) -> str:
++def _save_error(kind: str, url: str, title: str, body: str, log: RunLog,
++                signals: dict | None = None) -> str:
+     ERRORS.mkdir(parents=True, exist_ok=True)
+     path = ERRORS / f"{kind}-{utc().replace(':', '')}.txt"
+     text = (f"utc={utc()}\nkind={kind}\nurl={url}\ntitle={title}\n"
+             f"body_excerpt={body[:2000]}\n")
++    if signals is not None:
++        text += f"signals={json.dumps(signals, ensure_ascii=False)}\n"
+     path.write_text(text, encoding="utf-8", newline="\n")
+     log.write(f"ERROR_FRAGMENT={path}")
+     return str(path)
+@@ -534,28 +573,39 @@
+         log.write(f"SESSION_EXPIRED href={href}")
+         return SESSION_EXPIRED
+     try:
+-        risk = bool(_decode_cdp(await tab.evaluate(RISK_JS)))
++        signals = _decode_cdp(await tab.evaluate(RISK_JS))
++        if not isinstance(signals, dict):
++            signals = {}
+     except Exception:  # noqa: BLE001
+-        risk = False
+-    if risk:
++        signals = {}
++    if risk_from_signals(signals):
+         try:
+             body = str(_decode_cdp(await tab.evaluate(BODY_JS)) or "")
+         except Exception:  # noqa: BLE001
+             body = ""
+-        _save_error(kind, href, title, body, log)
+-        log.write(f"RISK_CONTROL href={href} title={title!r}")
++        _save_error(kind, href, title, body, log, signals=signals)
++        log.write(f"RISK_CONTROL href={href} title={title!r} signals={json.dumps(signals, ensure_ascii=False)}")
+         return ERROR
+     return None
+ 
+ 
+ async def _collect_async(kind: str, url: str, limit: int, keyword: str | None,
+                          with_replies: bool, interval_min: int, interval_max: int,
+-                         log: RunLog) -> int:
+-    meta = _cookie_auth()
++                         log: RunLog, profile: pathlib.Path | None = None,
++                         risk_fixture: dict | None = None) -> int:
++    meta = _cookie_auth(profile)
+     log.write(f"COOKIE_CHECK x_rows={meta['x_rows']} auth_token={meta['auth_token']} ct0={meta['ct0']}")
+     if not (meta["auth_token"] and meta["ct0"]):
+         log.write("SESSION_EXPIRED (no auth cookies in profile; browser not launched)")
+         return SESSION_EXPIRED
++    if risk_fixture is not None:
++        if risk_from_signals(risk_fixture):
++            _save_error(kind, f"fixture://{keyword or ''}", "risk-fixture", "", log,
++                        signals=risk_fixture)
++            log.write(f"RISK_CONTROL_FIXTURE={json.dumps(risk_fixture, ensure_ascii=False)}")
++            return ERROR
++        log.write("RISK_FIXTURE_NOT_RISK")
++
+     DATA.mkdir(parents=True, exist_ok=True)
+     seen = _load_seen()
+     batch_ids: set[str] = set()
+@@ -567,7 +617,7 @@
+     started = time.monotonic()
+     started_utc = utc()
+     log.write(f"START collect kind={kind} url={url} limit={limit} interval={interval_min}-{interval_max}s")
+-    browser = await _start(headless=True, log=log)
++    browser = await _start(headless=True, log=log, profile=profile)
+     try:
+         tab = await browser.get(url)
+         await asyncio.sleep(4)
+@@ -674,6 +724,7 @@
+     d = sub.add_parser("doctor", help="check X session in the dedicated profile")
+     d.add_argument("--headed", action="store_true", help="run Chrome headed instead of headless")
+     d.add_argument("--timeout", type=int, default=90)
++    d.add_argument("--profile", help="override user-data-dir (testing only)")
+     lg = sub.add_parser("login", help="open a visible Chrome for the user to log in once")
+     lg.add_argument("--timeout", type=int, default=1200, help="max seconds to wait (<=1200)")
+     s = sub.add_parser("search", help="collect public tweets from x.com search (read-only)")
+@@ -681,6 +732,8 @@
+     s.add_argument("--limit", type=int, default=20)
+     s.add_argument("--interval-min", type=int, default=8)
+     s.add_argument("--interval-max", type=int, default=12)
++    s.add_argument("--profile", help="override user-data-dir (testing only)")
++    s.add_argument("--risk-fixture", help="JSON fixture signals for controlled exit=3 test")
+     u = sub.add_parser("user", help="collect recent public tweets from a profile (read-only)")
+     u.add_argument("--handle", required=True)
+     u.add_argument("--limit", type=int, default=20)
+@@ -698,7 +751,8 @@
+     log.write(f"CMD={' '.join(sys.argv)} CWD={os.getcwd()} UTC={utc()}")
+     try:
+         if args.command == "doctor":
+-            code = asyncio.run(asyncio.wait_for(doctor_async(args.headed, log), timeout=args.timeout))
++            prof = pathlib.Path(args.profile) if args.profile else None
++            code = asyncio.run(asyncio.wait_for(doctor_async(args.headed, log, profile=prof), timeout=args.timeout))
+         elif args.command == "login":
+             timeout = min(max(args.timeout, 30), 1200)
+             code = asyncio.run(asyncio.wait_for(login_async(timeout, log), timeout=timeout + 120))
+@@ -713,8 +767,13 @@
+                     code = 4
+                 else:
+                     url = f"https://x.com/search?q={quote(keyword)}&f=live"
++                    prof = pathlib.Path(args.profile) if args.profile else None
++                    fixture = None
++                    if args.risk_fixture:
++                        fixture = json.loads(pathlib.Path(args.risk_fixture).read_text(encoding="utf-8"))
+                     code = asyncio.run(asyncio.wait_for(
+-                        _collect_async("search", url, limit, keyword, False, imin, imax, log),
++                        _collect_async("search", url, limit, keyword, False, imin, imax, log,
++                                       profile=prof, risk_fixture=fixture),
+                         timeout=MAX_SECONDS + 180))
+             elif args.command == "user":
+                 handle = args.handle.strip().lstrip("@")

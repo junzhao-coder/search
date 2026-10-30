@@ -1,0 +1,19 @@
+{
+ "generated_utc": "2026-10-24T11:53:32Z",
+ "port": 5026,
+ "shots": {
+  "pick_continue_block.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 108078,
+   "url": "/pick",
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "cb8917ebde088a8a8e9b2efb0855a7ef03ae0e006f78a446f1b67b6e34bf6e10"
+  }
+ },
+ "workorder_ids": [
+  "wo:20261024-7b23cdf8",
+  "wo:20261024-de434d48"
+ ]
+}

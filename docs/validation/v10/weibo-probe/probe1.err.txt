@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\桌面\two\tools\selection\access\weibo.py", line 715, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "D:\桌面\two\tools\selection\access\weibo.py", line 678, in main
+    payload = run_search(args.keyword, batch=batch, transport=transport,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\two\tools\selection\access\weibo.py", line 410, in run_search
+    result = transport.fetch(url)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\two\tools\selection\access\transport.py", line 197, in fetch
+    browser = self._ensure_browser(deadline)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\two\tools\selection\access\transport.py", line 171, in _ensure_browser
+    self._browser = loop.run_until_complete(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\19183\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\19183\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "D:\桌面\two\tools\selection\access\transport.py", line 164, in _start
+    return await uc.start(headless=self.headless,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\19183\.dsh\tools\x-collect\venv\Lib\site-packages\nodriver\core\util.py", line 103, in start
+    return await Browser.create(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\19183\.dsh\tools\x-collect\venv\Lib\site-packages\nodriver\core\browser.py", line 95, in create
+    await instance.start()
+  File "C:\Users\19183\.dsh\tools\x-collect\venv\Lib\site-packages\nodriver\core\browser.py", line 382, in start
+    raise Exception(
+Exception: 
+                ---------------------
+                Failed to connect to browser
+                ---------------------
+                One of the causes could be when you are running as root.
+                In that case you need to pass no_sandbox=True 
+                

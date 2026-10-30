@@ -1,0 +1,25 @@
+python.exe : test_as_of_and_limit_are_honored (__main__.ExportDailyTest.test_as_of_and_limit_are_honored) ... ok
+所在位置 行:1 字符: 481
++ ... alse); $o = & $py -X utf8 -m tests.tools.test_export_daily -v 2>&1; $ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_as_of_and_...honored) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_cli_rejects_bad_as_of_and_instance_out_dir (__main__.ExportDailyTest.test_cli_rejects_bad_as_of_and_instance_out_d
+ir) ... ok
+test_cli_requires_as_of (__main__.ExportDailyTest.test_cli_requires_as_of) ... ok
+test_cli_success_writes_files (__main__.ExportDailyTest.test_cli_success_writes_files) ... ok
+test_export_is_read_only (__main__.ExportDailyTest.test_export_is_read_only) ... ok
+test_exports_json_and_csv_utf8 (__main__.ExportDailyTest.test_exports_json_and_csv_utf8) ... ok
+test_instance_input_is_readonly_allowed (__main__.ExportDailyTest.test_instance_input_is_readonly_allowed)
+输入库允许 instance/app.db：用 tmp 构造 instance 目录并 monkeypatch ROOT 指向，不读真实业务库。 ... ok
+test_out_dir_custom_created (__main__.ExportDailyTest.test_out_dir_custom_created) ... ok
+test_rejects_instance_out_dir (__main__.ExportDailyTest.test_rejects_instance_out_dir) ... ok
+test_rejects_missing_database (__main__.ExportDailyTest.test_rejects_missing_database) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 3.061s
+
+OK
+
+module_exit=0

@@ -1,0 +1,1 @@
+"""Core rule tests package."""

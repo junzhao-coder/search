@@ -1,0 +1,18 @@
+﻿[
+    {
+        "name":  "workbench_all",
+        "argv":  "-X utf8 -m unittest discover -s tests -t .",
+        "cwd":  "D:\\桌面\\two\\tools\\workbench",
+        "returncode":  0,
+        "recorded_utc":  "2026-10-24T12:23:50Z",
+        "summary":  "Ran 210 tests - OK"
+    },
+    {
+        "name":  "project_full",
+        "argv":  "-X utf8 -m unittest discover -s tests",
+        "cwd":  "D:\\桌面\\two",
+        "returncode":  0,
+        "recorded_utc":  "2026-10-24T12:23:50Z",
+        "summary":  "Ran 334 tests - OK"
+    }
+]

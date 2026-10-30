@@ -1,0 +1,72 @@
+{
+  "recorded_utc": "2026-10-21T13:50:57Z",
+  "recorded_local": "2026-10-21T21:50:57+08:00",
+  "session_id": "session-2ec5f901-e129-5a00-a488-80333567fa52",
+  "role": "Flow executor A (independent verifier, non-installer)",
+  "dsh_version_context": "0.2.1-rc.2 (per plan v4 / installer reports)",
+  "workspace": "D:\\桌面\\two",
+  "cwd": "D:\\桌面\\two",
+  "method": "direct observation of the tool schemas injected into this model step (the only call surface a model has)",
+  "tool_count": 21,
+  "tools": [
+    "flow_state",
+    "flow_task_update",
+    "flow_send",
+    "flow_peers",
+    "load_workspace_dependencies",
+    "read",
+    "write",
+    "edit",
+    "glob",
+    "grep",
+    "job_output",
+    "job_list",
+    "web_search",
+    "web_fetch",
+    "present",
+    "read_image",
+    "todo_write",
+    "get_goal",
+    "create_goal",
+    "update_goal",
+    "ask_user_question"
+  ],
+  "presence": {
+    "skill_tool": false,
+    "shell_or_exec_or_powershell": false,
+    "mcp_stealth_tools": false,
+    "list_mcp_resources_or_read_mcp_resource": false,
+    "plugin_manager": false,
+    "list_agents_or_send_message_or_subagent": false
+  },
+  "absent_expected_names": {
+    "skill": ["skill"],
+    "mcp_stealth": [
+      "mcp__stealth__spawn_browser",
+      "mcp__stealth__list_instances",
+      "mcp__stealth__close_instance",
+      "mcp__stealth__get_instance_state",
+      "mcp__stealth__navigate",
+      "mcp__stealth__get_page_content",
+      "mcp__stealth__take_screenshot",
+      "mcp__stealth__query_elements"
+    ]
+  },
+  "call_surface_note": "A model can only invoke functions present in this schema. skill / shell(exec) / mcp__stealth__* are not present, therefore no native call can be issued from this session; no call was faked and none was routed through scripts, other agents or Host.Tool.",
+  "flow_role_signal": {
+    "source": "flow_peers",
+    "self_allowCommands": false,
+    "other_executors_allowCommands": [true, true, true, true],
+    "interpretation": "Observable role-level setting of this executor session. Whether it is the sole cause of the missing shell/skill/MCP functions cannot be determined from inside this session."
+  },
+  "layer_separation": {
+    "catalog_visible": "PASS - agent-reach and stealth-browser-mcp entries are present in this session's available_skills catalog",
+    "registry_registered": "PASS (static) - stealth insert block is present in the live profile patch; Host-side Tool.listTools=21 was recorded by installer C, not re-observed here",
+    "model_function_exposed": "NOT-EXPOSED - absent from this session's schema",
+    "model_level_call": "PENDING - no call surface"
+  },
+  "limitations": [
+    "Absence proves not-exposed only. Role filtering vs session tool-table snapshot vs other causes are indistinguishable from inside this session.",
+    "No hash tool and no shell in this session, so no sha256 could be computed for files or evidence."
+  ]
+}

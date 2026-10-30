@@ -1,0 +1,57 @@
+[
+    {
+        "ProcessId":  120092,
+        "HasProfile":  true,
+        "Cmd":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --remote-allow-origins=* --no-first-run --no-service-autorun --no-default-browser-check --homepage=about:blank --no-pings --password-store=basic --disable-infobars --disable-breakpad --disable-dev-shm-usage --disable-session-crashed-bubble --disable-search-engine-choice-screen --user-data-dir=C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile --disable-session-crashed-bubble --disable-features=IsolateOrigins,site-per-process --disable-blink-features=AutomationControlled --proxy-server=http://127.0.0.1:10808 --remote-debugging-host=127.0.0.1 --remote-debugging-port=10055"
+    },
+    {
+        "ProcessId":  114952,
+        "HasProfile":  true,
+        "Cmd":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=crashpad-handler --user-data-dir=C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile /prefetch:4 --monitor-self-annotation=ptype=crashpad-handler --database=C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\\Crashpad --metrics-dir=C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=plat=Win64 --annotation=prod=Chrome --annotation=ver=155.0.8059.86 --initial-client-data=0x12c,0x130,0x134,0x108,0x138,0x7ffd51002ed0,0x7ffd51002ee0,0x7ffd51002ef0"
+    },
+    {
+        "ProcessId":  115496,
+        "HasProfile":  true,
+        "Cmd":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=gpu-process --gpu-recent-crash-count=0 --disable-breakpad --user-data-dir=\"C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\" --no-pre-read-main-dll --gpu-preferences=WAAAAAAAAADgAAAEAAAAAAAAAAAAAGAAQAAAAAAAAAADAAAAAAAAADgAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAoAAAAAAAAAAgAAAAAAAAAEAAAAAIAAAABAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --metrics-shmem-handle=1868,i,4568250713549550301,817283849099680144,262144 --field-trial-handle=1920,i,11544735094577269587,8263506928988105267,262144 --disable-features=IsolateOrigins,site-per-process --variations-seed-version --pseudonymization-salt-handle=1924,i,14926131269605931798,2732548895109782697,4 --trace-process-track-uuid=3190708988185955192 --mojo-platform-channel-handle=1876 /prefetch:2"
+    },
+    {
+        "ProcessId":  106108,
+        "HasProfile":  true,
+        "Cmd":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=zh-CN --service-sandbox-type=none --user-data-dir=\"C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\" --no-pre-read-main-dll --metrics-shmem-handle=2252,i,173285613532168549,11700848229815510968,524288 --field-trial-handle=1920,i,11544735094577269587,8263506928988105267,262144 --disable-features=IsolateOrigins,site-per-process --variations-seed-version --pseudonymization-salt-handle=1924,i,14926131269605931798,2732548895109782697,4 --trace-process-track-uuid=3190708989122997041 --mojo-platform-channel-handle=2248 /prefetch:11"
+    },
+    {
+        "ProcessId":  117164,
+        "HasProfile":  true,
+        "Cmd":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=utility --utility-sub-type=storage.mojom.StorageService --lang=zh-CN --service-sandbox-type=service --user-data-dir=\"C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\" --no-pre-read-main-dll --metrics-shmem-handle=2576,i,2252587859262417465,16723207033842964219,524288 --field-trial-handle=1920,i,11544735094577269587,8263506928988105267,262144 --disable-features=IsolateOrigins,site-per-process --variations-seed-version --pseudonymization-salt-handle=1924,i,14926131269605931798,2732548895109782697,4 --trace-process-track-uuid=3190708990060038890 --mojo-platform-channel-handle=2596 /prefetch:13"
+    },
+    {
+        "ProcessId":  113248,
+        "HasProfile":  true,
+        "Cmd":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=renderer --top-chrome-webui --user-data-dir=\"C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\" --no-pre-read-main-dll --disable-breakpad --remote-debugging-port=10055 --disable-blink-features=AutomationControlled --video-capture-use-gpu-memory-buffer --lang=zh-CN --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --launch-time-ticks=1354032729178 --metrics-shmem-handle=3876,i,7610907285532703082,13256248894561322612,1572864 --field-trial-handle=1920,i,11544735094577269587,8263506928988105267,262144 --disable-features=IsolateOrigins,site-per-process --variations-seed-version --pseudonymization-salt-handle=1924,i,14926131269605931798,2732548895109782697,4 --trace-process-track-uuid=3190708990997080739 --mojo-platform-channel-handle=3884 /prefetch:1"
+    },
+    {
+        "ProcessId":  115400,
+        "HasProfile":  true,
+        "Cmd":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=renderer --user-data-dir=\"C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\" --no-pre-read-main-dll --disable-breakpad --remote-debugging-port=10055 --disable-blink-features=AutomationControlled --video-capture-use-gpu-memory-buffer --lang=zh-CN --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=9 --launch-time-ticks=1354033127212 --metrics-shmem-handle=5808,i,4413901815949953320,16876947754251241610,1572864 --field-trial-handle=1920,i,11544735094577269587,8263506928988105267,262144 --disable-features=IsolateOrigins,site-per-process --variations-seed-version --pseudonymization-salt-handle=1924,i,14926131269605931798,2732548895109782697,4 --trace-process-track-uuid=3190708994745248135 --mojo-platform-channel-handle=5840 /prefetch:1"
+    },
+    {
+        "ProcessId":  127032,
+        "HasProfile":  true,
+        "Cmd":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=renderer --user-data-dir=\"C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\" --no-pre-read-main-dll --disable-breakpad --remote-debugging-port=10055 --disable-blink-features=AutomationControlled --video-capture-use-gpu-memory-buffer --lang=zh-CN --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=10 --launch-time-ticks=1354033481951 --metrics-shmem-handle=6016,i,5400959267849053619,14106155776625771393,1572864 --field-trial-handle=1920,i,11544735094577269587,8263506928988105267,262144 --disable-features=IsolateOrigins,site-per-process --variations-seed-version --pseudonymization-salt-handle=1924,i,14926131269605931798,2732548895109782697,4 --trace-process-track-uuid=3190708995682289984 --mojo-platform-channel-handle=6036 /prefetch:1"
+    },
+    {
+        "ProcessId":  121796,
+        "HasProfile":  true,
+        "Cmd":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=utility --utility-sub-type=audio.mojom.AudioService --lang=zh-CN --service-sandbox-type=audio --video-capture-use-gpu-memory-buffer --user-data-dir=\"C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\" --no-pre-read-main-dll --metrics-shmem-handle=5352,i,13270083236398347309,7975772470197095170,524288 --field-trial-handle=1920,i,11544735094577269587,8263506928988105267,262144 --disable-features=IsolateOrigins,site-per-process --variations-seed-version --pseudonymization-salt-handle=1924,i,14926131269605931798,2732548895109782697,4 --trace-process-track-uuid=3190708996619331833 --mojo-platform-channel-handle=5820 /prefetch:12"
+    },
+    {
+        "ProcessId":  125504,
+        "HasProfile":  true,
+        "Cmd":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=utility --utility-sub-type=video_capture.mojom.VideoCaptureService --lang=zh-CN --service-sandbox-type=none --video-capture-use-gpu-memory-buffer --user-data-dir=\"C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\" --no-pre-read-main-dll --metrics-shmem-handle=4416,i,11354887832967822050,13129614555502700950,524288 --field-trial-handle=1920,i,11544735094577269587,8263506928988105267,262144 --disable-features=IsolateOrigins,site-per-process --variations-seed-version --pseudonymization-salt-handle=1924,i,14926131269605931798,2732548895109782697,4 --trace-process-track-uuid=3190708997556373682 --mojo-platform-channel-handle=5676 /prefetch:14"
+    },
+    {
+        "ProcessId":  117520,
+        "HasProfile":  true,
+        "Cmd":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --type=renderer --user-data-dir=\"C:\\Users\\19183\\.dsh\\tools\\x-collect\\profile\" --no-pre-read-main-dll --disable-breakpad --remote-debugging-port=10055 --disable-blink-features=AutomationControlled --video-capture-use-gpu-memory-buffer --lang=zh-CN --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=14 --launch-time-ticks=1354036483659 --metrics-shmem-handle=6068,i,4032347979908423768,5510661931704523804,1572864 --field-trial-handle=1920,i,11544735094577269587,8263506928988105267,262144 --disable-features=IsolateOrigins,site-per-process --variations-seed-version --pseudonymization-salt-handle=1924,i,14926131269605931798,2732548895109782697,4 --trace-process-track-uuid=3190708999430457380 --mojo-platform-channel-handle=5636 /prefetch:1"
+    }
+]

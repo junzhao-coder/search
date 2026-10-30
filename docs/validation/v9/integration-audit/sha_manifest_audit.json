@@ -1,0 +1,29 @@
+{
+ "generated_utc": "2026-10-25T12:18:00Z",
+ "files": {
+  "AUDIT.md": {
+   "bytes": 15044,
+   "sha256": "a27b8469707aa4046c28403232e4374b3508fdee1ef0b8f4a5488dd6ab8a464d"
+  },
+  "run_audit.py": {
+   "bytes": 29403,
+   "sha256": "c5ca095a0dc6cfb6e1cd42f0b63ecdc7664bcb5e6ac9309a1e79ef5d30b4517c"
+  },
+  "audit_results.json": {
+   "bytes": 17377,
+   "sha256": "5818f495469a63c8f13bbf0fbc922b70c82c12164f18b4d4686344b80f94a26f"
+  },
+  "audit_run.log": {
+   "bytes": 14586,
+   "sha256": "e8470f1bcfd220919b5c9e38048859cde86e5320f4b1190a34812ff1238d2a86"
+  },
+  "selection_tests.log": {
+   "bytes": 10798,
+   "sha256": "b474bbf659b0e1513018bbcc97c2615d09801e98d74a43b99e97a1b3c8cdf2e8"
+  },
+  "guard_compare.json": {
+   "bytes": 2375,
+   "sha256": "8f6030ff55460511fb3577dd1d45f4e4414f09144d53f495681f93e714eebca8"
+  }
+ }
+}

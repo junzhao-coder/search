@@ -1,0 +1,57 @@
+{
+ "generated_utc": "2026-10-24T06:00:02Z",
+ "port": 5024,
+ "shots": {
+  "pick_desktop.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 123493,
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "9bd231d3b5b08d372029c6da359e259c2e4b4b5fc9cbbfde5627fbe9b2ba6747",
+   "url": "/pick",
+   "check": "JPEG SOI/EOI 头尾校验"
+  },
+  "source_desktop.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 93794,
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "77f4cfef270db98502f91177f3c6c9aea52264e30616d38f46fc03d2bbd0bd68",
+   "url": "/source?wo=wo:20261024-3abfd66f",
+   "check": "JPEG SOI/EOI 头尾校验"
+  },
+  "copy_desktop.jpg": {
+   "width": 1440,
+   "height": 900,
+   "bytes": 91751,
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "b7d9925b8dee9644609d20b7b107c873f824164eb31b41e8302a1ca6f4f51498",
+   "url": "/copy?wo=wo:20261024-3abfd66f",
+   "check": "JPEG SOI/EOI 头尾校验"
+  },
+  "pick_mobile.jpg": {
+   "width": 390,
+   "height": 844,
+   "bytes": 51236,
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "cb0e7f991335fa6e103d8b8746fc62542e5f65ff62f95fed46b182ea9dd256ae",
+   "url": "/pick",
+   "check": "JPEG SOI/EOI 头尾校验"
+  },
+  "copy_mobile.jpg": {
+   "width": 390,
+   "height": 844,
+   "bytes": 40682,
+   "format": "jpeg",
+   "openable": true,
+   "sha256": "12301d1bc23cf6afc4ffca21c6ed8d9ae9e7b20fc9372b32e02485b058ae4c6d",
+   "url": "/copy?wo=wo:20261024-3abfd66f",
+   "check": "JPEG SOI/EOI 头尾校验"
+  }
+ },
+ "workorder_id": "wo:20261024-3abfd66f"
+}

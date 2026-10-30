@@ -1,0 +1,23 @@
+[
+    {
+        "case":  "this_app_occupying",
+        "port":  5017,
+        "exit":  0,
+        "secs":  0.31,
+        "output":  "本地机会工作台已在运行： |   地址：http://127.0.0.1:5017/（PID 请用任务管理器或 netstat 查看） |   无需重复启动；如需重启，请在原窗口按 Ctrl+C 后再运行。"
+    },
+    {
+        "case":  "user_app_5015",
+        "port":  5015,
+        "exit":  0,
+        "secs":  0.31,
+        "output":  "本地机会工作台已在运行： |   地址：http://127.0.0.1:5015/（PID 请用任务管理器或 netstat 查看） |   无需重复启动；如需重启，请在原窗口按 Ctrl+C 后再运行。"
+    },
+    {
+        "case":  "external_occupying",
+        "port":  5018,
+        "exit":  3,
+        "secs":  1.77,
+        "output":  "[错误] 端口 5018 已被占用。请换一个端口： |        python tools/workbench/run.py --port 5019 |        本程序不会结束其它进程。"
+    }
+]

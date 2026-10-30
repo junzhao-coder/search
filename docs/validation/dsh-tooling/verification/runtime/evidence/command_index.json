@@ -1,0 +1,130 @@
+{
+  "commands": [
+    {
+      "log": "logs/cli/agent_reach_doctor.log",
+      "label": "agent_reach_doctor",
+      "cmd": "C:\\Users\\19183\\.agent-reach-venv\\Scripts\\agent-reach.exe doctor --json",
+      "cwd": "C:\\Users\\19183",
+      "start_utc": "2026-10-21T14:03:55Z",
+      "exit": "0",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/cli/agent_reach_help.log",
+      "label": "agent_reach_help",
+      "cmd": "C:\\Users\\19183\\.agent-reach-venv\\Scripts\\agent-reach.exe --help",
+      "cwd": "C:\\Users\\19183",
+      "start_utc": "2026-10-21T14:03:54Z",
+      "exit": "0",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/cli/agent_reach_version.log",
+      "label": "agent_reach_version",
+      "cmd": "C:\\Users\\19183\\.agent-reach-venv\\Scripts\\agent-reach.exe --version",
+      "cwd": "C:\\Users\\19183",
+      "start_utc": "2026-10-21T14:03:54Z",
+      "exit": "0",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/dep/dep_agent_reach.log",
+      "label": "dep_agent_reach",
+      "cmd": "C:\\Users\\19183\\.agent-reach-venv\\Scripts\\python.exe D:\\桌面\\two\\docs\\validation\\dsh-tooling\\verification\\runtime\\tools\\dep_probe.py agent-reach",
+      "cwd": "C:\\Users\\19183",
+      "start_utc": "2026-10-21T14:04:49Z",
+      "exit": "0",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/dep/dep_stealth.log",
+      "label": "dep_stealth",
+      "cmd": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\Scripts\\python.exe D:\\桌面\\two\\docs\\validation\\dsh-tooling\\verification\\runtime\\tools\\dep_probe.py stealth",
+      "cwd": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\repo",
+      "start_utc": "2026-10-21T14:04:50Z",
+      "exit": "0",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/dep/pip_check_agent_reach.log",
+      "label": "pip_check_agent_reach",
+      "cmd": "C:\\Users\\19183\\.agent-reach-venv\\Scripts\\python.exe -m pip check",
+      "cwd": "C:\\Users\\19183",
+      "start_utc": "2026-10-21T14:04:53Z",
+      "exit": "0",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/dep/pip_check_stealth.log",
+      "label": "pip_check_stealth",
+      "cmd": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\venv\\Scripts\\python.exe -m pip check",
+      "cwd": "C:\\Users\\19183\\.dsh\\tools\\stealth-browser-mcp\\repo",
+      "start_utc": "2026-10-21T14:04:54Z",
+      "exit": "0",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/hash_current.log",
+      "label": "hash_current",
+      "cmd": "D:\\桌面\\two\\.venv\\Scripts\\python.exe D:\\桌面\\two\\docs\\validation\\dsh-tooling\\verification\\runtime\\tools\\hash_current.py --out D:\\桌面\\two\\docs\\validation\\dsh-tooling\\verification\\runtime\\evidence\\current_hashes.json",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-21T14:06:17Z",
+      "exit": "0",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/patch_delta.log",
+      "label": "patch_delta",
+      "cmd": "D:\\桌面\\two\\.venv\\Scripts\\python.exe D:\\桌面\\two\\docs\\validation\\dsh-tooling\\verification\\runtime\\tools\\patch_delta.py --backup C:\\Users\\19183\\.dsh\\tooling-backups\\stealth-browser\\cordis.patch.yml.pre-stealth-20261021T132904Z --out D:\\桌面\\two\\docs\\validation\\dsh-tooling\\verification\\runtime\\evidence\\patch_delta.json",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-21T14:07:22Z",
+      "exit": "0",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/patch_delta_attempt1_parser.log",
+      "label": "patch_delta",
+      "cmd": "D:\\桌面\\two\\.venv\\Scripts\\python.exe D:\\桌面\\two\\docs\\validation\\dsh-tooling\\verification\\runtime\\tools\\patch_delta.py --backup C:\\Users\\19183\\.dsh\\tooling-backups\\stealth-browser\\cordis.patch.yml.pre-stealth-20261021T132904Z --out D:\\桌面\\two\\docs\\validation\\dsh-tooling\\verification\\runtime\\evidence\\patch_delta.json",
+      "cwd": "D:\\桌面\\two",
+      "start_utc": "2026-10-21T14:05:47Z",
+      "exit": "1",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/public/public_read_readme.log",
+      "label": "public_read_readme",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sSL --max-time 60 https://raw.githubusercontent.com/Panniantong/Agent-Reach/94f06c1969dfc1834001269d79d3ad0972d9dee6/README.md",
+      "cwd": "C:\\Users\\19183",
+      "start_utc": "2026-10-21T14:04:15Z",
+      "exit": "56",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/public/public_read_readme_api.log",
+      "label": "public_read_readme_api",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: agent-reach-dsh -H Accept: application/vnd.github+json https://api.github.com/repos/Panniantong/Agent-Reach/contents/README.md?ref=94f06c1969dfc1834001269d79d3ad0972d9dee6",
+      "cwd": "C:\\Users\\19183",
+      "start_utc": "2026-10-21T14:04:48Z",
+      "exit": "0",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/public/public_search_github.log",
+      "label": "public_search_github",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: agent-reach-dsh -H Accept: application/vnd.github+json https://api.github.com/search/repositories?q=agent+reach&per_page=3",
+      "cwd": "C:\\Users\\19183",
+      "start_utc": "2026-10-21T14:04:34Z",
+      "exit": "0",
+      "timed_out": "False"
+    },
+    {
+      "log": "logs/public/stealth_commit_api.log",
+      "label": "stealth_commit_api",
+      "cmd": "C:\\Windows\\System32\\curl.exe -sS --max-time 30 -H User-Agent: agent-reach-dsh -H Accept: application/vnd.github+json https://api.github.com/repos/vibheksoni/stealth-browser-mcp/commits/aa6cc9f6f853d6cbc17e4dc9b7946d406caabc6f",
+      "cwd": "C:\\Users\\19183",
+      "start_utc": "2026-10-21T14:07:51Z",
+      "exit": "0",
+      "timed_out": "False"
+    }
+  ]
+}

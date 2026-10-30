@@ -1,0 +1,310 @@
+--- sources_before.html
++++ sources_after.html
+@@ -27,6 +27,18 @@
+     table.data tbody tr:hover { background:#f1f6fb; }
+     table.data td a { word-break:break-word; }
+     table.data td.num { text-align:right; font-variant-numeric:tabular-nums; }
++    .join-table { table-layout:fixed; min-width:1020px; font-size:12px; }
++    .join-table th:nth-child(1) { width:34px; }
++    .join-table th:nth-child(2) { width:220px; }
++    .join-table th:nth-child(3) { width:100px; }
++    .join-table th:nth-child(4) { width:104px; }
++    .join-table th:nth-child(5) { width:56px; }
++    .join-table th:nth-child(6) { width:132px; }
++    .join-table th:nth-child(7) { width:108px; }
++    .join-table th:nth-child(8) { width:96px; }
++    .join-table th:nth-child(9) { width:108px; }
++    .join-table th:nth-child(10) { width:64px; }
++    .join-table code { font-size:11px; word-break:break-all; }
+     .badge { display:inline-block; border:1px solid var(--line); border-radius:10px; padding:1px 8px; font-size:12px; font-weight:600; white-space:nowrap; }
+     .badge-ok { border-color:#1a7f37; color:#1a7f37; background:#f0fff4; }
+     .badge-warn { border-color:#9a6700; color:#9a6700; background:#fff8c5; }
+@@ -64,7 +76,7 @@
+   <main id="main" class="main">
+     <div class="dash-meta">
+       <span>数据来源：<code>docs/validation/money-project/{scoring,sourcing}</code> · <code>tools/platform-login/data</code> · <code>docs/validation/x-collect/topic-crawler</code></span>
+-      <span>文件更新时间（UTC）：<strong>2026-10-22T09:25:43Z</strong></span>
++      <span>文件更新时间（UTC）：<strong>2026-10-22T09:49:48Z</strong></span>
+       <span>只读视图；不查询/写入业务库，不触发采集或账号动作。</span>
+     </div>
+     
+@@ -335,73 +347,218 @@
+   <h2 id="h-join">机会-货源联动（10 行）</h2>
+   
+   <div class="table-wrap">
+-    <table class="data">
+-      <thead><tr><th>#</th><th>机会</th><th>货源</th><th>许可</th><th>匹配</th><th>价格信号</th><th>毛利区间</th></tr></thead>
++    <table class="data join-table" id="join-table">
++      <thead><tr>
++        <th>#</th><th>机会</th><th>货源</th><th>许可</th><th>匹配</th>
++        <th>价格口径（样本）</th><th>价格信号</th><th>毛利区间</th><th>依据</th><th>置信度</th>
++      </tr></thead>
+       <tbody>
+       
+-        <tr><td class="num">1</td><td><a href="https://x.com/booorenjiiy/status/1467843989533442054" rel="noreferrer">•ଓ.° template notion •ଓ.° — a thread by me *̥₊˚‧☆ﾐ</a></td>
+-        <td>gh-10<br><span class="muted">heyman333/agent-notion-template-docs</span></td>
+-        <td>可商用 (MIT)</td><td>同品类</td>
+-        <td>¥1.0–1.88 *代理*</td>
+-        <td>0.000–1.000</td></tr>
+-      
+-        <tr><td class="num">2</td><td><a href="https://x.com/mareidaily/status/1674662364057317382" rel="noreferrer">CARA MENCARI &amp; REKOMENDASI TEMPLATE NOTION GEMAS UNTUK KALIAN! A threa</a></td>
+-        <td>gh-13<br><span class="muted">rockbenben/ChatGPT-Shortcut</span></td>
+-        <td>可商用 (MIT)</td><td>同品类</td>
+-        <td>¥1.0–1.0</td>
+-        <td>0.000–0.500</td></tr>
+-      
+-        <tr><td class="num">3</td><td><a href="https://x.com/worksfess/status/1747215882965979516" rel="noreferrer">work! adaaa yang butuh template notion buat ngedata lamaran kerja yang</a></td>
+-        <td>gh-11<br><span class="muted">billryan/resume</span></td>
+-        <td>可商用 (MIT)</td><td>同品类</td>
+-        <td>¥1.0–1.88</td>
+-        <td>0.000–0.949</td></tr>
+-      
+-        <tr><td class="num">4</td><td><a href="https://www.bilibili.com/video/BV19A411f7cH" rel="noreferrer">Notion模板怎么导入？简单！</a></td>
+-        <td>gh-03<br><span class="muted">vercel-labs/marketing-team-eve-template</span></td>
+-        <td>可商用 (MIT)</td><td>近似</td>
+-        <td>¥1.0–1.88 *代理*</td>
+-        <td>0.000–1.000</td></tr>
+-      
+-        <tr><td class="num">5</td><td><a href="https://x.com/heyeaslo/status/1580068264650022912" rel="noreferrer">Stop scrolling if you are a student. I’m giving away this FREE Notion </a></td>
+-        <td>gh-10<br><span class="muted">heyman333/agent-notion-template-docs</span></td>
+-        <td>可商用 (MIT)</td><td>同品类</td>
+-        <td>¥1.0–1.88 *代理*</td>
+-        <td>0.000–1.000</td></tr>
+-      
+-        <tr><td class="num">6</td><td><a href="https://x.com/opteemisty/status/1674994814016954371" rel="noreferrer">notion template &lt;3 some of you asked for a notion reveal, so I created</a></td>
+-        <td>gh-10<br><span class="muted">heyman333/agent-notion-template-docs</span></td>
+-        <td>可商用 (MIT)</td><td>同品类</td>
+-        <td>¥1.0–1.88 *代理*</td>
+-        <td>0.000–1.000</td></tr>
+-      
+-        <tr><td class="num">7</td><td><a href="https://x.com/aeshoui/status/1824402140070285653" rel="noreferrer">˗ˋˏ°• notion template for your class! •°ˎˊ˗ here&#39;s the notion template</a></td>
+-        <td>gh-10<br><span class="muted">heyman333/agent-notion-template-docs</span></td>
+-        <td>可商用 (MIT)</td><td>同品类</td>
+-        <td>¥1.0–1.88 *代理*</td>
+-        <td>0.000–1.000</td></tr>
+-      
+-        <tr><td class="num">8</td><td><a href="https://www.bilibili.com/video/BV1vr421K7EJ" rel="noreferrer">【Notion教程】小白友好：如何拷贝模板？如何设置中文版？</a></td>
+-        <td>gh-12<br><span class="muted">cobiwave/simplefolio</span></td>
+-        <td>可商用 (MIT)</td><td>替代</td>
+-        <td>¥1.0–1.88 *代理*</td>
+-        <td>0.000–1.000</td></tr>
+-      
+-        <tr><td class="num">9</td><td><a href="https://x.com/IAmPascio/status/1641088397874802688" rel="noreferrer">I created a Search Planner for ChatGPT. This Notion template will help</a></td>
+-        <td>gh-13<br><span class="muted">rockbenben/ChatGPT-Shortcut</span></td>
+-        <td>可商用 (MIT)</td><td>同品类</td>
+-        <td>¥1.0–1.0</td>
+-        <td>0.000–0.500</td></tr>
+-      
+-        <tr><td class="num">10</td><td><a href="https://www.bilibili.com/video/BV11i4y147FS" rel="noreferrer">177 Notion 教程 No.46 template-1：学习笔记模板（Template Study-Notes）</a></td>
+-        <td>gh-10<br><span class="muted">heyman333/agent-notion-template-docs</span></td>
+-        <td>可商用 (MIT)</td><td>同品类</td>
+-        <td>¥1.0–1.88 *代理*</td>
+-        <td>0.000–1.000</td></tr>
++        <tr>
++          <td class="num">1</td>
++          <td><a href="https://x.com/booorenjiiy/status/1467843989533442054" rel="noreferrer">•ଓ.° template notion •ଓ.° — a thread by me *̥₊˚‧☆ﾐ</a></td>
++          <td>gh-10<br><span class="muted">heyman333/agent-notion-template-docs</span></td>
++          <td>可商用 (MIT)</td>
++          <td>同品类</td>
++          <td title="price_scope=all_20_fallback">
++            <span class="badge badge-warn">全量回退（20 条）</span>
++          </td>
++          <td>¥1.0–1.88<br><span class="muted">参考最高 ¥699.0</span></td>
++          <td>0.547–1.000<br><span class="muted">mid 0.773</span></td>
++          <td title="margin_basis=all20_reference_median_widened · 已排除 ¥1 引流标价；all_20 fallback; price_anchor=reference_median ¥9.90; cost=¥0.5-3.0/unit; margin=clamp((price-cost)/price,0,1); mid=midpoint; widened ±0.15; reference_max ¥699.00 not used as anchor (outlier risk).">
++            全量参考价+放宽
++            
++          </td>
++          <td title="margin_confidence=low">
++            <span class="badge badge-warn">低</span>
++          </td>
++        </tr>
++      
++        <tr>
++          <td class="num">2</td>
++          <td><a href="https://x.com/mareidaily/status/1674662364057317382" rel="noreferrer">CARA MENCARI &amp; REKOMENDASI TEMPLATE NOTION GEMAS UNTUK KALIAN! A threa</a></td>
++          <td>gh-13<br><span class="muted">rockbenben/ChatGPT-Shortcut</span></td>
++          <td>可商用 (MIT)</td>
++          <td>同品类</td>
++          <td title="price_scope=category_filtered">
++            <span class="badge badge-ok">品类过滤（3 条）</span>
++          </td>
++          <td>¥1.0–1.0</td>
++          <td>0.000–0.500<br><span class="muted">mid 0.250</span></td>
++          <td title="margin_basis=category_effective_high · 已排除 ¥1 引流标价；price_anchor=effective_high ¥1.00; cost=¥0.5-3.0/unit; margin=clamp((price-cost)/price,0,1); mid=midpoint.">
++            品类有效价上限
++            
++          </td>
++          <td title="margin_confidence=low">
++            <span class="badge badge-warn">低</span>
++          </td>
++        </tr>
++      
++        <tr>
++          <td class="num">3</td>
++          <td><a href="https://x.com/worksfess/status/1747215882965979516" rel="noreferrer">work! adaaa yang butuh template notion buat ngedata lamaran kerja yang</a></td>
++          <td>gh-11<br><span class="muted">billryan/resume</span></td>
++          <td>可商用 (MIT)</td>
++          <td>同品类</td>
++          <td title="price_scope=category_filtered">
++            <span class="badge badge-ok">品类过滤（17 条）</span>
++          </td>
++          <td>¥1.0–1.88<br><span class="muted">参考最高 ¥699.0</span></td>
++          <td>0.697–0.949<br><span class="muted">mid 0.823</span></td>
++          <td title="margin_basis=category_reference_median · 已排除 ¥1 引流标价；price_anchor=reference_median ¥9.90; cost=¥0.5-3.0/unit; margin=clamp((price-cost)/price,0,1); mid=midpoint; reference_max ¥699.00 not used as anchor (outlier risk).">
++            品类参考价中位
++            
++          </td>
++          <td title="margin_confidence=high">
++            <span class="badge badge-ok">高</span>
++            
++          </td>
++        </tr>
++      
++        <tr>
++          <td class="num">4</td>
++          <td><a href="https://www.bilibili.com/video/BV19A411f7cH" rel="noreferrer">Notion模板怎么导入？简单！</a></td>
++          <td>gh-03<br><span class="muted">vercel-labs/marketing-team-eve-template</span></td>
++          <td>可商用 (MIT)</td>
++          <td>近似</td>
++          <td title="price_scope=all_20_fallback">
++            <span class="badge badge-warn">全量回退（20 条）</span>
++          </td>
++          <td>¥1.0–1.88<br><span class="muted">参考最高 ¥699.0</span></td>
++          <td>0.547–1.000<br><span class="muted">mid 0.773</span></td>
++          <td title="margin_basis=all20_reference_median_widened · 已排除 ¥1 引流标价；all_20 fallback; price_anchor=reference_median ¥9.90; cost=¥0.5-3.0/unit; margin=clamp((price-cost)/price,0,1); mid=midpoint; widened ±0.15; reference_max ¥699.00 not used as anchor (outlier risk).">
++            全量参考价+放宽
++            
++          </td>
++          <td title="margin_confidence=low">
++            <span class="badge badge-warn">低</span>
++          </td>
++        </tr>
++      
++        <tr>
++          <td class="num">5</td>
++          <td><a href="https://x.com/heyeaslo/status/1580068264650022912" rel="noreferrer">Stop scrolling if you are a student. I’m giving away this FREE Notion </a></td>
++          <td>gh-10<br><span class="muted">heyman333/agent-notion-template-docs</span></td>
++          <td>可商用 (MIT)</td>
++          <td>同品类</td>
++          <td title="price_scope=all_20_fallback">
++            <span class="badge badge-warn">全量回退（20 条）</span>
++          </td>
++          <td>¥1.0–1.88<br><span class="muted">参考最高 ¥699.0</span></td>
++          <td>0.547–1.000<br><span class="muted">mid 0.773</span></td>
++          <td title="margin_basis=all20_reference_median_widened · 已排除 ¥1 引流标价；all_20 fallback; price_anchor=reference_median ¥9.90; cost=¥0.5-3.0/unit; margin=clamp((price-cost)/price,0,1); mid=midpoint; widened ±0.15; reference_max ¥699.00 not used as anchor (outlier risk).">
++            全量参考价+放宽
++            
++          </td>
++          <td title="margin_confidence=low">
++            <span class="badge badge-warn">低</span>
++          </td>
++        </tr>
++      
++        <tr>
++          <td class="num">6</td>
++          <td><a href="https://x.com/opteemisty/status/1674994814016954371" rel="noreferrer">notion template &lt;3 some of you asked for a notion reveal, so I created</a></td>
++          <td>gh-10<br><span class="muted">heyman333/agent-notion-template-docs</span></td>
++          <td>可商用 (MIT)</td>
++          <td>同品类</td>
++          <td title="price_scope=all_20_fallback">
++            <span class="badge badge-warn">全量回退（20 条）</span>
++          </td>
++          <td>¥1.0–1.88<br><span class="muted">参考最高 ¥699.0</span></td>
++          <td>0.547–1.000<br><span class="muted">mid 0.773</span></td>
++          <td title="margin_basis=all20_reference_median_widened · 已排除 ¥1 引流标价；all_20 fallback; price_anchor=reference_median ¥9.90; cost=¥0.5-3.0/unit; margin=clamp((price-cost)/price,0,1); mid=midpoint; widened ±0.15; reference_max ¥699.00 not used as anchor (outlier risk).">
++            全量参考价+放宽
++            
++          </td>
++          <td title="margin_confidence=low">
++            <span class="badge badge-warn">低</span>
++          </td>
++        </tr>
++      
++        <tr>
++          <td class="num">7</td>
++          <td><a href="https://x.com/aeshoui/status/1824402140070285653" rel="noreferrer">˗ˋˏ°• notion template for your class! •°ˎˊ˗ here&#39;s the notion template</a></td>
++          <td>gh-10<br><span class="muted">heyman333/agent-notion-template-docs</span></td>
++          <td>可商用 (MIT)</td>
++          <td>同品类</td>
++          <td title="price_scope=all_20_fallback">
++            <span class="badge badge-warn">全量回退（20 条）</span>
++          </td>
++          <td>¥1.0–1.88<br><span class="muted">参考最高 ¥699.0</span></td>
++          <td>0.547–1.000<br><span class="muted">mid 0.773</span></td>
++          <td title="margin_basis=all20_reference_median_widened · 已排除 ¥1 引流标价；all_20 fallback; price_anchor=reference_median ¥9.90; cost=¥0.5-3.0/unit; margin=clamp((price-cost)/price,0,1); mid=midpoint; widened ±0.15; reference_max ¥699.00 not used as anchor (outlier risk).">
++            全量参考价+放宽
++            
++          </td>
++          <td title="margin_confidence=low">
++            <span class="badge badge-warn">低</span>
++          </td>
++        </tr>
++      
++        <tr>
++          <td class="num">8</td>
++          <td><a href="https://www.bilibili.com/video/BV1vr421K7EJ" rel="noreferrer">【Notion教程】小白友好：如何拷贝模板？如何设置中文版？</a></td>
++          <td>gh-12<br><span class="muted">cobiwave/simplefolio</span></td>
++          <td>可商用 (MIT)</td>
++          <td>替代</td>
++          <td title="price_scope=all_20_fallback">
++            <span class="badge badge-warn">全量回退（20 条）</span>
++          </td>
++          <td>¥1.0–1.88<br><span class="muted">参考最高 ¥699.0</span></td>
++          <td>0.547–1.000<br><span class="muted">mid 0.773</span></td>
++          <td title="margin_basis=all20_reference_median_widened · 已排除 ¥1 引流标价；all_20 fallback; price_anchor=reference_median ¥9.90; cost=¥0.5-3.0/unit; margin=clamp((price-cost)/price,0,1); mid=midpoint; widened ±0.15; reference_max ¥699.00 not used as anchor (outlier risk).">
++            全量参考价+放宽
++            
++          </td>
++          <td title="margin_confidence=low">
++            <span class="badge badge-warn">低</span>
++          </td>
++        </tr>
++      
++        <tr>
++          <td class="num">9</td>
++          <td><a href="https://x.com/IAmPascio/status/1641088397874802688" rel="noreferrer">I created a Search Planner for ChatGPT. This Notion template will help</a></td>
++          <td>gh-13<br><span class="muted">rockbenben/ChatGPT-Shortcut</span></td>
++          <td>可商用 (MIT)</td>
++          <td>同品类</td>
++          <td title="price_scope=category_filtered">
++            <span class="badge badge-ok">品类过滤（3 条）</span>
++          </td>
++          <td>¥1.0–1.0</td>
++          <td>0.000–0.500<br><span class="muted">mid 0.250</span></td>
++          <td title="margin_basis=category_effective_high · 已排除 ¥1 引流标价；price_anchor=effective_high ¥1.00; cost=¥0.5-3.0/unit; margin=clamp((price-cost)/price,0,1); mid=midpoint.">
++            品类有效价上限
++            
++          </td>
++          <td title="margin_confidence=low">
++            <span class="badge badge-warn">低</span>
++          </td>
++        </tr>
++      
++        <tr>
++          <td class="num">10</td>
++          <td><a href="https://www.bilibili.com/video/BV11i4y147FS" rel="noreferrer">177 Notion 教程 No.46 template-1：学习笔记模板（Template Study-Notes）</a></td>
++          <td>gh-10<br><span class="muted">heyman333/agent-notion-template-docs</span></td>
++          <td>可商用 (MIT)</td>
++          <td>同品类</td>
++          <td title="price_scope=all_20_fallback">
++            <span class="badge badge-warn">全量回退（20 条）</span>
++          </td>
++          <td>¥1.0–1.88<br><span class="muted">参考最高 ¥699.0</span></td>
++          <td>0.547–1.000<br><span class="muted">mid 0.773</span></td>
++          <td title="margin_basis=all20_reference_median_widened · 已排除 ¥1 引流标价；all_20 fallback; price_anchor=reference_median ¥9.90; cost=¥0.5-3.0/unit; margin=clamp((price-cost)/price,0,1); mid=midpoint; widened ±0.15; reference_max ¥699.00 not used as anchor (outlier risk).">
++            全量参考价+放宽
++            
++          </td>
++          <td title="margin_confidence=low">
++            <span class="badge badge-warn">低</span>
++          </td>
++        </tr>
+       
+       </tbody>
+     </table>
+   </div>
++  <p class="hint">说明：¥1 为引流价，已排除，不作为价格下限；毛利按参考价中位数（无参考价则品类有效价上限）与成本 ¥0.5–3/单估算；全量回退额外放宽 ±0.15，置信度 low。</p>
+   
+ </section>
+ 

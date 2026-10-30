@@ -1,0 +1,82 @@
+{
+ "synthetic": true,
+ "not_implementation": true,
+ "not_real_user_data": true,
+ "identity": {
+  "same_cross_platform": {
+   "matched": true,
+   "why": "identity_key",
+   "key": "49b502900dbdb6bb"
+  },
+  "synonym": {
+   "matched": true,
+   "why": "identity_key",
+   "key": "49b502900dbdb6bb"
+  },
+  "different_task": {
+   "matched": false,
+   "why": "review"
+  },
+  "old_evidence_is_update": {
+   "event": "update",
+   "category": "cat-study",
+   "evidence": "xianyu:old",
+   "new_evidence": "x:new"
+  }
+ },
+ "merge_undo": {
+  "merge": {
+   "op": "merge",
+   "from": "cat-crm",
+   "to": "cat-study",
+   "before": {
+    "status": "active"
+   },
+   "after": {
+    "status": "merged",
+    "merged_into": "cat-study"
+   }
+  },
+  "undo": {
+   "op": "unmerge",
+   "from": "cat-crm",
+   "before": {
+    "status": "merged"
+   },
+   "after": {
+    "status": "active"
+   }
+  },
+  "status_after": "active"
+ },
+ "round": {
+  "first": {
+   "state": "paused",
+   "cursor": 2,
+   "done": [
+    "e1",
+    "e2"
+   ],
+   "seen": [
+    "e1",
+    "e2"
+   ]
+  },
+  "second": {
+   "state": "complete",
+   "cursor": 4,
+   "done": [
+    "e3",
+    "e4"
+   ],
+   "seen": [
+    "e1",
+    "e2",
+    "e3",
+    "e4"
+   ]
+  },
+  "resumed_from_cursor": 2,
+  "note": "first pauses after budget; second resumes with initial_done=first.done; keys deduped"
+ }
+}

@@ -1,0 +1,164 @@
+{
+ "generated_utc": "2026-10-24T13:32:29Z",
+ "port": 5025,
+ "db": "C:\\Users\\19183\\AppData\\Local\\Temp\\d1-walk-e0_singr\\w.db",
+ "name": "[SYNTHETIC] D1 学习计划模板",
+ "steps": [
+  {
+   "step": "① /pick「选这个」建单",
+   "ok": true,
+   "status": 200,
+   "wo": "wo:20261024-33da03de",
+   "note": "来自采集来源分组"
+  },
+  {
+   "step": "② /source 新增候选并采用",
+   "ok": true,
+   "status": "200/200",
+   "candidate": "sc:c1a8404a"
+  },
+  {
+   "step": "③ 样品自检（b7 样品，结构自检）",
+   "ok": true,
+   "status": 200
+  },
+  {
+   "step": "④ /copy 填成本/售价/卖点/FAQ/交付售后",
+   "ok": true,
+   "status": 200
+  },
+  {
+   "step": "⑤ 七项就绪 7/7（synthetic 平台证据）",
+   "ok": true,
+   "status": 200,
+   "ready": true
+  },
+  {
+   "step": "⑥ GET 导出 md+json（零写）",
+   "ok": true,
+   "status": "200/200",
+   "export_rows": "0->0",
+   "buyer_fields": [
+    "title",
+    "selling_points",
+    "contents",
+    "format",
+    "price",
+    "delivery",
+    "aftersales",
+    "faq"
+   ],
+   "internal_leaks": []
+  },
+  {
+   "step": "⑦ 记录本次导出（1 行；重复去重）",
+   "ok": true,
+   "status": "200/200",
+   "rows": "0->1->1",
+   "dedup": "true"
+  },
+  {
+   "step": "⑧ 发布回填（已发布/合法 URL/已售 0）",
+   "ok": true,
+   "status": 200
+  },
+  {
+   "step": "⑨ 反馈 CSV 一行 + review.py 四指标",
+   "ok": true,
+   "status": 0,
+   "review_tail": "单转化率      na   = 成交 ÷ 询单\n2) 单件净利        na   = 单件到手 na − 采购 0.0 − 售后摊销 0.0\n3) 折算时薪        na = 单件净利 ÷ (人工耗时 ÷ 60)\n4) 退款率          na   = 退款 ÷ 成交\n--- 建议（四选一） ---\n【样本不足，保留观察期】\n  依据：成交=0.0，人工耗时=30.0，或四指标全为 na —— 样本不足，先保留观察期（建议至少 7 天）再判断。\n--- 假设与阈值（可改） ---\n  采购成本 0.0 元/件、售后摊销 0.0 元/件（CSV 无这两列，用命令参数（缺省 0））\n  阈值：转化率 <20.0%、时薪 <30.0 元/小时、退款率 >20.0%（脚本顶部常量或命令行参数可调）\n提示：以上是按你填的数据做的机械建议，不等于平台结论，也不代表收益或审核结果。\n"
+  }
+ ],
+ "guards": [
+  {
+   "guard": "未就绪导出 409（平台证据为空）",
+   "ok": true,
+   "status": 409,
+   "actual": {
+    "ok_chips": 6
+   }
+  },
+  {
+   "guard": "重复记录导出不新增行（dedup=true）",
+   "ok": true,
+   "status": 200,
+   "actual": {
+    "rows": 1,
+    "dedup": "true"
+   }
+  },
+  {
+   "guard": "发布非法值被拒（状态非法）",
+   "ok": true,
+   "status": 400
+  },
+  {
+   "guard": "发布非法值被拒（URL 非 http）",
+   "ok": true,
+   "status": 400
+  },
+  {
+   "guard": "发布非法值被拒（销量负数）",
+   "ok": true,
+   "status": 400
+  },
+  {
+   "guard": "越权字段被拒（status=ready）",
+   "ok": true,
+   "status": 403
+  },
+  {
+   "guard": "越权字段被拒（status=verified）",
+   "ok": true,
+   "status": 403
+  },
+  {
+   "guard": "越权字段被拒（篡改 selected_supply_id）",
+   "ok": true,
+   "status": 403
+  },
+  {
+   "guard": "越权请求后库未变",
+   "ok": true,
+   "actual": {
+    "before": {
+     "selected_supply_id": "sc:c1a8404a",
+     "revision": 6,
+     "status": "pending_supply"
+    },
+    "after": {
+     "selected_supply_id": "sc:c1a8404a",
+     "revision": 6,
+     "status": "pending_supply"
+    }
+   }
+  },
+  {
+   "guard": "改已选许可→样品/成本失效、导出 409",
+   "ok": true,
+   "status": "200/409",
+   "actual": {
+    "sample_status": null,
+    "sample_ref": null,
+    "cost_minor": null,
+    "supply_license_resell": "no"
+   }
+  }
+ ],
+ "workorder_id": "wo:20261024-33da03de",
+ "review": {
+  "returncode": 0,
+  "stdout": "=== 一周复盘（4 个数字） ===\n读入：D:\\桌面\\two\\docs\\validation\\product-workflow\\d1\\feedback-log.csv  行数：1（无法解析的行：0）\n合计：询单 0.0 / 成交 0.0 / 退款 0.0 / 到手 na / 耗时 30.0 分钟\n--- 4 个指标 ---\n1) 询单转化率      na   = 成交 ÷ 询单\n2) 单件净利        na   = 单件到手 na − 采购 0.0 − 售后摊销 0.0\n3) 折算时薪        na = 单件净利 ÷ (人工耗时 ÷ 60)\n4) 退款率          na   = 退款 ÷ 成交\n--- 建议（四选一） ---\n【样本不足，保留观察期】\n  依据：成交=0.0，人工耗时=30.0，或四指标全为 na —— 样本不足，先保留观察期（建议至少 7 天）再判断。\n--- 假设与阈值（可改） ---\n  采购成本 0.0 元/件、售后摊销 0.0 元/件（CSV 无这两列，用命令参数（缺省 0））\n  阈值：转化率 <20.0%、时薪 <30.0 元/小时、退款率 >20.0%（脚本顶部常量或命令行参数可调）\n提示：以上是按你填的数据做的机械建议，不等于平台结论，也不代表收益或审核结果。\n",
+  "stderr": ""
+ },
+ "feedback_rows": 1,
+ "db_counts": {
+  "workorder": 1,
+  "workorder_event": 11,
+  "workorder_export": 1,
+  "workorder_supply_candidate": 1,
+  "workorder_copy_version": 1,
+  "workorder_publish": 1
+ },
+ "all_ok": true
+}

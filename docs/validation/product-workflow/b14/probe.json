@@ -1,0 +1,254 @@
+{
+ "utc": "2026-10-23T14:45:00Z",
+ "production": {
+  "before_sha": "d9349c03faf29df35f8a846b1000779f54e689fc5633189270c33d68bf7f6cf2",
+  "before_counts": {
+   "workorder": 1,
+   "workorder_export": 0,
+   "workorder_copy_version": null,
+   "workorder_publish": null
+  },
+  "table_errors": {
+   "workorder_copy_version": "no such table: workorder_copy_version",
+   "workorder_publish": "no such table: workorder_publish"
+  },
+  "ids": [
+   "wo:20261023-88ef9a66"
+  ],
+  "after_sha": "d9349c03faf29df35f8a846b1000779f54e689fc5633189270c33d68bf7f6cf2"
+ },
+ "steps": {
+  "new_page": {
+   "status": 200,
+   "zero_write": true
+  },
+  "create": {
+   "status": 303,
+   "id": "wo:20261023-b8065d52"
+  },
+  "not_ready_export": {
+   "status": 409,
+   "blocker": true,
+   "counts_before": {
+    "workorder": 1,
+    "workorder_event": 1,
+    "workorder_export": 0,
+    "workorder_copy_version": 0,
+    "workorder_publish": 0
+   },
+   "counts_after": {
+    "workorder": 1,
+    "workorder_event": 1,
+    "workorder_export": 0,
+    "workorder_copy_version": 0,
+    "workorder_publish": 0
+   }
+  },
+  "evidence": {
+   "status": 303,
+   "counts": {
+    "workorder": 1,
+    "workorder_event": 3,
+    "workorder_export": 0,
+    "workorder_copy_version": 1,
+    "workorder_publish": 0
+   }
+  },
+  "ready_get": {
+   "status": 200,
+   "counts_before": {
+    "workorder": 1,
+    "workorder_event": 3,
+    "workorder_export": 0,
+    "workorder_copy_version": 1,
+    "workorder_publish": 0
+   },
+   "counts_after": {
+    "workorder": 1,
+    "workorder_event": 3,
+    "workorder_export": 0,
+    "workorder_copy_version": 1,
+    "workorder_publish": 0
+   },
+   "zero_write": true
+  },
+  "dedupe": {
+   "first": {
+    "status": 200,
+    "dedup": "false",
+    "before": {
+     "workorder": 1,
+     "workorder_event": 3,
+     "workorder_export": 0,
+     "workorder_copy_version": 1,
+     "workorder_publish": 0
+    },
+    "after": {
+     "workorder": 1,
+     "workorder_event": 3,
+     "workorder_export": 1,
+     "workorder_copy_version": 1,
+     "workorder_publish": 0
+    }
+   },
+   "second": {
+    "status": 200,
+    "dedup": "true",
+    "after": {
+     "workorder": 1,
+     "workorder_event": 3,
+     "workorder_export": 1,
+     "workorder_copy_version": 1,
+     "workorder_publish": 0
+    },
+    "row_unchanged": true
+   }
+  },
+  "copy_change": {
+   "status": 303,
+   "versions": [
+    2,
+    1
+   ],
+   "valid": false,
+   "changed": [
+    "工作单版本",
+    "文案版本"
+   ]
+  },
+  "new_stamp": {
+   "status": 200,
+   "dedup": "false",
+   "counts": {
+    "workorder": 1,
+    "workorder_event": 5,
+    "workorder_export": 2,
+    "workorder_copy_version": 2,
+    "workorder_publish": 0
+   },
+   "dedupe_key": "3|copy-v2|sup-mit-1|v1"
+  },
+  "rollback": {
+   "status": 303,
+   "supply_unchanged": {
+    "selected_supply_id": true,
+    "supply_version": true,
+    "supply_license_commercial": true,
+    "supply_license_redistribute": true,
+    "supply_license_resell": true,
+    "sample_status": true,
+    "sample_ref": true,
+    "cost_minor": true,
+    "cost_known": true,
+    "platform_evidence": true
+   },
+   "copy_changed": {
+    "name": false,
+    "selling_points": true,
+    "includes": false,
+    "excludes": false,
+    "fmt": false,
+    "language": false,
+    "version": false,
+    "price_minor": false,
+    "delivery_note": false,
+    "aftersales_note": false,
+    "faq_json": false
+   },
+   "versions": [
+    3,
+    2,
+    1
+   ],
+   "newest_created_by": "rollback:v1",
+   "snapshot_keys": [
+    "aftersales_note",
+    "delivery_note",
+    "excludes",
+    "faq_json",
+    "fmt",
+    "includes",
+    "language",
+    "name",
+    "price_minor",
+    "selling_points",
+    "version"
+   ]
+  },
+  "publish": {
+   "invalids": [
+    {
+     "payload": {
+      "status": "已上架"
+     },
+     "status": 400
+    },
+    {
+     "payload": {
+      "status": "已发布",
+      "published_url": "ftp://x/y"
+     },
+     "status": 400
+    },
+    {
+     "payload": {
+      "status": "已发布",
+      "published_url": "https://example.com/x",
+      "sold_count": "-1"
+     },
+     "status": 400
+    },
+    {
+     "payload": {
+      "status": "已发布",
+      "published_url": "https://example.com/x",
+      "sold_count": "1.5"
+     },
+     "status": 400
+    }
+   ],
+   "valid_status": 303,
+   "publish": {
+    "workorder_id": "wo:20261023-b8065d52",
+    "status": "已发布",
+    "published_url": "https://example.com/item/1",
+    "published_at": "2026-10-23T14:30:00Z",
+    "platform_note": "审核通过",
+    "sold_count": 0,
+    "publish_version": 1,
+    "updated_at": "2026-10-23T15:06:50Z"
+   },
+   "changed_after_publish": {
+    "changed": true,
+    "reason": "发布信息已变更，建议重核就绪并重新导出"
+   }
+  },
+  "abuse": {
+   "forged": 403,
+   "no_csrf": 403,
+   "cross_origin": 403,
+   "cross_protocol": 403,
+   "bad_revisions": [
+    {
+     "revision": "abc",
+     "status": 400
+    },
+    {
+     "revision": "1.5",
+     "status": 400
+    },
+    {
+     "revision": "-1",
+     "status": 400
+    }
+   ]
+  },
+  "counts_final": {
+   "workorder": 1,
+   "workorder_event": 7,
+   "workorder_export": 2,
+   "workorder_copy_version": 3,
+   "workorder_publish": 1
+  }
+ }
+}

@@ -1,0 +1,2 @@
+backup: ok C:\Users\19183\AppData\Local\Temp\bk__nu0fu0r\backups\app-20261020-130000.db sha256=e08c029ea5aaf13e5c16d6aad89b5da6aa74ce625746e31e4dd4c81a4ffab7ee bytes=241664 schema=2 manifest=C:\Users\19183\AppData\Local\Temp\bk__nu0fu0r\backups\app-20261020-130000.db.manifest.json
+restore: ok target=C:\Users\19183\AppData\Local\Temp\bk__nu0fu0r\restore\cli\app.db schema=2 manifest_checked=True sha256=e08c029ea5aaf13e5c16d6aad89b5da6aa74ce625746e31e4dd4c81a4ffab7ee
