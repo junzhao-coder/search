@@ -1,0 +1,4692 @@
+{
+  "generated_at": "2026-11-02T18:56:42+08:00",
+  "command": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\venv\\Scripts\\python.exe -m tools.selection.engine_trial --engine nodriver --runs 3 --out docs/validation/v18/engine-trial --merge-existing --fixture docs/validation/v18/engine-trial/fixture.html",
+  "out": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10",
+    "executable": "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "cwd": "D:\\桌面\\two",
+    "nodriver_executable": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\venv\\Scripts\\python.exe",
+    "nodriver_python": "3.12.10",
+    "nodriver_venv": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\venv"
+  },
+  "fixture": {
+    "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\fixture.html",
+    "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+    "ground_truth": {
+      "thread_id": "900000001",
+      "thread_title": "单帖采集基线：本地 fixture",
+      "thread_body": "这是用于 Playwright 与 nodriver 对照的本地单帖正文。正文、评论、点赞数与发布时间都只从当前页面读取；读不到的字段标记未知，不用零或接口数据补齐。",
+      "thread_author": "楼主甲",
+      "thread_time": "2026-10-01 12:00",
+      "thread_likes": 37,
+      "declared_comments": 12,
+      "comment_ids": [
+        "910000001",
+        "910000002",
+        "910000003",
+        "910000004",
+        "910000005",
+        "910000006",
+        "910000007",
+        "910000008",
+        "910000009"
+      ],
+      "lzl_ids": [
+        "920000001",
+        "920000002"
+      ],
+      "ids": [
+        "900000001",
+        "910000001",
+        "910000002",
+        "910000003",
+        "910000004",
+        "910000005",
+        "910000006",
+        "910000007",
+        "910000008",
+        "910000009",
+        "920000001",
+        "920000002"
+      ],
+      "comment_likes": {
+        "910000001": 5,
+        "910000002": 0,
+        "910000003": 12,
+        "910000004": 3,
+        "910000005": 8,
+        "910000006": 1,
+        "910000007": 2,
+        "910000008": 4,
+        "910000009": 6
+      },
+      "comment_times": {
+        "910000001": "2026-10-01 12:01",
+        "910000002": "2026-10-01 12:02",
+        "910000003": "2026-10-01 12:03",
+        "910000004": "2026-10-01 12:04",
+        "910000005": "2026-10-01 12:05",
+        "910000006": "2026-10-01 12:06",
+        "910000007": "2026-10-01 12:07",
+        "910000008": "2026-10-01 12:08",
+        "910000009": "2026-10-01 12:09"
+      },
+      "lzl_parent": {
+        "920000001": "910000001",
+        "920000002": "910000001"
+      }
+    }
+  },
+  "engines": {
+    "playwright": {
+      "engine": "playwright",
+      "availability": {
+        "engine": "playwright",
+        "installed": true,
+        "version": "1.60.0",
+        "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "usable": true,
+        "reason": null,
+        "detail": null,
+        "repro": "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -c \"import playwright\""
+      },
+      "runs": [
+        {
+          "engine": "playwright",
+          "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+          "config": {
+            "scroll_step": 700,
+            "max_scrolls": 8,
+            "stall_limit": 2,
+            "settle_ms": 250,
+            "timeout_ms": 15000
+          },
+          "timeline": [
+            {
+              "phase": "start_begin",
+              "ms": 0.0
+            },
+            {
+              "phase": "start_done",
+              "ms": 1037.8,
+              "engine": "playwright",
+              "browser_version": "156.0.8078.79",
+              "channel": "chrome",
+              "headless": false,
+              "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-pw-z9cmfaxy"
+            },
+            {
+              "phase": "navigate",
+              "ms": 1146.0,
+              "driver_ms": 106.6,
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "status": 200
+            },
+            {
+              "phase": "first_read",
+              "ms": 1149.9,
+              "ids": 4,
+              "records": 3
+            },
+            {
+              "phase": "expand",
+              "ms": 1487.2,
+              "clicked": true,
+              "selector": "div.show-more-lzl",
+              "box": {
+                "x": 222.33334350585938,
+                "y": 345.7708435058594,
+                "width": 113.80209350585938,
+                "height": 24
+              },
+              "via": "playwright_locator_click"
+            },
+            {
+              "phase": "expand_read",
+              "ms": 1746.8,
+              "ids": 6
+            },
+            {
+              "phase": "load_more",
+              "ms": 1794.3,
+              "clicked": true,
+              "selector": "#load-more",
+              "box": {
+                "x": 222.33334350585938,
+                "y": 977.3125,
+                "width": 116,
+                "height": 39.3333740234375
+              },
+              "via": "playwright_locator_click"
+            },
+            {
+              "phase": "load_more_read",
+              "ms": 2054.3,
+              "new_ids": [
+                "910000004",
+                "910000005",
+                "910000006",
+                "910000007",
+                "910000008",
+                "910000009"
+              ],
+              "ids": 12
+            },
+            {
+              "phase": "scroll_1",
+              "ms": 2318.7,
+              "new_ids": [],
+              "scroll_dy": 352,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "playwright_mouse_wheel"
+              }
+            },
+            {
+              "phase": "scroll_2",
+              "ms": 2583.1,
+              "new_ids": [],
+              "scroll_dy": 0,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "playwright_mouse_wheel"
+              }
+            },
+            {
+              "phase": "scroll_3",
+              "ms": 2846.0,
+              "new_ids": [],
+              "scroll_dy": 0,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "playwright_mouse_wheel"
+              }
+            },
+            {
+              "phase": "final_read",
+              "ms": 2848.4,
+              "ids": 12
+            },
+            {
+              "phase": "close",
+              "ms": 3194.4,
+              "closed": true,
+              "profile_removed": true,
+              "errors": []
+            }
+          ],
+          "stop": "no_growth",
+          "stop_detail": "连续 2 次滚动无新增原生 ID 且无页面位移；页面声明 12 条，可见 9 条。没有可核验的到底标记，按部分/未知处理，不宣称取全。",
+          "complete": false,
+          "partial": true,
+          "error": null,
+          "thread": {
+            "native_id": "900000001",
+            "title": "单帖采集基线：本地 fixture",
+            "text": "这是用于 Playwright 与 nodriver 对照的本地单帖正文。正文、评论、点赞数与发布时间都只从当前页面读取；读不到的字段标记未知，不用零或接口数据补齐。",
+            "author": "楼主甲",
+            "published_at": "2026-10-01 12:00",
+            "likes": 37,
+            "sources": {
+              "native_id": "data-tid|url:/p/<tid>",
+              "title": "span.pb-title",
+              "text": "span.pb-text-wrapper[tid][order-id=\"0\"]",
+              "author": "a.head-name",
+              "published_at": "span.post-num",
+              "likes": "[data-likes]|.pb-agree-num"
+            },
+            "missing": []
+          },
+          "records": [
+            {
+              "native_id": "910000001",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第一条评论：滚轮与展开都要留下页面事件。",
+              "author": "评论者乙",
+              "published_at": "2026-10-01 12:01",
+              "likes": 5,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000001"
+            },
+            {
+              "native_id": "910000002",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第二条评论：点赞数和发布时间分开归属。",
+              "author": "评论者丙",
+              "published_at": "2026-10-01 12:02",
+              "likes": 0,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000002"
+            },
+            {
+              "native_id": "910000003",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第三条评论：没有读到就标未知，不填零。",
+              "author": "评论者丁",
+              "published_at": "2026-10-01 12:03",
+              "likes": 12,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000003"
+            },
+            {
+              "native_id": "910000004",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第四条评论：滚动后才出现。",
+              "author": "评论者戊",
+              "published_at": "2026-10-01 12:04",
+              "likes": 3,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000004"
+            },
+            {
+              "native_id": "910000005",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第五条评论：按原生 ID 增量去重。",
+              "author": "评论者己",
+              "published_at": "2026-10-01 12:05",
+              "likes": 8,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000005"
+            },
+            {
+              "native_id": "910000006",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第六条评论：没有到底证据就标部分。",
+              "author": "评论者庚",
+              "published_at": "2026-10-01 12:06",
+              "likes": 1,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000006"
+            },
+            {
+              "native_id": "910000007",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第七条评论：加载更多后出现。",
+              "author": "评论者辛",
+              "published_at": "2026-10-01 12:07",
+              "likes": 2,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000007"
+            },
+            {
+              "native_id": "910000008",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第八条评论：展开楼中楼不串字段。",
+              "author": "评论者壬",
+              "published_at": "2026-10-01 12:08",
+              "likes": 4,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000008"
+            },
+            {
+              "native_id": "910000009",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第九条评论：页面声明 12 条，只看到 9 条。",
+              "author": "评论者癸",
+              "published_at": "2026-10-01 12:09",
+              "likes": 6,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000009"
+            },
+            {
+              "native_id": "920000001",
+              "kind": "lzl",
+              "parent_id": "910000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "楼中楼第一条：父评论是 910000001。",
+              "author": "楼中楼甲",
+              "published_at": "2026-10-01 12:01",
+              "likes": 1,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "920000001"
+            },
+            {
+              "native_id": "920000002",
+              "kind": "lzl",
+              "parent_id": "910000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "楼中楼第二条：没有稳定 ID 时不能合成。",
+              "author": "楼中楼乙",
+              "published_at": "2026-10-01 12:02",
+              "likes": 0,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "920000002"
+            }
+          ],
+          "ids": [
+            "900000001",
+            "910000001",
+            "910000002",
+            "910000003",
+            "910000004",
+            "910000005",
+            "910000006",
+            "910000007",
+            "910000008",
+            "910000009",
+            "920000001",
+            "920000002"
+          ],
+          "declared": 12,
+          "observed": 11,
+          "comment_count": 9,
+          "lzl_count": 2,
+          "events": [
+            {
+              "type": "click",
+              "detail": {
+                "id": "",
+                "cls": "show-more-lzl",
+                "text": "展开楼中楼（2）",
+                "trusted": true
+              },
+              "y": 0,
+              "t": 436
+            },
+            {
+              "type": "expand",
+              "detail": {
+                "open": true,
+                "count": 2,
+                "trusted": true
+              },
+              "y": 0,
+              "t": 437
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 226,
+                "trusted": true
+              },
+              "y": 226,
+              "t": 717
+            },
+            {
+              "type": "comments_added",
+              "detail": {
+                "count": 3,
+                "total": 6
+              },
+              "y": 226,
+              "t": 719
+            },
+            {
+              "type": "lazy_load",
+              "detail": {
+                "added": 3,
+                "total": 6,
+                "trusted": true
+              },
+              "y": 226,
+              "t": 719
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 579,
+                "trusted": true
+              },
+              "y": 579,
+              "t": 738
+            },
+            {
+              "type": "click",
+              "detail": {
+                "id": "load-more",
+                "cls": "",
+                "text": "加载更多评论",
+                "trusted": true
+              },
+              "y": 579,
+              "t": 743
+            },
+            {
+              "type": "comments_added",
+              "detail": {
+                "count": 3,
+                "total": 9
+              },
+              "y": 579,
+              "t": 745
+            },
+            {
+              "type": "load_more",
+              "detail": {
+                "added": 3,
+                "total": 9,
+                "trusted": true
+              },
+              "y": 579,
+              "t": 745
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 1017
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 931,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 1017
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 1284
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 1542
+            }
+          ],
+          "scroll": {
+            "y": 931,
+            "height": 1651
+          },
+          "initial_scroll": {
+            "y": 0,
+            "height": 729
+          },
+          "scroll_steps": 3,
+          "expand": {
+            "clicked": true,
+            "selector": "div.show-more-lzl",
+            "box": {
+              "x": 222.33334350585938,
+              "y": 345.7708435058594,
+              "width": 113.80209350585938,
+              "height": 24
+            },
+            "via": "playwright_locator_click"
+          },
+          "load_more": {
+            "clicked": true,
+            "selector": "#load-more",
+            "box": {
+              "x": 222.33334350585938,
+              "y": 977.3125,
+              "width": 116,
+              "height": 39.3333740234375
+            },
+            "via": "playwright_locator_click"
+          },
+          "unidentified": 0,
+          "fields": {
+            "count": 11,
+            "comment": 9,
+            "lzl": 2,
+            "likes_known": 11,
+            "times_known": 11,
+            "missing": {},
+            "sources": {
+              "native_id": {
+                "div[data-id]": 11
+              },
+              "text": {
+                "span.pb-text-wrapper": 11
+              },
+              "author": {
+                "a.head-name": 11
+              },
+              "published_at": {
+                "div.comment-desc-left > span": 11
+              },
+              "likes": {
+                "[data-likes]|.pb-agree-num": 11
+              }
+            }
+          },
+          "action_evidence": {
+            "counts": {
+              "click": 2,
+              "expand": 1,
+              "scroll": 3,
+              "comments_added": 2,
+              "lazy_load": 1,
+              "load_more": 1,
+              "wheel": 3
+            },
+            "trusted": {
+              "click": 2,
+              "expand": 1,
+              "scroll": 3,
+              "lazy_load": 1,
+              "load_more": 1,
+              "wheel": 3
+            },
+            "displacement": {
+              "scroll_y_start": 0,
+              "scroll_y_end": 931,
+              "scroll_height_start": 729,
+              "scroll_height_end": 1651
+            },
+            "expected": {
+              "wheel": 3,
+              "click": 2,
+              "expand": 1,
+              "load_more": 1
+            },
+            "checks": {
+              "wheel_events": true,
+              "click_events": true,
+              "expand_event": true,
+              "load_more_event": true,
+              "scroll_event": true,
+              "page_moved": true,
+              "height_grew": true,
+              "trusted_input": true
+            },
+            "ok": true
+          },
+          "evidence": {
+            "page_screenshot": {
+              "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\playwright-run1.png",
+              "bytes": 43192
+            },
+            "desktop_proof": {
+              "supported": true,
+              "proven": true,
+              "reason": null,
+              "platform": "win32",
+              "hwnd": 1575570,
+              "pid": 29292,
+              "matched_by": "title",
+              "window_title": "单帖采集基线：本地 fixture_百度贴吧 - Google Chrome",
+              "class_name": "Chrome_WidgetWin_1",
+              "candidate_count": 2,
+              "foreground_before": 1575570,
+              "foreground_after": 1575570,
+              "foreground_matched": true,
+              "attempts": [
+                "allow_set_foreground_window",
+                "show_window_restore",
+                "set_window_pos_top",
+                "set_foreground_window:1"
+              ],
+              "window_rect": {
+                "left": 24,
+                "top": 15,
+                "right": 1950,
+                "bottom": 1287,
+                "width": 1926,
+                "height": 1272
+              },
+              "rect_source": "dwm_extended_frame_bounds",
+              "dpi_aware": true,
+              "screen": {
+                "x": 0,
+                "y": 0,
+                "width": 2560,
+                "height": 1600,
+                "source": "virtual_screen"
+              },
+              "desktop_screenshot": null,
+              "desktop_screenshot_bytes": 0,
+              "note": "桌面级证据=前台窗口匹配+窗口矩形+(可选)整屏截图；它证明窗口在桌面被置前，不证明人眼已经看到"
+            }
+          },
+          "final_evidence": {
+            "page_screenshot": {
+              "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\playwright-run1-final.png",
+              "bytes": 31902
+            }
+          },
+          "evidence_ms": 285.2,
+          "final_evidence_ms": 37.1,
+          "environment": {
+            "engine": "playwright",
+            "playwright_version": "1.60.0",
+            "browser_version": "156.0.8078.79",
+            "channel": "chrome",
+            "headless": false,
+            "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-pw-z9cmfaxy",
+            "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+          },
+          "start_info": {
+            "engine": "playwright",
+            "browser_version": "156.0.8078.79",
+            "channel": "chrome",
+            "headless": false,
+            "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-pw-z9cmfaxy"
+          },
+          "phases": {
+            "start_ms": 1037.8,
+            "navigate_ms": 108.2,
+            "first_read_ms": 3.9,
+            "actions_ms": 1413.3,
+            "close_ms": 308.9,
+            "evidence_ms": 285.2,
+            "final_evidence_ms": 37.1,
+            "total_ms": 3194.4
+          },
+          "total_ms": 3194.4
+        },
+        {
+          "engine": "playwright",
+          "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+          "config": {
+            "scroll_step": 700,
+            "max_scrolls": 8,
+            "stall_limit": 2,
+            "settle_ms": 250,
+            "timeout_ms": 15000
+          },
+          "timeline": [
+            {
+              "phase": "start_begin",
+              "ms": 0.0
+            },
+            {
+              "phase": "start_done",
+              "ms": 898.2,
+              "engine": "playwright",
+              "browser_version": "156.0.8078.79",
+              "channel": "chrome",
+              "headless": false,
+              "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-pw-80b3_3br"
+            },
+            {
+              "phase": "navigate",
+              "ms": 995.7,
+              "driver_ms": 95.5,
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "status": 200
+            },
+            {
+              "phase": "first_read",
+              "ms": 999.7,
+              "ids": 4,
+              "records": 3
+            },
+            {
+              "phase": "expand",
+              "ms": 1267.1,
+              "clicked": true,
+              "selector": "div.show-more-lzl",
+              "box": {
+                "x": 222.33334350585938,
+                "y": 345.7708435058594,
+                "width": 113.80209350585938,
+                "height": 24
+              },
+              "via": "playwright_locator_click"
+            },
+            {
+              "phase": "expand_read",
+              "ms": 1528.5,
+              "ids": 6
+            },
+            {
+              "phase": "load_more",
+              "ms": 1586.0,
+              "clicked": true,
+              "selector": "#load-more",
+              "box": {
+                "x": 222.33334350585938,
+                "y": 977.3125,
+                "width": 116,
+                "height": 39.3333740234375
+              },
+              "via": "playwright_locator_click"
+            },
+            {
+              "phase": "load_more_read",
+              "ms": 1857.3,
+              "new_ids": [
+                "910000004",
+                "910000005",
+                "910000006",
+                "910000007",
+                "910000008",
+                "910000009"
+              ],
+              "ids": 12
+            },
+            {
+              "phase": "scroll_1",
+              "ms": 2133.3,
+              "new_ids": [],
+              "scroll_dy": 352,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "playwright_mouse_wheel"
+              }
+            },
+            {
+              "phase": "scroll_2",
+              "ms": 2397.6,
+              "new_ids": [],
+              "scroll_dy": 0,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "playwright_mouse_wheel"
+              }
+            },
+            {
+              "phase": "scroll_3",
+              "ms": 2662.0,
+              "new_ids": [],
+              "scroll_dy": 0,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "playwright_mouse_wheel"
+              }
+            },
+            {
+              "phase": "final_read",
+              "ms": 2664.4,
+              "ids": 12
+            },
+            {
+              "phase": "close",
+              "ms": 2977.9,
+              "closed": true,
+              "profile_removed": true,
+              "errors": []
+            }
+          ],
+          "stop": "no_growth",
+          "stop_detail": "连续 2 次滚动无新增原生 ID 且无页面位移；页面声明 12 条，可见 9 条。没有可核验的到底标记，按部分/未知处理，不宣称取全。",
+          "complete": false,
+          "partial": true,
+          "error": null,
+          "thread": {
+            "native_id": "900000001",
+            "title": "单帖采集基线：本地 fixture",
+            "text": "这是用于 Playwright 与 nodriver 对照的本地单帖正文。正文、评论、点赞数与发布时间都只从当前页面读取；读不到的字段标记未知，不用零或接口数据补齐。",
+            "author": "楼主甲",
+            "published_at": "2026-10-01 12:00",
+            "likes": 37,
+            "sources": {
+              "native_id": "data-tid|url:/p/<tid>",
+              "title": "span.pb-title",
+              "text": "span.pb-text-wrapper[tid][order-id=\"0\"]",
+              "author": "a.head-name",
+              "published_at": "span.post-num",
+              "likes": "[data-likes]|.pb-agree-num"
+            },
+            "missing": []
+          },
+          "records": [
+            {
+              "native_id": "910000001",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第一条评论：滚轮与展开都要留下页面事件。",
+              "author": "评论者乙",
+              "published_at": "2026-10-01 12:01",
+              "likes": 5,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000001"
+            },
+            {
+              "native_id": "910000002",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第二条评论：点赞数和发布时间分开归属。",
+              "author": "评论者丙",
+              "published_at": "2026-10-01 12:02",
+              "likes": 0,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000002"
+            },
+            {
+              "native_id": "910000003",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第三条评论：没有读到就标未知，不填零。",
+              "author": "评论者丁",
+              "published_at": "2026-10-01 12:03",
+              "likes": 12,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000003"
+            },
+            {
+              "native_id": "910000004",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第四条评论：滚动后才出现。",
+              "author": "评论者戊",
+              "published_at": "2026-10-01 12:04",
+              "likes": 3,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000004"
+            },
+            {
+              "native_id": "910000005",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第五条评论：按原生 ID 增量去重。",
+              "author": "评论者己",
+              "published_at": "2026-10-01 12:05",
+              "likes": 8,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000005"
+            },
+            {
+              "native_id": "910000006",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第六条评论：没有到底证据就标部分。",
+              "author": "评论者庚",
+              "published_at": "2026-10-01 12:06",
+              "likes": 1,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000006"
+            },
+            {
+              "native_id": "910000007",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第七条评论：加载更多后出现。",
+              "author": "评论者辛",
+              "published_at": "2026-10-01 12:07",
+              "likes": 2,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000007"
+            },
+            {
+              "native_id": "910000008",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第八条评论：展开楼中楼不串字段。",
+              "author": "评论者壬",
+              "published_at": "2026-10-01 12:08",
+              "likes": 4,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000008"
+            },
+            {
+              "native_id": "910000009",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第九条评论：页面声明 12 条，只看到 9 条。",
+              "author": "评论者癸",
+              "published_at": "2026-10-01 12:09",
+              "likes": 6,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000009"
+            },
+            {
+              "native_id": "920000001",
+              "kind": "lzl",
+              "parent_id": "910000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "楼中楼第一条：父评论是 910000001。",
+              "author": "楼中楼甲",
+              "published_at": "2026-10-01 12:01",
+              "likes": 1,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "920000001"
+            },
+            {
+              "native_id": "920000002",
+              "kind": "lzl",
+              "parent_id": "910000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "楼中楼第二条：没有稳定 ID 时不能合成。",
+              "author": "楼中楼乙",
+              "published_at": "2026-10-01 12:02",
+              "likes": 0,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "920000002"
+            }
+          ],
+          "ids": [
+            "900000001",
+            "910000001",
+            "910000002",
+            "910000003",
+            "910000004",
+            "910000005",
+            "910000006",
+            "910000007",
+            "910000008",
+            "910000009",
+            "920000001",
+            "920000002"
+          ],
+          "declared": 12,
+          "observed": 11,
+          "comment_count": 9,
+          "lzl_count": 2,
+          "events": [
+            {
+              "type": "click",
+              "detail": {
+                "id": "",
+                "cls": "show-more-lzl",
+                "text": "展开楼中楼（2）",
+                "trusted": true
+              },
+              "y": 0,
+              "t": 356
+            },
+            {
+              "type": "expand",
+              "detail": {
+                "open": true,
+                "count": 2,
+                "trusted": true
+              },
+              "y": 0,
+              "t": 358
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 226,
+                "trusted": true
+              },
+              "y": 226,
+              "t": 643
+            },
+            {
+              "type": "comments_added",
+              "detail": {
+                "count": 3,
+                "total": 6
+              },
+              "y": 226,
+              "t": 645
+            },
+            {
+              "type": "lazy_load",
+              "detail": {
+                "added": 3,
+                "total": 6,
+                "trusted": true
+              },
+              "y": 226,
+              "t": 645
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 579,
+                "trusted": true
+              },
+              "y": 579,
+              "t": 668
+            },
+            {
+              "type": "click",
+              "detail": {
+                "id": "load-more",
+                "cls": "",
+                "text": "加载更多评论",
+                "trusted": true
+              },
+              "y": 579,
+              "t": 673
+            },
+            {
+              "type": "comments_added",
+              "detail": {
+                "count": 3,
+                "total": 9
+              },
+              "y": 579,
+              "t": 675
+            },
+            {
+              "type": "load_more",
+              "detail": {
+                "added": 3,
+                "total": 9,
+                "trusted": true
+              },
+              "y": 579,
+              "t": 675
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 959
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 931,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 960
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 1234
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 1497
+            }
+          ],
+          "scroll": {
+            "y": 931,
+            "height": 1651
+          },
+          "initial_scroll": {
+            "y": 0,
+            "height": 729
+          },
+          "scroll_steps": 3,
+          "expand": {
+            "clicked": true,
+            "selector": "div.show-more-lzl",
+            "box": {
+              "x": 222.33334350585938,
+              "y": 345.7708435058594,
+              "width": 113.80209350585938,
+              "height": 24
+            },
+            "via": "playwright_locator_click"
+          },
+          "load_more": {
+            "clicked": true,
+            "selector": "#load-more",
+            "box": {
+              "x": 222.33334350585938,
+              "y": 977.3125,
+              "width": 116,
+              "height": 39.3333740234375
+            },
+            "via": "playwright_locator_click"
+          },
+          "unidentified": 0,
+          "fields": {
+            "count": 11,
+            "comment": 9,
+            "lzl": 2,
+            "likes_known": 11,
+            "times_known": 11,
+            "missing": {},
+            "sources": {
+              "native_id": {
+                "div[data-id]": 11
+              },
+              "text": {
+                "span.pb-text-wrapper": 11
+              },
+              "author": {
+                "a.head-name": 11
+              },
+              "published_at": {
+                "div.comment-desc-left > span": 11
+              },
+              "likes": {
+                "[data-likes]|.pb-agree-num": 11
+              }
+            }
+          },
+          "action_evidence": {
+            "counts": {
+              "click": 2,
+              "expand": 1,
+              "scroll": 3,
+              "comments_added": 2,
+              "lazy_load": 1,
+              "load_more": 1,
+              "wheel": 3
+            },
+            "trusted": {
+              "click": 2,
+              "expand": 1,
+              "scroll": 3,
+              "lazy_load": 1,
+              "load_more": 1,
+              "wheel": 3
+            },
+            "displacement": {
+              "scroll_y_start": 0,
+              "scroll_y_end": 931,
+              "scroll_height_start": 729,
+              "scroll_height_end": 1651
+            },
+            "expected": {
+              "wheel": 3,
+              "click": 2,
+              "expand": 1,
+              "load_more": 1
+            },
+            "checks": {
+              "wheel_events": true,
+              "click_events": true,
+              "expand_event": true,
+              "load_more_event": true,
+              "scroll_event": true,
+              "page_moved": true,
+              "height_grew": true,
+              "trusted_input": true
+            },
+            "ok": true
+          },
+          "evidence": {
+            "page_screenshot": {
+              "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\playwright-run2.png",
+              "bytes": 43192
+            },
+            "desktop_proof": null
+          },
+          "final_evidence": {
+            "page_screenshot": {
+              "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\playwright-run2-final.png",
+              "bytes": 31902
+            }
+          },
+          "evidence_ms": 226.5,
+          "final_evidence_ms": 30.2,
+          "environment": {
+            "engine": "playwright",
+            "playwright_version": "1.60.0",
+            "browser_version": "156.0.8078.79",
+            "channel": "chrome",
+            "headless": false,
+            "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-pw-80b3_3br",
+            "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+          },
+          "start_info": {
+            "engine": "playwright",
+            "browser_version": "156.0.8078.79",
+            "channel": "chrome",
+            "headless": false,
+            "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-pw-80b3_3br"
+          },
+          "phases": {
+            "start_ms": 898.2,
+            "navigate_ms": 97.5,
+            "first_read_ms": 4.0,
+            "actions_ms": 1438.2,
+            "close_ms": 283.3,
+            "evidence_ms": 226.5,
+            "final_evidence_ms": 30.2,
+            "total_ms": 2977.9
+          },
+          "total_ms": 2977.9
+        },
+        {
+          "engine": "playwright",
+          "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+          "config": {
+            "scroll_step": 700,
+            "max_scrolls": 8,
+            "stall_limit": 2,
+            "settle_ms": 250,
+            "timeout_ms": 15000
+          },
+          "timeline": [
+            {
+              "phase": "start_begin",
+              "ms": 0.0
+            },
+            {
+              "phase": "start_done",
+              "ms": 875.3,
+              "engine": "playwright",
+              "browser_version": "156.0.8078.79",
+              "channel": "chrome",
+              "headless": false,
+              "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-pw-qwmojyh2"
+            },
+            {
+              "phase": "navigate",
+              "ms": 977.1,
+              "driver_ms": 99.5,
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "status": 200
+            },
+            {
+              "phase": "first_read",
+              "ms": 981.0,
+              "ids": 4,
+              "records": 3
+            },
+            {
+              "phase": "expand",
+              "ms": 1248.4,
+              "clicked": true,
+              "selector": "div.show-more-lzl",
+              "box": {
+                "x": 222.33334350585938,
+                "y": 345.7708435058594,
+                "width": 113.80209350585938,
+                "height": 24
+              },
+              "via": "playwright_locator_click"
+            },
+            {
+              "phase": "expand_read",
+              "ms": 1504.2,
+              "ids": 6
+            },
+            {
+              "phase": "load_more",
+              "ms": 1561.1,
+              "clicked": true,
+              "selector": "#load-more",
+              "box": {
+                "x": 222.33334350585938,
+                "y": 977.3125,
+                "width": 116,
+                "height": 39.3333740234375
+              },
+              "via": "playwright_locator_click"
+            },
+            {
+              "phase": "load_more_read",
+              "ms": 1829.8,
+              "new_ids": [
+                "910000004",
+                "910000005",
+                "910000006",
+                "910000007",
+                "910000008",
+                "910000009"
+              ],
+              "ids": 12
+            },
+            {
+              "phase": "scroll_1",
+              "ms": 2091.2,
+              "new_ids": [],
+              "scroll_dy": 352,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "playwright_mouse_wheel"
+              }
+            },
+            {
+              "phase": "scroll_2",
+              "ms": 2355.3,
+              "new_ids": [],
+              "scroll_dy": 0,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "playwright_mouse_wheel"
+              }
+            },
+            {
+              "phase": "scroll_3",
+              "ms": 2619.5,
+              "new_ids": [],
+              "scroll_dy": 0,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "playwright_mouse_wheel"
+              }
+            },
+            {
+              "phase": "final_read",
+              "ms": 2622.2,
+              "ids": 12
+            },
+            {
+              "phase": "close",
+              "ms": 2974.5,
+              "closed": true,
+              "profile_removed": true,
+              "errors": []
+            }
+          ],
+          "stop": "no_growth",
+          "stop_detail": "连续 2 次滚动无新增原生 ID 且无页面位移；页面声明 12 条，可见 9 条。没有可核验的到底标记，按部分/未知处理，不宣称取全。",
+          "complete": false,
+          "partial": true,
+          "error": null,
+          "thread": {
+            "native_id": "900000001",
+            "title": "单帖采集基线：本地 fixture",
+            "text": "这是用于 Playwright 与 nodriver 对照的本地单帖正文。正文、评论、点赞数与发布时间都只从当前页面读取；读不到的字段标记未知，不用零或接口数据补齐。",
+            "author": "楼主甲",
+            "published_at": "2026-10-01 12:00",
+            "likes": 37,
+            "sources": {
+              "native_id": "data-tid|url:/p/<tid>",
+              "title": "span.pb-title",
+              "text": "span.pb-text-wrapper[tid][order-id=\"0\"]",
+              "author": "a.head-name",
+              "published_at": "span.post-num",
+              "likes": "[data-likes]|.pb-agree-num"
+            },
+            "missing": []
+          },
+          "records": [
+            {
+              "native_id": "910000001",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第一条评论：滚轮与展开都要留下页面事件。",
+              "author": "评论者乙",
+              "published_at": "2026-10-01 12:01",
+              "likes": 5,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000001"
+            },
+            {
+              "native_id": "910000002",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第二条评论：点赞数和发布时间分开归属。",
+              "author": "评论者丙",
+              "published_at": "2026-10-01 12:02",
+              "likes": 0,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000002"
+            },
+            {
+              "native_id": "910000003",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第三条评论：没有读到就标未知，不填零。",
+              "author": "评论者丁",
+              "published_at": "2026-10-01 12:03",
+              "likes": 12,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000003"
+            },
+            {
+              "native_id": "910000004",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第四条评论：滚动后才出现。",
+              "author": "评论者戊",
+              "published_at": "2026-10-01 12:04",
+              "likes": 3,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000004"
+            },
+            {
+              "native_id": "910000005",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第五条评论：按原生 ID 增量去重。",
+              "author": "评论者己",
+              "published_at": "2026-10-01 12:05",
+              "likes": 8,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000005"
+            },
+            {
+              "native_id": "910000006",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第六条评论：没有到底证据就标部分。",
+              "author": "评论者庚",
+              "published_at": "2026-10-01 12:06",
+              "likes": 1,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000006"
+            },
+            {
+              "native_id": "910000007",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第七条评论：加载更多后出现。",
+              "author": "评论者辛",
+              "published_at": "2026-10-01 12:07",
+              "likes": 2,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000007"
+            },
+            {
+              "native_id": "910000008",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第八条评论：展开楼中楼不串字段。",
+              "author": "评论者壬",
+              "published_at": "2026-10-01 12:08",
+              "likes": 4,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000008"
+            },
+            {
+              "native_id": "910000009",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第九条评论：页面声明 12 条，只看到 9 条。",
+              "author": "评论者癸",
+              "published_at": "2026-10-01 12:09",
+              "likes": 6,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000009"
+            },
+            {
+              "native_id": "920000001",
+              "kind": "lzl",
+              "parent_id": "910000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "楼中楼第一条：父评论是 910000001。",
+              "author": "楼中楼甲",
+              "published_at": "2026-10-01 12:01",
+              "likes": 1,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "920000001"
+            },
+            {
+              "native_id": "920000002",
+              "kind": "lzl",
+              "parent_id": "910000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "楼中楼第二条：没有稳定 ID 时不能合成。",
+              "author": "楼中楼乙",
+              "published_at": "2026-10-01 12:02",
+              "likes": 0,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "920000002"
+            }
+          ],
+          "ids": [
+            "900000001",
+            "910000001",
+            "910000002",
+            "910000003",
+            "910000004",
+            "910000005",
+            "910000006",
+            "910000007",
+            "910000008",
+            "910000009",
+            "920000001",
+            "920000002"
+          ],
+          "declared": 12,
+          "observed": 11,
+          "comment_count": 9,
+          "lzl_count": 2,
+          "events": [
+            {
+              "type": "click",
+              "detail": {
+                "id": "",
+                "cls": "show-more-lzl",
+                "text": "展开楼中楼（2）",
+                "trusted": true
+              },
+              "y": 0,
+              "t": 359
+            },
+            {
+              "type": "expand",
+              "detail": {
+                "open": true,
+                "count": 2,
+                "trusted": true
+              },
+              "y": 0,
+              "t": 360
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 226,
+                "trusted": true
+              },
+              "y": 226,
+              "t": 636
+            },
+            {
+              "type": "comments_added",
+              "detail": {
+                "count": 3,
+                "total": 6
+              },
+              "y": 226,
+              "t": 638
+            },
+            {
+              "type": "lazy_load",
+              "detail": {
+                "added": 3,
+                "total": 6,
+                "trusted": true
+              },
+              "y": 226,
+              "t": 638
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 579,
+                "trusted": true
+              },
+              "y": 579,
+              "t": 661
+            },
+            {
+              "type": "click",
+              "detail": {
+                "id": "load-more",
+                "cls": "",
+                "text": "加载更多评论",
+                "trusted": true
+              },
+              "y": 579,
+              "t": 669
+            },
+            {
+              "type": "comments_added",
+              "detail": {
+                "count": 3,
+                "total": 9
+              },
+              "y": 579,
+              "t": 671
+            },
+            {
+              "type": "load_more",
+              "detail": {
+                "added": 3,
+                "total": 9,
+                "trusted": true
+              },
+              "y": 579,
+              "t": 671
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 953
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 931,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 953
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 1211
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 1477
+            }
+          ],
+          "scroll": {
+            "y": 931,
+            "height": 1651
+          },
+          "initial_scroll": {
+            "y": 0,
+            "height": 729
+          },
+          "scroll_steps": 3,
+          "expand": {
+            "clicked": true,
+            "selector": "div.show-more-lzl",
+            "box": {
+              "x": 222.33334350585938,
+              "y": 345.7708435058594,
+              "width": 113.80209350585938,
+              "height": 24
+            },
+            "via": "playwright_locator_click"
+          },
+          "load_more": {
+            "clicked": true,
+            "selector": "#load-more",
+            "box": {
+              "x": 222.33334350585938,
+              "y": 977.3125,
+              "width": 116,
+              "height": 39.3333740234375
+            },
+            "via": "playwright_locator_click"
+          },
+          "unidentified": 0,
+          "fields": {
+            "count": 11,
+            "comment": 9,
+            "lzl": 2,
+            "likes_known": 11,
+            "times_known": 11,
+            "missing": {},
+            "sources": {
+              "native_id": {
+                "div[data-id]": 11
+              },
+              "text": {
+                "span.pb-text-wrapper": 11
+              },
+              "author": {
+                "a.head-name": 11
+              },
+              "published_at": {
+                "div.comment-desc-left > span": 11
+              },
+              "likes": {
+                "[data-likes]|.pb-agree-num": 11
+              }
+            }
+          },
+          "action_evidence": {
+            "counts": {
+              "click": 2,
+              "expand": 1,
+              "scroll": 3,
+              "comments_added": 2,
+              "lazy_load": 1,
+              "load_more": 1,
+              "wheel": 3
+            },
+            "trusted": {
+              "click": 2,
+              "expand": 1,
+              "scroll": 3,
+              "lazy_load": 1,
+              "load_more": 1,
+              "wheel": 3
+            },
+            "displacement": {
+              "scroll_y_start": 0,
+              "scroll_y_end": 931,
+              "scroll_height_start": 729,
+              "scroll_height_end": 1651
+            },
+            "expected": {
+              "wheel": 3,
+              "click": 2,
+              "expand": 1,
+              "load_more": 1
+            },
+            "checks": {
+              "wheel_events": true,
+              "click_events": true,
+              "expand_event": true,
+              "load_more_event": true,
+              "scroll_event": true,
+              "page_moved": true,
+              "height_grew": true,
+              "trusted_input": true
+            },
+            "ok": true
+          },
+          "evidence": {
+            "page_screenshot": {
+              "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\playwright-run3.png",
+              "bytes": 43192
+            },
+            "desktop_proof": null
+          },
+          "final_evidence": {
+            "page_screenshot": {
+              "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\playwright-run3-final.png",
+              "bytes": 31902
+            }
+          },
+          "evidence_ms": 221.4,
+          "final_evidence_ms": 42.7,
+          "environment": {
+            "engine": "playwright",
+            "playwright_version": "1.60.0",
+            "browser_version": "156.0.8078.79",
+            "channel": "chrome",
+            "headless": false,
+            "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-pw-qwmojyh2",
+            "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+          },
+          "start_info": {
+            "engine": "playwright",
+            "browser_version": "156.0.8078.79",
+            "channel": "chrome",
+            "headless": false,
+            "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-pw-qwmojyh2"
+          },
+          "phases": {
+            "start_ms": 875.3,
+            "navigate_ms": 101.8,
+            "first_read_ms": 3.9,
+            "actions_ms": 1419.8,
+            "close_ms": 309.6,
+            "evidence_ms": 221.4,
+            "final_evidence_ms": 42.7,
+            "total_ms": 2974.5
+          },
+          "total_ms": 2974.5
+        }
+      ],
+      "status": "verified",
+      "reason": null,
+      "repro": "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -c \"import playwright\"",
+      "timings": {
+        "start_ms": {
+          "n": 3,
+          "min": 875.3,
+          "median": 898.2,
+          "max": 1037.8
+        },
+        "navigate_ms": {
+          "n": 3,
+          "min": 97.5,
+          "median": 101.8,
+          "max": 108.2
+        },
+        "first_read_ms": {
+          "n": 3,
+          "min": 3.9,
+          "median": 3.9,
+          "max": 4.0
+        },
+        "evidence_ms": {
+          "n": 3,
+          "min": 221.4,
+          "median": 226.5,
+          "max": 285.2
+        },
+        "final_evidence_ms": {
+          "n": 3,
+          "min": 30.2,
+          "median": 37.1,
+          "max": 42.7
+        },
+        "actions_ms": {
+          "n": 3,
+          "min": 1413.3,
+          "median": 1419.8,
+          "max": 1438.2
+        },
+        "close_ms": {
+          "n": 3,
+          "min": 283.3,
+          "median": 308.9,
+          "max": 309.6
+        },
+        "total_ms": {
+          "n": 3,
+          "min": 2974.5,
+          "median": 2977.9,
+          "max": 3194.4
+        }
+      },
+      "ids_union": [
+        "900000001",
+        "910000001",
+        "910000002",
+        "910000003",
+        "910000004",
+        "910000005",
+        "910000006",
+        "910000007",
+        "910000008",
+        "910000009",
+        "920000001",
+        "920000002"
+      ],
+      "ids_intersection": [
+        "900000001",
+        "910000001",
+        "910000002",
+        "910000003",
+        "910000004",
+        "910000005",
+        "910000006",
+        "910000007",
+        "910000008",
+        "910000009",
+        "920000001",
+        "920000002"
+      ],
+      "ids_stable": true,
+      "missing_vs_ground": [],
+      "extra_vs_ground": [],
+      "fields": {
+        "count": 11,
+        "comment": 9,
+        "lzl": 2,
+        "likes_known": 11,
+        "times_known": 11,
+        "missing": {},
+        "sources": {
+          "native_id": {
+            "div[data-id]": 11
+          },
+          "text": {
+            "span.pb-text-wrapper": 11
+          },
+          "author": {
+            "a.head-name": 11
+          },
+          "published_at": {
+            "div.comment-desc-left > span": 11
+          },
+          "likes": {
+            "[data-likes]|.pb-agree-num": 11
+          }
+        }
+      },
+      "action_evidence": {
+        "counts": {
+          "click": 2,
+          "expand": 1,
+          "scroll": 3,
+          "comments_added": 2,
+          "lazy_load": 1,
+          "load_more": 1,
+          "wheel": 3
+        },
+        "trusted": {
+          "click": 2,
+          "expand": 1,
+          "scroll": 3,
+          "lazy_load": 1,
+          "load_more": 1,
+          "wheel": 3
+        },
+        "displacement": {
+          "scroll_y_start": 0,
+          "scroll_y_end": 931,
+          "scroll_height_start": 729,
+          "scroll_height_end": 1651
+        },
+        "expected": {
+          "wheel": 3,
+          "click": 2,
+          "expand": 1,
+          "load_more": 1
+        },
+        "checks": {
+          "wheel_events": true,
+          "click_events": true,
+          "expand_event": true,
+          "load_more_event": true,
+          "scroll_event": true,
+          "page_moved": true,
+          "height_grew": true,
+          "trusted_input": true
+        },
+        "ok": true
+      },
+      "stop_reasons": [
+        "no_growth",
+        "no_growth",
+        "no_growth"
+      ],
+      "stop_details": [
+        "连续 2 次滚动无新增原生 ID 且无页面位移；页面声明 12 条，可见 9 条。没有可核验的到底标记，按部分/未知处理，不宣称取全。",
+        "连续 2 次滚动无新增原生 ID 且无页面位移；页面声明 12 条，可见 9 条。没有可核验的到底标记，按部分/未知处理，不宣称取全。",
+        "连续 2 次滚动无新增原生 ID 且无页面位移；页面声明 12 条，可见 9 条。没有可核验的到底标记，按部分/未知处理，不宣称取全。"
+      ],
+      "desktop_proof": {
+        "supported": true,
+        "proven": true,
+        "reason": null,
+        "platform": "win32",
+        "hwnd": 1575570,
+        "pid": 29292,
+        "matched_by": "title",
+        "window_title": "单帖采集基线：本地 fixture_百度贴吧 - Google Chrome",
+        "class_name": "Chrome_WidgetWin_1",
+        "candidate_count": 2,
+        "foreground_before": 1575570,
+        "foreground_after": 1575570,
+        "foreground_matched": true,
+        "attempts": [
+          "allow_set_foreground_window",
+          "show_window_restore",
+          "set_window_pos_top",
+          "set_foreground_window:1"
+        ],
+        "window_rect": {
+          "left": 24,
+          "top": 15,
+          "right": 1950,
+          "bottom": 1287,
+          "width": 1926,
+          "height": 1272
+        },
+        "rect_source": "dwm_extended_frame_bounds",
+        "dpi_aware": true,
+        "screen": {
+          "x": 0,
+          "y": 0,
+          "width": 2560,
+          "height": 1600,
+          "source": "virtual_screen"
+        },
+        "desktop_screenshot": null,
+        "desktop_screenshot_bytes": 0,
+        "note": "桌面级证据=前台窗口匹配+窗口矩形+(可选)整屏截图；它证明窗口在桌面被置前，不证明人眼已经看到"
+      },
+      "screenshots": [
+        {
+          "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\playwright-run1.png",
+          "bytes": 43192
+        },
+        {
+          "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\playwright-run2.png",
+          "bytes": 43192
+        },
+        {
+          "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\playwright-run3.png",
+          "bytes": 43192
+        }
+      ],
+      "final_screenshots": [
+        {
+          "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\playwright-run1-final.png",
+          "bytes": 31902
+        },
+        {
+          "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\playwright-run2-final.png",
+          "bytes": 31902
+        },
+        {
+          "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\playwright-run3-final.png",
+          "bytes": 31902
+        }
+      ],
+      "visibility": "proven",
+      "verdict": "stop=no_growth,no_growth,no_growth; ids=12/12; missing=0; extra=0; actions_ok=True; visibility=proven"
+    },
+    "nodriver": {
+      "engine": "nodriver",
+      "availability": {
+        "engine": "nodriver",
+        "installed": true,
+        "version": "0.50.6",
+        "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "usable": true,
+        "reason": null,
+        "detail": null,
+        "repro": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\venv\\Scripts\\python.exe -c \"import nodriver\""
+      },
+      "runs": [
+        {
+          "engine": "nodriver",
+          "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+          "config": {
+            "scroll_step": 700,
+            "max_scrolls": 8,
+            "stall_limit": 2,
+            "settle_ms": 250,
+            "timeout_ms": 15000
+          },
+          "timeline": [
+            {
+              "phase": "start_begin",
+              "ms": 0.0
+            },
+            {
+              "phase": "start_done",
+              "ms": 886.2,
+              "engine": "nodriver",
+              "version": "0.50.6",
+              "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+              "headless": false,
+              "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-nd-7rk6bx14"
+            },
+            {
+              "phase": "navigate",
+              "ms": 965.0,
+              "driver_ms": 77.6,
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "status": null
+            },
+            {
+              "phase": "first_read",
+              "ms": 967.9,
+              "ids": 4,
+              "records": 3
+            },
+            {
+              "phase": "expand",
+              "ms": 2083.2,
+              "clicked": true,
+              "selector": "div.show-more-lzl",
+              "box": {
+                "x": 279.2343864440918,
+                "y": 357.7708435058594,
+                "left": 222.33334350585938,
+                "top": 345.7708435058594,
+                "width": 113.80208587646484,
+                "height": 24,
+                "hit_ok": true,
+                "hit": "DIV#"
+              },
+              "via": "nodriver_cdp_mouse_click"
+            },
+            {
+              "phase": "expand_read",
+              "ms": 2335.6,
+              "ids": 6
+            },
+            {
+              "phase": "load_more",
+              "ms": 2687.8,
+              "clicked": true,
+              "selector": "#load-more",
+              "box": {
+                "x": 280.3333435058594,
+                "y": 644.3125419616699,
+                "left": 222.33334350585938,
+                "top": 624.6458740234375,
+                "width": 116,
+                "height": 39.333335876464844,
+                "hit_ok": true,
+                "hit": "BUTTON#load-more"
+              },
+              "via": "nodriver_cdp_mouse_click"
+            },
+            {
+              "phase": "load_more_read",
+              "ms": 2940.7,
+              "new_ids": [
+                "910000004",
+                "910000005",
+                "910000006",
+                "910000007",
+                "910000008",
+                "910000009"
+              ],
+              "ids": 12
+            },
+            {
+              "phase": "scroll_1",
+              "ms": 3199.2,
+              "new_ids": [],
+              "scroll_dy": 352,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "nodriver_cdp_mouse_wheel",
+                "scrolled": true
+              }
+            },
+            {
+              "phase": "scroll_2",
+              "ms": 3453.8,
+              "new_ids": [],
+              "scroll_dy": 0,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "nodriver_cdp_mouse_wheel",
+                "scrolled": true
+              }
+            },
+            {
+              "phase": "scroll_3",
+              "ms": 3707.5,
+              "new_ids": [],
+              "scroll_dy": 0,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "nodriver_cdp_mouse_wheel",
+                "scrolled": true
+              }
+            },
+            {
+              "phase": "final_read",
+              "ms": 3709.2,
+              "ids": 12
+            },
+            {
+              "phase": "close",
+              "ms": 5163.4,
+              "closed": true,
+              "profile_removed": true,
+              "errors": []
+            }
+          ],
+          "stop": "no_growth",
+          "stop_detail": "连续 2 次滚动无新增原生 ID 且无页面位移；页面声明 12 条，可见 9 条。没有可核验的到底标记，按部分/未知处理，不宣称取全。",
+          "complete": false,
+          "partial": true,
+          "error": null,
+          "thread": {
+            "native_id": "900000001",
+            "title": "单帖采集基线：本地 fixture",
+            "text": "这是用于 Playwright 与 nodriver 对照的本地单帖正文。正文、评论、点赞数与发布时间都只从当前页面读取；读不到的字段标记未知，不用零或接口数据补齐。",
+            "author": "楼主甲",
+            "published_at": "2026-10-01 12:00",
+            "likes": 37,
+            "sources": {
+              "native_id": "data-tid|url:/p/<tid>",
+              "title": "span.pb-title",
+              "text": "span.pb-text-wrapper[tid][order-id=\"0\"]",
+              "author": "a.head-name",
+              "published_at": "span.post-num",
+              "likes": "[data-likes]|.pb-agree-num"
+            },
+            "missing": []
+          },
+          "records": [
+            {
+              "native_id": "910000001",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第一条评论：滚轮与展开都要留下页面事件。",
+              "author": "评论者乙",
+              "published_at": "2026-10-01 12:01",
+              "likes": 5,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000001"
+            },
+            {
+              "native_id": "910000002",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第二条评论：点赞数和发布时间分开归属。",
+              "author": "评论者丙",
+              "published_at": "2026-10-01 12:02",
+              "likes": 0,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000002"
+            },
+            {
+              "native_id": "910000003",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第三条评论：没有读到就标未知，不填零。",
+              "author": "评论者丁",
+              "published_at": "2026-10-01 12:03",
+              "likes": 12,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000003"
+            },
+            {
+              "native_id": "910000004",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第四条评论：滚动后才出现。",
+              "author": "评论者戊",
+              "published_at": "2026-10-01 12:04",
+              "likes": 3,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000004"
+            },
+            {
+              "native_id": "910000005",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第五条评论：按原生 ID 增量去重。",
+              "author": "评论者己",
+              "published_at": "2026-10-01 12:05",
+              "likes": 8,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000005"
+            },
+            {
+              "native_id": "910000006",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第六条评论：没有到底证据就标部分。",
+              "author": "评论者庚",
+              "published_at": "2026-10-01 12:06",
+              "likes": 1,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000006"
+            },
+            {
+              "native_id": "910000007",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第七条评论：加载更多后出现。",
+              "author": "评论者辛",
+              "published_at": "2026-10-01 12:07",
+              "likes": 2,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000007"
+            },
+            {
+              "native_id": "910000008",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第八条评论：展开楼中楼不串字段。",
+              "author": "评论者壬",
+              "published_at": "2026-10-01 12:08",
+              "likes": 4,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000008"
+            },
+            {
+              "native_id": "910000009",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第九条评论：页面声明 12 条，只看到 9 条。",
+              "author": "评论者癸",
+              "published_at": "2026-10-01 12:09",
+              "likes": 6,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000009"
+            },
+            {
+              "native_id": "920000001",
+              "kind": "lzl",
+              "parent_id": "910000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "楼中楼第一条：父评论是 910000001。",
+              "author": "楼中楼甲",
+              "published_at": "2026-10-01 12:01",
+              "likes": 1,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "920000001"
+            },
+            {
+              "native_id": "920000002",
+              "kind": "lzl",
+              "parent_id": "910000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "楼中楼第二条：没有稳定 ID 时不能合成。",
+              "author": "楼中楼乙",
+              "published_at": "2026-10-01 12:02",
+              "likes": 0,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "920000002"
+            }
+          ],
+          "ids": [
+            "900000001",
+            "910000001",
+            "910000002",
+            "910000003",
+            "910000004",
+            "910000005",
+            "910000006",
+            "910000007",
+            "910000008",
+            "910000009",
+            "920000001",
+            "920000002"
+          ],
+          "declared": 12,
+          "observed": 11,
+          "comment_count": 9,
+          "lzl_count": 2,
+          "events": [
+            {
+              "type": "click",
+              "detail": {
+                "id": "",
+                "cls": "show-more-lzl",
+                "text": "展开楼中楼（2）",
+                "trusted": true
+              },
+              "y": 0,
+              "t": 1189
+            },
+            {
+              "type": "expand",
+              "detail": {
+                "open": true,
+                "count": 2,
+                "trusted": true
+              },
+              "y": 0,
+              "t": 1190
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 226,
+                "trusted": true
+              },
+              "y": 226,
+              "t": 1446
+            },
+            {
+              "type": "comments_added",
+              "detail": {
+                "count": 3,
+                "total": 6
+              },
+              "y": 226,
+              "t": 1448
+            },
+            {
+              "type": "lazy_load",
+              "detail": {
+                "added": 3,
+                "total": 6,
+                "trusted": true
+              },
+              "y": 226,
+              "t": 1448
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 579,
+                "trusted": true
+              },
+              "y": 579,
+              "t": 1760
+            },
+            {
+              "type": "click",
+              "detail": {
+                "id": "load-more",
+                "cls": "",
+                "text": "加载更多评论",
+                "trusted": true
+              },
+              "y": 579,
+              "t": 1793
+            },
+            {
+              "type": "comments_added",
+              "detail": {
+                "count": 3,
+                "total": 9
+              },
+              "y": 579,
+              "t": 1795
+            },
+            {
+              "type": "load_more",
+              "detail": {
+                "added": 3,
+                "total": 9,
+                "trusted": true
+              },
+              "y": 579,
+              "t": 1795
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 2057
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 931,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 2057
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 2312
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 2568
+            }
+          ],
+          "scroll": {
+            "y": 931,
+            "height": 1651
+          },
+          "initial_scroll": {
+            "y": 0,
+            "height": 729
+          },
+          "scroll_steps": 3,
+          "expand": {
+            "clicked": true,
+            "selector": "div.show-more-lzl",
+            "box": {
+              "x": 279.2343864440918,
+              "y": 357.7708435058594,
+              "left": 222.33334350585938,
+              "top": 345.7708435058594,
+              "width": 113.80208587646484,
+              "height": 24,
+              "hit_ok": true,
+              "hit": "DIV#"
+            },
+            "via": "nodriver_cdp_mouse_click"
+          },
+          "load_more": {
+            "clicked": true,
+            "selector": "#load-more",
+            "box": {
+              "x": 280.3333435058594,
+              "y": 644.3125419616699,
+              "left": 222.33334350585938,
+              "top": 624.6458740234375,
+              "width": 116,
+              "height": 39.333335876464844,
+              "hit_ok": true,
+              "hit": "BUTTON#load-more"
+            },
+            "via": "nodriver_cdp_mouse_click"
+          },
+          "unidentified": 0,
+          "fields": {
+            "count": 11,
+            "comment": 9,
+            "lzl": 2,
+            "likes_known": 11,
+            "times_known": 11,
+            "missing": {},
+            "sources": {
+              "native_id": {
+                "div[data-id]": 11
+              },
+              "text": {
+                "span.pb-text-wrapper": 11
+              },
+              "author": {
+                "a.head-name": 11
+              },
+              "published_at": {
+                "div.comment-desc-left > span": 11
+              },
+              "likes": {
+                "[data-likes]|.pb-agree-num": 11
+              }
+            }
+          },
+          "action_evidence": {
+            "counts": {
+              "click": 2,
+              "expand": 1,
+              "scroll": 3,
+              "comments_added": 2,
+              "lazy_load": 1,
+              "load_more": 1,
+              "wheel": 3
+            },
+            "trusted": {
+              "click": 2,
+              "expand": 1,
+              "scroll": 3,
+              "lazy_load": 1,
+              "load_more": 1,
+              "wheel": 3
+            },
+            "displacement": {
+              "scroll_y_start": 0,
+              "scroll_y_end": 931,
+              "scroll_height_start": 729,
+              "scroll_height_end": 1651
+            },
+            "expected": {
+              "wheel": 3,
+              "click": 2,
+              "expand": 1,
+              "load_more": 1
+            },
+            "checks": {
+              "wheel_events": true,
+              "click_events": true,
+              "expand_event": true,
+              "load_more_event": true,
+              "scroll_event": true,
+              "page_moved": true,
+              "height_grew": true,
+              "trusted_input": true
+            },
+            "ok": true
+          },
+          "evidence": {
+            "page_screenshot": {
+              "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\nodriver-run1.png",
+              "bytes": 113107
+            },
+            "desktop_proof": {
+              "supported": true,
+              "proven": true,
+              "reason": null,
+              "platform": "win32",
+              "hwnd": 29559622,
+              "pid": 12164,
+              "matched_by": "title",
+              "window_title": "单帖采集基线：本地 fixture_百度贴吧 - Google Chrome",
+              "class_name": "Chrome_WidgetWin_1",
+              "candidate_count": 2,
+              "foreground_before": 29559622,
+              "foreground_after": 29559622,
+              "foreground_matched": true,
+              "attempts": [
+                "allow_set_foreground_window",
+                "show_window_restore",
+                "set_window_pos_top",
+                "set_foreground_window:1"
+              ],
+              "window_rect": {
+                "left": 24,
+                "top": 15,
+                "right": 1581,
+                "bottom": 1505,
+                "width": 1557,
+                "height": 1490
+              },
+              "rect_source": "dwm_extended_frame_bounds",
+              "dpi_aware": true,
+              "screen": {
+                "x": 0,
+                "y": 0,
+                "width": 2560,
+                "height": 1600,
+                "source": "virtual_screen"
+              },
+              "desktop_screenshot": null,
+              "desktop_screenshot_bytes": 0,
+              "note": "桌面级证据=前台窗口匹配+窗口矩形+(可选)整屏截图；它证明窗口在桌面被置前，不证明人眼已经看到"
+            }
+          },
+          "final_evidence": {
+            "page_screenshot": {
+              "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\nodriver-run1-final.png",
+              "bytes": 84285
+            }
+          },
+          "evidence_ms": 1084.5,
+          "final_evidence_ms": 1066.5,
+          "environment": {
+            "engine": "nodriver",
+            "version": "0.50.6",
+            "browser_version": "156.0.0.0",
+            "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "headless": false,
+            "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-nd-7rk6bx14"
+          },
+          "start_info": {
+            "engine": "nodriver",
+            "version": "0.50.6",
+            "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "headless": false,
+            "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-nd-7rk6bx14"
+          },
+          "phases": {
+            "start_ms": 886.2,
+            "navigate_ms": 78.8,
+            "first_read_ms": 2.9,
+            "actions_ms": 1656.8,
+            "close_ms": 387.7,
+            "evidence_ms": 1084.5,
+            "final_evidence_ms": 1066.5,
+            "total_ms": 5163.4
+          },
+          "total_ms": 5163.4
+        },
+        {
+          "engine": "nodriver",
+          "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+          "config": {
+            "scroll_step": 700,
+            "max_scrolls": 8,
+            "stall_limit": 2,
+            "settle_ms": 250,
+            "timeout_ms": 15000
+          },
+          "timeline": [
+            {
+              "phase": "start_begin",
+              "ms": 0.0
+            },
+            {
+              "phase": "start_done",
+              "ms": 846.9,
+              "engine": "nodriver",
+              "version": "0.50.6",
+              "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+              "headless": false,
+              "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-nd-7rondu67"
+            },
+            {
+              "phase": "navigate",
+              "ms": 974.2,
+              "driver_ms": 125.8,
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "status": null
+            },
+            {
+              "phase": "first_read",
+              "ms": 986.9,
+              "ids": 4,
+              "records": 3
+            },
+            {
+              "phase": "expand",
+              "ms": 2080.4,
+              "clicked": true,
+              "selector": "div.show-more-lzl",
+              "box": {
+                "x": 279.2343864440918,
+                "y": 357.7708435058594,
+                "left": 222.33334350585938,
+                "top": 345.7708435058594,
+                "width": 113.80208587646484,
+                "height": 24,
+                "hit_ok": true,
+                "hit": "DIV#"
+              },
+              "via": "nodriver_cdp_mouse_click"
+            },
+            {
+              "phase": "expand_read",
+              "ms": 2332.3,
+              "ids": 6
+            },
+            {
+              "phase": "load_more",
+              "ms": 2674.8,
+              "clicked": true,
+              "selector": "#load-more",
+              "box": {
+                "x": 280.3333435058594,
+                "y": 644.3125419616699,
+                "left": 222.33334350585938,
+                "top": 624.6458740234375,
+                "width": 116,
+                "height": 39.333335876464844,
+                "hit_ok": true,
+                "hit": "BUTTON#load-more"
+              },
+              "via": "nodriver_cdp_mouse_click"
+            },
+            {
+              "phase": "load_more_read",
+              "ms": 2928.2,
+              "new_ids": [
+                "910000004",
+                "910000005",
+                "910000006",
+                "910000007",
+                "910000008",
+                "910000009"
+              ],
+              "ids": 12
+            },
+            {
+              "phase": "scroll_1",
+              "ms": 3184.4,
+              "new_ids": [],
+              "scroll_dy": 352,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "nodriver_cdp_mouse_wheel",
+                "scrolled": true
+              }
+            },
+            {
+              "phase": "scroll_2",
+              "ms": 3439.8,
+              "new_ids": [],
+              "scroll_dy": 0,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "nodriver_cdp_mouse_wheel",
+                "scrolled": true
+              }
+            },
+            {
+              "phase": "scroll_3",
+              "ms": 3695.2,
+              "new_ids": [],
+              "scroll_dy": 0,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "nodriver_cdp_mouse_wheel",
+                "scrolled": true
+              }
+            },
+            {
+              "phase": "final_read",
+              "ms": 3698.4,
+              "ids": 12
+            },
+            {
+              "phase": "close",
+              "ms": 5355.7,
+              "closed": true,
+              "profile_removed": true,
+              "errors": []
+            }
+          ],
+          "stop": "no_growth",
+          "stop_detail": "连续 2 次滚动无新增原生 ID 且无页面位移；页面声明 12 条，可见 9 条。没有可核验的到底标记，按部分/未知处理，不宣称取全。",
+          "complete": false,
+          "partial": true,
+          "error": null,
+          "thread": {
+            "native_id": "900000001",
+            "title": "单帖采集基线：本地 fixture",
+            "text": "这是用于 Playwright 与 nodriver 对照的本地单帖正文。正文、评论、点赞数与发布时间都只从当前页面读取；读不到的字段标记未知，不用零或接口数据补齐。",
+            "author": "楼主甲",
+            "published_at": "2026-10-01 12:00",
+            "likes": 37,
+            "sources": {
+              "native_id": "data-tid|url:/p/<tid>",
+              "title": "span.pb-title",
+              "text": "span.pb-text-wrapper[tid][order-id=\"0\"]",
+              "author": "a.head-name",
+              "published_at": "span.post-num",
+              "likes": "[data-likes]|.pb-agree-num"
+            },
+            "missing": []
+          },
+          "records": [
+            {
+              "native_id": "910000001",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第一条评论：滚轮与展开都要留下页面事件。",
+              "author": "评论者乙",
+              "published_at": "2026-10-01 12:01",
+              "likes": 5,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000001"
+            },
+            {
+              "native_id": "910000002",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第二条评论：点赞数和发布时间分开归属。",
+              "author": "评论者丙",
+              "published_at": "2026-10-01 12:02",
+              "likes": 0,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000002"
+            },
+            {
+              "native_id": "910000003",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第三条评论：没有读到就标未知，不填零。",
+              "author": "评论者丁",
+              "published_at": "2026-10-01 12:03",
+              "likes": 12,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000003"
+            },
+            {
+              "native_id": "910000004",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第四条评论：滚动后才出现。",
+              "author": "评论者戊",
+              "published_at": "2026-10-01 12:04",
+              "likes": 3,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000004"
+            },
+            {
+              "native_id": "910000005",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第五条评论：按原生 ID 增量去重。",
+              "author": "评论者己",
+              "published_at": "2026-10-01 12:05",
+              "likes": 8,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000005"
+            },
+            {
+              "native_id": "910000006",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第六条评论：没有到底证据就标部分。",
+              "author": "评论者庚",
+              "published_at": "2026-10-01 12:06",
+              "likes": 1,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000006"
+            },
+            {
+              "native_id": "910000007",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第七条评论：加载更多后出现。",
+              "author": "评论者辛",
+              "published_at": "2026-10-01 12:07",
+              "likes": 2,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000007"
+            },
+            {
+              "native_id": "910000008",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第八条评论：展开楼中楼不串字段。",
+              "author": "评论者壬",
+              "published_at": "2026-10-01 12:08",
+              "likes": 4,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000008"
+            },
+            {
+              "native_id": "910000009",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第九条评论：页面声明 12 条，只看到 9 条。",
+              "author": "评论者癸",
+              "published_at": "2026-10-01 12:09",
+              "likes": 6,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000009"
+            },
+            {
+              "native_id": "920000001",
+              "kind": "lzl",
+              "parent_id": "910000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "楼中楼第一条：父评论是 910000001。",
+              "author": "楼中楼甲",
+              "published_at": "2026-10-01 12:01",
+              "likes": 1,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "920000001"
+            },
+            {
+              "native_id": "920000002",
+              "kind": "lzl",
+              "parent_id": "910000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "楼中楼第二条：没有稳定 ID 时不能合成。",
+              "author": "楼中楼乙",
+              "published_at": "2026-10-01 12:02",
+              "likes": 0,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "920000002"
+            }
+          ],
+          "ids": [
+            "900000001",
+            "910000001",
+            "910000002",
+            "910000003",
+            "910000004",
+            "910000005",
+            "910000006",
+            "910000007",
+            "910000008",
+            "910000009",
+            "920000001",
+            "920000002"
+          ],
+          "declared": 12,
+          "observed": 11,
+          "comment_count": 9,
+          "lzl_count": 2,
+          "events": [
+            {
+              "type": "click",
+              "detail": {
+                "id": "",
+                "cls": "show-more-lzl",
+                "text": "展开楼中楼（2）",
+                "trusted": true
+              },
+              "y": 0,
+              "t": 1223
+            },
+            {
+              "type": "expand",
+              "detail": {
+                "open": true,
+                "count": 2,
+                "trusted": true
+              },
+              "y": 0,
+              "t": 1224
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 226,
+                "trusted": true
+              },
+              "y": 226,
+              "t": 1480
+            },
+            {
+              "type": "comments_added",
+              "detail": {
+                "count": 3,
+                "total": 6
+              },
+              "y": 226,
+              "t": 1482
+            },
+            {
+              "type": "lazy_load",
+              "detail": {
+                "added": 3,
+                "total": 6,
+                "trusted": true
+              },
+              "y": 226,
+              "t": 1482
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 579,
+                "trusted": true
+              },
+              "y": 579,
+              "t": 1783
+            },
+            {
+              "type": "click",
+              "detail": {
+                "id": "load-more",
+                "cls": "",
+                "text": "加载更多评论",
+                "trusted": true
+              },
+              "y": 579,
+              "t": 1816
+            },
+            {
+              "type": "comments_added",
+              "detail": {
+                "count": 3,
+                "total": 9
+              },
+              "y": 579,
+              "t": 1818
+            },
+            {
+              "type": "load_more",
+              "detail": {
+                "added": 3,
+                "total": 9,
+                "trusted": true
+              },
+              "y": 579,
+              "t": 1818
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 2078
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 931,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 2078
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 2332
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 2591
+            }
+          ],
+          "scroll": {
+            "y": 931,
+            "height": 1651
+          },
+          "initial_scroll": {
+            "y": 0,
+            "height": 729
+          },
+          "scroll_steps": 3,
+          "expand": {
+            "clicked": true,
+            "selector": "div.show-more-lzl",
+            "box": {
+              "x": 279.2343864440918,
+              "y": 357.7708435058594,
+              "left": 222.33334350585938,
+              "top": 345.7708435058594,
+              "width": 113.80208587646484,
+              "height": 24,
+              "hit_ok": true,
+              "hit": "DIV#"
+            },
+            "via": "nodriver_cdp_mouse_click"
+          },
+          "load_more": {
+            "clicked": true,
+            "selector": "#load-more",
+            "box": {
+              "x": 280.3333435058594,
+              "y": 644.3125419616699,
+              "left": 222.33334350585938,
+              "top": 624.6458740234375,
+              "width": 116,
+              "height": 39.333335876464844,
+              "hit_ok": true,
+              "hit": "BUTTON#load-more"
+            },
+            "via": "nodriver_cdp_mouse_click"
+          },
+          "unidentified": 0,
+          "fields": {
+            "count": 11,
+            "comment": 9,
+            "lzl": 2,
+            "likes_known": 11,
+            "times_known": 11,
+            "missing": {},
+            "sources": {
+              "native_id": {
+                "div[data-id]": 11
+              },
+              "text": {
+                "span.pb-text-wrapper": 11
+              },
+              "author": {
+                "a.head-name": 11
+              },
+              "published_at": {
+                "div.comment-desc-left > span": 11
+              },
+              "likes": {
+                "[data-likes]|.pb-agree-num": 11
+              }
+            }
+          },
+          "action_evidence": {
+            "counts": {
+              "click": 2,
+              "expand": 1,
+              "scroll": 3,
+              "comments_added": 2,
+              "lazy_load": 1,
+              "load_more": 1,
+              "wheel": 3
+            },
+            "trusted": {
+              "click": 2,
+              "expand": 1,
+              "scroll": 3,
+              "lazy_load": 1,
+              "load_more": 1,
+              "wheel": 3
+            },
+            "displacement": {
+              "scroll_y_start": 0,
+              "scroll_y_end": 931,
+              "scroll_height_start": 729,
+              "scroll_height_end": 1651
+            },
+            "expected": {
+              "wheel": 3,
+              "click": 2,
+              "expand": 1,
+              "load_more": 1
+            },
+            "checks": {
+              "wheel_events": true,
+              "click_events": true,
+              "expand_event": true,
+              "load_more_event": true,
+              "scroll_event": true,
+              "page_moved": true,
+              "height_grew": true,
+              "trusted_input": true
+            },
+            "ok": true
+          },
+          "evidence": {
+            "page_screenshot": {
+              "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\nodriver-run2.png",
+              "bytes": 113107
+            },
+            "desktop_proof": null
+          },
+          "final_evidence": {
+            "page_screenshot": {
+              "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\nodriver-run2-final.png",
+              "bytes": 84285
+            }
+          },
+          "evidence_ms": 1057.9,
+          "final_evidence_ms": 1084.3,
+          "environment": {
+            "engine": "nodriver",
+            "version": "0.50.6",
+            "browser_version": "156.0.0.0",
+            "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "headless": false,
+            "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-nd-7rondu67"
+          },
+          "start_info": {
+            "engine": "nodriver",
+            "version": "0.50.6",
+            "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "headless": false,
+            "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-nd-7rondu67"
+          },
+          "phases": {
+            "start_ms": 846.9,
+            "navigate_ms": 127.3,
+            "first_read_ms": 12.7,
+            "actions_ms": 1653.6,
+            "close_ms": 573.0,
+            "evidence_ms": 1057.9,
+            "final_evidence_ms": 1084.3,
+            "total_ms": 5355.7
+          },
+          "total_ms": 5355.7
+        },
+        {
+          "engine": "nodriver",
+          "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+          "config": {
+            "scroll_step": 700,
+            "max_scrolls": 8,
+            "stall_limit": 2,
+            "settle_ms": 250,
+            "timeout_ms": 15000
+          },
+          "timeline": [
+            {
+              "phase": "start_begin",
+              "ms": 0.0
+            },
+            {
+              "phase": "start_done",
+              "ms": 1217.6,
+              "engine": "nodriver",
+              "version": "0.50.6",
+              "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+              "headless": false,
+              "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-nd-rwvxqmil"
+            },
+            {
+              "phase": "navigate",
+              "ms": 1410.8,
+              "driver_ms": 173.3,
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "status": null
+            },
+            {
+              "phase": "first_read",
+              "ms": 1417.1,
+              "ids": 4,
+              "records": 3
+            },
+            {
+              "phase": "expand",
+              "ms": 2511.5,
+              "clicked": true,
+              "selector": "div.show-more-lzl",
+              "box": {
+                "x": 279.2343864440918,
+                "y": 357.7708435058594,
+                "left": 222.33334350585938,
+                "top": 345.7708435058594,
+                "width": 113.80208587646484,
+                "height": 24,
+                "hit_ok": true,
+                "hit": "DIV#"
+              },
+              "via": "nodriver_cdp_mouse_click"
+            },
+            {
+              "phase": "expand_read",
+              "ms": 2763.9,
+              "ids": 6
+            },
+            {
+              "phase": "load_more",
+              "ms": 3115.3,
+              "clicked": true,
+              "selector": "#load-more",
+              "box": {
+                "x": 280.3333435058594,
+                "y": 644.3125419616699,
+                "left": 222.33334350585938,
+                "top": 624.6458740234375,
+                "width": 116,
+                "height": 39.333335876464844,
+                "hit_ok": true,
+                "hit": "BUTTON#load-more"
+              },
+              "via": "nodriver_cdp_mouse_click"
+            },
+            {
+              "phase": "load_more_read",
+              "ms": 3369.7,
+              "new_ids": [
+                "910000004",
+                "910000005",
+                "910000006",
+                "910000007",
+                "910000008",
+                "910000009"
+              ],
+              "ids": 12
+            },
+            {
+              "phase": "scroll_1",
+              "ms": 3625.1,
+              "new_ids": [],
+              "scroll_dy": 352,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "nodriver_cdp_mouse_wheel",
+                "scrolled": true
+              }
+            },
+            {
+              "phase": "scroll_2",
+              "ms": 3880.4,
+              "new_ids": [],
+              "scroll_dy": 0,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "nodriver_cdp_mouse_wheel",
+                "scrolled": true
+              }
+            },
+            {
+              "phase": "scroll_3",
+              "ms": 4135.3,
+              "new_ids": [],
+              "scroll_dy": 0,
+              "action": {
+                "dx": 0,
+                "dy": 700,
+                "via": "nodriver_cdp_mouse_wheel",
+                "scrolled": true
+              }
+            },
+            {
+              "phase": "final_read",
+              "ms": 4137.6,
+              "ids": 12
+            },
+            {
+              "phase": "close",
+              "ms": 5741.6,
+              "closed": true,
+              "profile_removed": true,
+              "errors": []
+            }
+          ],
+          "stop": "no_growth",
+          "stop_detail": "连续 2 次滚动无新增原生 ID 且无页面位移；页面声明 12 条，可见 9 条。没有可核验的到底标记，按部分/未知处理，不宣称取全。",
+          "complete": false,
+          "partial": true,
+          "error": null,
+          "thread": {
+            "native_id": "900000001",
+            "title": "单帖采集基线：本地 fixture",
+            "text": "这是用于 Playwright 与 nodriver 对照的本地单帖正文。正文、评论、点赞数与发布时间都只从当前页面读取；读不到的字段标记未知，不用零或接口数据补齐。",
+            "author": "楼主甲",
+            "published_at": "2026-10-01 12:00",
+            "likes": 37,
+            "sources": {
+              "native_id": "data-tid|url:/p/<tid>",
+              "title": "span.pb-title",
+              "text": "span.pb-text-wrapper[tid][order-id=\"0\"]",
+              "author": "a.head-name",
+              "published_at": "span.post-num",
+              "likes": "[data-likes]|.pb-agree-num"
+            },
+            "missing": []
+          },
+          "records": [
+            {
+              "native_id": "910000001",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第一条评论：滚轮与展开都要留下页面事件。",
+              "author": "评论者乙",
+              "published_at": "2026-10-01 12:01",
+              "likes": 5,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000001"
+            },
+            {
+              "native_id": "910000002",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第二条评论：点赞数和发布时间分开归属。",
+              "author": "评论者丙",
+              "published_at": "2026-10-01 12:02",
+              "likes": 0,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000002"
+            },
+            {
+              "native_id": "910000003",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第三条评论：没有读到就标未知，不填零。",
+              "author": "评论者丁",
+              "published_at": "2026-10-01 12:03",
+              "likes": 12,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000003"
+            },
+            {
+              "native_id": "910000004",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第四条评论：滚动后才出现。",
+              "author": "评论者戊",
+              "published_at": "2026-10-01 12:04",
+              "likes": 3,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000004"
+            },
+            {
+              "native_id": "910000005",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第五条评论：按原生 ID 增量去重。",
+              "author": "评论者己",
+              "published_at": "2026-10-01 12:05",
+              "likes": 8,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000005"
+            },
+            {
+              "native_id": "910000006",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第六条评论：没有到底证据就标部分。",
+              "author": "评论者庚",
+              "published_at": "2026-10-01 12:06",
+              "likes": 1,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000006"
+            },
+            {
+              "native_id": "910000007",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第七条评论：加载更多后出现。",
+              "author": "评论者辛",
+              "published_at": "2026-10-01 12:07",
+              "likes": 2,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000007"
+            },
+            {
+              "native_id": "910000008",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第八条评论：展开楼中楼不串字段。",
+              "author": "评论者壬",
+              "published_at": "2026-10-01 12:08",
+              "likes": 4,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000008"
+            },
+            {
+              "native_id": "910000009",
+              "kind": "comment",
+              "parent_id": "900000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "第九条评论：页面声明 12 条，只看到 9 条。",
+              "author": "评论者癸",
+              "published_at": "2026-10-01 12:09",
+              "likes": 6,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "910000009"
+            },
+            {
+              "native_id": "920000001",
+              "kind": "lzl",
+              "parent_id": "910000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "楼中楼第一条：父评论是 910000001。",
+              "author": "楼中楼甲",
+              "published_at": "2026-10-01 12:01",
+              "likes": 1,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "920000001"
+            },
+            {
+              "native_id": "920000002",
+              "kind": "lzl",
+              "parent_id": "910000001",
+              "root_comment_id": "900000001",
+              "url": "file:///D:/%E6%A1%8C%E9%9D%A2/two/docs/validation/v18/engine-trial/fixture.html",
+              "text": "楼中楼第二条：没有稳定 ID 时不能合成。",
+              "author": "楼中楼乙",
+              "published_at": "2026-10-01 12:02",
+              "likes": 0,
+              "sources": {
+                "native_id": "div[data-id]",
+                "text": "span.pb-text-wrapper",
+                "author": "a.head-name",
+                "published_at": "div.comment-desc-left > span",
+                "likes": "[data-likes]|.pb-agree-num"
+              },
+              "missing": [],
+              "key": "920000002"
+            }
+          ],
+          "ids": [
+            "900000001",
+            "910000001",
+            "910000002",
+            "910000003",
+            "910000004",
+            "910000005",
+            "910000006",
+            "910000007",
+            "910000008",
+            "910000009",
+            "920000001",
+            "920000002"
+          ],
+          "declared": 12,
+          "observed": 11,
+          "comment_count": 9,
+          "lzl_count": 2,
+          "events": [
+            {
+              "type": "click",
+              "detail": {
+                "id": "",
+                "cls": "show-more-lzl",
+                "text": "展开楼中楼（2）",
+                "trusted": true
+              },
+              "y": 0,
+              "t": 1256
+            },
+            {
+              "type": "expand",
+              "detail": {
+                "open": true,
+                "count": 2,
+                "trusted": true
+              },
+              "y": 0,
+              "t": 1257
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 226,
+                "trusted": true
+              },
+              "y": 226,
+              "t": 1514
+            },
+            {
+              "type": "comments_added",
+              "detail": {
+                "count": 3,
+                "total": 6
+              },
+              "y": 226,
+              "t": 1516
+            },
+            {
+              "type": "lazy_load",
+              "detail": {
+                "added": 3,
+                "total": 6,
+                "trusted": true
+              },
+              "y": 226,
+              "t": 1516
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 579,
+                "trusted": true
+              },
+              "y": 579,
+              "t": 1826
+            },
+            {
+              "type": "click",
+              "detail": {
+                "id": "load-more",
+                "cls": "",
+                "text": "加载更多评论",
+                "trusted": true
+              },
+              "y": 579,
+              "t": 1859
+            },
+            {
+              "type": "comments_added",
+              "detail": {
+                "count": 3,
+                "total": 9
+              },
+              "y": 579,
+              "t": 1861
+            },
+            {
+              "type": "load_more",
+              "detail": {
+                "added": 3,
+                "total": 9,
+                "trusted": true
+              },
+              "y": 579,
+              "t": 1861
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 2120
+            },
+            {
+              "type": "scroll",
+              "detail": {
+                "y": 931,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 2121
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 2374
+            },
+            {
+              "type": "wheel",
+              "detail": {
+                "dy": 1050,
+                "trusted": true
+              },
+              "y": 931,
+              "t": 2634
+            }
+          ],
+          "scroll": {
+            "y": 931,
+            "height": 1651
+          },
+          "initial_scroll": {
+            "y": 0,
+            "height": 729
+          },
+          "scroll_steps": 3,
+          "expand": {
+            "clicked": true,
+            "selector": "div.show-more-lzl",
+            "box": {
+              "x": 279.2343864440918,
+              "y": 357.7708435058594,
+              "left": 222.33334350585938,
+              "top": 345.7708435058594,
+              "width": 113.80208587646484,
+              "height": 24,
+              "hit_ok": true,
+              "hit": "DIV#"
+            },
+            "via": "nodriver_cdp_mouse_click"
+          },
+          "load_more": {
+            "clicked": true,
+            "selector": "#load-more",
+            "box": {
+              "x": 280.3333435058594,
+              "y": 644.3125419616699,
+              "left": 222.33334350585938,
+              "top": 624.6458740234375,
+              "width": 116,
+              "height": 39.333335876464844,
+              "hit_ok": true,
+              "hit": "BUTTON#load-more"
+            },
+            "via": "nodriver_cdp_mouse_click"
+          },
+          "unidentified": 0,
+          "fields": {
+            "count": 11,
+            "comment": 9,
+            "lzl": 2,
+            "likes_known": 11,
+            "times_known": 11,
+            "missing": {},
+            "sources": {
+              "native_id": {
+                "div[data-id]": 11
+              },
+              "text": {
+                "span.pb-text-wrapper": 11
+              },
+              "author": {
+                "a.head-name": 11
+              },
+              "published_at": {
+                "div.comment-desc-left > span": 11
+              },
+              "likes": {
+                "[data-likes]|.pb-agree-num": 11
+              }
+            }
+          },
+          "action_evidence": {
+            "counts": {
+              "click": 2,
+              "expand": 1,
+              "scroll": 3,
+              "comments_added": 2,
+              "lazy_load": 1,
+              "load_more": 1,
+              "wheel": 3
+            },
+            "trusted": {
+              "click": 2,
+              "expand": 1,
+              "scroll": 3,
+              "lazy_load": 1,
+              "load_more": 1,
+              "wheel": 3
+            },
+            "displacement": {
+              "scroll_y_start": 0,
+              "scroll_y_end": 931,
+              "scroll_height_start": 729,
+              "scroll_height_end": 1651
+            },
+            "expected": {
+              "wheel": 3,
+              "click": 2,
+              "expand": 1,
+              "load_more": 1
+            },
+            "checks": {
+              "wheel_events": true,
+              "click_events": true,
+              "expand_event": true,
+              "load_more_event": true,
+              "scroll_event": true,
+              "page_moved": true,
+              "height_grew": true,
+              "trusted_input": true
+            },
+            "ok": true
+          },
+          "evidence": {
+            "page_screenshot": {
+              "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\nodriver-run3.png",
+              "bytes": 113107
+            },
+            "desktop_proof": null
+          },
+          "final_evidence": {
+            "page_screenshot": {
+              "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\nodriver-run3-final.png",
+              "bytes": 84285
+            }
+          },
+          "evidence_ms": 1058.8,
+          "final_evidence_ms": 1041.5,
+          "environment": {
+            "engine": "nodriver",
+            "version": "0.50.6",
+            "browser_version": "156.0.0.0",
+            "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "headless": false,
+            "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-nd-rwvxqmil"
+          },
+          "start_info": {
+            "engine": "nodriver",
+            "version": "0.50.6",
+            "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "headless": false,
+            "profile": "C:\\Users\\19183\\AppData\\Local\\Temp\\dsh-engine-trial-nd-rwvxqmil"
+          },
+          "phases": {
+            "start_ms": 1217.6,
+            "navigate_ms": 193.2,
+            "first_read_ms": 6.3,
+            "actions_ms": 1661.7,
+            "close_ms": 562.5,
+            "evidence_ms": 1058.8,
+            "final_evidence_ms": 1041.5,
+            "total_ms": 5741.6
+          },
+          "total_ms": 5741.6
+        }
+      ],
+      "status": "verified",
+      "reason": null,
+      "repro": "C:\\Users\\19183\\.dsh\\tools\\x-collect\\venv\\Scripts\\python.exe -c \"import nodriver\"",
+      "timings": {
+        "start_ms": {
+          "n": 3,
+          "min": 846.9,
+          "median": 886.2,
+          "max": 1217.6
+        },
+        "navigate_ms": {
+          "n": 3,
+          "min": 78.8,
+          "median": 127.3,
+          "max": 193.2
+        },
+        "first_read_ms": {
+          "n": 3,
+          "min": 2.9,
+          "median": 6.3,
+          "max": 12.7
+        },
+        "evidence_ms": {
+          "n": 3,
+          "min": 1057.9,
+          "median": 1058.8,
+          "max": 1084.5
+        },
+        "final_evidence_ms": {
+          "n": 3,
+          "min": 1041.5,
+          "median": 1066.5,
+          "max": 1084.3
+        },
+        "actions_ms": {
+          "n": 3,
+          "min": 1653.6,
+          "median": 1656.8,
+          "max": 1661.7
+        },
+        "close_ms": {
+          "n": 3,
+          "min": 387.7,
+          "median": 562.5,
+          "max": 573.0
+        },
+        "total_ms": {
+          "n": 3,
+          "min": 5163.4,
+          "median": 5355.7,
+          "max": 5741.6
+        }
+      },
+      "ids_union": [
+        "900000001",
+        "910000001",
+        "910000002",
+        "910000003",
+        "910000004",
+        "910000005",
+        "910000006",
+        "910000007",
+        "910000008",
+        "910000009",
+        "920000001",
+        "920000002"
+      ],
+      "ids_intersection": [
+        "900000001",
+        "910000001",
+        "910000002",
+        "910000003",
+        "910000004",
+        "910000005",
+        "910000006",
+        "910000007",
+        "910000008",
+        "910000009",
+        "920000001",
+        "920000002"
+      ],
+      "ids_stable": true,
+      "missing_vs_ground": [],
+      "extra_vs_ground": [],
+      "fields": {
+        "count": 11,
+        "comment": 9,
+        "lzl": 2,
+        "likes_known": 11,
+        "times_known": 11,
+        "missing": {},
+        "sources": {
+          "native_id": {
+            "div[data-id]": 11
+          },
+          "text": {
+            "span.pb-text-wrapper": 11
+          },
+          "author": {
+            "a.head-name": 11
+          },
+          "published_at": {
+            "div.comment-desc-left > span": 11
+          },
+          "likes": {
+            "[data-likes]|.pb-agree-num": 11
+          }
+        }
+      },
+      "action_evidence": {
+        "counts": {
+          "click": 2,
+          "expand": 1,
+          "scroll": 3,
+          "comments_added": 2,
+          "lazy_load": 1,
+          "load_more": 1,
+          "wheel": 3
+        },
+        "trusted": {
+          "click": 2,
+          "expand": 1,
+          "scroll": 3,
+          "lazy_load": 1,
+          "load_more": 1,
+          "wheel": 3
+        },
+        "displacement": {
+          "scroll_y_start": 0,
+          "scroll_y_end": 931,
+          "scroll_height_start": 729,
+          "scroll_height_end": 1651
+        },
+        "expected": {
+          "wheel": 3,
+          "click": 2,
+          "expand": 1,
+          "load_more": 1
+        },
+        "checks": {
+          "wheel_events": true,
+          "click_events": true,
+          "expand_event": true,
+          "load_more_event": true,
+          "scroll_event": true,
+          "page_moved": true,
+          "height_grew": true,
+          "trusted_input": true
+        },
+        "ok": true
+      },
+      "stop_reasons": [
+        "no_growth",
+        "no_growth",
+        "no_growth"
+      ],
+      "stop_details": [
+        "连续 2 次滚动无新增原生 ID 且无页面位移；页面声明 12 条，可见 9 条。没有可核验的到底标记，按部分/未知处理，不宣称取全。",
+        "连续 2 次滚动无新增原生 ID 且无页面位移；页面声明 12 条，可见 9 条。没有可核验的到底标记，按部分/未知处理，不宣称取全。",
+        "连续 2 次滚动无新增原生 ID 且无页面位移；页面声明 12 条，可见 9 条。没有可核验的到底标记，按部分/未知处理，不宣称取全。"
+      ],
+      "desktop_proof": {
+        "supported": true,
+        "proven": true,
+        "reason": null,
+        "platform": "win32",
+        "hwnd": 29559622,
+        "pid": 12164,
+        "matched_by": "title",
+        "window_title": "单帖采集基线：本地 fixture_百度贴吧 - Google Chrome",
+        "class_name": "Chrome_WidgetWin_1",
+        "candidate_count": 2,
+        "foreground_before": 29559622,
+        "foreground_after": 29559622,
+        "foreground_matched": true,
+        "attempts": [
+          "allow_set_foreground_window",
+          "show_window_restore",
+          "set_window_pos_top",
+          "set_foreground_window:1"
+        ],
+        "window_rect": {
+          "left": 24,
+          "top": 15,
+          "right": 1581,
+          "bottom": 1505,
+          "width": 1557,
+          "height": 1490
+        },
+        "rect_source": "dwm_extended_frame_bounds",
+        "dpi_aware": true,
+        "screen": {
+          "x": 0,
+          "y": 0,
+          "width": 2560,
+          "height": 1600,
+          "source": "virtual_screen"
+        },
+        "desktop_screenshot": null,
+        "desktop_screenshot_bytes": 0,
+        "note": "桌面级证据=前台窗口匹配+窗口矩形+(可选)整屏截图；它证明窗口在桌面被置前，不证明人眼已经看到"
+      },
+      "screenshots": [
+        {
+          "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\nodriver-run1.png",
+          "bytes": 113107
+        },
+        {
+          "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\nodriver-run2.png",
+          "bytes": 113107
+        },
+        {
+          "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\nodriver-run3.png",
+          "bytes": 113107
+        }
+      ],
+      "final_screenshots": [
+        {
+          "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\nodriver-run1-final.png",
+          "bytes": 84285
+        },
+        {
+          "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\nodriver-run2-final.png",
+          "bytes": 84285
+        },
+        {
+          "path": "D:\\桌面\\two\\docs\\validation\\v18\\engine-trial\\shots\\nodriver-run3-final.png",
+          "bytes": 84285
+        }
+      ],
+      "visibility": "proven",
+      "verdict": "stop=no_growth,no_growth,no_growth; ids=12/12; missing=0; extra=0; actions_ok=True; visibility=proven"
+    }
+  },
+  "comparison": {
+    "left_count": 12,
+    "right_count": 12,
+    "common_count": 12,
+    "left_only": [],
+    "right_only": [],
+    "common": [
+      "900000001",
+      "910000001",
+      "910000002",
+      "910000003",
+      "910000004",
+      "910000005",
+      "910000006",
+      "910000007",
+      "910000008",
+      "910000009",
+      "920000001",
+      "920000002"
+    ],
+    "status": "compared",
+    "left": "playwright",
+    "right": "nodriver"
+  },
+  "limitations": [
+    "本地 fixture，不是真实贴吧；真实站点选择器、会话、风控均未验证。",
+    "页面声明 12 条、可见 9 条；no_growth 只证明本次动作无新增/无位移，没有可核验的到底标记，按部分/未知处理。",
+    "Playwright 使用 CDP 合成输入，不移动系统鼠标指针；不是物理鼠标轨迹。",
+    "样本量为配置的重复次数，同一台机器、同一 Chrome；不能外推到真实站点速度。",
+    "桌面可见性以 desktop.prove 结果为准；若未 proven，不能声称用户已看到。",
+    "未访问真实贴吧、未读取或修改用户 profile；每次启动使用临时独立 profile。",
+    "桌面证据不含整屏截图；只保存页面截图与前台窗口/矩形证据，避免截入无关桌面内容。",
+    "Playwright 使用项目外已存在的 Python 3.12.10 + playwright 1.60.0；未安装或修改环境。",
+    "nodriver 使用 `C:\\Users\\19183\\.dsh\\tools\\x-collect\\venv\\Scripts\\python.exe`（nodriver 0.50.6）；与 Playwright 使用同一 Chrome 二进制、同一 fixture、同样 n=3 和临时独立 profile。",
+    "nodriver 页面截图按浏览器窗口尺寸输出（本次 1920×1080），布局视口仍固定 1280×720；截图尺寸差异不影响 DOM 提取与滚动位移。"
+  ],
+  "playwright_generated_at": "2026-11-02T18:56:33+08:00",
+  "playwright_command": "C:\\Users\\19183\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m tools.selection.engine_trial --engine playwright --runs 3 --out docs/validation/v18/engine-trial --merge-existing --fixture docs/validation/v18/engine-trial/fixture.html"
+}
